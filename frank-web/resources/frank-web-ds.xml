@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema">
+    <datasource 
+        jndi-name="frank-webDatasource"
+        enabled="true" 
+        use-java-context="true" pool-name="frank-webDatasource_pool">
+        <connection-url>jdbc:postgresql://localhost:5432/test-seam</connection-url>
+        <driver>postgresql.jar</driver>
+        <security>
+		      <user-name>postgres</user-name>
+		      <password>postgres</password>
+        </security>
+    </datasource>
+</datasources>
