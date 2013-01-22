@@ -4,7 +4,11 @@ import jade.core.Agent;
 
 public class CognitiveAgent extends Agent {
 
-	private static final long serialVersionUID = 3779144729348812061L;
+    private static final long serialVersionUID = 3779144729348812061L;
 
-
+    @Override
+    public void doDelete() {
+	System.out.println("Terminating...");
+	super.doDelete();
+    }
 }

@@ -1,9 +1,27 @@
 package br.unb.frank.agent.workgroup;
 
+import jade.content.lang.Codec.CodecException;
+import jade.content.lang.sl.SLCodec;
+import jade.content.onto.OntologyException;
+import jade.content.onto.basic.Action;
 import jade.core.AID;
 import jade.core.Agent;
+import jade.core.behaviours.CyclicBehaviour;
+import jade.domain.DFService;
+import jade.domain.FIPAException;
+import jade.domain.FIPANames;
+import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.domain.JADEAgentManagement.JADEManagementOntology;
+import jade.domain.JADEAgentManagement.KillAgent;
+import jade.lang.acl.ACLMessage;
+import jade.lang.acl.MessageTemplate;
 import jade.wrapper.AgentContainer;
 import jade.wrapper.StaleProxyException;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import br.unb.frank.domain.AgentPrefixEnum;
 
 /**
@@ -22,18 +40,63 @@ public class WorkGroupAgent extends Agent {
     private AID cognitiveAID;
     private AID metacognitiveAID;
 
+    MessageTemplate pattern;
+
     @Override
     protected void setup() {
 	if (!isValidArguments()) {
 	    doDelete();
 	}
 
+	getContentManager().registerLanguage(new SLCodec(),
+		FIPANames.ContentLanguage.FIPA_SL);
+	getContentManager().registerOntology(
+		JADEManagementOntology.getInstance());
+
+	registerWorkgroup();
 	setAlunoId(getArgument(0));
-	System.out.println("Criarei agentes do aluno " + getAlunoId());
+
 	AgentContainer c = getContainerController();
 	createAuxiliarAgents(c);
 
+	AID[] values = new AID[1];
+	values[0] = getAID();
+	pattern = MessageTemplate.and(
+		MessageTemplate.MatchPerformative(ACLMessage.INFORM),
+		MessageTemplate.MatchReceiver(values));
+
+	addBehaviour(new CyclicBehaviour() {
+	    private static final long serialVersionUID = 1L;
+
+	    @Override
+	    public void action() {
+		ACLMessage msg = receive(pattern);
+
+		if (msg != null) {
+		    System.out.println("Recebi uma mensagem!");
+		}
+
+		block();
+	    }
+	});
+
 	super.setup();
+    }
+
+    private void registerWorkgroup() {
+	DFAgentDescription dfd = new DFAgentDescription();
+
+	dfd.setName(getAID());
+	ServiceDescription sd = new ServiceDescription();
+	sd.setType("workgroup");
+	sd.setName(getLocalName());
+	sd.setOwnership("workgroup");
+	dfd.addServices(sd);
+	try {
+	    DFService.register(this, dfd);
+	} catch (FIPAException fe) {
+	    fe.printStackTrace();
+	}
     }
 
     /**
@@ -67,8 +130,8 @@ public class WorkGroupAgent extends Agent {
 		AID.ISLOCALNAME);
 	cognitiveAID = new AID(AgentPrefixEnum.COGNITIVE + getAlunoId(),
 		AID.ISLOCALNAME);
-	metacognitiveAID = new AID(AgentPrefixEnum.METACOGNITIVE + getAlunoId(),
-		AID.ISLOCALNAME);
+	metacognitiveAID = new AID(
+		AgentPrefixEnum.METACOGNITIVE + getAlunoId(), AID.ISLOCALNAME);
     }
 
     /**
@@ -88,6 +151,36 @@ public class WorkGroupAgent extends Agent {
      */
     private String getArgument(Integer index) {
 	return (String) getArguments()[index];
+    }
+
+    @Override
+    public void doDelete() {
+	List<AID> killedAgents = new ArrayList<AID>();
+	killedAgents.add(getAffectiveAID());
+	killedAgents.add(getCognitiveAID());
+	killedAgents.add(getMetacognitiveAID());
+
+	for (AID aid : killedAgents) {
+	    System.out.println("Stopping " + aid.toString());
+	    KillAgent killAgent = new KillAgent();
+	    killAgent.setAgent(aid);
+	    Action action = new Action(getAMS(), killAgent);
+
+	    ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+	    msg.setLanguage(new SLCodec().getName());
+	    msg.setOntology(JADEManagementOntology.NAME);
+	    msg.addReceiver(getAMS());
+
+	    try {
+		getContentManager().fillContent(msg, action);
+	    } catch (CodecException e) {
+		e.printStackTrace();
+	    } catch (OntologyException e) {
+		e.printStackTrace();
+	    }
+	    send(msg);
+	}
+	super.doDelete();
     }
 
     /**

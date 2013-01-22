@@ -3,7 +3,11 @@ package br.unb.frank.agent;
 import jade.core.AID;
 import jade.lang.acl.ACLMessage;
 import jade.wrapper.gateway.GatewayAgent;
+
+import java.io.IOException;
+
 import br.unb.frank.domain.model.CreateAgentMessage;
+import br.unb.frank.domain.model.DestroyAgentMessage;
 
 public class GatewayFrankAgent extends GatewayAgent {
 
@@ -12,16 +16,20 @@ public class GatewayFrankAgent extends GatewayAgent {
     @Override
     protected void processCommand(Object command) {
 
-	if (command instanceof CreateAgentMessage) {
-	    CreateAgentMessage createAgent = (CreateAgentMessage) command;
-	    ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-	    msg.setContent(createAgent.getAlunoId().toString());
-	    msg.addReceiver(new AID("interface", AID.ISLOCALNAME));
+	ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
+	msg.addReceiver(new AID("interface", AID.ISLOCALNAME));
 
+	try {
+	    if (command instanceof CreateAgentMessage) {
+		msg.setContentObject((CreateAgentMessage) command);
+	    } else if (command instanceof DestroyAgentMessage) {
+		msg.setContentObject((DestroyAgentMessage) command);
+	    }
 	    send(msg);
+	} catch (IOException e) {
+	    e.printStackTrace();
 	}
 
 	releaseCommand(command);
     }
-
 }

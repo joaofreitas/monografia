@@ -1,6 +1,10 @@
 package br.unb.frank.domain.model;
 
-public class DestroyAgentMessage {
+import java.io.Serializable;
+
+public class DestroyAgentMessage implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private Long alunoId;
 

@@ -5,10 +5,10 @@ import org.jboss.seam.framework.EntityQuery;
 import br.unb.frank.model.Usuario;
 
 @Name("usuarioList")
-public class UsuarioList extends EntityQuery<Usuario>
-{
-    public UsuarioList()
-    {
-        setEjbql("select usuario from Usuario usuario");
+public class UsuarioList extends EntityQuery<Usuario> {
+    private static final long serialVersionUID = 1L;
+
+    public UsuarioList() {
+	setEjbql("select usuario from Usuario usuario");
     }
 }

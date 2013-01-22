@@ -9,16 +9,21 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import org.jboss.seam.ScopeType;
 import org.jboss.seam.annotations.In;
 import org.jboss.seam.annotations.Logger;
 import org.jboss.seam.annotations.Name;
+import org.jboss.seam.annotations.Out;
+import org.jboss.seam.annotations.Scope;
 import org.jboss.seam.log.Log;
 import org.jboss.seam.security.Credentials;
 import org.jboss.seam.security.Identity;
 
 import br.unb.frank.domain.model.CreateAgentMessage;
+import br.unb.frank.domain.model.DestroyAgentMessage;
 import br.unb.frank.model.Usuario;
 
+@Scope(ScopeType.APPLICATION)
 @Name("authenticator")
 public class Authenticator {
     @Logger
@@ -29,11 +34,15 @@ public class Authenticator {
 
     @In
     Identity identity;
+
     @In
     Credentials credentials;
 
     @In
     DynamicJadeGateway jadeGateway;
+
+    @Out
+    Usuario usuario;
 
     @SuppressWarnings("unchecked")
     public boolean authenticate() {
@@ -51,17 +60,18 @@ public class Authenticator {
 	List<Usuario> listaUsuario = query.getResultList();
 
 	if (listaUsuario != null && listaUsuario.size() > 0) {
-	    sendGatewayMessage(listaUsuario);
 	    identity.addRole("admin");
+	    usuario = listaUsuario.get(0);
+
+	    sendCreateAgentMessage();
 
 	    return true;
 	}
 	return false;
     }
 
-    private void sendGatewayMessage(List<Usuario> listaUsuario) {
+    private void sendCreateAgentMessage() {
 	try {
-	    Usuario usuario = listaUsuario.get(0);
 	    CreateAgentMessage command = new CreateAgentMessage();
 	    command.setAlunoId(usuario.getId());
 	    jadeGateway.execute(command);
@@ -73,4 +83,25 @@ public class Authenticator {
 	    log.error(e);
 	}
     }
+
+    public void logout() {
+	sendDestroyAgentMessage();
+	identity.logout();
+    }
+
+    private void sendDestroyAgentMessage() {
+	try {
+	    DestroyAgentMessage command = new DestroyAgentMessage();
+	    command.setAlunoId(usuario.getId());
+	    jadeGateway.execute(command);
+	} catch (StaleProxyException e) {
+	    log.error(e);
+	} catch (ControllerException e) {
+	    log.error(e);
+	} catch (InterruptedException e) {
+	    log.error(e);
+	}
+
+    }
+
 }

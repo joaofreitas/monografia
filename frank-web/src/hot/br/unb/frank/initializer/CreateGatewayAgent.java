@@ -2,8 +2,6 @@ package br.unb.frank.initializer;
 
 import jade.core.Profile;
 import jade.util.leap.Properties;
-import jade.wrapper.ControllerException;
-import jade.wrapper.StaleProxyException;
 import jade.wrapper.gateway.DynamicJadeGateway;
 import jade.wrapper.gateway.JadeGateway;
 
@@ -45,21 +43,13 @@ public class CreateGatewayAgent {
 	Properties pp = new Properties();
 	pp.setProperty(Profile.MAIN_HOST, "localhost");
 	pp.setProperty(Profile.MAIN_PORT, "1099");
+	pp.setProperty(Profile.CONTAINER_NAME, "Seam-Container");
 
 	jadeGateway = JadeGateway.getDefaultGateway();
 
 	log.info("----------------	Configurando	--------------");
 	jadeGateway.init(GatewayFrankAgent.class.getName(), pp);
 
-	try {
-	    jadeGateway.execute("Teste!!");
-	} catch (StaleProxyException e) {
-	    e.printStackTrace();
-	} catch (ControllerException e) {
-	    e.printStackTrace();
-	} catch (InterruptedException e) {
-	    e.printStackTrace();
-	}
     }
 
 }
