@@ -59,11 +59,11 @@ public class WorkGroupAgent extends Agent {
 	AgentContainer c = getContainerController();
 	createAuxiliarAgents(c);
 
-	AID[] values = new AID[1];
-	values[0] = getAID();
+	AID[] aidValues = new AID[1];
+	aidValues[0] = getAID();
 	pattern = MessageTemplate.and(
 		MessageTemplate.MatchPerformative(ACLMessage.INFORM),
-		MessageTemplate.MatchReceiver(values));
+		MessageTemplate.MatchReceiver(aidValues));
 
 	addBehaviour(new CyclicBehaviour() {
 	    private static final long serialVersionUID = 1L;
