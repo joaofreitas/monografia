@@ -1,0 +1,17 @@
+\chapter{Metodologia de desenvolvimento}
+
+Para a realização deste trabalho, foi planejada uma metodologia de desenvolvimento na qual objetivou-se um estudo sobre um módulo da plataforma JAMA. Inicialmente, faz-se necessário um levantamento do estado da arte para levantar os principais trabalhos que são relacionados à área de dependabilidade em sistemas distribuídos, para a orientação desse trabalho.
+
+Em seguida é necessário levantar os requisitos do JAMA, descrevendo e modelando detalhadamente o módulo escolhido para a análise. A modelagem será feita com base na linguagem \emph{Unified Modeling Language} (UML). De acordo com~\cite{craig08}, UML consegue expressar o significado semântico de um projeto de software à todos os \emph{stakeholders} utilizando, na grande maioria dos casos, notação gráfica.
+
+Após esse levantamento inicial, será necessário também levantar requisitos de dependabilidade.  Como já visto anteriormente, ambientes distribuídos possuem diversas características de dependabilidade relativos à arquitetura. Serão analisados no trabalho características que talvez não sejam adequados para outras arquiteturas.
+
+O próximo passo é a caracterização das falhas que um ambiente distribuído pode ter. Falhas como erro na transmissão de mensagens para outros pares, perda de mensagens na rede, segurança na autenticação dos pares, ataques de negação de serviços da rede, propagação de vírus, dentre outros, devem ser requisitos considerados na análise a ser feita neste trabalho.
+
+Em seguida se dá o desenvolvimento de um modelo probabilístico de estados com base em cadeias de~\emph{Markov}, para determinar as operacões do sistema que tem algum tipo de relação com os requisitos de dependabilidade acima mencionados.
+
+O próximo passo é a implementação do modelo através do sistema de checagem de modelo~\emph{PRISM}. Em seguida a modelagem para análise formal utilizando pctl (~\emph{probabilistic computational tree logic}). Com todos essas análises e modelagens, será possível enfim realizar uma análise de sensibilidade mais detalhada sobre o componente do JAMA em questão.
+
+Após a análise, caso seja necessário, serão propostas melhorias visando diminuir o grau de dependência de alguns componentes com o módulo avaliado. A hipótese a ser considerada é que o JAMA possuirá um baixo nível de sensibilidade de componentes do sistema. Essa melhoria pode ser no nível de estudos ou mesmo uma implementação em nível de código.
+
+Por fim, essa solução deverá ser testada e avaliada afim de garantir a sua melhoria em relação à versão anterior da plataforma antes de ser realiazado esse estudo.

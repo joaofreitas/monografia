@@ -1,0 +1,33 @@
+\chapter{Fundamentos de Dependabilidade}
+
+\section{Fundamentos de Dependabilidade}
+
+Antes de falar em dependabilidade, são necessárias algumas definições.
+
+A definição original de dependabilidade de software é a habilidade de um sistema prover um serviço ao qual seja possível justificadamente confiar. Uma outra definição alternativa é a dependabilidade de um sistema é a habilidade de evitar falhas que são mais frequentes e mais graves do que o aceitável.
+
+Dependabilidade é uma área que vem desenvolvendo seus estudos de forma crescente ao longo dos anos. De acordo com~\cite{algirdas04}, o conceito de dependabilidade abrange uma série de principais atributos que a integram.
+
+O primeiro deles é disponibilidade, onde um serviço deve estar o disponível o máximo de tempo possível. A confiabilidade garante que o serviço usado é sempre confiável.
+
+A segurança é a garantia de não haver consequências catastróficas para o ambiente no uso do serviço. Integridade garante não alteração nas propriedades. Manutenibilidade é a garantia que é possível mudanças e reparos no sistema provedor do serviço.
+
+Alguns atributos são muito próximos da segurança da informação, como por exemplo a confidencialidade, que é a capacidade de não prover informação para entidades desconhecidas. Outros atributos são, na verdade, uma composição com a segurança. Por exemplo a integridade e disponibilidade. Integridade com acessos não autorizados e disponibilidade apenas para acessos autorizados. A figura~\ref{fig:dependabilidade-seguranca} sintetiza o que foi dito, mostrando os atributos em comum das duas áreas.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.75]{images/dependabilidade-seguranca.png}
+	\caption{Dependabilidade, segurança e seus atributos em comum.~\cite{algirdas04}}
+	\label{fig:dependabilidade-seguranca}
+\end{figure}
+
+Dado que sistemas começam a ser modelados a partir de especificações de componentes, os desafios de dependabilidade hoje para estudos futuros são muitos. O primeiro deles é determinar precisamente a qualidade desses atributos de forma precisa, sabendo que são especificados de forma imprecisa. É necessário também determinar em que medida e quais restrições as propriedades emergentes podem ser derivadas das propriedades de um sistema. E dado um conjunto de propriedades, quais delas são previsíveis.
+
+Mais especificamente, em um sistema multiagente, é a propriedade que podemos medir sobre a confiança que podemos mensurar em um agente dado que ele roda em um ambiente descentralizado. Devido a complexidade do ambiente, existem diversos desafios de acordo com~\cite{hoffman08} no projeto desse ambiente. Em~\cite{algirdas04} são definidos as principais propriedades relacionadas a dependabilidade, sendo um dos objetivos deste trabalho a identificação destas propriedades na plataforma JAMA.
+
+Alguns conceitos mais elementares em dependabilidade podem parecer sinônimos, porém tem significados distintos. Erros, faltas e falhas possuem os seguintes significados, todas de acordo com~\cite{algirdas04}:
+\begin{itemize}
+	\item Falta (~\emph{fault}) - Ocorre quando um serviço disponível em um sistema é entregue de maneira diferente do esperado.
+	\item Erro (~\emph{error}) - A diferença entre o serviço entregue e o serviço esperado é chamado de erro.
+	\item Falha (~\emph{failure}) - É a manifestação do erro para o usuário do sistema seja por mensagens de erro personalizadas, ~\emph{stack trace}, dentre outros.
+\end{itemize}

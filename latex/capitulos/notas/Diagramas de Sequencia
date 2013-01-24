@@ -1,0 +1,87 @@
+----------------
+title Caso de Uso 2 - Caso de Sucesso
+
+Interface->Interface: Cria GT do Aluno
+Interface->Interface: Determina GT do Aluno
+Interface->StudentWorkGroup: Envia Respostas do Aluno
+
+StudentWorkGroup->CognitiveAction: Envia Respostas
+CognitiveAction->LearningMethodAnalyzer: Envia Dados de Aprendizagem
+LearningMethodAnalyzer->LearningMethodAnalyzer: Infere estilo de aprendizagem
+LearningMethodAnalyzer->CognitiveAction: Estilo de Aprendizagem
+CognitiveAction->CognitiveAction: Constrói Primeiro Modelo do Aluno
+CognitiveAction->StudentWorkGroup: Envia Resultados
+StudentWorkGroup->StudentWorkGroup: Persiste Resultados
+
+StudentWorkGroup->AffectiveAction: Envia Respostas
+AffectiveAction->AffectiveAction: Constrói Modelo Afetivo Inicial
+AffectiveAction->StudentWorkGroup: Envia Resultados
+StudentWorkGroup->StudentWorkGroup: Persiste Resultados
+
+StudentWorkGroup->MetacognitiveAction: Envia Respostas
+MetacognitiveAction->MetacognitiveAction: Constrói Modelo Metacognitivo Inicial
+MetacognitiveAction->StudentWorkGroup: Envia Resultados
+StudentWorkGroup->StudentWorkGroup: Persiste Resultados
+
+---------------------------------------------
+title Caso de Uso 2.1 - Inferência Implícita
+
+Interface->Interface: Carrega GT do Aluno
+Seam->Interface: Notifica AVA escolhido
+
+AVA->WebServiceInterface: Recebe Dados do Aluno
+note right of WebServiceInterface: Envio ocorre pelo UC5
+WebServiceInterface->WebServiceInterface: Valida Dados
+WebServiceInterface->WebServiceInterface: Determina o GT do aluno
+WebServiceInterface->StudentWorkGroup: Envia Dados
+StudentWorkGroup->CognitiveAction: Envia Dados
+CognitiveAction->LearningMethodAnalyzer: Envia Dados de Aprendizagem
+LearningMethodAnalyzer->LearningMethodAnalyzer: Infere estilo de aprendizagem
+LearningMethodAnalyzer->LearningMethodAnalyzer: Confirma ou Refuta Estilo de Aprendizagem
+LearningMethodAnalyzer->CognitiveAction: Estilo de Aprendizagem
+CognitiveAction->PerformanceAnalyzer: Envia Dados de Desempenho
+PerformanceAnalyzer->PerformanceAnalyzer: Processa Desempenho na Atividade
+PerformanceAnalyzer->CognitiveAction: Desempenho
+CognitiveAction->CognitiveAction: Atualiza Modelo de Aprendizagem
+CognitiveAction->CognitiveAction: Atualiza Modelo Cognitivo do Aluno
+CognitiveAction-->StudentWorkGroup: Envia Resultados
+StudentWorkGroup->StudentWorkGroup: Persiste Resultados
+
+----------------------------------------------------
+* UC 3 - MODELAGEM AFETIVA
+Interface->Interface: Carrega GT do Aluno
+Seam->Interface: Notifica AVA escolhido
+AVA->WebServiceInterface: Recebe Dados do Aluno
+note right of WebServiceInterface: Envio ocorre pelo UC5
+WebServiceInterface->WebServiceInterface: Valida Dados
+WebServiceInterface->WebServiceInterface: Determina o GT do aluno
+WebServiceInterface->StudentWorkGroup: Envia Dados
+StudentWorkGroup->AffectiveAction: Envia Dados
+AffectiveAction->AffectiveAction: Atualiza Modelo Afetivo do Aluno
+AffectiveAction-->StudentWorkGroup: Envia Resultados
+StudentWorkGroup->StudentWorkGroup: Persiste Resultados
+
+----------------------------------------------------
+* UC 4 - MODELAGEM MetaCognitiva
+Interface->Interface: Carrega GT do Aluno
+Seam->Interface: Notifica AVA escolhido
+AVA->WebServiceInterface: Recebe Dados do Aluno
+note right of WebServiceInterface: Envio ocorre pelo UC5
+WebServiceInterface->WebServiceInterface: Valida Dados
+WebServiceInterface->WebServiceInterface: Determina o GT do aluno
+WebServiceInterface->StudentWorkGroup: Envia Dados
+StudentWorkGroup->MetacognitiveAction: Envia Dados
+MetacognitiveAction->MetacognitiveAction: Atualiza Modelo Metacognitivo do Aluno
+MetacognitiveAction-->StudentWorkGroup: Envia Resultados
+StudentWorkGroup->StudentWorkGroup: Persiste Resultados
+
+----------------------------------------------------
+* UC 5 - INTERFACE COM AMBIENTE VIRTUAL DE APRENDIZAGEM
+Aluno->AVA: Interage com Sistema
+AVA->WebServiceInterface: Envia Resultados
+note right of SMA: Envio via WebService
+WebServiceInterface->WebServiceInterface: Autentica Aluno
+WebServiceInterface->WebServiceInterface: Validação dos Dados
+WebServiceInterface->GTIdentifier: Solicita Identificação do GT do aluno
+GTIdentifier->WebServiceInterface: GT do Aluno
+WebServiceInterface->StudentWorkGroup: Envia Dados do Aluno

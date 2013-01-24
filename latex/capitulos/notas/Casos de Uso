@@ -1,0 +1,272 @@
+----------------------------------
+CASOS DE USO DAS METAS
+----------------------------------
+
+* UC 1 - NOTIFICAR DOCENTE
+Escopo: Aplicação SMA
+Nível: Objetivo do usuário
+Ator Principal: Docente
+Metas: 2
+Interessados e Interesses:
+	- Docente: Deseja ser notificado sobre o modelo do estudante
+
+Principal Cenário de Sucesso:
+	1. O Docente faz o login no sistema.
+	2. O Sistema recupera a lista de alunos disponíveis.
+	3. O Sistema exibe a lista de alunos.
+	4. O Docente seleciona o aluno desejado.
+	5. O Sistema carrega as informações relativas à modelagem do aluno:
+		- Modelagem cognitiva
+		- Modelagem metacognitiva
+		- Modelagem afetiva
+
+Extensões
+	1 Falha no login:
+		1.1 Neste caso, o Docente deverá tentar o seu login novamente.
+
+Requisitos Especiais
+	Não se aplica
+	
+----------------
+title Caso de Uso 1 - Caso de Sucesso
+
+Docente->Seam: Requisição de Autenticação
+Seam->Seam: Validação do usuário
+Seam->InterfaceSMA: Notifica Interface
+Seam-->Docente: Reposta da Autenticação Ok
+Seam-->Docente: Exibe Lista de Alunos
+Docente->Seam: Seleciona Aluno
+Seam->Seam: Carrega Modelo
+Seam-->Docente: Exibe Modelo
+
+----------------------------------------------------
+* UC 2 - DETERMINAÇÃO DA MODELAGEM COGNITIVA DO ALUNO
+Escopo: Aplicação SMA e Ambiente(s) Virtual de Aprendizagem
+Nível: Objetivo do sistema
+Ator Principal: Sistema, Aluno
+Metas: 10, 11, 13, 14, 15
+Interessados e Interesses:
+	- Sistema: Manter um modelo do estilo de aprendizagem do estudante a partir dos dados gerados da sua interação com um Ambiente Virtual de Aprendizagem, bem como com o próprio sistema.
+	- Aluno: Interagir com um ambiente de aprendizagem, bem como com o sistema, a fim de obter auxílio no seu processo de aprendizagem.
+
+Principal Cenário de Sucesso:
+	1. O Aluno faz o primeiro login no sistema.
+	2. O Sistema reconhece o perfil do aluno e cria um Grupo de Trabalho (GT) de agentes.
+	3. O Aluno deverá preencher um questionário onde seu estilo de aprendizagem será deduzido por meio da avaliação explícita.
+	4. O Sistema avalia as respostas preenchidas pelo aluno e, conforme a literatura de psicologia, determinará o estilo de aprendizagem.
+	5. O Sistema construirá o primeiro modelo do aluno, com base no seu estilo de aprendizagem inicial.
+	6. O Sistema salva os dados, a fim de notificar o docente dos dados obtidos.
+	7. O Sistema notifica o Aluno sobre o seu estilo de aprendizagem.
+	8. O Sistema exibe a lista de Ambiente Virtual de Aprendizagem disponíveis para o Aluno.
+
+Extensões
+	1 Inferência implícita de estilo de aprendizagem
+		1.1. O Aluno faz login no sistema
+		1.2. O Sistema reconhece o perfil do aluno e cria um grupo de trabalho de agentes.
+		1.3. O Sistema exibe a lista de Ambiente Virtual de Aprendizagem disponíveis para o Aluno.
+		1.4. O Aluno seleciona o AVA
+		1.5. O Sistema é notificado do AVA escolhido
+		1.6. O Ambiente Virtual de Aprendizagem registra as ações do Aluno e envia para o Sistema.
+		1.7. O ambiente interage com o Sistema por meio do caso de uso UC5
+		1.8. O Sistema utiliza os resultados de atividades feitas pelo aluno para inferir o seu estilo de aprendizagem, levando em consideração a literatura da psicologia relativa à atividade desenvolvida.
+		1.9. O Sistema compara então os dados obtidos com os dados previamente armazenados no banco de dados, a fim de obter um grau de certeza do estilo de aprendizagem que foi construído. UC2.1
+		1.9.1. O Sistema salva os dados no banco de dados, a fim de notificar o Docente dos dados obtidos.
+
+	2 Determinação do Desempenho do Aluno
+		2.1. O Sistema analisa os dados obtidos do ambiente para determinar o desempenho do Aluno na atividade, levando em consideração a literatura pedagógica relativa.
+		2.2. O Sistema salva os dados no banco de dados, a fim de notificar o Docente dos dados obtidos.
+
+Requisitos Especiais
+	Não se aplica
+
+----------------
+title Caso de Uso 2 - Caso de Sucesso
+
+Aluno->Seam: Requisição de Autenticação
+Seam->Seam: Validação
+Seam->InterfaceSMA: Notifica SMA
+InterfaceSMA->InterfaceSMA: Cria GT para Aluno
+Seam->Seam: Verifica se é Primeiro Acesso
+Seam-->Aluno: Reposta da Autenticação Ok
+Seam-->Aluno: Exibe Questionário
+Aluno->Seam: Envia Respostas
+Seam->InterfaceSMA: Envia Respostas
+InterfaceSMA->InterfaceSMA: Determina GT do aluno
+InterfaceSMA->WorkgroupAgent: Envia Respostas para GT do Aluno
+WorkgroupAgent->CognitiveAgent: Envia Respostas
+CognitiveAgent->CognitiveAgent: Determina Estilo de Aprendizagem
+CognitiveAgent->CognitiveAgent: Constrói Primeiro Modelo do Aluno
+CognitiveAgent-->WorkgroupAgent: Envia Resultados
+WorkgroupAgent->WorkgroupAgent: Persiste Resultados
+
+WorkgroupAgent->AffectiveAgent: Envia Respostas
+AffectiveAgent->AffectiveAgent: Constrói Modelo Afetivo Inicial
+AffectiveAgent-->WorkgroupAgent: Envia Resultados
+WorkgroupAgent->WorkgroupAgent: Persiste Resultados
+
+WorkgroupAgent->MetaCognitiveAgent: Envia Respostas
+MetaCognitiveAgent->MetaCognitiveAgent: Constrói Modelo Metacognitivo Inicial
+MetaCognitiveAgent-->WorkgroupAgent: Envia Resultados
+WorkgroupAgent->WorkgroupAgent: Persiste Resultados
+
+Seam->InterfaceSMA: Verifica Fim do Processamento
+InterfaceSMA-->Seam: Notifica Fim do Processamento
+Seam-->Aluno: Exibe Resultados
+Seam-->Aluno: Exibe Lista de AVA
+
+----------------
+title Caso de Uso 2.1 - Inferência Implícita
+
+Aluno->Seam: Requisição de Autenticação
+Seam->Seam: Validação
+Seam->InterfaceSMA: Notifica SMA
+InterfaceSMA->InterfaceSMA: Cria GT para Aluno
+Seam-->Aluno: Reposta da Autenticação Ok
+Seam-->Aluno: Exibe Lista de AVA
+Aluno->Seam: Escolhe AVA
+Seam->InterfaceSMA: Notifica sobre AVA escolhido
+InterfaceSMA->WorkgroupAgent: Notifica GT do Aluno sobre AVA escolhido
+Aluno->AVA: Interage com Sistema
+AVA->WebServiceAgent: Envia Resultados
+note right of WebServiceAgent: Envio ocorre pelo UC5
+WebServiceAgent->WebServiceAgent: Valida Dados
+WebServiceAgent->WebServiceAgent: Determina o GT do aluno
+WebServiceAgent->WorkgroupAgent: Envia Dados
+WorkgroupAgent->CognitiveAgent: Envia Dados
+CognitiveAgent->CognitiveAgent: Infere Estilo de Aprendizagem
+CognitiveAgent->CognitiveAgent: Confirma ou Refuta Estilo de Aprendizagem
+CognitiveAgent->CognitiveAgent: Processa Desempenho na Atividade
+CognitiveAgent->CognitiveAgent: Atualiza Modelo Cognitivo do Aluno
+CognitiveAgent-->WorkgroupAgent: Envia Resultados
+WorkgroupAgent->WorkgroupAgent: Persiste Resultados
+
+----------------------------------------------------
+* UC 3 - MODELAGEM AFETIVA
+Escopo: Aplicação SMA e Ambiente(s) de Aprendizagem(ns) Dedicado(s)
+Nível: Objetivo do sistema
+Ator Principal: Sistema
+Metas: 6, 7, 8
+Interessados e Interesses:
+	- Sistema: Criar e manter um modelo afetivo do estudante a partir dos dados gerados da sua interação com um Ambiente Virtual de Aprendizagem.
+
+Principal Cenário de Sucesso:
+	1. O Aluno faz login no sistema
+	2. O Sistema exibe a lista de Ambiente Virtual de Aprendizagem disponíveis para o Aluno.
+	3. O Aluno seleciona o AVA
+	4. O sistema é notificado do AVA escolhido
+	5. O Ambiente Virtual de Aprendizagem registra as ações do Aluno e envia para o Sistema.
+	6. O ambiente interage com o Sistema por meio do caso de uso UC5
+	7. O Sistema utiliza os resultados de atividades feitas pelo aluno para criar um modelo afetivo do estudante, levando em consideração a literatura da psicologia relativa à atividade desenvolvida.
+	8. O Sistema compara então os dados obtidos com os dados previamente armazenados no banco de dados, caso existam, a fim de atualizar o modelo previamente criado.
+	9. O Sistema salva os dados no banco de dados, a fim de notificar o Docente dos dados obtidos.
+	
+Extensões
+	Não se aplica
+
+Requisitos Especiais
+	Não se aplica
+	
+----------------
+title Caso de Uso 3 - Modelagem Afetiva
+
+Aluno->Seam: Requisição de Autenticação
+Seam->Seam: Validação
+Seam->InterfaceSMA: Notifica SMA
+InterfaceSMA->InterfaceSMA: Cria GT para Aluno
+Seam-->Aluno: Reposta da Autenticação Ok
+Seam-->Aluno: Exibe Lista de AVA
+Aluno->Seam: Escolhe AVA
+Seam->InterfaceSMA: Notifica sobre AVA escolhido
+InterfaceSMA->WorkgroupAgent: Notifica GT do Aluno sobre AVA escolhido
+Aluno->AVA: Interage com Sistema
+AVA->WebServiceAgent: Envia Resultados
+note right of WebServiceAgent: Envio ocorre pelo UC5
+WebServiceAgent->WebServiceAgent: Valida Dados
+WebServiceAgent->WebServiceAgent: Determina o GT do aluno
+WebServiceAgent->WorkgroupAgent: Envia Dados
+WorkgroupAgent->AffectiveAgent: Envia Dados
+AffectiveAgent->AffectiveAgent: Processa Resultados
+AffectiveAgent->AffectiveAgent: Atualiza Modelo Afetivo do Aluno
+AffectiveAgent-->WorkgroupAgent: Envia Resultados
+WorkgroupAgent->WorkgroupAgent: Persiste Resultados
+
+----------------------------------------------------
+* UC 4 - MODELAGEM METACOGNITIVA
+Escopo: Aplicação SMA e Ambiente(s) de Aprendizagem(ns) Dedicado(s)
+Nível: Objetivo do sistema
+Ator Principal: Sistema
+Metas: 6, 7, 8
+Interessados e Interesses:
+	- Sistema: Criar e manter um modelo metacognitivo do estudante a partir dos dados gerados da sua interação com um Ambiente Virtual de Aprendizagem.
+
+Principal Cenário de Sucesso:
+	1. O Aluno faz login no sistema
+	2. O Sistema exibe a lista de Ambiente Virtual de Aprendizagem disponíveis para o Aluno.
+	3. O Aluno seleciona o AVA
+	4. O sistema é notificado do AVA escolhido
+	4. O Ambiente Virtual de Aprendizagem registra as ações do Aluno e envia para o Sistema.
+	5. O ambiente interage com o Sistema por meio do caso de uso UC5
+	6. O Sistema utiliza os resultados de atividades feitas pelo aluno para criar um modelo metacognitivo do estudante, levando em consideração a literatura da psicologia relativa à atividade desenvolvida.
+	7. O Sistema compara então os dados obtidos com os dados previamente armazenados no banco de dados, caso existam, a fim de atualizar o modelo previamente criado.
+	8. O Sistema salva os dados no banco de dados, a fim de notificar o Docente dos dados obtidos.
+	
+Extensões
+	Não se aplica
+
+Requisitos Especiais
+	Não se aplica
+	
+----------------
+title Caso de Uso 4 - Modelagem Metacognitiva
+
+Aluno->Seam: Requisição de Autenticação
+Seam->Seam: Validação
+Seam->InterfaceSMA: Notifica SMA
+InterfaceSMA->InterfaceSMA: Cria GT para Aluno
+Seam-->Aluno: Reposta da Autenticação Ok
+Seam-->Aluno: Exibe Lista de AVA
+Aluno->Seam: Escolhe AVA
+Seam->InterfaceSMA: Notifica sobre AVA escolhido
+InterfaceSMA->WorkgroupAgent: Notifica GT do Aluno sobre AVA escolhido
+Aluno->AVA: Interage com Sistema
+AVA->WebServiceAgent: Envia Resultados
+note right of WebServiceAgent: Envio ocorre pelo UC5
+WebServiceAgent->WebServiceAgent: Valida Dados
+WebServiceAgent->WebServiceAgent: Determina o GT do aluno
+WebServiceAgent->WorkgroupAgent: Envia Dados
+WorkgroupAgent->MetaCognitiveAgent: Envia Dados
+MetaCognitiveAgent->MetaCognitiveAgent: Processa Resultados
+MetaCognitiveAgent->MetaCognitiveAgent: Atualiza Modelo Metacognitivo do Aluno
+MetaCognitiveAgent-->WorkgroupAgent: Envia Resultados
+WorkgroupAgent->WorkgroupAgent: Persiste Resultados
+
+----------------------------------------------------
+* UC 5 - INTERFACE COM AMBIENTE VIRTUAL DE APRENDIZAGEM
+Escopo: Aplicação SMA
+Nível: Objetivo do sistema
+Ator Principal: Sistema
+Metas: 9
+Interessados e Interesses:
+	- Sistema: Obter os dados do Aluno na sua interação com o Ambiente
+	- Ambiente Virtual de Aprendizagem: Comunicar o Sistema sobre os resultados do Aluno relativos ao desenvolvimento de uma atividade.
+
+Principal Cenário de Sucesso:
+	1. O Ambiente Virtual de Aprendizagem registra as ações do Aluno.
+	2. O ambiente envia os resultados do aluno via web-service para o Sistema SMA, a partir de uma URL disponível no ambiente. Os dados serão enviados, bem como um token de autenticação que identifica o Aluno e o seu grupo de trabalho no sistema.
+	3. O Sistema SMA recebe o push enviado pelo Ambiente. Ele separa os dados para e envia para o devido grupo de trabalho do Aluno.
+	4. O processamento dos dados ocorre de acordo com os casos de uso UC2, UC3, UC4
+	
+Extensões
+
+Requisitos Especiais
+
+----------------
+title Caso de Uso 5 - Interface com Ambiente Virtual de Aprendizagem
+
+Aluno->AVA: Interage com Sistema
+AVA->WebServiceAgent: Envia Resultados
+note right of SMA: Envio via WebService
+WebServiceAgent->WebServiceAgent: Autentica Aluno
+WebServiceAgent->WebServiceAgent: Validação dos Dados
+WebServiceAgent->WebServiceAgent: Identifica GT do Aluno
+WebServiceAgent->WorkgroupAgent: Envia Dados do Aluno

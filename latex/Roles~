@@ -1,0 +1,25 @@
+Metas obtidas a partir dos requisitos
+1. Manter um modelo do estudante (Meta geral do sistema)
+2. Notificar ao docente
+3. Auxiliar o aluno por meio de um grupo de trabalho
+4. Criar modelagem cognitiva
+5. Criar modelagem metacognitiva
+6. Criar modelagem modelagem afetiva
+7. Criar modelagem da personalidade
+8. Criar modelagem das emoções do estudante
+9. Interfacear com ferramentas de aprendizagem dedicada
+10. Confirmar estilo de aprendizagem do aluno
+11. Refutar estilo de aprendizagem do aluno
+12. Construir modelo de desempenho do aluno
+13. Construir modelagem explícita
+14. Construir modelagem implícita
+15. Construir modelo de estilo de aprendizagem do aluno
+
+Interface				2
+StudentWorkGroup		3
+CognitiveAction			4,13,14,15
+LearningMethod			10,11
+PerformanceCheck		12
+MetacognitiveAction		5
+AffectiveAction			7,8
+WebServiceInterface		9

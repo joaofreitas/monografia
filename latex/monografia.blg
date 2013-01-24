@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: monografia.aux
+The style file: plain.bst
+Database file #1: bibliografia.bib
+Warning--there's a number but no series in oram01
+Warning--there's a number but no series in novig95
+Warning--there's a number but no series in wooldridge04
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            617 strings with 7433 characters,
+and the built_in function-call counts, 5922 in all, are:
+= -- 590
+> -- 251
+< -- 5
++ -- 103
+- -- 80
+* -- 368
+:= -- 1021
+add.period$ -- 67
+call.type$ -- 21
+change.case$ -- 96
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 237
+empty$ -- 481
+format.name$ -- 80
+if$ -- 1234
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 23
+newline$ -- 107
+num.names$ -- 42
+pop$ -- 112
+preamble$ -- 1
+purify$ -- 82
+quote$ -- 0
+skip$ -- 157
+stack$ -- 0
+substring$ -- 292
+swap$ -- 38
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 70
+warning$ -- 3
+while$ -- 61
+width$ -- 23
+write$ -- 227
+(There were 3 warnings)

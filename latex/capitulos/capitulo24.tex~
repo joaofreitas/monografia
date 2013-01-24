@@ -1,0 +1,85 @@
+\chapter{Fundamentos de Sistemas Distribuídos}
+
+\section{JAMA}
+
+O desenvolvimento completo da plataforma JAMA está descrita em~\cite{parise11}. Seu objetivo foi desenvolver uma plataforma de sistemas multiagentes distruibuído e com fraco acoplamento entre os agentes e as camadas mais baixas do sistemas, permitindo assim o desenvolvimento de novas funcionalidades. Essa nova plataforma garante a comunicação dos agentes com as outras entidades do ambiente. Atualmente o JAMA está somente com a parte de comunicação de serviços funcional, necessitando de implementação na parte de suporte a agentes.
+\begin{itemize}
+	\item Tolerância a falhas.
+	\item Balanceamento de carga.
+	\item Escalabilidade da aplicação.
+	\item Descentralização dos serviços nas bordas da rede.
+	\item Descentralização de roteamento dos nós.
+\end{itemize}
+
+
+O JAMA foi desenvolvido na linguagem Java e outros frameworks de softwares distrubuidos. Basicamente foi usado tecnologias como o Google Guice (pronunciado juice), que trabalha com injeção de dependências e garante que o código não precise criar objetos diretamente, reduzindo então a dependencia de ``fábricas'' de criações de objetos.
+
+Por se tratar de uma plataforma de sistemas distribuídos, foi necessário escolher um protocolo de rede para a implementação. O protocolo escolhido foi o Peer-to-peer (P2P) pois oferecem uma série de propriedades interessantes para a aplicação:
+\begin{itemize}
+	\item Tolerância a falhas.
+	\item Balanceamento de carga.
+	\item Escalabilidade da aplicação.
+	\item Descentralização dos serviços nas bordas da rede	.
+\end{itemize}
+
+Como foi dito anteriormente, um sistema multiagente tem basicamente duas entidades: Agentes e o ambiente. A plataforma JAMA procurou fazer do ambiente o componente principal no desenvolvimento. Logo a sua arquitetura basicamente preocupou-se com as duas entidades listadas anteriormente e outros dois componentes: Barramento de eventos e um adaptador de rede, visto que é uma aplicação distribuída.
+
+\subsection{Ambiente}
+
+A arquitetura do JAMA atua como uma camada que abstrai as camadas inferiores, permitindo a localização e comunicação de agentes de forma mais transparente. Os agentes emitem mensagens nesse ambiente e ele se encarrega de notificar todos os agentes ouvintes. Por ser uma arquitetura distribuída, os agentes não tem conhecimento se estão rodando na mesma máquina ou não. Logo não existe comunicação direta entre os agentes, o ambiente será o mediador entre eles caso seja necessário haver algum tipo de comunicação. A imagem~\ref{fig:ambiente} sintetiza o que foi explicado.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.75]{images/ambiente.png}
+	\caption{Ambiente distriuído no JAMA. Os agentes não se comunicam diretamente.}
+	\label{fig:ambiente}
+\end{figure}
+
+O ambiente do JAMA é capaz também de atuar como plataforma provedora de serviços. Aplicações como banco de dados distribuídos, transporte de agentes, e outros podem estar disponíveis na plataforma, bastando apenas serem registrados para serem encontrados pelos agentes. Esses serviços em sua grande maioria são suporte para o processamento dos agentes. Em~\cite{parise11} podemos ver um exemplo de agente que usa aplicações registradas no JAMA:
+
+\begin{quote}
+Em aplicações forenses, é muito comum o uso de soluções multiagentes devido ao grande volume de dados e processamento na análise de um caso. Nestas aplicações, o ambiente desempenharia uma função importante ao prover serviços como sistema de arquivos, onde os dados seriam carregados; banco de dados distribuídos, onde os agentes submeteriam seus resultados; e uma aplicação Web, onde os usuários poderiam acompanhar o andamento da análise e executar ações sobre o sistema. Os agentes ficariam com a única responsabilidade de se organizar e executar o trabalho utilizando os serviços fornecidos.
+\end{quote}
+
+\subsection{Adaptador de rede}
+
+O Adaptador de rede é responsável por integrar os protocolos de redes ao ambiente. O adaptador de rede deve possuir funcionalidades básicas implementadas para uso da plataforma. Como o JAMA foi projetado para fazer uso de um \emph{middleware open-source} que já implementasse as funcionalidades básicas, não foi necessário fazer uma implementação do início. O \emph{middleware peer-to-peer pastry} foi escolhido para a implementação pois possui bom suporte a segurança, mensagens multicast e boa documentação disponível na internet.
+
+O adaptador é funciona de forma a receber eventos das camadas superiores, serializa os eventos em uma mensagem de rede e envia para a aplicação em algum lugar na rede. Ao receber a mensagem, ela é \emph{desserializada} em um evento e este evento é enviado para as camadas superiores.
+
+\subsection{Barramento de eventos}
+
+O JAMA foi definido para funcionar com o sistema de eventos: Toda e qualquer comunicação entre agentes é feita desta forma. Dessa forma a aplicação não fica acoplada a um tipos específicos de objetos, aumentando assim a escalabilidade da aplicação.
+
+O sistema de eventos está ligado com a definição de evento e ouvintes. Ao montar-se um evento, são passandas todas as informações que forem jugadas necessárias para a comunicação. Em seguida o evento é enviado e a plataforma notifica apenas os ouvintes que estão interessados em receber a comunicação.
+
+O sistema que implementa o despacho e a notificação de eventos é o sistema de barramentos. Seu projeto foi orientado a ser implementado em três padrões de projetos. O primeiro padrão é o \emph{Singleton}, pois o barramento deve ser único na aplicação. O segundo padrão é o \emph{Observer}, pois é nele que se encontram os registros dos ouvintes do sistema e ele irá notifica-los dos eventos enviados. O terceiro padrão é o \emph{Mediator} pois ele atua como mediador da comunicação de elementos da plataforma.
+
+\subsection{Agente}
+
+A parte de agente é responsável por implementar a lógica de sistemas multiagentes. No JAMA, os agentes são executados em paralelo através de Threads separados, sendo responsáveis pelo seu estado e seu fluxo de execução.
+
+O ciclo de vida de um agente segue basicamente os seguintes passos:
+
+\begin{itemize}
+	\item \emph{Start} - Ao criar o agente, o ciclo start é iniciado. Normalmente é usado para configurações iniciais do agente.
+	\item \emph{Loop} - Código principal que é executado no agente.
+	\item \emph{Sleep} - Interrupção da atividade do agente, podendo ser acordado no futuro.
+	\item \emph{Wakeup} - Volta para o estado ativo e continua a execução do trecho \emph{loop}.
+	\item \emph{Destroy} - Destrói a instância do agente, finalizando a execução.
+\end{itemize}
+
+
+\section{Desafios desse trabalho}
+O trabalho porém carece de uma análise de dependabilidade, envolvendo os seus componentes e integração dos mesmos. Não existe um estudo detalhado mensurando o grau de dependabilidade entre os componentes principais (barramento de eventos, adaptador de rede, serviços da rede, etc), nem mesmo detalhando a dependência entre esses módulos.
+
+Além disso, devem ser analisados módulos da rede de sobreposição (o pastry) a fim de garantir alguns aspectos do seu funcionamento. Por exemplo, deve-se analisar a corretude no roteamento das mensagens, ou seja, uma mensagem não vai chegar em um nó ao qual não seja o destino. Também deve ser garantido que as mensagens sempre chegarão ao seu destino, analisando então a robustez do sistema.
+
+O objetivo dessa análise é permitir encontrar pontos onde podem ser melhorados e garantir uma plataforma mais robusta. Dessa forma garantir uma evolução à plataforma Jama que é uma alternativa à plataforma centralizada do observatório web descrito no trabalho~\cite{observatorio}.
+
+O observatório web é um portal para apresentar ao usuário informações relativas à um contexto definido pelo observatório. Essas informações são retiradas de redes sociais, revistas, portais, dentre outros meios de comunicações.
+
+O arcabouço sobre o qual o Observatório foi criado é de forma centralizada, impedido uma escalabilidade e gerando impacto de performance no sistema atual em produção.
+
+Portanto faz-se necessário então um estudo mais aprofundado na plataforma JAMA, sendo esse portanto o foco principal deste trabalho.
+

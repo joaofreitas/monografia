@@ -1,0 +1,128 @@
+\begin{thebibliography}{10}
+
+\bibitem{stilling03}
+Thomas~Stilling Ambus.
+\newblock Peer-to-peer routing for persistent storage.
+\newblock Acessado em 18/11/2011. Disponível em
+  http://plan-x.org/projects/routing/\#paper, Julho 2003.
+
+\bibitem{algirdas04}
+Algirdas Avizienis, Jean-Claude Laprie, Brian Randell, and Carl Landwehr.
+\newblock Basic concepts and taxonomy of dependable and secure computing.
+\newblock {\em IEEE Transactions On Dependable And Secure Computing},
+  1(1):11--33, 2004.
+
+\bibitem{ian02}
+Ian Clarke, Scott~G. Miller, Theodore~W. Hong, Oskar Sandberg, and Brandon
+  Wiley.
+\newblock Protecting free expression online with freenet.
+\newblock {\em IEEE Internet Computing}, 6:40--49, January 2002.
+
+\bibitem{parise11}
+Leone Parise~Vieira da~Silva~e Rajiv~Geeverghese.
+\newblock Implementação de uma plataforma de desenvolvimento de sistema
+  multiagente com abordagem peer-to-peer.
+\newblock Acessado em 18/11/2011. Disponível em
+  http://monografias.cic.unb.br/dspace/handle/123456789/316, Março 2011.
+
+\bibitem{dovalScalable01}
+Diego Doval and Donal O'Mahony.
+\newblock Overlay networks: A scalable alternative for p2p.
+\newblock {\em IEEE Internet Computing}, 7:79--82, July 2003.
+
+\bibitem{hoffman08}
+Leah Hoffman.
+\newblock In search of dependable design.
+\newblock {\em Communications of the ACM}, 51(7):14--16, Julho 2008.
+
+\bibitem{craig08}
+C.~LARMAN.
+\newblock {\em Utilizando UML e Padr{\~o}es}.
+\newblock BOOKMAN COMPANHIA ED, 2008.
+
+\bibitem{maymounkov02}
+Petar Maymounkov and David Mazières.
+\newblock Kademlia: A peer-to-peer information system based on the xor metric.
+\newblock In {\em Revised Papers from the First International Workshop on
+  Peer-to-Peer Systems}, IPTPS '01, pages 53--65, London, UK, 2002.
+  Springer-Verlag.
+
+\bibitem{oram01}
+Andy Oram.
+\newblock {\em Peer to Peer: Harnessing the Power of Disruptive Technologies}.
+\newblock Number~1. Cambridghe: 0'Reilly \& Associates, 2001.
+
+\bibitem{poole98}
+David Poole, Alan Mackworth, and Randy Goebel.
+\newblock {\em Computational Intelligence: A Logical Approach}.
+\newblock Oxford University Press, 1998.
+
+\bibitem{rowstron01}
+Antony Rowstron and Peter Druschel.
+\newblock Pastry: Scalable, decentralized object location and routing for
+  large-scale peer-to-peer systems.
+\newblock {\em First International Conference on Peer-to-Peer Computin},
+  1(1):329--350, 2001.
+
+\bibitem{novig95}
+Stuart Russel and Peter Novig.
+\newblock {\em Artificial Intelligence {-} A Modern Approach}.
+\newblock Number~1. Pearson Education, Upper Saddle River, New Jersey 07458,
+  1995.
+
+\bibitem{rudiger02}
+Rudiger Schollmeier.
+\newblock A definition of peer-to-peer networking for the classification of
+  peer-topeer architectures and applications.
+\newblock {\em First International Conference on Peer-to-Peer Computin},
+  1(1):1, 2002.
+
+\bibitem{sarmento11}
+Carlos Vinícius~Sarmento Silva.
+\newblock Agentes de mineração e sua aplicação no domínio de auditoria
+  governamental.
+\newblock Acessado em 18/11/2011. Disponível em
+  http://monografias.cic.unb.br/dspace/handle/123456789/318, Abril 2011.
+
+\bibitem{sommerville95}
+Ian Sommerville.
+\newblock {\em Software engineering (5th ed.)}.
+\newblock Addison Wesley Longman Publishing Co., Inc., Redwood City, CA, USA,
+  1995.
+
+\bibitem{stevens93}
+William~Richard Stevens.
+\newblock {\em TCP/IP Illustrated, Volume 1: The Protocols}.
+\newblock Addison Wesley, 1993.
+
+\bibitem{stoica01}
+Ion Stoica, Robert Morris, David Karger, M.~Frans Kaashoek, and Hari
+  Balakrishnan.
+\newblock Chord: A scalable peer-to-peer lookup service for internet
+  applications.
+\newblock {\em SIGCOMM Comput. Commun. Rev.}, 31:149--160, August 2001.
+
+\bibitem{walkerdine02}
+James Walkerdine, Lee Melville, and Ian Sommerville.
+\newblock Dependability properties of p2p architectures.
+\newblock In {\em In Second Intl. Conf. on Peer-to-Peer Computing (P2P 2002},
+  pages 173--174. IEEE Computer Society, 2002.
+
+\bibitem{observatorio}
+Gisele~Pappa Walter~dos Santos~Filho.
+\newblock Observatório da web: Uma plataforma de monitoracão, síntese e
+  visualizacão de eventos massivos em tempo real.
+
+\bibitem{welzi11}
+Michael Welzi.
+\newblock Peer to peer systems.
+\newblock Acessado em 18/11/2011. Disponível em
+  http://heim.ifi.uio.no/michawe/teaching/p2p-ws08/p2p-5-6.pdf.
+
+\bibitem{wooldridge04}
+Michael Wooldridge.
+\newblock {\em An Introduction to MultiAgent Systems}.
+\newblock Number~1. John Wiley and Sons Ltd, Krst Sussex POI0 IlJD, England,
+  2004.
+
+\end{thebibliography}

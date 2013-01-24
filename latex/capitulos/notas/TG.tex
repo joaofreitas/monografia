@@ -1,0 +1,109 @@
+\subsection{Linguagem Scala}
+
+Scala, um acrônimo para~\emph{Scalable Language}, é uma linguagem de programação compilada e híbrida, totalmente orientada a objetos. Desenvolvida com base na máquina virtual Java (JVM), ela possui a característica híbrda de compilar tanto código Scala quanto código Java, permitindo o reuso de forma fácil de classes já desenvolvidas na linguagem Java.
+
+A linguagem foi projetada para o desenvolvimento de aplicações de alta performance, provendo recursos nativos que possibilitem o desenvolvimento de aplicações com características concorrentes e escaláveis. Seu uso permite a distribuição de processamento entre os processadores de uma máquina, permitindo extensos ganhos de performance de aplicações distribuídas.
+
+Seus benefícios vão além do reuso do código Java. Uma das suas mais importantes características é a sua otimização para processamento concorrente. Scala implementa um modelo de transmissão de mensagem baseada em atores, que abstrai toda a preocupação com objetos compartilhados de um ambiente~\emph{multithread}. Os objetos em scala permitem a escrita de forma a assumir um estado imutável: Seu conteúdo nunca muda durante sua execução, o que garante a despreocupação no compartilhamento de recursos da programação distribuída.
+
+Outra importante característica do código Scala é a sua forma concisa. Um dos objetivos da linguagem é garantir que o desenvolvedor faça mais escrevendo menos. A flexibilidade da linguagem permite um uso poderoso de operadores, anotações e construtores. 
+
+É importante salientar que para um desenvolvedor iniciante na linguagem, a sintaxe pode parecer confusa no início, porém com o tempo de desenvolvimento e a prática a sintaxe fica mais clara e limpa ao desenvolvedor.
+
+Apesar de ser uma linguagem puramente orientada a objetos, é possível desenvolver códigos de forma funcional. De acordo com~\cite{venkat09}, é possível obter muitas vantagens da programação procedural em detrimento de um estilo imperativo. A imagem~\ref{fig:codigo-java} representa um código desenvolvido na linguagem Java que determina a maior temperatura em uma lista de valores. A variável máximo é mutável e vai mudando seu valor conforme a iteração avança, conténdo sempre o valor máximo.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.75]{images/img-codigo-java.png}
+	\caption{Código java desenvolvido para determinar a máxima temperatura em uma lista de valores.}
+	\label{fig:codigo-java}
+\end{figure}
+
+Em um código desenvolvido através do paradigma de programação funcional, a resolução do problema ocorre de forma declarativa, dizendo o que deve ser feito ao invés de dizer como deve ser feito. A imagem~\ref{fig:codigo-scala} é um exemplo de código desenvolvido em Scala e de forma declarativa.
+
+A função encontrarValorMaximo continua a receber uma lista de valores inteiros. O caracter = indica que o compilador deve inferir o retorno da função (nesse caso será inteiro), visto que o fato da linguagem ser dinâmica poderia implicar no retorno sendo float, double, dentre outros valores.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.75]{images/img-codigo-scala.png}
+	\caption{Código scala desenvolvido para determinar a máxima temperatura em uma lista de valores usando paradigma funcional.}
+	\label{fig:codigo-scala}
+\end{figure}
+
+Uma das mais importantes características da linguagem é a imutabilidade, que fazem do Scala uma ótima linguagem para lidar com a programação concorrente. Seus objetos são imutáveis, logo não há alteração nos objetos e não é necessário preocupar-se com mudança de estado e contenção de valores. Caso seja necessário mudar o objeto, será necessário criar outra instância imutável, uma prática recomendável pelos criadores da linguagem. Dessa forma, estarão sendo evitados problemas relacionados com~\emph{Threads} que frequêntemente acontecem em Java. O uso de objetos imutáveis proporciona algumas vantagens:
+ \begin{itemize}
+	\item Como não é possível mudar seu estado, os objetos podem ser enviados entre as~\emph{threads} sem preocupações com conteções de dados. Também não é necessário sincronizá-las devido ao mesmo motivo.
+	\item Podem ser usadas para compartilhar recursos comum em toda a aplicação, por exemplo, arquivos de configuração, conexões com banco, dentre outras utilidades.
+	\item São menos sucetíveis a erros. Como não há mudança de dados, é mais simples garantir o funcionamento correto da aplicação.
+\end{itemize}
+
+O modelo de concorrência do Scala necessita da fidelidade da imutabilidade dos objetos, esperando que o desenvolvedor passe mensagens que são imutáveis entre os membros da computação concorrente.
+
+A programação concorrente está baseada na abordagem de eventos, um recurso baseado em eventos e muito flexível. Mais especificamente, ela provê uma biblioteca chamada~\emph{Actors} (Atores). Atores são entidades de programação concorrente em Scala que simulam as~\emph{Threads} em Java porém de forma mais leve e podem se comunicar através de um sistema baseado em mensagens. Esse recurso é otimizado visando utilizar-se de processadores multinúcleos, divindo a carga de processamento entre eles.
+
+A biblioteca Atores de Scala disponibiliza o envio de mensagens tanto de forma síncrona quanto assíncrona, ou seja, com espera de resposta blocante ou não blocante. O código~\ref{fig:img-codigo-actor} ilustra a construção de um ator.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.75]{images/img-codigo-actor.png}
+	\caption{Código scala que ilustra a criação de atores.}
+	\label{fig:img-codigo-actor}
+\end{figure}
+
+O objeto~\emph{exemploAtor} recebe a instância de um~\emph{actor} e que a implementação está na forma de função anexada. Dentro do bloco de código do~\emph{actor}, existe um cálculo de tempo de inatividade de uma~\emph{Thread} (usando a função~\emph{sleep}) de uma thread. Em seguida, existe o trecho~\emph{receive} que espera a resposta em forma de mensagem de outro~\emph{actor} que esteja rodando no ambiente. Após essa mensagem ser recebida, será enviado para o destinatário a mensagem "Fui croado após X ms", onde X é o tempo cálculado no trecho de código anterior.
+
+Usualmente, a abordagem de atores exige uma extensa troca de mensagem entre os mesmos. Na maioria das vezes, faz-se necessário verificar a mensagem para somente então ser executado algum processamento. Nesse caso, é muito pertinente a linguagem oferecer suporte a~\emph{patterns matching} ou casamento de padrões. Dessa forma, os atores conseguem fazer o casamento de padrões e associar somente as mensagens que lhes interessem.
+
+De acordo com{http://doc.akka.io/docs/akka/current/scala/agents.html} Scala também possui uma API para agentes, que foi inspirada na proposta de agentes do~\emph{Clojure}. Esses agentes mantém um estado imutável e interagem com um ambiente (ver próxima seção) distribuído. Seu estado pode ser atualizado através de uma função que será aplicada e seu retorno será o próximo estado do agente, que por sua vez também será imutável.
+
+Por fim, essas ferramentas disponibilizadas pela linguagem Scala são essênciais no tocante à programação paralela. Todos os recursos visam auxiliar o desenvolvedor, de forma que ele se preocupe mais com o desenvolvimento do programa e menos com as dificuldades da programação concorrente.
+
+\subsection{Akka}
+
+~\emph{Akka} é um~\emph{framework} baseado em eventos desenvolvido para simplificar o desenvolvimento de aplicações escaláveis, concorrentes e tolerantes a falhas. Usando o modelo de Atores implementado pelo Scala, sua proposta é aumentar o nível de abstração na construção de aplicações concorrentes e escaláveis, com o objetivo de promover uma plataforma mais clara e simples para o desenvolvedor. Possui implementações para Scala e Java.
+
+~\emph{Akka} é um componente muito escalável de software tanto em termos de desempenho, mas também no tamanho das aplicações. O núcleo~\emph{Akka} não é grande e pode ser disponibilizado sem problemas em projetos existentes, que necessitem de paralelismo. 
+
+De acordo com a documentação do Akka disponível em~\cite{akkaSite}, o~\emph{framework} implementa uma arquitetura híbrida com suporte às seguintes ferramentas:
+\begin{itemize}
+	\item Atores.
+	\item Tolerância a Falhas.
+	\item Atores transacionais.
+\end{itemize}
+
+O suporte da linguagem scala à abordagem de atores oferece ao~\emph{framework} um alto poder de paralelismo e execução assíncrona. Cada ator ocupa pouco espaço na memória. De acordo com~\cite{akkaSite}, cabem aproximadamente 2,7 milhões de atores por giga de memória na~\emph{heap}, espaço de memória reservado para a JVM.
+
+A tolerância a falhas é implementada através de um princípio que parece contraditório:~\emph{Let it crash}. Ao invés de tentar recuperar-se da falha, o ambiente permite que o ator deixe de funcionar. Então, uma nova instância do ator é criada com os mesmos atributos do ator anterior.
+
+O funcionamento do sistema de tolerância é de forma semelhante a uma hierarquia em árvore. Um nó pai, chamado de supervisor, é responsável por manter os nós filhos. Caso um nó deixe de funcionar, o seu respectivo supervisor encarrega-se de criar outro ator para substuí-lo e notificar os outros atores do evento. O nó criador de todos também terá um supervisor, evitando assim um ponto único de falha e garantindo que o sistema irá se recuperar de uma falha na maioria das vezes.
+
+A arquitetura do~\emph{Akka} é desenhada para ser distriuída por padrão, onde todas as interações acontecerem de forma distribuída. Ou seja, todas as interações entre agentes acontecem por mensagem e tudo é assíncrono. Todos os componentes vão trabalhar de forma transparente e assíncrona, seja em um ambiente de vários clusteres ou em uma única máquina.
+
+Muitas soluções encaixam-se perfeitamente no cenário de uso de atores, de forma que cada um possa trabalhar independente e isolado. Porém supondo que um ator necessite compartilhar seu estado mutável, a abordagem de atores prejudica a solução final. Por exemplo, uma solução de um sistema bancário onde um ator representa uma conta bancária e várias operações necessitam ser feitas sobre a conta. Os componentes dependentes desta conta terão que bloquear seu estado, a fim de garantir a corretude das operações.
+
+Para evitar essa situação, o ~\emph{Akka} adiciona um importante recurso: Atores transacionais, ou~\emph{transactors}, que são a utilização de atores e~\emph{Software Transactional Memory} (STM). De acordo com~\cite{shavit97} STM é uma tecnologia proposta para promover sincronização de operações em uma região de memória em nível de software. Essas operações vão ocorrer na forma de transações, ou seja, operações que são individuais e indivisíveis, podendo ser agrupadas várias operações para compor uma única transação. A transação é atômica, ou seja, a transação não termina em um estado intermediário. O STM é uma excelente tecnologia para solução de problemas de compartilhamento de estado e composição de transações, sendo possível utilizar em uma abordagem de sistemas multiagentes.
+
+Dessa forma o~\emph{framework} consegue garantir a melhor abordagem com atores e STM, ou mesmo agentes e STM, pois provê fluxos de envios de mensagens que são transacionais, assíncronos e podem ser compostos por outras transações.
+
+\subsection{Uma justificativa para o desenvolvimento do SMA Frank}
+Conforme o objetivo do edital~\cite{editalFrank}, deverá ser construído um ambiente computacional capaz de construir e manter um modelo do estudante, a partir do qual o(s) estilo(s) de aprendizagem(s) desse estudante poderá(ão) ser identificado(s) e informado(s) ao docente. Conforme mostrado as características anteriormente, a combinação Scala e Akka pode tornar-se numa poderosa plataforma para abrigar este componente computacional.
+
+Mais especificamente, os objetivos específicos do trabalho poderão ser atingidos da seguinte forma:
+ \begin{itemize}
+	\item Objetivo específico 1: A arquitetura geral deverá ser implementada no framework Akka, que fará a distribuição dos agentes em vários nós e processadores. A linguagem Scala será usada utilizada, facilitando o desenvolvimento com o suporte à várias bibliotecas que foram descritas anteriormente.
+	\item Objetivo específico 2: Os diversos agentes do Scala podem manter o estado do aprendizado do aluno e comunicar-se com o ambiente quando o status mudar. Outros agentes (ou mesmo atores) podem fazer a análise do desempenho do aluno, inferências de estilo de aprendizagem. Em resumo, a implementação do agente de cognição na arquitetura em Scala + Akka torna-se viável.
+	\item Objetivo específico 3 e 4: Será implementado uma interface web com a linguagem Scala e o framework Play~\cite{Play} para desenvolvimento web, devido a sua facilidade no desenvolvimento.
+	\item Objetivo específico 5: A interface deverá ser analisada durante o desenvolvimento do trabalho de graduação. Considerando a ferramenta~\cite{quizWiki}, essa interface poderá ser implementada por meio Banco de Dados, definindo um~\emph{schema} para as duas ferramentas se comunicarem ou mesmo uma integração entre as duas linguagens.
+\end{itemize}
+
+Sobre a metodologia, é necessário ressaltar alguns aspectos. A primeira delas é a não necessidade do uso da plataforma Java Agent Development (JADE). Como a proposta é a utilização do Akka para o desenvolvimento do ambiente, não justifica-se uma possível integração entre JADE e Scala, visto que o Akka será o ambiente de desenvolvimento. Dessa forma, não será possível o uso da biblioteca AgentOWL, visto que ela é específica para o JADE.
+
+Entretanto, isso não significa que não será possível a manipulação de Ontologias no ambiente. A representação do conhecimento é possível através de bibliotecas de terceiros que implementam, em Java, a especificação da linguagem de ontologas, desenvolvida pela W3C. No endereço~\cite{http://owlapi.sourceforge.net/} é disponibilizada uma API na linguagem Java para criar, manipular e serializar Ontologias OWL. Conforme dito anteriomente, Códigos desenvolvidos em Java integram-se muito bem com Scala, sendo possível dessa forma o uso da biblioteca agentOWL.
+
+\subsection{Conclusão}
+A linguagem de programaçào Scala, desenvolvida para aplicações concorrentes e o framework Akka mostram-se bastante promissores no desenvolvimento do SMA Frank. Com algumas características diferentes do edital previsto, a arquitetura a ser desenvolvida para o SMA pode agregar importantes características, como alta performance, grande distribuição de agentes além de um código desenvolvido com uma linguagem compacta e expressiva.
+
+Faz-se agora necessário um maior estudo para elaborar uma arquitetura aprofundada do SMA Frank, ou seja, uma proposição de modelagem utilizando a abordagem MAsE.
+
+
+

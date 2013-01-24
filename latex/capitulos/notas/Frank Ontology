@@ -1,0 +1,13 @@
+FrankManagementOntology
+CreateWorkgroup: Ação de criar um grupo de trabalho
+DestroyWorkgroup: Ação de remover um grupo de trabalho
+
+InferOntology
+Studen: Conceito de um aluno
+Owns: Predicado onde um aluno possui os modelos cognitivos, afetivos e metacognitivos
+CognitiveModel: Conceito			//Result irá retornar esse conceito
+AffectiveModel: Conceito				
+MetacognitiveModel: Conceito		
+Questionnaire: Conceito de conjunto de respostas de um aluno
+Answer: Conceito de uma respostas à uma pergunta feita para o aluno
+SendQuestionnaire: Ação de enviar o questionário para um agente
