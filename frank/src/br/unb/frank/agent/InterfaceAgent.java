@@ -4,6 +4,7 @@ import jade.content.lang.Codec;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
 import jade.core.Agent;
+import jade.domain.FIPANames;
 import jade.domain.JADEAgentManagement.JADEManagementOntology;
 import jade.lang.acl.MessageTemplate;
 import br.unb.frank.behaviour.ManageWorkgroupBehaviour;
@@ -16,18 +17,19 @@ public class InterfaceAgent extends Agent {
     MessageTemplate pattern;
 
     private Codec codec = new SLCodec();
-    private Ontology frankOntology = FrankManagementOntology.getInstance();
+    private Ontology frankManagementOntology = FrankManagementOntology.getInstance();
     private Ontology jadeOntology = JADEManagementOntology.getInstance();
 
     @Override
     protected void setup() {
 
-	getContentManager().registerLanguage(codec);
-	getContentManager().registerOntology(frankOntology);
+	getContentManager().registerLanguage(codec,
+		FIPANames.ContentLanguage.FIPA_SL0);
+	getContentManager().registerOntology(frankManagementOntology);
 	// Registering ontology of Jade Management
 	getContentManager().registerOntology(jadeOntology);
 
-	pattern = MessageTemplate.MatchOntology(frankOntology.getName());
+	pattern = MessageTemplate.MatchOntology(frankManagementOntology.getName());
 
 	addBehaviour(new ManageWorkgroupBehaviour(pattern,
 		getContainerController(), getContentManager()));

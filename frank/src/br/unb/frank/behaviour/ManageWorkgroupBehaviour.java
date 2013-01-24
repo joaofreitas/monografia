@@ -8,9 +8,9 @@ import jade.content.onto.OntologyException;
 import jade.content.onto.basic.Action;
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
-import jade.domain.DFService;
-import jade.domain.FIPAException;
-import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPANames;
+import jade.domain.JADEAgentManagement.JADEManagementOntology;
+import jade.domain.JADEAgentManagement.KillAgent;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import jade.wrapper.AgentContainer;
@@ -49,36 +49,22 @@ public class ManageWorkgroupBehaviour extends CyclicBehaviour {
 		System.out.println("Create received" + ca.getClass().getName());
 		if (ca instanceof CreateWorkgroup) {
 		    CreateWorkgroup cw = (CreateWorkgroup) ca;
-		    System.out.println("Vou iniciar " + cw.getAlunoId());
+		    String alunoId = cw.getAlunoId();
+		    createWorkgroup(alunoId);
+		    System.out.println("Vou iniciar " + alunoId);
 		} else if (ca instanceof DestroyWorkgroup) {
 		    DestroyWorkgroup cw = (DestroyWorkgroup) ca;
-		    System.out.println("Vou encerrar " + cw.getAlunoId());
+		    String alunoId = cw.getAlunoId();
+		    destroyWorkgroup(alunoId);
+		    System.out.println("Vou encerrar " + alunoId);
 		}
+
 	    } catch (CodecException | OntologyException e) {
 		e.printStackTrace();
 	    }
 	}
 
 	block();
-    }
-
-    private boolean existsAgentWith(String alunoId) {
-
-	try {
-	    DFAgentDescription dfd = new DFAgentDescription();
-	    AID aid = new AID(AgentPrefixEnum.WORKGROUP + alunoId,
-		    AID.ISLOCALNAME);
-	    dfd.setName(aid);
-	    DFAgentDescription[] result = DFService.search(myAgent, dfd);
-
-	    if (result != null && result.length > 1) {
-		return true;
-	    }
-	} catch (FIPAException e) {
-	    e.printStackTrace();
-	}
-
-	return false;
     }
 
     private void createWorkgroup(String alunoId) {
@@ -93,6 +79,29 @@ public class ManageWorkgroupBehaviour extends CyclicBehaviour {
 	} catch (StaleProxyException e) {
 	    e.printStackTrace();
 	}
+    }
+
+    private void destroyWorkgroup(String alunoId) {
+
+	KillAgent ka = new KillAgent();
+	ka.setAgent(new AID(AgentPrefixEnum.WORKGROUP + alunoId,
+		AID.ISLOCALNAME));
+	Action action = new Action(myAgent.getAMS(), ka);
+
+	ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+	msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+	msg.setOntology(JADEManagementOntology.NAME);
+	msg.addReceiver(myAgent.getAMS());
+
+	try {
+	    myAgent.getContentManager().fillContent(msg, action);
+	} catch (CodecException e) {
+	    e.printStackTrace();
+	} catch (OntologyException e) {
+	    e.printStackTrace();
+	}
+
+	myAgent.send(msg);
     }
 
 }

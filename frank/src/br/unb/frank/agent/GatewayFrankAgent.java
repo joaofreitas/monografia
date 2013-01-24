@@ -10,6 +10,7 @@ import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.ParallelBehaviour;
 import jade.core.behaviours.WakerBehaviour;
+import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.wrapper.gateway.GatewayAgent;
 import br.unb.frank.domain.model.CreateAgentMessage;
@@ -28,7 +29,8 @@ public class GatewayFrankAgent extends GatewayAgent {
     @Override
     protected void setup() {
 
-	getContentManager().registerLanguage(codec);
+	getContentManager().registerLanguage(codec,
+		FIPANames.ContentLanguage.FIPA_SL0);
 	getContentManager().registerOntology(ontology);
 
 	super.setup();
@@ -46,6 +48,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 		msg.setLanguage(codec.getName());
 		msg.setOntology(ontology.getName());
+		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
 		AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
 
@@ -63,6 +66,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 		msg.setLanguage(codec.getName());
 		msg.setOntology(ontology.getName());
+		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
 		AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
 
@@ -88,7 +92,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 
 	WaitServerResponse(Agent a) {
 
-	    super(a, 1);
+	    super(a, ParallelBehaviour.WHEN_ALL);
 
 	    addSubBehaviour(new WakerBehaviour(myAgent, 5000) {
 

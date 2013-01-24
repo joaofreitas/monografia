@@ -1,9 +1,6 @@
 package br.unb.frank.agent.workgroup;
 
-import jade.content.lang.Codec.CodecException;
 import jade.content.lang.sl.SLCodec;
-import jade.content.onto.OntologyException;
-import jade.content.onto.basic.Action;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
@@ -13,15 +10,10 @@ import jade.domain.FIPANames;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.JADEAgentManagement.JADEManagementOntology;
-import jade.domain.JADEAgentManagement.KillAgent;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import jade.wrapper.AgentContainer;
 import jade.wrapper.StaleProxyException;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import br.unb.frank.domain.AgentPrefixEnum;
 
 /**
@@ -49,7 +41,7 @@ public class WorkGroupAgent extends Agent {
 	}
 
 	getContentManager().registerLanguage(new SLCodec(),
-		FIPANames.ContentLanguage.FIPA_SL);
+		FIPANames.ContentLanguage.FIPA_SL0);
 	getContentManager().registerOntology(
 		JADEManagementOntology.getInstance());
 
@@ -155,31 +147,11 @@ public class WorkGroupAgent extends Agent {
 
     @Override
     public void doDelete() {
-	List<AID> killedAgents = new ArrayList<AID>();
-	killedAgents.add(getAffectiveAID());
-	killedAgents.add(getCognitiveAID());
-	killedAgents.add(getMetacognitiveAID());
-
-	for (AID aid : killedAgents) {
-	    System.out.println("Stopping " + aid.toString());
-	    KillAgent killAgent = new KillAgent();
-	    killAgent.setAgent(aid);
-	    Action action = new Action(getAMS(), killAgent);
-
-	    ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
-	    msg.setLanguage(new SLCodec().getName());
-	    msg.setOntology(JADEManagementOntology.NAME);
-	    msg.addReceiver(getAMS());
-
-	    try {
-		getContentManager().fillContent(msg, action);
-	    } catch (CodecException e) {
-		e.printStackTrace();
-	    } catch (OntologyException e) {
-		e.printStackTrace();
-	    }
-	    send(msg);
+	try {
+	    DFService.deregister(this);
+	} catch (Exception e) {
 	}
+
 	super.doDelete();
     }
 
