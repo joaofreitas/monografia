@@ -8,13 +8,19 @@ import jade.content.schema.ConceptSchema;
 import jade.content.schema.ObjectSchema;
 import jade.content.schema.PredicateSchema;
 import jade.content.schema.PrimitiveSchema;
+import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
+import br.unb.frank.ontology.modelinfer.concept.Answer;
+import br.unb.frank.ontology.modelinfer.concept.CognitiveModel;
+import br.unb.frank.ontology.modelinfer.concept.Questionnaire;
+import br.unb.frank.ontology.modelinfer.concept.Student;
+import br.unb.frank.ontology.modelinfer.predicate.Owns;
 
 public class ModelInferOntology extends Ontology implements
 	ModelInferVocabulary {
 
     private static final long serialVersionUID = 1L;
 
-    public static final String ONTOLOGY_NAME = "ModelInfer-ontology";
+    public static final String ONTOLOGY_NAME = "ModelInfer-Ontology";
     private static Ontology instance = new ModelInferOntology();
 
     private ModelInferOntology() {
@@ -22,9 +28,17 @@ public class ModelInferOntology extends Ontology implements
 
 	try {
 
+	    add(new ConceptSchema(STUDENT), Student.class);
+	    add(new ConceptSchema(COGNITIVE_MODEL), CognitiveModel.class);
+	    add(new ConceptSchema(ANSWER), Answer.class);
+	    add(new ConceptSchema(QUESTIONNAIRE), Questionnaire.class);
+	    add(new PredicateSchema(OWNS), Owns.class);
+	    add(new AgentActionSchema(SEND_QUESTIONNAIRE),
+		    SendQuestionnaire.class);
+
 	    // CONCEPTS
 	    // Structuring student
-	    ConceptSchema cs = (ConceptSchema) getSchema(STUDENT);
+	    ConceptSchema cs = (ConceptSchema) new ConceptSchema(STUDENT);
 	    cs.add(STUDENT_ID,
 		    (PrimitiveSchema) getSchema(BasicOntology.STRING),
 		    ObjectSchema.MANDATORY);
@@ -55,7 +69,7 @@ public class ModelInferOntology extends Ontology implements
 
 	    // Structuring questionnaire
 	    cs = (ConceptSchema) getSchema(QUESTIONNAIRE);
-	    cs.add(QUESTIONNAIRE_ANSWER, (PrimitiveSchema) getSchema(ANSWER),
+	    cs.add(QUESTIONNAIRE_ANSWER, (ConceptSchema) getSchema(ANSWER),
 		    1, ObjectSchema.UNLIMITED);
 	    cs.add(QUESTIONNAIRE_NAME,
 		    (PrimitiveSchema) getSchema(BasicOntology.STRING),

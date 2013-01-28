@@ -7,8 +7,10 @@ import jade.core.Agent;
 import jade.domain.FIPANames;
 import jade.domain.JADEAgentManagement.JADEManagementOntology;
 import jade.lang.acl.MessageTemplate;
+import br.unb.frank.behaviour.InferBehaviour;
 import br.unb.frank.behaviour.ManageWorkgroupBehaviour;
 import br.unb.frank.ontology.frankmanagement.FrankManagementOntology;
+import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 
 public class InterfaceAgent extends Agent {
 
@@ -17,7 +19,8 @@ public class InterfaceAgent extends Agent {
     MessageTemplate pattern;
 
     private Codec codec = new SLCodec();
-    private Ontology frankManagementOntology = FrankManagementOntology.getInstance();
+    private Ontology managementOntology = FrankManagementOntology.getInstance();
+    private Ontology modelInferOntology = ModelInferOntology.getInstance();
     private Ontology jadeOntology = JADEManagementOntology.getInstance();
 
     @Override
@@ -25,14 +28,21 @@ public class InterfaceAgent extends Agent {
 
 	getContentManager().registerLanguage(codec,
 		FIPANames.ContentLanguage.FIPA_SL0);
-	getContentManager().registerOntology(frankManagementOntology);
+
+	getContentManager().registerOntology(managementOntology);
 	// Registering ontology of Jade Management
 	getContentManager().registerOntology(jadeOntology);
+	getContentManager().registerOntology(modelInferOntology);
 
-	pattern = MessageTemplate.MatchOntology(frankManagementOntology.getName());
+	pattern = MessageTemplate.MatchOntology(managementOntology.getName());
 
 	addBehaviour(new ManageWorkgroupBehaviour(pattern,
 		getContainerController(), getContentManager()));
+
+	pattern = MessageTemplate.MatchOntology(modelInferOntology.getName());
+
+	addBehaviour(new InferBehaviour(pattern, getContainerController(),
+		getContentManager()));
 
 	super.setup();
     }

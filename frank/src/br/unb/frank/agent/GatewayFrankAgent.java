@@ -13,11 +13,13 @@ import jade.core.behaviours.WakerBehaviour;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.wrapper.gateway.GatewayAgent;
+import br.unb.frank.domain.model.AnswerListMessage;
 import br.unb.frank.domain.model.CreateAgentMessage;
 import br.unb.frank.domain.model.DestroyAgentMessage;
 import br.unb.frank.ontology.frankmanagement.FrankManagementOntology;
 import br.unb.frank.ontology.frankmanagement.action.CreateWorkgroup;
 import br.unb.frank.ontology.frankmanagement.action.DestroyWorkgroup;
+import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 
 public class GatewayFrankAgent extends GatewayAgent {
 
@@ -25,6 +27,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 
     private Codec codec = new SLCodec();
     private Ontology ontology = FrankManagementOntology.getInstance();
+    private Ontology modelInferOntology = ModelInferOntology.getInstance();
 
     @Override
     protected void setup() {
@@ -32,6 +35,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 	getContentManager().registerLanguage(codec,
 		FIPANames.ContentLanguage.FIPA_SL0);
 	getContentManager().registerOntology(ontology);
+	getContentManager().registerOntology(modelInferOntology);
 
 	super.setup();
     }
@@ -72,6 +76,20 @@ public class GatewayFrankAgent extends GatewayAgent {
 
 		getContentManager().fillContent(msg,
 			new Action(interfaceAID, cw));
+		msg.addReceiver(interfaceAID);
+		send(msg);
+		addBehaviour(new WaitServerResponse(this));
+
+	    } else if (command instanceof AnswerListMessage) {
+		AnswerListMessage cw = new AnswerListMessage();
+		cw.setAlunoId(((DestroyAgentMessage) command).getAlunoId());
+
+		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+		msg.setLanguage(codec.getName());
+		msg.setOntology(modelInferOntology.getName());
+		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+
+		AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
 		msg.addReceiver(interfaceAID);
 		send(msg);
 		addBehaviour(new WaitServerResponse(this));

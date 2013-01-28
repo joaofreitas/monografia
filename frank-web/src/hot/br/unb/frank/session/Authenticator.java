@@ -19,6 +19,7 @@ import org.jboss.seam.log.Log;
 import org.jboss.seam.security.Credentials;
 import org.jboss.seam.security.Identity;
 
+import br.unb.frank.domain.model.AnswerListMessage;
 import br.unb.frank.domain.model.CreateAgentMessage;
 import br.unb.frank.domain.model.DestroyAgentMessage;
 import br.unb.frank.model.Usuario;
@@ -75,6 +76,10 @@ public class Authenticator {
 	    CreateAgentMessage command = new CreateAgentMessage();
 	    command.setAlunoId(usuario.getId());
 	    jadeGateway.execute(command);
+
+	    AnswerListMessage msg = new AnswerListMessage();
+	    msg.setAlunoId(usuario.getId());
+	    jadeGateway.execute(msg);
 	} catch (StaleProxyException e) {
 	    log.error(e);
 	} catch (ControllerException e) {
