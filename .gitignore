@@ -1,0 +1,6 @@
+*.class
+.metadata/
+examples/
+frank-web/.settings
+jade/
+seam/

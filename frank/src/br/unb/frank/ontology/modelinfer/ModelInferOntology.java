@@ -51,7 +51,7 @@ public class ModelInferOntology extends Ontology implements
 	    cs.add(COGNITIVE_MODEL_PERFORMANCE,
 		    (PrimitiveSchema) getSchema(BasicOntology.FLOAT),
 		    ObjectSchema.MANDATORY);
-	    cs.add(COGNITIVE_MODEL_LEARNING_STYLE,
+	    cs.add(COGNITIVE_MODEL_LEARNINGSTYLE,
 		    (PrimitiveSchema) getSchema(BasicOntology.INTEGER),
 		    ObjectSchema.MANDATORY);
 
@@ -69,8 +69,8 @@ public class ModelInferOntology extends Ontology implements
 
 	    // Structuring questionnaire
 	    cs = (ConceptSchema) getSchema(QUESTIONNAIRE);
-	    cs.add(QUESTIONNAIRE_ANSWER, (ConceptSchema) getSchema(ANSWER),
-		    1, ObjectSchema.UNLIMITED);
+	    cs.add(QUESTIONNAIRE_ANSWER, (ConceptSchema) getSchema(ANSWER), 1,
+		    ObjectSchema.UNLIMITED);
 	    cs.add(QUESTIONNAIRE_NAME,
 		    (PrimitiveSchema) getSchema(BasicOntology.STRING),
 		    ObjectSchema.MANDATORY);
@@ -79,16 +79,18 @@ public class ModelInferOntology extends Ontology implements
 	    // Structuring owns
 	    PredicateSchema ps = (PredicateSchema) getSchema(OWNS);
 	    ps.add(OWNS_STUDENT, (ConceptSchema) getSchema(STUDENT));
-	    ps.add(OWNS_COGNITIVE_MODEL,
+	    ps.add(OWNS_COGNITIVEMODEL,
 		    (ConceptSchema) getSchema(COGNITIVE_MODEL));
 
 	    // ACTION
 	    // Structuring send questionnaire
 	    AgentActionSchema as = (AgentActionSchema) getSchema(SEND_QUESTIONNAIRE);
+	    as.add(SEND_QUESTIONNAIRE_STUDENTID,
+		    (PrimitiveSchema) getSchema(BasicOntology.STRING));
+	    // TODO Remover esse opcional
 	    as.add(SEND_QUESTIONNAIRE_QUESTIONNAIRE,
-		    (ConceptSchema) getSchema(QUESTIONNAIRE));
-	    as.add(SEND_QUESTIONNAIRE_DESTINY,
-		    (ConceptSchema) getSchema(BasicOntology.AID));
+		    (ConceptSchema) getSchema(QUESTIONNAIRE),
+		    ObjectSchema.OPTIONAL);
 
 	} catch (OntologyException e) {
 	    e.printStackTrace();

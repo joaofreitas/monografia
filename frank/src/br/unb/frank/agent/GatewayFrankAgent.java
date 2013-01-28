@@ -13,6 +13,7 @@ import jade.core.behaviours.WakerBehaviour;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.wrapper.gateway.GatewayAgent;
+import br.unb.frank.domain.AgentPrefixEnum;
 import br.unb.frank.domain.model.AnswerListMessage;
 import br.unb.frank.domain.model.CreateAgentMessage;
 import br.unb.frank.domain.model.DestroyAgentMessage;
@@ -20,6 +21,7 @@ import br.unb.frank.ontology.frankmanagement.FrankManagementOntology;
 import br.unb.frank.ontology.frankmanagement.action.CreateWorkgroup;
 import br.unb.frank.ontology.frankmanagement.action.DestroyWorkgroup;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
+import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
 
 public class GatewayFrankAgent extends GatewayAgent {
 
@@ -36,6 +38,9 @@ public class GatewayFrankAgent extends GatewayAgent {
 		FIPANames.ContentLanguage.FIPA_SL0);
 	getContentManager().registerOntology(ontology);
 	getContentManager().registerOntology(modelInferOntology);
+
+	criarWorkgroupTeste();
+	enviarMensagemTeste();
 
 	super.setup();
     }
@@ -54,6 +59,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 		msg.setOntology(ontology.getName());
 		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
+		// TODO Deveria procurar interface no ambiente
 		AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
 
 		getContentManager().fillContent(msg,
@@ -72,6 +78,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 		msg.setOntology(ontology.getName());
 		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
+		// TODO Deveria procurar interface no ambiente
 		AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
 
 		getContentManager().fillContent(msg,
@@ -81,16 +88,27 @@ public class GatewayFrankAgent extends GatewayAgent {
 		addBehaviour(new WaitServerResponse(this));
 
 	    } else if (command instanceof AnswerListMessage) {
-		AnswerListMessage cw = new AnswerListMessage();
-		cw.setAlunoId(((DestroyAgentMessage) command).getAlunoId());
+		// TODO Deveria procurar interface no ambiente
+		AID interfaceAID = new AID(
+			AgentPrefixEnum.INTERFACE.toString(), AID.ISLOCALNAME);
+
+		SendQuestionnaire sendQuestionnaire = new SendQuestionnaire();
+		String alunoId = ((AnswerListMessage) command).getAlunoId()
+			.toString();
+		sendQuestionnaire.setStudentId(alunoId);
+		// TODO Deve colocar o questionário do aluno
+		// sendQuestionnaire.setQuestionnaire((((AnswerListMessage)
+		// command).getListAnswer()));
 
 		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 		msg.setLanguage(codec.getName());
 		msg.setOntology(modelInferOntology.getName());
 		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
-
-		AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
 		msg.addReceiver(interfaceAID);
+
+		getContentManager().fillContent(msg,
+			new Action(interfaceAID, sendQuestionnaire));
+
 		send(msg);
 		addBehaviour(new WaitServerResponse(this));
 
@@ -103,6 +121,58 @@ public class GatewayFrankAgent extends GatewayAgent {
 	}
 
 	releaseCommand(command);
+    }
+
+    private void criarWorkgroupTeste() {
+	CreateWorkgroup cw = new CreateWorkgroup();
+	cw.setAlunoId("4");
+
+	ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+	msg.setLanguage(codec.getName());
+	msg.setOntology(ontology.getName());
+	msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+
+	// TODO Deveria procurar interface no ambiente
+	AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
+
+	try {
+	    getContentManager().fillContent(msg, new Action(interfaceAID, cw));
+	} catch (CodecException e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
+	} catch (OntologyException e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
+	}
+	msg.addReceiver(interfaceAID);
+	send(msg);
+	addBehaviour(new WaitServerResponse(this));
+    }
+
+    private void enviarMensagemTeste() {
+	AID interfaceAID = new AID(AgentPrefixEnum.INTERFACE.toString(),
+		AID.ISLOCALNAME);
+
+	SendQuestionnaire sendQuestionnaire = new SendQuestionnaire();
+	String alunoId = "4";
+	sendQuestionnaire.setStudentId(alunoId);
+
+	ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+	msg.setLanguage(codec.getName());
+	msg.setOntology(modelInferOntology.getName());
+	msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+	msg.addReceiver(interfaceAID);
+
+	try {
+
+	    getContentManager().fillContent(msg,
+		    new Action(interfaceAID, sendQuestionnaire));
+	} catch (CodecException | OntologyException e) {
+	    e.printStackTrace();
+	}
+
+	send(msg);
+	addBehaviour(new WaitServerResponse(this));
     }
 
     class WaitServerResponse extends ParallelBehaviour {

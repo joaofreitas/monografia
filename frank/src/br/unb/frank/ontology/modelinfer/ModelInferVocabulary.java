@@ -10,7 +10,7 @@ public interface ModelInferVocabulary {
     // Concept CognitiveModel
     public static final String COGNITIVE_MODEL = "CognitiveModel";
     public static final String COGNITIVE_MODEL_PERFORMANCE = "performance";
-    public static final String COGNITIVE_MODEL_LEARNING_STYLE = "learningStyle";
+    public static final String COGNITIVE_MODEL_LEARNINGSTYLE = "learningStyle";
 
     // Concept Questionnaire
     public static final String QUESTIONNAIRE = "Questionnaire";
@@ -25,11 +25,11 @@ public interface ModelInferVocabulary {
     // Predicate Owns
     public static final String OWNS = "Owns";
     public static final String OWNS_STUDENT = "student";
-    public static final String OWNS_COGNITIVE_MODEL = "cognitiveModel";
+    public static final String OWNS_COGNITIVEMODEL = "cognitiveModel";
 
     // Action SendQuestionnaire
     public static final String SEND_QUESTIONNAIRE = "SendQuestionnaire";
-    public static final String SEND_QUESTIONNAIRE_DESTINY = "destiny";
+    public static final String SEND_QUESTIONNAIRE_STUDENTID = "studentId";
     public static final String SEND_QUESTIONNAIRE_QUESTIONNAIRE = "questionnaire";
 
 }

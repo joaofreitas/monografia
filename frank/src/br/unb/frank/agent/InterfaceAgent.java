@@ -7,7 +7,7 @@ import jade.core.Agent;
 import jade.domain.FIPANames;
 import jade.domain.JADEAgentManagement.JADEManagementOntology;
 import jade.lang.acl.MessageTemplate;
-import br.unb.frank.behaviour.InferBehaviour;
+import br.unb.frank.behaviour.SendQuestionnaireBehaviour;
 import br.unb.frank.behaviour.ManageWorkgroupBehaviour;
 import br.unb.frank.ontology.frankmanagement.FrankManagementOntology;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
@@ -30,7 +30,6 @@ public class InterfaceAgent extends Agent {
 		FIPANames.ContentLanguage.FIPA_SL0);
 
 	getContentManager().registerOntology(managementOntology);
-	// Registering ontology of Jade Management
 	getContentManager().registerOntology(jadeOntology);
 	getContentManager().registerOntology(modelInferOntology);
 
@@ -41,7 +40,7 @@ public class InterfaceAgent extends Agent {
 
 	pattern = MessageTemplate.MatchOntology(modelInferOntology.getName());
 
-	addBehaviour(new InferBehaviour(pattern, getContainerController(),
+	addBehaviour(new SendQuestionnaireBehaviour(pattern,
 		getContentManager()));
 
 	super.setup();

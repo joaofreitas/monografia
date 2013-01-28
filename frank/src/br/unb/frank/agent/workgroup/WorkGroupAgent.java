@@ -1,6 +1,7 @@
 package br.unb.frank.agent.workgroup;
 
 import jade.content.lang.sl.SLCodec;
+import jade.content.onto.Ontology;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
@@ -15,6 +16,7 @@ import jade.lang.acl.MessageTemplate;
 import jade.wrapper.AgentContainer;
 import jade.wrapper.StaleProxyException;
 import br.unb.frank.domain.AgentPrefixEnum;
+import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 
 /**
  * Classe que representa o workgroup do aluno
@@ -32,6 +34,9 @@ public class WorkGroupAgent extends Agent {
     private AID cognitiveAID;
     private AID metacognitiveAID;
 
+    private Ontology jadeOntology = JADEManagementOntology.getInstance();
+    private Ontology modelInferOntology = ModelInferOntology.getInstance();
+
     MessageTemplate pattern;
 
     @Override
@@ -42,8 +47,8 @@ public class WorkGroupAgent extends Agent {
 
 	getContentManager().registerLanguage(new SLCodec(),
 		FIPANames.ContentLanguage.FIPA_SL0);
-	getContentManager().registerOntology(
-		JADEManagementOntology.getInstance());
+	getContentManager().registerOntology(jadeOntology);
+	getContentManager().registerOntology(modelInferOntology);
 
 	registerWorkgroup();
 	setAlunoId(getArgument(0));
@@ -51,11 +56,9 @@ public class WorkGroupAgent extends Agent {
 	AgentContainer c = getContainerController();
 	createAuxiliarAgents(c);
 
-	AID[] aidValues = new AID[1];
-	aidValues[0] = getAID();
 	pattern = MessageTemplate.and(
 		MessageTemplate.MatchPerformative(ACLMessage.INFORM),
-		MessageTemplate.MatchReceiver(aidValues));
+		MessageTemplate.MatchOntology(modelInferOntology.getName()));
 
 	addBehaviour(new CyclicBehaviour() {
 	    private static final long serialVersionUID = 1L;

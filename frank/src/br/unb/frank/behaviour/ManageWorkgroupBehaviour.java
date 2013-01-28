@@ -46,17 +46,14 @@ public class ManageWorkgroupBehaviour extends CyclicBehaviour {
 		content = contentManager.extractContent(msg);
 		Concept ca = ((Action) content).getAction();
 
-		System.out.println("Create received" + ca.getClass().getName());
 		if (ca instanceof CreateWorkgroup) {
 		    CreateWorkgroup cw = (CreateWorkgroup) ca;
 		    String alunoId = cw.getAlunoId();
 		    createWorkgroup(alunoId);
-		    System.out.println("Vou iniciar " + alunoId);
 		} else if (ca instanceof DestroyWorkgroup) {
 		    DestroyWorkgroup cw = (DestroyWorkgroup) ca;
 		    String alunoId = cw.getAlunoId();
 		    destroyWorkgroup(alunoId);
-		    System.out.println("Vou encerrar " + alunoId);
 		}
 
 	    } catch (CodecException | OntologyException e) {
