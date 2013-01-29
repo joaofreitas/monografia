@@ -7,7 +7,7 @@ public class Questionnaire implements Concept {
 
     private static final long serialVersionUID = 1L;
     private String name;
-    private List answers;
+    private List learningDimensions;
 
     public String getName() {
 	return name;
@@ -17,12 +17,12 @@ public class Questionnaire implements Concept {
 	this.name = name;
     }
 
-    public List getAnswers() {
-	return answers;
+    public List getLearningDimensions() {
+	return learningDimensions;
     }
 
-    public void setAnswers(List answers) {
-	this.answers = answers;
+    public void setLearningDimensions(List learningDimensions) {
+	this.learningDimensions = learningDimensions;
     }
 
 }

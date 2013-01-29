@@ -11,6 +11,7 @@ import jade.content.schema.PrimitiveSchema;
 import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
 import br.unb.frank.ontology.modelinfer.concept.Answer;
 import br.unb.frank.ontology.modelinfer.concept.CognitiveModel;
+import br.unb.frank.ontology.modelinfer.concept.LearningDimension;
 import br.unb.frank.ontology.modelinfer.concept.Questionnaire;
 import br.unb.frank.ontology.modelinfer.concept.Student;
 import br.unb.frank.ontology.modelinfer.predicate.Owns;
@@ -32,6 +33,7 @@ public class ModelInferOntology extends Ontology implements
 	    add(new ConceptSchema(COGNITIVE_MODEL), CognitiveModel.class);
 	    add(new ConceptSchema(ANSWER), Answer.class);
 	    add(new ConceptSchema(QUESTIONNAIRE), Questionnaire.class);
+	    add(new ConceptSchema(LEARNING_DIMENSION), LearningDimension.class);
 	    add(new PredicateSchema(OWNS), Owns.class);
 	    add(new AgentActionSchema(SEND_QUESTIONNAIRE),
 		    SendQuestionnaire.class);
@@ -60,16 +62,23 @@ public class ModelInferOntology extends Ontology implements
 
 	    // Structuring answer
 	    cs = (ConceptSchema) getSchema(ANSWER);
-	    cs.add(ANSWER_HEIGHT,
-		    (PrimitiveSchema) getSchema(BasicOntology.INTEGER),
-		    ObjectSchema.MANDATORY);
 	    cs.add(ANSWER_OPTION,
 		    (PrimitiveSchema) getSchema(BasicOntology.INTEGER),
 		    ObjectSchema.MANDATORY);
 
+	    // Structuring Learning Dimension
+	    cs = (ConceptSchema) getSchema(LEARNING_DIMENSION);
+	    cs.add(LEARNING_DIMENSION_DIMENSION,
+		    (PrimitiveSchema) getSchema(BasicOntology.INTEGER),
+		    ObjectSchema.MANDATORY);
+	    cs.add(LEARNING_DIMENSION_ANSWERS,
+		    (ConceptSchema) getSchema(ANSWER), 1,
+		    ObjectSchema.UNLIMITED);
+
 	    // Structuring questionnaire
 	    cs = (ConceptSchema) getSchema(QUESTIONNAIRE);
-	    cs.add(QUESTIONNAIRE_ANSWERS, (ConceptSchema) getSchema(ANSWER), 1,
+	    cs.add(QUESTIONNAIRE_LEARNINGDIMENSIONS,
+		    (ConceptSchema) getSchema(LEARNING_DIMENSION), 1,
 		    ObjectSchema.UNLIMITED);
 	    cs.add(QUESTIONNAIRE_NAME,
 		    (PrimitiveSchema) getSchema(BasicOntology.STRING),

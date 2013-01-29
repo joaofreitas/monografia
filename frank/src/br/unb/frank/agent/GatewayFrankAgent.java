@@ -22,6 +22,7 @@ import br.unb.frank.ontology.frankmanagement.action.DestroyWorkgroup;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
 import br.unb.frank.ontology.modelinfer.concept.Answer;
+import br.unb.frank.ontology.modelinfer.concept.LearningDimension;
 import br.unb.frank.ontology.modelinfer.concept.Questionnaire;
 
 public class GatewayFrankAgent extends GatewayAgent {
@@ -61,13 +62,14 @@ public class GatewayFrankAgent extends GatewayAgent {
 		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
 		// TODO Deveria procurar interface no ambiente
-		AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
+		AID interfaceAID = new AID(AgentPrefixEnum.MANAGER.toString(),
+			AID.ISLOCALNAME);
 
 		getContentManager().fillContent(msg,
 			new Action(interfaceAID, cw));
 		msg.addReceiver(interfaceAID);
 		send(msg);
-//		addBehaviour(new WaitServerResponse(this));
+		// addBehaviour(new WaitServerResponse(this));
 
 	    } else if (command instanceof DestroyAgentMessage) {
 		DestroyWorkgroup cw = new DestroyWorkgroup();
@@ -86,12 +88,12 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, cw));
 		msg.addReceiver(interfaceAID);
 		send(msg);
-//		addBehaviour(new WaitServerResponse(this));
+		// addBehaviour(new WaitServerResponse(this));
 
 	    } else if (command instanceof AnswerListMessage) {
 		// TODO Deveria procurar interface no ambiente
-		AID interfaceAID = new AID(
-			AgentPrefixEnum.INTERFACE.toString(), AID.ISLOCALNAME);
+		AID interfaceAID = new AID(AgentPrefixEnum.MANAGER.toString(),
+			AID.ISLOCALNAME);
 
 		SendQuestionnaire sendQuestionnaire = new SendQuestionnaire();
 		String alunoId = ((AnswerListMessage) command).getAlunoId()
@@ -111,7 +113,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, sendQuestionnaire));
 
 		send(msg);
-//		addBehaviour(new WaitServerResponse(this));
+		// addBehaviour(new WaitServerResponse(this));
 
 	    }
 
@@ -134,7 +136,8 @@ public class GatewayFrankAgent extends GatewayAgent {
 	msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
 	// TODO Deveria procurar interface no ambiente
-	AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
+	AID interfaceAID = new AID(AgentPrefixEnum.MANAGER.toString(),
+		AID.ISLOCALNAME);
 
 	try {
 	    getContentManager().fillContent(msg, new Action(interfaceAID, cw));
@@ -145,23 +148,29 @@ public class GatewayFrankAgent extends GatewayAgent {
 	}
 	msg.addReceiver(interfaceAID);
 	send(msg);
-//	addBehaviour(new WaitServerResponse(this));
+	// addBehaviour(new WaitServerResponse(this));
     }
 
     private void enviarMensagemTeste() {
-	AID interfaceAID = new AID(AgentPrefixEnum.INTERFACE.toString(),
+	AID interfaceAID = new AID(AgentPrefixEnum.MANAGER.toString(),
 		AID.ISLOCALNAME);
 
 	Answer answer = new Answer();
-	answer.setHeight(3);
 	answer.setOption(1);
 
 	List answers = new ArrayList();
 	answers.add(answer);
 
+	LearningDimension learningDimension = new LearningDimension();
+	learningDimension.setAnswers(answers);
+	learningDimension.setDimension(1);
+
+	List learningDimensions = new ArrayList();
+	learningDimensions.add(learningDimension);
+
 	Questionnaire questionnaire = new Questionnaire();
 	questionnaire.setName("Questionário 1");
-	questionnaire.setAnswers(answers);
+	questionnaire.setLearningDimensions(learningDimensions);
 
 	SendQuestionnaire actionSendQuestionnaire = new SendQuestionnaire();
 	String alunoId = "4";
@@ -183,25 +192,25 @@ public class GatewayFrankAgent extends GatewayAgent {
 	}
 
 	send(msg);
-//	addBehaviour(new WaitServerResponse(this));
+	// addBehaviour(new WaitServerResponse(this));
     }
 
-//    class WaitServerResponse extends ParallelBehaviour {
-//	private static final long serialVersionUID = 1L;
-//
-//	WaitServerResponse(Agent a) {
-//
-//	    super(a, ParallelBehaviour.WHEN_ALL);
-//
-//	    addSubBehaviour(new WakerBehaviour(myAgent, 5000) {
-//
-//		private static final long serialVersionUID = 1L;
-//
-//		protected void handleElapsedTimeout() {
-//		    System.out
-//			    .println("\n\tNo response from server. Please, try later!");
-//		}
-//	    });
-//	}
-//    }
+    // class WaitServerResponse extends ParallelBehaviour {
+    // private static final long serialVersionUID = 1L;
+    //
+    // WaitServerResponse(Agent a) {
+    //
+    // super(a, ParallelBehaviour.WHEN_ALL);
+    //
+    // addSubBehaviour(new WakerBehaviour(myAgent, 5000) {
+    //
+    // private static final long serialVersionUID = 1L;
+    //
+    // protected void handleElapsedTimeout() {
+    // System.out
+    // .println("\n\tNo response from server. Please, try later!");
+    // }
+    // });
+    // }
+    // }
 }

@@ -15,12 +15,16 @@ public interface ModelInferVocabulary {
     // Concept Questionnaire
     public static final String QUESTIONNAIRE = "Questionnaire";
     public static final String QUESTIONNAIRE_NAME = "name";
-    public static final String QUESTIONNAIRE_ANSWERS = "answers";
+    public static final String QUESTIONNAIRE_LEARNINGDIMENSIONS = "learningDimensions";
+
+    // Concept Learning Dimensions
+    public static final String LEARNING_DIMENSION = "LearningDimension";
+    public static final String LEARNING_DIMENSION_DIMENSION = "dimension";
+    public static final String LEARNING_DIMENSION_ANSWERS = "answers";
 
     // Concept Answer
     public static final String ANSWER = "Answer";
     public static final String ANSWER_OPTION = "option";
-    public static final String ANSWER_HEIGHT = "height";
 
     // Predicate Owns
     public static final String OWNS = "Owns";

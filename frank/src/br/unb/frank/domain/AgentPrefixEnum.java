@@ -2,8 +2,11 @@ package br.unb.frank.domain;
 
 public enum AgentPrefixEnum {
 
-    INTERFACE("interface"), AFFECTIVE("aa"), COGNITIVE("ac"), METACOGNITIVE("am"), WORKGROUP(
-	    "gt");
+    MANAGER("manager"), //
+    AFFECTIVE("aa"), //
+    COGNITIVE("ac"), //
+    METACOGNITIVE("am"), //
+    WORKGROUP("gt");
 
     private final String prefix;
 
