@@ -13,9 +13,9 @@ import jade.util.leap.ArrayList;
 import jade.util.leap.List;
 import jade.wrapper.gateway.GatewayAgent;
 import br.unb.frank.domain.AgentPrefixEnum;
-import br.unb.frank.domain.model.AnswerListMessage;
-import br.unb.frank.domain.model.CreateAgentMessage;
-import br.unb.frank.domain.model.DestroyAgentMessage;
+import br.unb.frank.domain.command.AnswerListMessage;
+import br.unb.frank.domain.command.CreateAgentCommand;
+import br.unb.frank.domain.command.DestroyAgentCommand;
 import br.unb.frank.ontology.frankmanagement.FrankManagementOntology;
 import br.unb.frank.ontology.frankmanagement.action.CreateWorkgroup;
 import br.unb.frank.ontology.frankmanagement.action.DestroyWorkgroup;
@@ -51,9 +51,9 @@ public class GatewayFrankAgent extends GatewayAgent {
     protected void processCommand(Object command) {
 
 	try {
-	    if (command instanceof CreateAgentMessage) {
+	    if (command instanceof CreateAgentCommand) {
 		CreateWorkgroup cw = new CreateWorkgroup();
-		cw.setAlunoId(((CreateAgentMessage) command).getAlunoId()
+		cw.setAlunoId(((CreateAgentCommand) command).getAlunoId()
 			.toString());
 
 		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
@@ -71,9 +71,9 @@ public class GatewayFrankAgent extends GatewayAgent {
 		send(msg);
 		// addBehaviour(new WaitServerResponse(this));
 
-	    } else if (command instanceof DestroyAgentMessage) {
+	    } else if (command instanceof DestroyAgentCommand) {
 		DestroyWorkgroup cw = new DestroyWorkgroup();
-		cw.setAlunoId(((DestroyAgentMessage) command).getAlunoId()
+		cw.setAlunoId(((DestroyAgentCommand) command).getAlunoId()
 			.toString());
 
 		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);

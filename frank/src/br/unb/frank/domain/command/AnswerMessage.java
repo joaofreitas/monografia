@@ -1,4 +1,4 @@
-package br.unb.frank.domain.model;
+package br.unb.frank.domain.command;
 
 import java.io.Serializable;
 

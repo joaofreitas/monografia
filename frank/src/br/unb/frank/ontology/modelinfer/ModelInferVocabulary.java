@@ -11,6 +11,7 @@ public interface ModelInferVocabulary {
     public static final String COGNITIVE_MODEL = "CognitiveModel";
     public static final String COGNITIVE_MODEL_PERFORMANCE = "performance";
     public static final String COGNITIVE_MODEL_LEARNINGSTYLE = "learningStyle";
+    public static final String COGNITIVE_MODEL_QUESTIONNAIRE = "questionnaire";
 
     // Concept Questionnaire
     public static final String QUESTIONNAIRE = "Questionnaire";

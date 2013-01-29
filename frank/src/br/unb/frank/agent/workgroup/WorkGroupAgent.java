@@ -9,6 +9,7 @@ import jade.content.onto.Ontology;
 import jade.content.onto.OntologyException;
 import jade.content.onto.UngroundedException;
 import jade.content.onto.basic.Action;
+import jade.content.onto.basic.Result;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
@@ -82,34 +83,35 @@ public class WorkGroupAgent extends Agent {
 		    try {
 			ContentElement content = getContentManager()
 				.extractContent(msg);
-			Concept action = ((Action) content).getAction();
 
-			if (isSendQuestionnaireAction(action)) {
+			if (isAbstractAction(content)) {
+			    Concept action = ((Action) content).getAction();
 
-			    System.out
-				    .println("Questionario Recebido, vou enviar ao cognitivo");
-			    SendQuestionnaire sendQuestionnaireAction = (SendQuestionnaire) action;
-			    // Enviando somente o questionário
-			    Questionnaire questionnaire = sendQuestionnaireAction
-				    .getQuestionnaire();
+			    if (isSendQuestionnaireAction(action)) {
+				SendQuestionnaire sendQuestionnaireAction = (SendQuestionnaire) action;
+				// Enviando somente o questionário
+				Questionnaire questionnaire = sendQuestionnaireAction
+					.getQuestionnaire();
 
-			    ACLMessage questionMsg = new ACLMessage(
-				    ACLMessage.REQUEST);
-			    questionMsg.setLanguage(codec.getName());
-			    questionMsg.setOntology(modelInferOntology
-				    .getName());
-			    questionMsg
-				    .setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
-			    questionMsg.addReceiver(getCognitiveAID());
+				ACLMessage questionMsg = new ACLMessage(
+					ACLMessage.REQUEST);
+				questionMsg.setLanguage(codec.getName());
+				questionMsg.setOntology(modelInferOntology
+					.getName());
+				questionMsg
+					.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+				questionMsg.addReceiver(getCognitiveAID());
 
-			    getContentManager()
-				    .fillContent(
-					    questionMsg,
-					    new Action(getCognitiveAID(),
-						    questionnaire));
+				getContentManager().fillContent(
+					questionMsg,
+					new Action(getCognitiveAID(),
+						questionnaire));
 
-			    myAgent.send(questionMsg);
+				myAgent.send(questionMsg);
+			    }
 
+			} else if (isResultMessage(content)) {
+			    System.out.println("Resposta Recebida!");
 			}
 
 		    } catch (UngroundedException e) {
@@ -125,6 +127,14 @@ public class WorkGroupAgent extends Agent {
 
 	    private boolean isSendQuestionnaireAction(Concept action) {
 		return action instanceof SendQuestionnaire;
+	    }
+
+	    private boolean isAbstractAction(ContentElement contentElement) {
+		return contentElement instanceof Action;
+	    }
+
+	    private boolean isResultMessage(ContentElement contentElement) {
+		return contentElement instanceof Result;
 	    }
 	});
 

@@ -56,6 +56,8 @@ public class ModelInferOntology extends Ontology implements
 	    cs.add(COGNITIVE_MODEL_LEARNINGSTYLE,
 		    (PrimitiveSchema) getSchema(BasicOntology.INTEGER),
 		    ObjectSchema.MANDATORY);
+	    cs.add(COGNITIVE_MODEL_QUESTIONNAIRE,
+		    (ConceptSchema) getSchema(QUESTIONNAIRE));
 
 	    // TODO Structure metacognitive model
 	    // TODO Structure affectivecognitive model

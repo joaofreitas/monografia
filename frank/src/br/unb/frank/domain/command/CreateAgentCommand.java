@@ -1,8 +1,8 @@
-package br.unb.frank.domain.model;
+package br.unb.frank.domain.command;
 
 import java.io.Serializable;
 
-public class DestroyAgentMessage implements Serializable {
+public class CreateAgentCommand implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
