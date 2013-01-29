@@ -32,7 +32,6 @@ public class SendQuestionnaireBehaviour extends CyclicBehaviour {
 	    ContentManager contentManager) {
 	this.pattern = pattern;
 	this.contentManager = contentManager;
-	contentManager.setValidationMode(false);
     }
 
     @Override
@@ -44,25 +43,22 @@ public class SendQuestionnaireBehaviour extends CyclicBehaviour {
 		ContentElement content = contentManager.extractContent(msg);
 		Concept action = ((Action) content).getAction();
 
-		if (action instanceof SendQuestionnaire) {
+		if (isSendQuestionnaireAction(action)) {
 
-		    System.out.println("Vou enviar o questionario");
-		    SendQuestionnaire contentElementQuestionnaire = (SendQuestionnaire) action;
+		    SendQuestionnaire sendQuestionnaireAction = (SendQuestionnaire) action;
 		    ACLMessage questionMsg = new ACLMessage(ACLMessage.INFORM);
 		    questionMsg.setLanguage(codec.getName());
 		    questionMsg.setOntology(ontology.getName());
 		    questionMsg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
-		    String destiny = contentElementQuestionnaire.getStudentId();
+		    String destiny = sendQuestionnaireAction.getStudentId();
 		    // TODO Deveria fazer lookup do workgroup do aluno no
 		    // ambiente
 		    AID alunoAID = new AID(AgentPrefixEnum.WORKGROUP + destiny,
 			    AID.ISLOCALNAME);
 
-		    contentManager.fillContent(
-			    questionMsg,
-			    new Action(alunoAID, contentElementQuestionnaire
-				    .getQuestionnaire()));
+		    contentManager.fillContent(questionMsg, new Action(
+			    alunoAID, sendQuestionnaireAction));
 		    questionMsg.addReceiver(alunoAID);
 		    myAgent.send(questionMsg);
 
@@ -78,5 +74,9 @@ public class SendQuestionnaireBehaviour extends CyclicBehaviour {
 	}
 
 	block();
+    }
+
+    private boolean isSendQuestionnaireAction(Concept action) {
+	return action instanceof SendQuestionnaire;
     }
 }

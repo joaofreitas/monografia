@@ -15,7 +15,7 @@ public interface ModelInferVocabulary {
     // Concept Questionnaire
     public static final String QUESTIONNAIRE = "Questionnaire";
     public static final String QUESTIONNAIRE_NAME = "name";
-    public static final String QUESTIONNAIRE_ANSWER = "answers";
+    public static final String QUESTIONNAIRE_ANSWERS = "answers";
 
     // Concept Answer
     public static final String ANSWER = "Answer";

@@ -1,14 +1,13 @@
 package br.unb.frank.ontology.modelinfer.concept;
 
 import jade.content.Concept;
-
-import java.util.List;
+import jade.util.leap.List;
 
 public class Questionnaire implements Concept {
 
     private static final long serialVersionUID = 1L;
     private String name;
-    private List<Answer> answers;
+    private List answers;
 
     public String getName() {
 	return name;
@@ -18,11 +17,11 @@ public class Questionnaire implements Concept {
 	this.name = name;
     }
 
-    public List<Answer> getAnswers() {
+    public List getAnswers() {
 	return answers;
     }
 
-    public void setAnswers(List<Answer> answers) {
+    public void setAnswers(List answers) {
 	this.answers = answers;
     }
 

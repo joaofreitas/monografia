@@ -1,7 +1,14 @@
 package br.unb.frank.agent.workgroup;
 
+import jade.content.Concept;
+import jade.content.ContentElement;
+import jade.content.lang.Codec;
+import jade.content.lang.Codec.CodecException;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
+import jade.content.onto.OntologyException;
+import jade.content.onto.UngroundedException;
+import jade.content.onto.basic.Action;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
@@ -14,9 +21,12 @@ import jade.domain.JADEAgentManagement.JADEManagementOntology;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import jade.wrapper.AgentContainer;
+import jade.wrapper.AgentController;
 import jade.wrapper.StaleProxyException;
 import br.unb.frank.domain.AgentPrefixEnum;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
+import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
+import br.unb.frank.ontology.modelinfer.concept.Questionnaire;
 
 /**
  * Classe que representa o workgroup do aluno
@@ -34,6 +44,7 @@ public class WorkGroupAgent extends Agent {
     private AID cognitiveAID;
     private AID metacognitiveAID;
 
+    private Codec codec = new SLCodec();
     private Ontology jadeOntology = JADEManagementOntology.getInstance();
     private Ontology modelInferOntology = ModelInferOntology.getInstance();
 
@@ -45,7 +56,7 @@ public class WorkGroupAgent extends Agent {
 	    doDelete();
 	}
 
-	getContentManager().registerLanguage(new SLCodec(),
+	getContentManager().registerLanguage(codec,
 		FIPANames.ContentLanguage.FIPA_SL0);
 	getContentManager().registerOntology(jadeOntology);
 	getContentManager().registerOntology(modelInferOntology);
@@ -66,12 +77,54 @@ public class WorkGroupAgent extends Agent {
 	    @Override
 	    public void action() {
 		ACLMessage msg = receive(pattern);
-
 		if (msg != null) {
-		    System.out.println("Recebi uma mensagem!");
-		}
 
+		    try {
+			ContentElement content = getContentManager()
+				.extractContent(msg);
+			Concept action = ((Action) content).getAction();
+
+			if (isSendQuestionnaireAction(action)) {
+
+			    System.out
+				    .println("Questionario Recebido, vou enviar ao cognitivo");
+			    SendQuestionnaire sendQuestionnaireAction = (SendQuestionnaire) action;
+			    // Enviando somente o questionário
+			    Questionnaire questionnaire = sendQuestionnaireAction
+				    .getQuestionnaire();
+
+			    ACLMessage questionMsg = new ACLMessage(
+				    ACLMessage.REQUEST);
+			    questionMsg.setLanguage(codec.getName());
+			    questionMsg.setOntology(modelInferOntology
+				    .getName());
+			    questionMsg
+				    .setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+			    questionMsg.addReceiver(getCognitiveAID());
+
+			    getContentManager()
+				    .fillContent(
+					    questionMsg,
+					    new Action(getCognitiveAID(),
+						    questionnaire));
+
+			    myAgent.send(questionMsg);
+
+			}
+
+		    } catch (UngroundedException e) {
+			e.printStackTrace();
+		    } catch (CodecException e) {
+			e.printStackTrace();
+		    } catch (OntologyException e) {
+			e.printStackTrace();
+		    }
+		}
 		block();
+	    }
+
+	    private boolean isSendQuestionnaireAction(Concept action) {
+		return action instanceof SendQuestionnaire;
 	    }
 	});
 
@@ -102,14 +155,20 @@ public class WorkGroupAgent extends Agent {
     private void createAuxiliarAgents(AgentContainer agentContainer) {
 	try {
 	    generateIds();
-	    agentContainer.createNewAgent(getAffectiveAID().getLocalName(),
+	    AgentController affectiveAgent = agentContainer.createNewAgent(
+		    getAffectiveAID().getLocalName(),
 		    AffectiveAgent.class.getName(), null);
+	    affectiveAgent.start();
 
-	    agentContainer.createNewAgent(getCognitiveAID().getLocalName(),
+	    AgentController cognitiveAgent = agentContainer.createNewAgent(
+		    getCognitiveAID().getLocalName(),
 		    CognitiveAgent.class.getName(), null);
+	    cognitiveAgent.start();
 
-	    agentContainer.createNewAgent(getMetacognitiveAID().getLocalName(),
+	    AgentController metacognitiveAgent = agentContainer.createNewAgent(
+		    getMetacognitiveAID().getLocalName(),
 		    MetacognitiveAgent.class.getName(), null);
+	    metacognitiveAgent.start();
 
 	} catch (StaleProxyException e) {
 	    e.printStackTrace();
@@ -153,6 +212,7 @@ public class WorkGroupAgent extends Agent {
 	try {
 	    DFService.deregister(this);
 	} catch (Exception e) {
+	    e.printStackTrace();
 	}
 
 	super.doDelete();

@@ -12,7 +12,7 @@ import br.unb.frank.behaviour.ManageWorkgroupBehaviour;
 import br.unb.frank.ontology.frankmanagement.FrankManagementOntology;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 
-public class InterfaceAgent extends Agent {
+public class ManagerAgent extends Agent {
 
     private static final long serialVersionUID = 2714298832678014462L;
 

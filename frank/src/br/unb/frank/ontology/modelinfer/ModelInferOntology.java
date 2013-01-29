@@ -69,7 +69,7 @@ public class ModelInferOntology extends Ontology implements
 
 	    // Structuring questionnaire
 	    cs = (ConceptSchema) getSchema(QUESTIONNAIRE);
-	    cs.add(QUESTIONNAIRE_ANSWER, (ConceptSchema) getSchema(ANSWER), 1,
+	    cs.add(QUESTIONNAIRE_ANSWERS, (ConceptSchema) getSchema(ANSWER), 1,
 		    ObjectSchema.UNLIMITED);
 	    cs.add(QUESTIONNAIRE_NAME,
 		    (PrimitiveSchema) getSchema(BasicOntology.STRING),

@@ -80,10 +80,10 @@ public class ManageWorkgroupBehaviour extends CyclicBehaviour {
 
     private void destroyWorkgroup(String alunoId) {
 
-	KillAgent ka = new KillAgent();
-	ka.setAgent(new AID(AgentPrefixEnum.WORKGROUP + alunoId,
+	KillAgent killAgentAction = new KillAgent();
+	killAgentAction.setAgent(new AID(AgentPrefixEnum.WORKGROUP + alunoId,
 		AID.ISLOCALNAME));
-	Action action = new Action(myAgent.getAMS(), ka);
+	Action action = new Action(myAgent.getAMS(), killAgentAction);
 
 	ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 	msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);

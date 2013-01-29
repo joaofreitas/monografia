@@ -7,11 +7,10 @@ import jade.content.onto.Ontology;
 import jade.content.onto.OntologyException;
 import jade.content.onto.basic.Action;
 import jade.core.AID;
-import jade.core.Agent;
-import jade.core.behaviours.ParallelBehaviour;
-import jade.core.behaviours.WakerBehaviour;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
+import jade.util.leap.ArrayList;
+import jade.util.leap.List;
 import jade.wrapper.gateway.GatewayAgent;
 import br.unb.frank.domain.AgentPrefixEnum;
 import br.unb.frank.domain.model.AnswerListMessage;
@@ -22,6 +21,8 @@ import br.unb.frank.ontology.frankmanagement.action.CreateWorkgroup;
 import br.unb.frank.ontology.frankmanagement.action.DestroyWorkgroup;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
+import br.unb.frank.ontology.modelinfer.concept.Answer;
+import br.unb.frank.ontology.modelinfer.concept.Questionnaire;
 
 public class GatewayFrankAgent extends GatewayAgent {
 
@@ -66,7 +67,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, cw));
 		msg.addReceiver(interfaceAID);
 		send(msg);
-		addBehaviour(new WaitServerResponse(this));
+//		addBehaviour(new WaitServerResponse(this));
 
 	    } else if (command instanceof DestroyAgentMessage) {
 		DestroyWorkgroup cw = new DestroyWorkgroup();
@@ -85,7 +86,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, cw));
 		msg.addReceiver(interfaceAID);
 		send(msg);
-		addBehaviour(new WaitServerResponse(this));
+//		addBehaviour(new WaitServerResponse(this));
 
 	    } else if (command instanceof AnswerListMessage) {
 		// TODO Deveria procurar interface no ambiente
@@ -110,7 +111,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, sendQuestionnaire));
 
 		send(msg);
-		addBehaviour(new WaitServerResponse(this));
+//		addBehaviour(new WaitServerResponse(this));
 
 	    }
 
@@ -138,24 +139,34 @@ public class GatewayFrankAgent extends GatewayAgent {
 	try {
 	    getContentManager().fillContent(msg, new Action(interfaceAID, cw));
 	} catch (CodecException e) {
-	    // TODO Auto-generated catch block
 	    e.printStackTrace();
 	} catch (OntologyException e) {
-	    // TODO Auto-generated catch block
 	    e.printStackTrace();
 	}
 	msg.addReceiver(interfaceAID);
 	send(msg);
-	addBehaviour(new WaitServerResponse(this));
+//	addBehaviour(new WaitServerResponse(this));
     }
 
     private void enviarMensagemTeste() {
 	AID interfaceAID = new AID(AgentPrefixEnum.INTERFACE.toString(),
 		AID.ISLOCALNAME);
 
-	SendQuestionnaire sendQuestionnaire = new SendQuestionnaire();
+	Answer answer = new Answer();
+	answer.setHeight(3);
+	answer.setOption(1);
+
+	List answers = new ArrayList();
+	answers.add(answer);
+
+	Questionnaire questionnaire = new Questionnaire();
+	questionnaire.setName("Questionário 1");
+	questionnaire.setAnswers(answers);
+
+	SendQuestionnaire actionSendQuestionnaire = new SendQuestionnaire();
 	String alunoId = "4";
-	sendQuestionnaire.setStudentId(alunoId);
+	actionSendQuestionnaire.setStudentId(alunoId);
+	actionSendQuestionnaire.setQuestionnaire(questionnaire);
 
 	ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 	msg.setLanguage(codec.getName());
@@ -166,31 +177,31 @@ public class GatewayFrankAgent extends GatewayAgent {
 	try {
 
 	    getContentManager().fillContent(msg,
-		    new Action(interfaceAID, sendQuestionnaire));
+		    new Action(interfaceAID, actionSendQuestionnaire));
 	} catch (CodecException | OntologyException e) {
 	    e.printStackTrace();
 	}
 
 	send(msg);
-	addBehaviour(new WaitServerResponse(this));
+//	addBehaviour(new WaitServerResponse(this));
     }
 
-    class WaitServerResponse extends ParallelBehaviour {
-	private static final long serialVersionUID = 1L;
-
-	WaitServerResponse(Agent a) {
-
-	    super(a, ParallelBehaviour.WHEN_ALL);
-
-	    addSubBehaviour(new WakerBehaviour(myAgent, 5000) {
-
-		private static final long serialVersionUID = 1L;
-
-		protected void handleElapsedTimeout() {
-		    System.out
-			    .println("\n\tNo response from server. Please, try later!");
-		}
-	    });
-	}
-    }
+//    class WaitServerResponse extends ParallelBehaviour {
+//	private static final long serialVersionUID = 1L;
+//
+//	WaitServerResponse(Agent a) {
+//
+//	    super(a, ParallelBehaviour.WHEN_ALL);
+//
+//	    addSubBehaviour(new WakerBehaviour(myAgent, 5000) {
+//
+//		private static final long serialVersionUID = 1L;
+//
+//		protected void handleElapsedTimeout() {
+//		    System.out
+//			    .println("\n\tNo response from server. Please, try later!");
+//		}
+//	    });
+//	}
+//    }
 }
