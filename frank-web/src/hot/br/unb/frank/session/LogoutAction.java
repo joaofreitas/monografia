@@ -8,11 +8,13 @@ import org.jboss.seam.ScopeType;
 import org.jboss.seam.annotations.In;
 import org.jboss.seam.annotations.Logger;
 import org.jboss.seam.annotations.Name;
+import org.jboss.seam.annotations.Out;
 import org.jboss.seam.annotations.Scope;
 import org.jboss.seam.log.Log;
 import org.jboss.seam.security.Identity;
 
 import br.unb.frank.domain.command.DestroyAgentCommand;
+import br.unb.frank.entity.Aluno;
 
 @Scope(ScopeType.APPLICATION)
 @Name("logoutAction")
@@ -26,15 +28,19 @@ public class LogoutAction {
     @In
     Identity identity;
 
+    @In(required = false)
+    @Out(required = false)
+    Aluno aluno;
+
     public void logout() {
-	sendDestroyAgentMessage();
+	// sendDestroyAgentMessage();
 	identity.logout();
     }
 
     public void sendDestroyAgentMessage() {
 	try {
 	    DestroyAgentCommand command = new DestroyAgentCommand();
-//	    command.setAlunoId(usuario.getId());
+	    // command.setAlunoId(usuario.getId());
 	    jadeGateway.execute(command);
 	} catch (StaleProxyException e) {
 	    log.error(e);

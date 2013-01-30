@@ -13,6 +13,7 @@ import org.jboss.seam.ScopeType;
 import org.jboss.seam.annotations.In;
 import org.jboss.seam.annotations.Logger;
 import org.jboss.seam.annotations.Name;
+import org.jboss.seam.annotations.Out;
 import org.jboss.seam.annotations.Scope;
 import org.jboss.seam.log.Log;
 import org.jboss.seam.security.Credentials;
@@ -41,6 +42,10 @@ public class Authenticator {
     @In
     DynamicJadeGateway jadeGateway;
 
+    @In(required = false)
+    @Out(required = false)
+    Aluno aluno;
+
     @SuppressWarnings("unchecked")
     public boolean authenticate() {
 	log.info("authenticating {0}", credentials.getUsername());
@@ -62,7 +67,8 @@ public class Authenticator {
 
 	if (listaAlunos != null && listaAlunos.size() > 0) {
 	    identity.addRole("admin");
-	    sendCreateAgentMessage();
+	    // sendCreateAgentMessage();
+	    aluno = listaAlunos.get(0);
 
 	    return true;
 	}
@@ -72,11 +78,11 @@ public class Authenticator {
     private void sendCreateAgentMessage() {
 	try {
 	    CreateAgentCommand command = new CreateAgentCommand();
-//	    command.setAlunoId(aluno.getId());
+	    // command.setAlunoId(aluno.getId());
 	    jadeGateway.execute(command);
 
 	    AnswerListMessage msg = new AnswerListMessage();
-//	    msg.setAlunoId(usuario.getId());
+	    // msg.setAlunoId(usuario.getId());
 	    jadeGateway.execute(msg);
 	} catch (StaleProxyException e) {
 	    log.error(e);
@@ -95,7 +101,7 @@ public class Authenticator {
     private void sendDestroyAgentMessage() {
 	try {
 	    DestroyAgentCommand command = new DestroyAgentCommand();
-//	    command.setAlunoId(usuario.getId());
+	    // command.setAlunoId(usuario.getId());
 	    jadeGateway.execute(command);
 	} catch (StaleProxyException e) {
 	    log.error(e);
