@@ -1,0 +1,90 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.org/schema/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <rich:panel>
+        <f:facet name="header">Resposta Details</f:facet>
+
+        <s:decorate id="id" template="layout/display.xhtml">
+            <ui:define name="label">Id</ui:define>
+            <h:outputText value="#{respostaHome.instance.id}"/>
+        </s:decorate>
+
+        <s:decorate id="opcaoEscolhida" template="layout/display.xhtml">
+            <ui:define name="label">Opcao escolhida</ui:define>
+            <h:outputText value="#{respostaHome.instance.opcaoEscolhida}"/>
+        </s:decorate>
+
+        <div style="clear:both"/>
+
+    </rich:panel>
+
+    <div class="actionButtons">
+
+        <s:button view="/RespostaEdit.xhtml"
+                    id="edit"
+                 value="Edit"/>
+
+        <s:button view="/#{empty respostaFrom ? 'RespostaList' : respostaFrom}.xhtml"
+                    id="done"
+                 value="Done"/>
+
+    </div>
+
+    <rich:tabPanel switchType="client">
+
+    <rich:tab>
+        <f:facet name="header">
+            <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>Pergunta</h:panelGroup>
+        </f:facet>
+    <div class="association" id="perguntaParent">
+
+        <h:outputText value="There is no pergunta associated with this resposta."
+                   rendered="#{respostaHome.instance.pergunta == null}"/>
+
+        <rich:dataTable var="_pergunta"
+                   value="#{respostaHome.instance.pergunta}"
+                rendered="#{respostaHome.instance.pergunta != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="perguntaTable">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                <h:outputText value="#{_pergunta.id}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Dimensao id</f:facet>
+                <h:outputText value="#{_pergunta.dimensao.id}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Titulo</f:facet>
+                <h:outputText value="#{_pergunta.titulo}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Peso</f:facet>
+                <h:outputText value="#{_pergunta.peso}"/>
+            </h:column>
+            <h:column styleClass="action">
+                <f:facet name="header">Action</f:facet>
+                <s:link id="viewpergunta"
+                     value="View"
+                      view="/Pergunta.xhtml">
+                    <f:param name="perguntaId"
+                           value="#{_pergunta.id}"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </div>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

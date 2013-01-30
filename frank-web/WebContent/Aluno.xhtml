@@ -1,0 +1,103 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.org/schema/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <rich:panel>
+        <f:facet name="header">Aluno Details</f:facet>
+
+        <s:decorate id="id" template="layout/display.xhtml">
+            <ui:define name="label">Id</ui:define>
+            <h:outputText value="#{alunoHome.instance.id}"/>
+        </s:decorate>
+
+        <s:decorate id="nome" template="layout/display.xhtml">
+            <ui:define name="label">Nome</ui:define>
+            <h:outputText value="#{alunoHome.instance.nome}"/>
+        </s:decorate>
+
+        <s:decorate id="login" template="layout/display.xhtml">
+            <ui:define name="label">Login</ui:define>
+            <h:outputText value="#{alunoHome.instance.login}"/>
+        </s:decorate>
+
+        <s:decorate id="password" template="layout/display.xhtml">
+            <ui:define name="label">Password</ui:define>
+            <h:outputText value="#{alunoHome.instance.password}"/>
+        </s:decorate>
+
+        <div style="clear:both"/>
+
+    </rich:panel>
+
+    <div class="actionButtons">
+
+        <s:button view="/AlunoEdit.xhtml"
+                    id="edit"
+                 value="Edit"/>
+
+        <s:button view="/#{empty alunoFrom ? 'AlunoList' : alunoFrom}.xhtml"
+                    id="done"
+                 value="Done"/>
+
+    </div>
+
+    <rich:tabPanel switchType="client">
+
+    <rich:tab>
+        <f:facet name="header">
+            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Questionarios</h:panelGroup>
+        </f:facet>
+    <h:form styleClass="association" id="questionariosChildren">
+
+        <h:outputText value="There are no questionarios associated with this aluno."
+                   rendered="#{empty alunoHome.questionarios}"/>
+
+        <rich:dataTable value="#{alunoHome.questionarios}"
+                       var="_questionario"
+                  rendered="#{not empty alunoHome.questionarios}"
+                rowClasses="rvgRowOne,rvgRowTwo"
+                        id="questionariosTable">
+            <rich:column sortBy="#{_questionario.id}">
+                <f:facet name="header">Id</f:facet>
+                <h:outputText value="#{_questionario.id}"/>
+            </rich:column>
+            <rich:column sortBy="#{_questionario.nome}">
+                <f:facet name="header">Nome</f:facet>
+                <h:outputText value="#{_questionario.nome}"/>
+            </rich:column>
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <s:link id="selectquestionario"
+                     value="Select"
+                      view="/Questionario.xhtml">
+                    <f:param name="questionarioId"
+                            value="#{_questionario.id}"/>
+                    <f:param name="questionarioFrom" value="Aluno"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </h:form>
+
+    <div class="actionButtons">
+        <s:button
+               value="Add questionario"
+                view="/QuestionarioEdit.xhtml">
+            <f:param name="alunoId"
+                    value="#{alunoHome.instance.id}"/>
+            <f:param name="questionarioFrom" value="Aluno"/>
+        </s:button>
+    </div>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

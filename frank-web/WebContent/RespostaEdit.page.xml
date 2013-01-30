@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://jboss.org/schema/seam/pages"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://jboss.org/schema/seam/pages http://jboss.org/schema/seam/pages-2.3.xsd"
+      no-conversation-view-id="/RespostaList.xhtml"
+      login-required="true">
+
+   <begin-conversation join="true" flush-mode="MANUAL"/>
+
+   <action execute="#{respostaHome.wire}"/>
+
+   <param name="respostaFrom"/>
+   <param name="respostaId" value="#{respostaHome.respostaId}"/>
+   <param name="perguntaFrom"/>
+   <param name="perguntaId" value="#{perguntaHome.perguntaId}"/>
+   <param name="dimensaoFrom"/>
+   <param name="dimensaoId" value="#{dimensaoHome.dimensaoId}"/>
+
+
+
+
+   <navigation from-action="#{respostaHome.persist}">
+      <rule if-outcome="persisted">
+         <end-conversation/>
+         <redirect view-id="/Resposta.xhtml"/>
+      </rule>
+   </navigation>
+
+   <navigation from-action="#{respostaHome.update}">
+      <rule if-outcome="updated">
+         <end-conversation/>
+         <redirect view-id="/Resposta.xhtml"/>
+      </rule>
+   </navigation>
+
+   <navigation from-action="#{respostaHome.remove}">
+      <rule if-outcome="removed">
+         <end-conversation/>
+         <redirect view-id="/RespostaList.xhtml"/>
+      </rule>
+   </navigation>
+
+</page>

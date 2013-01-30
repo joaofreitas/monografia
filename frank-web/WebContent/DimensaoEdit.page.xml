@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://jboss.org/schema/seam/pages"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://jboss.org/schema/seam/pages http://jboss.org/schema/seam/pages-2.3.xsd"
+      no-conversation-view-id="/DimensaoList.xhtml"
+      login-required="true">
+
+   <begin-conversation join="true" flush-mode="MANUAL"/>
+
+   <action execute="#{dimensaoHome.wire}"/>
+
+   <param name="dimensaoFrom"/>
+   <param name="dimensaoId" value="#{dimensaoHome.dimensaoId}"/>
+
+
+   <navigation from-action="#{dimensaoHome.persist}">
+      <rule if-outcome="persisted">
+         <end-conversation/>
+         <redirect view-id="/Dimensao.xhtml"/>
+      </rule>
+   </navigation>
+
+   <navigation from-action="#{dimensaoHome.update}">
+      <rule if-outcome="updated">
+         <end-conversation/>
+         <redirect view-id="/Dimensao.xhtml"/>
+      </rule>
+   </navigation>
+
+   <navigation from-action="#{dimensaoHome.remove}">
+      <rule if-outcome="removed">
+         <end-conversation/>
+         <redirect view-id="/DimensaoList.xhtml"/>
+      </rule>
+   </navigation>
+
+</page>

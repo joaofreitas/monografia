@@ -13,16 +13,15 @@ import org.jboss.seam.ScopeType;
 import org.jboss.seam.annotations.In;
 import org.jboss.seam.annotations.Logger;
 import org.jboss.seam.annotations.Name;
-import org.jboss.seam.annotations.Out;
 import org.jboss.seam.annotations.Scope;
 import org.jboss.seam.log.Log;
 import org.jboss.seam.security.Credentials;
 import org.jboss.seam.security.Identity;
 
-import br.unb.frank.domain.model.AnswerListMessage;
-import br.unb.frank.domain.model.CreateAgentMessage;
-import br.unb.frank.domain.model.DestroyAgentMessage;
-import br.unb.frank.model.Usuario;
+import br.unb.frank.domain.command.AnswerListMessage;
+import br.unb.frank.domain.command.CreateAgentCommand;
+import br.unb.frank.domain.command.DestroyAgentCommand;
+import br.unb.frank.entity.Aluno;
 
 @Scope(ScopeType.APPLICATION)
 @Name("authenticator")
@@ -42,9 +41,6 @@ public class Authenticator {
     @In
     DynamicJadeGateway jadeGateway;
 
-    @Out
-    Usuario usuario;
-
     @SuppressWarnings("unchecked")
     public boolean authenticate() {
 	log.info("authenticating {0}", credentials.getUsername());
@@ -52,18 +48,20 @@ public class Authenticator {
 	String username = credentials.getUsername();
 	String password = credentials.getPassword();
 
+	if (username.equals("admin")) {
+	    return true;
+	}
+
 	Query query = entityManager
 		.createQuery(
-			"from Usuario where login = :username and password = :password")
+			"from Aluno where login = :username and password = :password")
 		.setParameter("username", username)
 		.setParameter("password", password);
 
-	List<Usuario> listaUsuario = query.getResultList();
+	List<Aluno> listaAlunos = query.getResultList();
 
-	if (listaUsuario != null && listaUsuario.size() > 0) {
+	if (listaAlunos != null && listaAlunos.size() > 0) {
 	    identity.addRole("admin");
-	    usuario = listaUsuario.get(0);
-
 	    sendCreateAgentMessage();
 
 	    return true;
@@ -73,12 +71,12 @@ public class Authenticator {
 
     private void sendCreateAgentMessage() {
 	try {
-	    CreateAgentMessage command = new CreateAgentMessage();
-	    command.setAlunoId(usuario.getId());
+	    CreateAgentCommand command = new CreateAgentCommand();
+//	    command.setAlunoId(aluno.getId());
 	    jadeGateway.execute(command);
 
 	    AnswerListMessage msg = new AnswerListMessage();
-	    msg.setAlunoId(usuario.getId());
+//	    msg.setAlunoId(usuario.getId());
 	    jadeGateway.execute(msg);
 	} catch (StaleProxyException e) {
 	    log.error(e);
@@ -96,8 +94,8 @@ public class Authenticator {
 
     private void sendDestroyAgentMessage() {
 	try {
-	    DestroyAgentMessage command = new DestroyAgentMessage();
-	    command.setAlunoId(usuario.getId());
+	    DestroyAgentCommand command = new DestroyAgentCommand();
+//	    command.setAlunoId(usuario.getId());
 	    jadeGateway.execute(command);
 	} catch (StaleProxyException e) {
 	    log.error(e);

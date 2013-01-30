@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://jboss.org/schema/seam/pages"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://jboss.org/schema/seam/pages http://jboss.org/schema/seam/pages-2.3.xsd">
+
+   <param name="firstResult" value="#{dimensaoList.firstResult}"/>
+   <param name="sort" value="#{dimensaoList.orderColumn}"/>
+   <param name="dir" value="#{dimensaoList.orderDirection}"/>
+   <param name="logic" value="#{dimensaoList.restrictionLogicOperator}"/>
+
+   <param name="from"/>
+   <param name="nome" value="#{dimensaoList.dimensao.nome}"/>
+   <param name="descricao" value="#{dimensaoList.dimensao.descricao}"/>
+
+</page>

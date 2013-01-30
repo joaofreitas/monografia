@@ -1,0 +1,173 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.org/schema/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:a="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <h:form id="pergunta" styleClass="edit">
+
+        <rich:panel>
+            <f:facet name="header">#{perguntaHome.managed ? 'Edit' : 'Add'} Pergunta</f:facet>
+
+
+            <s:decorate id="idField" template="layout/edit.xhtml">
+                <ui:define name="label">Id</ui:define>
+                <h:inputText id="id"
+                       required="true"
+                       disabled="#{perguntaHome.managed}"
+                          value="#{perguntaHome.instance.id}">
+                    <a:ajax event="blur" render="idField" bypassUpdates="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+
+            <s:decorate id="tituloField" template="layout/edit.xhtml">
+                <ui:define name="label">Titulo</ui:define>
+                <h:inputTextarea id="titulo"
+                               cols="80"
+                               rows="3"
+                           required="true"
+                              value="#{perguntaHome.instance.titulo}"/>
+            </s:decorate>
+
+
+            <s:decorate id="pesoField" template="layout/edit.xhtml">
+                <ui:define name="label">Peso</ui:define>
+                <h:inputText id="peso"
+                       required="true"
+                          value="#{perguntaHome.instance.peso}">
+                    <a:ajax event="blur" render="pesoField" bypassUpdates="true"/>
+                </h:inputText>
+            </s:decorate>
+
+
+            <div style="clear:both">
+                <span class="required">*</span>
+                required fields
+            </div>
+
+        </rich:panel>
+
+        <div class="actionButtons">
+
+            <h:commandButton id="save"
+                          value="Save"
+                         action="#{perguntaHome.persist}"
+                       disabled="#{!perguntaHome.wired}"
+                       rendered="#{!perguntaHome.managed}">
+                <s:conversationId/>
+            </h:commandButton>
+
+            <h:commandButton id="update"
+                          value="Save"
+                         action="#{perguntaHome.update}"
+                       rendered="#{perguntaHome.managed}">
+                <s:conversationId/>
+            </h:commandButton>
+
+            <h:commandButton id="delete"
+                          value="Delete"
+                         action="#{perguntaHome.remove}"
+                      immediate="true"
+                       rendered="#{perguntaHome.managed}"/>
+
+            <s:button id="cancelEdit"
+                   value="Cancel"
+             propagation="end"
+                    view="/Pergunta.xhtml"
+                rendered="#{perguntaHome.managed}"/>
+
+            <s:button id="cancelAdd"
+                   value="Cancel"
+             propagation="end"
+                    view="/#{empty perguntaFrom ? 'PerguntaList' : perguntaFrom}.xhtml"
+                rendered="#{!perguntaHome.managed}"/>
+
+        </div>
+    </h:form>
+
+<rich:tabPanel switchType="client">
+
+    <rich:tab header="Dimensao *" labelClass="required">
+    <div class="association" id="dimensaoParent">
+
+        <h:outputText value="There is no dimensao associated with this pergunta."
+                   rendered="#{perguntaHome.instance.dimensao == null}"/>
+
+        <rich:dataTable var="_dimensao"
+                   value="#{perguntaHome.instance.dimensao}"
+                rendered="#{perguntaHome.instance.dimensao != null}"
+              rowClasses="rvgRowOne,rvgRowTwo"
+                      id="dimensaoTable">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                <h:outputText value="#{_dimensao.id}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nome</f:facet>
+                <h:outputText value="#{_dimensao.nome}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Descricao</f:facet>
+                <h:outputText value="#{_dimensao.descricao}"/>
+            </h:column>
+        </rich:dataTable>
+
+        <div class="actionButtons">
+            <s:button id="#{perguntaHome.instance.dimensao != null ? 'changeParent' : 'selectParent'}" value="#{perguntaHome.instance.dimensao != null ? 'Change' : 'Select'} dimensao"
+                       view="/DimensaoList.xhtml">
+                <f:param name="from" value="PerguntaEdit"/>
+            </s:button>
+        </div>
+
+    </div>
+    </rich:tab>
+
+    <rich:tab header="Respostas">
+        <h:form styleClass="association" id="respostasChildren">
+
+            <h:outputText value="There are no respostas associated with this pergunta."
+                       rendered="#{empty perguntaHome.respostas}"/>
+
+            <rich:dataTable value="#{perguntaHome.respostas}"
+                           var="_resposta"
+                      rendered="#{not empty perguntaHome.respostas}"
+                    rowClasses="rvgRowOne,rvgRowTwo"
+                            id="respostasTable">
+                <rich:column sortBy="#{_resposta.id}">
+                    <f:facet name="header">Id</f:facet>
+                    <h:outputText value="#{_resposta.id}"/>
+                </rich:column>
+                <rich:column sortBy="#{_resposta.opcaoEscolhida}">
+                    <f:facet name="header">Opcao escolhida</f:facet>
+                    <h:outputText value="#{_resposta.opcaoEscolhida}"/>
+                </rich:column>
+            </rich:dataTable>
+
+        </h:form>
+
+        <f:subview rendered="#{perguntaHome.managed}" id="respostas">
+        <div class="actionButtons">
+            <s:button id="addresposta"
+                   value="Add resposta"
+                    view="/RespostaEdit.xhtml"
+             propagation="none">
+                 <f:param name="perguntaId"
+                         value="#{perguntaHome.instance.id}"/>
+                 <f:param name="respostaFrom" value="Pergunta"/>
+            </s:button>
+        </div>
+        </f:subview>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

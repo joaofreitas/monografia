@@ -1,0 +1,170 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.org/schema/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <h:form id="alunoSearch" styleClass="edit">
+
+        <rich:collapsiblePanel header="Aluno Search Filter" switchType="ajax">
+
+            <s:decorate template="layout/display.xhtml">
+                <ui:define name="label">Nome</ui:define>
+                <h:inputText id="nome" value="#{alunoList.aluno.nome}"/>
+            </s:decorate>
+
+            <s:decorate template="layout/display.xhtml">
+                <ui:define name="label">Login</ui:define>
+                <h:inputText id="login" value="#{alunoList.aluno.login}"/>
+            </s:decorate>
+
+            <s:decorate template="layout/display.xhtml">
+                <ui:define name="label">Password</ui:define>
+                <h:inputText id="password" value="#{alunoList.aluno.password}"/>
+            </s:decorate>
+
+            <s:decorate template="layout/display.xhtml">
+                <ui:define name="label">Match</ui:define>
+                <h:selectOneRadio id="logic" value="#{alunoList.restrictionLogicOperator}" styleClass="radio">
+                    <f:selectItem itemLabel="All" itemValue="and"/>
+                    <f:selectItem itemLabel="Any" itemValue="or"/>
+                </h:selectOneRadio>
+            </s:decorate>
+
+        </rich:collapsiblePanel>
+
+        <div class="actionButtons">
+            <h:commandButton id="search" value="Search" action="/AlunoList.xhtml"/>
+            <s:button id="reset" value="Reset" includePageParams="false"/>
+        </div>
+
+    </h:form>
+
+    <rich:panel>
+        <f:facet name="header">Aluno Search Results (#{empty alunoList.resultList ? 0 : (alunoList.paginated ? alunoList.resultCount : alunoList.resultList.size)})</f:facet>
+    <div class="results" id="alunoList">
+
+    <h:outputText value="The aluno search returned no results."
+               rendered="#{empty alunoList.resultList}"/>
+
+    <rich:dataTable id="alunoList"
+                var="_aluno"
+              value="#{alunoList.resultList}"
+           rendered="#{not empty alunoList.resultList}">
+        <h:column>
+            <f:facet name="header">
+                <ui:include src="layout/sort.xhtml">
+                    <ui:param name="entityList" value="#{alunoList}"/>
+                    <ui:param name="propertyLabel" value="Id"/>
+                    <ui:param name="propertyPath" value="aluno.id"/>
+                </ui:include>
+            </f:facet>
+            <h:outputText value="#{_aluno.id}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <ui:include src="layout/sort.xhtml">
+                    <ui:param name="entityList" value="#{alunoList}"/>
+                    <ui:param name="propertyLabel" value="Nome"/>
+                    <ui:param name="propertyPath" value="aluno.nome"/>
+                </ui:include>
+            </f:facet>
+            <h:outputText value="#{_aluno.nome}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <ui:include src="layout/sort.xhtml">
+                    <ui:param name="entityList" value="#{alunoList}"/>
+                    <ui:param name="propertyLabel" value="Login"/>
+                    <ui:param name="propertyPath" value="aluno.login"/>
+                </ui:include>
+            </f:facet>
+            <h:outputText value="#{_aluno.login}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <ui:include src="layout/sort.xhtml">
+                    <ui:param name="entityList" value="#{alunoList}"/>
+                    <ui:param name="propertyLabel" value="Password"/>
+                    <ui:param name="propertyPath" value="aluno.password"/>
+                </ui:include>
+            </f:facet>
+            <h:outputText value="#{_aluno.password}"/>
+        </h:column>
+        <rich:column styleClass="action">
+            <f:facet name="header">Action</f:facet>
+            <s:link view="/#{empty from ? 'Aluno' : from}.xhtml"
+                   value="#{empty from ? 'View' : 'Select'}"
+             propagation="#{empty from ? 'none' : 'default'}"
+                      id="alunoViewId">
+                <f:param name="alunoId"
+                        value="#{_aluno.id}"/>
+            </s:link>
+            #{' '}
+            <s:link view="/AlunoEdit.xhtml"
+                   value="Edit"
+             propagation="none"
+                      id="alunoEdit"
+                rendered="#{empty from}">
+                <f:param name="alunoId"
+                        value="#{_aluno.id}"/>
+            </s:link>
+        </rich:column>
+    </rich:dataTable>
+
+    </div>
+    </rich:panel>
+
+    <div class="tableControl">
+
+        <s:link view="/AlunoList.xhtml"
+            rendered="#{alunoList.previousExists}"
+               value="#{messages.left}#{messages.left} First Page"
+                  id="firstPage">
+          <f:param name="firstResult" value="0"/>
+        </s:link>
+
+        <s:link view="/AlunoList.xhtml"
+            rendered="#{alunoList.previousExists}"
+               value="#{messages.left} Previous Page"
+                  id="previousPage">
+            <f:param name="firstResult"
+                    value="#{alunoList.previousFirstResult}"/>
+        </s:link>
+
+        <s:link view="/AlunoList.xhtml"
+            rendered="#{alunoList.nextExists}"
+               value="Next Page #{messages.right}"
+                  id="nextPage">
+            <f:param name="firstResult"
+                    value="#{alunoList.nextFirstResult}"/>
+        </s:link>
+
+        <s:link view="/AlunoList.xhtml"
+            rendered="#{alunoList.nextExists}"
+               value="Last Page #{messages.right}#{messages.right}"
+                  id="lastPage">
+            <f:param name="firstResult"
+                    value="#{alunoList.lastFirstResult}"/>
+        </s:link>
+
+    </div>
+
+    <s:div styleClass="actionButtons" rendered="#{empty from}">
+        <s:button view="/AlunoEdit.xhtml"
+                    id="create"
+           propagation="none"
+                 value="Create aluno">
+            <f:param name="alunoId"/>
+        </s:button>
+    </s:div>
+
+</ui:define>
+
+</ui:composition>

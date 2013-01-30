@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://jboss.org/schema/seam/pages"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://jboss.org/schema/seam/pages http://jboss.org/schema/seam/pages-2.3.xsd"
+      no-conversation-view-id="/QuestionarioList.xhtml"
+      login-required="true">
+
+   <begin-conversation join="true" flush-mode="MANUAL"/>
+
+   <action execute="#{questionarioHome.wire}"/>
+
+   <param name="questionarioFrom"/>
+   <param name="questionarioId" value="#{questionarioHome.questionarioId}"/>
+   <param name="alunoFrom"/>
+   <param name="alunoId" value="#{alunoHome.alunoId}"/>
+
+
+
+   <navigation from-action="#{questionarioHome.persist}">
+      <rule if-outcome="persisted">
+         <end-conversation/>
+         <redirect view-id="/Questionario.xhtml"/>
+      </rule>
+   </navigation>
+
+   <navigation from-action="#{questionarioHome.update}">
+      <rule if-outcome="updated">
+         <end-conversation/>
+         <redirect view-id="/Questionario.xhtml"/>
+      </rule>
+   </navigation>
+
+   <navigation from-action="#{questionarioHome.remove}">
+      <rule if-outcome="removed">
+         <end-conversation/>
+         <redirect view-id="/QuestionarioList.xhtml"/>
+      </rule>
+   </navigation>
+
+</page>
