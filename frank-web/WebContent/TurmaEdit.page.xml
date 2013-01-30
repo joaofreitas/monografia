@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://jboss.org/schema/seam/pages"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://jboss.org/schema/seam/pages http://jboss.org/schema/seam/pages-2.3.xsd"
+      no-conversation-view-id="/TurmaList.xhtml"
+      login-required="true">
+
+   <begin-conversation join="true" flush-mode="MANUAL"/>
+
+   <action execute="#{turmaHome.wire}"/>
+
+   <param name="turmaFrom"/>
+   <param name="turmaId" value="#{turmaHome.turmaId}"/>
+   <param name="docenteFrom"/>
+   <param name="docenteId" value="#{docenteHome.docenteId}"/>
+
+
+
+   <navigation from-action="#{turmaHome.persist}">
+      <rule if-outcome="persisted">
+         <end-conversation/>
+         <redirect view-id="/Turma.xhtml"/>
+      </rule>
+   </navigation>
+
+   <navigation from-action="#{turmaHome.update}">
+      <rule if-outcome="updated">
+         <end-conversation/>
+         <redirect view-id="/Turma.xhtml"/>
+      </rule>
+   </navigation>
+
+   <navigation from-action="#{turmaHome.remove}">
+      <rule if-outcome="removed">
+         <end-conversation/>
+         <redirect view-id="/TurmaList.xhtml"/>
+      </rule>
+   </navigation>
+
+</page>

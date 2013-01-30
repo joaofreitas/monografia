@@ -1,0 +1,111 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:s="http://jboss.org/schema/seam/taglib"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:rich="http://richfaces.org/rich"
+    template="layout/template.xhtml">
+
+<ui:define name="body">
+
+    <rich:panel>
+        <f:facet name="header">Docente Details</f:facet>
+
+        <s:decorate id="id" template="layout/display.xhtml">
+            <ui:define name="label">Id</ui:define>
+            <h:outputText value="#{docenteHome.instance.id}"/>
+        </s:decorate>
+
+        <s:decorate id="nome" template="layout/display.xhtml">
+            <ui:define name="label">Nome</ui:define>
+            <h:outputText value="#{docenteHome.instance.nome}"/>
+        </s:decorate>
+
+        <s:decorate id="login" template="layout/display.xhtml">
+            <ui:define name="label">Login</ui:define>
+            <h:outputText value="#{docenteHome.instance.login}"/>
+        </s:decorate>
+
+        <s:decorate id="password" template="layout/display.xhtml">
+            <ui:define name="label">Password</ui:define>
+            <h:outputText value="#{docenteHome.instance.password}"/>
+        </s:decorate>
+
+        <div style="clear:both"/>
+
+    </rich:panel>
+
+    <div class="actionButtons">
+
+        <s:button view="/DocenteEdit.xhtml"
+                    id="edit"
+                 value="Edit"/>
+
+        <s:button view="/#{empty docenteFrom ? 'DocenteList' : docenteFrom}.xhtml"
+                    id="done"
+                 value="Done"/>
+
+    </div>
+
+    <rich:tabPanel switchType="client">
+
+    <rich:tab>
+        <f:facet name="header">
+            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Turmas</h:panelGroup>
+        </f:facet>
+    <h:form styleClass="association" id="turmasChildren">
+
+        <h:outputText value="There are no turmas associated with this docente."
+                   rendered="#{empty docenteHome.turmas}"/>
+
+        <rich:dataTable value="#{docenteHome.turmas}"
+                       var="_turma"
+                  rendered="#{not empty docenteHome.turmas}"
+                rowClasses="rvgRowOne,rvgRowTwo"
+                        id="turmasTable">
+            <rich:column sortBy="#{_turma.id}">
+                <f:facet name="header">Id</f:facet>
+                <h:outputText value="#{_turma.id}"/>
+            </rich:column>
+            <rich:column sortBy="#{_turma.dataInicio}">
+                <f:facet name="header">Data inicio</f:facet>
+                <h:outputText value="#{_turma.dataInicio}">
+                    <f:convertDateTime type="date" dateStyle="short"/>
+                </h:outputText>
+            </rich:column>
+            <rich:column sortBy="#{_turma.dataFim}">
+                <f:facet name="header">Data fim</f:facet>
+                <h:outputText value="#{_turma.dataFim}">
+                    <f:convertDateTime type="date" dateStyle="short"/>
+                </h:outputText>
+            </rich:column>
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <s:link id="selectturma"
+                     value="Select"
+                      view="/Turma.xhtml">
+                    <f:param name="turmaId"
+                            value="#{_turma.id}"/>
+                    <f:param name="turmaFrom" value="Docente"/>
+                </s:link>
+            </h:column>
+        </rich:dataTable>
+
+    </h:form>
+
+    <div class="actionButtons">
+        <s:button
+               value="Add turma"
+                view="/TurmaEdit.xhtml">
+            <f:param name="docenteId"
+                    value="#{docenteHome.instance.id}"/>
+            <f:param name="turmaFrom" value="Docente"/>
+        </s:button>
+    </div>
+    </rich:tab>
+</rich:tabPanel>
+</ui:define>
+
+</ui:composition>

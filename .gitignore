@@ -1,5 +1,6 @@
 *.class
 .metadata/
+*.project
 examples/
 frank-web/.settings
 jade/
