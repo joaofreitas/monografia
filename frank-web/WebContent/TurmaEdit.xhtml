@@ -135,37 +135,20 @@
         <h:form styleClass="association" id="turmaAlunosChildren">
 
             <h:outputText value="There are no turmaAlunos associated with this turma."
-                       rendered="#{empty turmaHome.turmaAlunos}"/>
+                       rendered="#{empty turmaHome.alunos}"/>
 
-            <rich:dataTable value="#{turmaHome.turmaAlunos}"
-                           var="_turmaAluno"
-                      rendered="#{not empty turmaHome.turmaAlunos}"
+            <rich:dataTable value="#{turmaHome.alunos}"
+                           var="aluno"
+                      rendered="#{not empty turmaHome.alunos}"
                     rowClasses="rvgRowOne,rvgRowTwo"
                             id="turmaAlunosTable">
-                <rich:column sortBy="#{_turmaAluno.id.idTurma}">
-                    <f:facet name="header">Id turma</f:facet>
-                    <h:outputText value="#{_turmaAluno.id.idTurma}"/>
-                </rich:column>
-                <rich:column sortBy="#{_turmaAluno.id.idAluno}">
-                    <f:facet name="header">Id aluno</f:facet>
-                    <h:outputText value="#{_turmaAluno.id.idAluno}"/>
+                <rich:column sortBy="#{aluno.nome}">
+                    <f:facet name="header">Nome do Aluno</f:facet>
+                    <h:outputText value="#{aluno.nome}"/>
                 </rich:column>
             </rich:dataTable>
 
         </h:form>
-
-        <f:subview rendered="#{turmaHome.managed}" id="turmaAlunos">
-        <div class="actionButtons">
-            <s:button id="addturmaAluno"
-                   value="Add turmaAluno"
-                    view="/TurmaAlunoEdit.xhtml"
-             propagation="none">
-                 <f:param name="turmaId"
-                         value="#{turmaHome.instance.id}"/>
-                 <f:param name="turmaAlunoFrom" value="Turma"/>
-            </s:button>
-        </div>
-        </f:subview>
     </rich:tab>
 </rich:tabPanel>
 </ui:define>

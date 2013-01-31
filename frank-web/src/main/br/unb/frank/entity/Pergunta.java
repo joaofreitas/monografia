@@ -7,10 +7,13 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -20,6 +23,8 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "pergunta")
 public class Pergunta implements java.io.Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private int id;
     private Dimensao dimensao;
@@ -47,6 +52,8 @@ public class Pergunta implements java.io.Serializable {
     }
 
     @Id
+    @SequenceGenerator(name = "pergunta_id_seq", sequenceName = "pergunta_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pergunta_id_seq")
     @Column(name = "id", unique = true, nullable = false)
     public int getId() {
 	return this.id;

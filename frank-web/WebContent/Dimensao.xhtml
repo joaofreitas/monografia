@@ -1,102 +1,89 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:s="http://jboss.org/schema/seam/taglib"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:rich="http://richfaces.org/rich"
-    template="layout/template.xhtml">
+	xmlns:s="http://jboss.org/schema/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich" template="layout/template.xhtml">
 
-<ui:define name="body">
+	<ui:define name="body">
 
-    <rich:panel>
-        <f:facet name="header">Dimensao Details</f:facet>
+		<rich:panel>
+			<f:facet name="header">Dimensao Details</f:facet>
 
-        <s:decorate id="id" template="layout/display.xhtml">
-            <ui:define name="label">Id</ui:define>
-            <h:outputText value="#{dimensaoHome.instance.id}"/>
-        </s:decorate>
+			<s:decorate id="nome" template="layout/display.xhtml">
+				<ui:define name="label">Nome</ui:define>
+				<h:outputText value="#{dimensaoHome.instance.nome}" />
+			</s:decorate>
 
-        <s:decorate id="nome" template="layout/display.xhtml">
-            <ui:define name="label">Nome</ui:define>
-            <h:outputText value="#{dimensaoHome.instance.nome}"/>
-        </s:decorate>
+			<s:decorate id="descricao" template="layout/display.xhtml">
+				<ui:define name="label">Descricao</ui:define>
+				<h:outputText value="#{dimensaoHome.instance.descricao}" />
+			</s:decorate>
 
-        <s:decorate id="descricao" template="layout/display.xhtml">
-            <ui:define name="label">Descricao</ui:define>
-            <h:outputText value="#{dimensaoHome.instance.descricao}"/>
-        </s:decorate>
+			<div style="clear: both" />
 
-        <div style="clear:both"/>
+		</rich:panel>
 
-    </rich:panel>
+		<div class="actionButtons">
 
-    <div class="actionButtons">
+			<s:button view="/DimensaoEdit.xhtml" id="edit" value="Edit" />
 
-        <s:button view="/DimensaoEdit.xhtml"
-                    id="edit"
-                 value="Edit"/>
+			<s:button
+				view="/#{empty dimensaoFrom ? 'DimensaoList' : dimensaoFrom}.xhtml"
+				id="done" value="Done" />
 
-        <s:button view="/#{empty dimensaoFrom ? 'DimensaoList' : dimensaoFrom}.xhtml"
-                    id="done"
-                 value="Done"/>
+		</div>
 
-    </div>
+		<rich:tabPanel switchType="client">
 
-    <rich:tabPanel switchType="client">
+			<rich:tab>
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:graphicImage value="/img/onetomany.gif"
+							style="vertical-align: middle; padding-right: 4px;" />Perguntas</h:panelGroup>
+				</f:facet>
+				<h:form styleClass="association" id="perguntasChildren">
 
-    <rich:tab>
-        <f:facet name="header">
-            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Perguntas</h:panelGroup>
-        </f:facet>
-    <h:form styleClass="association" id="perguntasChildren">
+					<h:outputText
+						value="There are no perguntas associated with this dimensao."
+						rendered="#{empty dimensaoHome.perguntas}" />
 
-        <h:outputText value="There are no perguntas associated with this dimensao."
-                   rendered="#{empty dimensaoHome.perguntas}"/>
+					<rich:dataTable value="#{dimensaoHome.perguntas}" var="_pergunta"
+						rendered="#{not empty dimensaoHome.perguntas}"
+						rowClasses="rvgRowOne,rvgRowTwo" id="perguntasTable">
+						<rich:column sortBy="#{_pergunta.id}">
+							<f:facet name="header">Id</f:facet>
+							<h:outputText value="#{_pergunta.id}" />
+						</rich:column>
+						<rich:column sortBy="#{_pergunta.titulo}">
+							<f:facet name="header">Titulo</f:facet>
+							<h:outputText value="#{_pergunta.titulo}" />
+						</rich:column>
+						<rich:column sortBy="#{_pergunta.peso}">
+							<f:facet name="header">Peso</f:facet>
+							<h:outputText value="#{_pergunta.peso}" />
+						</rich:column>
+						<h:column>
+							<f:facet name="header">Action</f:facet>
+							<s:link id="selectpergunta" value="Select" view="/Pergunta.xhtml">
+								<f:param name="perguntaId" value="#{_pergunta.id}" />
+								<f:param name="perguntaFrom" value="Dimensao" />
+							</s:link>
+						</h:column>
+					</rich:dataTable>
 
-        <rich:dataTable value="#{dimensaoHome.perguntas}"
-                       var="_pergunta"
-                  rendered="#{not empty dimensaoHome.perguntas}"
-                rowClasses="rvgRowOne,rvgRowTwo"
-                        id="perguntasTable">
-            <rich:column sortBy="#{_pergunta.id}">
-                <f:facet name="header">Id</f:facet>
-                <h:outputText value="#{_pergunta.id}"/>
-            </rich:column>
-            <rich:column sortBy="#{_pergunta.titulo}">
-                <f:facet name="header">Titulo</f:facet>
-                <h:outputText value="#{_pergunta.titulo}"/>
-            </rich:column>
-            <rich:column sortBy="#{_pergunta.peso}">
-                <f:facet name="header">Peso</f:facet>
-                <h:outputText value="#{_pergunta.peso}"/>
-            </rich:column>
-            <h:column>
-                <f:facet name="header">Action</f:facet>
-                <s:link id="selectpergunta"
-                     value="Select"
-                      view="/Pergunta.xhtml">
-                    <f:param name="perguntaId"
-                            value="#{_pergunta.id}"/>
-                    <f:param name="perguntaFrom" value="Dimensao"/>
-                </s:link>
-            </h:column>
-        </rich:dataTable>
+				</h:form>
 
-    </h:form>
-
-    <div class="actionButtons">
-        <s:button
-               value="Add pergunta"
-                view="/PerguntaEdit.xhtml">
-            <f:param name="dimensaoId"
-                    value="#{dimensaoHome.instance.id}"/>
-            <f:param name="perguntaFrom" value="Dimensao"/>
-        </s:button>
-    </div>
-    </rich:tab>
-</rich:tabPanel>
-</ui:define>
+				<div class="actionButtons">
+					<s:button value="Add pergunta" view="/PerguntaEdit.xhtml">
+						<f:param name="dimensaoId" value="#{dimensaoHome.instance.id}" />
+						<f:param name="perguntaFrom" value="Dimensao" />
+					</s:button>
+				</div>
+			</rich:tab>
+		</rich:tabPanel>
+	</ui:define>
 
 </ui:composition>

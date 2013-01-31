@@ -1,4 +1,4 @@
-package br.unb.frank.session;
+package br.unb.frank.session.dimensao;
 
 import br.unb.frank.entity.*;
 import java.util.ArrayList;
@@ -8,6 +8,8 @@ import org.jboss.seam.framework.EntityHome;
 
 @Name("dimensaoHome")
 public class DimensaoHome extends EntityHome<Dimensao> {
+
+    private static final long serialVersionUID = 1L;
 
     public void setDimensaoId(Integer id) {
 	setId(id);

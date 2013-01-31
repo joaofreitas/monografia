@@ -9,11 +9,14 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -53,6 +56,8 @@ public class Turma implements java.io.Serializable {
     }
 
     @Id
+    @SequenceGenerator(name = "turma_id_seq", sequenceName = "turma_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "turma_id_seq")
     @Column(name = "id", unique = true, nullable = false)
     public int getId() {
 	return this.id;

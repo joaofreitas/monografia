@@ -1,4 +1,4 @@
-package br.unb.frank.session;
+package br.unb.frank.session.docente;
 
 import br.unb.frank.entity.*;
 import org.jboss.seam.annotations.Name;
@@ -7,6 +7,8 @@ import java.util.Arrays;
 
 @Name("docenteList")
 public class DocenteList extends EntityQuery<Docente> {
+
+    private static final long serialVersionUID = 1L;
 
     private static final String EJBQL = "select docente from Docente docente";
 

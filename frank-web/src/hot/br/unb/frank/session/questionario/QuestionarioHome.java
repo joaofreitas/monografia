@@ -1,12 +1,17 @@
-package br.unb.frank.session;
+package br.unb.frank.session.questionario;
 
-import br.unb.frank.entity.*;
 import org.jboss.seam.annotations.In;
 import org.jboss.seam.annotations.Name;
 import org.jboss.seam.framework.EntityHome;
 
+import br.unb.frank.entity.Aluno;
+import br.unb.frank.entity.Questionario;
+import br.unb.frank.session.aluno.AlunoHome;
+
 @Name("questionarioHome")
 public class QuestionarioHome extends EntityHome<Questionario> {
+
+    private static final long serialVersionUID = 1L;
 
     @In(create = true)
     AlunoHome alunoHome;

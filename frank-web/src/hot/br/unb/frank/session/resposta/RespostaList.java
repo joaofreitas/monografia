@@ -1,4 +1,4 @@
-package br.unb.frank.session;
+package br.unb.frank.session.resposta;
 
 import br.unb.frank.entity.*;
 import org.jboss.seam.annotations.Name;
@@ -7,6 +7,8 @@ import java.util.Arrays;
 
 @Name("respostaList")
 public class RespostaList extends EntityQuery<Resposta> {
+
+    private static final long serialVersionUID = 1L;
 
     private static final String EJBQL = "select resposta from Resposta resposta";
 

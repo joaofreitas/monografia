@@ -1,4 +1,4 @@
-package br.unb.frank.session;
+package br.unb.frank.session.dimensao;
 
 import br.unb.frank.entity.*;
 import org.jboss.seam.annotations.Name;
@@ -7,6 +7,8 @@ import java.util.Arrays;
 
 @Name("dimensaoList")
 public class DimensaoList extends EntityQuery<Dimensao> {
+
+    private static final long serialVersionUID = 1L;
 
     private static final String EJBQL = "select dimensao from Dimensao dimensao";
 

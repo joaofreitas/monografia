@@ -1,138 +1,124 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:s="http://jboss.org/schema/seam/taglib"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:rich="http://richfaces.org/rich"
-    template="layout/template.xhtml">
+	xmlns:s="http://jboss.org/schema/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich" template="layout/template.xhtml">
 
-<ui:define name="body">
+	<ui:define name="body">
 
-    <rich:panel>
-        <f:facet name="header">Pergunta Details</f:facet>
+		<rich:panel>
+			<f:facet name="header">Pergunta Details</f:facet>
 
-        <s:decorate id="id" template="layout/display.xhtml">
-            <ui:define name="label">Id</ui:define>
-            <h:outputText value="#{perguntaHome.instance.id}"/>
-        </s:decorate>
+			<s:decorate id="titulo" template="layout/display.xhtml">
+				<ui:define name="label">Titulo</ui:define>
+				<h:outputText value="#{perguntaHome.instance.titulo}" />
+			</s:decorate>
 
-        <s:decorate id="titulo" template="layout/display.xhtml">
-            <ui:define name="label">Titulo</ui:define>
-            <h:outputText value="#{perguntaHome.instance.titulo}"/>
-        </s:decorate>
+			<s:decorate id="peso" template="layout/display.xhtml">
+				<ui:define name="label">Peso</ui:define>
+				<h:outputText value="#{perguntaHome.instance.peso}" />
+			</s:decorate>
 
-        <s:decorate id="peso" template="layout/display.xhtml">
-            <ui:define name="label">Peso</ui:define>
-            <h:outputText value="#{perguntaHome.instance.peso}"/>
-        </s:decorate>
+			<div style="clear: both" />
 
-        <div style="clear:both"/>
+		</rich:panel>
 
-    </rich:panel>
+		<div class="actionButtons">
 
-    <div class="actionButtons">
+			<s:button view="/PerguntaEdit.xhtml" id="edit" value="Edit" />
 
-        <s:button view="/PerguntaEdit.xhtml"
-                    id="edit"
-                 value="Edit"/>
+			<s:button
+				view="/#{empty perguntaFrom ? 'PerguntaList' : perguntaFrom}.xhtml"
+				id="done" value="Done" />
 
-        <s:button view="/#{empty perguntaFrom ? 'PerguntaList' : perguntaFrom}.xhtml"
-                    id="done"
-                 value="Done"/>
+		</div>
 
-    </div>
+		<rich:tabPanel switchType="client">
 
-    <rich:tabPanel switchType="client">
+			<rich:tab>
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:graphicImage value="/img/manytoone.gif"
+							style="vertical-align: middle; padding-right: 4px;" />Dimensao</h:panelGroup>
+				</f:facet>
+				<div class="association" id="dimensaoParent">
 
-    <rich:tab>
-        <f:facet name="header">
-            <h:panelGroup><h:graphicImage value="/img/manytoone.gif" style="vertical-align: middle; padding-right: 4px;"/>Dimensao</h:panelGroup>
-        </f:facet>
-    <div class="association" id="dimensaoParent">
+					<h:outputText
+						value="There is no dimensao associated with this pergunta."
+						rendered="#{perguntaHome.instance.dimensao == null}" />
 
-        <h:outputText value="There is no dimensao associated with this pergunta."
-                   rendered="#{perguntaHome.instance.dimensao == null}"/>
+					<rich:dataTable var="_dimensao"
+						value="#{perguntaHome.instance.dimensao}"
+						rendered="#{perguntaHome.instance.dimensao != null}"
+						rowClasses="rvgRowOne,rvgRowTwo" id="dimensaoTable">
+						<h:column>
+							<f:facet name="header">Id</f:facet>
+							<h:outputText value="#{_dimensao.id}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">Nome</f:facet>
+							<h:outputText value="#{_dimensao.nome}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">Descricao</f:facet>
+							<h:outputText value="#{_dimensao.descricao}" />
+						</h:column>
+						<h:column styleClass="action">
+							<f:facet name="header">Action</f:facet>
+							<s:link id="viewdimensao" value="View" view="/Dimensao.xhtml">
+								<f:param name="dimensaoId" value="#{_dimensao.id}" />
+							</s:link>
+						</h:column>
+					</rich:dataTable>
 
-        <rich:dataTable var="_dimensao"
-                   value="#{perguntaHome.instance.dimensao}"
-                rendered="#{perguntaHome.instance.dimensao != null}"
-              rowClasses="rvgRowOne,rvgRowTwo"
-                      id="dimensaoTable">
-            <h:column>
-                <f:facet name="header">Id</f:facet>
-                <h:outputText value="#{_dimensao.id}"/>
-            </h:column>
-            <h:column>
-                <f:facet name="header">Nome</f:facet>
-                <h:outputText value="#{_dimensao.nome}"/>
-            </h:column>
-            <h:column>
-                <f:facet name="header">Descricao</f:facet>
-                <h:outputText value="#{_dimensao.descricao}"/>
-            </h:column>
-            <h:column styleClass="action">
-                <f:facet name="header">Action</f:facet>
-                <s:link id="viewdimensao"
-                     value="View"
-                      view="/Dimensao.xhtml">
-                    <f:param name="dimensaoId"
-                           value="#{_dimensao.id}"/>
-                </s:link>
-            </h:column>
-        </rich:dataTable>
+				</div>
+			</rich:tab>
 
-    </div>
-    </rich:tab>
+			<rich:tab>
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:graphicImage value="/img/onetomany.gif"
+							style="vertical-align: middle; padding-right: 4px;" />Respostas</h:panelGroup>
+				</f:facet>
+				<h:form styleClass="association" id="respostasChildren">
 
-    <rich:tab>
-        <f:facet name="header">
-            <h:panelGroup><h:graphicImage value="/img/onetomany.gif" style="vertical-align: middle; padding-right: 4px;"/>Respostas</h:panelGroup>
-        </f:facet>
-    <h:form styleClass="association" id="respostasChildren">
+					<h:outputText
+						value="There are no respostas associated with this pergunta."
+						rendered="#{empty perguntaHome.respostas}" />
 
-        <h:outputText value="There are no respostas associated with this pergunta."
-                   rendered="#{empty perguntaHome.respostas}"/>
+					<rich:dataTable value="#{perguntaHome.respostas}" var="_resposta"
+						rendered="#{not empty perguntaHome.respostas}"
+						rowClasses="rvgRowOne,rvgRowTwo" id="respostasTable">
+						<rich:column sortBy="#{_resposta.id}">
+							<f:facet name="header">Id</f:facet>
+							<h:outputText value="#{_resposta.id}" />
+						</rich:column>
+						<rich:column sortBy="#{_resposta.opcaoEscolhida}">
+							<f:facet name="header">Opcao escolhida</f:facet>
+							<h:outputText value="#{_resposta.opcaoEscolhida}" />
+						</rich:column>
+						<h:column>
+							<f:facet name="header">Action</f:facet>
+							<s:link id="selectresposta" value="Select" view="/Resposta.xhtml">
+								<f:param name="respostaId" value="#{_resposta.id}" />
+								<f:param name="respostaFrom" value="Pergunta" />
+							</s:link>
+						</h:column>
+					</rich:dataTable>
 
-        <rich:dataTable value="#{perguntaHome.respostas}"
-                       var="_resposta"
-                  rendered="#{not empty perguntaHome.respostas}"
-                rowClasses="rvgRowOne,rvgRowTwo"
-                        id="respostasTable">
-            <rich:column sortBy="#{_resposta.id}">
-                <f:facet name="header">Id</f:facet>
-                <h:outputText value="#{_resposta.id}"/>
-            </rich:column>
-            <rich:column sortBy="#{_resposta.opcaoEscolhida}">
-                <f:facet name="header">Opcao escolhida</f:facet>
-                <h:outputText value="#{_resposta.opcaoEscolhida}"/>
-            </rich:column>
-            <h:column>
-                <f:facet name="header">Action</f:facet>
-                <s:link id="selectresposta"
-                     value="Select"
-                      view="/Resposta.xhtml">
-                    <f:param name="respostaId"
-                            value="#{_resposta.id}"/>
-                    <f:param name="respostaFrom" value="Pergunta"/>
-                </s:link>
-            </h:column>
-        </rich:dataTable>
+				</h:form>
 
-    </h:form>
-
-    <div class="actionButtons">
-        <s:button
-               value="Add resposta"
-                view="/RespostaEdit.xhtml">
-            <f:param name="perguntaId"
-                    value="#{perguntaHome.instance.id}"/>
-            <f:param name="respostaFrom" value="Pergunta"/>
-        </s:button>
-    </div>
-    </rich:tab>
-</rich:tabPanel>
-</ui:define>
+				<div class="actionButtons">
+					<s:button value="Add resposta" view="/RespostaEdit.xhtml">
+						<f:param name="perguntaId" value="#{perguntaHome.instance.id}" />
+						<f:param name="respostaFrom" value="Pergunta" />
+					</s:button>
+				</div>
+			</rich:tab>
+		</rich:tabPanel>
+	</ui:define>
 
 </ui:composition>

@@ -16,19 +16,6 @@
         <rich:panel>
             <f:facet name="header">#{perguntaHome.managed ? 'Edit' : 'Add'} Pergunta</f:facet>
 
-
-            <s:decorate id="idField" template="layout/edit.xhtml">
-                <ui:define name="label">Id</ui:define>
-                <h:inputText id="id"
-                       required="true"
-                       disabled="#{perguntaHome.managed}"
-                          value="#{perguntaHome.instance.id}">
-                    <a:ajax event="blur" render="idField" bypassUpdates="true"/>
-                </h:inputText>
-            </s:decorate>
-
-
-
             <s:decorate id="tituloField" template="layout/edit.xhtml">
                 <ui:define name="label">Titulo</ui:define>
                 <h:inputTextarea id="titulo"

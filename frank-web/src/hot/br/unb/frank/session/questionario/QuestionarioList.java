@@ -1,4 +1,4 @@
-package br.unb.frank.session;
+package br.unb.frank.session.questionario;
 
 import br.unb.frank.entity.*;
 import org.jboss.seam.annotations.Name;
@@ -7,6 +7,8 @@ import java.util.Arrays;
 
 @Name("questionarioList")
 public class QuestionarioList extends EntityQuery<Questionario> {
+
+    private static final long serialVersionUID = 1L;
 
     private static final String EJBQL = "select questionario from Questionario questionario";
 

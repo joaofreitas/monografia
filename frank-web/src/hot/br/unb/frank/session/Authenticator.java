@@ -75,6 +75,7 @@ public class Authenticator {
 	return false;
     }
 
+    @SuppressWarnings("unused")
     private void sendCreateAgentMessage() {
 	try {
 	    CreateAgentCommand command = new CreateAgentCommand();

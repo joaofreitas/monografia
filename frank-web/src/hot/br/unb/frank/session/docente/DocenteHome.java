@@ -1,16 +1,15 @@
-package br.unb.frank.session;
+package br.unb.frank.session.docente;
 
+import br.unb.frank.entity.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.jboss.seam.annotations.Name;
 import org.jboss.seam.framework.EntityHome;
 
-import br.unb.frank.entity.Aluno;
-import br.unb.frank.entity.Turma;
+@Name("docenteHome")
+public class DocenteHome extends EntityHome<Docente> {
 
-@Name("turmaHome")
-public class TurmaHome extends EntityHome<Turma> {
+    private static final long serialVersionUID = 1L;
 
     public void setDocenteId(Integer id) {
 	setId(id);
@@ -21,9 +20,9 @@ public class TurmaHome extends EntityHome<Turma> {
     }
 
     @Override
-    protected Turma createInstance() {
-	Turma turma = new Turma();
-	return turma;
+    protected Docente createInstance() {
+	Docente docente = new Docente();
+	return docente;
     }
 
     public void load() {
@@ -40,13 +39,13 @@ public class TurmaHome extends EntityHome<Turma> {
 	return true;
     }
 
-    public Turma getDefinedInstance() {
+    public Docente getDefinedInstance() {
 	return isIdDefined() ? getInstance() : null;
     }
 
-    public List<Aluno> getAlunos() {
-	return getInstance() == null ? null : new ArrayList<Aluno>(
-		getInstance().getAlunos());
+    public List<Turma> getTurmas() {
+	return getInstance() == null ? null : new ArrayList<Turma>(
+		getInstance().getTurmas());
     }
 
 }

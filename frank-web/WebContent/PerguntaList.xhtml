@@ -61,11 +61,11 @@
             <f:facet name="header">
                 <ui:include src="layout/sort.xhtml">
                     <ui:param name="entityList" value="#{perguntaList}"/>
-                    <ui:param name="propertyLabel" value="Dimensao id"/>
-                    <ui:param name="propertyPath" value="pergunta.dimensao.id"/>
+                    <ui:param name="propertyLabel" value="Dimensao"/>
+                    <ui:param name="propertyPath" value="pergunta.dimensao.nome"/>
                 </ui:include>
             </f:facet>
-            <h:outputText value="#{_pergunta.dimensao.id}"/>
+            <h:outputText value="#{_pergunta.dimensao.nome}"/>
         </h:column>
         <h:column>
             <f:facet name="header">

@@ -1,4 +1,4 @@
-package br.unb.frank.session;
+package br.unb.frank.session.aluno;
 
 import br.unb.frank.entity.*;
 import java.util.ArrayList;
@@ -8,6 +8,8 @@ import org.jboss.seam.framework.EntityHome;
 
 @Name("alunoHome")
 public class AlunoHome extends EntityHome<Aluno> {
+
+    private static final long serialVersionUID = 1L;
 
     public void setAlunoId(Integer id) {
 	setId(id);

@@ -1,12 +1,16 @@
-package br.unb.frank.session;
+package br.unb.frank.session.resposta;
 
 import br.unb.frank.entity.*;
+import br.unb.frank.session.pergunta.PerguntaHome;
+
 import org.jboss.seam.annotations.In;
 import org.jboss.seam.annotations.Name;
 import org.jboss.seam.framework.EntityHome;
 
 @Name("respostaHome")
 public class RespostaHome extends EntityHome<Resposta> {
+
+    private static final long serialVersionUID = 1L;
 
     @In(create = true)
     PerguntaHome perguntaHome;

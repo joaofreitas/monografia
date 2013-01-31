@@ -1,6 +1,8 @@
-package br.unb.frank.session;
+package br.unb.frank.session.pergunta;
 
 import br.unb.frank.entity.*;
+import br.unb.frank.session.dimensao.DimensaoHome;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.jboss.seam.annotations.In;
@@ -9,6 +11,8 @@ import org.jboss.seam.framework.EntityHome;
 
 @Name("perguntaHome")
 public class PerguntaHome extends EntityHome<Pergunta> {
+
+    private static final long serialVersionUID = 1L;
 
     @In(create = true)
     DimensaoHome dimensaoHome;
