@@ -17,6 +17,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
 /**
@@ -34,6 +35,9 @@ public class Aluno implements java.io.Serializable {
     private String password;
     private Set<Questionario> questionarios = new HashSet<Questionario>(0);
     private Set<Turma> turmas = new HashSet<Turma>(0);
+
+    @Transient
+    private Dimensao dimensao;
 
     public Aluno() {
     }
@@ -108,6 +112,14 @@ public class Aluno implements java.io.Serializable {
 
     public void setTurmas(Set<Turma> turmas) {
 	this.turmas = turmas;
+    }
+
+    public Dimensao getDimensao() {
+	return dimensao;
+    }
+
+    public void setDimensao(Dimensao dimensao) {
+	this.dimensao = dimensao;
     }
 
 }

@@ -13,6 +13,8 @@ import jade.content.onto.basic.Result;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
+import jade.core.behaviours.ParallelBehaviour;
+import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPANames;
@@ -108,10 +110,16 @@ public class WorkGroupAgent extends Agent {
 						questionnaire));
 
 				myAgent.send(questionMsg);
+
+				addBehaviour(new WaitServerResponse(myAgent));
 			    }
 
 			} else if (isResultMessage(content)) {
-			    System.out.println("Resposta Recebida!");
+			    Result result = (Result) content;
+			    Object value = result.getValue();
+			    System.out
+				    .println("Resposta Recebida, modelo cognitivo é "
+					    + value.getClass());
 			}
 
 		    } catch (UngroundedException e) {
@@ -123,6 +131,23 @@ public class WorkGroupAgent extends Agent {
 		    }
 		}
 		block();
+	    }
+
+	    class WaitServerResponse extends ParallelBehaviour {
+		private static final long serialVersionUID = 1L;
+
+		WaitServerResponse(Agent a) {
+		    super(a, ParallelBehaviour.WHEN_ALL);
+		    addSubBehaviour(new WakerBehaviour(myAgent, 5000) {
+
+			private static final long serialVersionUID = 1L;
+
+			protected void handleElapsedTimeout() {
+			    System.out
+				    .println("\n\tNo response from server. Please, try later!");
+			}
+		    });
+		}
 	    }
 
 	    private boolean isSendQuestionnaireAction(Concept action) {

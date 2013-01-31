@@ -2,6 +2,10 @@ package br.unb.frank.entity;
 
 // Generated 29/01/2013 21:58:44 by Hibernate Tools 3.4.0.CR1
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -25,6 +30,7 @@ public class Questionario implements java.io.Serializable {
     private int id;
     private Aluno aluno;
     private String nome;
+    private List<Resposta> respostas = new ArrayList<Resposta>(0);
 
     public Questionario() {
     }
@@ -68,6 +74,15 @@ public class Questionario implements java.io.Serializable {
 
     public void setNome(String nome) {
 	this.nome = nome;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "pergunta")
+    public List<Resposta> getRespostas() {
+	return this.respostas;
+    }
+
+    public void setRespostas(List<Resposta> respostas) {
+	this.respostas = respostas;
     }
 
 }

@@ -24,7 +24,8 @@ public class Resposta implements java.io.Serializable {
 
     private int id;
     private Pergunta pergunta;
-    private int opcaoEscolhida;
+    private Questionario questionario;
+    private Integer opcaoEscolhida;
 
     public Resposta() {
     }
@@ -62,12 +63,22 @@ public class Resposta implements java.io.Serializable {
 	this.pergunta = pergunta;
     }
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_questionario")
+    public Questionario getQuestionario() {
+	return this.questionario;
+    }
+
+    public void setQuestionario(Questionario questionario) {
+	this.questionario = questionario;
+    }
+
     @Column(name = "opcao_escolhida", nullable = false)
-    public int getOpcaoEscolhida() {
+    public Integer getOpcaoEscolhida() {
 	return this.opcaoEscolhida;
     }
 
-    public void setOpcaoEscolhida(int opcaoEscolhida) {
+    public void setOpcaoEscolhida(Integer opcaoEscolhida) {
 	this.opcaoEscolhida = opcaoEscolhida;
     }
 

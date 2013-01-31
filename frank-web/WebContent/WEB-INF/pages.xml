@@ -15,7 +15,7 @@
 	<page view-id="/home.xhtml">
 		<navigation>
 			<rule if-outcome="responderPerguntas">
-				<redirect view-id="/pages/responder-perguntas/formResponderPerguntas.xhtml" />
+				<redirect view-id="/formResponderPerguntas.xhtml" />
 			</rule>
 		</navigation>
 	</page>

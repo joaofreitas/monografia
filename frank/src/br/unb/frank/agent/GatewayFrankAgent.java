@@ -13,9 +13,11 @@ import jade.util.leap.ArrayList;
 import jade.util.leap.List;
 import jade.wrapper.gateway.GatewayAgent;
 import br.unb.frank.domain.AgentPrefixEnum;
-import br.unb.frank.domain.command.AnswerListMessage;
+import br.unb.frank.domain.command.AnswerCommand;
 import br.unb.frank.domain.command.CreateAgentCommand;
 import br.unb.frank.domain.command.DestroyAgentCommand;
+import br.unb.frank.domain.command.DimensionCommand;
+import br.unb.frank.domain.command.ProcessQuestionnaireCommand;
 import br.unb.frank.ontology.frankmanagement.FrankManagementOntology;
 import br.unb.frank.ontology.frankmanagement.action.CreateWorkgroup;
 import br.unb.frank.ontology.frankmanagement.action.DestroyWorkgroup;
@@ -40,9 +42,6 @@ public class GatewayFrankAgent extends GatewayAgent {
 		FIPANames.ContentLanguage.FIPA_SL0);
 	getContentManager().registerOntology(ontology);
 	getContentManager().registerOntology(modelInferOntology);
-
-	criarWorkgroupTeste();
-	enviarMensagemTeste();
 
 	super.setup();
     }
@@ -90,18 +89,19 @@ public class GatewayFrankAgent extends GatewayAgent {
 		send(msg);
 		// addBehaviour(new WaitServerResponse(this));
 
-	    } else if (command instanceof AnswerListMessage) {
+	    } else if (command instanceof ProcessQuestionnaireCommand) {
 		// TODO Deveria procurar interface no ambiente
 		AID interfaceAID = new AID(AgentPrefixEnum.MANAGER.toString(),
 			AID.ISLOCALNAME);
 
+		ProcessQuestionnaireCommand processCommand = (ProcessQuestionnaireCommand) command;
+		String alunoId = processCommand.getAlunoId().toString();
+
+		Questionnaire questionnaire = convertToOntology(processCommand);
+
 		SendQuestionnaire sendQuestionnaire = new SendQuestionnaire();
-		String alunoId = ((AnswerListMessage) command).getAlunoId()
-			.toString();
 		sendQuestionnaire.setStudentId(alunoId);
-		// TODO Deve colocar o questionário do aluno
-		// sendQuestionnaire.setQuestionnaire((((AnswerListMessage)
-		// command).getListAnswer()));
+		sendQuestionnaire.setQuestionnaire(questionnaire);
 
 		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 		msg.setLanguage(codec.getName());
@@ -126,91 +126,33 @@ public class GatewayFrankAgent extends GatewayAgent {
 	releaseCommand(command);
     }
 
-    private void criarWorkgroupTeste() {
-	CreateWorkgroup cw = new CreateWorkgroup();
-	cw.setAlunoId("4");
-
-	ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
-	msg.setLanguage(codec.getName());
-	msg.setOntology(ontology.getName());
-	msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
-
-	// TODO Deveria procurar interface no ambiente
-	AID interfaceAID = new AID(AgentPrefixEnum.MANAGER.toString(),
-		AID.ISLOCALNAME);
-
-	try {
-	    getContentManager().fillContent(msg, new Action(interfaceAID, cw));
-	} catch (CodecException e) {
-	    e.printStackTrace();
-	} catch (OntologyException e) {
-	    e.printStackTrace();
-	}
-	msg.addReceiver(interfaceAID);
-	send(msg);
-	// addBehaviour(new WaitServerResponse(this));
-    }
-
-    private void enviarMensagemTeste() {
-	AID interfaceAID = new AID(AgentPrefixEnum.MANAGER.toString(),
-		AID.ISLOCALNAME);
-
-	Answer answer = new Answer();
-	answer.setOption(1);
-
-	List answers = new ArrayList();
-	answers.add(answer);
-
-	LearningDimension learningDimension = new LearningDimension();
-	learningDimension.setAnswers(answers);
-	learningDimension.setDimension(1);
+    private Questionnaire convertToOntology(ProcessQuestionnaireCommand command) {
+	Questionnaire questionnaire = new Questionnaire();
+	questionnaire.setName(command.getAlunoId() + "-" + command.getName());
 
 	List learningDimensions = new ArrayList();
-	learningDimensions.add(learningDimension);
+	for (DimensionCommand dimensionCommand : command.getDimensions()) {
+	    LearningDimension learningDimension = new LearningDimension();
+	    learningDimension.setDimension(dimensionCommand.getDimension());
 
-	Questionnaire questionnaire = new Questionnaire();
-	questionnaire.setName("Questionário 1");
-	questionnaire.setLearningDimensions(learningDimensions);
-
-	SendQuestionnaire actionSendQuestionnaire = new SendQuestionnaire();
-	String alunoId = "4";
-	actionSendQuestionnaire.setStudentId(alunoId);
-	actionSendQuestionnaire.setQuestionnaire(questionnaire);
-
-	ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
-	msg.setLanguage(codec.getName());
-	msg.setOntology(modelInferOntology.getName());
-	msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
-	msg.addReceiver(interfaceAID);
-
-	try {
-
-	    getContentManager().fillContent(msg,
-		    new Action(interfaceAID, actionSendQuestionnaire));
-	} catch (CodecException | OntologyException e) {
-	    e.printStackTrace();
+	    List answers = convertToAnswerList(dimensionCommand);
+	    learningDimension.setAnswers(answers);
+	    learningDimensions.add(learningDimension);
 	}
 
-	send(msg);
-	// addBehaviour(new WaitServerResponse(this));
+	questionnaire.setLearningDimensions(learningDimensions);
+
+	return questionnaire;
     }
 
-    // class WaitServerResponse extends ParallelBehaviour {
-    // private static final long serialVersionUID = 1L;
-    //
-    // WaitServerResponse(Agent a) {
-    //
-    // super(a, ParallelBehaviour.WHEN_ALL);
-    //
-    // addSubBehaviour(new WakerBehaviour(myAgent, 5000) {
-    //
-    // private static final long serialVersionUID = 1L;
-    //
-    // protected void handleElapsedTimeout() {
-    // System.out
-    // .println("\n\tNo response from server. Please, try later!");
-    // }
-    // });
-    // }
-    // }
+    private List convertToAnswerList(DimensionCommand dimensionCommand) {
+	List answers = new ArrayList();
+	for (AnswerCommand answerCommand : dimensionCommand.getAnswers()) {
+	    Answer answer = new Answer();
+	    answer.setOption(answerCommand.getOption());
+	    answers.add(answer);
+	}
+	return answers;
+    }
+
 }

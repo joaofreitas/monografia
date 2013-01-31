@@ -2,8 +2,9 @@ package br.unb.frank.entity;
 
 // Generated 29/01/2013 21:58:44 by Hibernate Tools 3.4.0.CR1
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -30,7 +31,7 @@ public class Pergunta implements java.io.Serializable {
     private Dimensao dimensao;
     private String titulo;
     private int peso;
-    private Set<Resposta> respostas = new HashSet<Resposta>(0);
+    private List<Resposta> respostas = new ArrayList<Resposta>(0);
 
     public Pergunta() {
     }
@@ -43,7 +44,7 @@ public class Pergunta implements java.io.Serializable {
     }
 
     public Pergunta(int id, Dimensao dimensao, String titulo, int peso,
-	    Set<Resposta> respostas) {
+	    List<Resposta> respostas) {
 	this.id = id;
 	this.dimensao = dimensao;
 	this.titulo = titulo;
@@ -94,11 +95,11 @@ public class Pergunta implements java.io.Serializable {
     }
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "pergunta")
-    public Set<Resposta> getRespostas() {
+    public List<Resposta> getRespostas() {
 	return this.respostas;
     }
 
-    public void setRespostas(Set<Resposta> respostas) {
+    public void setRespostas(List<Resposta> respostas) {
 	this.respostas = respostas;
     }
 

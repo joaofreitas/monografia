@@ -2,10 +2,9 @@
 <diagram model-entity="SeamPagesDiagram">
  <item ID="#home.xhtml" NAME="#xhome.xhtml" PATH="/home.xhtml"
   SHAPE="24,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
-  <output ID="/pages/responder-perguntas/formResponderPerguntas.xhtml"
-   NAME="output"
-   PATH="/pages/responder-perguntas/formResponderPerguntas.xhtml"
-   TARGET="#xpages#xresponder-perguntas#xformResponderPerguntas.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+  <output ID="/formResponderPerguntas.xhtml" NAME="output"
+   PATH="/formResponderPerguntas.xhtml"
+   TARGET="#xformResponderPerguntas.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
  </item>
  <item ID="org.jboss.seam.framework.EntityNotFoundException"
   NAME="exception:org.jboss.seam.framework.EntityNotFoundException"
@@ -72,7 +71,6 @@
   <output ID="/home.xhtml" NAME="output" PATH="/home.xhtml"
    TARGET="#xhome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
  </item>
- <item NAME="#xpages#xresponder-perguntas#xformResponderPerguntas.xhtml"
-  PATH="/pages/responder-perguntas/formResponderPerguntas.xhtml"
-  SHAPE="344,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item NAME="#xformResponderPerguntas.xhtml"
+  PATH="/formResponderPerguntas.xhtml" SHAPE="344,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
 </diagram>

@@ -19,7 +19,6 @@ import org.jboss.seam.log.Log;
 import org.jboss.seam.security.Credentials;
 import org.jboss.seam.security.Identity;
 
-import br.unb.frank.domain.command.AnswerListMessage;
 import br.unb.frank.domain.command.CreateAgentCommand;
 import br.unb.frank.domain.command.DestroyAgentCommand;
 import br.unb.frank.entity.Aluno;
@@ -67,24 +66,20 @@ public class Authenticator {
 
 	if (listaAlunos != null && listaAlunos.size() > 0) {
 	    identity.addRole("admin");
-	    // sendCreateAgentMessage();
 	    aluno = listaAlunos.get(0);
+	    sendCreateAgentMessage();
 
 	    return true;
 	}
 	return false;
     }
 
-    @SuppressWarnings("unused")
     private void sendCreateAgentMessage() {
 	try {
 	    CreateAgentCommand command = new CreateAgentCommand();
-	    // command.setAlunoId(aluno.getId());
+	    command.setAlunoId(Long.valueOf(aluno.getId()));
 	    jadeGateway.execute(command);
 
-	    AnswerListMessage msg = new AnswerListMessage();
-	    // msg.setAlunoId(usuario.getId());
-	    jadeGateway.execute(msg);
 	} catch (StaleProxyException e) {
 	    log.error(e);
 	} catch (ControllerException e) {
@@ -95,7 +90,7 @@ public class Authenticator {
     }
 
     public void logout() {
-	sendDestroyAgentMessage();
+//	sendDestroyAgentMessage();
 	identity.logout();
     }
 

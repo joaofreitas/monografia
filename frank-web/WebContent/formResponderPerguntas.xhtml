@@ -1,0 +1,39 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.org/schema/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" template="layout/template.xhtml">
+
+	<ui:define name="body">
+
+		<h:form id="pergunta" styleClass="edit">
+			<rich:dataTable var="pergunta"
+				value="#{preencherQuestionarioAction.listaPerguntas}"
+				rowClasses="rvgRowOne,rvgRowTwo" id="perguntaTable">
+				<h:column>
+					<f:facet name="header">Titulo</f:facet>
+					<h:outputText value="#{pergunta.titulo}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Resposta</f:facet>
+					<h:selectOneRadio
+						value="#{pergunta.respostas.get(0).opcaoEscolhida}">
+						<f:selectItem itemLabel="Discordo Totalmente" itemValue="1" />
+						<f:selectItem itemLabel="Discordo" itemValue="2" />
+						<f:selectItem itemLabel="Concordo" itemValue="3" />
+						<f:selectItem itemLabel="Concordo Totalmente" itemValue="4" />
+					</h:selectOneRadio>
+				</h:column>
+			</rich:dataTable>
+
+			<h:commandButton id="enviar" value="Confirmar"
+				action="#{preencherQuestionarioAction.processarQuestionario()}" />
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

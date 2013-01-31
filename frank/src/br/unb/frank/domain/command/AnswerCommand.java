@@ -2,7 +2,7 @@ package br.unb.frank.domain.command;
 
 import java.io.Serializable;
 
-public class AnswerMessage implements Serializable {
+public class AnswerCommand implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
