@@ -13,8 +13,6 @@ import jade.content.onto.basic.Result;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
-import jade.core.behaviours.ParallelBehaviour;
-import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPANames;
@@ -29,7 +27,9 @@ import jade.wrapper.StaleProxyException;
 import br.unb.frank.domain.AgentPrefixEnum;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
+import br.unb.frank.ontology.modelinfer.concept.CognitiveModel;
 import br.unb.frank.ontology.modelinfer.concept.Questionnaire;
+import br.unb.frank.ontology.modelinfer.predicate.Owns;
 
 /**
  * Classe que representa o workgroup do aluno
@@ -40,6 +40,7 @@ import br.unb.frank.ontology.modelinfer.concept.Questionnaire;
 public class WorkGroupAgent extends Agent {
 
     private String alunoId;
+    private Owns own = new Owns();
 
     private static final long serialVersionUID = 1L;
 
@@ -110,16 +111,15 @@ public class WorkGroupAgent extends Agent {
 						questionnaire));
 
 				myAgent.send(questionMsg);
-
-				addBehaviour(new WaitServerResponse(myAgent));
 			    }
 
 			} else if (isResultMessage(content)) {
 			    Result result = (Result) content;
-			    Object value = result.getValue();
-			    System.out
-				    .println("Resposta Recebida, modelo cognitivo é "
-					    + value.getClass());
+			    CognitiveModel cognitiveModel = (CognitiveModel) result
+				    .getValue();
+
+			    own.setCognitiveModel(cognitiveModel);
+			    System.out.println("Resposta Recebida");
 			}
 
 		    } catch (UngroundedException e) {
@@ -131,23 +131,6 @@ public class WorkGroupAgent extends Agent {
 		    }
 		}
 		block();
-	    }
-
-	    class WaitServerResponse extends ParallelBehaviour {
-		private static final long serialVersionUID = 1L;
-
-		WaitServerResponse(Agent a) {
-		    super(a, ParallelBehaviour.WHEN_ALL);
-		    addSubBehaviour(new WakerBehaviour(myAgent, 5000) {
-
-			private static final long serialVersionUID = 1L;
-
-			protected void handleElapsedTimeout() {
-			    System.out
-				    .println("\n\tNo response from server. Please, try later!");
-			}
-		    });
-		}
 	    }
 
 	    private boolean isSendQuestionnaireAction(Concept action) {

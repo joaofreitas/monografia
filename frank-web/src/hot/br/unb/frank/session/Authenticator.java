@@ -21,6 +21,7 @@ import org.jboss.seam.security.Identity;
 
 import br.unb.frank.domain.command.CreateAgentCommand;
 import br.unb.frank.domain.command.DestroyAgentCommand;
+import br.unb.frank.domain.command.RequestCognitiveModelCommand;
 import br.unb.frank.entity.Aluno;
 
 @Scope(ScopeType.APPLICATION)
@@ -80,6 +81,10 @@ public class Authenticator {
 	    command.setAlunoId(Long.valueOf(aluno.getId()));
 	    jadeGateway.execute(command);
 
+	    RequestCognitiveModelCommand commandCM = new RequestCognitiveModelCommand();
+	    commandCM.setAlunoId(Long.valueOf(aluno.getId()));
+	    jadeGateway.execute(commandCM);
+
 	} catch (StaleProxyException e) {
 	    log.error(e);
 	} catch (ControllerException e) {
@@ -90,7 +95,7 @@ public class Authenticator {
     }
 
     public void logout() {
-//	sendDestroyAgentMessage();
+	// sendDestroyAgentMessage();
 	identity.logout();
     }
 

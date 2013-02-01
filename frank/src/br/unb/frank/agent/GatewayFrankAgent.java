@@ -7,6 +7,8 @@ import jade.content.onto.Ontology;
 import jade.content.onto.OntologyException;
 import jade.content.onto.basic.Action;
 import jade.core.AID;
+import jade.core.Agent;
+import jade.core.behaviours.WakerBehaviour;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.util.leap.ArrayList;
@@ -103,7 +105,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 		sendQuestionnaire.setStudentId(alunoId);
 		sendQuestionnaire.setQuestionnaire(questionnaire);
 
-		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
+		ACLMessage msg = new ACLMessage(ACLMessage.PROPAGATE);
 		msg.setLanguage(codec.getName());
 		msg.setOntology(modelInferOntology.getName());
 		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
@@ -113,7 +115,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, sendQuestionnaire));
 
 		send(msg);
-		// addBehaviour(new WaitServerResponse(this));
+//		addBehaviour(new WaitServerResponse(this, 2000));
 
 	    }
 
@@ -124,6 +126,18 @@ public class GatewayFrankAgent extends GatewayAgent {
 	}
 
 	releaseCommand(command);
+    }
+
+    @SuppressWarnings("serial")
+    class WaitServerResponse extends WakerBehaviour {
+	WaitServerResponse(Agent a, Integer timeout) {
+	    super(a, timeout);
+	}
+
+	protected void handleElapsedTimeout() {
+	    System.out
+		    .println("\n\tNo response from server. Please, try later!");
+	}
     }
 
     private Questionnaire convertToOntology(ProcessQuestionnaireCommand command) {

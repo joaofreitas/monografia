@@ -61,7 +61,7 @@ public class PreencherQuestionarioAction implements Serializable {
 	return "responderPerguntas";
     }
 
-    public void processarQuestionario() {
+    public String processarQuestionario() {
 	try {
 	    List<Resposta> respostas = questionarioBusiness
 		    .validarRespostasQuestionario(listaPerguntas);
@@ -88,6 +88,8 @@ public class PreencherQuestionarioAction implements Serializable {
 	    statusMessages.addFromResourceBundle(StatusMessage.Severity.ERROR,
 		    "É Obrigatório o Preenchimento de Todas as Perguntas");
 	}
+
+	return "sucesso";
 
     }
 

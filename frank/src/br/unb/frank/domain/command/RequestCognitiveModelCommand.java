@@ -1,21 +1,22 @@
-package br.unb.frank.ontology.modelinfer.predicate;
+package br.unb.frank.domain.command;
 
-import jade.content.Predicate;
-import jade.core.AID;
+import java.io.Serializable;
+
 import br.unb.frank.ontology.modelinfer.concept.CognitiveModel;
 
-public class Owns implements Predicate {
+public class RequestCognitiveModelCommand implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    private AID student;
+
+    private Long alunoId;
     private CognitiveModel cognitiveModel;
 
-    public AID getStudent() {
-	return student;
+    public Long getAlunoId() {
+	return alunoId;
     }
 
-    public void setStudent(AID student) {
-	this.student = student;
+    public void setAlunoId(Long alunoId) {
+	this.alunoId = alunoId;
     }
 
     public CognitiveModel getCognitiveModel() {

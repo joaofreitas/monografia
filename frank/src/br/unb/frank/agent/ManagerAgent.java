@@ -6,6 +6,7 @@ import jade.content.onto.Ontology;
 import jade.core.Agent;
 import jade.domain.FIPANames;
 import jade.domain.JADEAgentManagement.JADEManagementOntology;
+import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import br.unb.frank.behaviour.SendQuestionnaireBehaviour;
 import br.unb.frank.behaviour.ManageWorkgroupBehaviour;
@@ -33,12 +34,16 @@ public class ManagerAgent extends Agent {
 	getContentManager().registerOntology(jadeOntology);
 	getContentManager().registerOntology(modelInferOntology);
 
-	pattern = MessageTemplate.MatchOntology(managementOntology.getName());
+	pattern = MessageTemplate.and(
+		MessageTemplate.MatchOntology(managementOntology.getName()),
+		MessageTemplate.MatchPerformative(ACLMessage.REQUEST));
 
 	addBehaviour(new ManageWorkgroupBehaviour(pattern,
 		getContainerController(), getContentManager()));
 
-	pattern = MessageTemplate.MatchOntology(modelInferOntology.getName());
+	pattern = MessageTemplate.and(
+		MessageTemplate.MatchOntology(modelInferOntology.getName()),
+		MessageTemplate.MatchPerformative(ACLMessage.PROPAGATE));
 
 	addBehaviour(new SendQuestionnaireBehaviour(pattern,
 		getContentManager()));

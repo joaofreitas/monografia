@@ -19,6 +19,14 @@
 			</rule>
 		</navigation>
 	</page>
+	
+	<page view-id="/formResponderPerguntas.xhtml">
+		<navigation>
+			<rule if-outcome="sucesso">
+				<redirect view-id="/home.xhtml" />
+			</rule>
+		</navigation>
+	</page>
 
 	<exception class="org.jboss.seam.framework.EntityNotFoundException">
 		<redirect view-id="/error.xhtml">

@@ -89,7 +89,7 @@ public class ModelInferOntology extends Ontology implements
 	    // PREDICATE
 	    // Structuring owns
 	    PredicateSchema ps = (PredicateSchema) getSchema(OWNS);
-	    ps.add(OWNS_STUDENT, (ConceptSchema) getSchema(STUDENT));
+	    ps.add(OWNS_STUDENT, (ConceptSchema) getSchema(BasicOntology.AID));
 	    ps.add(OWNS_COGNITIVEMODEL,
 		    (ConceptSchema) getSchema(COGNITIVE_MODEL));
 

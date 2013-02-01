@@ -71,6 +71,10 @@
   <output ID="/home.xhtml" NAME="output" PATH="/home.xhtml"
    TARGET="#xhome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
  </item>
- <item NAME="#xformResponderPerguntas.xhtml"
-  PATH="/formResponderPerguntas.xhtml" SHAPE="344,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#formResponderPerguntas.xhtml"
+  NAME="#xformResponderPerguntas.xhtml"
+  PATH="/formResponderPerguntas.xhtml" SHAPE="344,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/home.xhtml" NAME="output" PATH="/home.xhtml"
+   TARGET="#xhome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
 </diagram>
