@@ -5,12 +5,22 @@ Object management group.
 \newblock \url{http://www.omg.org/}.
 \newblock Accessed: 05/01/2013.
 
+\bibitem{cockburn01}
+A.~Cockburn.
+\newblock {\em Writing effective use cases}.
+\newblock Agile software development series. Addison-Wesley, 2001.
+
 \bibitem{fowler04}
 Martin Fowler.
 \newblock {\em UML Distilled: A Brief Guide to the Standard Object Modeling
   Language}.
 \newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 3
   edition, 2003.
+
+\bibitem{larman08}
+C.~LARMAN.
+\newblock {\em Utilizando UML e Padr{\~o}es}.
+\newblock Bookman, 3 edition, 2008.
 
 \bibitem{craig08}
 C.~LARMAN.

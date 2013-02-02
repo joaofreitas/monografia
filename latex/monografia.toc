@@ -9,11 +9,12 @@
 \contentsline {section}{\numberline {2.1}Unified Modeling Language}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Diagramas UML}{5}{subsection.2.1.1}
 \contentsline {subsubsection}{Diagrama de Caso de Uso}{5}{section*.8}
-\contentsline {section}{\numberline {2.2}Inform\IeC {\'a}tica na Educa\IeC {\c c}\IeC {\~a}o}{7}{section.2.2}
-\contentsline {section}{\numberline {2.3}Sistemas Multiagentes}{7}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Intelig\IeC {\^e}ncia artificial}{7}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Agente}{7}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Arquitetura de agentes}{10}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Sistemas Multiagentes}{11}{subsection.2.3.4}
-\contentsline {chapter}{\numberline {3}Metodologia de desenvolvimento}{12}{chapter.3}
-\contentsline {chapter}{Refer\^encias}{14}{section*.9}
+\contentsline {subsubsection}{Diagrama de Sequ\IeC {\^e}ncia}{8}{section*.9}
+\contentsline {section}{\numberline {2.2}Inform\IeC {\'a}tica na Educa\IeC {\c c}\IeC {\~a}o}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Sistemas Multiagentes}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Intelig\IeC {\^e}ncia artificial}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Agente}{10}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Arquitetura de agentes}{12}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Sistemas Multiagentes}{13}{subsection.2.3.4}
+\contentsline {chapter}{\numberline {3}Metodologia de desenvolvimento}{15}{chapter.3}
+\contentsline {chapter}{Refer\^encias}{17}{section*.10}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  2 FEB 2013 15:25
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  2 FEB 2013 17:54
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -775,102 +775,96 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 Cap\'{\i }tulo 2.
 [4
 
-] <images/categorias-diagramas.png, id=186, 571.13374pt x 868.24374pt>
+] <images/categorias-diagramas.png, id=195, 571.13374pt x 868.24374pt>
 File: images/categorias-diagramas.png Graphic file (type png)
 
 <use images/categorias-diagramas.png>
 
 LaTeX Warning: Float too large for page by 5.8974pt on input line 34.
 
-
-Package natbib Warning: Citation `larman08' on page 5 undefined on input line 4
-4.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.46 \\O
-        bjetivo
-? 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57 \\r
-        equisitos
-? 
 [5] [6 <./images/categorias-diagramas.png (PNG copy)>]
-<images/agente-basico.png, id=201, 280.04625pt x 177.66376pt>
+<images/exemplo-uml.png, id=215, 701.62125pt x 405.515pt>
+File: images/exemplo-uml.png Graphic file (type png)
+
+<use images/exemplo-uml.png>
+Overfull \hbox (70.97052pt too wide) in paragraph at lines 97--98
+ [][] 
+ []
+
+[7]
+File: images/exemplo-uml.png Graphic file (type png)
+ <use images/exemplo-uml.png>
+Overfull \hbox (70.97052pt too wide) in paragraph at lines 111--112
+ [][] 
+ []
+
+[8 <./images/exemplo-uml.png (PNG copy)>]
+
+LaTeX Warning: Reference `larman08' on page 9 undefined on input line 116.
+
+[9] <images/agente-basico.png, id=237, 280.04625pt x 177.66376pt>
 File: images/agente-basico.png Graphic file (type png)
 
-<use images/agente-basico.png> [7]
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
+<use images/agente-basico.png> [10 <./images/agente-basico.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
 []\T1/cmr/bx/n/12 Tipo de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
 []\T1/cmr/bx/n/12 Medida de
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 110--110
+Underfull \hbox (badness 1466) in paragraph at lines 171--171
 []\T1/cmr/m/n/12 Avarias no veí-
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 110--110
+Underfull \hbox (badness 1735) in paragraph at lines 171--171
 []\T1/cmr/m/n/12 Freio do carro,
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 112--112
+Underfull \hbox (badness 2111) in paragraph at lines 173--173
 \T1/cmr/m/n/12 nente com-pu-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--112
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
 []\T1/cmr/m/n/12 Quantidade de
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 114--114
+Underfull \hbox (badness 1496) in paragraph at lines 175--175
 []\T1/cmr/m/n/12 Saúde do pa-ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 []\T1/cmr/m/n/12 Paciente,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 \T1/cmr/m/n/12 am-bi-ente
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 114--115
+Underfull \hbox (badness 1466) in paragraph at lines 175--176
 \T1/cmr/m/n/12 to-mas do pa-ci-
  []
 
 
-Overfull \hbox (3.09444pt too wide) in paragraph at lines 106--118
+Overfull \hbox (3.09444pt too wide) in paragraph at lines 167--179
 [][]
  []
 
-[8 <./images/agente-basico.png (PNG copy)>] [9] [10])
-(./capitulos/capitulo3.tex [11]
+[11] [12] [13]) (./capitulos/capitulo3.tex [14]
 Cap\'{\i }tulo 3.
-) [12
+) [15
 
-] [13] (./monografia.bbl (./monografia.brf)
+] [16] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -879,12 +873,12 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 7.
 (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 1448) in paragraph at lines 37--37
+Underfull \hbox (badness 1448) in paragraph at lines 47--47
 \T1/cmr/m/n/12 mí-nio de au-di-to-ria go-ver-na-men-tal.  Aces-sado em 18/11/20
 11. Dis-po-ní-vel em
  []
 
-) [14
+) [17
 
 
 ]
@@ -899,13 +893,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7873 strings out of 495041
- 105674 string characters out of 1181897
- 197705 words of memory out of 3000000
- 10792 multiletter control sequences out of 15000+50000
+ 7906 strings out of 495041
+ 106181 string characters out of 1181897
+ 197995 words of memory out of 3000000
+ 10815 multiletter control sequences out of 15000+50000
  18449 words of font info for 46 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  45i,10n,69p,790b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -921,9 +918,9 @@ en/ec/ecrm1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 1728.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.
 600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (24 pages, 250491 bytes).
+Output written on monografia.pdf (27 pages, 282290 bytes).
 PDF statistics:
- 684 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 734 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
