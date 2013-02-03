@@ -100,30 +100,39 @@ A diagramação do caso de uso por UML é uma forma de representação do sistem
 \end{figure}
 
 \subsubsection{Diagrama de Sequência}
-O Diagrama de Sequência é um documento criado que ilustra os eventos do sistema de forma sequencial dentro de um caso de uso, mostrando a interação de atores externos ao sistema e os eventos que eles geram durante essa interação. A UML possui uma notação para o DSS, onde são representados as interações entre os atores e os eventos gerados por eles. 
+O Diagrama de Sequência é um documento criado para ilustrar os eventos descritos em um caso de uso de forma sequencial e temporal, mostrando a interação de atores externos ao sistema e os eventos que eles geram durante essa interação. A UML possui uma notação específica para este diagrama, onde todos os elementos são representados.
 
-Neste diagrama, são representados para cada cenário do caso de uso os eventos que os atores geram, bem como a ordem da sua interação. No diagrama são representados na parte superior (com a mesma notação do diagrama de caso de uso). Abaixo dos atores é representada a linha de tempo, crescendo de cima para baixo. Na linha de tempo, os eventos ocorrem na forma de interação entre os atores e de forma a seguir a mesma ordem os eventos no cenário. Os eventos devem sempre iniciar com um verbo podendo ser seguidos de um substantivo. Eles devem sempre ser expressos em níveis genéricos verbais, nunca detalhando a funcionalidade do sistema.
+Neste diagrama, são representados para cada cenário do caso de uso os eventos que os atores geram, bem como a ordem da sua interação. No diagrama os atores são representados na parte superior (com a mesma notação do diagrama de caso de uso). Abaixo dos atores é apresentada a linha de tempo, crescendo de cima para baixo. 
 
-Durante a interação do ator com o sistema, eventos de sistema são gerados e iniciam toda a execução do cenário do caso de uso, ou operação do sistema. A execução dos eventos ocorre até o último evento gerado na linha do tempo do diagrama. A imagem~\ref{fig:diagrama-sequencia} ilustra a notação de diagramas de sequência com todos os pontos que foram até agora expostos.
+Durante a interação do ator com o sistema, eventos de sistema são gerados e iniciam toda a execução do cenário do caso de uso, ou operação do sistema. A execução dos eventos ocorre até o último evento cronológico na linha do tempo. Os eventos gerados pela interação entre os atores ocorrem na linha do tempo de forma cronológica e ordenada com a mesma ordem dos eventos do cenário do caso de uso.
 
+A nomenclatura dos eventos deve sempre iniciar com um verbo, podendo ser seguida de um substantivo. Além disso, deve-se sempre expressar a nomenclatura em níveis genéricos verbais, nunca detalhando a funcionalidade do sistema.
+
+A imagem~\ref{fig:exemplo-diagrama-sequencia} ilustra a notação de diagramas de sequência com todos os pontos que foram até agora expostos. Nela, é possível identificar a interação entre um ator e uma entidade do sistema. É fácil identificar que os eventos estão ocorrendo de forma ordenada de cima para baixo.
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.75]{images/exemplo-uml.png}
-	\caption{Sugestões de notação de diagrama de sequência proposto por ~\cite{larman08}}
-	\label{fig:diagrama-sequencia}
+	\includegraphics[scale=0.75]{images/exemplo-diagrama-sequencia.png}
+	\caption{Notação de diagrama de sequência, exibindo a comunicação de um ator e uma entidade (sistema)}
+	\label{fig:exemplo-diagrama-sequencia}
 \end{figure}
 
-A importância no desenho de um diagrama de sequência está no fato de saber exatamente os eventos externos gerados pela interação de atores externos, pois assim é possível ter uma análise comportamental do sistema com base nesses eventos. Neste nível de análise, o comportamento do sistema é uma descrição do que um sistema faz, sem explicar como o faz~\ref{larman08}.
+O primeiro evento é iniciado pelo ator, onde o método~\emph(listarProdutos()) da Entidade é invocado. Esse método gera a resposta ~\emph(produtos) para o ator. A interação seguinte acontece dentro de um retângulo, do tipo~\emph{loop} e de nome "Verificar". Esse retângulo permite que o diagrama de sequências represente um loop, onde todos os eventos serão repetidos enquanto a condição de guarda for verdadeira, no caso do exemplo, enquanto retorno for igual a~\emph{true}. O UML permite diversos operadores além do loop, como por exemplo a negação, a assertiva, o~\emph{break}, dentre outros.
 
-O diagrama de sequência necessita estar sempre relacionado com o caso de uso, primeiramente pelo fato de sempre descrever um cenário de caso de uso, mas também pelo fato de o caso de uso conter todos os detalhes do cenário. O diagrama de sequência irá apenas deixar claro a interação entre os atores e os eventos derivados dessa interação.
+Dentro do retângulo, o ator chama o método~\emph(realizarOperacao), enviado o parâmetro~\emph{operação}. A entidade retorna um valor, que será testado na guarda para a continuidade da conversação. Por fim, o ator chama o método~\emph{finalizarAcao} da entidade. Por não haver outra interação em seguida, o cenário é considerado como encerrado. 
+
+A importância do desenho de um diagrama de sequência está no fato de detalhar os eventos do sistema que são gerados pela interação de atores externos, pois assim é possível ter uma análise comportamental do sistema com base nesses eventos. Neste nível de análise, é possível estudar e projetar o comportamento do sistema no nível de projetar o que um sistema faz, porém sem necessariamente explicar como o faz~\ref{larman08}.
+
+O diagrama de sequência geralmente está relacionado com o caso de uso, primeiramente pelo fato de descrever um cenário de caso de uso, mas também pelo fato de o caso de uso conter todos os detalhes do cenário. Ele apenas deixará claro a interação entre os atores e os eventos derivados dessa interação.
 
 \section{Informática na Educação}
 
 \section{Sistemas Multiagentes}
 
+Este capítulo visa introduzir o conceito de sistemas multiagentes (SMA). Para tanto é necessário mostrar conceitos que são base para o entendimento de SMA, iniciando pela apresentanção alguns conceitos a cerca de Inteligencia Artificial (IA). Em seguida o trabalho disserta sobre a teoria relacionada à Agente, bem como suas arquiteturas. Só então são apresentados os conceitos de Sistemas Multiagentes (SMA), comunicação em um ambiente SMA e por fim a teoria sobre ontologias.
+
 \subsection{Inteligência artificial}
 
-Antes de explicarmos o conceito de sistemas multiagentes (SMA), é necessário mostrar conceitos que são base para o entendimento de SMA. Inicia-se apresentando alguns conceitos de Inteligencia Artificial (IA). De acordo com~\cite{poole98} identificamos que a definição de IA pode variar em duas dimensões principais. Usando a definição de sistemas computacionais que agem racionalmente temos:
+De acordo com~\cite{poole98} identificamos que a definição de IA pode variar em duas dimensões principais. Usando a definição de sistemas computacionais que agem racionalmente temos:
 
 \begin{quote}
 \emph{Computational Intelligence is the study of the design of intelligent agents.}

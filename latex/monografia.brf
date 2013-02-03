@@ -1,6 +1,5 @@
 \backcite {fowler04}{{vi}{(document)}{Doc-Start}}
 \backcite {larman08}{{vi}{(document)}{Doc-Start}}
-\backcite {larman08}{{vi}{(document)}{Doc-Start}}
 \backcite {fowler04}{{4}{2.1}{section.2.1}}
 \backcite {omg20}{{4}{2.1}{section.2.1}}
 \backcite {fowler04}{{4}{2.1}{section.2.1}}
@@ -12,11 +11,10 @@
 \backcite {larman08}{{7}{2.1.1}{section*.8}}
 \backcite {cockburn01}{{7}{2.1.1}{section*.8}}
 \backcite {larman08}{{8}{2.2}{figure.2.2}}
-\backcite {larman08}{{9}{2.3}{figure.2.3}}
-\backcite {poole98}{{9}{2.3.1}{subsection.2.3.1}}
+\backcite {poole98}{{10}{2.3.1}{subsection.2.3.1}}
 \backcite {novig95}{{10}{2.3.2}{subsection.2.3.2}}
 \backcite {wooldridge04}{{11}{2.3.2}{figure.2.4}}
 \backcite {wooldridge04}{{12}{2.3.2}{table.2.2}}
-\backcite {novig95}{{12}{2.3.3}{subsection.2.3.3}}
+\backcite {novig95}{{13}{2.3.3}{subsection.2.3.3}}
 \backcite {sarmento11}{{14}{2.3.4}{subsection.2.3.4}}
 \backcite {craig08}{{15}{3}{chapter.3}}
