@@ -13,7 +13,7 @@
 \contentsline {section}{\numberline {2.2}Inform\IeC {\'a}tica na Educa\IeC {\c c}\IeC {\~a}o}{10}{section.2.2}
 \contentsline {section}{\numberline {2.3}Sistemas Multiagentes}{10}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Intelig\IeC {\^e}ncia artificial}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Agente}{10}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Agente}{11}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Arquitetura de agentes}{13}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Sistemas Multiagentes}{14}{subsection.2.3.4}
 \contentsline {chapter}{\numberline {3}Metodologia de desenvolvimento}{15}{chapter.3}

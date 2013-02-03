@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  2 FEB 2013 23:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  3 FEB 2013 00:17
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -803,67 +803,66 @@ Overfull \hbox (41.61093pt too wide) in paragraph at lines 114--115
 
 LaTeX Warning: Reference `larman08' on page 9 undefined on input line 123.
 
-[9 <./images/exemplo-diagrama-sequencia.png>]
-<images/agente-basico.png, id=238, 280.04625pt x 177.66376pt>
+[9 <./images/exemplo-diagrama-sequencia.png>] [10]
+<images/agente-basico.png, id=244, 280.04625pt x 177.66376pt>
 File: images/agente-basico.png Graphic file (type png)
 
-<use images/agente-basico.png> [10]
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
+<use images/agente-basico.png> [11 <./images/agente-basico.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
 []\T1/cmr/bx/n/12 Tipo de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
 []\T1/cmr/bx/n/12 Medida de
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 178--178
+Underfull \hbox (badness 1466) in paragraph at lines 182--182
 []\T1/cmr/m/n/12 Avarias no veí-
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 178--178
+Underfull \hbox (badness 1735) in paragraph at lines 182--182
 []\T1/cmr/m/n/12 Freio do carro,
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 180--180
+Underfull \hbox (badness 2111) in paragraph at lines 184--184
 \T1/cmr/m/n/12 nente com-pu-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--180
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
 []\T1/cmr/m/n/12 Quantidade de
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 182--182
+Underfull \hbox (badness 1496) in paragraph at lines 186--186
 []\T1/cmr/m/n/12 Saúde do pa-ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--182
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
 []\T1/cmr/m/n/12 Paciente,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--182
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
 \T1/cmr/m/n/12 am-bi-ente
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 182--183
+Underfull \hbox (badness 1466) in paragraph at lines 186--187
 \T1/cmr/m/n/12 to-mas do pa-ci-
  []
 
 
-Overfull \hbox (3.09444pt too wide) in paragraph at lines 174--186
+Overfull \hbox (3.09444pt too wide) in paragraph at lines 178--190
 [][]
  []
 
-[11 <./images/agente-basico.png (PNG copy)>] [12] [13])
-(./capitulos/capitulo3.tex [14]
+[12] [13]) (./capitulos/capitulo3.tex [14]
 Cap\'{\i }tulo 3.
 ) [15
 
@@ -908,7 +907,7 @@ Here is how much of TeX's memory you used:
  10821 multiletter control sequences out of 15000+50000
  18449 words of font info for 46 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,10n,69p,790b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,10n,69p,802b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/joaofreitas/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/joaofreitas/.texmf-v
 ar/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/joaofreitas/.texmf-var/fo
@@ -921,7 +920,7 @@ en/ec/ecrm1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 1728.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.
 600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (27 pages, 307630 bytes).
+Output written on monografia.pdf (27 pages, 308269 bytes).
 PDF statistics:
  738 PDF objects out of 1000 (max. 8388607)
  69 named destinations out of 1000 (max. 500000)
