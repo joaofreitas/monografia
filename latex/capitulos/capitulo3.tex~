@@ -12,6 +12,6 @@ Em seguida se dá o desenvolvimento de um modelo probabilístico de estados com 
 
 O próximo passo é a implementação do modelo através do sistema de checagem de modelo~\emph{PRISM}. Em seguida a modelagem para análise formal utilizando pctl (~\emph{probabilistic computational tree logic}). Com todos essas análises e modelagens, será possível enfim realizar uma análise de sensibilidade mais detalhada sobre o componente do JAMA em questão.
 
-Após a análise, caso seja necessário, serão propostas melhorias visando diminuir o grau de dependência de alguns componentes com o módulo avaliado. Essa melhoria pode ser no nível de estudos ou mesmo uma implementação em nível de código.
+Após a análise, caso seja necessário, serão propostas melhorias visando diminuir o grau de dependência de alguns componentes com o módulo avaliado. A hipótese a ser considerada é que o JAMA possuirá um baixo nível de sensibilidade de componentes do sistema. Essa melhoria pode ser no nível de estudos ou mesmo uma implementação em nível de código.
 
 Por fim, essa solução deverá ser testada e avaliada afim de garantir a sua melhoria em relação à versão anterior da plataforma antes de ser realiazado esse estudo.

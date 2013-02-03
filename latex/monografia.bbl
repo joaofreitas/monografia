@@ -1,4 +1,10 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{kse}
+The knowledge sharing effort.
+\newblock
+  \url{http://www-ksl.stanford.edu/knowledge-sharing/papers/kse-overview.html}.
+\newblock Accessed: 01/02/2013.
 
 \bibitem{omg20}
 Object management group.
@@ -17,20 +23,26 @@ Martin Fowler.
 \newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 3
   edition, 2003.
 
+\bibitem{kifmanual}
+Michael Genesereth, Richard~E. Fikes, Ronald Brachman, Thomas Gruber, Patrick
+  Hayes, Reed Letsinger, Vladimir Lifschitz, Robert Macgregor, John Mccarthy,
+  Peter Norvig, and Ramesh Patil.
+\newblock Knowledge interchange format version 3.0 reference manual, 1992.
+
 \bibitem{larman08}
 C.~LARMAN.
 \newblock {\em Utilizando UML e Padr{\~o}es}.
 \newblock Bookman, 3 edition, 2008.
 
-\bibitem{craig08}
-C.~LARMAN.
-\newblock {\em Utilizando UML e Padr{\~o}es}.
-\newblock BOOKMAN COMPANHIA ED, 2008.
-
 \bibitem{poole98}
 David Poole, Alan Mackworth, and Randy Goebel.
 \newblock {\em Computational Intelligence: A Logical Approach}.
 \newblock Oxford University Press, 1998.
+
+\bibitem{preece1997}
+A.~Preece.
+\newblock Knowledge query and manipulation language: A review.
+\newblock {\em University of Aberdeen, Aberdeen, Tech. Rep}, 1997.
 
 \bibitem{novig95}
 Stuart Russel and Peter Novig.
