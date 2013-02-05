@@ -222,13 +222,11 @@ A arquitetura reflexiva baseada em modelos funciona de maneira similar a anterio
 
 Na arquitetura reflexiva baseada em objetivo, as ações do agente são tomadas apenas se o aproximam de alcançar um objetivo. Para isso, será necessário algo além do estado atual do ambiente: Será necessário informações do objetivo a ser atingido. Assim o agente pode combinar as informações do estado e o objetivo para determinar se deve ou não agir sobre o ambiente. Essa arquitetura porém é obviamente mais complexa e de certa forma ineficiente. Porém ela permite uma maior flexibilização das ações em determinados ambientes, visto que suas decisões são representadas de forma explícita e podem ser modificadas. É interessante notar que esse tipo de arquitetura não trata ações com objetivos conflitantes.
 
-E por fim, a arquitetura reflexiva baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, baratas, rápidas do que as outras. A capacidade de avaliação do agente chama-se função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
+E por fim, a arquitetura reflexiva baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, resilientes e rápidas do que as outras. A capacidade de avaliação do agente é chamada de função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
 
 \subsection{Sistemas Multiagentes}
 
-Sistemas multiagentes são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. O agente deve ser conhecimento para realizar uma determinada tarefa e pode ou não cooperar com outros agentes para realizá-la.
-
-Fica claro nessa definição que sistemas multiagentes
+Sistemas multiagentes são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. Um agente possui um objeto que, normalmente, é distinto dos objetivos de outros agentes e pode ou não cooperar com outros agentes para a realização de uma tarefa.
 
 De acordo com~\cite{sarmento11}, podemos encontrar as seguintes características principais de ambientes em SMAs:
 \begin{itemize}
@@ -236,6 +234,35 @@ De acordo com~\cite{sarmento11}, podemos encontrar as seguintes características
 	\item SMAs são tipicamente abertos.
 	\item SMAs contém agentes que são autônomos e individualistas.
 \end{itemize}
+
+É trivial imaginar que um sistema multiagente é designado para a solução de problemas de forma distribuída, onde o problema é distribuído entre os agentes que, juntos, trabalham cooperativamente e concorrentemente para a resolução deste problema.
+
+O termo~\emph{cooperação} é normalmente associado ao mundo de sistemas concorrentes. É importate notar a distinção desses conceitos na literatura de sistemas multiagentes. De acordo com~\cite{wooldridge04}, existem duas principais diferênças dos conceitos entre as duas situações.
+
+A primeira delas é que agentes são designados de forma diferente, com objetivos diferentes. Em um ambiente com vários agentes, eles devem trabalhar estratégicamente para alcançar seus objetos. Conforme dito anteriormente, a possibilidade de agentes não cooperarem é perfeitamente plausível.
+
+A segunda diferença está no ponto onde um agente age de forma autônoma, ou seja, ele toma suas próprias decisões sem interferências de outros agentes, tomando-as em tempo de execução. Logo um ecossistema de agentes deve ser capaz de coordenar dinâmicamente (em tempo de execução) suas ações, cooperando com outros agentes para atingir os objetivos. Em aplicações distribuídas, esses comportamentos já são desenhados durante o planejamento do software.
+
+A forma de agentes resolverem problemas foi baseada na técnica distribuição cooperativa de resolução de problemas -~\emph{cooperative distributed problem solving} (CDPS). De acordo com~\cite{durfee89}, a técnica CDPS consiste de uma rede de baixo acoplamento provida de sofisticados nós resolvedores de problemas que precisam cooperar entre si, pois nenhum deles possui recursos, informações e~\emph{expertise} suficientes para resolver algum problema sozinho. Cada nó possui uma~\emph{expertise} diferente que pode resolver parte do problema.
+
+Inicialmente essa técnica assumiu que os problemas fossem de ordem benevolente. Isso significa que, implicitamente, os agentes compartilham o mesmo objetivo de resolver o problema proposto. Isso implica que todos os agentes ajudarão sempre que possível, mesmo tendo prejuízos na execução da ação, pois o objetivo geral de todos será a resolução do problema maior. Esse cenário é plausível desde que uma organização ou entidade tenha o controle de (ou modele) todos os agentes.
+
+Em um cenário mais realista (e de maior enfoque dos estudos de SMA), agentes podem pertencer à sociedades com interesses próprios, diferentes de outras sociedades. Logo, é possível ocorrer o conflito de interesses neste ambiente, situação que força os agentes a cooperarem com os outros para alcançarem seus objetivos.
+
+O processo CDPS pode ser divido em três etapas:
+\begin{itemize}
+	\item A decomposição do problema.
+	\item Solução do subproblema
+	\item Integração da solução
+\end{itemize}
+
+Na primeira etapa, o problema é quebrado em instâncias menores e dividido entre os agentes. Esses subproblemas podem ser quebrados em diversas subpartes, permitindo uma maior decomposição e consequentemente um maior número de agentes trabalhando na resolução.
+
+Em seguida, os subproblemas são resolvidos pelos agentes. Isso pode significar troca de informações entre os agentes, com os que resolveram as suas instâncias compartilhando informações com outros agentes.
+
+Por fim as soluções dos subproblemas são integradas em uma resolução completa do problema original.
+
+Com uma solução compartilhada de resolução de problemas, a arquitetura de sistemas multiagentes mostra-se bastante robusta neste quesito. É necessário porém saber dos detalhes da comunicação entre os agentes, a forma de envio das mensagens, as suas linguagens, bem como outras particularidades.
 
 \subsection{Comunicação}
 
@@ -253,7 +280,7 @@ De acordo com~\ref{verschueren09}, a teoria dos atos de fala possuem duas caract
 	\item Expressões de todos os tipos podem ser considerados como atos, pois mudam o mundo de alguma forma.
 \end{itemize}
 
-Posteriormente o trabalho de John Searle~\ref{searle69}, relacionado ao de Austin, separa uma ação de um ato entre orador(~\emph{speaker}) e ouvinte(~\emph{hearer}) identifinca propriedades e conduções que um discurso deve conter para realizar ações sucedidas. Além disso, ele classifica alguns atos de discursos em 5 classes:
+Posteriormente o trabalho de John Searle~\cite{searle69}, relacionado ao de Austin, separa uma ação de um ato entre orador(~\emph{speaker}) e ouvinte(~\emph{hearer}) identifinca propriedades e conduções que um discurso deve conter para realizar ações sucedidas. Além disso, ele classifica alguns atos de discursos em 5 classes:
 \begin{itemize}
 	\item Representativas - Representa o ato de um orador representar uma verdade para o ouvinte. Pode ser entendido como uma ação de informar(~\emph{inform}).
 	\item Diretivas - Tentativa do orador de fazer algum ouvinte realizar alguma ação por meio do seu ato.. Pode ser entendido como uma ação de requisição(~\emph{request}).
@@ -266,9 +293,220 @@ A comunicação então baseia-se nos atos de fala para prever a interação com 
 
 Da mesma forma que a teoria dos atos de fala influênciou na arquitetura da comunicação, ela influênciou também nas várias linguagens de comunicação dos agentes. Linguagens foram desenvolvidas para, não apenas representar ações de agentes, mas também para representar o conhecimento entre sistemas autônomos. No início dos anos 90, duas linguagens foram desenvolvidas pelo consórcio~\emph{Knowledge Sharing Effort}, encabeçados pela agência norte americana~\emph{Defense Advanced Research Projects Agency}(DARPA)~\cite{kse}.
 \begin{itemize}
-	\item ~\emph{Knowledge Query and Manipulation Language} (KQML) - Protocolo designado para a comunicação de agentes, em uma arquitetura que esses agentes sejam projetados para resolver problemas da arquitetura cliente-servidor~\cite{preece1997}. Não possui foco com o conteúdo da mensagem.
+	\item ~\emph{Knowledge Query and Manipulation Language} (KQML) - Protocolo designado para a comunicação de agentes, em uma arquitetura que esses agentes sejam projetados para resolver problemas da arquitetura cliente-servidor~\cite{preece1997}. Não existe o foco com o conteúdo da mensagem.
 	\item \emph{Knowledge Interchange Format} (KIF) - Criada para facilitar a troca de conhecimento entre agentes, suas declarações são providas de significados que podem ser compreensíveis a qualquer agente que conheça a estrutura da linguagem. Não possui foco na transmissão da mensagem~\cite{kifmanual}.
 \end{itemize}
+
+\subsubsection{KQML}
+
+A linguagem KQML define um protocolo para comunicação de agentes, onde cada mensagem tem um enunciado performativo (~\emph{performative}), que varia com o seu objetivo, e em seguida os parâmetros da mensagem. O KQML define vários enunciados performativos que distinguem-se pelo objetivo da mensagem, sendo dividas em três categorias: Discursivas, intervenção/mecânica e facilitação e~\emph{networking}. Por exemplo, uma mensagem com o tipo performativo~\emph{ask-one} indica que o agente remetente A deseja saber uma resposta do agente B sobre o conteúdo da mensagem. Em~\cite{preece1997}, é possível verificar que a última versão da linguagem define mais de trinta enunciados performativos.
+
+Os maioria dos parâmetros são opcionais, sendo os mais importantes: \emph{content} e ~\emph{receiver}. A tabela~\ref{parametros_kqml} lista os principais parâmetros em uma mensagem nesta linguagem, bem como seu significado.
+
+\begin{table}
+	\caption{Listagem de atributos de uma mensagem em KQML}
+	\begin{tabular}{|p{3cm} | p{12cm} |}
+		\hline
+		\textbf{Parâmetro}	& \textbf{Significado}	\\
+		\hline
+		\emph{sender}		& Remetente da mensagem. \\
+		\hline
+		\emph{receiver}	& Destinatário da mensagem. \\
+		\hline
+		\emph{reply-with}	& Identifica se o remetente espera uma respota. Em caso positivo, o campo~\emph{in-reply-to} deve ser preenchido com a referência para a resposta. \\
+		\hline
+		\emph{in-reply-to}	& Campo conténdo a referência para a resposta solicitada. \\
+		\hline
+		\emph{language}	& Linguagem em que o campo~\emph{content} está escrito. \\ 
+		\hline
+		\emph{ontology}	& Indica a forma que deve ser interpretada o conteúdo do campo~\emph{content}. \\
+		\hline
+		\emph{content}		& Conteúdo da mensagem. \\
+		\hline
+	\end{tabular}
+	\label{parametros_kqml}
+\end{table}
+O formato da mensagem é completamente compreensível aos humanos. Na mensagem~\ref{code:exemplo-kqml} podemos verificar na primeira linha o enunciado performativo~\emph{ask-one}, onde será uma mensagem de consulta. Nas linhas abaixo, visualizamos todos os parâmetros da mensagem antecedidos por (:). O primeiro parâmetro da mensagem é~\emph{receiver} como controle-estoque, ou seja, esse será o destinatário da mensagem. O segundo parâmetro~\emph{language} tem o valor PROLOG indicando que a sintaxe do conteúdo está escrita em PROLOG. O próximo parâmetro,~\emph{ontology} informa a ontologia que espressa o conteúdo. Por fim, o parâmetro~\emph{content} que indica o conteúdo da mensagem, no caso, uma consulta escrita em PROLOG perguntando pelo preço de um computador.
+
+\begin{lstlisting}[label=code:exemplo-kqml,caption=Exemplo de mensagem em KQML]
+(ask-one
+	:receiver controle-estoque
+	:language PROLOG
+	:ontology PRODUTOS
+	:content  (PRECO COMPUTADOR ?price)
+)
+\end{lstlisting}
+
+Um exemplo de diálogo escrito em KQML pode ser visto na sequência de mensagens~\ref{code:dialogo-kqml}
+
+\begin{lstlisting}[label=code:dialogo-kqml,caption=Exemplo de diálogo em KQML]
+(evaluate
+	:sender A
+	:receiver B
+	:language PROLOG
+	:ontology PRODUTOS
+	:reply-with q1
+	:content  (PRECO COMPUTADOR ?price)
+)
+(reply
+	:sender B
+	:receiver A
+	:language PROLOG
+	:ontology PRODUTOS
+	:in-reply-to q1
+	:content  (=2000.00)
+)
+\end{lstlisting}
+
+A primeira mensagem do diálogo possui o enunciado performativo é~\emph{evaluate}, significando que o emissor A deseja avaliar o conteúdo com B. Nos parâmetros é possível notar que a linguagem da mensagem é PROLOG, utiliza a ontologia PRODUTOS e o conteúdo é uma consulta em prolog. O parâmetro~\emph{reply-with} cria uma referência para a consulta do conteúdo conteúdo.
+
+Na segunda mensagem, o seu enunciado performativo é~\emph{reply}, significando uma mensagem do tipo resposta. O parâmetro~\emph{in-reply-to q1} especifica essa mensagem como resposta à q1, ou seja, à consulta da mensagem anterior. Dessa forma a linguagem consegue distinguir respostas de um mesmo remetente. Os outros parâmetros são o emissor B, destinatário A, linguagem PROLOG e o conteúdo da mensagem, o valor da consulta q1.
+
+De acordo com~\cite{wooldridge04}, a adoção desta linguagem pela comunidade de SMA foi significante, mas sofreu diversas críticas:
+\begin{itemize}
+	\item A fluídez e a não restrição do KQML fez com que diversas implementações extendidas surgissem, impossibilitando a interoperabilidade entre sistemas.
+	\item Mecanismos de transporte do KQML nunca foram bem definidos, causando problemas de diversas implementações destes mecanismos e prejudicando novamente a interoperabilidade.
+	\item A semântica do KQML nunca foi formalmente definida, ocasionando em má interpretações dos enunciados performativos.
+	\item A linguagem não possui enunciados performativos adequados para algumas semânticas. Por exemplo, a inexistência do enunciado~\emph{comissives}.
+\end{itemize}
+
+Dessa forma, novos desenvolvimentos de linguagens fizeram-se necessários.
+
+\subsubsection{KIF}
+A linguagem foi desenvolvida para expressar conhecimento a cerca de um determinado domínio, sendo possível assim a troca de conhecimentos entre agentes. De acordo com~\cite{kifmanual}, a linguagem possui as seguintes características:
+\begin{itemize}
+	\item Tem uma semântica declarativa, sendo possível entender o seu significado sem a necessidade de um interpretador para manipulação das expressões.
+	\item É logicamente compreensível.
+	\item É provida com a capacidade de reproduzir meta-conhecimento, ou seja, conhecimento a respeito da representação do conhecimento. Com isso, é possível reproduzir novas representações de conhecimento sem a necessidade de modificar a linguagem.
+\end{itemize}
+
+A linguagem é baseada na lógica de primeira ordem onde são definidos operadores como existe($\exists$) e para todo($\forall$),possibilitando aos agentes a expressão de diversas propriedades, domínios, dentre outros. Além disso, ela define um vocabulário básico para a expressão de tipos básicos (números, caracteres, strings) e algumas funções padrões para lidar com esses tipos de dados (menor que, maior que, soma, dentre outros). 
+
+O trecho de código~\ref{code:exemplo-kif} ilustra um exemplo de expressão na linguagem KIF, validando que a temperatura de m1 é 83 graus Célsius.
+
+\begin{lstlisting}[label=code:exemplo-kif,caption=Exemplo de expressão de conteúdo com a linguagem KIF. Fonte:~\cite{wooldridge04}]
+(= (temperature ml ) ( scalar 83 Celsius))
+\end{lstlisting}
+
+\subsection{Linguagem de Comunicação de Agentes FIPA}
+
+Após as críticas à linguagem KQML, o consórcio~\emph{Foundation for Intelligent Physical Agents} (FIPA) começou a trabalhar em 1995 no desenvolvimento da padronização de SMAs. O núcleo dessa padronização foi o desenvolvimento de uma linguagem de comunicação de agentes (ACL) padronizada para todas as plataformas.
+
+Baseado na linguagem KQML, a estrutura das mensagens é a mesma e os seus atributos são semelhantes. A maior diferença entre as duas linguagens são os enunciados performativos. Foram definidos 20 tipos de mensagens performativas, muito semelhante ao KQML, porém definindo formalmente as interpretações dessas mensagens e não definindo nenhuma linguagem para o conteúdo da mensagem.
+
+Devido ao fato da linguagem KQML não ter performativos adequados, a ACL da FIPA recebeu total preocupação na definição formal da semântica da linguagem. A tabela~\ref{table:fipa-cal-spec} contém um breve resumo dos enunciados performativos disponíveis em~\cite{fipa-cal-spec}. É importante notar que a especificação~\cite{fipa-cal-spec} possui toda a descrição formal de cada enunciado performativo aqui descrito.
+
+\begin{table}
+	\caption{Listagem de Enunciados Performativos}
+	\begin{tabular}{|p{3cm} | p{12cm} |}
+		\hline
+		\textbf{Tipo}	& \textbf{Descrição}	\\
+		\hline
+		\emph{Accept Proposal} & Declaração de aceite de proposta feita por um agente.	\\
+		\hline
+		\emph{Agree} & Performativa feita por um agente indicando que aceitou o~\emph{request} feito por outro agente.	\\
+		\hline
+		\emph{Cancel} &	Cancela uma mensagem de~\emph{request}, informando que não irá mais participar daquela conversação.  \\
+		\hline
+		\emph{Call for Proposal} & Performativo que indica o início de uma negociação entre agentes.	\\
+		\hline
+		\emph{Confirm} & A confirmação permite ao emissor da mensagem confirmar a veracidade do conteúdo da mensagem.	\\
+		\hline
+		\emph{Disconfirm} & Similar à confirmação, porém informando ao emissor da não certeza do conteúdo da mensagem.	\\
+		\hline
+		\emph{Failure} & Permite ao agente indicar que a tentativa de executar uma ação falhou.	\\
+		\hline
+		\emph{Inform} & Informa à um destinatário que o conteúdo da mensagem é verdadeiro, implicando que o remetente da mensagem também acredita no seu conteúdo. É uma das mais importantes performativas feitas pela FIPA.	\\
+		\hline
+		\emph{Inform If} & Envia uma mensagem a qual o seu conteúdo pode ser verdadeiro ou falso.	\\
+		\hline
+		\emph{Inform Ref} & Similar ao \emph{Inform If}, com a diferença que ao invés de questionar se é verdadeiro ou falso, ele solicita o valor de uma expressão para o remetente.	\\
+		\hline
+		\emph{Not Understood} & Informa à um agente que não entendeu por que determinada ação deve ser realizada. Usada quando o estado interno do agente não é compatível com a mensagem.	\\
+		\hline
+		\emph{Propagate} & Consiste em propagar o conteúdo da mensagem para um grupo de agentes.	\\
+		\hline
+		\emph{Propose} & Permite um agente realizar uma proposta em uma negociação para outro agente.	\\
+		\hline
+		\emph{Proxy} & Permite ao destinatário da mensagem agir como um~\emph{proxy} para os agentes que estão descritos no conteúdo da mensagem.	\\
+		\hline
+		\emph{Query If} & Permite à um agente consultar um destinatário sobre a validade do conteúdo.	\\
+		\hline
+		\emph{Query Ref} & Similar ao \emph{query-if}, porém o agente remetente irá consultar o valor de uma expressão	\\
+		\hline
+		\emph{Refuse} & Indica que um determinado agente não irá executar uma ação que foi determinada por outro agente.	\\
+		\hline
+		\emph{Reject Proposal} & Permite um agente rejeitar uma proposta feita por outro agente em uma negociação.	\\
+		\hline
+		\emph{Request} & Permite à um agente requisitar que outro agente execute determinada ação.	\\
+		\hline
+		\emph{Request When} & Permite à um agente requisitar que outro agente execute determinada ação quando a proposição (no conteúdo da mensagem) for verdadeira.	\\
+		\hline
+		\emph{Request Whenever} & Similar ao \emph{request-when}, porém o agente nunca irá executar a ação quando a proposição (no conteúdo da mensagem) for verdadeira.	\\
+		\hline
+		\emph{Subscribe} & O conteúdo será uma proposição e o remetente da mensagem será notificado sempre que essa proposição for verdadeira.	\\
+		\hline
+	\end{tabular}
+	\label{table:fipa-cal-spec}
+\end{table}
+
+As performativas~\emph{request} e~\emph{inform} consideradas principais pela especificação da FIPA, pois orientam toda a linguagem de comunicação. Além disso, é possível derivar as outras performativas por meio delas.
+
+
+\subsection{Ontologias}
+
+Ontologia é um ramo da Filosofia que dedica-se a estudar e representar a natureza do ser, existência ou realidade. É um conceito formalização dos conceitos e relacionamentos que podem existir em um determinado universo. Para a Inteligência Artificial, é tudo aquilo que pode ser representado. De acordo com o autor~\cite{novig95}, a representação de conceitos e objetos pode ser entendida como Engenharia Ontológica:
+
+\begin{quote}
+\emph{...concentrating on general concepts-such as Actions, Time, Physical Objects, and Beliefs - that occur in many different domains. Representing these abstract concepts is sometimes called ontological engineering.}
+\end{quote}
+
+A possibilidade de representação de conhecimento por meio de ontologias é bastante vasta. A sua forma de especificação pode ser entendida como uma hierarquia, onde os conhecimentos são organizados na forma de árvore, possibilitando a inserção de novos conhecimento a qualquer momento.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.65]{images/arvore-ontologia.png}
+	\caption{Ontologias superiores do mundo, cada uma indicando um conceito ou especialização do seu superior.}
+	\label{fig:arvore-ontologia}
+\end{figure}
+
+A imagem~\ref{fig:arvore-ontologia} mostra a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
+
+Em um ambiente de Sistemas Multiagentes, além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, dentre outros exemplos. Em outras palavras, dois agentes podem comunicar-se usando a mesma ontologia.
+
+Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A mais comum delas é a~\emph{eXtensible Markup Language} (XML), uma linguagem de marcação que organiza os dados de forma hierarquizada.
+
+O código~\ref{code:exemplo-xml} possui um exemplo de ontologia escrito na linguagem XML que representa o domínio de países. Nele podemos ver a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no trecho~\ref{code:exemplo-xml}, porém sem alteração de semântica.
+
+
+\begin{lstlisting}[language=xml,label=code:exemplo-xml,caption=Exemplo de código XML representando uma ontologia simples de cidades.]
+	<Pais nome="Brasil">
+		<Estado nome="Goias" sigla="GO">
+			<Cidade>
+				<Nome>Goiania</Nome>
+				<Populacao>1.300.000</Populacao>
+			</Cidade>
+			<Cidade>
+				<Nome>Anapolis</Nome>
+				<Populacao>342.347</Populacao>
+			</Cidade>
+			<Cidade>
+				<Nome>Aparecida de Goiania</Nome>
+				<Populacao>474.219</Populacao>
+			</Cidade>
+		</Estado>
+		<Estado nome="Sao Paulo" sigla="SP" >
+			<Cidade>
+				...
+			</Cidade>
+			...
+		</Estado>
+		...
+	<Pais>
+\end{lstlisting}
+
+
+
 
 
 

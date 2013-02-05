@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{fipa-cal-spec}
+Fipa communicative act library specification.
+\newblock \url{http://www.fipa.org/specs/fipa00037/index.html}.
+\newblock Accessed: 01/02/2013.
+
 \bibitem{kse}
 The knowledge sharing effort.
 \newblock
@@ -15,6 +20,12 @@ Object management group.
 A.~Cockburn.
 \newblock {\em Writing effective use cases}.
 \newblock Agile software development series. Addison-Wesley, 2001.
+
+\bibitem{durfee89}
+E.H. Durfee, V.R. Lesser, and D.D. Corkill.
+\newblock Trends in cooperative distributed problem solving.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  1(1):63--83, 1989.
 
 \bibitem{fowler04}
 Martin Fowler.
@@ -49,6 +60,11 @@ Stuart Russel and Peter Novig.
 \newblock {\em Artificial Intelligence {-} A Modern Approach}.
 \newblock Number~1. Pearson Education, Upper Saddle River, New Jersey 07458,
   1995.
+
+\bibitem{searle69}
+J.R. Searle.
+\newblock {\em Speech Acts: An Essay in the Philosophy of Language}.
+\newblock Cam: [Verschiedene Aufl.]. Cambridge University Press, 1969.
 
 \bibitem{sarmento11}
 Carlos Vinícius~Sarmento Silva.

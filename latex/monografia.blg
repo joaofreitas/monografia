@@ -5,47 +5,48 @@ Database file #1: bibliografia.bib
 Warning--I didn't find a database entry for "editalFrank"
 Warning--to sort, need author or key in omg20
 Warning--to sort, need author or key in kse
+Warning--to sort, need author or key in fipa-cal-spec
 Warning--there's a number but no series in novig95
 Warning--there's a number but no series in wooldridge04
-You've used 11 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            558 strings with 5559 characters,
-and the built_in function-call counts, 2731 in all, are:
-= -- 254
-> -- 133
+            574 strings with 5964 characters,
+and the built_in function-call counts, 3472 in all, are:
+= -- 329
+> -- 159
 < -- 2
-+ -- 57
-- -- 44
-* -- 152
-:= -- 477
-add.period$ -- 35
-call.type$ -- 11
-change.case$ -- 51
++ -- 68
+- -- 52
+* -- 195
+:= -- 596
+add.period$ -- 45
+call.type$ -- 14
+change.case$ -- 63
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 109
-empty$ -- 229
-format.name$ -- 44
-if$ -- 572
+cite$ -- 19
+duplicate$ -- 139
+empty$ -- 299
+format.name$ -- 52
+if$ -- 733
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 13
-newline$ -- 57
-num.names$ -- 18
-pop$ -- 84
+int.to.str$ -- 14
+missing$ -- 16
+newline$ -- 72
+num.names$ -- 22
+pop$ -- 104
 preamble$ -- 1
-purify$ -- 44
+purify$ -- 54
 quote$ -- 0
-skip$ -- 64
+skip$ -- 82
 stack$ -- 0
-substring$ -- 57
-swap$ -- 12
+substring$ -- 91
+swap$ -- 15
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
-warning$ -- 4
-while$ -- 18
-width$ -- 13
-write$ -- 116
-(There were 5 warnings)
+type$ -- 42
+warning$ -- 5
+while$ -- 24
+width$ -- 16
+write$ -- 147
+(There were 6 warnings)
