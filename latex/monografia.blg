@@ -8,45 +8,45 @@ Warning--to sort, need author or key in kse
 Warning--to sort, need author or key in fipa-cal-spec
 Warning--there's a number but no series in novig95
 Warning--there's a number but no series in wooldridge04
-You've used 14 entries,
+You've used 16 entries,
             2118 wiz_defined-function locations,
-            574 strings with 5964 characters,
-and the built_in function-call counts, 3472 in all, are:
-= -- 329
-> -- 159
-< -- 2
-+ -- 68
-- -- 52
-* -- 195
-:= -- 596
-add.period$ -- 45
-call.type$ -- 14
-change.case$ -- 63
+            587 strings with 6289 characters,
+and the built_in function-call counts, 4251 in all, are:
+= -- 405
+> -- 200
+< -- 3
++ -- 84
+- -- 66
+* -- 247
+:= -- 720
+add.period$ -- 51
+call.type$ -- 16
+change.case$ -- 75
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 139
-empty$ -- 299
-format.name$ -- 52
-if$ -- 733
+cite$ -- 21
+duplicate$ -- 171
+empty$ -- 354
+format.name$ -- 66
+if$ -- 900
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 16
-newline$ -- 72
-num.names$ -- 22
-pop$ -- 104
+int.to.str$ -- 16
+missing$ -- 19
+newline$ -- 82
+num.names$ -- 26
+pop$ -- 121
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 65
 quote$ -- 0
-skip$ -- 82
+skip$ -- 107
 stack$ -- 0
-substring$ -- 91
-swap$ -- 15
-text.length$ -- 2
+substring$ -- 136
+swap$ -- 26
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 42
+type$ -- 48
 warning$ -- 5
-while$ -- 24
-width$ -- 16
-write$ -- 147
+while$ -- 31
+width$ -- 18
+write$ -- 168
 (There were 6 warnings)

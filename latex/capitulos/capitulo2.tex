@@ -506,6 +506,97 @@ O código~\ref{code:exemplo-xml} possui um exemplo de ontologia escrito na lingu
 \end{lstlisting}
 
 
+\section{Multiagent Systems Engineering - MASE}
+
+Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos. O advento de sistemas multiagentes trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, visto a diferença de abordagem no software.
+
+Pela característica autônoma dos agentes, não é possível compará-los à simples objetos que serão invocados por outros objetos. Não existe interação direta, apenas coordenação de ações via conversação para cada agente atingir suas próprias métas.
+
+O desenvolvimento de uma metodologia para projetar sistemas multiagentes surgiu, chamada~\emph{Multiagent Systems Engineering} (MASE), onde os requisitos e metas do SMA são levantados e a partir de então as tarefas e agentes são projetadas para lhes atender. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura.
+
+\section{Java Agent Development Framework - JADE}
+
+JADE é um~\emph{middleware} desenvolvido em 1988 pela Telecom Italia, posteriormente (2000) tornando-se em um projeto open source. Seu desenvolvimento de baixo acoplamento permite que seja possível integrar várias bibliotecas auxiliares (~\emph{addons}) para facilitar o desenvolvimento de aplicações.
+
+De acordo com~\cite{bellifemine07}, ele foi desenvolvido seguindo todas as especificações da FIPA, o que garante uma intercomunicação com outras plataformas. O JADE foi desenvolvido na linguagem JAVA, possibilitando o uso de diversas bibliotecas e frameworks desenvolvidos na linguagem.
+
+O middleware provê várias funcionalidades básicas que abstraem e simplificam o desenvolvimento de aplicações, com o objetivo do desenvolvedor estar mais preocupado com o comportamento do agente do que com a infra estrutura da plataforma.
+
+O sistema de mensagem no JADE funciona de forma assíncrona. Um agente não precisa estar necessariamente disponível para receber as mensagens, visto que elas são enfileiradas e processadas em ordem. Além disso, não é necessário que um agente tenha uma referência para outro agente a fim de comunicar-se.
+
+A arquitetura de um SMA desenvolvido em JADE funciona de forma semelhante à rede P2P (~\emph{Peer-to-Peer}), onde cada agente possui um nome único na plataforma - Agent ID (AID) - e é livre para entrar e sair a qualquer momento durante a execução. Uma plafatorma JADE possui normalmente os seguintes elementos:
+
+\begin{itemize}
+	\item Agent Management System (AMS) é o agente responsável por supervisionar toda a plataforma e criar um elo entre os agentes. Esse tipo de serviço é chamado de~\emph{white pages} e indexa todos os agentes da plataforma.
+	\item Directory Facilitator (DF) é o agente responsável por registrar todos os serviços e prover a funcionalidade de busca para os agentes. Este tipo de serviço é chamado de~\emph{yellow pages}.
+\end{itemize}
+
+Os agentes executam em threads separadas garantindo o não compartilhamento de recursos para evitar condições de corrida. A plataforma é responsável também por manter o ciclo de vida dos agentes. Durante a criação dos agentes, eles são automaticamente registrados no serviço de~\emph{white pages}
+
+A mobilidade de agentes entre máquinas também é feita de forma transparente pelo JADE. De acordo com~\cite{bellifemine07}, a mobilidade do agente pode transportar o estado do agente (sob certas condições) entre processos e máquinas.
+
+Uma das características mais importantes do~\emph{middleware} é o suporte nativo à ontologias e linguagens de comunicação FIPA. As ontologias podem ser modeladas (expressando ações, conceitos e predicados) de forma simples e clara, além de ser possível restringir as ontologias à determinados agentes que devem a conhecer.
+
+\subsection{Arquitetura}
+
+A imagem~\ref{fig:arquitetura-jade} representa a arquitetura principal do funcionamento do JADE. Nela, é possível observar os principais elementos da arquitetura JADE distribuídos em três máquinas (dois servidores e um~\emph{desktop}). Cada máquina possui um container onde vários agentes residem.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.65]{images/arquitetura-jade.png}
+	\caption{Representação da arquitetura principal do JADE.Fonte ~\cite{bellifemine07}.}
+	\label{fig:arquitetura-jade}
+\end{figure}
+
+O container principal(~\emph{main container}), presente na máquina do centro, possui algumas diferenças entre os outros, chamados de~\emph{Container-1} e~\emph{Container-2}, abringando agentes primordiais na plataforma que atendem às especificações da FIPA (número 23 e 61~\cite{bellifemineGuide02}). O container principal possui o componente~\emph{container table} (CT), que possui as referências para os objetos e os endereços de comunicação dos nós que compõe a plataforma.
+
+Além disso, o container principal possui uma tabela global para descrição de agentes (GADT) que registra todos os agentes da plataforma e o seu endereço. Os outros containeres possuem uma cópia em cache da tabela para, caso a tabela principal seja corrompida, possa ser substituída.
+
+O primeiro deles é o~\emph{Directory Facilitator} (DF), agente responsável por registrar todos os serviços disponíveis na plataforma. O segundo agente é o~\emph{Agent Management System} (AMS) é o agente responsável por supervisionar toda a plataforma, registrando os agentes que estão rodando, bem como o seu estado. 
+
+\subsection{Implementação dos Agentes}
+O JADE define a classe abstrata~\emph{Agent}, que é a base para todos os agentes definidos. O desenvolvedor tem apenas o trabalho de extender esta classe e implementar o comportamento no método~\emph{setup()}. O fato de extender a classe abstrata implica em herdar várias características já definidas pelo JADE (registro, configuração, etc.) e métodos que podem ser chamados para a implementação do comportamento do agente.
+
+Cada agente possui um identificador único (Agent ID - AID) que identifica o agente em toda plataforma. Por padrão, o formato do AID possui primeiramente o nome do agente seguido do caracter '@', por fim o endereço da plataforma onde o agente está. Este AID é atribuído durante o registro do agente no AMS. Neste registro, é possível também registrar os serviços do agente no DF.
+
+Conforme dito anteriormente, o método~\emph{setup()} deverá ser implementado e, no mínimo, deverá ser estabelecido um comportamento para o agente. Este comportamento diz respeito à ação que será realizada pelo agente durante a ocorrência de um evento. O registro/cancelamento dos comportamentos é feito pelos métodos exibidos no trecho~\ref{code:exemplo-register}.
+
+\begin{lstlisting}[language=java,label=code:exemplo-register,caption=Exemplo de registro de comportamento nos agentes.]
+	void addBehaviour( Comportamento )
+	void removeBehaviour( Comportamento )
+	void addSubBehaviour( Comportamento )
+	void removeSubBehaviour( Comportamento )
+\end{lstlisting}
+
+Os comportamentos são separados em primitivos e compostos. A diferença entre ambos é a possibilidade dos comportamentos compostos poderem agregar vários outros comportamentos simples ou compostos, sendo eles:~\emph{ParallelBehaviour, SequentialBehaviour}. De maneira distinta, os comportamentos primitivos tem relação direta com o tempo, acontecendo durante um período de espera ou após o envio de uma mensagem. São eles:~\emph{SimpleBehaviour, CyclicBehaviour, TickerBehaviour, OneShotBehaviour, WakerBehaviour} e~\emph{ReceiverBehaviour}.
+
+\subsection{Ciclo de Vida dos Agentes}
+O JADE implementa o ciclo de vida especificado pela FIPA, podendo variar entre vários agentes de forma simples. Os seguintes estados são possíveis na plataforma:
+
+\begin{itemize}
+	\item INITIATED - Após a criação do objeto, antes do registro do objeto no AMS, o agente assume o estado de iniciado. Este estado significa que o agente ainda não está disponível para a execução de ações na  plataforma.
+	\item ACTIVE - Neste estado o agente é registrado no AMS, possuindo assim o AID e o endereço. Ele está pronto para a execução do trabalho na plataforma.
+	\item SUSPENDED - O agente está com as atividades suspensas e está em modo ocioso.
+	\item WAITING - O agente está bloqueado esperando algum evento acontecer para executar alguma ação. Tipicamente, este estado é usado para fazer o agente esperar por alguma mensagem.
+	\item DELETED - O agente está destruído e sua thread de execução é terminada. O seu registro será removido do AMS e a sua referência removida da JVM.
+	\item TRANSIT - O agente está movendo-se de uma plataforma para uma nova localização. Mesmo em transito, é possível enviar mensagens para este agente, visto que serão empilhadas na sua fila de mensagens e posteriormente processadas quando ele assumir o estado ACTIVE.
+\end{itemize}
+
+Para cada uma das transições de estados existem métodos que são invocados em um momento anterior. Eles são úteis para a execução de ações que antecedem a mudança de estado. Por exemplo: Durante a mudança do estado ACTIVE para DELETE, o método~\emph{doDelete()} é encarregado de implementar ações que antecedam o fim do agente, como que o agente desfaça o registro dos seus serviços no DF.
+
+\subsection{Interface Gráfica}
+O JADE permite o desenvolvimento de agentes com suporte à interface gráfica. Dessa forma, é possível desenvolver uma interação simples do agente com o ser humano.
+
+
+Por padrão, o JADE utiliza diversos agentes que utilizam-se de interfaces gráficas para a comunicação dos humanos que, dentre outras funcionalidades, permitem o envio de dados, controle do agente e testes da plataforma. Ferramentas como gerência dos~\emph{containers}, visualização do DF, criação de mensagens a partir de agentes falsos (~\emph{sniffers}), dentre outros são disponibilizados nativamente para o desenvolvedor.
+
+A imagem~\ref{fig:tela-jade} apresenta o exemplo básico do agente RMA, onde é apresentado sua interface gráfica com a arquitetura e tempo real.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.65]{images/tela-jade.png}
+	\caption{Apresentação da Interface}
+	\label{fig:tela-jade}
+\end{figure}
 
 
 
@@ -521,3 +612,12 @@ O código~\ref{code:exemplo-xml} possui um exemplo de ontologia escrito na lingu
 
 
 
+
+
+
+
+
+
+
+
+S

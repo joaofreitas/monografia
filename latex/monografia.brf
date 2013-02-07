@@ -1,5 +1,6 @@
 \backcite {fowler04}{{vi}{(document)}{Doc-Start}}
 \backcite {larman08}{{vi}{(document)}{Doc-Start}}
+\backcite {bellifemine07}{{vi}{(document)}{Doc-Start}}
 \backcite {fowler04}{{4}{2.1}{section.2.1}}
 \backcite {omg20}{{4}{2.1}{section.2.1}}
 \backcite {fowler04}{{4}{2.1}{section.2.1}}
@@ -31,4 +32,8 @@
 \backcite {fipa-cal-spec}{{20}{2.3.6}{subsection.2.3.6}}
 \backcite {fipa-cal-spec}{{20}{2.3.6}{subsection.2.3.6}}
 \backcite {novig95}{{20}{2.3.7}{subsection.2.3.7}}
-\backcite {larman08}{{24}{3}{chapter.3}}
+\backcite {bellifemine07}{{23}{2.5}{section.2.5}}
+\backcite {bellifemine07}{{24}{2.6}{figure.2.6}}
+\backcite {bellifemine07}{{24}{2.5}{section.2.5}}
+\backcite {bellifemineGuide02}{{24}{2.5.1}{figure.2.6}}
+\backcite {larman08}{{28}{3}{chapter.3}}

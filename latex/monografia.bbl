@@ -16,6 +16,17 @@ Object management group.
 \newblock \url{http://www.omg.org/}.
 \newblock Accessed: 05/01/2013.
 
+\bibitem{bellifemineGuide02}
+F.~Bellifemine, G.~Caire, T.~Trucco, and G.~Rimassa.
+\newblock Jade programmer’s guide.
+\newblock {\em university of Parma}, pages 200--2003, 2002.
+
+\bibitem{bellifemine07}
+Fabio~L. Bellifemine, Giovanni Caire, and Dominic Greenwood.
+\newblock {\em {Developing Multi-Agent Systems with JADE (Wiley Series in Agent
+  Technology)}}.
+\newblock Wiley, April 2007.
+
 \bibitem{cockburn01}
 A.~Cockburn.
 \newblock {\em Writing effective use cases}.

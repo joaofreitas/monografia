@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  4 FEB 2013 22:10
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  7 FEB 2013 00:39
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -846,7 +846,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 70.
 
-<positivo_cor.pdf, id=91, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=115, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 \len@lskipoffset=\skip54
@@ -942,7 +942,7 @@ e 26.
 Cap\'{\i }tulo 2.
 [4
 
-] <images/categorias-diagramas.png, id=217, 571.13374pt x 868.24374pt>
+] <images/categorias-diagramas.png, id=253, 571.13374pt x 868.24374pt>
 File: images/categorias-diagramas.png Graphic file (type png)
 
 <use images/categorias-diagramas.png>
@@ -950,7 +950,7 @@ File: images/categorias-diagramas.png Graphic file (type png)
 LaTeX Warning: Float too large for page by 5.8974pt on input line 34.
 
 [5] [6 <./images/categorias-diagramas.png (PNG copy)>]
-<images/exemplo-uml.png, id=237, 701.62125pt x 405.515pt>
+<images/exemplo-uml.png, id=273, 701.62125pt x 405.515pt>
 File: images/exemplo-uml.png Graphic file (type png)
 
 <use images/exemplo-uml.png>
@@ -958,7 +958,7 @@ Overfull \hbox (70.97052pt too wide) in paragraph at lines 97--98
  [][] 
  []
 
-[7] <images/exemplo-diagrama-sequencia.png, id=244, 662.475pt x 515.67656pt>
+[7] <images/exemplo-diagrama-sequencia.png, id=280, 662.475pt x 515.67656pt>
 File: images/exemplo-diagrama-sequencia.png Graphic file (type png)
 
 <use images/exemplo-diagrama-sequencia.png>
@@ -971,7 +971,7 @@ Overfull \hbox (41.61093pt too wide) in paragraph at lines 114--115
 LaTeX Warning: Reference `larman08' on page 9 undefined on input line 123.
 
 [9 <./images/exemplo-diagrama-sequencia.png>] [10]
-<images/agente-basico.png, id=266, 280.04625pt x 177.66376pt>
+<images/agente-basico.png, id=302, 280.04625pt x 177.66376pt>
 File: images/agente-basico.png Graphic file (type png)
 
 <use images/agente-basico.png> [11 <./images/agente-basico.png (PNG copy)>]
@@ -1044,7 +1044,7 @@ nput line 331.
 
 LaTeX Warning: Float too large for page by 68.91383pt on input line 451.
 
-<images/arvore-ontologia.png, id=368, 701.62125pt x 265.99374pt>
+<images/arvore-ontologia.png, id=404, 701.62125pt x 265.99374pt>
 File: images/arvore-ontologia.png Graphic file (type png)
 
 <use images/arvore-ontologia.png>
@@ -1062,12 +1062,23 @@ Overfull \hbox (2.89798pt too wide) in paragraph at lines 494--495
 [][][][][][][][][][][][][][][][] 
  []
 
-[22 <./images/arvore-ontologia.png (PNG copy)>]) (./capitulos/capitulo3.tex
-[23]
-Cap\'{\i }tulo 3.
-) [24
+[22 <./images/arvore-ontologia.png (PNG copy)>] [23]
+<images/arquitetura-jade.png, id=453, 559.08875pt x 318.18875pt>
+File: images/arquitetura-jade.png Graphic file (type png)
 
-] [25] (./monografia.bbl (./monografia.brf)
+<use images/arquitetura-jade.png> [24 <./images/arquitetura-jade.png (PNG copy)
+>] (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) [25]
+<images/tela-jade.png, id=472, 596.2275pt x 366.36874pt>
+File: images/tela-jade.png Graphic file (type png)
+
+<use images/tela-jade.png>) (./capitulos/capitulo3.tex [26] [27 <./images/tela-
+jade.png (PNG copy)>]
+Cap\'{\i }tulo 3.
+) [28
+
+] [29] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -1087,10 +1098,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
 / / www-[]ksl . stanford . edu /
  []
 
-[26
+[30
 
 
-]) [27]
+]) [31]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1108,10 +1119,10 @@ LaTeX Warning: There were undefined references.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10193 strings out of 495041
- 137331 string characters out of 1181897
- 249696 words of memory out of 3000000
- 13000 multiletter control sequences out of 15000+50000
+ 10311 strings out of 495041
+ 139134 string characters out of 1181897
+ 252300 words of memory out of 3000000
+ 13095 multiletter control sequences out of 15000+50000
  18786 words of font info for 47 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  45i,10n,74p,866b,1226s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1129,9 +1140,9 @@ en/ec/ecbx1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 > </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (37 pages, 402920 bytes).
+Output written on monografia.pdf (41 pages, 466426 bytes).
 PDF statistics:
- 982 PDF objects out of 1000 (max. 8388607)
- 142 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1076 PDF objects out of 1200 (max. 8388607)
+ 161 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 
