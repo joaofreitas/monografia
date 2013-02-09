@@ -507,11 +507,146 @@ O código~\ref{code:exemplo-xml} possui um exemplo de ontologia escrito na lingu
 
 
 \section{Multiagent Systems Engineering - MASE}
+
 Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos. O advento de sistemas multiagentes trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, visto a diferença de abordagem no software.
 
 Pela característica autônoma dos agentes, não é possível compará-los à simples objetos que serão invocados por outros objetos. Não existe interação direta, apenas coordenação de ações via conversação para cada agente atingir suas próprias métas.
 
 O desenvolvimento de uma metodologia para projetar sistemas multiagentes surgiu, chamada~\emph{Multiagent Systems Engineering} (MASE), onde os requisitos e metas do SMA são levantados e a partir de então as tarefas e agentes são projetadas para lhes atender. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura.
+
+De acordo com~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Design.
+
+A primeira fase, chamada de análise, consiste no levantamento e entendimento dos requisitos com o objetivo de um conjunto de regras, as quais são associadas à tarefas que devem ser realizadas para o sistema atingir seus objetivos. No fim dessa fase, alguns artefatos são gerados que nortearão a próxima etapa da metodologia. A fase de análise pode ser dividida nos seguintes três passos:
+
+\begin{itemize}
+	\item Capturar Metas
+	\item Desenvolver Casos de Uso
+	\item Refinar Regras
+\end{itemize}
+
+A fase de design consiste na modelagem do SMA de acordo com as regras levantadas na fase anterior. O objetivo é a definição das conversações que existirão entre os agentes, bem como a arquitetura geral do sistema. Essa fase pode ser divida em quatro passos:
+
+\begin{itemize}
+	\item Criar as Classes dos Agentes
+	\item Construir Conversações
+	\item Montagem dos Agentes
+	\item Design do Sistema
+\end{itemize}
+
+\subsection{Análise}
+
+De acordo com~\cite{scott01}, a fase de análise objetiva o desenvolvimento de um conjunto de regras, que descrevem uma funcionalidade para uma entidade, as quais as atividades descrevem o que deve ser feito para o sistema atingir o seus objetivos.
+
+\subsubsection{Captura de Metas}
+
+O primeiro passo dessa fase, Captura de Metas, consiste na transformação da especificação inicial do sistema em um conjunto estruturado de metas. Entende-se que as~\emph{metas} que o sistema leva em consideração são relacionadas ao sistema (e não ao usuário), visto que são mais estáveis e as metas do sistema devem satisfazer, de forma geral, os objetivos do usuário~\cite{scott01}.
+
+Dividida em dois subpassos, o primeiro deles é a identificação de todas as metas. A partir da documentação inicial do sistema, conténdo os requisito  funcionais, são extraídos os objetivos de cada cenários do sistema. É importante ressaltar que as metas devem descrer de forma geral e sucinta o comportamento do sistema, descrevendo o que ele deve fazer e não como deve ser feito.
+
+O segundo subpasso consiste na estruturação de metas em forma hierarquizada. É necessário separar quais metas são mais abstratas e de que forma elas podem ser agrupadas em forma de hierarquia. Com isso, eliminam-se algumas metas que são repetidas e identificam-se quais metas são atingidas por meio de outras submetas.
+
+\subsubsection{Desenvolver Casos de Uso}
+
+Neste passo o objetivo é entender o comportamento e o fluxo de execução do sistema por meio dos casos de uso, além de haver um entendimento maior sobre como o sistema irá se comunicar. Para tanto, este passo visa o levantamento e criação dos casos de uso do sistema, bem como o diagrama de sequência para detalhar a ordem dos eventos de cada cenário.
+
+Os casos de uso geralmente são levantados a partir dos requisitos iniciais do sistema. Nele, são identificados os participantes (atores) e a sua interação com o sistema, esclarecendo a comunicação de alguns módulos do sistema.
+
+O diagrama de sequência define os eventos que cada interação pode criar, mostrando a ordem de execução destes eventos e a sua comunicação. Esses diagramas são criados para cada caso de uso, podendo haver mais de um para cada caso de uso. O objetivo principal é o levantamento dos eventos e das regras.
+
+\subsubsection{Refinar Regras}
+
+O último passo da fase de análise, o refinamento de regas consiste na associação metas e seus diagramas de sequências às regras e suas respectivas tarefas. De acordo com~\cite{scott01}, a associação de tarefas à regras é a melhor forma de modelagem de Sistemas Multiagentes. 
+
+Em geral, a associação de metas às regras é de um para um, não sendo uma regra necessáriamente. Durante esta etapa, algumas considerações relativas ao desenho do sistema devem ser levadas em consideração. Caso exista alguma alteração (adição de uma nova meta, alteração de caso de uso, dentre outras), a metodologia permite que o analista retorne aos passos anteriores e remodele a solução. Algumas metas podem ser combinadas em apenas uma regra, simplificando o desenho do sistema.
+
+A interface com sistemas externos geralmente é tratada como uma regra diferente, visto que sua complexidade pode variar. O MASE não modela explicitamente um ator humano, pois o considera como um ator externo ao sistema.
+
+Após a associação das regras, elas são estruturas em uma modelagem chamada MASE Role Model, conténdo informações de interações entre as tarefas. A imagem~\ref{fig:examplo-mase-role-model} representa a notação do Mase Role Model utilizada por~\cite{scott01}. Os retângulos são as regras, as elipses são as tarefas e as setas entre as tarefas representam as suas comunicações. Essas comunicações podem ser por meio de mensagens, caso as regras estejam separadas em agentes diferentes.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.65]{images/arvore-ontologia.png}
+	\caption{Representação utilizada no MASE Role Model.}
+	\label{fig:examplo-mase-role-model}
+\end{figure}
+
+Caso as regras compartilhem tarefas será necessário remodelar a composição da regra, visto que o MASE não permite a duplicação de tarefas. 
+
+De forma geral, cada regra possui uma série de tarefas que podem (ou não) executar paralelamente. Cada tarefa possui um comportamento que pode depender de outras regras para o cumprimento de seu objetivo. Preocupando-se com as conversações entre tarefas, o MASE determina neste passo a criação do~\emph{Concurrent Task Diagram}.
+
+O diagrama é representado por meio de autômatos de estados finitos, devido a facilidade de construção e entendimento. A imagem~\ref{fig:examplo-diagrama-tarefas-concorrentes} é uma representação deste diagrama, representando transições de estados. A transição consiste de uma mudança de estado do agente, podendo envolver um processamento ou uma comunicação externa.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.65]{images/arvore-ontologia.png}
+	\caption{Representação utilizada no~\emph{Concurrent Task Diagram}.}
+	\label{fig:examplo-diagrama-tarefas-concorrentes}
+\end{figure}
+
+A mudança de estado do automato é equivalente à mudança de estado do agente. O trecho~\ref{code:sintaxe-concurrent-task} representa a sintaxe da transição de estado no diagrama.
+
+\begin{lstlisting}[label=code:sintaxe-concurrent-task,caption=Sintaxe do Diagrama.]
+	trigger [guard] ^ transmission(s)
+\end{lstlisting}
+
+O~\emph{token} trigger representa um evento que inicia a mudança de estado, geralmente vindo de outra tarefa da mesma regra. O~\emph{token [guard]} é a verificação da validade do código~\emph{guard}, ocorrendo a mudança de estado somente quando a condição for verdadeira. Por fim ocorrem as transmissões, que podem conter o parâmetro~\emph{s}.
+
+Para comunicações externas, dois eventos especiais foram definidos: O evento~\emph{send} indicando o envio de mensagem e o evento~\emph{receive}, indicando o recebimento de mensagem.
+
+A mensagem sempre possui um cabeçalho performativo (definida pela FIPA, representa o objetivo da mensagem) com a seguinte sintaxe:\emph{performative(p1...pn)}, onde~\emph{p1...pn} indicam os parâmetros da mensagem.
+
+Após a definição dos~\emph{Concurrent Tasks Diagrams}, o analista pode combinar tarefas, a fim de diminuir a complexidade do sistema. 
+
+Com isso, o sistema já possui a complexidade das regras determinadas, bem como as tarefas necessárias para atingir seus objetivos.
+
+\subsection{Design}
+
+A fase de design é divida em quatro passos: Criar Classes dos Agentes, Construir Conversações, Montagem dos Agentes e Design do Sistema. O principal objetivo desta fase é projetar os agentes e suas interações de acordo com os insumos construídos na fase anterior.
+
+\subsubsection{Criando as Classes dos Agentes}
+
+Neste passo, os agentes são criados com base nas regras definidas na fase anterior. Para cada agente criado deve existir pelo menos uma regra associada, caso contrário o levantamento de regras mostra-se incompleto. Dessa forma, o MASE garante que todas os objetivos  do sistema são atingidos, já que as regras do sistema estão relacionados com as metas que foram levantadas na etapa anterior.
+
+Ao fim deste passo é necessário a criação de um novo diagrama, o~\emph{Agent Class Diagram}. Nele, as classes dos agentes são associadas com as regras levantadas e as comunicações entre as classes. A imagem~\ref{fig:examplo-agent-class-diagram} possui a notação do diagrama utilizada por~\cite{scott01}.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.65]{images/arvore-ontologia.png}
+	\caption{Representação utilizada no~\emph{Agent Class Diagram}.}
+	\label{fig:examplo-agent-class-diagram}
+\end{figure}
+
+\subsubsection{Construir Conversações}
+
+A próxima etapa da segunda fase diz respeito às conversações que existirão no SMA. Aqui, cada detalhe da conversação entre dois agentes deverá ser planejado para que haja o cumprimento da meta do sistema.
+
+De acordo com~\cite{scott01}, quando um agente recebe uma mensagem, ele compara com as suas conversações ativas. Caso ele encontre alguma, o agente muda o seu estado e realiza as ações relativas para atingir esse estado. Caso contrário, é assumido que o agente emissor deseja iniciar uma nova conversação e o receptor compara com as suas possibidades de tipos de conversação disponíveis para participar.
+
+Neste passo, é criado o~\emph{Communication Diagram}. Nele, as conversações são montadas por meio do mesmo autômato de estados finitos, utilizado na fase análise, passo~\emph{refinar regras}. Os estados do aumtômato são as ações que devem ser realizadas pelo agente. As transições de estado são as conversações que são feitas pelo agente.
+
+O trecho~\ref{sintaxe-conversation} mostra a sintaxe usada na conversação de agentes. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
+
+\begin{lstlisting}[label=code:sintaxe-conversation,caption=Sintaxe da conversação entre dois agentes.]
+	rec-mess(args1) [cond] / action ^ trans-mess(args2)
+\end{lstlisting}
+
+
+A imagem~\ref{fig:examplo-conversation} representa um exemplo da sintaxe do~\emph{Communication Diagram}.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.65]{images/arvore-ontologia.png}
+	\caption{Representação utilizada no~\emph{Communication Diagram}.}
+	\label{fig:examplo-conversation}
+\end{figure}
+
+\subsubsection{Montagem dos Agentes}
+
+
+	\item Design do Sistema
+
+
+
+
 
 \section{Java Agent Development Framework - JADE}
 
@@ -589,7 +724,7 @@ O JADE permite o desenvolvimento de agentes com suporte à interface gráfica. D
 
 Por padrão, o JADE utiliza diversos agentes que utilizam-se de interfaces gráficas para a comunicação dos humanos que, dentre outras funcionalidades, permitem o envio de dados, controle do agente e testes da plataforma. Ferramentas como gerência dos~\emph{containers}, visualização do DF, criação de mensagens a partir de agentes falsos (~\emph{sniffers}), dentre outros são disponibilizados nativamente para o desenvolvedor.
 
-A imagem~\ref{fig:tela-jade} apresenta o exemplo básico do agente RMA, onde é apresentado sua interface gráfica com a arquitetura e tempo real.
+A imagem~\ref{fig:tela-jade} apresenta o exemplo básico do agente RMA, onde é apresentado sua interface gráfica com a arquitetura em tempo real.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.65]{images/tela-jade.png}
@@ -619,4 +754,4 @@ A imagem~\ref{fig:tela-jade} apresenta o exemplo básico do agente RMA, onde é 
 
 
 
-S
+
