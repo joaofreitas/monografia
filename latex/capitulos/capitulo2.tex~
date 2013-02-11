@@ -506,7 +506,7 @@ O código~\ref{code:exemplo-xml} possui um exemplo de ontologia escrito na lingu
 \end{lstlisting}
 
 
-\section{Multiagent Systems Engineering - MASE}
+\section{Multiagent Systems Engineering - MASE}\label{section:mase}
 
 Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos. O advento de sistemas multiagentes trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, visto a diferença de abordagem no software.
 
@@ -542,6 +542,8 @@ De acordo com~\cite{scott01}, a fase de análise objetiva o desenvolvimento de u
 O primeiro passo dessa fase, Captura de Metas, consiste na transformação da especificação inicial do sistema em um conjunto estruturado de metas. Entende-se que as~\emph{metas} que o sistema leva em consideração são relacionadas ao sistema (e não ao usuário), visto que são mais estáveis e as metas do sistema devem satisfazer, de forma geral, os objetivos do usuário~\cite{scott01}.
 
 Dividida em dois subpassos, o primeiro deles é a identificação de todas as metas. A partir da documentação inicial do sistema, conténdo os requisito  funcionais, são extraídos os objetivos de cada cenários do sistema. É importante ressaltar que as metas devem descrer de forma geral e sucinta o comportamento do sistema, descrevendo o que ele deve fazer e não como deve ser feito.
+
+As metas podem ser divididas em 4 tipos, podendo ser classificadas em mais de um: Sumário, particionada, combinada e não funcional. A meta sumário é derivada de outras metas semelhantes para que se generalize em uma meta pai. Meta particionada é a meta que, quando todas suas submetas são atingidas,  a meta passa a ser atingida. Metas combinadas são metas que são agrupadas devido à semelhaça de seus objetivos
 
 O segundo subpasso consiste na estruturação de metas em forma hierarquizada. É necessário separar quais metas são mais abstratas e de que forma elas podem ser agrupadas em forma de hierarquia. Com isso, eliminam-se algumas metas que são repetidas e identificam-se quais metas são atingidas por meio de outras submetas.
 
@@ -623,7 +625,7 @@ De acordo com~\cite{scott01}, quando um agente recebe uma mensagem, ele compara 
 
 Neste passo, é criado o Diagrama de Comunicação. Nele, as conversações são montadas por meio do mesmo autômato de estados finitos, utilizado na fase análise, passo~\emph{refinar regras}. Os estados do aumtômato são as ações que devem ser realizadas pelo agente. As transições de estado são as conversações que são feitas pelo agente.
 
-O trecho~\ref{sintaxe-conversation} mostra a sintaxe usada na conversação de agentes. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
+O trecho~\ref{code:sintaxe-conversation} mostra a sintaxe usada na conversação de agentes. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
 
 \begin{lstlisting}[label=code:sintaxe-conversation,caption=Sintaxe da conversação entre dois agentes.]
 	rec-mess(args1) [cond] / action ^ trans-mess(args2)

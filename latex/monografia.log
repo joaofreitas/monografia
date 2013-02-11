@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  11 FEB 2013 10:25
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  11 FEB 2013 17:17
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -722,33 +722,90 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
-) (./cores.tex)
-Package hyperref Info: Option `colorlinks' set `true' on input line 44.
+)
+(/usr/share/texmf-texlive/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks32
+)
+(/usr/share/texmf-texlive/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count125
+\rotFPtop=\skip51
+\rotFPbot=\skip52
+\rot@float@box=\box32
+\rot@mess@toks=\toks33
+) (./usecases.sty
+(/usr/share/texmf-texlive/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen126
+\lightrulewidth=\dimen127
+\cmidrulewidth=\dimen128
+\belowrulesep=\dimen129
+\belowbottomsep=\dimen130
+\aboverulesep=\dimen131
+\abovetopsep=\dimen132
+\cmidrulesep=\dimen133
+\cmidrulekern=\dimen134
+\defaultaddspace=\dimen135
+\@cmidla=\count126
+\@cmidlb=\count127
+\@aboverulesep=\dimen136
+\@belowrulesep=\dimen137
+\@thisruleclass=\count128
+\@lastruleclass=\count129
+\@thisrulewidth=\dimen138
+)
+(/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen139
+)
+(/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count130
+\LTcapwidth=\dimen140
+\LT@head=\box33
+\LT@firsthead=\box34
+\LT@foot=\box35
+\LT@lastfoot=\box36
+\LT@cols=\count131
+\LT@rows=\count132
+\c@LT@tables=\count133
+\c@LT@chunks=\count134
+\LT@p@ftn=\toks34
+)) (./cores.tex)
+Package hyperref Info: Option `colorlinks' set `true' on input line 46.
 
 (./monografia.aux)
 \openout1 = `monografia.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 99.
  (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 69.
-Package hyperref Info: Link coloring ON on input line 69.
+LaTeX Font Info:    ... okay on input line 99.
+Package hyperref Info: Link coloring ON on input line 99.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -756,29 +813,29 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count125
+\c@section@level=\count135
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \ref on input line 99.
+LaTeX Info: Redefining \pageref on input line 99.
  (./monografia.out)
 (./monografia.out)
 \@outlinefile=\write3
 \openout3 = `monografia.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 69.
-\AtBeginShipoutBox=\box32
+Package backref Info: ** backref set up for natbib ** on input line 99.
+\AtBeginShipoutBox=\box37
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count126
-\scratchdimen=\dimen126
-\scratchbox=\box33
-\nofMPsegments=\count127
-\nofMParguments=\count128
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count129
-\MPscratchDim=\dimen127
-\MPnumerator=\count130
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count136
+\scratchdimen=\dimen141
+\scratchbox=\box38
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen142
+\MPnumerator=\count140
+\everyMPtoPDFconversion=\toks36
 )
 *geometry auto-detecting driver*
 *geometry detected driver: pdftex*
@@ -827,66 +884,66 @@ Package: hypernat 2001/07/09 v1.0b hyperref and natbib compatibility (jb)
 (/usr/share/texmf-texlive/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2008/09/08 v1.10 Adjusting anchors of captions (HO)
 )
-\c@lstlisting=\count131
-\len@brasiliaw=\skip51
-\len@uadesch=\skip52
-\len@uacaph=\skip53
-LaTeX Font Info:    Try loading font information for T1+ua1 on input line 70.
-LaTeX Font Info:    No file T1ua1.fd. on input line 70.
+\c@lstlisting=\count141
+\len@brasiliaw=\skip57
+\len@uadesch=\skip58
+\len@uacaph=\skip59
+LaTeX Font Info:    Try loading font information for T1+ua1 on input line 100.
+LaTeX Font Info:    No file T1ua1.fd. on input line 100.
 
 
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 70.
+(Font)              using `T1/cmr/m/n' instead on input line 100.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 70.
+(Font)              size <20.74> substituted on input line 100.
 
 
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 70.
+(Font)              size <20.74> substituted on input line 100.
 
-<positivo_cor.pdf, id=127, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=139, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
-\len@lskipoffset=\skip54
-\len@lskipoffset=\skip55
+\len@lskipoffset=\skip60
+\len@lskipoffset=\skip61
 
 [1
 
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./positivo_cor.pdf>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 70.
+LaTeX Font Info:    Try loading font information for U+msa on input line 100.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 70.
+LaTeX Font Info:    Try loading font information for U+msb on input line 100.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-\@tempa=\count132
+\@tempa=\count142
  [2
 
 ]
-\len@brasiliaw=\skip56
-\len@uadesch=\skip57
-\len@uacaph=\skip58
+\len@brasiliaw=\skip62
+\len@uadesch=\skip63
+\len@uacaph=\skip64
 File: positivo_cor.pdf Graphic file (type pdf)
 
 <use positivo_cor.pdf>
-\len@lskipoffset=\skip59
-\len@lskipoffset=\skip60
+\len@lskipoffset=\skip65
+\len@lskipoffset=\skip66
  [3
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77   \begin{agradecimentos}
-                              [1
+l.107   \begin{agradecimentos}
+                               [1
 
 
 
@@ -894,16 +951,16 @@ l.77   \begin{agradecimentos}
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.81   \begin{resumo}
-                      [2
+l.111   \begin{resumo}
+                       [2
 
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.86   \begin{abstract}
-                        [3
+l.116   \begin{abstract}
+                         [3
 
 
 ] [4
@@ -937,7 +994,7 @@ Cap\'{\i }tulo 1.
 Cap\'{\i }tulo 2.
 [4
 
-] <images/categorias-diagramas.png, id=286, 571.13374pt x 868.24374pt>
+] <images/categorias-diagramas.png, id=303, 571.13374pt x 868.24374pt>
 File: images/categorias-diagramas.png Graphic file (type png)
 
 <use images/categorias-diagramas.png>
@@ -945,7 +1002,7 @@ File: images/categorias-diagramas.png Graphic file (type png)
 LaTeX Warning: Float too large for page by 5.8974pt on input line 34.
 
 [5] [6 <./images/categorias-diagramas.png (PNG copy)>]
-<images/exemplo-uml.png, id=306, 701.62125pt x 405.515pt>
+<images/exemplo-uml.png, id=323, 701.62125pt x 405.515pt>
 File: images/exemplo-uml.png Graphic file (type png)
 
 <use images/exemplo-uml.png>
@@ -953,7 +1010,7 @@ Overfull \hbox (70.97052pt too wide) in paragraph at lines 97--98
  [][] 
  []
 
-[7] <images/exemplo-diagrama-sequencia.png, id=313, 662.475pt x 515.67656pt>
+[7] <images/exemplo-diagrama-sequencia.png, id=330, 662.475pt x 515.67656pt>
 File: images/exemplo-diagrama-sequencia.png Graphic file (type png)
 
 <use images/exemplo-diagrama-sequencia.png>
@@ -962,7 +1019,7 @@ Overfull \hbox (41.61093pt too wide) in paragraph at lines 114--115
  []
 
 [8 <./images/exemplo-uml.png (PNG copy)>] [9 <./images/exemplo-diagrama-sequenc
-ia.png>] [10] <images/agente-basico.png, id=336, 280.04625pt x 177.66376pt>
+ia.png>] [10] <images/agente-basico.png, id=353, 280.04625pt x 177.66376pt>
 File: images/agente-basico.png Graphic file (type png)
 
 <use images/agente-basico.png> [11 <./images/agente-basico.png (PNG copy)>]
@@ -1027,7 +1084,7 @@ nput line 331.
 
 LaTeX Warning: Float too large for page by 68.91383pt on input line 451.
 
-<images/arvore-ontologia.png, id=442, 701.62125pt x 265.99374pt>
+<images/arvore-ontologia.png, id=459, 701.62125pt x 265.99374pt>
 File: images/arvore-ontologia.png Graphic file (type png)
 
 <use images/arvore-ontologia.png>
@@ -1049,63 +1106,180 @@ Overfull \hbox (2.89798pt too wide) in paragraph at lines 494--495
 File: images/arvore-ontologia.png Graphic file (type png)
 
 <use images/arvore-ontologia.png>
-Overfull \hbox (0.80429pt too wide) in paragraph at lines 568--569
+Overfull \hbox (0.80429pt too wide) in paragraph at lines 570--571
  [][] 
  []
 
 File: images/arvore-ontologia.png Graphic file (type png)
 <use images/arvore-ontologia.png>
-Overfull \hbox (0.80429pt too wide) in paragraph at lines 580--581
+Overfull \hbox (0.80429pt too wide) in paragraph at lines 582--583
  [][] 
  []
 
 [25]
 File: images/arvore-ontologia.png Graphic file (type png)
  <use images/arvore-ontologia.png>
-Overfull \hbox (0.80429pt too wide) in paragraph at lines 613--614
+Overfull \hbox (0.80429pt too wide) in paragraph at lines 615--616
  [][] 
  []
 
 [26]
 File: images/arvore-ontologia.png Graphic file (type png)
  <use images/arvore-ontologia.png>
-Overfull \hbox (0.80429pt too wide) in paragraph at lines 637--638
+Overfull \hbox (0.80429pt too wide) in paragraph at lines 639--640
  [][] 
  []
 
 [27]
 File: images/arvore-ontologia.png Graphic file (type png)
  <use images/arvore-ontologia.png>
-Overfull \hbox (0.80429pt too wide) in paragraph at lines 652--653
+Overfull \hbox (0.80429pt too wide) in paragraph at lines 654--655
  [][] 
  []
 
 File: images/arvore-ontologia.png Graphic file (type png)
 <use images/arvore-ontologia.png>
-Overfull \hbox (0.80429pt too wide) in paragraph at lines 665--666
+Overfull \hbox (0.80429pt too wide) in paragraph at lines 667--668
  [][] 
  []
 
-[28] [29] <images/arquitetura-jade.png, id=543, 559.08875pt x 318.18875pt>
+[28] [29] <images/arquitetura-jade.png, id=560, 559.08875pt x 318.18875pt>
 File: images/arquitetura-jade.png Graphic file (type png)
 
 <use images/arquitetura-jade.png> [30 <./images/arquitetura-jade.png (PNG copy)
 >] (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ) [31]
-<images/tela-jade.png, id=562, 596.2275pt x 366.36874pt>
+<images/tela-jade.png, id=579, 596.2275pt x 366.36874pt>
 File: images/tela-jade.png Graphic file (type png)
 
-<use images/tela-jade.png> [32 <./images/tela-jade.png (PNG copy)>]
-<images/servidor-app-seam.png, id=569, 280.04625pt x 389.455pt>
+<use images/tela-jade.png>
+<images/servidor-app-seam.png, id=582, 280.04625pt x 389.455pt>
 File: images/servidor-app-seam.png Graphic file (type png)
 
-<use images/servidor-app-seam.png>) (./capitulos/capitulo3.tex [33 <./images/se
-rvidor-app-seam.png>]
+<use images/servidor-app-seam.png> [32] [33 <./images/tela-jade.png (PNG copy)>
+ <./images/servidor-app-seam.png>]) (./capitulos/capitulo3.tex [34]
 Cap\'{\i }tulo 3.
-) [34
+[35
 
-] [35] (./monografia.bbl (./monografia.brf)
+] [36] <images/metas-frank.png, id=626, 896.34875pt x 451.6875pt>
+File: images/metas-frank.png Graphic file (type png)
+
+<use images/metas-frank.png>
+Overfull \hbox (44.2969pt too wide) in paragraph at lines 61--62
+ [][] 
+ []
+
+(./capitulos/casos-uso/uc1.tex
+Underfull \vbox (badness 10000) detected at line 32
+ []
+
+[37]) [38] [39 <./images/metas-frank.png (PNG copy)>]
+Overfull \hbox (66.33304pt too wide) in paragraph at lines 84--85
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (16.99466pt too wide) in paragraph at lines 85--86
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (24.043pt too wide) in paragraph at lines 87--88
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (31.09134pt too wide) in paragraph at lines 95--96
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.94632pt too wide) in paragraph at lines 96--97
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.33304pt too wide) in paragraph at lines 97--98
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (45.18802pt too wide) in paragraph at lines 98--99
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (31.09134pt too wide) in paragraph at lines 100--101
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.2847pt too wide) in paragraph at lines 102--103
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.33304pt too wide) in paragraph at lines 109--110
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (16.99466pt too wide) in paragraph at lines 111--112
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.2847pt too wide) in paragraph at lines 115--116
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.33304pt too wide) in paragraph at lines 117--118
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.2847pt too wide) in paragraph at lines 119--120
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.33304pt too wide) in paragraph at lines 121--122
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (24.043pt too wide) in paragraph at lines 122--123
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (45.18802pt too wide) in paragraph at lines 123--124
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.38138pt too wide) in paragraph at lines 125--126
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[40]
+Overfull \hbox (52.23636pt too wide) in paragraph at lines 129--130
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (38.13968pt too wide) in paragraph at lines 130--131
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.2847pt too wide) in paragraph at lines 132--133
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [41] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -1131,10 +1305,10 @@ Underfull \hbox (badness 3219) in paragraph at lines 13--13
 r/m/n/12 .  Aces-sado em 01/02/2013.
  []
 
-[36
+[42
 
 
-]) [37] (./monografia.aux)
+]) [43] (./monografia.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -1145,13 +1319,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10416 strings out of 495041
- 140762 string characters out of 1181897
- 251605 words of memory out of 3000000
- 13166 multiletter control sequences out of 15000+50000
+ 10997 strings out of 495041
+ 147986 string characters out of 1181897
+ 312247 words of memory out of 3000000
+ 13629 multiletter control sequences out of 15000+50000
  18786 words of font info for 47 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,10n,74p,866b,1226s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,10n,74p,866b,1838s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/joaofreitas/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/joaofreitas/.texmf-v
 ar/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/joaofreitas/.texmf-var/fo
@@ -1166,9 +1340,9 @@ en/ec/ecbx1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 > </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (47 pages, 514009 bytes).
+Output written on monografia.pdf (53 pages, 557217 bytes).
 PDF statistics:
- 1200 PDF objects out of 1200 (max. 8388607)
- 194 named destinations out of 1000 (max. 500000)
- 294 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1361 PDF objects out of 1440 (max. 8388607)
+ 285 named destinations out of 1000 (max. 500000)
+ 323 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,12 +6,12 @@ Requisitos funcionais do sistemas para SMA.
 
 1. O sistema deve manter um modelo do estudante, onde será determinado o seu estilo de aprendizagem e será notíficado ao docente.
 2. O sistema deve assistir (auxiliar) o aluno por meio de um grupo de trabalho.
-3. O sistema deve fazer interface com ferramentas de aprendizagem dedicada, a fim de estabelecer comportamentos do estudante.
-4. O sistema deve criar uma modelagem cognitiva do aluno, onde são mantidas informações sobre o desempenho, de acordo sua interação em ferramentas de aprendizagem dedicada, e informações a respeito do seu estilo de aprendizagem.
+3. O sistema deve fazer interface com Ambiente Virtual de Aprendizagem, a fim de estabelecer comportamentos do estudante.
+4. O sistema deve criar uma modelagem cognitiva do aluno, onde são mantidas informações sobre o desempenho, de acordo sua interação em Ambiente Virtual de Aprendizagem, e informações a respeito do seu estilo de aprendizagem.
 5. O sistema deve criar uma modelagem metacognitiva do aluno, onde são armazenadas informações com o intuito de melhorar processos de aprendizagem de domínios específicos.
 6. O sistema deve criar uma modelagem afetiva do estudante, especificamente a respeito da modelagem da personalidade e emoções do estudante.
-7. O sistema deve fazer interface com ferramentas de aprendizagem dedicada.
-8. O sistema deve refutar ou confirmar o estilo de aprendizagem do aluno a partir do desempenho relacionado à interação com o sistema e/ou com ferramentas de aprendizagem dedicada.
+7. O sistema deve fazer interface com Ambiente Virtual de Aprendizagem.
+8. O sistema deve refutar ou confirmar o estilo de aprendizagem do aluno a partir do desempenho relacionado à interação com o sistema e/ou com Ambiente Virtual de Aprendizagem.
 9. O sistema SMA deve atualizar o modelo do estudante com base em inferências a partir dos registros de trabalho do estudante.
 10. O sistema deve construir o modelo do estudante a partir de uma modelagem explícita, ou seja, a partir do feedback explícito do estudante (questionário)
 11. O sistema deve construir o modelo do estudante a partir de uma modelagem implícita, ou seja, a partir do desempenho obtido nas ferramentas de aprendizado. 
@@ -26,7 +26,7 @@ Metas obtidas a partir dos requisitos
 6. Criar modelagem modelagem afetiva
 7. Criar modelagem da personalidade
 8. Criar modelagem das emoções do estudante
-9. Interfacear com ferramentas de aprendizagem dedicada
+9. Interfacear com Ambiente Virtual de Aprendizagem
 10. Confirmar estilo de aprendizagem do aluno
 11. Refutar estilo de aprendizagem do aluno
 12. Construir modelo de desempenho do aluno

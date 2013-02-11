@@ -8,7 +8,6 @@ Capítulo 2 - Fundamentação Teórica
 		* Formas de Uso
 		* Caso de uso
 		* Diagrama de sequência
-		* Modelo Entidade Relacionamento
 	- Informática na Educação
 	- Sistemas Multiagentes (OK)
 		* Introdução
@@ -25,15 +24,24 @@ Capítulo 2 - Fundamentação Teórica
 	- Trabalhos Correlatos
 
 Capítulo 3 - Proposta de Solução
+	- Modelagem
+		- Fase 1
+			- Levantamento dos Requisitos
+			- Capturar Metas
+			- Desenvolver Casos de Uso
+			- Refinar Regras
+		- Fase 2
 	- Arquitetura da solução proposta.
-	- Protótipo desenvolvido.
-	- Ferramentas utilizadas. (Jade - Por que usei Jade)
-	- Documentação do protótipo.
+		- SMA
+		- Web
+		- Integração
+	- Ferramentas utilizadas
+		- Por que usei Jade?
+		- Por que usei Seam?
 
 Capítulo 4 - Estudo de caso
-	- Apresentar resultados da inferência explícita
-	- Apresentar interface com agente Cognitivo
-	- Apresentar interface com docente
+	- Simulação Aluno
+	- Simulação Docente
 
 Capítulo 5
 	- Conclusões
