@@ -1,6 +1,8 @@
 \backcite {fowler04}{{vi}{(document)}{Doc-Start}}
 \backcite {larman08}{{vi}{(document)}{Doc-Start}}
 \backcite {bellifemine07}{{vi}{(document)}{Doc-Start}}
+\backcite {allen09}{{vi}{(document)}{Doc-Start}}
+\backcite {editalFrank}{{2}{1.3}{section.1.3}}
 \backcite {fowler04}{{4}{2.1}{section.2.1}}
 \backcite {omg20}{{4}{2.1}{section.2.1}}
 \backcite {fowler04}{{4}{2.1}{section.2.1}}
@@ -12,6 +14,7 @@
 \backcite {larman08}{{7}{2.1.1}{section*.8}}
 \backcite {cockburn01}{{7}{2.1.1}{section*.8}}
 \backcite {larman08}{{8}{2.2}{figure.2.2}}
+\backcite {larman08}{{10}{2.1.1}{figure.2.3}}
 \backcite {poole98}{{10}{2.3.1}{subsection.2.3.1}}
 \backcite {novig95}{{11}{2.3.2}{subsection.2.3.2}}
 \backcite {wooldridge04}{{11}{2.3.2}{figure.2.4}}
@@ -20,6 +23,8 @@
 \backcite {sarmento11}{{14}{2.3.4}{subsection.2.3.4}}
 \backcite {wooldridge04}{{14}{2.3.4}{subsection.2.3.4}}
 \backcite {durfee89}{{15}{2.3.4}{subsection.2.3.4}}
+\backcite {austin62}{{16}{2.3.5}{subsection.2.3.5}}
+\backcite {verschueren09}{{16}{2.3.5}{subsection.2.3.5}}
 \backcite {searle69}{{16}{2.3.5}{subsection.2.3.5}}
 \backcite {wooldridge04}{{17}{2.3.5}{subsection.2.3.5}}
 \backcite {kse}{{17}{2.3.5}{subsection.2.3.5}}
@@ -43,4 +48,7 @@
 \backcite {bellifemine07}{{29}{2.5}{section.2.5}}
 \backcite {bellifemine07}{{30}{2.12}{figure.2.12}}
 \backcite {bellifemineGuide02}{{30}{2.5.1}{figure.2.12}}
-\backcite {larman08}{{33}{3}{chapter.3}}
+\backcite {allen09}{{33}{2.14}{figure.2.14}}
+\backcite {seamSite}{{33}{2.6}{section.2.6}}
+\backcite {allen09}{{33}{2.6}{figure.2.14}}
+\backcite {larman08}{{34}{3}{chapter.3}}

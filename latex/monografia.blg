@@ -2,51 +2,52 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
-Warning--I didn't find a database entry for "editalFrank"
 Warning--to sort, need author or key in omg20
 Warning--to sort, need author or key in kse
 Warning--to sort, need author or key in fipa-cal-spec
+Warning--to sort, need author or key in seamSite
+Warning--empty note in editalFrank
 Warning--there's a number but no series in novig95
 Warning--there's a number but no series in wooldridge04
-You've used 17 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            595 strings with 6465 characters,
-and the built_in function-call counts, 4615 in all, are:
-= -- 442
-> -- 218
+            619 strings with 7039 characters,
+and the built_in function-call counts, 5659 in all, are:
+= -- 542
+> -- 253
 < -- 3
-+ -- 91
-- -- 72
-* -- 278
-:= -- 781
-add.period$ -- 54
-call.type$ -- 17
-change.case$ -- 81
++ -- 107
+- -- 82
+* -- 323
+:= -- 960
+add.period$ -- 70
+call.type$ -- 22
+change.case$ -- 98
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 182
-empty$ -- 381
-format.name$ -- 72
-if$ -- 973
+cite$ -- 29
+duplicate$ -- 231
+empty$ -- 481
+format.name$ -- 82
+if$ -- 1197
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 20
-newline$ -- 87
-num.names$ -- 28
-pop$ -- 125
+int.to.str$ -- 22
+missing$ -- 26
+newline$ -- 112
+num.names$ -- 36
+pop$ -- 159
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 85
 quote$ -- 0
-skip$ -- 114
+skip$ -- 143
 stack$ -- 0
-substring$ -- 166
-swap$ -- 27
+substring$ -- 192
+swap$ -- 31
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
-warning$ -- 5
-while$ -- 35
-width$ -- 19
-write$ -- 179
-(There were 6 warnings)
+type$ -- 66
+warning$ -- 7
+while$ -- 43
+width$ -- 24
+write$ -- 229
+(There were 7 warnings)

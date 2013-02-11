@@ -3,18 +3,33 @@
 \bibitem{fipa-cal-spec}
 Fipa communicative act library specification.
 \newblock \url{http://www.fipa.org/specs/fipa00037/index.html}.
-\newblock Accessed: 01/02/2013.
+\newblock Acessado em 01/02/2013.
 
 \bibitem{kse}
 The knowledge sharing effort.
 \newblock
   \url{http://www-ksl.stanford.edu/knowledge-sharing/papers/kse-overview.html}.
-\newblock Accessed: 01/02/2013.
+\newblock Acessado em 01/02/2013.
 
 \bibitem{omg20}
 Object management group.
 \newblock \url{http://www.omg.org/}.
-\newblock Accessed: 05/01/2013.
+\newblock Acessado em 05/01/2013.
+
+\bibitem{seamSite}
+The seam framework - next generation enterprise java development.
+\newblock \url{http://www.seamframework.org/}.
+\newblock Acessado em 10/02/2013.
+
+\bibitem{allen09}
+D.~Allen.
+\newblock {\em Seam in action}.
+\newblock Manning, 2009.
+
+\bibitem{austin62}
+John~L. Austin.
+\newblock {\em How to do things with words}.
+\newblock Harvard U.P., Cambridge, Mass., 1962.
 
 \bibitem{bellifemineGuide02}
 F.~Bellifemine, G.~Caire, T.~Trucco, and G.~Rimassa.
@@ -31,6 +46,12 @@ Fabio~L. Bellifemine, Giovanni Caire, and Dominic Greenwood.
 A.~Cockburn.
 \newblock {\em Writing effective use cases}.
 \newblock Agile software development series. Addison-Wesley, 2001.
+
+\bibitem{editalFrank}
+Germana~Menezes da~Nóbrega.
+\newblock Frank: Re-utilização de abordagens e ferramentas da ie em um
+  sistema multi-agente para identificação de estilos de aprendizagem.
+\newblock October 2011.
 
 \bibitem{durfee89}
 E.H. Durfee, V.R. Lesser, and D.D. Corkill.
@@ -89,6 +110,12 @@ Carlos Vinícius~Sarmento Silva.
   governamental.
 \newblock Acessado em 18/11/2011. Disponível em
   http://monografias.cic.unb.br/dspace/handle/123456789/318, Abril 2011.
+
+\bibitem{verschueren09}
+J.~Verschueren and J.O. {\"O}stman.
+\newblock {\em Key Notions for Pragmatics}.
+\newblock Handbook of Pragmatics Highlights. John Benjamins Publishing Company,
+  2009.
 
 \bibitem{wooldridge04}
 Michael Wooldridge.
