@@ -100,7 +100,7 @@ A imagem~\ref{fig:dss-uc1-fluxo-alternativo} representa o fluxo de exceção do 
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.48]{images/dss-uc2-fluxo-principal.png}
+	\includegraphics[scale=0.48]{images/dss-uc1-fluxo-alternativo}
 	\caption{Diagrama de sequência do fluxo de exceção, caso de uso 1.}
 	\label{fig:dss-uc1-fluxo-alternativo}
 \end{figure}
@@ -123,7 +123,7 @@ O diagrama de sequência 4~\ref{fig:dss-uc4-fluxo-principal} funciona similar ao
 	\label{fig:dss-uc4-fluxo-principal}
 \end{figure}
 
-Por fim o último diagrama de sequência~\ref{fig:dss-uc5-fluxo-principal} representa a counicação da regra~\emph{WebServiceInterface} com a regra~\emph{Manager}. A primeira realiza a validação de dados e em seguida o envio de dados. Após receber os dados, a regra~\emph{Manager}
+Por fim o último diagrama de sequência~\ref{fig:dss-uc5-fluxo-principal} representa a counicação da regra~\emph{WebServiceInterface} com a regra~\emph{Manager}. A primeira realiza a validação de dados e em seguida o envio de dados. Após receber os dados, a regra~\emph{Manager} localiza o aluno e continua o fluxo de execução.
 
 \begin{figure}
 	\centering
@@ -132,7 +132,27 @@ Por fim o último diagrama de sequência~\ref{fig:dss-uc5-fluxo-principal} repre
 	\label{fig:dss-uc5-fluxo-principal}
 \end{figure}
 
+Por fim, após o levantamento de todas as regras foi necessário criar tarefas para a criação do~\emph{MASE Role Model}.
 
+
+\begin{table}
+	\caption{Estruturação das Tarefas por Regra}
+	\begin{tabular}{|p{5cm} | p{9cm}|}
+		\hline
+		\textbf{Seção do Caso de Uso}	& \textbf{Significado} \\
+		\hline
+		Nome do Caso de Uso 	& Nome do caso de uso, iniciando-se com um verbo  \\
+		\hline
+	\end{tabular}
+	\label{tabela:topicos_uc}
+\end{table}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/mase-role-model.png}
+	\caption{Diagrama ~\emph{MASE Role Model} gerado para o SMA Frank.}
+	\label{fig:dss-uc5-fluxo-principal}
+\end{figure}
 
 
 

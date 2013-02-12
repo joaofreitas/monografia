@@ -543,7 +543,7 @@ O primeiro passo dessa fase, Captura de Metas, consiste na transformação da es
 
 Dividida em dois subpassos, o primeiro deles é a identificação de todas as metas. A partir da documentação inicial do sistema, conténdo os requisito  funcionais, são extraídos os objetivos de cada cenários do sistema. É importante ressaltar que as metas devem descrer de forma geral e sucinta o comportamento do sistema, descrevendo o que ele deve fazer e não como deve ser feito.
 
-As metas podem ser divididas em 4 tipos, podendo ser classificadas em mais de um: Sumário, particionada, combinada e não funcional. A meta sumário é derivada de outras metas semelhantes para que se generalize em uma meta pai. Meta particionada é a meta que, quando todas suas submetas são atingidas,  a meta passa a ser atingida. Metas combinadas são metas que são agrupadas devido à semelhaça de seus objetivos
+As metas podem ser divididas em 4 tipos, podendo ser classificadas em mais de um: Sumário, particionada, combinada e não funcional. A meta sumário é derivada de outras metas semelhantes para que se generalize em uma meta pai. Meta particionada é a meta que, quando todas suas submetas são atingidas,  a meta passa a ser atingida. Metas combinadas são metas que são agrupadas devido à semelhaça de seus objetivos. As metas não funcionais são relativas à cumprir objetivos que são requisitos não funcionais do sistema.
 
 O segundo subpasso consiste na estruturação de metas em forma hierarquizada. É necessário separar quais metas são mais abstratas e de que forma elas podem ser agrupadas em forma de hierarquia. Com isso, eliminam-se algumas metas que são repetidas e identificam-se quais metas são atingidas por meio de outras submetas.
 
