@@ -40,5 +40,5 @@
 \contentsline {chapter}{\numberline {3}Metodologia de desenvolvimento}{35}{chapter.3}
 \contentsline {section}{\numberline {3.1}A Modelagem}{35}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}An\IeC {\'a}lise}{36}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Design}{41}{subsection.3.1.2}
-\contentsline {chapter}{Refer\^encias}{42}{section*.19}
+\contentsline {subsection}{\numberline {3.1.2}Design}{47}{subsection.3.1.2}
+\contentsline {chapter}{Refer\^encias}{50}{section*.19}

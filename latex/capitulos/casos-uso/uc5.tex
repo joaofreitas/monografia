@@ -1,0 +1,39 @@
+\begin{usecase}
+
+\addtitle{Caso de Uso 5}{Determinar Modelagem Metacognitiva do Aluno} 
+
+\addfield{Escopo:}{Sistema e Ambiente(s) Virtuais(ns) de Aprendizagem(s)}
+\addfield{Nível:}{Objetivo do sistema}
+\addfield{Ator Principal:}{Aluno}
+
+\additemizedfield{Interessados e Interesses:}{
+	\item Sistema: Obter os dados do Aluno após a interação com o Ambiente Virtual de Aprendizagem.
+	\item Ambiente Virtual de Aprendizagem: Comunicar o Sistema sobre os resultados relativos ao desenvolvimento de uma atividade do Aluno.
+}
+
+\addfield{Pré-condições:}{O Aluno deve estar autenticado no Sistema.}
+\addfield{Pós-condições:}{}
+
+\addscenario{Cenário de Sucesso Principal:}{
+	\item O Ambiente Virtual de Aprendizagem registra as ações do Aluno.
+	\item O AVA envia os resultados do aluno via web-service para o Sistema SMA, a partir de uma URL disponível no ambiente. Os dados serão enviados, bem como um token de autenticação que identifica o Aluno e o seu grupo de trabalho no sistema.
+	\item O Sistema SMA recebe os dados enviados pelo Ambiente.
+	\item O Sistema valida os dados.
+	\item Os dados são enviados para o devido grupo de trabalho do Aluno.
+}
+
+\addscenario{Extensões:}{
+	\item Não se aplica.
+}
+
+\addscenario{Requisitos Especiais:}{
+	\item Não se aplica.
+}
+
+\addscenario{Lista de Variantes Tecnologias de Dados:}{
+	\item Não se aplica.
+}
+
+\addfield{Frequência de Ocorrência:}{Sempre}
+
+\end{usecase}

@@ -2,7 +2,7 @@
 CASOS DE USO DAS METAS
 ----------------------------------
 
-* UC 1 - NOTIFICAR DOCENTE
+* UC 2 - NOTIFICAR DOCENTE
 Escopo: Aplicação SMA
 Nível: Objetivo do usuário
 Ator Principal: Docente
@@ -28,7 +28,7 @@ Requisitos Especiais
 	Não se aplica
 	
 ----------------
-title Caso de Uso 1 - Caso de Sucesso
+title Caso de Uso 2 - Caso de Sucesso
 
 Docente->Seam: Requisição de Autenticação
 Seam->Seam: Validação do usuário
@@ -40,7 +40,7 @@ Seam->Seam: Carrega Modelo
 Seam-->Docente: Exibe Modelo
 
 ----------------------------------------------------
-* UC 2 - DETERMINAÇÃO DA MODELAGEM COGNITIVA DO ALUNO
+* UC 1 - DETERMINAÇÃO DA MODELAGEM COGNITIVA DO ALUNO
 Escopo: Aplicação SMA e Ambiente(s) Virtual de Aprendizagem
 Nível: Objetivo do sistema
 Ator Principal: Sistema, Aluno
@@ -80,7 +80,7 @@ Requisitos Especiais
 	Não se aplica
 
 ----------------
-title Caso de Uso 2 - Caso de Sucesso
+title Caso de Uso 1 - Caso de Sucesso
 
 Aluno->Seam: Requisição de Autenticação
 Seam->Seam: Validação
@@ -115,7 +115,7 @@ Seam-->Aluno: Exibe Resultados
 Seam-->Aluno: Exibe Lista de AVA
 
 ----------------
-title Caso de Uso 2.1 - Inferência Implícita
+title Caso de Uso 1.1 - Inferência Implícita
 
 Aluno->Seam: Requisição de Autenticação
 Seam->Seam: Validação

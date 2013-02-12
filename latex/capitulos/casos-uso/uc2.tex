@@ -1,0 +1,44 @@
+\begin{usecase}
+
+\addtitle{Caso de Uso 2}{Notificar Docente} 
+
+\addfield{Escopo:}{Todo o Sistema}
+\addfield{Nível:}{Objetivo do usuário}
+\addfield{Ator Principal:}{Docente}
+
+\additemizedfield{Interessados e Interesses:}{
+	\item Docente: Deseja ser notificado sobre o modelo do estudante.
+}
+
+\addfield{Pré-condições:}{Não se aplica}
+\addfield{Pós-condições:}{O Docente deve visualizar o modelo cognitivo do Aluno}
+
+\addscenario{Cenário de Sucesso Principal:}{
+	\item O Docente faz o login no sistema.
+	\item O Sistema recupera a lista de alunos disponíveis.
+	\item O Sistema exibe a lista de alunos.
+	\item O Docente seleciona o aluno desejado.
+	\item O Sistema requisita o modelo do estudante ao SMA.
+	\item O SMA exibe as informações do modelo
+	\item O Sistema carrega as seguintes informações relativas à modelagem do aluno: Modelagem cognitiva, Modelagem metacognitiva e Modelagem afetiva.
+}
+
+\addscenario{Extensões:}{
+	\item[1.a] Falha no login:
+		\begin{enumerate}
+		\item[1.] O Sistema mostra mensagem de falha.
+		\item[2.] O Docente retorna ao passo 1.
+		\end{enumerate}
+}
+
+\addscenario{Requisitos Especiais:}{
+	\item Não se aplica
+}
+
+\addscenario{Lista de Variantes Tecnologias de Dados:}{
+	\item Não se aplica
+}
+
+\addfield{Frequência de Ocorrência:}{Sempre}
+
+\end{usecase}

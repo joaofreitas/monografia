@@ -1,0 +1,47 @@
+\begin{usecase}
+
+\addtitle{Caso de Uso 3}{Determinar Modelagem Afetiva do Aluno} 
+
+\addfield{Escopo:}{Sistema e Ambiente(s) Virtuais(ns) de Aprendizagem(s)}
+\addfield{Nível:}{Objetivo do sistema}
+\addfield{Ator Principal:}{Sistema}
+
+\additemizedfield{Interessados e Interesses:}{
+	\item Sistema: Criar e manter um modelo afetivo do estudante a partir dos dados gerados da sua interação com um Ambiente Virtual de Aprendizagem (AVA).
+	\item Aluno: Visualizar o modelo afetivo determinado pelo Sistema.
+}
+
+\addfield{Pré-condições:}{}
+\addfield{Pós-condições:}{}
+
+\addscenario{Cenário de Sucesso Principal:}{
+	\item O Aluno faz login no Sistema.
+	\item O Sistema exibe a lista de AVAs disponíveis para o Aluno.
+	\item O Aluno seleciona o AVA.
+	\item O Sistema é notificado do AVA escolhido
+	\item O AVA registra as ações do Aluno e envia para o Sistema.
+	\item O ambiente interage com o Sistema por meio do caso de uso UC5
+	\item O Sistema utiliza os resultados de atividades feitas pelo aluno para criar um modelo afetivo do estudante, levando em consideração a literatura da psicologia relativa à atividade desenvolvida.
+	\item O Sistema compara então os dados obtidos com os dados previamente armazenados no banco de dados, caso existam, a fim de atualizar o modelo previamente criado.
+	\item O Sistema salva os dados no banco de dados, a fim de notificar o Docente dos dados obtidos.
+}
+
+\addscenario{Extensões:}{
+	\item[1.a] Falha no login:
+		\begin{enumerate}
+		\item[1.] O Sistema mostra mensagem de falha.
+		\item[2.] O Docente retorna ao passo 1.
+		\end{enumerate}
+}
+
+\addscenario{Requisitos Especiais:}{
+	\item Não se aplica
+}
+
+\addscenario{Lista de Variantes Tecnologias de Dados:}{
+	\item Não se aplica
+}
+
+\addfield{Frequência de Ocorrência:}{Sempre}
+
+\end{usecase}
