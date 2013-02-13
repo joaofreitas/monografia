@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  12 FEB 2013 12:10
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  12 FEB 2013 19:12
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -782,14 +782,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 )) (./cores.tex)
 Package hyperref Info: Option `colorlinks' set `true' on input line 46.
 
-(./monografia.aux
-
-LaTeX Warning: Label `tabela:topicos_uc' multiply defined.
-
-
-LaTeX Warning: Label `fig:dss-uc5-fluxo-principal' multiply defined.
-
-)
+(./monografia.aux)
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
@@ -1252,12 +1245,12 @@ File: images/dss-uc5-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc5-fluxo-principal.png> [47 <./images/dss-uc1-fluxo-principal.
 png>] [48 <./images/dss-uc1-fluxo-alternativo.png> <./images/dss-uc3-fluxo-prin
-cipal.png>] <images/mase-role-model.png, id=759, 920.43875pt x 599.23875pt>
+cipal.png>] <images/mase-role-model.png, id=761, 920.43875pt x 599.23875pt>
 File: images/mase-role-model.png Graphic file (type png)
 
 <use images/mase-role-model.png>) [49 <./images/dss-uc4-fluxo-principal.png>]
 [50 <./images/dss-uc5-fluxo-principal.png> <./images/mase-role-model.png (PNG c
-opy)>] (./monografia.bbl (./monografia.brf)
+opy)>] [51] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -1283,10 +1276,10 @@ Underfull \hbox (badness 3219) in paragraph at lines 13--13
 r/m/n/12 .  Aces-sado em 01/02/2013.
  []
 
-[51
+[52
 
 
-]) [52] (./monografia.aux)
+]) [53] (./monografia.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -1294,16 +1287,13 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10890 strings out of 495041
- 147187 string characters out of 1181897
- 258745 words of memory out of 3000000
- 13504 multiletter control sequences out of 15000+50000
+ 10893 strings out of 495041
+ 147240 string characters out of 1181897
+ 258854 words of memory out of 3000000
+ 13506 multiletter control sequences out of 15000+50000
  18786 words of font info for 47 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  45i,10n,74p,866b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1321,9 +1311,9 @@ en/ec/ecbx1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 > </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (62 pages, 774317 bytes).
+Output written on monografia.pdf (63 pages, 776333 bytes).
 PDF statistics:
- 1410 PDF objects out of 1440 (max. 8388607)
- 285 named destinations out of 1000 (max. 500000)
+ 1416 PDF objects out of 1440 (max. 8388607)
+ 286 named destinations out of 1000 (max. 500000)
  353 words of extra memory for PDF output out of 10000 (max. 10000000)
 

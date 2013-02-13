@@ -37,24 +37,26 @@ A metodologia inicia-se com o passo de captura das metas. Para tanto, foi necess
 A partir dos requisitos de~\cite{editalFrank}, foi possível estabelecer metas que o sistema deveria atingir para satisfazê-los:
 
 \begin{itemize}
-	\item Manter um modelo do estudante (Meta geral do sistema)
-	\item Notificar ao docente
-	\item Auxiliar o aluno por meio de um grupo de trabalho
-	\item Criar modelagem cognitiva
-	\item Criar modelagem metacognitiva
-	\item Criar modelagem modelagem afetiva
-	\item Criar modelagem da personalidade
-	\item Criar modelagem das emoções do estudante
-	\item Interface com ferramentas de aprendizagem dedicada
-	\item Confirmar estilo de aprendizagem do aluno
-	\item Refutar estilo de aprendizagem do aluno
-	\item Construir modelo de desempenho do aluno
-	\item Construir modelagem explícita
-	\item Construir modelagem implícita
-	\item Construir modelo de estilo de aprendizagem do aluno
+	\item Manter um modelo do estudante.
+	\item Notificar ao docente.
+	\item Auxiliar o aluno por meio de um grupo de trabalho (Workgroup).
+	\item Criar modelagem cognitiva.
+	\item Criar modelagem metacognitiva.
+	\item Criar modelagem modelagem afetiva.
+	\item Criar modelagem da personalidade.
+	\item Criar modelagem das emoções do estudante.
+	\item Interface com ferramentas de aprendizagem dedicada.
+	\item Confirmar estilo de aprendizagem do aluno.
+	\item Refutar estilo de aprendizagem do aluno.
+	\item Construir modelo de desempenho do aluno.
+	\item Construir modelagem explícita.
+	\item Construir modelagem implícita.
+	\item Construir modelo de estilo de aprendizagem do aluno.
 \end{itemize}
 
-A partir do levantamento, foi possível observar que a meta "Manter um modelo do estudante" abrange o escopo geral de toda a aplicação, sendo possível estabelecer como meta do sistema. Em seguida, foi necessário hierarquizar as metas de forma a encontrar quais metas poderiam ser estabelecidas com o cumprimento de outras. A imagem~\ref{fig:metas-frank} representa a hierarquia de metas que foi estabelecida. Os retângulos em cinza representam metas particionadas.
+A partir do levantamento, foi possível observar que a meta "Manter um modelo do estudante" abrange o escopo geral de toda a aplicação, sendo possível estabelecer como meta do sistema. A meta "Auxiliar o aluno por meio de um grupo de trabalho" indica que o SMA deverá criar um grupo de trabalho para cada aluno que estiver usando o sistema. O grupo de trabalho deve ser composto pelos agentes cognitivo, afetivo e metacognitivo.
+
+A hierarquizar de metas do SMA Frank~\ref{fig:metas-frank} foi desenvolvida para encontrar quais metas poderiam ser estabelecidas com o cumprimento de outras. Os retângulos em cinza representam metas particionadas.
 
 \begin{sidewaystable}
 	\centering
@@ -63,7 +65,7 @@ A partir do levantamento, foi possível observar que a meta "Manter um modelo do
 	\label{fig:metas-frank}
 \end{sidewaystable}
 
-O segundo passo da metodologia consiste no desenvolvimento dos casos de uso. Foram levantados 5 principais casos de uso, alguns com fluxos alternativos que representam situações opcionais no caso de uso. Este trabalho utiliza-se da notação completa de desenvolvimento de casos de uso.
+Foram levantados 5 principais casos de uso, alguns com fluxos alternativos que representam fluxos alternativos no caso de uso, mas não necessariamente implicam em uma execução no SMA, apenas na parte Web, como por exemplo: Erro de Login. Para fins de detalhamento, este trabalho utiliza-se da notação completa de desenvolvimento de casos de uso.
 
 O primeiro caso de uso diz respeito à modelagem cognitiva do aluno. Existem dois cenários possíveis: Modelagem implícita (principal cenário de sucesso) e modelagem explícita (cenário alternativo). Basicamente o SMA deverá processar o questionário de estilos de aprendizagem, respondido pelo aluno, para inferir explicitamente o seu modelo cognitivo e deverá analisar as respostas enviadas por ele para inferir explicitamente o seu modelo cognitivo.
 
@@ -132,26 +134,59 @@ Por fim o último diagrama de sequência~\ref{fig:dss-uc5-fluxo-principal} repre
 	\label{fig:dss-uc5-fluxo-principal}
 \end{figure}
 
-Por fim, após o levantamento de todas as regras foi necessário criar tarefas para a criação do~\emph{MASE Role Model}.
-
+Por fim, após o levantamento de todas as regras foi necessário criar tarefas que satisfaçam o cumprimento das regras. Em outras palavras, é necessária a criação do~\emph{MASE Role Model}. A tabela~\ref{tabela:mase-role-model} representa as metas criadas para o SMA, bem como as suas respectivas tarefas. É importante ressaltar que, devido aos objetivos deste trabalho, houve um refinamento muito maior do agente cognitivo. Os agentes afetivos e metacognitivos foram apenas projetados na arquitetura.
 
 \begin{table}
 	\caption{Estruturação das Tarefas por Regra}
 	\begin{tabular}{|p{5cm} | p{9cm}|}
 		\hline
-		\textbf{Seção do Caso de Uso}	& \textbf{Significado} \\
+		\textbf{Regra}		& \textbf{Tarefas} \\
 		\hline
-		Nome do Caso de Uso 	& Nome do caso de uso, iniciando-se com um verbo  \\
+		WebServiceInterface 	& Validar Dados  \\
+		\hline
+		Manager 		& Determinar Workgroup do Aluno, Criar Workgroup do Aluno  \\ %Colocar a possibilidade de balancear o ambiente aqui
+		\hline
+		StudenWorkgroup 	& Processar Dados, Atualizar Modelo   \\
+		\hline
+		CognitiveAction 	& Separar Dados de Aprendizagem, Atualizar Modelo Cognitivo, Atualizar Performance  \\
+		\hline
+		MetacognitiveAction 	& Inferir Modelo Cognitivo  \\
+		\hline
+		AffectiveAction 	& Inferir Modelo Afetivo  \\
+		\hline
+		LearningMethodAnalyzer 	& Analisar Estilo de Aprendizagem  \\
+		\hline
+		PerformanceAnalyzer 	& Analisar Performance  \\
 		\hline
 	\end{tabular}
-	\label{tabela:topicos_uc}
+	\label{tabela:mase-role-model}
 \end{table}
+
+A imagem~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model} e a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{StudentWorkgroup} recebe os dados da regra~\emph{Manager} e reencaminha para as regras~\emph{Cognitive},~\emph{Affective} e~\emph{Metacognitive}. As linhas tracejadas de cor azul representam comunicações internas entre as regras. A regra~\emph{Manager} possui uma tarefa desconexa chamada "Criar Workgroup do Aluno", que deve ser invocada pela interface web quando o aluno autentica-se no sistema.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/mase-role-model.png}
 	\caption{Diagrama ~\emph{MASE Role Model} gerado para o SMA Frank.}
-	\label{fig:dss-uc5-fluxo-principal}
+	\label{fig:frank-role-model}
+\end{figure}
+
+A ferramenta~\emph{agentTool} automaticamente indicou a criação dos~\emph{Concurrent Tasks Diagrams} para cada tarefa. O diagrama que detalha a tarefa "Validar Dados"~\ref{fig:frank-role-model} inicia-se com o recebimento de uma mensagem de um agente "a" e os dados "DadosWebService". A tarefa passa ao estado "ValidarDados", onde ele recupera as variáveis "idUsuario" e "status" (verificação se o usuário é válido no ambiente). Em seguida a variável "status" é testada: Caso seja inválida o agente "a" recebe um código de erro. Caso contrário, a tarefa muda para o estado "enviarDados". Basicamente, o estado procura onde está a tarefa "manager" e encaminha os dados "DadosWebService"
+ 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/td-validar-dados.png}
+	\caption{Detalhamento da tarefa "Validar Dados" que pertence à regra~\emph{WebServiceInterface}.}
+	\label{fig:frank-role-model}
+\end{figure}
+
+O diagrama da tarefa "Determinar WG do Aluno"~\ref{fig:td-determinar-wg} (Determinar Workgroup do Aluno) inicia-se com entrada de uma mensagem vinda de um agente~\emph{agent} e a mudança para o estado "DeterminarWorkgroup". O estado procura o workgroup do aluno. Por fim, pelo teste de validade do workgroup, (~\emph{wg = VALIDO})
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/td-determinar-wg.png}
+	\caption{Diagrama ~\emph{MASE Role Model} gerado para o SMA Frank.}
+	\label{fig:td-determinar-wg}
 \end{figure}
 
 
@@ -160,4 +195,20 @@ Por fim, após o levantamento de todas as regras foi necessário criar tarefas p
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Design}\label{subsection:design}
+
+Após a conclusão da primeira etapa do MASE
