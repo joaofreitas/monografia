@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  13 FEB 2013 11:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  13 FEB 2013 12:28
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -999,7 +999,7 @@ Cap\'{\i }tulo 1.
 Cap\'{\i }tulo 2.
 [4
 
-] <images/categorias-diagramas.png, id=347, 571.13374pt x 868.24374pt>
+] <images/categorias-diagramas.png, id=352, 571.13374pt x 868.24374pt>
 File: images/categorias-diagramas.png Graphic file (type png)
 
 <use images/categorias-diagramas.png>
@@ -1007,7 +1007,7 @@ File: images/categorias-diagramas.png Graphic file (type png)
 LaTeX Warning: Float too large for page by 5.8974pt on input line 34.
 
 [5] [6 <./images/categorias-diagramas.png (PNG copy)>]
-<images/exemplo-uml.png, id=367, 701.62125pt x 405.515pt>
+<images/exemplo-uml.png, id=372, 701.62125pt x 405.515pt>
 File: images/exemplo-uml.png Graphic file (type png)
 
 <use images/exemplo-uml.png>
@@ -1015,7 +1015,7 @@ Overfull \hbox (70.97052pt too wide) in paragraph at lines 97--98
  [][] 
  []
 
-[7] <images/exemplo-diagrama-sequencia.png, id=374, 662.475pt x 515.67656pt>
+[7] <images/exemplo-diagrama-sequencia.png, id=379, 662.475pt x 515.67656pt>
 File: images/exemplo-diagrama-sequencia.png Graphic file (type png)
 
 <use images/exemplo-diagrama-sequencia.png>
@@ -1024,7 +1024,7 @@ Overfull \hbox (41.61093pt too wide) in paragraph at lines 114--115
  []
 
 [8 <./images/exemplo-uml.png (PNG copy)>] [9 <./images/exemplo-diagrama-sequenc
-ia.png>] [10] <images/agente-basico.png, id=397, 280.04625pt x 177.66376pt>
+ia.png>] [10] <images/agente-basico.png, id=402, 280.04625pt x 177.66376pt>
 File: images/agente-basico.png Graphic file (type png)
 
 <use images/agente-basico.png> [11 <./images/agente-basico.png (PNG copy)>]
@@ -1089,7 +1089,7 @@ nput line 331.
 
 LaTeX Warning: Float too large for page by 68.91383pt on input line 451.
 
-<images/arvore-ontologia.png, id=503, 701.62125pt x 265.99374pt>
+<images/arvore-ontologia.png, id=508, 701.62125pt x 265.99374pt>
 File: images/arvore-ontologia.png Graphic file (type png)
 
 <use images/arvore-ontologia.png>
@@ -1148,18 +1148,18 @@ Overfull \hbox (0.80429pt too wide) in paragraph at lines 667--668
  [][] 
  []
 
-[28] [29] <images/arquitetura-jade.png, id=604, 559.08875pt x 318.18875pt>
+[28] [29] <images/arquitetura-jade.png, id=609, 559.08875pt x 318.18875pt>
 File: images/arquitetura-jade.png Graphic file (type png)
 
 <use images/arquitetura-jade.png> [30 <./images/arquitetura-jade.png (PNG copy)
 >] (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ) [31]
-<images/tela-jade.png, id=623, 596.2275pt x 366.36874pt>
+<images/tela-jade.png, id=628, 596.2275pt x 366.36874pt>
 File: images/tela-jade.png Graphic file (type png)
 
 <use images/tela-jade.png>
-<images/servidor-app-seam.png, id=626, 280.04625pt x 389.455pt>
+<images/servidor-app-seam.png, id=631, 280.04625pt x 389.455pt>
 File: images/servidor-app-seam.png Graphic file (type png)
 
 <use images/servidor-app-seam.png> [32] [33 <./images/tela-jade.png (PNG copy)>
@@ -1167,7 +1167,7 @@ File: images/servidor-app-seam.png Graphic file (type png)
 Cap\'{\i }tulo 3.
 [35
 
-] [36] <images/metas-frank.png, id=671, 896.34875pt x 451.6875pt>
+] [36] <images/metas-frank.png, id=676, 896.34875pt x 451.6875pt>
 File: images/metas-frank.png Graphic file (type png)
 
 <use images/metas-frank.png>
@@ -1221,7 +1221,7 @@ Underfull \vbox (badness 10000) detected at line 27
  []
 
 [44]) [45] [46 <./images/metas-frank.png (PNG copy)>]
-<images/dss-uc1-fluxo-principal.png, id=769, 1075.01625pt x 520.94624pt>
+<images/dss-uc1-fluxo-principal.png, id=774, 1075.01625pt x 520.94624pt>
 File: images/dss-uc1-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc1-fluxo-principal.png>
@@ -1229,7 +1229,7 @@ Overfull \hbox (60.75784pt too wide) in paragraph at lines 97--98
  [][] 
  []
 
-<images/dss-uc1-fluxo-alternativo.png, id=771, 1136.74687pt x 536.75531pt>
+<images/dss-uc1-fluxo-alternativo.png, id=776, 1136.74687pt x 536.75531pt>
 File: images/dss-uc1-fluxo-alternativo.png Graphic file (type png)
 
 <use images/dss-uc1-fluxo-alternativo.png>
@@ -1237,29 +1237,29 @@ Overfull \hbox (90.3882pt too wide) in paragraph at lines 106--107
  [][] 
  []
 
-<images/dss-uc3-fluxo-principal.png, id=773, 859.71187pt x 536.75531pt>
+<images/dss-uc3-fluxo-principal.png, id=778, 859.71187pt x 536.75531pt>
 File: images/dss-uc3-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc3-fluxo-principal.png>
-<images/dss-uc4-fluxo-principal.png, id=775, 907.13907pt x 536.75531pt>
+<images/dss-uc4-fluxo-principal.png, id=780, 907.13907pt x 536.75531pt>
 File: images/dss-uc4-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc4-fluxo-principal.png> [47 <./images/dss-uc1-fluxo-principal.
 png>] [48 <./images/dss-uc1-fluxo-alternativo.png> <./images/dss-uc3-fluxo-prin
 cipal.png>]
-<images/dss-uc5-fluxo-principal.png, id=788, 519.44063pt x 536.75531pt>
+<images/dss-uc5-fluxo-principal.png, id=793, 519.44063pt x 536.75531pt>
 File: images/dss-uc5-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc5-fluxo-principal.png> [49 <./images/dss-uc4-fluxo-principal.
-png>] <images/mase-role-model.png, id=796, 930.47626pt x 524.96124pt>
+png>] <images/mase-role-model.png, id=801, 930.47626pt x 524.96124pt>
 File: images/mase-role-model.png Graphic file (type png)
 
 <use images/mase-role-model.png>
-<images/td-validar-dados.png, id=798, 841.1425pt x 280.04625pt>
+<images/td-validar-dados.png, id=803, 841.1425pt x 280.04625pt>
 File: images/td-validar-dados.png Graphic file (type png)
 
 <use images/td-validar-dados.png>
-<images/td-enviar-quest.png, id=800, 750.805pt x 176.66pt>
+<images/td-enviar-quest.png, id=805, 750.805pt x 176.66pt>
 File: images/td-enviar-quest.png Graphic file (type png)
 
 <use images/td-enviar-quest.png>
@@ -1269,20 +1269,20 @@ LaTeX Warning: Reference `manager' on page 50 undefined on input line 199.
 [50 <./images/dss-uc5-fluxo-principal.png>] [51 <./images/mase-role-model.png (
 PNG copy)> <./images/td-validar-dados.png (PNG copy)> <./images/td-enviar-quest
 .png (PNG copy)>]
-<images/td-autenticar-aluno.png, id=812, 692.5875pt x 214.8025pt>
+<images/td-autenticar-aluno.png, id=817, 692.5875pt x 214.8025pt>
 File: images/td-autenticar-aluno.png Graphic file (type png)
 
 <use images/td-autenticar-aluno.png>
-<images/td-determinar-wg.png, id=814, 547.04375pt x 186.6975pt>
+<images/td-determinar-wg.png, id=819, 547.04375pt x 186.6975pt>
 File: images/td-determinar-wg.png Graphic file (type png)
 
 <use images/td-determinar-wg.png>
-<images/td-criar-wg.png, id=816, 615.29875pt x 238.8925pt>
+<images/td-criar-wg.png, id=821, 615.29875pt x 238.8925pt>
 File: images/td-criar-wg.png Graphic file (type png)
 
 <use images/td-criar-wg.png> [52 <./images/td-autenticar-aluno.png (PNG copy)> 
 <./images/td-determinar-wg.png (PNG copy)> <./images/td-criar-wg.png (PNG copy)
->] <images/td-processar-dados.png, id=822, 748.7975pt x 326.21875pt>
+>] <images/td-processar-dados.png, id=827, 748.7975pt x 326.21875pt>
 File: images/td-processar-dados.png Graphic file (type png)
 
 <use images/td-processar-dados.png>
@@ -1290,7 +1290,7 @@ File: images/td-processar-dados.png Graphic file (type png)
 LaTeX Warning: Reference `td-atualizar-modelos' on page 53 undefined on input l
 ine 235.
 
-<images/td-atualizar-modelos.png, id=823, 1268.74pt x 444.66125pt>
+<images/td-atualizar-modelos.png, id=828, 1268.74pt x 444.66125pt>
 File: images/td-atualizar-modelos.png Graphic file (type png)
 
 <use images/td-atualizar-modelos.png>
@@ -1298,17 +1298,26 @@ Overfull \hbox (52.2429pt too wide) in paragraph at lines 239--240
  [][] 
  []
 
-<images/td-inferir-afetivo.png, id=826, 512.91624pt x 193.72375pt>
+<images/td-inferir-afetivo.png, id=831, 512.91624pt x 193.72375pt>
 File: images/td-inferir-afetivo.png Graphic file (type png)
 
 <use images/td-inferir-afetivo.png>
-<images/td-inferir-metacognitivo.png, id=827, 487.8225pt x 183.68625pt>
+<images/td-inferir-metacognitivo.png, id=832, 487.8225pt x 183.68625pt>
 File: images/td-inferir-metacognitivo.png Graphic file (type png)
 
-<use images/td-inferir-metacognitivo.png>) [53 <./images/td-processar-dados.png
-> <./images/td-atualizar-modelos.png (PNG copy)>] [54 <./images/td-inferir-afet
-ivo.png (PNG copy)> <./images/td-inferir-metacognitivo.png (PNG copy)>]
-(./monografia.bbl (./monografia.brf)
+<use images/td-inferir-metacognitivo.png> [53 <./images/td-processar-dados.png>
+ <./images/td-atualizar-modelos.png (PNG copy)>]
+<images/td-analise-aprendizagem.png, id=839, 914.41624pt x 256.96pt>
+File: images/td-analise-aprendizagem.png Graphic file (type png)
+
+<use images/td-analise-aprendizagem.png> [54 <./images/td-inferir-afetivo.png (
+PNG copy)> <./images/td-inferir-metacognitivo.png (PNG copy)> <./images/td-anal
+ise-aprendizagem.png (PNG copy)>]
+<images/agent-class-diagram.png, id=845, 618.31pt x 357.335pt>
+File: images/agent-class-diagram.png Graphic file (type png)
+
+<use images/agent-class-diagram.png>) [55 <./images/agent-class-diagram.png (PN
+G copy)>] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -1334,10 +1343,10 @@ Underfull \hbox (badness 3219) in paragraph at lines 13--13
 r/m/n/12 .  Aces-sado em 01/02/2013.
  []
 
-[55
+[56
 
 
-]) [56] (./monografia.aux)
+]) [57] (./monografia.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -1351,10 +1360,10 @@ LaTeX Warning: There were undefined references.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10979 strings out of 495041
- 149268 string characters out of 1181897
- 261640 words of memory out of 3000000
- 13570 multiletter control sequences out of 15000+50000
+ 10996 strings out of 495041
+ 149727 string characters out of 1181897
+ 261924 words of memory out of 3000000
+ 13582 multiletter control sequences out of 15000+50000
  18786 words of font info for 47 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  45i,10n,74p,902b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1372,9 +1381,9 @@ en/ec/ecbx1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 > </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (67 pages, 859363 bytes).
+Output written on monografia.pdf (68 pages, 880528 bytes).
 PDF statistics:
- 1482 PDF objects out of 1728 (max. 8388607)
- 299 named destinations out of 1000 (max. 500000)
- 398 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1498 PDF objects out of 1728 (max. 8388607)
+ 302 named destinations out of 1000 (max. 500000)
+ 408 words of extra memory for PDF output out of 10000 (max. 10000000)
 

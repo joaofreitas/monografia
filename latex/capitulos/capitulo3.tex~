@@ -257,14 +257,45 @@ As regras~\emph{AffectiveAction} e~\emph{MetacognitiveAction} possuem tarefas se
 	\label{fig:td-inferir-metacognitivo}
 \end{figure}
 
-A regra~\emph{CognitiveAction} possui um detalhamento maior, visto que será necessário a inferência explícita do estilo de aprendizagem do aluno. Para tanto, as regras possuem uma comunicação interna (representada pela linha tracejada azul) significando que provavelmente estarão no mesmo agente.
+A regra~\emph{CognitiveAction} possui um detalhamento maior, visto que será necessário a inferência explícita do estilo de aprendizagem do aluno. Para tanto, as regras possuem uma comunicação interna (representada pela linha tracejada azul) significando que provavelmente estarão no mesmo agente. De forma simples as tarefas da regra~\emph{CognitiveAction} "Separar Dados de Aprendizagem" e "Atualizar Modelo" fazem o semelhante que já foi mostrado em outras tarefas. Portanto, o diagrama destas tarefas foi suprimido.
+%%%%Suprimi as tarefas
 
-
-
-
-
-
+A regra~\emph{LearningMethodAnalyzer} possui a tarefa, onde seu diagrama~\ref{fig:td-analise-aprendizagem} mostra o processo de análise do estilo de aprendizagem. Basicamente, o diagrama mostra que a inferência deve ser do tipo explícita caso os dados sejam o questionário. Caso contrário, a inferência deve ser implícita e pode variar de acordo com o ambiente virtual de aprendizagem.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/td-analise-aprendizagem.png}
+	\caption{Detalhamento da tarefa "Analisar Estilo de Aprendizagem" que pertence à regra~\emph{LearningMethodAnalyzer}.}
+	\label{fig:td-analise-aprendizagem}
+\end{figure}
 
 \subsection{Design}\label{subsection:design}
 
-Após a conclusão da primeira etapa do MASE
+Após a conclusão da primeira etapa do MASE, é necessário definir as classes dos agentes, bem como as suas conversações. A imagem~\ref{fig:agent-class-diagram} representa os agentes da arquitetura do SMA Frank.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/agent-class-diagram.png}
+	\caption{Diagrama de Classes do SMA Frank.}
+	\label{fig:agent-class-diagram}
+\end{figure}
+
+\begin{itemize}
+	\item GatewayAgent - Possui a regra StudentInterface, responsável pela interface com a plataforma web, ou seja, com o estudante e o docente.
+	\item WebServiceAgent - Possui a regra~\emph{WebServiceInterface}, é responśavel pela interface com os ambientes virtuais de aprendizagem.
+	\item Manager - Possui a regra~\emph{Manager}, é responsavel pela gerência da plataforma: Criação dos agentes, encaminhamento de mensagens.
+	\item WorkgroupAgent - Possui a regra~\emph{StudentWorkgroup}, responsável pela gerência do grupo de trabalho de um determinado aluno.
+	\item CognitiveAgent - Possui as regras~\emph{CognitiveAction},~\emph{LearningStyleAction}. Responsável pela inferência do modelo cognitivo do aluno.
+	\item AffectiveAgent - Possui a regra~\emph{AffectiveAction}. Responsável pela inferência do modelo afetivo do aluno.
+	\item MetacognitiveAgent - Possui a regra~\emph{MetacognitiveAction}. Responsável pela inferência do modelo metacognitivo do aluno.
+\end{itemize}
+
+As conversações são definidas da seguinte forma:
+\begin{itemize}
+	\item Conv1 - Conversação do~\emph{WebServiceAgent} com o~\emph{ManagerAgent}
+	\item Conv2 - Conversação do~\emph{GatewayAgent} com o~\emph{ManagerAgent}
+	\item Conv3 - Conversação do~\emph{ManagerAgent} com o~\emph{WorkgroupAgent}
+	\item Conv4, Conv5 e Conv6 - Conversação do~\emph{WorkGroupAgent} com os agentes~\emph{CognitiveAgent}, ~\emph{MetacognitiveAgent} e ~\emph{AffectiveAgent}, respectivamente.
+\end{itemize}
+
+....
+
