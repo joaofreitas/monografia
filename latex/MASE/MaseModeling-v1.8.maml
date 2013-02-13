@@ -6,7 +6,7 @@
 none
 </description>
 <framework name="agentMOM"/>
-<keymarker="298"/>
+<keymarker="319"/>
 	<goal version="1.8" key="goal@1" num="1"		<description>
 		Manter um modelo do estudante
 		</description>
@@ -56,7 +56,7 @@ none
 		<view x="484" y="220" w="159" h="50"/>
  n_pts="2" x0="546" y0="161" x1="485" y1="194"			</goal>
 	<goal version="1.8" key="goal@8" num="1.3"		<description>
-		Interface com ferramentas de aprendizagem dedicada
+		Interface com ambientes de virtuais de aprendizagem
 		</description>
 		<gName="goal@1"
 		<gprt="F"
@@ -195,14 +195,14 @@ none
 			Num="goal@8"
 		<view x="582" y="621" w="133" h="50"/>
 	</role>
-	<role version="1.8" name="StudentWebInterface">
+	<role version="1.8" name="StudentInterface">
  key="role@295"		<description>
 		none
 		</description>
 		<goals: 
 			 num of goals = "1"
 			Num="goal@294"
-		<view x="754" y="286" w="138" h="50"/>
+		<view x="684" y="223" w="111" h="50"/>
 	</role>
 <useCase version="1.8" name="Use Case 1">
  key="usecase@18"<description>
@@ -214,7 +214,7 @@ Escopo: Aplicação SMA e Ambiente(s) Virtual de AprendizagemNível: Objetivo do
  key="role2@42"		<description>
 		none
 		</description>
-		<view x="275" y="55" w="73" h="24"/>
+		<view x="359" y="55" w="73" h="24"/>
  lineLength "1900"/>
 	</Role2>
 	<Role2 version="1.8" name="">
@@ -257,7 +257,16 @@ Escopo: Aplicação SMA e Ambiente(s) Virtual de AprendizagemNível: Objetivo do
 		<view x="1199" y="55" w="144" h="24"/>
  lineLength "1900"/>
 	</Role2>
-			<message version="1.8" name="Envia Respostas Aluno" key="mess@49" first="role2@42" second="role2@47"
+	<Role2 version="1.8" name="">
+ roleName="role@295">
+ key="role2@300"		<description>
+		none
+		</description>
+		<view x="237" y="50" w="124" h="24"/>
+ lineLength "1900"/>
+	</Role2>
+			<message version="1.8" name="Dados Aluno" key="mess@301" first="role2@300" second="role2@42"
+			<view y ="79"</message>			<message version="1.8" name="Envia Respostas Aluno" key="mess@49" first="role2@42" second="role2@47"
 			<view y ="97"</message>			<message version="1.8" name="Envia Respostas do Aluno" key="mess@51" first="role2@47" second="role2@50"
 			<view y ="123"</message>			<message version="1.8" name="Dados de Aprendizagem" key="mess@57" first="role2@50" second="role2@56"
 			<view y ="143"</message>			<message version="1.8" name="Estilo de Aprendizagem" key="mess@60" first="role2@56" second="role2@50"
@@ -407,7 +416,7 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
  key="endstate@114" 				 <pos="839","39">
 				</state>
 				<state name="DeterminarWorkGroup" key="state@152" action="" action="idAluno=getIdAluno(DadosSMA)" action="wg=procurarAluno(idAluno)"/>
-					<view x="490" y="79" w="204" h="69"/>
+					<view x="490" y="79" w="144" h="69"/>
 				</state>
 				<transition key="trans@155" rMessage="receive(dadosSMA,agent)" tMessage="" guard="" cstate="startstate@114" nstate="state@152"
 				<view n_pts="2" x0="430" y0="178" x1="456" y1="114" linetype =" " POS1 ="x" "2" POS2 ="y" "2" se ="f" "f"/>
@@ -608,10 +617,10 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
 		<view x="554" y="559" w="95" h="30"/>
  n_pts="2" x0="582" y0="647" x1="556" y1="573"			<statetable owner="null">
  key="statetable@165"				<state name="StartState">
- key="startstate@165" 				 pos="169","85">
+ key="startstate@165" 				 pos="182","93">
 				</state>
 				<state name="EndState">
- key="endstate@165" 				 <pos="944","83">
+ key="endstate@165" 				 <pos="957","94">
 				</state>
 				<state name="ValidarDados" key="state@170" action="" action="idUsuario=getUsuario(DadosWebService)" action="status=verificarUsuarioValido(idUsuario)"/>
 					<view x="546" y="102" w="265" h="69"/>
@@ -620,13 +629,13 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
 					<view x="545" y="284" w="252" h="69"/>
 				</state>
 				<transition key="trans@171" rMessage="receive(DadosWebService, a)" tMessage="" guard="" cstate="startstate@165" nstate="state@170"
-				<view n_pts="2" x0="188" y0="95" x1="413" y1="102" linetype =" " POS1 ="x" "2" POS2 ="x" "1" se ="f" "f"/>
+				<view n_pts="2" x0="202" y0="103" x1="413" y1="103" linetype =" " POS1 ="x" "2" POS2 ="x" "1" se ="f" "f"/>
 				<transition key="trans@172" rMessage="" tMessage="send(ErroUsuario,a)" guard="status=INVALIDO" cstate="state@170" nstate="endstate@165"
-				<view n_pts="2" x0="679" y0="102" x1="944" y1="93" linetype =" " POS1 ="x" "2" POS2 ="x" "1" se ="f" "f"/>
+				<view n_pts="2" x0="680" y0="102" x1="957" y1="103" linetype =" " POS1 ="x" "2" POS2 ="x" "1" se ="f" "f"/>
 				<transition key="trans@174" rMessage="" tMessage="" guard="status=VALIDO" cstate="state@170" nstate="state@291"
-				<view n_pts="2" x0="546" y0="137" x1="545" y1="249" linetype =" " POS1 ="y" "2" POS2 ="y" "1" se ="f" "f"/>
+				<view n_pts="2" x0="546" y0="138" x1="545" y1="249" linetype =" " POS1 ="y" "2" POS2 ="y" "1" se ="f" "f"/>
 				<transition key="trans@292" rMessage="" tMessage="send(DadosWebService,manager)" guard="" cstate="state@291" nstate="endstate@165"
-				<view n_pts="3" x0="672" y0="284" x1="966" y1="281" x2="954" y2="102" linetype =" " POS1 ="x" "2" POS2 ="x" "1" se ="f" "f"/>
+				<view n_pts="3" x0="672" y0="284" x1="966" y1="281" x2="966" y2="113" linetype =" " POS1 ="x" "2" POS2 ="x" "1" se ="f" "f"/>
 			</statetable>
 			</task>
 	<task version="1.8" name="Criar Workgroup" key="task@289"		<description>
@@ -636,25 +645,64 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
 		<view x="675" y="428" w="109" h="30"/>
  n_pts="2" x0="645" y0="390" x1="663" y1="413"			<statetable owner="null">
  key="statetable@289"				<state name="StartState">
- key="startstate@289" 				 pos="60","60">
+ key="startstate@289" 				 pos="162","88">
 				</state>
 				<state name="EndState">
- key="endstate@289" 				 <pos="360","60">
+ key="endstate@289" 				 <pos="564","211">
 				</state>
+				<state name="CriarWorkgroup" key="state@305" action="" action="ac=criarAgenteCognitivo(aluno)" action="am=criarAgenteMetacognitivo(aluno)" action="af=criarAgenteAfetivo(aluno)" action="wg=criarWorgroup(ac,am,af)"/>
+					<view x="506" y="69" w="239" h="99"/>
+				</state>
+				<transition key="trans@306" rMessage="receive(aluno, studenInterface)" tMessage="" guard="" cstate="startstate@289" nstate="state@305"
+				<view n_pts="2" x0="181" y0="98" x1="454" y1="100" linetype =" " POS1 ="x" "2" POS2 ="x" "1" se ="f" "f"/>
+				<transition key="trans@307" rMessage="" tMessage="send(SUCESSO, studentInterface)" guard="wg=VALIDO" cstate="state@305" nstate="endstate@289"
+				<view n_pts="2" x0="574" y0="150" x1="574" y1="211" linetype =" " POS1 ="y" "2" POS2 ="x" "1" se ="f" "f"/>
+				<transition key="trans@308" rMessage="" tMessage="" guard="wg=INVALIDO" cstate="state@305" nstate="state@305"
+				<view n_pts="2" x0="553" y0="49" x1="568" y1="50" linetype ="loop" POS1 ="y" "1" POS2 =" " "0" se ="f" "f"/>
 			</statetable>
 			</task>
-	<task version="1.8" name="Validar Dados" key="task@296"		<description>
+	<task version="1.8" name="Enviar Questionario" key="task@296"		<description>
 		none
 		</description>
 		<rName="role@295"
-		<view x="556" y="287" w="95" h="30"/>
- n_pts="2" x0="684" y0="286" x1="602" y1="286"			<statetable owner="null">
+		<view x="556" y="287" w="130" h="30"/>
+ n_pts="2" x0="628" y0="223" x1="572" y1="272"			<statetable owner="null">
  key="statetable@296"				<state name="StartState">
  key="startstate@296" 				 pos="90","90">
 				</state>
 				<state name="EndState">
- key="endstate@296" 				 <pos="390","90">
+ key="endstate@296" 				 <pos="611","196">
 				</state>
+				<state name="enviarQuestionario" key="state@309" action="" action="questionario=converterQuestionario(dadosQuestionario)" action="manager=procurarManager()"/>
+					<view x="621" y="99" w="363" h="69"/>
+				</state>
+				<transition key="trans@311" rMessage="receive(dadosQuestionario, plataformaWeb)" tMessage="" guard="" cstate="startstate@296" nstate="state@309"
+				<view n_pts="2" x0="110" y0="100" x1="439" y1="100" linetype =" " POS1 ="x" "2" POS2 ="x" "1" se ="f" "f"/>
+				<transition key="trans@313" rMessage="" tMessage="send(questionario,manager)" guard="" cstate="state@309" nstate="endstate@296"
+				<view n_pts="2" x0="621" y0="135" x1="621" y1="196" linetype =" " POS1 ="y" "2" POS2 ="y" "1" se ="f" "f"/>
+			</statetable>
+			</task>
+	<task version="1.8" name="Autenticar Aluno" key="task@298"		<description>
+		none
+		</description>
+		<rName="role@295"
+		<view x="741" y="288" w="112" h="30"/>
+ n_pts="2" x0="710" y0="249" x1="728" y1="274"			<statetable owner="null">
+ key="statetable@298"				<state name="StartState">
+ key="startstate@298" 				 pos="153","93">
+				</state>
+				<state name="EndState">
+ key="endstate@298" 				 <pos="785","104">
+				</state>
+				<state name="AutenticarAluno" key="state@314" action="" action="status=verificarExistencia(aluno)" action="manager=procurarManager()"/>
+					<view x="445" y="102" w="212" h="69"/>
+				</state>
+				<transition key="trans@315" rMessage="receive(aluno,plataformaWeb)" tMessage="" guard="" cstate="startstate@298" nstate="state@314"
+				<view n_pts="2" x0="173" y0="103" x1="392" y1="103" linetype =" " POS1 ="x" "2" POS2 ="x" "1" se ="f" "f"/>
+				<transition key="trans@317" rMessage="" tMessage="send(aluno, manager)" guard="status=NAO_EXISTE" cstate="state@314" nstate="endstate@298"
+				<view n_pts="4" x0="499" y0="82" x1="499" y1="33" x2="795" y2="34" x3="795" y3="104" linetype =" " POS1 ="y" "1" POS2 ="x" "1" se ="f" "f"/>
+				<transition key="trans@318" rMessage="" tMessage="send(ERRO,plataformaWeb)" guard="status=EXISTE" cstate="state@314" nstate="endstate@298"
+				<view n_pts="4" x0="499" y0="153" x1="499" y1="192" x2="794" y2="193" x3="794" y3="123" linetype =" " POS1 ="y" "2" POS2 ="x" "1" se ="f" "f"/>
 			</statetable>
 			</task>
 		<protocol version="1.8"
@@ -662,7 +710,7 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
  key="prot@117" c1="task@114"
  c2="task@116"
 		<view n_pts="2" x0="634" y0="487" x1="695" y1="487" linetype =" " ext ="t" POS1 ="x" "2" POS2 ="x" "1"/>
- n_pts2="2" x0="661" y0="371" x1="927" y1="251" linetype2 =" " POS1 ="x" "2" POS2 ="y" "2"/>
+ n_pts2="2" x0="661" y0="364" x1="927" y1="251" linetype2 =" " POS1 ="x" "2" POS2 ="y" "2"/>
 		</protocol>
 		<protocol version="1.8"
  name="Dados"
@@ -728,11 +776,18 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
  n_pts2="2" x0="1068" y0="539" x1="999" y1="251" linetype2 =" " POS1 ="y" "1" POS2 ="y" "2"/>
 		</protocol>
 		<protocol version="1.8"
- name="Dados"
+ name="Questionario"
  key="prot@297" c1="task@296"
  c2="task@114"
 		<view n_pts="2" x0="555" y0="301" x1="555" y1="473" linetype =" " ext ="t" POS1 ="y" "2" POS2 ="y" "1"/>
- n_pts2="2" x0="754" y0="312" x1="661" y1="355" linetype2 =" " POS1 ="y" "2" POS2 ="x" "2"/>
+ n_pts2="2" x0="656" y0="249" x1="620" y1="338" linetype2 =" " POS1 ="y" "2" POS2 ="y" "1"/>
+		</protocol>
+		<protocol version="1.8"
+ name="Aluno"
+ key="prot@299" c1="task@298"
+ c2="task@289"
+		<view n_pts="2" x0="733" y0="302" x1="681" y1="413" linetype =" " ext ="t" POS1 ="y" "2" POS2 ="y" "1"/>
+ n_pts2="2" x0="683" y0="249" x1="640" y1="338" linetype2 =" " POS1 ="y" "2" POS2 ="y" "1"/>
 		</protocol>
 	<agent version="1.8" name="ManagerAgent" key="agent@266">
 		<description>
@@ -797,7 +852,7 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
 		<description>
 		none
 		</description>
-		<view x="620" y="60" w="157" h="50"/>
+		<view x="616" y="56" w="157" h="50"/>
 		<architecture	 version="1.8"	 name="null">
  key="arch@269"			<description>
 			none
@@ -832,6 +887,19 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
 		</architecture>
 			<Roles>
 			"Num Roles" = 1"role@54"			</agent>
+	<agent version="1.8" name="GatewayAgent" key="agent@302">
+		<description>
+		none
+		</description>
+		<view x="367" y="51" w="111" h="50"/>
+		<architecture	 version="1.8"	 name="null">
+ key="arch@302"			<description>
+			none
+			</description>
+
+		</architecture>
+			<Roles>
+			"Num Roles" = 1"role@295"			</agent>
 
 	<conversation version="1.8" name="Conversation1">
  key="statetable@274"		<description>
@@ -892,7 +960,7 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
 				</state>
 			</statetable>
 
-		<view n_pts="2" x0="415" y0="180" x1="556" y1="180" linetype =" " POS1 ="x" "2" POS2 ="x" "1"/>
+		<view n_pts="2" x0="416" y0="180" x1="556" y1="180" linetype =" " POS1 ="x" "2" POS2 ="x" "1"/>
 		</participant>
 	</conversation>
 
@@ -920,7 +988,7 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
 				</state>
 			</statetable>
 
-		<view n_pts="2" x0="640" y0="154" x1="646" y1="92" linetype =" " POS1 ="y" "1" POS2 ="y" "2"/>
+		<view n_pts="2" x0="640" y0="154" x1="642" y1="82" linetype =" " POS1 ="y" "1" POS2 ="y" "2"/>
 		</participant>
 	</conversation>
 
@@ -1004,7 +1072,7 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
 				</state>
 			</statetable>
 
-		<view n_pts="2" x0="594" y0="92" x1="599" y1="154" linetype =" " POS1 ="y" "2" POS2 ="y" "1"/>
+		<view n_pts="2" x0="590" y0="82" x1="599" y1="154" linetype =" " POS1 ="y" "2" POS2 ="y" "1"/>
 		</participant>
 	</conversation>
 
@@ -1033,6 +1101,34 @@ Escopo: Aplicação SMANível: Objetivo do sistemaAtor Principal: SistemaMetas: 
 			</statetable>
 
 		<view n_pts="2" x0="774" y0="171" x1="682" y1="171" linetype =" " POS1 ="x" "1" POS2 ="x" "2"/>
+		</participant>
+	</conversation>
+
+	<conversation version="1.8" name="Conv81">
+ key="conv@303"		<description>
+		none
+		</description>
+		<participant name="initiator">
+			<statetable owner="agent@302">
+ key="statetable@303"				<state name="StartState">
+ key="startstate@303" 				 pos="90","90">
+				</state>
+				<state name="EndState">
+ key="endstate@303" 				 <pos="390","90">
+				</state>
+			</statetable>
+		</participant>
+		<participant name="responder">
+			<statetable owner="agent@266">
+ key="statetable@303"				<state name="StartState">
+ key="startstate@303" 				 pos="90","90">
+				</state>
+				<state name="EndState">
+ key="endstate@303" 				 <pos="390","90">
+				</state>
+			</statetable>
+
+		<view n_pts="2" x0="367" y0="77" x1="367" y1="154" linetype =" " POS1 ="y" "2" POS2 ="y" "1"/>
 		</participant>
 	</conversation>
 </mas>

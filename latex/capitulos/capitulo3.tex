@@ -176,7 +176,9 @@ A regra~\emph{StudentWorkgroup} será a regra responsável pela gerência do gru
 	\label{fig:frank-role-model}
 \end{figure}
 
-A ferramenta~\emph{agentTool} automaticamente indicou a criação dos~\emph{Concurrent Tasks Diagrams} para cada tarefa. Na regra~\emph{WebServiceInterface}, o diagrama da tarefa "Validar Dados"~\ref{fig:validar-dados} inicia com o recebimento de uma mensagem de um agente "a" e os dados "DadosWebService". A tarefa passa ao estado "ValidarDados", onde ele recupera as variáveis "idUsuario" e "status" (verificação se o usuário é válido no ambiente). Em seguida a variável "status" é testada: Caso seja inválida o agente "a" recebe um código de erro. Caso contrário, a tarefa muda para o estado "enviarDados". Basicamente, o estado procura onde está a tarefa "manager" e encaminha os dados "DadosWebService"
+A ferramenta~\emph{agentTool} automaticamente indicou a criação dos~\emph{Concurrent Tasks Diagrams} para cada tarefa. O fluxo de execução pode iniciar-se nas regras~\emph{StudentInterface} ou ~\emph{WebServiceInterface}. Elas representam respectivamente as interações com o Aluno e com o Ambiente Virtual de Aprendizagem.
+
+Na regra~\emph{WebServiceInterface}, o diagrama da tarefa "Validar Dados"~\ref{fig:validar-dados} inicia com o recebimento de uma mensagem de um agente "a" e os dados "DadosWebService". A tarefa passa ao estado "ValidarDados", onde ele recupera as variáveis "idUsuario" e "status" (verificação se o usuário é válido no ambiente). Em seguida a variável "status" é testada: Caso seja inválida o agente "a" recebe um código de erro. Caso contrário, a tarefa muda para o estado "enviarDados". Basicamente, o estado procura onde está a tarefa "manager" e encaminha os dados "DadosWebService"
  
 \begin{figure}
 	\centering
@@ -190,7 +192,7 @@ O diagrama da tarefa "Enviar Questionário"~\ref{fig:td-enviar-quest}, da regra~
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-enviar-quest.png}
-	\caption{Detalhamento da tarefa "Validar Dados" que pertence à regra~\emph{WebServiceInterface}.}
+	\caption{Detalhamento da tarefa "Enviar Questionário" que pertence à regra~\emph{StudentInterface}.}
 	\label{fig:td-enviar-quest}
 \end{figure}
 
@@ -199,7 +201,7 @@ Ainda na regra~\emph{StudentInterface}, o diagrama da tarefa "Autenticar Aluno"~
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-autenticar-aluno.png}
-	\caption{Detalhamento da tarefa "Validar Dados" que pertence à regra~\emph{WebServiceInterface}.}
+	\caption{Detalhamento da tarefa "Autenticar Aluno" que pertence à regra~\emph{StudentInterface}.}
 	\label{fig:td-autenticar-aluno}
 \end{figure}
 
@@ -208,7 +210,7 @@ Agora na regra ~\emph{Manager}, o diagrama da tarefa "Determinar WG do Aluno"~\r
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-determinar-wg.png}
-	\caption{Detalhamento da tarefa "Validar Dados" que pertence à regra~\emph{Manager}.}
+	\caption{Detalhamento da tarefa "Determinar WG do Aluno" que pertence à regra~\emph{Manager}.}
 	\label{fig:td-determinar-wg}
 \end{figure}
 
@@ -221,14 +223,39 @@ O diagrama da tarefa "Criar Workgroup"~\ref{fig:td-criar-wg} da regra~\emph{Mana
 	\label{fig:td-criar-wg}
 \end{figure}
 
+Agora na regra~\emph{StudentWorgroup}, o diagrama da tarefa "Processar Dados"~\ref{fig:td-criar-wg} mostra que o modelos do aluno são separados e enviados junto com os dados do SMA para os respectivos agentes.
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/td-processar-dados.png}
+	\caption{Detalhamento da tarefa "Processar Dados" que pertence à regra~\emph{StudentWorkgroup}.}
+	\label{fig:td-processar-dados}
+\end{figure}
 
+O diagrama da tarefa "Atualizar Modelos"~\ref{td-atualizar-modelos} pode parecer mais complexo, porém sua execução é basicamente simples. Ele representa o recebimento das inferências cognitiva, metacognitiva e afetiva. A transição inicia-se com o recebimento de um desses modelos. A tarefa vai para o estado "Aguardar Modelo Completo", onde verifica se os três modelos já foram inferidos. Se a verificação for válida, a tarefa é terminada e o objetivo de inferência dos modelos é atingido. Caso contrário, a tarefa aguarda as outras inferências e muda seu estado quando elas chegarem, repetindo assim o fluxo inicial.
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{images/td-atualizar-modelos.png}
+	\caption{Detalhamento da tarefa "Atualizar Modelos" que pertence à regra~\emph{StudentWorkgroup}.}
+	\label{fig:td-atualizar-modelos}
+\end{figure}
 
+As regras~\emph{AffectiveAction} e~\emph{MetacognitiveAction} possuem tarefas semelhantes. Os seus diagramas~\ref{fig:td-inferir-afetivo} e ~\ref{fig:td-inferir-metacognitivo} basicamente mostram que elas recebem a mensagem do~\emph{workgroup} e realizam a sua inferência. Devido ao objetivo deste trabalho não ser estudar especificamente essas inferências, mas, criar a arquitetura do SMA Frank, foi previsto apenas os agentes e a etapa de inferência dos modelos.
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/td-inferir-afetivo.png}
+	\caption{Detalhamento da tarefa "Inferir Modelo Afetivo" que pertence à regra~\emph{AffectiveAction}.}
+	\label{fig:td-inferir-afetivo}
+\end{figure}
 
-
-
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/td-inferir-metacognitivo.png}
+	\caption{Detalhamento da tarefa "Inferir Modelo Metacognitivo" que pertence à regra~\emph{MetacognitiveAction}.}
+	\label{fig:td-inferir-metacognitivo}
+\end{figure}
 
 
 

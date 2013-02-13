@@ -25,7 +25,11 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 5.}}{50}{figure.3.5}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama ~\emph {MASE Role Model} gerado para o SMA Frank.}}{51}{figure.3.6}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Detalhamento da tarefa "Validar Dados" que pertence \IeC {\`a} regra~\emph {WebServiceInterface}.}}{51}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Detalhamento da tarefa "Validar Dados" que pertence \IeC {\`a} regra~\emph {WebServiceInterface}.}}{51}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Detalhamento da tarefa "Validar Dados" que pertence \IeC {\`a} regra~\emph {WebServiceInterface}.}}{52}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Detalhamento da tarefa "Validar Dados" que pertence \IeC {\`a} regra~\emph {Manager}.}}{52}{figure.3.10}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Detalhamento da tarefa "Enviar Question\IeC {\'a}rio" que pertence \IeC {\`a} regra~\emph {StudentInterface}.}}{51}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Detalhamento da tarefa "Autenticar Aluno" que pertence \IeC {\`a} regra~\emph {StudentInterface}.}}{52}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Detalhamento da tarefa "Determinar WG do Aluno" que pertence \IeC {\`a} regra~\emph {Manager}.}}{52}{figure.3.10}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Detalhamento da tarefa "Criar Workgroup" que pertence \IeC {\`a} regra~\emph {Manager}.}}{52}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Detalhamento da tarefa "Processar Dados" que pertence \IeC {\`a} regra~\emph {StudentWorkgroup}.}}{53}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Detalhamento da tarefa "Atualizar Modelos" que pertence \IeC {\`a} regra~\emph {StudentWorkgroup}.}}{53}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Detalhamento da tarefa "Inferir Modelo Afetivo" que pertence \IeC {\`a} regra~\emph {AffectiveAction}.}}{54}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Detalhamento da tarefa "Inferir Modelo Metacognitivo" que pertence \IeC {\`a} regra~\emph {MetacognitiveAction}.}}{54}{figure.3.15}
