@@ -38,14 +38,15 @@ A partir dos requisitos de~\cite{editalFrank}, foi possível estabelecer metas q
 
 \begin{itemize}
 	\item Manter um modelo do estudante.
-	\item Notificar ao docente.
 	\item Auxiliar o aluno por meio de um grupo de trabalho (Workgroup).
+	\item Notificar ao docente.
+	\item Interface com ambientes de virtuais de aprendizagem.
+	\item Interface com o Aluno.
 	\item Criar modelagem cognitiva.
 	\item Criar modelagem metacognitiva.
 	\item Criar modelagem modelagem afetiva.
 	\item Criar modelagem da personalidade.
 	\item Criar modelagem das emoções do estudante.
-	\item Interface com ferramentas de aprendizagem dedicada.
 	\item Confirmar estilo de aprendizagem do aluno.
 	\item Refutar estilo de aprendizagem do aluno.
 	\item Construir modelo de desempenho do aluno.
@@ -54,7 +55,7 @@ A partir dos requisitos de~\cite{editalFrank}, foi possível estabelecer metas q
 	\item Construir modelo de estilo de aprendizagem do aluno.
 \end{itemize}
 
-A partir do levantamento, foi possível observar que a meta "Manter um modelo do estudante" abrange o escopo geral de toda a aplicação, sendo possível estabelecer como meta do sistema. A meta "Auxiliar o aluno por meio de um grupo de trabalho" indica que o SMA deverá criar um grupo de trabalho para cada aluno que estiver usando o sistema. O grupo de trabalho deve ser composto pelos agentes cognitivo, afetivo e metacognitivo.
+A partir do levantamento, foi possível observar que a meta "Manter um modelo do estudante" abrange o escopo geral de toda a aplicação, sendo possível estabelecer como meta do sistema. A meta "Auxiliar o aluno por meio de um grupo de trabalho" indica que o SMA deverá criar um grupo de trabalho para cada aluno que estiver usando o sistema. O grupo de trabalho deve ser composto pelos agentes cognitivo, afetivo e metacognitivo, onde cada um possui suas respectivas metas. No levantamento, foram previstas três interfaces: Interface Web com o Aluno, notificação do docente (via Web) e interface com ambientes de virtuais de aprendizagem.
 
 A hierarquizar de metas do SMA Frank~\ref{fig:metas-frank} foi desenvolvida para encontrar quais metas poderiam ser estabelecidas com o cumprimento de outras. Os retângulos em cinza representam metas particionadas.
 
@@ -89,7 +90,7 @@ Logo o SMA Frank irá utilizar-se de WebServices para a comunicação externa, g
 
 Após o desenvolvimento dos casos de uso, foi necessário refinar os diagramas de sequência. Todos os diagramas foram desenvolvidos na ferramenta~\emph{agentTool}, visto que ele acompanha todas as fases do MASE. Para o primeiro caso de uso, foram desenvolvidos dois diagramas de sequência distintos: Um para o fluxo principal e outro para o fluxo alternativo.
 
-A imagem~\ref{fig:dss-uc1-fluxo-principal} refere-se ao fluxo principal do caso de uso 1. Neste diagrama de sequência, existem 6 regras. O fluxo do Sistema inicia-se com a regra~\emph{Manager}. Ele gera um evento de localização do aluno. Em seguida, gera o evento enviar para a regra~\emph{StudentWorkGroup}, com o parâmetro~\emph{questionário}. A regra~\emph{StudentWorkGroup} gera o evento de enviar para as regras~\emph{CognitiveAction},~\emph{AffectiveAction} e~\emph{MetacognitiveAction}. Eles retornam respectivamente os modelos~\emph{Cognitivo},~\emph{Afetivo} e~\emph{Metacognitivo}. A regra~\emph{cognitiveAction} ainda gera mais um evento de envio para a regra~\emph{LearningMethodAnalyzer}, que retorna o estilo de aprendizagem.
+A imagem~\ref{fig:dss-uc1-fluxo-principal} refere-se ao fluxo principal do caso de uso 1. Neste diagrama de sequência, existem 6 regras. O fluxo do Sistema inicia-se com a regra~\emph{StudentInterface}, onde ele envia os dados de questionário para o~\emph{Manager}. Este então gera um evento de localização do aluno. Em seguida, gera o evento enviar para a regra~\emph{StudentWorkGroup}, com o parâmetro~\emph{questionário}. A regra~\emph{StudentWorkGroup} gera o evento de enviar para as regras~\emph{CognitiveAction},~\emph{AffectiveAction} e~\emph{MetacognitiveAction}. Eles retornam respectivamente os modelos~\emph{Cognitivo},~\emph{Afetivo} e~\emph{Metacognitivo}. A regra~\emph{cognitiveAction} ainda gera mais um evento de envio para a regra~\emph{LearningMethodAnalyzer}, que retorna o estilo de aprendizagem.
 
 \begin{figure}
 	\centering
@@ -142,6 +143,8 @@ Por fim, após o levantamento de todas as regras foi necessário criar tarefas q
 		\hline
 		\textbf{Regra}		& \textbf{Tarefas} \\
 		\hline
+		StudentInterface 	& Validar Dados, Autenticar Aluno  \\
+		\hline
 		WebServiceInterface 	& Validar Dados  \\
 		\hline
 		Manager 		& Determinar Workgroup do Aluno, Criar Workgroup do Aluno  \\ %Colocar a possibilidade de balancear o ambiente aqui
@@ -162,7 +165,9 @@ Por fim, após o levantamento de todas as regras foi necessário criar tarefas q
 	\label{tabela:mase-role-model}
 \end{table}
 
-A imagem~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model} e a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{StudentWorkgroup} recebe os dados da regra~\emph{Manager} e reencaminha para as regras~\emph{Cognitive},~\emph{Affective} e~\emph{Metacognitive}. As linhas tracejadas de cor azul representam comunicações internas entre as regras. A regra~\emph{Manager} possui uma tarefa desconexa chamada "Criar Workgroup do Aluno", que deve ser invocada pela interface web quando o aluno autentica-se no sistema.
+A imagem~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model} e a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudenInterface} (Interface Web da Aplicação) ou~\emph{WebServiceInterface} (Ambientes Virtuais de Aprendizagem). Além disso, a regra~\emph{StudenInterface} possui uma tarefa para autenticação do aluno, onde ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno.
+
+A regra~\emph{StudentWorkgroup} será a regra responsável pela gerência do grupo de trabalho do aluno. Ela recebe os dados da regra~\emph{Manager} e reencaminha para as regras~\emph{Cognitive},~\emph{Affective} e~\emph{Metacognitive}. As linhas tracejadas de cor azul representam comunicações internas entre as regras.
 
 \begin{figure}
 	\centering
@@ -171,25 +176,50 @@ A imagem~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model} e a sua e
 	\label{fig:frank-role-model}
 \end{figure}
 
-A ferramenta~\emph{agentTool} automaticamente indicou a criação dos~\emph{Concurrent Tasks Diagrams} para cada tarefa. O diagrama que detalha a tarefa "Validar Dados"~\ref{fig:frank-role-model} inicia-se com o recebimento de uma mensagem de um agente "a" e os dados "DadosWebService". A tarefa passa ao estado "ValidarDados", onde ele recupera as variáveis "idUsuario" e "status" (verificação se o usuário é válido no ambiente). Em seguida a variável "status" é testada: Caso seja inválida o agente "a" recebe um código de erro. Caso contrário, a tarefa muda para o estado "enviarDados". Basicamente, o estado procura onde está a tarefa "manager" e encaminha os dados "DadosWebService"
+A ferramenta~\emph{agentTool} automaticamente indicou a criação dos~\emph{Concurrent Tasks Diagrams} para cada tarefa. Na regra~\emph{WebServiceInterface}, o diagrama da tarefa "Validar Dados"~\ref{fig:validar-dados} inicia com o recebimento de uma mensagem de um agente "a" e os dados "DadosWebService". A tarefa passa ao estado "ValidarDados", onde ele recupera as variáveis "idUsuario" e "status" (verificação se o usuário é válido no ambiente). Em seguida a variável "status" é testada: Caso seja inválida o agente "a" recebe um código de erro. Caso contrário, a tarefa muda para o estado "enviarDados". Basicamente, o estado procura onde está a tarefa "manager" e encaminha os dados "DadosWebService"
  
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-validar-dados.png}
 	\caption{Detalhamento da tarefa "Validar Dados" que pertence à regra~\emph{WebServiceInterface}.}
-	\label{fig:frank-role-model}
+	\label{fig:validar-dados}
 \end{figure}
 
-O diagrama da tarefa "Determinar WG do Aluno"~\ref{fig:td-determinar-wg} (Determinar Workgroup do Aluno) inicia-se com entrada de uma mensagem vinda de um agente~\emph{agent} e a mudança para o estado "DeterminarWorkgroup". O estado procura o workgroup do aluno.
+O diagrama da tarefa "Enviar Questionário"~\ref{fig:td-enviar-quest}, da regra~\emph{StudentInterface} inicia-se com uma mensagem da plataforma web contendo os dados do questionário. Esses dados são convertidos para uma linguagem comum no SMA. Em seguida, esse questionário é enviado para o manager.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/td-enviar-quest.png}
+	\caption{Detalhamento da tarefa "Validar Dados" que pertence à regra~\emph{WebServiceInterface}.}
+	\label{fig:td-enviar-quest}
+\end{figure}
+
+Ainda na regra~\emph{StudentInterface}, o diagrama da tarefa "Autenticar Aluno"~\ref{fig:td-autenticar-aluno} inicia com uma mensagem da plataforma web contendo o aluno a ser criado. A tarefa verifica a existência do aluno e em caso negativo, envia a mensagem de criação à tarefa~\ref{manager}. Caso contrário, envia uma mensagem de erro à plataforma Web.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/td-autenticar-aluno.png}
+	\caption{Detalhamento da tarefa "Validar Dados" que pertence à regra~\emph{WebServiceInterface}.}
+	\label{fig:td-autenticar-aluno}
+\end{figure}
+
+Agora na regra ~\emph{Manager}, o diagrama da tarefa "Determinar WG do Aluno"~\ref{fig:td-determinar-wg} (Determinar Workgroup do Aluno) inicia-se com entrada de uma mensagem recebida de um agente~\emph{agent} e o estado "DeterminarWorkgroup". Basicamente, ele apenas procura o grupo de trabalho do aluno. Por fim, pelo teste de validade do grupo de trabalho (~\emph{wg = VALIDO}), os dados são enviados para o respectivo grupo de trabalho caso ele sejá válido. Caso contrário, é enviado uma mensagem de erro ao agente que iniciou a conversação.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-determinar-wg.png}
-	\caption{Diagrama ~\emph{MASE Role Model} gerado para o SMA Frank.}
+	\caption{Detalhamento da tarefa "Validar Dados" que pertence à regra~\emph{Manager}.}
 	\label{fig:td-determinar-wg}
 \end{figure}
 
+O diagrama da tarefa "Criar Workgroup"~\ref{fig:td-criar-wg} da regra~\emph{Manager} inicia-se com entrada de uma mensagem vinda da tarefa~\emph{studentInterface} e a mudança para o estado "criarWorkgroup". O estado cria os agentes cognitivo, metacognitivo, afetivo e o workgroup propriamente dito. Por fim, caso o workgroup seja válido, ou seja, não tenha ocorrido nenhum erro durante a criacão, é enviado um código de sucesso à tarefa~\emph{studentInterface}. Caso contrário, o workgroup deve ser criado novamente.
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/td-criar-wg.png}
+	\caption{Detalhamento da tarefa "Criar Workgroup" que pertence à regra~\emph{Manager}.}
+	\label{fig:td-criar-wg}
+\end{figure}
 
 
 
