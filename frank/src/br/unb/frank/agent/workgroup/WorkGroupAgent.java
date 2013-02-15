@@ -1,18 +1,9 @@
 package br.unb.frank.agent.workgroup;
 
-import jade.content.Concept;
-import jade.content.ContentElement;
-import jade.content.lang.Codec;
-import jade.content.lang.Codec.CodecException;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
-import jade.content.onto.OntologyException;
-import jade.content.onto.UngroundedException;
-import jade.content.onto.basic.Action;
-import jade.content.onto.basic.Result;
 import jade.core.AID;
 import jade.core.Agent;
-import jade.core.behaviours.CyclicBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPANames;
@@ -24,11 +15,10 @@ import jade.lang.acl.MessageTemplate;
 import jade.wrapper.AgentContainer;
 import jade.wrapper.AgentController;
 import jade.wrapper.StaleProxyException;
+import br.unb.frank.behaviour.RequestModelBehaviour;
+import br.unb.frank.behaviour.WorkgroupBehaviour;
 import br.unb.frank.domain.AgentPrefixEnum;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
-import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
-import br.unb.frank.ontology.modelinfer.concept.CognitiveModel;
-import br.unb.frank.ontology.modelinfer.concept.Questionnaire;
 import br.unb.frank.ontology.modelinfer.predicate.Owns;
 
 /**
@@ -40,19 +30,15 @@ import br.unb.frank.ontology.modelinfer.predicate.Owns;
 public class WorkGroupAgent extends Agent {
 
     private String alunoId;
-    private Owns own = new Owns();
 
     private static final long serialVersionUID = 1L;
 
     private AID affectiveAID;
     private AID cognitiveAID;
     private AID metacognitiveAID;
-
-    private Codec codec = new SLCodec();
-    private Ontology jadeOntology = JADEManagementOntology.getInstance();
-    private Ontology modelInferOntology = ModelInferOntology.getInstance();
-
     MessageTemplate pattern;
+
+    private Owns own = new Owns();
 
     @Override
     protected void setup() {
@@ -60,96 +46,38 @@ public class WorkGroupAgent extends Agent {
 	    doDelete();
 	}
 
-	getContentManager().registerLanguage(codec,
+	Ontology jadeOntology = JADEManagementOntology.getInstance();
+	Ontology modelInferOntology = ModelInferOntology.getInstance();
+
+	getContentManager().registerLanguage(new SLCodec(),
 		FIPANames.ContentLanguage.FIPA_SL0);
+
 	getContentManager().registerOntology(jadeOntology);
 	getContentManager().registerOntology(modelInferOntology);
 
-	registerWorkgroup();
+	registerAsWorkgroup();
 	setAlunoId(getArgument(0));
 
 	AgentContainer c = getContainerController();
 	createAuxiliarAgents(c);
 
 	pattern = MessageTemplate.and(
+		MessageTemplate.MatchPerformative(ACLMessage.REQUEST),
+		MessageTemplate.MatchOntology(modelInferOntology.getName()));
+	addBehaviour(new RequestModelBehaviour(pattern, own, getContentManager()));
+
+	pattern = MessageTemplate.and(
 		MessageTemplate.MatchPerformative(ACLMessage.INFORM),
 		MessageTemplate.MatchOntology(modelInferOntology.getName()));
 
-	addBehaviour(new CyclicBehaviour() {
-	    private static final long serialVersionUID = 1L;
-
-	    @Override
-	    public void action() {
-		ACLMessage msg = receive(pattern);
-		if (msg != null) {
-
-		    try {
-			ContentElement content = getContentManager()
-				.extractContent(msg);
-
-			if (isAbstractAction(content)) {
-			    Concept action = ((Action) content).getAction();
-
-			    if (isSendQuestionnaireAction(action)) {
-				SendQuestionnaire sendQuestionnaireAction = (SendQuestionnaire) action;
-				// Enviando somente o questionário
-				Questionnaire questionnaire = sendQuestionnaireAction
-					.getQuestionnaire();
-
-				ACLMessage questionMsg = new ACLMessage(
-					ACLMessage.REQUEST);
-				questionMsg.setLanguage(codec.getName());
-				questionMsg.setOntology(modelInferOntology
-					.getName());
-				questionMsg
-					.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
-				questionMsg.addReceiver(getCognitiveAID());
-
-				getContentManager().fillContent(
-					questionMsg,
-					new Action(getCognitiveAID(),
-						questionnaire));
-
-				myAgent.send(questionMsg);
-			    }
-
-			} else if (isResultMessage(content)) {
-			    Result result = (Result) content;
-			    CognitiveModel cognitiveModel = (CognitiveModel) result
-				    .getValue();
-
-			    own.setCognitiveModel(cognitiveModel);
-			    System.out.println("Resposta Recebida");
-			}
-
-		    } catch (UngroundedException e) {
-			e.printStackTrace();
-		    } catch (CodecException e) {
-			e.printStackTrace();
-		    } catch (OntologyException e) {
-			e.printStackTrace();
-		    }
-		}
-		block();
-	    }
-
-	    private boolean isSendQuestionnaireAction(Concept action) {
-		return action instanceof SendQuestionnaire;
-	    }
-
-	    private boolean isAbstractAction(ContentElement contentElement) {
-		return contentElement instanceof Action;
-	    }
-
-	    private boolean isResultMessage(ContentElement contentElement) {
-		return contentElement instanceof Result;
-	    }
-	});
+	addBehaviour(new WorkgroupBehaviour(pattern, getContentManager(),
+		getAffectiveAID(), getCognitiveAID(), getMetacognitiveAID(),
+		own));
 
 	super.setup();
     }
 
-    private void registerWorkgroup() {
+    private void registerAsWorkgroup() {
 	DFAgentDescription dfd = new DFAgentDescription();
 
 	dfd.setName(getAID());

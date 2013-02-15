@@ -1,5 +1,7 @@
 package br.unb.frank.agent;
 
+import jade.content.Concept;
+import jade.content.ContentElement;
 import jade.content.lang.Codec;
 import jade.content.lang.Codec.CodecException;
 import jade.content.lang.sl.SLCodec;
@@ -11,6 +13,7 @@ import jade.core.Agent;
 import jade.core.behaviours.WakerBehaviour;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
+import jade.lang.acl.MessageTemplate;
 import jade.util.leap.ArrayList;
 import jade.util.leap.List;
 import jade.wrapper.gateway.GatewayAgent;
@@ -20,12 +23,14 @@ import br.unb.frank.domain.command.CreateAgentCommand;
 import br.unb.frank.domain.command.DestroyAgentCommand;
 import br.unb.frank.domain.command.DimensionCommand;
 import br.unb.frank.domain.command.ProcessQuestionnaireCommand;
+import br.unb.frank.domain.command.RequestCognitiveModelCommand;
 import br.unb.frank.ontology.frankmanagement.FrankManagementOntology;
 import br.unb.frank.ontology.frankmanagement.action.CreateWorkgroup;
 import br.unb.frank.ontology.frankmanagement.action.DestroyWorkgroup;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
 import br.unb.frank.ontology.modelinfer.concept.Answer;
+import br.unb.frank.ontology.modelinfer.concept.CognitiveModel;
 import br.unb.frank.ontology.modelinfer.concept.LearningDimension;
 import br.unb.frank.ontology.modelinfer.concept.Questionnaire;
 
@@ -83,7 +88,8 @@ public class GatewayFrankAgent extends GatewayAgent {
 		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
 		// TODO Deveria procurar interface no ambiente
-		AID interfaceAID = new AID("interface", AID.ISLOCALNAME);
+		AID interfaceAID = new AID(AgentPrefixEnum.MANAGER.toString(),
+			AID.ISLOCALNAME);
 
 		getContentManager().fillContent(msg,
 			new Action(interfaceAID, cw));
@@ -115,7 +121,38 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, sendQuestionnaire));
 
 		send(msg);
-//		addBehaviour(new WaitServerResponse(this, 2000));
+		// addBehaviour(new WaitServerResponse(this, 2000));
+
+	    } else if (command instanceof RequestCognitiveModelCommand) {
+
+		RequestCognitiveModelCommand request = (RequestCognitiveModelCommand) command;
+		System.out.println("Recuperar Modelo Cognitivo");
+
+		ACLMessage requestModelMsg = new ACLMessage(ACLMessage.REQUEST);
+		requestModelMsg.setLanguage(codec.getName());
+		requestModelMsg.setOntology(ontology.getName());
+		requestModelMsg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+
+		String destiny = ((RequestCognitiveModelCommand) command)
+			.getAlunoId().toString();
+		// TODO Deveria fazer lookup do workgroup do aluno no
+		// ambiente
+		AID alunoAID = new AID(AgentPrefixEnum.WORKGROUP + destiny,
+			AID.ISLOCALNAME);
+		requestModelMsg.addReceiver(alunoAID);
+
+		MessageTemplate mt = MessageTemplate.and(
+			MessageTemplate.MatchPerformative(ACLMessage.INFORM),
+			MessageTemplate.MatchSender(alunoAID));
+
+		ACLMessage respostaModeloMsg = blockingReceive(mt, 500);
+		if (respostaModeloMsg != null) {
+		    ContentElement content = getContentManager()
+			    .extractContent(respostaModeloMsg);
+		    Concept action = ((Action) content).getAction();
+		    SendQuestionnaire sendQuestionnaireAction = (SendQuestionnaire) action;
+
+		}
 
 	    }
 

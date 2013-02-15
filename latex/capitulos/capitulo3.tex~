@@ -270,7 +270,7 @@ A regra~\emph{LearningMethodAnalyzer} possui a tarefa, onde seu diagrama~\ref{fi
 
 \subsection{Design}\label{subsection:design}
 
-Após a conclusão da primeira etapa do MASE, é necessário definir as classes dos agentes, bem como as suas conversações. A imagem~\ref{fig:agent-class-diagram} representa os agentes da arquitetura do SMA Frank.
+Após a conclusão da primeira etapa do MASE, é necessário definir as classes dos agentes, bem como as suas conversações. A arquitetura~\ref{fig:agent-class-diagram} do SMA Frank é composta pelos seguintes agentes:
 
 \begin{figure}
 	\centering
@@ -297,5 +297,137 @@ As conversações são definidas da seguinte forma:
 	\item Conv4, Conv5 e Conv6 - Conversação do~\emph{WorkGroupAgent} com os agentes~\emph{CognitiveAgent}, ~\emph{MetacognitiveAgent} e ~\emph{AffectiveAgent}, respectivamente.
 \end{itemize}
 
-....
+A primeira conversação (conv1) ocorre de forma simples. No lado do iniciador da conversação~\ref{fig:conv1-iniciador}, ele solicita ao respondedor a verificação da existência do aluno na plataforma e entra no estado de espera. Caso a resposta seja~\emph{usuarioValido}, o iniciador irá enviar a mensagem~\emph{enviarDados} e encerrar a execução normalmente. Caso contrário, entrará no estado de falha, onde informará erro de execução.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/conv1-iniciador.png}
+	\caption{Detalhamento da Conversação 1 no lado do Iniciador.}
+	\label{fig:conv1-iniciador}
+\end{figure}
+No lado respondedor da conversação~\ref{fig:conv1-respondedor}, ela se inicia com o request do iniciador e o estado verificar, onde é verificado a existência do aluno. Por fim, é enviado uma resposta sobre a existência do aluno para o iniciador da conversaçào.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/conv1-recebedor.png}
+	\caption{Detalhamento da Conversação 1 no lado do Respondedor.}
+	\label{fig:conv1-respondedor}
+\end{figure}
+
+A segunda conversação (conv2) possui a mesma dinâmica da conversação 1, portanto seu diagrama será suprimido.
+
+A conversação 3 (conv3) é bastante simples. Não há nenhum estado de transição durante a conversação, pois é apenas um encaminhamento de dados para o grupo de trabalho do aluno.
+
+As conversações 4, 5 e 6 (conv4, conv5 e conv6) possuem dinâmica bastante semelhante. Do lado do iniciador, basicamente ele envia um request com o modelo a ser inferido, os dados a serem analisados e entra em estado de espera. Em seguida, quando receber a resposta, ele atualiza o modelo cognitivo. A imagem~\ref{fig:conv4-iniciador} detalha a conversação 4, que pode ser generalizado para a 5 e 6.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/conv4-iniciador.png}
+	\caption{Detalhamento da Conversação 4 no lado iniciador.}
+	\label{fig:conv4-iniciador}
+\end{figure}
+
+O lado do recebedor recebe o request e infere o modelo do aluno. Por fim, apenas reenvia novamente ao iniciador da conversação.  A imagem~\ref{fig:conv4-recebedor} detalha a conversação 4, que pode ser generalizado para a 5 e 6.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/conv4-recebedor.png}
+	\caption{Detalhamento da Conversação 4 no lado iniciador.}
+	\label{fig:conv4-recebedor}
+\end{figure}
+
+A última conversação, conv7~\ref{fig:conv7-iniciador}, é representa a conversação para criação do grupo de trabalho do aluno. No lado do iniciador, ele requisita a verificação da existência do aluno no ambiente. Caso não exista, ele envia a resposta de criação do grupo de trabalho para o recebedor da conversação.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/conv7-iniciador.png}
+	\caption{Detalhamento da Conversação 7 no lado iniciador.}
+	\label{fig:conv7-iniciador}
+\end{figure}
+
+Do lado do recebedor~\ref{fig:conv7-recebedor}, ele recebe o request e faz a verificação da existência do aluno. Caso já exista, a conversação é encerrada. Caso contrário, ele entra no estado de espera e em seguida faz a criação do workgroup.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.48]{images/conv7-recebedor.png}
+	\caption{Detalhamento da Conversação 7 no lado recebedor.}
+	\label{fig:conv7-recebedor}
+\end{figure}
+
+A arquitetura de deploy do trabaho deve ser dinâmica, visto que os agentes de trabalho devem ser instânciados dinâmicamente. Funcionando em ambiente descentralizado, o SMA Frank precisa balancear a carga de uso entre os ambientes disponíveis. Dessa forma, o diagrama de deploy foi desnecessário.
+
+\section{Arquitetura}
+
+A arquitetura do sistema foi separada em duas aplicações: A parte Web chamada de~\emph{Frank Web} e a parte Sistema Multiagente chamada de~\emph{SMA Frank}. Esta seção pretende relatar a arquitetura interna de cada parte, bem como as dificuldades encontradas na integração entre ambas.
+
+A solução foi separada devido aos seguintes aspectos:
+\begin{itemize}
+	\item Maior Distribuição - É possível replicar a parte web em vários nós de uma rede, possibilitando assim um maior ganho de performance da aplicação.
+	\item Menor Complexidade - Os objetivos das aplicações estão separados, modularizando assim as responsabilidades de cada parte.
+	\item Menor Dificuldade - A parte Web é responśavel pela interação com o usuário e com o banco de dados. Estes pontos seriam muito mais difíceis de implementar no framework JADE.
+\end{itemize}
+
+\subsection{Frank Web}
+A parte Web utiliza-se do framework JBoss Seam, confome dito anteriormente, um framework que acelera o tempo de desenvolvimento de aplicações dinâmicas para a Web. Para facilitar a manutenção do código e a reescrita de alguma parte dele, foi adotado o padrão de projetos
+Model View Controller (MVC). Esse padrão divide a arquitetura do sistema em três partes:
+
+\begin{itemize}
+	\item Apresentação - Responsável pela apresentação dos dados para o usuário em uma página web.
+	\item Controladora - Determina o componente a ser executado.
+	\item Modelo - Representação das entidades, auxiliam na interação com o banco dados.
+\end{itemize}
+
+As ferramentas disponibilizadas pelo framework geraram todo o código para visualização, inserção, atualização e exclusão de dados. Além disso, geraram todas as páginas para que o usuário possa interagir com o sistema. 
+
+Após a geração do código inicial, foi necessário uma implementar algumas funcionalidades específicas da aplicação Frank-Web. A primeira delas foi implementar a ação de autenticação conjunta com o SMA. Quando o aluno fizer login no sistema, a aplicação web envia uma mensagem ao sistema multiagente para a criação do grupo de trabalho.
+
+Em seguida, foi necessário a implementação a tela de respostas do questionário feita pelo usuário.
+
+Por fim, a implementação da tela de notificação ao docente do estilo de aprendizagem do aluno.
+
+\subsection{SMA Frank}
+
+O SMA Frank foi desenvolvida com o~\emph{middleware} JADE, devido à sua grande aceitação na comunidade de Sistemas Multiagentes e o extenso suporte da comunidade. A aplicação está divida entre os agentes criados e os seus comportamentos (justificados na seção anterior).
+
+A comunicação entre os agentes foi implementado utilizando-se de ontologias. O pacote de ontologia do JADE permite a criação de abstrações muito robustas, descartando neste primeiro momento a utilização de bibliotecas de terceiros.
+
+No JADE, os agentes devem adicionar comportamentos, que são disparados quando o agente recebe uma mensagem. Os comportamentos são separados conforme o objetivo do agente.
+
+Foram implementadas duas ontologias. A primeira, chamada de~\emph{FrankManagementOntology}, tem a função de gerenciamento da plataforma. Logo as ações de criação e destruição de agentes estarão presentes nela.
+
+A ontologia~\emph{ModelInferOntology} possui a função de modelar todos os conceitos relacionados à inferência do modelo do aluno. Portanto, conceitos como estilo de aprendizagem, modelo cognitivo, afetivo e metacognitivo devem estar nesta ontologia. É importante ressaltar que os modelos não estão completos, sendo necessário que em trabalhos futuros sejam modeladas as ontologias.
+
+\subsection{Integração Entre as Aplicações}
+
+A integração entre o~\emph{Frank Web} e o~\emph{SMA Frank} pareceu bastante complexa em uma análise inicial. Por não compartilhar a mesma Máquina Virtual Java (JVM), a dificuldade de integração pareceu alta.
+
+O Jade porém possui uma forma nativa em que aplicações externas podem se conectar com o ambiente em execução. A classe~\emph{DynamicJadeGateway} registra um agente na plataforma, que atuará como uma ponte entre a aplicação e o ambiente de execução.
+
+Esse agente funcionará de forma distinta dos outros agentes da plataforma. O agente não receberá mensagens da aplicação Web, ao invés disso receberá objetos JAVA que representarão comandos. Para os diferentes comandos, o agente pode lançar diferentes mensagens na plataforma SMA. A aplicação~\emph{Frank SMA} implementa 6 comandos:
+
+\begin{itemize}
+	\item Apresentação - Responsável pela apresentação dos dados para o usuário em uma página web.
+	\item Controladora - Determina o componente a ser executado.
+	\item Modelo - Representação das entidades, auxiliam na interação com o banco dados.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

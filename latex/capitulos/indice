@@ -1,15 +1,15 @@
-Capítulo 1 - Introdução (OK)
+Capítulo 1 - Introdução
 	- Problema
 	- Objetivos
 	- Metodologia
 Capítulo 2 - Fundamentação Teórica
-	- UML (OK)
+	- UML
 		* Introdução
 		* Formas de Uso
 		* Caso de uso
 		* Diagrama de sequência
 	- Informática na Educação
-	- Sistemas Multiagentes (OK)
+	- Sistemas Multiagentes
 		* Introdução
 		* Agente
 		* Arquitetura de Agentes
@@ -19,7 +19,7 @@ Capítulo 2 - Fundamentação Teórica
 	- MASE
 		* Análise - 3 passos
 		* Design - 4 passos
-	- JADE (OK)
+	- JADE
 	- Jboss Seam
 	- Trabalhos Correlatos
 
@@ -31,18 +31,15 @@ Capítulo 3 - Proposta de Solução
 			- Desenvolver Casos de Uso
 			- Refinar Regras
 		- Fase 2
-	- Arquitetura da solução proposta.
+	- Arquitetura da solução proposta
 		- SMA
 		- Web
 		- Integração
-	- Ferramentas utilizadas
-		- Por que usei Jade?
-		- Por que usei Seam?
 
-Capítulo 4 - Estudo de caso
+Capítulo 4 - Testes e Simulações
 	- Simulação Aluno
 	- Simulação Docente
 
 Capítulo 5
 	- Conclusões
-	- Trabalhos Futuros.
+	- Trabalhos Futuros

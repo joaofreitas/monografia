@@ -41,4 +41,11 @@
 \contentsline {section}{\numberline {3.1}A Modelagem}{35}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}An\IeC {\'a}lise}{36}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Design}{55}{subsection.3.1.2}
-\contentsline {chapter}{Refer\^encias}{56}{section*.19}
+\contentsline {section}{\numberline {3.2}Arquitetura}{57}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Frank Web}{58}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}SMA Frank}{58}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Integra\IeC {\c c}\IeC {\~a}o Entre as Aplica\IeC {\c c}\IeC {\~o}es}{59}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Testes e Simula\IeC {\c c}\IeC {\~o}es}{60}{chapter.4}
+\contentsline {section}{\numberline {4.1}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Aluno}{60}{section.4.1}
+\contentsline {section}{\numberline {4.2}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Docente}{60}{section.4.2}
+\contentsline {chapter}{Refer\^encias}{61}{section*.19}

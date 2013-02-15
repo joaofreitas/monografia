@@ -8,7 +8,7 @@ import jade.domain.FIPANames;
 import jade.domain.JADEAgentManagement.JADEManagementOntology;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
-import br.unb.frank.behaviour.InferenceBehaviour;
+import br.unb.frank.behaviour.CognitiveInferenceBehaviour;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 
 public class CognitiveAgent extends Agent {
@@ -33,7 +33,7 @@ public class CognitiveAgent extends Agent {
 		MessageTemplate.MatchPerformative(ACLMessage.REQUEST),
 		MessageTemplate.MatchOntology(modelInferOntology.getName()));
 
-	addBehaviour(new InferenceBehaviour(pattern, getContentManager(),
+	addBehaviour(new CognitiveInferenceBehaviour(pattern, getContentManager(),
 		codec, modelInferOntology));
 
 	super.setup();
