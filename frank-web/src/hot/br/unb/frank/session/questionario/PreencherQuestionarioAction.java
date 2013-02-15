@@ -23,6 +23,7 @@ import br.unb.frank.business.QuestionarioBusiness;
 import br.unb.frank.domain.command.ProcessQuestionnaireCommand;
 import br.unb.frank.domain.command.RequestCognitiveModelCommand;
 import br.unb.frank.entity.Aluno;
+import br.unb.frank.entity.Dimensao;
 import br.unb.frank.entity.Pergunta;
 import br.unb.frank.entity.Questionario;
 import br.unb.frank.entity.Resposta;
@@ -62,6 +63,7 @@ public class PreencherQuestionarioAction implements Serializable {
 	return "responderPerguntas";
     }
 
+    @SuppressWarnings("unchecked")
     public String processarQuestionario() {
 	try {
 	    List<Resposta> respostas = questionarioBusiness
@@ -82,8 +84,21 @@ public class PreencherQuestionarioAction implements Serializable {
 		jadeGateway.execute(commandCM);
 
 		if (commandCM.getCognitiveModel() != null) {
-		    System.out.println(commandCM.getCognitiveModel()
-			    .getLearningStyle());
+		    Integer style = commandCM.getCognitiveModel()
+			    .getLearningStyle();
+		    System.out.println();
+
+		    Query query = entityManager.createQuery(
+			    "from Dimensao where id = :style").setParameter(
+			    "style", style);
+
+		    List<Dimensao> listaDimensao = query.getResultList();
+		    Dimensao dimensao = null;
+
+		    if (listaDimensao != null && listaDimensao.size() > 0) {
+			dimensao = listaDimensao.get(0);
+			aluno.setDimensao(dimensao);
+		    }
 		} else {
 		    System.out.println("Não possui learning style");
 		}

@@ -16,6 +16,7 @@ import jade.core.behaviours.CyclicBehaviour;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+import br.unb.frank.domain.AgentPrefixEnum;
 import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 import br.unb.frank.ontology.modelinfer.action.SendQuestionnaire;
 import br.unb.frank.ontology.modelinfer.concept.CognitiveModel;
@@ -91,6 +92,17 @@ public class WorkgroupBehaviour extends CyclicBehaviour {
 
 		    own.setCognitiveModel(cognitiveModel);
 		    System.out.println("Resposta Recebida");
+		    // TODO Deveria fazer lookup do manager do aluno no
+		    // ambiente
+		    AID managerAID = new AID(
+			    AgentPrefixEnum.MANAGER.toString(), AID.ISLOCALNAME);
+
+		    ACLMessage successMsg = new ACLMessage(ACLMessage.INFORM);
+		    successMsg.setOntology(ontology.getName());
+		    successMsg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+		    successMsg.addReceiver(managerAID);
+
+		    myAgent.send(successMsg);
 		}
 
 	    } catch (UngroundedException e) {

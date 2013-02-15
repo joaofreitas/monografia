@@ -17,11 +17,17 @@
 						<h:outputLabel value="Olá #{aluno.nome}!"
 							rendered="#{identity.loggedIn}" />
 						<br />
-						<h:outputLabel
-							value="Verificamos que o questionário não foi preenchido." />
-						<h:commandLink includePageParams="false" propagation="none"
-							action="#{preencherQuestionarioAction.initQuestionario()}"
-							value="Preencher Questionário" />
+						<s:div rendered="#{aluno.dimensao == null}">
+							<h:outputLabel
+								value="Verificamos que o questionário não foi preenchido." />
+							<h:commandLink includePageParams="false" propagation="none"
+								action="#{preencherQuestionarioAction.initQuestionario()}"
+								value="Preencher Questionário" />
+						</s:div>
+						<s:div rendered="#{aluno.dimensao != null}">
+							<h:outputLabel value="#{aluno.dimensao.nome}" />
+							<h:outputLabel value="#{aluno.dimensao.descricao}" />
+						</s:div>
 					</h:panelGroup>
 				</h:form>
 			</rich:panel>

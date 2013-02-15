@@ -46,9 +46,9 @@ public class ReceiveMessageBehaviour extends SimpleBehaviour {
 	    return;
 	}
 	long dt = wakeupTime - System.currentTimeMillis();
-	if (dt > 0)
+	if (dt > 0) {
 	    block(dt);
-	else {
+	} else {
 	    finished = true;
 	    handle(msg);
 	}

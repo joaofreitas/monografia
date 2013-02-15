@@ -27,7 +27,7 @@ import br.unb.frank.ontology.modelinfer.predicate.Owns;
  * @author Joao Paulo
  * 
  */
-public class WorkGroupAgent extends Agent {
+public class WorkgroupAgent extends Agent {
 
     private String alunoId;
 

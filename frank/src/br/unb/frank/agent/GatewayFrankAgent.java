@@ -100,7 +100,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 
 	    } else if (command instanceof ProcessQuestionnaireCommand) {
 		// TODO Deveria procurar interface no ambiente
-		AID interfaceAID = new AID(AgentPrefixEnum.MANAGER.toString(),
+		AID workgroupAID = new AID(AgentPrefixEnum.MANAGER.toString(),
 			AID.ISLOCALNAME);
 
 		ProcessQuestionnaireCommand processCommand = (ProcessQuestionnaireCommand) command;
@@ -116,13 +116,40 @@ public class GatewayFrankAgent extends GatewayAgent {
 		msg.setLanguage(codec.getName());
 		msg.setOntology(modelInferOntology.getName());
 		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
-		msg.addReceiver(interfaceAID);
+		msg.addReceiver(workgroupAID);
 
 		getContentManager().fillContent(msg,
-			new Action(interfaceAID, sendQuestionnaire));
+			new Action(workgroupAID, sendQuestionnaire));
 
 		send(msg);
-		releaseCommand(command);
+
+		MessageTemplate mt = MessageTemplate.MatchSender(workgroupAID);
+
+		addBehaviour(new ReceiveMessageBehaviour(this, 1000, mt) {
+
+		    private static final long serialVersionUID = 1L;
+
+		    @Override
+		    public void handle(ACLMessage msg) {
+
+			if (msg != null) {
+			    if (ACLMessage.FAILURE == msg.getPerformative()) {
+				System.out
+					.println("Questionário não Processado...");
+			    } else if (ACLMessage.INFORM == msg
+				    .getPerformative()) {
+				System.out
+					.println("Questionário Processado com Sucesso!");
+			    }
+
+			}
+			
+			if (done()) {
+			    releaseCommand(command);
+			}
+
+		    }
+		});
 
 	    } else if (command instanceof RequestCognitiveModelCommand) {
 
@@ -152,30 +179,33 @@ public class GatewayFrankAgent extends GatewayAgent {
 		    public void handle(ACLMessage msg) {
 			System.out.print("Mensagem Recebida");
 
-			if (ACLMessage.FAILURE == msg.getPerformative()) {
-			    requestCognitiveModel.setCognitiveModel(null);
+			if (msg != null) {
+			    if (ACLMessage.FAILURE == msg.getPerformative()) {
+				requestCognitiveModel.setCognitiveModel(null);
 
-			} else {
-			    try {
-				Result result = (Result) getContentManager()
-					.extractContent(msg);
-				CognitiveModel cognitiveModel = (CognitiveModel) result
-					.getValue();
-				requestCognitiveModel
-					.setCognitiveModel(cognitiveModel);
+			    } else {
+				try {
+				    Result result = (Result) getContentManager()
+					    .extractContent(msg);
+				    CognitiveModel cognitiveModel = (CognitiveModel) result
+					    .getValue();
+				    requestCognitiveModel
+					    .setCognitiveModel(cognitiveModel);
 
-			    } catch (UngroundedException e) {
-				e.printStackTrace();
-			    } catch (CodecException e) {
-				e.printStackTrace();
-			    } catch (OntologyException e) {
-				e.printStackTrace();
+				} catch (UngroundedException e) {
+				    e.printStackTrace();
+				} catch (CodecException e) {
+				    e.printStackTrace();
+				} catch (OntologyException e) {
+				    e.printStackTrace();
+				}
+
 			    }
-
 			}
 
-			// O comando só é soltado após a msg de retorno
-			releaseCommand(command);
+			if (done()) {
+			    releaseCommand(command);
+			}
 		    }
 		});
 

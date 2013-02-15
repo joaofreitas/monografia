@@ -16,7 +16,7 @@ import jade.lang.acl.MessageTemplate;
 import jade.wrapper.AgentContainer;
 import jade.wrapper.AgentController;
 import jade.wrapper.StaleProxyException;
-import br.unb.frank.agent.workgroup.WorkGroupAgent;
+import br.unb.frank.agent.workgroup.WorkgroupAgent;
 import br.unb.frank.domain.AgentPrefixEnum;
 import br.unb.frank.ontology.frankmanagement.action.CreateWorkgroup;
 import br.unb.frank.ontology.frankmanagement.action.DestroyWorkgroup;
@@ -71,7 +71,7 @@ public class ManageWorkgroupBehaviour extends CyclicBehaviour {
 	try {
 	    AgentController wg = container.createNewAgent(
 		    AgentPrefixEnum.WORKGROUP + alunoId,
-		    WorkGroupAgent.class.getName(), args);
+		    WorkgroupAgent.class.getName(), args);
 	    wg.start();
 	} catch (StaleProxyException e) {
 	    e.printStackTrace();
