@@ -21,6 +21,7 @@ import org.jboss.seam.international.StatusMessages;
 import br.unb.frank.business.JadeBusiness;
 import br.unb.frank.business.QuestionarioBusiness;
 import br.unb.frank.domain.command.ProcessQuestionnaireCommand;
+import br.unb.frank.domain.command.RequestCognitiveModelCommand;
 import br.unb.frank.entity.Aluno;
 import br.unb.frank.entity.Pergunta;
 import br.unb.frank.entity.Questionario;
@@ -73,8 +74,19 @@ public class PreencherQuestionarioAction implements Serializable {
 	    ProcessQuestionnaireCommand command = jadeBusiness
 		    .criarProcessQuestionnaireCommand(questionario);
 
+	    RequestCognitiveModelCommand commandCM = new RequestCognitiveModelCommand();
+	    commandCM.setAlunoId(Long.valueOf(aluno.getId()));
+
 	    try {
 		jadeGateway.execute(command);
+		jadeGateway.execute(commandCM);
+
+		if (commandCM.getCognitiveModel() != null) {
+		    System.out.println(commandCM.getCognitiveModel()
+			    .getLearningStyle());
+		} else {
+		    System.out.println("Não possui learning style");
+		}
 	    } catch (StaleProxyException e) {
 		e.printStackTrace();
 	    } catch (ControllerException e) {

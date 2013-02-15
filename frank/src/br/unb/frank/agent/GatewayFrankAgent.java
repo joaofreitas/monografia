@@ -1,13 +1,13 @@
 package br.unb.frank.agent;
 
-import jade.content.Concept;
-import jade.content.ContentElement;
 import jade.content.lang.Codec;
 import jade.content.lang.Codec.CodecException;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
 import jade.content.onto.OntologyException;
+import jade.content.onto.UngroundedException;
 import jade.content.onto.basic.Action;
+import jade.content.onto.basic.Result;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.WakerBehaviour;
@@ -17,6 +17,7 @@ import jade.lang.acl.MessageTemplate;
 import jade.util.leap.ArrayList;
 import jade.util.leap.List;
 import jade.wrapper.gateway.GatewayAgent;
+import br.unb.frank.behaviour.ReceiveMessageBehaviour;
 import br.unb.frank.domain.AgentPrefixEnum;
 import br.unb.frank.domain.command.AnswerCommand;
 import br.unb.frank.domain.command.CreateAgentCommand;
@@ -39,7 +40,7 @@ public class GatewayFrankAgent extends GatewayAgent {
     private static final long serialVersionUID = 1L;
 
     private Codec codec = new SLCodec();
-    private Ontology ontology = FrankManagementOntology.getInstance();
+    private Ontology frankOntology = FrankManagementOntology.getInstance();
     private Ontology modelInferOntology = ModelInferOntology.getInstance();
 
     @Override
@@ -47,14 +48,14 @@ public class GatewayFrankAgent extends GatewayAgent {
 
 	getContentManager().registerLanguage(codec,
 		FIPANames.ContentLanguage.FIPA_SL0);
-	getContentManager().registerOntology(ontology);
+	getContentManager().registerOntology(frankOntology);
 	getContentManager().registerOntology(modelInferOntology);
 
 	super.setup();
     }
 
     @Override
-    protected void processCommand(Object command) {
+    protected void processCommand(final Object command) {
 
 	try {
 	    if (command instanceof CreateAgentCommand) {
@@ -64,7 +65,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 
 		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 		msg.setLanguage(codec.getName());
-		msg.setOntology(ontology.getName());
+		msg.setOntology(frankOntology.getName());
 		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
 		// TODO Deveria procurar interface no ambiente
@@ -75,7 +76,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, cw));
 		msg.addReceiver(interfaceAID);
 		send(msg);
-		// addBehaviour(new WaitServerResponse(this));
+		releaseCommand(command);
 
 	    } else if (command instanceof DestroyAgentCommand) {
 		DestroyWorkgroup cw = new DestroyWorkgroup();
@@ -84,7 +85,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 
 		ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
 		msg.setLanguage(codec.getName());
-		msg.setOntology(ontology.getName());
+		msg.setOntology(frankOntology.getName());
 		msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
 
 		// TODO Deveria procurar interface no ambiente
@@ -95,7 +96,7 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, cw));
 		msg.addReceiver(interfaceAID);
 		send(msg);
-		// addBehaviour(new WaitServerResponse(this));
+		releaseCommand(command);
 
 	    } else if (command instanceof ProcessQuestionnaireCommand) {
 		// TODO Deveria procurar interface no ambiente
@@ -121,38 +122,62 @@ public class GatewayFrankAgent extends GatewayAgent {
 			new Action(interfaceAID, sendQuestionnaire));
 
 		send(msg);
-		// addBehaviour(new WaitServerResponse(this, 2000));
+		releaseCommand(command);
 
 	    } else if (command instanceof RequestCognitiveModelCommand) {
 
-		RequestCognitiveModelCommand request = (RequestCognitiveModelCommand) command;
-		System.out.println("Recuperar Modelo Cognitivo");
+		final RequestCognitiveModelCommand requestCognitiveModel = (RequestCognitiveModelCommand) command;
+		String alunoId = requestCognitiveModel.getAlunoId().toString();
+		System.out.println("Recuperar Modelo Cognitivo " + alunoId);
+		// TODO Deveria fazer lookup do workgroup do aluno no
+		// ambiente
+		AID workgroupAID = new AID(AgentPrefixEnum.WORKGROUP + alunoId,
+			AID.ISLOCALNAME);
 
 		ACLMessage requestModelMsg = new ACLMessage(ACLMessage.REQUEST);
 		requestModelMsg.setLanguage(codec.getName());
-		requestModelMsg.setOntology(ontology.getName());
+		requestModelMsg.setOntology(modelInferOntology.getName());
 		requestModelMsg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+		requestModelMsg.addReceiver(workgroupAID);
 
-		String destiny = ((RequestCognitiveModelCommand) command)
-			.getAlunoId().toString();
-		// TODO Deveria fazer lookup do workgroup do aluno no
-		// ambiente
-		AID alunoAID = new AID(AgentPrefixEnum.WORKGROUP + destiny,
-			AID.ISLOCALNAME);
-		requestModelMsg.addReceiver(alunoAID);
+		send(requestModelMsg);
 
-		MessageTemplate mt = MessageTemplate.and(
-			MessageTemplate.MatchPerformative(ACLMessage.INFORM),
-			MessageTemplate.MatchSender(alunoAID));
+		MessageTemplate mt = MessageTemplate.MatchSender(workgroupAID);
 
-		ACLMessage respostaModeloMsg = blockingReceive(mt, 500);
-		if (respostaModeloMsg != null) {
-		    ContentElement content = getContentManager()
-			    .extractContent(respostaModeloMsg);
-		    Concept action = ((Action) content).getAction();
-		    SendQuestionnaire sendQuestionnaireAction = (SendQuestionnaire) action;
+		addBehaviour(new ReceiveMessageBehaviour(this, 1000, mt) {
 
-		}
+		    private static final long serialVersionUID = 1L;
+
+		    @Override
+		    public void handle(ACLMessage msg) {
+			System.out.print("Mensagem Recebida");
+
+			if (ACLMessage.FAILURE == msg.getPerformative()) {
+			    requestCognitiveModel.setCognitiveModel(null);
+
+			} else {
+			    try {
+				Result result = (Result) getContentManager()
+					.extractContent(msg);
+				CognitiveModel cognitiveModel = (CognitiveModel) result
+					.getValue();
+				requestCognitiveModel
+					.setCognitiveModel(cognitiveModel);
+
+			    } catch (UngroundedException e) {
+				e.printStackTrace();
+			    } catch (CodecException e) {
+				e.printStackTrace();
+			    } catch (OntologyException e) {
+				e.printStackTrace();
+			    }
+
+			}
+
+			// O comando só é soltado após a msg de retorno
+			releaseCommand(command);
+		    }
+		});
 
 	    }
 
@@ -162,7 +187,6 @@ public class GatewayFrankAgent extends GatewayAgent {
 	    e.printStackTrace();
 	}
 
-	releaseCommand(command);
     }
 
     @SuppressWarnings("serial")
