@@ -10,7 +10,5 @@
 
    <param name="from"/>
    <param name="nome" value="#{alunoList.aluno.nome}"/>
-   <param name="login" value="#{alunoList.aluno.login}"/>
-   <param name="password" value="#{alunoList.aluno.password}"/>
 
 </page>

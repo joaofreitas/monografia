@@ -1,0 +1,57 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.org/schema/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<h:outputLabel value="Olá #{docente.nome}!" />
+	<br />
+	<h:panelGrid columns="1">
+		<h:outputLabel value="Você não possu turmas"
+			rendered="#{docente.turmas.size() == 0}" />
+		<h:outputLabel
+			value="Você possui #{docente.turmas.size()} turma neste momento"
+			rendered="#{docente.turmas.size() == 1}" />
+
+		<rich:dataTable id="listaTurmasDocente" width="100%" rows="10"
+			rendered="#{docente.turmas.size() > 0}" value="#{docente.turmas}"
+			var="_turma">
+			<f:facet name="header">
+				<rich:columnGroup>
+					<rich:column>
+						<h:outputText value="Data Início" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value="Data Fim" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value="Quantidade de Alunos" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value="Ação" />
+					</rich:column>
+				</rich:columnGroup>
+			</f:facet>
+
+			<rich:column>
+				<h:outputText value="#{_turma.dataInicio}" />
+			</rich:column>
+			<rich:column>
+				<h:outputText value="#{_turma.dataFim}" />
+			</rich:column>
+			<rich:column>
+				<h:outputText value="#{_turma.alunos.size()}" />
+			</rich:column>
+			<rich:column>
+				<s:link view="/Turma.xhtml" value="View" propagation="none"
+					id="turmaViewId">
+					<f:param name="turmaId" value="#{_turma.id}" />
+				</s:link>
+			</rich:column>
+
+		</rich:dataTable>
+
+	</h:panelGrid>
+
+</ui:composition>

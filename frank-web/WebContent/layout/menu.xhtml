@@ -9,8 +9,9 @@
 		<s:link id="menuHomeId" view="/home.xhtml" value="Home"
 			propagation="none" />
 	</rich:toolbarGroup>
-	<rich:dropDownMenu showDelay="250" hideDelay="0" submitMode="none">
-		<f:facet name="label">Browse data</f:facet>
+	<rich:dropDownMenu showDelay="250" hideDelay="0" submitMode="none"
+		rendered="#{identity.loggedIn}">
+		<f:facet name="label">Visualizar Dados</f:facet>
 		<rich:menuItem>
 			<s:link view="/AlunoList.xhtml" value="Aluno List" id="AlunoId"
 				includePageParams="false" propagation="none" />
@@ -40,15 +41,20 @@
 				includePageParams="false" propagation="none" />
 		</rich:menuItem>
 	</rich:dropDownMenu>
-	<!-- @newMenuItem@ -->
-	<rich:toolbarGroup location="right">
-		<h:outputText id="menuWelcomeId"
-			value="signed in as: #{credentials.username}"
-			rendered="#{identity.loggedIn}" />
-		<s:link id="menuLoginId" view="/login.xhtml" value="Login"
-			rendered="#{not identity.loggedIn}" propagation="none" />
-		<s:link id="menuLogoutId" view="/home.xhtml"
-			action="#{authenticator.logout}" value="Logout"
-			rendered="#{identity.loggedIn}" propagation="none" />
-	</rich:toolbarGroup>
+	<rich:dropDownMenu showDelay="250" hideDelay="0" submitMode="none"
+		rendered="#{identity.loggedIn}">
+		<f:facet name="label">Autenticado como: <h:outputText
+				value="#{credentials.username}" />
+		</f:facet>
+		<rich:menuItem>
+			<s:link view="/home.xhtml" action="#{authenticator.logout}"
+				value="Logout" propagation="none" />
+		</rich:menuItem>
+	</rich:dropDownMenu>
+	<rich:dropDownMenu showDelay="250" hideDelay="0" submitMode="none"
+		rendered="#{not identity.loggedIn}">
+		<f:facet name="label">
+			<s:link view="/login.xhtml" value="Login" propagation="none" />
+		</f:facet>
+	</rich:dropDownMenu>
 </rich:toolbar>

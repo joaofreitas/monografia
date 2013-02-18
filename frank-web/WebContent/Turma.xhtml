@@ -13,20 +13,15 @@
     <rich:panel>
         <f:facet name="header">Turma Details</f:facet>
 
-        <s:decorate id="id" template="layout/display.xhtml">
-            <ui:define name="label">Id</ui:define>
-            <h:outputText value="#{turmaHome.instance.id}"/>
-        </s:decorate>
-
         <s:decorate id="dataInicio" template="layout/display.xhtml">
-            <ui:define name="label">Data inicio</ui:define>
+            <ui:define name="label">Data de Início</ui:define>
             <h:outputText value="#{turmaHome.instance.dataInicio}">
                 <f:convertDateTime type="date" dateStyle="short"/>
             </h:outputText>
         </s:decorate>
 
         <s:decorate id="dataFim" template="layout/display.xhtml">
-            <ui:define name="label">Data fim</ui:define>
+            <ui:define name="label">Data de Fim</ui:define>
             <h:outputText value="#{turmaHome.instance.dataFim}">
                 <f:convertDateTime type="date" dateStyle="short"/>
             </h:outputText>
@@ -56,29 +51,21 @@
         </f:facet>
     <div class="association" id="docenteParent">
 
-        <h:outputText value="There is no docente associated with this turma."
-                   rendered="#{turmaHome.instance.docente == null}"/>
+        <h:outputText value="Não existem alunos associados à essa turma."
+                   rendered="#{turmaHome.instance.alunos == null}"/>
 
-        <rich:dataTable var="_docente"
-                   value="#{turmaHome.instance.docente}"
-                rendered="#{turmaHome.instance.docente != null}"
+        <rich:dataTable var="_aluno"
+                   value="#{turmaHome.instance.alunos}"
+                rendered="#{turmaHome.instance.alunos != null}"
               rowClasses="rvgRowOne,rvgRowTwo"
                       id="docenteTable">
             <h:column>
-                <f:facet name="header">Id</f:facet>
-                <h:outputText value="#{_docente.id}"/>
-            </h:column>
-            <h:column>
                 <f:facet name="header">Nome</f:facet>
-                <h:outputText value="#{_docente.nome}"/>
+                <h:outputText value="#{_aluno.nome}"/>
             </h:column>
             <h:column>
-                <f:facet name="header">Login</f:facet>
-                <h:outputText value="#{_docente.login}"/>
-            </h:column>
-            <h:column>
-                <f:facet name="header">Password</f:facet>
-                <h:outputText value="#{_docente.password}"/>
+                <f:facet name="header">Estilo de Aprendizagem</f:facet>
+                <h:outputText value="#{_aluno.dimensao.nome}"/>
             </h:column>
             <h:column styleClass="action">
                 <f:facet name="header">Action</f:facet>

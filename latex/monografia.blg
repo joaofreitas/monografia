@@ -6,48 +6,65 @@ Warning--to sort, need author or key in omg20
 Warning--to sort, need author or key in kse
 Warning--to sort, need author or key in fipa-cal-spec
 Warning--to sort, need author or key in seamSite
+Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
+while executing---line 1090 of file plain.bst
+Warning--can't use both volume and number fields in geyer2001semeai
 Warning--empty note in editalFrank
+Warning--there's a number but no volume in de2009
+Warning--can't use both volume and number fields in rabelo2010identificacao
 Warning--there's a number but no series in novig95
+Warning--empty journal in soaresagente
+Warning--empty year in soaresagente
 Warning--there's a number but no series in wooldridge04
-You've used 22 entries,
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            619 strings with 7039 characters,
-and the built_in function-call counts, 5659 in all, are:
-= -- 542
-> -- 253
-< -- 3
-+ -- 107
-- -- 82
-* -- 323
-:= -- 960
-add.period$ -- 70
-call.type$ -- 22
-change.case$ -- 98
+            649 strings with 8239 characters,
+and the built_in function-call counts, 7588 in all, are:
+= -- 726
+> -- 338
+< -- 6
++ -- 142
+- -- 110
+* -- 459
+:= -- 1275
+add.period$ -- 87
+call.type$ -- 28
+change.case$ -- 130
 chr.to.int$ -- 0
-cite$ -- 29
-duplicate$ -- 231
-empty$ -- 481
-format.name$ -- 82
-if$ -- 1197
+cite$ -- 40
+duplicate$ -- 310
+empty$ -- 636
+format.name$ -- 110
+if$ -- 1595
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 26
-newline$ -- 112
-num.names$ -- 36
-pop$ -- 159
+int.to.str$ -- 28
+missing$ -- 32
+newline$ -- 141
+num.names$ -- 48
+pop$ -- 195
 preamble$ -- 1
-purify$ -- 85
+purify$ -- 111
 quote$ -- 0
-skip$ -- 143
+skip$ -- 199
 stack$ -- 0
-substring$ -- 192
-swap$ -- 31
-text.length$ -- 3
+substring$ -- 299
+swap$ -- 51
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
-warning$ -- 7
-while$ -- 43
-width$ -- 24
-write$ -- 229
-(There were 7 warnings)
+type$ -- 90
+warning$ -- 12
+while$ -- 62
+width$ -- 30
+write$ -- 291
+(There were 6 error messages)

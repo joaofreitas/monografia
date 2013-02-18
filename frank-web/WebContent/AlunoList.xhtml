@@ -19,17 +19,7 @@
                 <h:inputText id="nome" value="#{alunoList.aluno.nome}"/>
             </s:decorate>
 
-            <s:decorate template="layout/display.xhtml">
-                <ui:define name="label">Login</ui:define>
-                <h:inputText id="login" value="#{alunoList.aluno.login}"/>
-            </s:decorate>
-
-            <s:decorate template="layout/display.xhtml">
-                <ui:define name="label">Password</ui:define>
-                <h:inputText id="password" value="#{alunoList.aluno.password}"/>
-            </s:decorate>
-
-            <s:decorate template="layout/display.xhtml">
+                        <s:decorate template="layout/display.xhtml">
                 <ui:define name="label">Match</ui:define>
                 <h:selectOneRadio id="logic" value="#{alunoList.restrictionLogicOperator}" styleClass="radio">
                     <f:selectItem itemLabel="All" itemValue="and"/>
@@ -76,26 +66,6 @@
                 </ui:include>
             </f:facet>
             <h:outputText value="#{_aluno.nome}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">
-                <ui:include src="layout/sort.xhtml">
-                    <ui:param name="entityList" value="#{alunoList}"/>
-                    <ui:param name="propertyLabel" value="Login"/>
-                    <ui:param name="propertyPath" value="aluno.login"/>
-                </ui:include>
-            </f:facet>
-            <h:outputText value="#{_aluno.login}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">
-                <ui:include src="layout/sort.xhtml">
-                    <ui:param name="entityList" value="#{alunoList}"/>
-                    <ui:param name="propertyLabel" value="Password"/>
-                    <ui:param name="propertyPath" value="aluno.password"/>
-                </ui:include>
-            </f:facet>
-            <h:outputText value="#{_aluno.password}"/>
         </h:column>
         <rich:column styleClass="action">
             <f:facet name="header">Action</f:facet>

@@ -11,23 +11,12 @@
 		<s:div styleClass="info">
 			<h1>Bem Vindo ao Frank!</h1>
 			<rich:panel rendered="#{identity.loggedIn}">
-				<h:form id="formAluno">
-
-					<h:panelGroup>
-						<h:outputLabel value="Olá #{aluno.nome}!"
-							rendered="#{identity.loggedIn}" />
-						<br />
-						<s:div rendered="#{aluno.dimensao == null}">
-							<h:outputLabel
-								value="Verificamos que o questionário não foi preenchido." />
-							<h:commandLink includePageParams="false" propagation="none"
-								action="#{preencherQuestionarioAction.initQuestionario()}"
-								value="Preencher Questionário" />
-						</s:div>
-						<s:div rendered="#{aluno.dimensao != null}">
-							<h:outputLabel value="#{aluno.dimensao.nome}" />
-							<h:outputLabel value="#{aluno.dimensao.descricao}" />
-						</s:div>
+				<h:form id="form">
+					<h:panelGroup rendered="#{usuario.isAluno()}">
+						<ui:include src="/welcome-pages/_welcomeAluno.xhtml" />
+					</h:panelGroup>
+					<h:panelGroup rendered="#{usuario.isProfessor()}">
+						<ui:include src="/welcome-pages/_welcomeDocente.xhtml" />
 					</h:panelGroup>
 				</h:form>
 			</rich:panel>

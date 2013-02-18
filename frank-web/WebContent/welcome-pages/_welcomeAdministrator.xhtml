@@ -1,0 +1,73 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.org/schema/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<h:outputLabel value="Olá #{docente.nome}!" />
+	<br />
+	<h:panelGrid rendered="#{aluno.dimensao == null}" columns="2">
+		<h:outputLabel
+			value="Você possui #{docente.turmas.size()} neste momento" />
+
+		<rich:dataTable id="listaTurmasDocente" width="100%" rows="10"
+			value="#{docente.turmas}"
+			var="turma">
+			<f:facet name="header">
+				<rich:columnGroup>
+					<rich:column>
+						<h:outputText value="Data Início" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value="Data Fim" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value="Quantidade de Aluno" />
+					</rich:column>
+				</rich:columnGroup>
+			</f:facet>
+
+			<rich:column>
+				<h:outputText value="#{turma.dataInicio}" />
+			</rich:column>
+			<rich:column>
+				<h:outputText value="#{turma.dataFim}" />
+			</rich:column>
+			<rich:column>
+				<h:outputText value="#{turma.alunos.size()}" />
+			</rich:column>
+			<f:facet name="footer">
+				<rich:datascroller for="listaTurmasDocente" maxPages="5"
+					fastControls="hide">
+					<f:facet name="first">
+						<h:outputText value="#{msg.primeiro}" styleClass="scrollerCell" />
+					</f:facet>
+					<f:facet name="first_disabled">
+						<h:outputText value="#{msg.primeiro}" styleClass="scrollerCell" />
+					</f:facet>
+					<f:facet name="last">
+						<h:outputText value="#{msg.ultimo}" styleClass="scrollerCell" />
+					</f:facet>
+					<f:facet name="last_disabled">
+						<h:outputText value="#{msg.ultimo}" styleClass="scrollerCell" />
+					</f:facet>
+					<f:facet name="previous">
+						<h:outputText value="#{msg.anterior}" styleClass="scrollerCell" />
+					</f:facet>
+					<f:facet name="previous_disabled">
+						<h:outputText value="#{msg.anterior}" styleClass="scrollerCell" />
+					</f:facet>
+					<f:facet name="next">
+						<h:outputText value="#{msg.proximo}" styleClass="scrollerCell" />
+					</f:facet>
+					<f:facet name="next_disabled">
+						<h:outputText value="#{msg.proximo}" styleClass="scrollerCell" />
+					</f:facet>
+				</rich:datascroller>
+			</f:facet>
+		</rich:dataTable>
+
+	</h:panelGrid>
+
+</ui:composition>

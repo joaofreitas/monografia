@@ -42,6 +42,13 @@ Fabio~L. Bellifemine, Giovanni Caire, and Dominic Greenwood.
   Technology)}}.
 \newblock Wiley, April 2007.
 
+\bibitem{geyer2001semeai}
+Alessandra Rodrigues Débora Nice Ferrari José Emiliano Alex
+  Francisco~Oliveira Cláudio~Geyer, Adriana Soares~Pereira.
+\newblock Semeai-sistema multiagente de ensino e aprendizagem na internet.
+\newblock In {\em Anais do Simp{\'o}sio Brasileiro de Inform{\'a}tica na
+  Educa{\c{c}}{\~a}o}, volume~1, pages 293--299, 2001.
+
 \bibitem{cockburn01}
 A.~Cockburn.
 \newblock {\em Writing effective use cases}.
@@ -53,11 +60,22 @@ Germana~Menezes da~Nóbrega.
   sistema multi-agente para identificação de estilos de aprendizagem.
 \newblock October 2011.
 
+\bibitem{de2009}
+Gelson Luiz~Daldegan de~P{\'a}dua.
+\newblock A epistemologia gen{\'e}tica de jean piaget.
+\newblock {\em Revista FACEVV| 1{\textordmasculine} Semestre de}, (2):22--35,
+  2009.
+
 \bibitem{durfee89}
 E.H. Durfee, V.R. Lesser, and D.D. Corkill.
 \newblock Trends in cooperative distributed problem solving.
 \newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
   1(1):63--83, 1989.
+
+\bibitem{felder1988learning}
+Richard~M Felder and Linda~K Silverman.
+\newblock Learning and teaching styles in engineering education.
+\newblock {\em Engineering education}, 78(7):674--681, 1988.
 
 \bibitem{fowler04}
 Martin Fowler.
@@ -77,6 +95,12 @@ C.~LARMAN.
 \newblock {\em Utilizando UML e Padr{\~o}es}.
 \newblock Bookman, 3 edition, 2008.
 
+\bibitem{penterich2005ambientes}
+Eduardo PENTERICH.
+\newblock Ambientes virtuais de aprendizagem.
+\newblock {\em Sala de Aula e Tecnologias. S{\~a}o Paulo: Editora da
+  Universidade Metodista de S{\~a}o Paulo}, 2005.
+
 \bibitem{poole98}
 David Poole, Alan Mackworth, and Randy Goebel.
 \newblock {\em Computational Intelligence: A Logical Approach}.
@@ -86,6 +110,15 @@ David Poole, Alan Mackworth, and Randy Goebel.
 A.~Preece.
 \newblock Knowledge query and manipulation language: A review.
 \newblock {\em University of Aberdeen, Aberdeen, Tech. Rep}, 1997.
+
+\bibitem{rabelo2010identificacao}
+Humberto Rabelo, Wolgrand~Cardoso Braga~Jr, Le{\^o}nidas~Le{\~a}o Borges,
+  Ed~Porto Bezerra, Edna Gusm{\~a}o de~G{\'o}es Brennand, Tatiana~Aires
+  Tavares, and Guido~Lemos de~Souza~Filho.
+\newblock Identifica{\c{c}}{\~a}o do perfil individual intelectual do educando
+  no ambiente virtual de aprendizagem edulivre.
+\newblock In {\em Anais do Simp{\'o}sio Brasileiro de Inform{\'a}tica na
+  Educa{\c{c}}{\~a}o}, volume~1, 2010.
 
 \bibitem{novig95}
 Stuart Russel and Peter Novig.
@@ -110,6 +143,10 @@ Carlos Vinícius~Sarmento Silva.
   governamental.
 \newblock Acessado em 18/11/2011. Disponível em
   http://monografias.cic.unb.br/dspace/handle/123456789/318, Abril 2011.
+
+\bibitem{soaresagente}
+Volmer~Campos Soares and Vandor Roberto~Vilardi Rissoli.
+\newblock Agente inteligente no apoio ao ensino-aprendizagem.
 
 \bibitem{verschueren09}
 J.~Verschueren and J.O. {\"O}stman.

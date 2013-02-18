@@ -14,11 +14,11 @@ public class TurmaHome extends EntityHome<Turma> {
 
     private static final long serialVersionUID = 1L;
 
-    public void setDocenteId(Integer id) {
+    public void setTurmaId(Integer id) {
 	setId(id);
     }
 
-    public Integer getDocenteId() {
+    public Integer getTurmaId() {
 	return (Integer) getId();
     }
 

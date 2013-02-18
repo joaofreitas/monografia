@@ -20,16 +20,6 @@
             </s:decorate>
 
             <s:decorate template="layout/display.xhtml">
-                <ui:define name="label">Login</ui:define>
-                <h:inputText id="login" value="#{docenteList.docente.login}"/>
-            </s:decorate>
-
-            <s:decorate template="layout/display.xhtml">
-                <ui:define name="label">Password</ui:define>
-                <h:inputText id="password" value="#{docenteList.docente.password}"/>
-            </s:decorate>
-
-            <s:decorate template="layout/display.xhtml">
                 <ui:define name="label">Match</ui:define>
                 <h:selectOneRadio id="logic" value="#{docenteList.restrictionLogicOperator}" styleClass="radio">
                     <f:selectItem itemLabel="All" itemValue="and"/>
@@ -76,26 +66,6 @@
                 </ui:include>
             </f:facet>
             <h:outputText value="#{_docente.nome}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">
-                <ui:include src="layout/sort.xhtml">
-                    <ui:param name="entityList" value="#{docenteList}"/>
-                    <ui:param name="propertyLabel" value="Login"/>
-                    <ui:param name="propertyPath" value="docente.login"/>
-                </ui:include>
-            </f:facet>
-            <h:outputText value="#{_docente.login}"/>
-        </h:column>
-        <h:column>
-            <f:facet name="header">
-                <ui:include src="layout/sort.xhtml">
-                    <ui:param name="entityList" value="#{docenteList}"/>
-                    <ui:param name="propertyLabel" value="Password"/>
-                    <ui:param name="propertyPath" value="docente.password"/>
-                </ui:include>
-            </f:facet>
-            <h:outputText value="#{_docente.password}"/>
         </h:column>
         <rich:column styleClass="action">
             <f:facet name="header">Action</f:facet>

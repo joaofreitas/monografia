@@ -1,0 +1,27 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.org/schema/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<h:outputLabel value="Olá #{aluno.nome}!"
+		rendered="#{identity.loggedIn}" />
+	<br />
+	<h:panelGrid rendered="#{aluno.dimensao == null}" columns="2">
+		<h:outputLabel
+			value="Verificamos que o questionário não foi preenchido." />
+		<h:commandLink includePageParams="false" propagation="none"
+			action="#{preencherQuestionarioAction.initQuestionario()}"
+			value="Preencher Questionário" />
+	</h:panelGrid>
+	<h:panelGrid rendered="#{aluno.dimensao != null}" columns="2">
+		<h:outputText value="Estilo de Aprendizagem:"
+			style="font-weight: bold;" />
+		<h:outputLabel value="#{aluno.dimensao.nome}" />
+
+		<h:outputText value="Descrição:" style="font-weight: bold;" />
+		<h:outputLabel value="#{aluno.dimensao.descricao}" />
+	</h:panelGrid>
+
+</ui:composition>

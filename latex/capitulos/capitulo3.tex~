@@ -196,7 +196,7 @@ O diagrama da tarefa "Enviar Questionário"~\ref{fig:td-enviar-quest}, da regra~
 	\label{fig:td-enviar-quest}
 \end{figure}
 
-Ainda na regra~\emph{StudentInterface}, o diagrama da tarefa "Autenticar Aluno"~\ref{fig:td-autenticar-aluno} inicia com uma mensagem da plataforma web contendo o aluno a ser criado. A tarefa verifica a existência do aluno e em caso negativo, envia a mensagem de criação à tarefa~\ref{manager}. Caso contrário, envia uma mensagem de erro à plataforma Web.
+Ainda na regra~\emph{StudentInterface}, o diagrama da tarefa "Autenticar Aluno"~\ref{fig:td-autenticar-aluno} inicia com uma mensagem da plataforma web contendo o aluno a ser criado. A tarefa verifica a existência do aluno e em caso negativo, envia a mensagem de criação à tarefa~\emph{Manager}. Caso contrário, envia uma mensagem de erro à plataforma Web.
 
 \begin{figure}
 	\centering
@@ -401,9 +401,12 @@ O Jade porém possui uma forma nativa em que aplicações externas podem se cone
 Esse agente funcionará de forma distinta dos outros agentes da plataforma. O agente não receberá mensagens da aplicação Web, ao invés disso receberá objetos JAVA que representarão comandos. Para os diferentes comandos, o agente pode lançar diferentes mensagens na plataforma SMA. A aplicação~\emph{Frank SMA} implementa 6 comandos:
 
 \begin{itemize}
-	\item Apresentação - Responsável pela apresentação dos dados para o usuário em uma página web.
-	\item Controladora - Determina o componente a ser executado.
-	\item Modelo - Representação das entidades, auxiliam na interação com o banco dados.
+	\item AnswerCommand
+	\item CreateAgentCommand
+	\item DestroyAgentCommand
+	\item DimensionCommand
+	\item ProcessQuestionnaireCommand
+	\item RequestCognitiveModelCommand
 \end{itemize}
 
 

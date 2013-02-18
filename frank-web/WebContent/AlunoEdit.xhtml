@@ -37,26 +37,6 @@
             </s:decorate>
 
 
-            <s:decorate id="loginField" template="layout/edit.xhtml">
-                <ui:define name="label">Login</ui:define>
-                <h:inputTextarea id="login"
-                               cols="80"
-                               rows="3"
-                              value="#{alunoHome.instance.login}"/>
-            </s:decorate>
-
-
-            <s:decorate id="passwordField" template="layout/edit.xhtml">
-                <ui:define name="label">Password</ui:define>
-                <h:inputText id="password"
-                           size="15"
-                      maxlength="15"
-                          value="#{alunoHome.instance.password}">
-                    <a:ajax event="blur" render="passwordField" bypassUpdates="true"/>
-                </h:inputText>
-            </s:decorate>
-
-
             <div style="clear:both">
                 <span class="required">*</span>
                 required fields

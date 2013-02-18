@@ -98,6 +98,8 @@ public class PreencherQuestionarioAction implements Serializable {
 		    if (listaDimensao != null && listaDimensao.size() > 0) {
 			dimensao = listaDimensao.get(0);
 			aluno.setDimensao(dimensao);
+			
+			entityManager.merge(aluno);
 		    }
 		} else {
 		    System.out.println("Não possui learning style");

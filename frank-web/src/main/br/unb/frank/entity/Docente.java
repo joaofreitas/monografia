@@ -2,14 +2,17 @@ package br.unb.frank.entity;
 
 // Generated 29/01/2013 22:34:58 by Hibernate Tools 3.4.0.CR1
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -26,9 +29,8 @@ public class Docente implements java.io.Serializable {
 
     private int id;
     private String nome;
-    private String login;
-    private String password;
-    private Set<Turma> turmas = new HashSet<Turma>(0);
+    private List<Turma> turmas = new ArrayList<Turma>(0);
+    private Usuario usuario;
 
     public Docente() {
     }
@@ -38,12 +40,9 @@ public class Docente implements java.io.Serializable {
 	this.nome = nome;
     }
 
-    public Docente(int id, String nome, String login, String password,
-	    Set<Turma> turmas) {
+    public Docente(int id, String nome, List<Turma> turmas) {
 	this.id = id;
 	this.nome = nome;
-	this.login = login;
-	this.password = password;
 	this.turmas = turmas;
     }
 
@@ -69,31 +68,23 @@ public class Docente implements java.io.Serializable {
 	this.nome = nome;
     }
 
-    @Column(name = "login")
-    public String getLogin() {
-	return this.login;
-    }
-
-    public void setLogin(String login) {
-	this.login = login;
-    }
-
-    @Column(name = "password")
-    public String getPassword() {
-	return this.password;
-    }
-
-    public void setPassword(String password) {
-	this.password = password;
-    }
-
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "docente")
-    public Set<Turma> getTurmas() {
+    public List<Turma> getTurmas() {
 	return this.turmas;
     }
 
-    public void setTurmas(Set<Turma> turmas) {
+    public void setTurmas(List<Turma> turmas) {
 	this.turmas = turmas;
+    }
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_usuario")
+    public Usuario getUsuario() {
+	return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+	this.usuario = usuario;
     }
 
 }

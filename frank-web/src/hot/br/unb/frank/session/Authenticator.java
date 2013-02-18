@@ -21,8 +21,9 @@ import org.jboss.seam.security.Identity;
 
 import br.unb.frank.domain.command.CreateAgentCommand;
 import br.unb.frank.domain.command.DestroyAgentCommand;
-import br.unb.frank.domain.command.RequestCognitiveModelCommand;
 import br.unb.frank.entity.Aluno;
+import br.unb.frank.entity.Docente;
+import br.unb.frank.entity.Usuario;
 
 @Scope(ScopeType.APPLICATION)
 @Name("authenticator")
@@ -46,6 +47,14 @@ public class Authenticator {
     @Out(required = false)
     Aluno aluno;
 
+    @In(required = false)
+    @Out(required = false)
+    Docente docente;
+
+    @In(required = false)
+    @Out(required = false)
+    Usuario usuario;
+
     @SuppressWarnings("unchecked")
     public boolean authenticate() {
 	log.info("authenticating {0}", credentials.getUsername());
@@ -59,16 +68,24 @@ public class Authenticator {
 
 	Query query = entityManager
 		.createQuery(
-			"from Aluno where login = :username and password = :password")
+			"from Usuario where login = :username and senha = :password")
 		.setParameter("username", username)
 		.setParameter("password", password);
 
-	List<Aluno> listaAlunos = query.getResultList();
+	List<Usuario> listaUsuarios = query.getResultList();
 
-	if (listaAlunos != null && listaAlunos.size() > 0) {
+	if (listaUsuarios != null && listaUsuarios.size() > 0) {
 	    identity.addRole("admin");
-	    aluno = listaAlunos.get(0);
-	    sendCreateAgentMessage();
+
+	    usuario = listaUsuarios.get(0);
+	    if (usuario.getAlunos().size() > 0) {
+		aluno = usuario.getAlunos().get(0);
+		sendCreateAgentMessage();
+	    } else if (usuario.getDocentes().size() > 0) {
+		docente = usuario.getDocentes().get(0);
+	    } else {
+		return false;
+	    }
 
 	    return true;
 	}
@@ -80,10 +97,6 @@ public class Authenticator {
 	    CreateAgentCommand command = new CreateAgentCommand();
 	    command.setAlunoId(Long.valueOf(aluno.getId()));
 	    jadeGateway.execute(command);
-
-	    RequestCognitiveModelCommand commandCM = new RequestCognitiveModelCommand();
-	    commandCM.setAlunoId(Long.valueOf(aluno.getId()));
-	    jadeGateway.execute(commandCM);
 
 	} catch (StaleProxyException e) {
 	    log.error(e);

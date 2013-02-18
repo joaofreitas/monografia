@@ -2,9 +2,9 @@ package br.unb.frank.entity;
 
 // Generated 29/01/2013 22:34:58 by Hibernate Tools 3.4.0.CR1
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -35,7 +35,7 @@ public class Turma implements java.io.Serializable {
     private Docente docente;
     private Date dataInicio;
     private Date dataFim;
-    private Set<Aluno> alunos = new HashSet<Aluno>(0);
+    private List<Aluno> alunos = new ArrayList<Aluno>(0);
 
     public Turma() {
     }
@@ -47,7 +47,7 @@ public class Turma implements java.io.Serializable {
     }
 
     public Turma(int id, Docente docente, Date dataInicio, Date dataFim,
-	    Set<Aluno> alunos) {
+	    List<Aluno> alunos) {
 	this.id = id;
 	this.docente = docente;
 	this.dataInicio = dataInicio;
@@ -101,11 +101,11 @@ public class Turma implements java.io.Serializable {
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "turma_aluno", joinColumns = @JoinColumn(name = "id_turma"), inverseJoinColumns = @JoinColumn(name = "id_aluno"))
-    public Set<Aluno> getAlunos() {
+    public List<Aluno> getAlunos() {
 	return this.alunos;
     }
 
-    public void setAlunos(Set<Aluno> alunos) {
+    public void setAlunos(List<Aluno> alunos) {
 	this.alunos = alunos;
     }
 

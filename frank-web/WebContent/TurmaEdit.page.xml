@@ -10,7 +10,7 @@
    <action execute="#{turmaHome.wire}"/>
 
    <param name="turmaFrom"/>
-   <param name="turmaId" value="#{turmaHome.id}"/>
+   <param name="turmaId" value="#{turmaHome.turmaId}"/>
    <param name="docenteFrom"/>
    <param name="docenteId" value="#{docenteHome.docenteId}"/>
 

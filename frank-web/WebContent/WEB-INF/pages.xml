@@ -17,6 +17,9 @@
 			<rule if-outcome="responderPerguntas">
 				<redirect view-id="/formResponderPerguntas.xhtml" />
 			</rule>
+			<rule if-outcome="detalharTurma">
+				<redirect view-id="/DetalharTurma.xhtml" />
+			</rule>
 		</navigation>
 	</page>
 	

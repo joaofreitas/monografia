@@ -5,6 +5,8 @@
   <output ID="/formResponderPerguntas.xhtml" NAME="output"
    PATH="/formResponderPerguntas.xhtml"
    TARGET="#xformResponderPerguntas.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+  <output ID="/DetalharTurma.xhtml" NAME="output1"
+   PATH="/DetalharTurma.xhtml" TARGET="#xDetalharTurma.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
  </item>
  <item ID="org.jboss.seam.framework.EntityNotFoundException"
   NAME="exception:org.jboss.seam.framework.EntityNotFoundException"
@@ -77,4 +79,6 @@
   <output ID="/home.xhtml" NAME="output" PATH="/home.xhtml"
    TARGET="#xhome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
  </item>
+ <item NAME="#xDetalharTurma.xhtml" PATH="/DetalharTurma.xhtml"
+  SHAPE="408,249,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
 </diagram>

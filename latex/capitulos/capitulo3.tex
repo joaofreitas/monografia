@@ -196,7 +196,7 @@ O diagrama da tarefa "Enviar Questionário"~\ref{fig:td-enviar-quest}, da regra~
 	\label{fig:td-enviar-quest}
 \end{figure}
 
-Ainda na regra~\emph{StudentInterface}, o diagrama da tarefa "Autenticar Aluno"~\ref{fig:td-autenticar-aluno} inicia com uma mensagem da plataforma web contendo o aluno a ser criado. A tarefa verifica a existência do aluno e em caso negativo, envia a mensagem de criação à tarefa~\ref{manager}. Caso contrário, envia uma mensagem de erro à plataforma Web.
+Ainda na regra~\emph{StudentInterface}, o diagrama da tarefa "Autenticar Aluno"~\ref{fig:td-autenticar-aluno} inicia com uma mensagem da plataforma web contendo o aluno a ser criado. A tarefa verifica a existência do aluno e em caso negativo, envia a mensagem de criação à tarefa~\emph{Manager}. Caso contrário, envia uma mensagem de erro à plataforma Web.
 
 \begin{figure}
 	\centering
@@ -232,7 +232,7 @@ Agora na regra~\emph{StudentWorgroup}, o diagrama da tarefa "Processar Dados"~\r
 	\label{fig:td-processar-dados}
 \end{figure}
 
-O diagrama da tarefa "Atualizar Modelos"~\ref{td-atualizar-modelos} pode parecer mais complexo, porém sua execução é basicamente simples. Ele representa o recebimento das inferências cognitiva, metacognitiva e afetiva. A transição inicia-se com o recebimento de um desses modelos. A tarefa vai para o estado "Aguardar Modelo Completo", onde verifica se os três modelos já foram inferidos. Se a verificação for válida, a tarefa é terminada e o objetivo de inferência dos modelos é atingido. Caso contrário, a tarefa aguarda as outras inferências e muda seu estado quando elas chegarem, repetindo assim o fluxo inicial.
+O diagrama da tarefa "Atualizar Modelos"~\ref{fig:td-atualizar-modelos} pode parecer mais complexo, porém sua execução é basicamente simples. Ele representa o recebimento das inferências cognitiva, metacognitiva e afetiva. A transição inicia-se com o recebimento de um desses modelos. A tarefa vai para o estado "Aguardar Modelo Completo", onde verifica se os três modelos já foram inferidos. Se a verificação for válida, a tarefa é terminada e o objetivo de inferência dos modelos é atingido. Caso contrário, a tarefa aguarda as outras inferências e muda seu estado quando elas chegarem, repetindo assim o fluxo inicial.
 
 \begin{figure}
 	\centering
