@@ -372,7 +372,7 @@ Devido ao fato da linguagem KQML não ter performativos adequados, a ACL da FIPA
 As performativas~\emph{request} e~\emph{inform} consideradas principais pela especificação da FIPA, pois orientam toda a linguagem de comunicação. Além disso, é possível derivar as outras performativas por meio delas.
 
 
-\subsection{Ontologias}
+\subsubsection{Ontologias}
 
 Ontologia é um ramo da Filosofia que dedica-se a estudar e representar a natureza do ser, existência ou realidade. É um conceito formalização dos conceitos e relacionamentos que podem existir em um determinado universo. Para a Inteligência Artificial, é tudo aquilo que pode ser representado. De acordo com o autor~\cite{novig95}, a representação de conceitos e objetos pode ser entendida como Engenharia Ontológica:
 
