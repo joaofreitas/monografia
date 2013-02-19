@@ -42,14 +42,11 @@ O modelo mais famoso pela literatura da IE, o modelo de Felder trata dos os segu
 	\item Analítico
 \end{itemize}
 
-\section{Modelos de Solução}
-
-
-\subsection{Sistemas Multiagentes}
+\section{Sistemas Multiagentes}
 
 Este capítulo visa introduzir o conceito de sistemas multiagentes (SMA). Para tanto é necessário mostrar conceitos que são base para o entendimento de SMA, iniciando pela apresentanção alguns conceitos a cerca de Inteligencia Artificial (IA). Em seguida o trabalho disserta sobre a teoria relacionada à Agente, bem como suas arquiteturas. Só então são apresentados os conceitos de Sistemas Multiagentes (SMA), comunicação em um ambiente SMA e por fim a teoria sobre ontologias.
 
-\subsubsection{Inteligência artificial}
+\subsection{Inteligência artificial}
 
 De acordo com~\cite{poole98} identificamos que a definição de IA pode variar em duas dimensões principais. Usando a definição de sistemas computacionais que agem racionalmente temos:
 
@@ -63,7 +60,7 @@ Com o crescimento dos estudos relacionados a este campo a inteligência artifici
 
 Atualmente várias aplicações podem exigir demais de~\emph{hardwares} mais modestos tornando inviável o tempo de execução daquela aplicação, sendo necessário um investimento maior e consequentemente encarecendo o seu valor. Dessa forma outras abordagems fazem-se necessárias, como a distribução da aplicação em vários computadores que dividem a sua execução. Este é o campo de estudo da Inteligência Artificial Distribuída: Sistemas que são compostos por vários agentes coletivos, ou seja, distribuem o trabalho uns com os outros. Cada agente pode possuir uma capacidade diferente, sendo possível realizar a tarefa de modo paralelo. 
 
-\subsubsection{Agente}
+\subsection{Agente}
 
 De acordo com~\cite{novig95}, agentes são entidades (reais ou virtuais) que funcionam de forma autônoma em um ambiente, ou seja, não necessitam de intervenção humana para realizar processamento. Esse ambiente de funcionamento do agente geralmente contém vários outros agentes e é possível a comunicação entre eles através do ambiente por meio de troca de mensagens.
 
@@ -125,7 +122,7 @@ Já a noção forte de agente envolve os seguintes aspectos: Mobilidade, veracid
 	\item Cooperação: O agente coopera com o usuário.
 \end{itemize}
 
-\subsubsection{Arquitetura de agentes}
+\subsection{Arquitetura de agentes}
 
 A arquitetura de agentes varia de acordo com a complexidade da sua autonomia, ou seja, com a capacidade de reagir aos estímulos do ambiente. Conforme verificado em~\cite{novig95}, os tipos de arquitetura são: orientadas à tabela, reflexiva simples, reflexiva baseado em modelo, baseada em objetivo, baseada em utilidade.
 
@@ -143,7 +140,7 @@ Na arquitetura reflexiva baseada em objetivo, as ações do agente são tomadas 
 
 E por fim, a arquitetura reflexiva baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, resilientes e rápidas do que as outras. A capacidade de avaliação do agente é chamada de função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
 
-\subsubsection{Sistemas Multiagentes}
+\subsection{Sistemas Multiagentes}
 
 Sistemas multiagentes são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. Um agente possui um objeto que, normalmente, é distinto dos objetivos de outros agentes e pode ou não cooperar com outros agentes para a realização de uma tarefa.
 
@@ -183,7 +180,7 @@ Por fim as soluções dos subproblemas são integradas em uma resolução comple
 
 Com uma solução compartilhada de resolução de problemas, a arquitetura de sistemas multiagentes mostra-se bastante robusta neste quesito. É necessário porém saber dos detalhes da comunicação entre os agentes, a forma de envio das mensagens, as suas linguagens, bem como outras particularidades.
 
-\subsubsection{Comunicação}
+\subsection{Comunicação}
 
 A comunicação é um dos aspectos mais importantes no desenvolvimento de SMAs. Problemas de sincronização entre as partes que se comunicam devem ser devidamente estudados. A situação mais simples possível da comunicação, onde o agente A envia uma mensagem ao agente B que está prontamente disponível para receber a mensagem nem sempre é a o cenário mais recorrente. Para tanto, é necessário entender os pormenores da comunicação em um Sistema Multiagente.
 
@@ -216,7 +213,7 @@ Da mesma forma que a teoria dos atos de fala influênciou na arquitetura da comu
 	\item \emph{Knowledge Interchange Format} (KIF) - Criada para facilitar a troca de conhecimento entre agentes, suas declarações são providas de significados que podem ser compreensíveis a qualquer agente que conheça a estrutura da linguagem. Não possui foco na transmissão da mensagem~\cite{kifmanual}.
 \end{itemize}
 
-\paragraph{KQML}
+\subsubsection{KQML}
 
 A linguagem KQML define um protocolo para comunicação de agentes, onde cada mensagem tem um enunciado performativo (~\emph{performative}), que varia com o seu objetivo, e em seguida os parâmetros da mensagem. O KQML define vários enunciados performativos que distinguem-se pelo objetivo da mensagem, sendo dividas em três categorias: Discursivas, intervenção/mecânica e facilitação e~\emph{networking}. Por exemplo, uma mensagem com o tipo performativo~\emph{ask-one} indica que o agente remetente A deseja saber uma resposta do agente B sobre o conteúdo da mensagem. Em~\cite{preece1997}, é possível verificar que a última versão da linguagem define mais de trinta enunciados performativos.
 
@@ -291,7 +288,7 @@ De acordo com~\cite{wooldridge04}, a adoção desta linguagem pela comunidade de
 
 Dessa forma, novos desenvolvimentos de linguagens fizeram-se necessários.
 
-\paragraph{KIF}
+\subsubsection{KIF}
 A linguagem foi desenvolvida para expressar conhecimento a cerca de um determinado domínio, sendo possível assim a troca de conhecimentos entre agentes. De acordo com~\cite{kifmanual}, a linguagem possui as seguintes características:
 \begin{itemize}
 	\item Tem uma semântica declarativa, sendo possível entender o seu significado sem a necessidade de um interpretador para manipulação das expressões.
@@ -307,7 +304,7 @@ O trecho de código~\ref{code:exemplo-kif} ilustra um exemplo de expressão na l
 (= (temperature ml ) ( scalar 83 Celsius))
 \end{lstlisting}
 
-\subsubsection{Linguagem de Comunicação de Agentes FIPA}
+\subsection{Linguagem de Comunicação de Agentes FIPA}
 
 Após as críticas à linguagem KQML, o consórcio~\emph{Foundation for Intelligent Physical Agents} (FIPA) começou a trabalhar em 1995 no desenvolvimento da padronização de SMAs. O núcleo dessa padronização foi o desenvolvimento de uma linguagem de comunicação de agentes (ACL) padronizada para todas as plataformas.
 
@@ -372,7 +369,7 @@ Devido ao fato da linguagem KQML não ter performativos adequados, a ACL da FIPA
 As performativas~\emph{request} e~\emph{inform} consideradas principais pela especificação da FIPA, pois orientam toda a linguagem de comunicação. Além disso, é possível derivar as outras performativas por meio delas.
 
 
-\subsubsection{Ontologias}
+\subsection{Ontologias}
 
 Ontologia é um ramo da Filosofia que dedica-se a estudar e representar a natureza do ser, existência ou realidade. É um conceito formalização dos conceitos e relacionamentos que podem existir em um determinado universo. Para a Inteligência Artificial, é tudo aquilo que pode ser representado. De acordo com o autor~\cite{novig95}, a representação de conceitos e objetos pode ser entendida como Engenharia Ontológica:
 
@@ -423,121 +420,6 @@ O código~\ref{code:exemplo-xml} possui um exemplo de ontologia escrito na lingu
 		...
 	<Pais>
 \end{lstlisting}
-
-A Linguagem Unificada de Modelagem,~\emph{Unified Modeling Language} (UML) é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens, objetivando o entendimento dos artefatos de forma rápida e clara e resultando em uma semântica para o projeto em questão. De acordo com~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
-
-O UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
-A linguagem ajuda o entendimento de como o software foi projetado, como ocorre a comunicação entre seus objetos, como suas classes são organizadas, quais são os atores que são envolvidos na utilização do software, dentre outras possibilidades de representação.
-
-Em~\cite{fowler04}, é possível separar o uso do UML de três formas distintas, diferindo entre as modelagens utilizadas e o objetivo de uso. As três formas são: Rascunho, planta de software e como linguagem de programação. 
-
-A utilização como rascunho é utilizada para facilitar a comunicação entre as pessoas envolvidas no projeto, sejam desenvolvedores discutindo funcionalidades do software ou gestores explicando funcionalidades em alto nível. O objetivo neste uso é a comunicação de alguns aspectos do sistema de forma rápida, sem a necessidade de formalizar artefatos para o projeto.
-
-A utilização do UML como planta de software são documentos detalhados que são criados para documentação do software, sendo divida em duas sub-categorias: Engenharia reversa e engenharia avante. Na engenharia reversa, os diagramas são gerados a partir de uma ferramenta que faz a leitura do código fonte e gera os diagramas desejados, que são utilizados para auxiliar o leitor no entendimento do sistema. Na engenharia avante, a idéia é modelar o sistema detalhadamente antes de qualquer desenvolvimento, prevendo quais serão os módulos do sistema, bem como a sua a comunicação.
-
-No uso como linguagem de programação, o UML é utilizado para geração de código executável por ferramentas avançadas de modelagem. Esse modo requer a modelagem de estado e comportamento do sistema, para fins de detalhar todo o comportamento e lógica do sistema em código.
-
-\subsection{Diagramas UML}
-
-O UML 2 descreve 13 tipos de diagramas que podem ser categorizados por estruturais e comportamentais. A imagem~\ref{fig:categorias-diagramas} ilustra essa categorização de diagramas.
-
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.75]{images/categorias-diagramas.png}
-	\caption{Diagramas categorizados por Estrutura e Comportamento. Fonte~\cite{fowler04}.}
-	\label{fig:categorias-diagramas}
-\end{figure}
-
-Apesar da grande quantidade diagramas envolvidos no UML, nem todos os processos de desenvolvimentos de software utilizam todos eles. A maioria das pessoas utiliza-se de um conjunto de poucos diagramas para modelagem do sistema. Nas próximas subseções, serão detalhados apenas os seguintes diagramas, que são necessários para o entendimento deste trabalho:
-
-\begin{itemize}
-	\item Diagrama de Caso de uso
-	\item Diagrama de sequência
-\end{itemize}
-
-\subsubsection{Diagrama de Caso de Uso}
-Casos de uso são relatos textuais que são utilizados para descobrir e descrever os requisitos do sistema. Consiste da descrição de como um ator utiliza uma funcionalidade do sistema para atingir algum objetivo relacionado. De acordo com~\cite{larman08}, os casos de uso devem ser prioritariamente desenvolvidos de forma textual e o seu respectivo diagrama deve ser desenvolvido de forma secundária, somente para ilustrar o relato textual.
-
-Um dos objetivos do caso de uso é a facilidade do levantamento dos requisitos, tanto para os analistas de um sistema, quanto para os clientes envolvidos. A definição de uma modelagem em comum facilidade entre as partes faz do caso de uso uma boa maneira de simplificar o entendimento do comportamento do sistema~\cite{larman08}, bem como envolver todos as partes interessadas do sistema(~\emph{stakeholders}) na construção do mesmo. De acordo com~\cite{cockburn01}, o caso de uso é um contrato de como será o comportamento do sistema. Este contrato será feito por meio dos atores que existirão, da sua interação com o sistema, bem como os cenários existentes.
-
-Duas definições fazem-se necessárias para o entendimento do caso de uso. A primeira delas é o "Ator" do caso de uso. Ele é um objeto com um comportamento definido no sistema. É possível definir o ator como uma pessoa, organização ou mesmo o próprio sistema (quando utiliza serviços do próprio sistema), desde que tenham sempre um papel relacionado. Existem três tipos de atores relacionados ao sistema:
-\begin{itemize}
-	\item Ator Principal: Seus objetivos são satisfeitos por meio da utilização do sistema.
-	\item Ator de Suporte: Fornece algum serviço para o sistema.
-	\item Ator de Bastidor: Expressa algum interesse pelo comportamento do caso de uso.
-\end{itemize}
-
-A segunda definição envolvida é a de cenário. Um cenário é uma sequência de interações entre os atores e o sistema. Os cenários são separados por ações de interesses de atores. Logo o caso de uso pode ser considerado como um conjunto de cenários de interações de atores com o sistema.
-
-Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema, bem como o seu comportamento. Existem três formas de se escrever um caso de uso, diferindo em seu nível de formalidade e formatos: Resumido, informal e completo. Este trabalho usará o nível de caso de uso completo, devido ao fato de ser estruturado e mostrar mais detalhes. Os casos de uso são estruturados de diversas formas de acordo com a literatura, sendo a mais famosa~\cite{larman08} a estrutura utilizada por Alistar Cockburn~\cite{cockburn01} e detalhada na tabela~\ref{tabela:topicos_uc}
-
-\begin{table}
-	\caption{Estruturação Detalhada de Caso de Uso}
-	\begin{tabular}{|p{5cm} | p{9cm}|}
-		\hline
-		\textbf{Seção do Caso de Uso}	& \textbf{Significado} \\
-		\hline
-		Nome do Caso de Uso 	& Nome do caso de uso, iniciando-se com um verbo  \\
-		\hline
-		Escopo	& Escopo descrito pelo caso de uso \\
-		\hline
-		Nível	& Podem ser níveis de objetivo de usuário (quando descrevem os cenários para atingir o objetivo do usuário) ou nível de subfunção (subpassos para dar suporte a um objetivo de usuário) \\
-		\hline
-		Ator Principal	& O ator que procura os serviços para atingir seus objetivos  \\
-		\hline
-		Interessados e Interesses	& Significado  \\
-		\hline
-		Pré-Condições	& Condições que antecedem o caso de uso e são necessárias para atingir os objetivos \\
-		\hline
-		Garantia de Sucesso	& Objetos que podem ser analisados após a execução do caso de uso a fim de validar a correta execução do sistema  \\
-		\hline
-		Cenário de Sucesso Principal	& Chamado também de fluxo básico, este cenário descreve o fluxo principal do sistema que satisfaz os interesses dos interessados.  \\
-		\hline
-		Extensões	& Chamado também de fluxos alternativos, são fluxos auxiliares ou cenários de erros que são relacionados ao cenário de sucesso principal \\
-		\hline
-		Requisitos Especiais	& Registram requisitos não funcionais do sistema e que estão relacionados com o caso de uso \\
-		\hline
-		Lista de Variantes Tecnologias de Dados	& Listagem de dificuldades técnicas, desafios técnicos que valem a pena registrar no caso de uso \\
-		\hline
-		Frequência de ocorrência	& Frequência de ocorrência deste caso de uso \\
-		\hline
-	\end{tabular}
-	\label{tabela:topicos_uc}
-\end{table}
-
-A diagramação do caso de uso por UML é uma forma de representação do sistema, mostrando fronteiras do sistema, comunicação e comportamento entre os atores. A figura~\ref{fig:diagrama-uml} mostra a sugestão de diagramação do caso de uso, propondo forma de representação de atores, casos de uso e atores auxiliares.
-
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.75]{images/exemplo-uml.png}
-	\caption{Sugestões de notação de caso de uso proposto por ~\cite{larman08}}
-	\label{fig:diagrama-uml}
-\end{figure}
-
-\subsubsection{Diagrama de Sequência}
-O Diagrama de Sequência é um documento criado para ilustrar os eventos descritos em um caso de uso de forma sequencial e temporal, mostrando a interação de atores externos ao sistema e os eventos que eles geram durante essa interação. A UML possui uma notação específica para este diagrama, onde todos os elementos são representados.
-
-Neste diagrama, são representados para cada cenário do caso de uso os eventos que os atores geram, bem como a ordem da sua interação. No diagrama os atores são representados na parte superior (com a mesma notação do diagrama de caso de uso). Abaixo dos atores é apresentada a linha de tempo, crescendo de cima para baixo. 
-
-Durante a interação do ator com o sistema, eventos de sistema são gerados e iniciam toda a execução do cenário do caso de uso, ou operação do sistema. A execução dos eventos ocorre até o último evento cronológico na linha do tempo. Os eventos gerados pela interação entre os atores ocorrem na linha do tempo de forma cronológica e ordenada com a mesma ordem dos eventos do cenário do caso de uso.
-
-A nomenclatura dos eventos deve sempre iniciar com um verbo, podendo ser seguida de um substantivo. Além disso, deve-se sempre expressar a nomenclatura em níveis genéricos verbais, nunca detalhando a funcionalidade do sistema.
-
-A imagem~\ref{fig:exemplo-diagrama-sequencia} ilustra a notação de diagramas de sequência com todos os pontos que foram até agora expostos. Nela, é possível identificar a interação entre um ator e uma entidade do sistema. É fácil identificar que os eventos estão ocorrendo de forma ordenada de cima para baixo.
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.75]{images/exemplo-diagrama-sequencia.png}
-	\caption{Notação de diagrama de sequência, exibindo a comunicação de um ator e uma entidade (sistema)}
-	\label{fig:exemplo-diagrama-sequencia}
-\end{figure}
-
-O primeiro evento é iniciado pelo ator, onde o método~\emph(listarProdutos()) da Entidade é invocado. Esse método gera a resposta ~\emph(produtos) para o ator. A interação seguinte acontece dentro de um retângulo, do tipo~\emph{loop} e de nome "Verificar". Esse retângulo permite que o diagrama de sequências represente um loop, onde todos os eventos serão repetidos enquanto a condição de guarda for verdadeira, no caso do exemplo, enquanto retorno for igual a~\emph{true}. O UML permite diversos operadores além do loop, como por exemplo a negação, a assertiva, o~\emph{break}, dentre outros.
-
-Dentro do retângulo, o ator chama o método~\emph(realizarOperacao), enviado o parâmetro~\emph{operação}. A entidade retorna um valor, que será testado na guarda para a continuidade da conversação. Por fim, o ator chama o método~\emph{finalizarAcao} da entidade. Por não haver outra interação em seguida, o cenário é considerado como encerrado. 
-
-A importância do desenho de um diagrama de sequência está no fato de detalhar os eventos do sistema que são gerados pela interação de atores externos, pois assim é possível ter uma análise comportamental do sistema com base nesses eventos. Neste nível de análise, é possível estudar e projetar o comportamento do sistema no nível de projetar o que ele faz, porém sem necessariamente explicar como o faz~\cite{larman08}.
-
-O diagrama de sequência geralmente está relacionado com o caso de uso, primeiramente pelo fato de descrever um cenário de caso de uso, mas também pelo fato de o caso de uso conter todos os detalhes do cenário. Ele apenas deixará claro a interação entre os atores e os eventos derivados dessa interação.
 
 \section{Multiagent Systems Engineering - MASE}\label{section:mase}
 
@@ -704,7 +586,133 @@ A imagem~\ref{fig:exemplo-diagrama-deploy} contém um exemplo de diagrama de dep
 	\label{fig:exemplo-diagrama-deploy}
 \end{figure}
 
-\section{Java Agent Development Framework - JADE}
+\section{Ferramentas Utilizadas}
+
+Nesta seção estão reunidos as tecnologias que auxiliares ao desenvolvimento do SMA. A primeira seção explica alguns diagramas que são definidos na~\emph{Unified Modeling Language}, necessários para entender os passos da~\emph{Multiagent System Engineering}.
+ 
+Em seguida é explicado os conceitos relacionados ao~\emph{middleware} JADE, bem como a sua arquitetura, o funcionamento dos agentes e os agentes que possuem interface gráfica.
+
+Por fim, este capítulo disserta a respeito da ferramenta JBoss Seam, responsável por interligar os principais~\emph{frameworks} JAVA e facilitar o desenvolvimento de aplicações Web.
+
+\subsection{Unified Modeling Language}
+
+A Linguagem Unificada de Modelagem,~\emph{Unified Modeling Language} (UML) é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens, objetivando o entendimento dos artefatos de forma rápida e clara e resultando em uma semântica para o projeto em questão. De acordo com~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
+
+O UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
+A linguagem ajuda o entendimento de como o software foi projetado, como ocorre a comunicação entre seus objetos, como suas classes são organizadas, quais são os atores que são envolvidos na utilização do software, dentre outras possibilidades de representação.
+
+Em~\cite{fowler04}, é possível separar o uso do UML de três formas distintas, diferindo entre as modelagens utilizadas e o objetivo de uso. As três formas são: Rascunho, planta de software e como linguagem de programação. 
+
+A utilização como rascunho é utilizada para facilitar a comunicação entre as pessoas envolvidas no projeto, sejam desenvolvedores discutindo funcionalidades do software ou gestores explicando funcionalidades em alto nível. O objetivo neste uso é a comunicação de alguns aspectos do sistema de forma rápida, sem a necessidade de formalizar artefatos para o projeto.
+
+A utilização do UML como planta de software são documentos detalhados que são criados para documentação do software, sendo divida em duas sub-categorias: Engenharia reversa e engenharia avante. Na engenharia reversa, os diagramas são gerados a partir de uma ferramenta que faz a leitura do código fonte e gera os diagramas desejados, que são utilizados para auxiliar o leitor no entendimento do sistema. Na engenharia avante, a idéia é modelar o sistema detalhadamente antes de qualquer desenvolvimento, prevendo quais serão os módulos do sistema, bem como a sua a comunicação.
+
+No uso como linguagem de programação, o UML é utilizado para geração de código executável por ferramentas avançadas de modelagem. Esse modo requer a modelagem de estado e comportamento do sistema, para fins de detalhar todo o comportamento e lógica do sistema em código.
+
+\subsubsection{Diagramas UML}
+
+O UML 2 descreve 13 tipos de diagramas que podem ser categorizados por estruturais e comportamentais. A imagem~\ref{fig:categorias-diagramas} ilustra essa categorização de diagramas.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.75]{images/categorias-diagramas.png}
+	\caption{Diagramas categorizados por Estrutura e Comportamento. Fonte~\cite{fowler04}.}
+	\label{fig:categorias-diagramas}
+\end{figure}
+
+Apesar da grande quantidade diagramas envolvidos no UML, nem todos os processos de desenvolvimentos de software utilizam todos eles. A maioria das pessoas utiliza-se de um conjunto de poucos diagramas para modelagem do sistema. Nas próximas subseções, serão detalhados apenas os seguintes diagramas, que são necessários para o entendimento deste trabalho:
+
+\begin{itemize}
+	\item Diagrama de Caso de uso
+	\item Diagrama de sequência
+\end{itemize}
+
+\paragraph{Diagrama de Caso de Uso}
+Casos de uso são relatos textuais que são utilizados para descobrir e descrever os requisitos do sistema. Consiste da descrição de como um ator utiliza uma funcionalidade do sistema para atingir algum objetivo relacionado. De acordo com~\cite{larman08}, os casos de uso devem ser prioritariamente desenvolvidos de forma textual e o seu respectivo diagrama deve ser desenvolvido de forma secundária, somente para ilustrar o relato textual.
+
+Um dos objetivos do caso de uso é a facilidade do levantamento dos requisitos, tanto para os analistas de um sistema, quanto para os clientes envolvidos. A definição de uma modelagem em comum facilidade entre as partes faz do caso de uso uma boa maneira de simplificar o entendimento do comportamento do sistema~\cite{larman08}, bem como envolver todos as partes interessadas do sistema(~\emph{stakeholders}) na construção do mesmo. De acordo com~\cite{cockburn01}, o caso de uso é um contrato de como será o comportamento do sistema. Este contrato será feito por meio dos atores que existirão, da sua interação com o sistema, bem como os cenários existentes.
+
+Duas definições fazem-se necessárias para o entendimento do caso de uso. A primeira delas é o "Ator" do caso de uso. Ele é um objeto com um comportamento definido no sistema. É possível definir o ator como uma pessoa, organização ou mesmo o próprio sistema (quando utiliza serviços do próprio sistema), desde que tenham sempre um papel relacionado. Existem três tipos de atores relacionados ao sistema:
+\begin{itemize}
+	\item Ator Principal: Seus objetivos são satisfeitos por meio da utilização do sistema.
+	\item Ator de Suporte: Fornece algum serviço para o sistema.
+	\item Ator de Bastidor: Expressa algum interesse pelo comportamento do caso de uso.
+\end{itemize}
+
+A segunda definição envolvida é a de cenário. Um cenário é uma sequência de interações entre os atores e o sistema. Os cenários são separados por ações de interesses de atores. Logo o caso de uso pode ser considerado como um conjunto de cenários de interações de atores com o sistema.
+
+Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema, bem como o seu comportamento. Existem três formas de se escrever um caso de uso, diferindo em seu nível de formalidade e formatos: Resumido, informal e completo. Este trabalho usará o nível de caso de uso completo, devido ao fato de ser estruturado e mostrar mais detalhes. Os casos de uso são estruturados de diversas formas de acordo com a literatura, sendo a mais famosa~\cite{larman08} a estrutura utilizada por Alistar Cockburn~\cite{cockburn01} e detalhada na tabela~\ref{tabela:topicos_uc}
+
+\begin{table}
+	\caption{Estruturação Detalhada de Caso de Uso}
+	\begin{tabular}{|p{5cm} | p{9cm}|}
+		\hline
+		\textbf{Seção do Caso de Uso}	& \textbf{Significado} \\
+		\hline
+		Nome do Caso de Uso 	& Nome do caso de uso, iniciando-se com um verbo  \\
+		\hline
+		Escopo	& Escopo descrito pelo caso de uso \\
+		\hline
+		Nível	& Podem ser níveis de objetivo de usuário (quando descrevem os cenários para atingir o objetivo do usuário) ou nível de subfunção (subpassos para dar suporte a um objetivo de usuário) \\
+		\hline
+		Ator Principal	& O ator que procura os serviços para atingir seus objetivos  \\
+		\hline
+		Interessados e Interesses	& Significado  \\
+		\hline
+		Pré-Condições	& Condições que antecedem o caso de uso e são necessárias para atingir os objetivos \\
+		\hline
+		Garantia de Sucesso	& Objetos que podem ser analisados após a execução do caso de uso a fim de validar a correta execução do sistema  \\
+		\hline
+		Cenário de Sucesso Principal	& Chamado também de fluxo básico, este cenário descreve o fluxo principal do sistema que satisfaz os interesses dos interessados.  \\
+		\hline
+		Extensões	& Chamado também de fluxos alternativos, são fluxos auxiliares ou cenários de erros que são relacionados ao cenário de sucesso principal \\
+		\hline
+		Requisitos Especiais	& Registram requisitos não funcionais do sistema e que estão relacionados com o caso de uso \\
+		\hline
+		Lista de Variantes Tecnologias de Dados	& Listagem de dificuldades técnicas, desafios técnicos que valem a pena registrar no caso de uso \\
+		\hline
+		Frequência de ocorrência	& Frequência de ocorrência deste caso de uso \\
+		\hline
+	\end{tabular}
+	\label{tabela:topicos_uc}
+\end{table}
+
+A diagramação do caso de uso por UML é uma forma de representação do sistema, mostrando fronteiras do sistema, comunicação e comportamento entre os atores. A figura~\ref{fig:diagrama-uml} mostra a sugestão de diagramação do caso de uso, propondo forma de representação de atores, casos de uso e atores auxiliares.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.75]{images/exemplo-uml.png}
+	\caption{Sugestões de notação de caso de uso proposto por ~\cite{larman08}}
+	\label{fig:diagrama-uml}
+\end{figure}
+
+\paragraph{Diagrama de Sequência}
+O Diagrama de Sequência é um documento criado para ilustrar os eventos descritos em um caso de uso de forma sequencial e temporal, mostrando a interação de atores externos ao sistema e os eventos que eles geram durante essa interação. A UML possui uma notação específica para este diagrama, onde todos os elementos são representados.
+
+Neste diagrama, são representados para cada cenário do caso de uso os eventos que os atores geram, bem como a ordem da sua interação. No diagrama os atores são representados na parte superior (com a mesma notação do diagrama de caso de uso). Abaixo dos atores é apresentada a linha de tempo, crescendo de cima para baixo. 
+
+Durante a interação do ator com o sistema, eventos de sistema são gerados e iniciam toda a execução do cenário do caso de uso, ou operação do sistema. A execução dos eventos ocorre até o último evento cronológico na linha do tempo. Os eventos gerados pela interação entre os atores ocorrem na linha do tempo de forma cronológica e ordenada com a mesma ordem dos eventos do cenário do caso de uso.
+
+A nomenclatura dos eventos deve sempre iniciar com um verbo, podendo ser seguida de um substantivo. Além disso, deve-se sempre expressar a nomenclatura em níveis genéricos verbais, nunca detalhando a funcionalidade do sistema.
+
+A imagem~\ref{fig:exemplo-diagrama-sequencia} ilustra a notação de diagramas de sequência com todos os pontos que foram até agora expostos. Nela, é possível identificar a interação entre um ator e uma entidade do sistema. É fácil identificar que os eventos estão ocorrendo de forma ordenada de cima para baixo.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.75]{images/exemplo-diagrama-sequencia.png}
+	\caption{Notação de diagrama de sequência, exibindo a comunicação de um ator e uma entidade (sistema)}
+	\label{fig:exemplo-diagrama-sequencia}
+\end{figure}
+
+O primeiro evento é iniciado pelo ator, onde o método~\emph(listarProdutos()) da Entidade é invocado. Esse método gera a resposta ~\emph(produtos) para o ator. A interação seguinte acontece dentro de um retângulo, do tipo~\emph{loop} e de nome "Verificar". Esse retângulo permite que o diagrama de sequências represente um loop, onde todos os eventos serão repetidos enquanto a condição de guarda for verdadeira, no caso do exemplo, enquanto retorno for igual a~\emph{true}. O UML permite diversos operadores além do loop, como por exemplo a negação, a assertiva, o~\emph{break}, dentre outros.
+
+Dentro do retângulo, o ator chama o método~\emph(realizarOperacao), enviado o parâmetro~\emph{operação}. A entidade retorna um valor, que será testado na guarda para a continuidade da conversação. Por fim, o ator chama o método~\emph{finalizarAcao} da entidade. Por não haver outra interação em seguida, o cenário é considerado como encerrado. 
+
+A importância do desenho de um diagrama de sequência está no fato de detalhar os eventos do sistema que são gerados pela interação de atores externos, pois assim é possível ter uma análise comportamental do sistema com base nesses eventos. Neste nível de análise, é possível estudar e projetar o comportamento do sistema no nível de projetar o que ele faz, porém sem necessariamente explicar como o faz~\cite{larman08}.
+
+O diagrama de sequência geralmente está relacionado com o caso de uso, primeiramente pelo fato de descrever um cenário de caso de uso, mas também pelo fato de o caso de uso conter todos os detalhes do cenário. Ele apenas deixará claro a interação entre os atores e os eventos derivados dessa interação.
+
+
+\subsection{Java Agent Development Framework - JADE}
 
 JADE é um~\emph{middleware} desenvolvido em 1988 pela Telecom Italia, posteriormente (2000) tornando-se em um projeto open source. Seu desenvolvimento de baixo acoplamento permite que seja possível integrar várias bibliotecas auxiliares (~\emph{addons}) para facilitar o desenvolvimento de aplicações.
 
@@ -727,7 +735,7 @@ A mobilidade de agentes entre máquinas também é feita de forma transparente p
 
 Uma das características mais importantes do~\emph{middleware} é o suporte nativo à ontologias e linguagens de comunicação FIPA. As ontologias podem ser modeladas (expressando ações, conceitos e predicados) de forma simples e clara, além de ser possível restringir as ontologias à determinados agentes que devem a conhecer.
 
-\subsection{Arquitetura}
+\subsubsection{Arquitetura}
 
 A imagem~\ref{fig:arquitetura-jade} representa a arquitetura principal do funcionamento do JADE. Nela, é possível observar os principais elementos da arquitetura JADE distribuídos em três máquinas (dois servidores e um~\emph{desktop}). Cada máquina possui um container onde vários agentes residem.
 
@@ -744,7 +752,7 @@ Além disso, o container principal possui uma tabela global para descrição de 
 
 O primeiro deles é o~\emph{Directory Facilitator} (DF), agente responsável por registrar todos os serviços disponíveis na plataforma. O segundo agente é o~\emph{Agent Management System} (AMS) é o agente responsável por supervisionar toda a plataforma, registrando os agentes que estão rodando, bem como o seu estado. 
 
-\subsection{Implementação dos Agentes}
+\subsubsection{Implementação dos Agentes}
 O JADE define a classe abstrata~\emph{Agent}, que é a base para todos os agentes definidos. O desenvolvedor tem apenas o trabalho de extender esta classe e implementar o comportamento no método~\emph{setup()}. O fato de extender a classe abstrata implica em herdar várias características já definidas pelo JADE (registro, configuração, etc.) e métodos que podem ser chamados para a implementação do comportamento do agente.
 
 Cada agente possui um identificador único (Agent ID - AID) que identifica o agente em toda plataforma. Por padrão, o formato do AID possui primeiramente o nome do agente seguido do caracter '@', por fim o endereço da plataforma onde o agente está. Este AID é atribuído durante o registro do agente no AMS. Neste registro, é possível também registrar os serviços do agente no DF.
@@ -760,7 +768,7 @@ Conforme dito anteriormente, o método~\emph{setup()} deverá ser implementado e
 
 Os comportamentos são separados em primitivos e compostos. A diferença entre ambos é a possibilidade dos comportamentos compostos poderem agregar vários outros comportamentos simples ou compostos, sendo eles:~\emph{ParallelBehaviour, SequentialBehaviour}. De maneira distinta, os comportamentos primitivos tem relação direta com o tempo, acontecendo durante um período de espera ou após o envio de uma mensagem. São eles:~\emph{SimpleBehaviour, CyclicBehaviour, TickerBehaviour, OneShotBehaviour, WakerBehaviour} e~\emph{ReceiverBehaviour}.
 
-\subsection{Ciclo de Vida dos Agentes}
+\subsubsection{Ciclo de Vida dos Agentes}
 O JADE implementa o ciclo de vida especificado pela FIPA, podendo variar entre vários agentes de forma simples. Os seguintes estados são possíveis na plataforma:
 
 \begin{itemize}
@@ -774,7 +782,7 @@ O JADE implementa o ciclo de vida especificado pela FIPA, podendo variar entre v
 
 Para cada uma das transições de estados existem métodos que são invocados em um momento anterior. Eles são úteis para a execução de ações que antecedem a mudança de estado. Por exemplo: Durante a mudança do estado ACTIVE para DELETE, o método~\emph{doDelete()} é encarregado de implementar ações que antecedam o fim do agente, como que o agente desfaça o registro dos seus serviços no DF.
 
-\subsection{Interface Gráfica}
+\subsubsection{Interface Gráfica}
 O JADE permite o desenvolvimento de agentes com suporte à interface gráfica. Dessa forma, é possível desenvolver uma interação simples do agente com o ser humano.
 
 
@@ -788,7 +796,7 @@ A imagem~\ref{fig:tela-jade} apresenta o exemplo básico do agente RMA, onde é 
 	\label{fig:tela-jade}
 \end{figure}
 
-\section{JBoss Seam}
+\subsection{JBoss Seam}
 
 No mundo corporativo do JAVA, muitos frameworks são responsáveis por partes específicas de uma aplicação. Seguindo as especificações propostas para a plataforma (JSR), as aplicações implementam integrações com o banco de dados (Hibernate, JPA), integração com a camada de visualização (Struts 1 e 2, JSF), injeção de dependência (Weld e Spring). Porém a integração destes frameworks nem sempre é trivial, demandando muito tempo dos desenvolvedores a correta configuração.
 
