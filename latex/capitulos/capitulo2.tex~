@@ -48,7 +48,7 @@ Este capítulo visa introduzir o conceito de sistemas multiagentes (SMA). Para t
 
 \subsection{Inteligência artificial}
 
-De acordo com~\cite{poole98} identificamos que a definição de IA pode variar em duas dimensões principais. Usando a definição de sistemas computacionais que agem racionalmente temos:
+A definição de IA pode variar em duas dimensões principais~\cite{poole98}. Usando a definição de sistemas computacionais que agem racionalmente temos:
 
 \begin{quote}
 \emph{Computational Intelligence is the study of the design of intelligent agents.}
@@ -64,7 +64,7 @@ Atualmente várias aplicações podem exigir demais de~\emph{hardwares} mais mod
 
 De acordo com~\cite{novig95}, agentes são entidades (reais ou virtuais) que funcionam de forma autônoma em um ambiente, ou seja, não necessitam de intervenção humana para realizar processamento. Esse ambiente de funcionamento do agente geralmente contém vários outros agentes e é possível a comunicação entre eles através do ambiente por meio de troca de mensagens.
 
-Em geral o funcionamento de agentes acontece de forma a perceberem o ambiente em que estão por meio de sensores, fazem análises com base nessa interação inicial e por fim podem agir sobre o ambiente de forma a modifica-lo por meio de efetuadores. A figura~\ref{fig:agente-basico} é uma ilustração do que foi dito.
+Na representação do funcionamento de agentes~\ref{fig:agente-basico}, os agentes funcionam de forma a perceber o ambiente em que estão por meio de sensores, fazem análises com base na interação inicial e por fim podem agir sobre o ambiente de forma a modifica-lo por meio de efetuadores, conforme representado.
 
 \begin{figure}
 	\centering
@@ -592,7 +592,7 @@ Nesta seção estão reunidos as tecnologias que auxiliares ao desenvolvimento d
  
 Em seguida é explicado os conceitos relacionados ao~\emph{middleware} JADE, bem como a sua arquitetura, o funcionamento dos agentes e os agentes que possuem interface gráfica.
 
-Por fim, este capítulo disserta a respeito da ferramenta JBoss Seam, responsável por interligar os principais~\emph{frameworks} JAVA e facilitar o desenvolvimento de aplicações Web.
+Por fim, este capítulo disserta a respeito da ferramenta JBoss Seam, responsável por interligar os principais~\emph{frameworks} JAVA e facilitar o desenvolvimento de aplicações Web dinâmicas.
 
 \subsection{Unified Modeling Language}
 
@@ -601,17 +601,17 @@ A Linguagem Unificada de Modelagem,~\emph{Unified Modeling Language} (UML) é um
 O UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
 A linguagem ajuda o entendimento de como o software foi projetado, como ocorre a comunicação entre seus objetos, como suas classes são organizadas, quais são os atores que são envolvidos na utilização do software, dentre outras possibilidades de representação.
 
-Em~\cite{fowler04}, é possível separar o uso do UML de três formas distintas, diferindo entre as modelagens utilizadas e o objetivo de uso. As três formas são: Rascunho, planta de software e como linguagem de programação. 
+É possível separar o uso do UML de três formas distintas~\cite{fowler04}, diferindo entre as modelagens utilizadas e o objetivo de uso. As três formas são: Rascunho, planta de software e como linguagem de programação. 
 
 A utilização como rascunho é utilizada para facilitar a comunicação entre as pessoas envolvidas no projeto, sejam desenvolvedores discutindo funcionalidades do software ou gestores explicando funcionalidades em alto nível. O objetivo neste uso é a comunicação de alguns aspectos do sistema de forma rápida, sem a necessidade de formalizar artefatos para o projeto.
 
-A utilização do UML como planta de software são documentos detalhados que são criados para documentação do software, sendo divida em duas sub-categorias: Engenharia reversa e engenharia avante. Na engenharia reversa, os diagramas são gerados a partir de uma ferramenta que faz a leitura do código fonte e gera os diagramas desejados, que são utilizados para auxiliar o leitor no entendimento do sistema. Na engenharia avante, a idéia é modelar o sistema detalhadamente antes de qualquer desenvolvimento, prevendo quais serão os módulos do sistema, bem como a sua a comunicação.
+A utilização do UML como planta de software são documentos detalhados que são criados para documentação do software, sendo divida em duas sub-categorias: Engenharia reversa e engenharia normal. Na engenharia reversa, os diagramas são gerados a partir de uma ferramenta que faz a leitura do código fonte e gera os diagramas desejados, que são utilizados para auxiliar o leitor no entendimento do sistema. Na engenharia normal, a idéia é modelar o sistema detalhadamente antes de qualquer desenvolvimento, prevendo quais serão os módulos do sistema, bem como a sua a comunicação.
 
 No uso como linguagem de programação, o UML é utilizado para geração de código executável por ferramentas avançadas de modelagem. Esse modo requer a modelagem de estado e comportamento do sistema, para fins de detalhar todo o comportamento e lógica do sistema em código.
 
 \subsubsection{Diagramas UML}
 
-O UML 2 descreve 13 tipos de diagramas que podem ser categorizados por estruturais e comportamentais. A imagem~\ref{fig:categorias-diagramas} ilustra essa categorização de diagramas.
+O UML 2.0 descreve 13 tipos de diagramas~\ref{fig:categorias-diagramas} que podem ser categorizados por estruturais e comportamentais.
 
 \begin{figure}
 	\centering
@@ -624,7 +624,7 @@ Apesar da grande quantidade diagramas envolvidos no UML, nem todos os processos 
 
 \begin{itemize}
 	\item Diagrama de Caso de uso
-	\item Diagrama de sequência
+	\item Diagrama de Sequência
 \end{itemize}
 
 \paragraph{Diagrama de Caso de Uso}
@@ -641,7 +641,7 @@ Duas definições fazem-se necessárias para o entendimento do caso de uso. A pr
 
 A segunda definição envolvida é a de cenário. Um cenário é uma sequência de interações entre os atores e o sistema. Os cenários são separados por ações de interesses de atores. Logo o caso de uso pode ser considerado como um conjunto de cenários de interações de atores com o sistema.
 
-Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema, bem como o seu comportamento. Existem três formas de se escrever um caso de uso, diferindo em seu nível de formalidade e formatos: Resumido, informal e completo. Este trabalho usará o nível de caso de uso completo, devido ao fato de ser estruturado e mostrar mais detalhes. Os casos de uso são estruturados de diversas formas de acordo com a literatura, sendo a mais famosa~\cite{larman08} a estrutura utilizada por Alistar Cockburn~\cite{cockburn01} e detalhada na tabela~\ref{tabela:topicos_uc}
+Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema, bem como o seu comportamento. Existem três formas de se escrever um caso de uso, diferindo em seu nível de formalidade e formatos: Resumido, informal e completo. Este trabalho usará o nível de caso de uso completo, devido ao fato de ser estruturado e mostrar mais detalhes. Os casos de uso são estruturados de diversas formas de acordo com a literatura, sendo a mais famosa~\cite{larman08} a estrutura utilizada por Alistar Cockburn~\cite{cockburn01} e detalhada neste trabalho.~\ref{tabela:topicos_uc}
 
 \begin{table}
 	\caption{Estruturação Detalhada de Caso de Uso}
@@ -677,7 +677,7 @@ Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema
 	\label{tabela:topicos_uc}
 \end{table}
 
-A diagramação do caso de uso por UML é uma forma de representação do sistema, mostrando fronteiras do sistema, comunicação e comportamento entre os atores. A figura~\ref{fig:diagrama-uml} mostra a sugestão de diagramação do caso de uso, propondo forma de representação de atores, casos de uso e atores auxiliares.
+A diagramação do caso de uso por UML é uma forma de representação do sistema, mostrando fronteiras do sistema, comunicação e comportamento entre os atores. Em~\ref{fig:diagrama-uml} é mostrado a sugestão de diagramação do caso de uso, propondo forma de representação de atores, casos de uso e atores auxiliares.
 
 \begin{figure}
 	\centering
@@ -695,7 +695,7 @@ Durante a interação do ator com o sistema, eventos de sistema são gerados e i
 
 A nomenclatura dos eventos deve sempre iniciar com um verbo, podendo ser seguida de um substantivo. Além disso, deve-se sempre expressar a nomenclatura em níveis genéricos verbais, nunca detalhando a funcionalidade do sistema.
 
-A imagem~\ref{fig:exemplo-diagrama-sequencia} ilustra a notação de diagramas de sequência com todos os pontos que foram até agora expostos. Nela, é possível identificar a interação entre um ator e uma entidade do sistema. É fácil identificar que os eventos estão ocorrendo de forma ordenada de cima para baixo.
+Na ilustração da notação de diagramas de sequência~\ref{fig:exemplo-diagrama-sequencia} é possível identificar a interação entre um ator e uma entidade do sistema. É fácil identificar que os eventos estão ocorrendo de forma ordenada de cima para baixo.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.75]{images/exemplo-diagrama-sequencia.png}
