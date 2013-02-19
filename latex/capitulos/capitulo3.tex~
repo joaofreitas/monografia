@@ -1,5 +1,7 @@
-\chapter{Metodologia de desenvolvimento}
+\chapter{Proposta de Solução}
 
+
+\section{Metodologia de desenvolvimento}
 Para a realização deste trabalho, foi planejada uma metodologia de desenvolvimento na qual objetivou-se a construção da arquitetura do SMA por meio de uma metologia de desenvolvimento de SMAs. Inicialmente, foi necessário um levantamento de bibliografias relacionadas à Informática na Educação para o entendimento do problema do trabalho, além de levantamentos de uso de SMA em contextos pegagógicos.
 
 Em seguida foi aplicada, foi realizado estudos aprofundados na metodologia MASE para a implementação deste trabalho. Após o levantamento inicial, seu uso é divido em duas fases, conforme explicado na seção~\ref{section:mase}, sendo a primeira delas essêncial para o levantamento dos requisitos necessários para cumprir os objetivos. A segunda fase foi importante para a distribuição das regras entre os agentes que existem no sistema. As primeiras subseções deverão detalhar a modelagem.
@@ -232,7 +234,7 @@ Agora na regra~\emph{StudentWorgroup}, o diagrama da tarefa "Processar Dados"~\r
 	\label{fig:td-processar-dados}
 \end{figure}
 
-O diagrama da tarefa "Atualizar Modelos"~\ref{td-atualizar-modelos} pode parecer mais complexo, porém sua execução é basicamente simples. Ele representa o recebimento das inferências cognitiva, metacognitiva e afetiva. A transição inicia-se com o recebimento de um desses modelos. A tarefa vai para o estado "Aguardar Modelo Completo", onde verifica se os três modelos já foram inferidos. Se a verificação for válida, a tarefa é terminada e o objetivo de inferência dos modelos é atingido. Caso contrário, a tarefa aguarda as outras inferências e muda seu estado quando elas chegarem, repetindo assim o fluxo inicial.
+O diagrama da tarefa "Atualizar Modelos"~\ref{fig:td-atualizar-modelos} pode parecer mais complexo, porém sua execução é basicamente simples. Ele representa o recebimento das inferências cognitiva, metacognitiva e afetiva. A transição inicia-se com o recebimento de um desses modelos. A tarefa vai para o estado "Aguardar Modelo Completo", onde verifica se os três modelos já foram inferidos. Se a verificação for válida, a tarefa é terminada e o objetivo de inferência dos modelos é atingido. Caso contrário, a tarefa aguarda as outras inferências e muda seu estado quando elas chegarem, repetindo assim o fluxo inicial.
 
 \begin{figure}
 	\centering

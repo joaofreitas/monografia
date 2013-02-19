@@ -14,20 +14,18 @@ Na perspectiva da Informática na Educação (IE), a abordagem chamada Sistemas 
 
 Determinar o estilo de aprendizagem mostra-se uma estratégia fundamental para que a transmissão de informações e vivências entre alunos e professores torne-se mais eficaz e perceptível, promovendo a criação de informações cada vez mais relevantes para o planejamento, acompanhamento e avaliação dos aprendizes.
 
-Assim, conhecer os fatores relacionados ao processo de aprendizagem exige que as ferramentas computacionais aplicadas ao ensino consigam determinar eficientemente os estilos de aprendizagem. Dessa forma, aplicações tendem a ser mais complexas vistas ao alto grau de processamento que estas técnicas podem assumir.
+Assim, conhecer os fatores relacionados ao processo de aprendizagem exige que as ferramentas computacionais aplicadas ao ensino consigam determinar eficientemente os estilos de aprendizagem. Dessa forma, aplicações tendem a ser mais complexas vistas ao alto grau de processamento que estas técnicas podem exigir.
 
 \section{Problema}
-Os ambientes educacionais de aprendizagem não possuem inferência de modelo do estudante, pois sua implementação seguindo modelo cliente-servidor não é apropriada para tal finalidade. Além disso, a alta carga da aplicação devido ao fato de muitos acessos dos alunos pode prejudicar uma aplicaçao centralizada, necessitando de um sistema que processasse em múltiplos locais.
+Os ambientes educacionais de aprendizagem não possuem uma arquitetura apropriada para a inferência de modelos multidimensionais, pois a abordagem baseada em cliente-servidor não é apropriada para tal finalidade.
 
-\section{Objetivos do Projeto}
-Tendo em vista o cenário atual apresentado, o objetivo geral deste trabalho é propor a arquitetura distribuída de um ambiente computacional, bem como sua construção, baseada em Sistemas Multiagentes, capaz de construir e manter um modelo do estudante, a partir do qual os estilos de aprendizagens desse estudante poderão ser identificados e informados ao docente por meio de uma interface web.
+\section{Objetivos}
+Tendo em vista o cenário atual apresentado, o presente trabalho tem como objetivo definir uma arquitetura distribuída na Web para auxiliar o processo de ensino-aprendizagem por meio da abordagem de sistema multiagente. 
 
-Os objetivos específicos serão devidamente justificados na próxima subseção, bem como idealizada a forma de atingi-los.
+Esta abordagem permitirá a construção e manutenção de um modelo multidimensional do estudante, a partir do qual os estilos de aprendizagens desse estudante poderão ser identificados e informados ao docente. A abordagem de sistemas multiagentes permite a decomposição do problema na modelagem multidimensional em vários subproblemas menores, diminuindo a complexidade da resolucão. Além disso, a habilidade social dos agentes pode permitir a interação com outros modelos de alunos visando comparações e validações do modelo.
 
-Usando tecnologias existentes e consolidadas, a arquitetura proposta irá usar o framework~\emph{JADE}, que é completamente desenvolvido na linguagem~\emph{JAVA} e simplifica a implementação de Sistemas Multiagentes (SMA) que cumprem as especificações FIPA. A arquitetura proposta também englobará uma interface web que utiliza a plataforma~\emph{open source JBoss Seam}, desenvolvida para auxiliar a construção de aplicações dinâmicas para a internet de forma simples e ágil.
 
-\section{Objetivos Específicos do Projeto}
-Este trabalho foi norteado pelo documento do projeto Frank~\cite{editalFrank}, sendo construído como uma proposta ao problema nele proposto. A partir deste documento, é possível identificar os objetivos específicos derivados da construção do ambiente computacional para manutenção do modelo do aluno. Mais especificamente, os objetivos específicos deste trabalho são:
+Especificamente, os objetivos específicos deste trabalho são:
 \begin{itemize}
  	\item Objetivo específico 1: Obter uma modelagem da arquitetura geral do SMA Frank utilizando-se da metodologia~\emph{Multiagent System Engineering} (MASE), proposta como uma solução de Engenharia de Software para o desenvolvimento de SMA;
 	\item Objetivo específico 2: Obter uma implementação da arquitetura geral do SMA Frank;
@@ -36,11 +34,30 @@ Este trabalho foi norteado pelo documento do projeto Frank~\cite{editalFrank}, s
 	\item Objetivo específico 5: propor uma interface do agente assistente de cognição com o docente;
 \end{itemize}
 
-A seguinte estrutura desse trabalho consiste na divisão de capítulos visando facilitar a leitura e organizar os conceitos que perfazem o desenvolvimento deste trabalho:
+\section{Metodologia}
+A metodologia utilizada para a realização deste trabalho é composta das seguintes atividades:
 \begin{itemize}
-	\item O presente capítulo contém a introdução, onde o trabalho é justificado e os objetivos são esclarecidos.
+ 	\item Aprofundado estudo dos conceitos de Informática na Educação, Sistemas Multiagentes e~\emph{Multiagent Systems Engineering} (MASE).
+	\item Estudo e pesquisa do~\emph{middleware} JADE e a sua integração com aplicações externas.
+	\item Baseado nos estudos feitos, a modelagem da Solução utilizando a metodologia MASE.
+	\item Desenvolvimento da aplicação multiagente com base na pesquisa a respeito do~\emph{JADE}.
+	\item Desenvolvimento da aplicação web e a sua integração com o sistema multiagente.
+	\item Testes em laboratório da solução desenvolvida e suas conclusões.
+\end{itemize}
+
+O aprofundamento dos estudos em Informática na Educação e Sistemas Multiagentes é importante para orientar o desenvolvimento deste trabalho com base na teoria e garantir as melhores práticas.
+
+Norteado pela teoria acerca do~\emph{Multiagent Systems Engineering}, a modelagem da solução será composta por uma série de diagramas que irão justificar as escolhas da arquitetura proposta.
+
+Usando tecnologias existentes e consolidadas, a arquitetura proposta irá usar o framework~\emph{JADE}, que é completamente desenvolvido na linguagem~\emph{JAVA} e simplifica a implementação de Sistemas Multiagentes (SMA) que cumprem as especificações FIPA. A arquitetura proposta também englobará uma interface web que utiliza a plataforma~\emph{open source JBoss Seam}, desenvolvida para auxiliar a construção de aplicações dinâmicas para a internet de forma simples e ágil.
+
+Os testes deste trabalho serão realizados por meio de simulações com alunos e docentes. Considerando o cenário do aluno, ele deve autenticar-se e utilizar o sistema para a verificação do seu estilo de aprendizagem, bem como visualizar a criação dos agentes do seu grupo de trabalho. O cenário do docente deve possibilitar a visualização do estilo de aprendizagem dos seus alunos.
+
+\section{Estrutura do Trabalho}
+Este trabalho está  consiste na divisão de capítulos visando facilitar a leitura e organizar os conceitos que perfazem o desenvolvimento deste trabalho:
+\begin{itemize}
 	\item Capítulo 2 contém todos os fundamentos teóricos necessários para o desenvolvimento desse trabalho.
 	\item Capítulo 3 contém a proposta de solução composta pela metodologia, modelagem da arquitetura e implementação.
-	\item Capítulo 4 contém a experimentação e análise de resultados.
+	\item Capítulo 4 contém os testes realizados.
 	\item Por fim, o capítulo 5 relata a conclusão e trabalhos futuros.
 \end{itemize}
