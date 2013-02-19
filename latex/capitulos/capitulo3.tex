@@ -1,8 +1,27 @@
 \chapter{Proposta de Solução}
 
-O presente
+O presente capítulo apresenta as características da aplicação Frank, bem como detalha a modelagem da solução e a sua arquitetura. Além disso, o capítulo explica a metodologia de desenvolvimento utilizada do trabalho.
 
-\section{Metodologia de desenvolvimento}
+Basicamente, a solução é composta por sete diferentes tipos de agentes:
+\begin{enumerate}
+	\item \emph{GatewayAgent} - Agente responsável pela interface com a plataforma web que irá interagir com os alunos e docentes.
+	\item \emph{WebServiceAgent} - Agente responsável pela interface com o Ambiente Virtual de Aprendizagem.
+	\item \emph{ManagerAgent} - Agente responsável pelo controle da plataforma
+	\item \emph{WorkgroupAgent} - Responsável pelos agentes cognitivo, afetivo e metacognitivo.
+	\item \emph{CognitiveAgent} - Responsável pelo modelo cognitivo do aluno.
+	\item \emph{MetacognitiveAgent} - Responsável pelo modelo metacognitivo.
+	\item \emph{AfectiveAgent} - Responsável pelo modelo afetivo.
+\end{enumerate}
+
+A solução é baseada em grupos de trabalho por aluno. Após a autenticação do aluno em uma plataforma web, o sistema multiagente realiza a criação dos agentes de grupo de trabalho para o aluno:~\emph{WorkgroupAgent},~\emph{CognitiveAgent},~\emph{MetacognitiveAgent},~\emph{AfectiveAgent}. Esses agentes são responsáveis pela manutenção do modelo multidimensional do aluno na plataforma e são atualizados conforme os dados forem enviados pelos agentes interfaces com o ambiente externo.
+
+O primeiro agente interface,~\emph{GatewayAgent}, é responsável pela interação direta com a plataforma web. Essa plataforma irá interagir com os alunos (por meio de questionários de estilo de aprendizagem) e docentes (notificando o estilo de aprendizagem dos seus alunos) e encaminhará os dados para o agente em questão, que repassará ao ambiente.
+
+O agente interface~\emph{WebServiceAgent}, é responsável pela comunicação com os web services do SMA Frank, que é a forma escolhida para futuras interações com os Ambientes Virtuais de Aprendizagem. Por fim, o agente~\emph{ManagerAgent} é responsável pela criação dos agentes.
+
+As seções seguintes detalham a metodologia, justificam a arquitetura da solução por meio da modelagem definida na metodologia MASE.
+
+\section{Metodologia}
 Para a realização deste trabalho, foi planejada uma metodologia de desenvolvimento na qual objetivou-se a construção da arquitetura do SMA por meio de uma metologia de desenvolvimento de SMAs. Inicialmente, foi necessário um levantamento de bibliografias relacionadas à Informática na Educação para o entendimento do problema do trabalho, além de levantamentos de uso de SMA em contextos pegagógicos.
 
 Em seguida foi aplicada, foi realizado estudos aprofundados na metodologia MASE para a implementação deste trabalho. Após o levantamento inicial, seu uso é divido em duas fases, conforme explicado na seção~\ref{section:mase}, sendo a primeira delas essêncial para o levantamento dos requisitos necessários para cumprir os objetivos. A segunda fase foi importante para a distribuição das regras entre os agentes que existem no sistema. As primeiras subseções deverão detalhar a modelagem.

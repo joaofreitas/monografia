@@ -1,6 +1,14 @@
-\chapter{Testes e Simulações}
+\chapter{Experimentações}
 
-Esta seção apresenta o protótipo desenvolvido para a parte web da solução. Serão mostradas as telas de interação com o aluno e professor. A primeira seção~\ref{section:interface-aluno} mostra o fluxo de execução desde o primeiro acesso do aluno à visualização do seu estilo de aprendizagem. A seção~\ref{section:interface-docente} mostra o fluxo de execução do docente que deseja verificar o estilo de aprendizagem de seus alunos.
+Esta seção apresenta o protótipo desenvolvido para a parte web da solução. Serão mostradas as telas de interação com o aluno e professor. Para tanto, foi definida uma metodologia~\ref{section:metodologia-testes} das experimentações que explicará como foi dividido os cenários de testes.
+A seção~\ref{section:interface-aluno} mostra o fluxo de execução desde o primeiro acesso do aluno à visualização do seu estilo de aprendizagem. A seção~\ref{section:interface-docente} mostra o fluxo de execução do docente que deseja verificar o estilo de aprendizagem de seus alunos.
+
+\section{Metodologia de Testes}\label{section:metodologia-testes}
+
+A metodologia de testes foi dividida em dois cenários. O primeiro deles é o cenário onde o aluno faz o primeiro acesso ao sistema e deseja conhecer o seu estilo de aprendizagem. É seguido então um fluxo de execução para que este aluno possa realizar o questionário de estilos de aprendizagem. No fim do fluxo, espera-se que o aluno saiba o seu estilo de aprendizagem.
+
+O segundo cenário aborda o acesso do docente ao sistema, desejando saber o estilo de aprendizagem dos alunos de sua turma. É demonstrado um fluxo de execução para que ele autentique-se no sistema e acesse os dados de sua turma. Ao final deste fluxo, é esperado que o docente saiba o estilo de aprendizagem de todos os alunos que realizaram o questionário.
+As duas próximas seções mostram os fluxos explicados.
 
 \section{Demonstração da Interface com Aluno}\label{section:interface-aluno}
 O fluxo inicia-se quando o aluno acessa a interface principal do Sistema~\ref{fig:frank-tela-aluno-inicial}, mostrando uma tela de boas vindas. O usuário seleciona vai para a tela de autenticação e o Sistema exige o login e a senha de acesso~\ref{fig:frank-tela-aluno-login}. Caso o usuário informe o login inválido o Sistema apresenta a tela de erro~\ref{fig:frank-tela-login-invalido}, solicitando novamente os dados para autenticação.
