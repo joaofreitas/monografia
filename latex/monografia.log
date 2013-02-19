@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  18 FEB 2013 23:36
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  19 FEB 2013 00:27
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1005,7 +1005,7 @@ quisa a res-peito do \T1/cmr/m/it/12 JADE\T1/cmr/m/n/12 .
 Cap\'{\i }tulo 2.
 [4
 
-] [5] <images/agente-basico.png, id=443, 280.04625pt x 177.66376pt>
+] [5] <images/agente-basico.png, id=443, 287.0725pt x 182.6825pt>
 File: images/agente-basico.png Graphic file (type png)
 
 <use images/agente-basico.png> [6 <./images/agente-basico.png (PNG copy)>]
@@ -1427,7 +1427,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  11239 strings out of 495041
  155965 string characters out of 1181897
- 258210 words of memory out of 3000000
+ 258211 words of memory out of 3000000
  13739 multiletter control sequences out of 15000+50000
  19163 words of font info for 48 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
@@ -1447,9 +1447,9 @@ en/ec/ecbx2488.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 ome/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (85 pages, 1215273 bytes).
+Output written on monografia.pdf (85 pages, 1216088 bytes).
 PDF statistics:
- 1754 PDF objects out of 2073 (max. 8388607)
+ 1755 PDF objects out of 2073 (max. 8388607)
  361 named destinations out of 1000 (max. 500000)
  588 words of extra memory for PDF output out of 10000 (max. 10000000)
 
