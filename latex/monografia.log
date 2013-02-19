@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  18 FEB 2013 20:36
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  18 FEB 2013 21:58
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -903,7 +903,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 100.
 
-<positivo_cor.pdf, id=187, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=167, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 \len@lskipoffset=\skip60
@@ -1005,164 +1005,165 @@ quisa a res-peito do \T1/cmr/m/it/12 JADE\T1/cmr/m/n/12 .
 Cap\'{\i }tulo 2.
 [4
 
-] <images/categorias-diagramas.png, id=444, 571.13374pt x 868.24374pt>
-File: images/categorias-diagramas.png Graphic file (type png)
-
-<use images/categorias-diagramas.png>
-
-LaTeX Warning: Float too large for page by 5.8974pt on input line 34.
-
-[5] [6 <./images/categorias-diagramas.png (PNG copy)>]
-<images/exemplo-uml.png, id=464, 701.62125pt x 405.515pt>
-File: images/exemplo-uml.png Graphic file (type png)
-
-<use images/exemplo-uml.png>
-Overfull \hbox (70.97052pt too wide) in paragraph at lines 97--98
- [][] 
- []
-
-[7] <images/exemplo-diagrama-sequencia.png, id=472, 662.475pt x 515.67656pt>
-File: images/exemplo-diagrama-sequencia.png Graphic file (type png)
-
-<use images/exemplo-diagrama-sequencia.png>
-Overfull \hbox (41.61093pt too wide) in paragraph at lines 114--115
- [][] 
- []
-
-[8 <./images/exemplo-uml.png (PNG copy)>] [9 <./images/exemplo-diagrama-sequenc
-ia.png>] [10] [11]
-<images/agente-basico.png, id=504, 280.04625pt x 177.66376pt>
+] [5] <images/agente-basico.png, id=429, 280.04625pt x 177.66376pt>
 File: images/agente-basico.png Graphic file (type png)
 
-<use images/agente-basico.png> [12 <./images/agente-basico.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 214--214
+<use images/agente-basico.png> [6 <./images/agente-basico.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
 []\T1/cmr/bx/n/12 Tipo de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--214
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
 []\T1/cmr/bx/n/12 Medida de
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 216--216
+Underfull \hbox (badness 1466) in paragraph at lines 101--101
 []\T1/cmr/m/n/12 Avarias no veí-
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 216--216
+Underfull \hbox (badness 1735) in paragraph at lines 101--101
 []\T1/cmr/m/n/12 Freio do carro,
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 218--218
+Underfull \hbox (badness 2111) in paragraph at lines 103--103
 \T1/cmr/m/n/12 nente com-pu-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--218
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 []\T1/cmr/m/n/12 Quantidade de
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 220--220
+Underfull \hbox (badness 1496) in paragraph at lines 105--105
 []\T1/cmr/m/n/12 Saúde do pa-ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--220
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
 []\T1/cmr/m/n/12 Paciente,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--220
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
 \T1/cmr/m/n/12 am-bi-ente
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 220--221
+Underfull \hbox (badness 1466) in paragraph at lines 105--106
 \T1/cmr/m/n/12 to-mas do pa-ci-
  []
 
 
-Overfull \hbox (3.09444pt too wide) in paragraph at lines 212--224
+Overfull \hbox (3.09444pt too wide) in paragraph at lines 97--109
 [][]
  []
 
-[13] [14] [15] [16] [17] [18]
+[7] [8] [9] [10] [11] [12]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 365.
- [19] [20]
+nput line 250.
+ [13] [14]
 
-LaTeX Warning: Float too large for page by 68.91383pt on input line 485.
+LaTeX Warning: Float too large for page by 68.91383pt on input line 370.
 
-<images/arvore-ontologia.png, id=611, 701.62125pt x 265.99374pt>
+<images/arvore-ontologia.png, id=538, 701.62125pt x 265.99374pt>
 File: images/arvore-ontologia.png Graphic file (type png)
 
 <use images/arvore-ontologia.png>
-Overfull \hbox (0.80429pt too wide) in paragraph at lines 502--503
+Overfull \hbox (0.80429pt too wide) in paragraph at lines 387--388
  [][] 
  []
 
-[21] [22] (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+[15] [16] (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-)
-Overfull \hbox (2.89798pt too wide) in paragraph at lines 528--529
+) [17 <./images/arvore-ontologia.png (PNG copy)>]
+Overfull \hbox (2.89798pt too wide) in paragraph at lines 413--414
 [][][][][][][][][][][][][][][][] 
  []
 
-[23 <./images/arvore-ontologia.png (PNG copy)>] [24] [25]
-<images/exemplo-mase-role-model.png, id=671, 475.7775pt x 130.4875pt>
+<images/categorias-diagramas.png, id=575, 571.13374pt x 868.24374pt>
+File: images/categorias-diagramas.png Graphic file (type png)
+
+<use images/categorias-diagramas.png>
+
+LaTeX Warning: Float too large for page by 5.8974pt on input line 449.
+
+[18] [19] [20 <./images/categorias-diagramas.png (PNG copy)>]
+<images/exemplo-uml.png, id=613, 701.62125pt x 405.515pt>
+File: images/exemplo-uml.png Graphic file (type png)
+
+<use images/exemplo-uml.png>
+Overfull \hbox (70.97052pt too wide) in paragraph at lines 512--513
+ [][] 
+ []
+
+[21] <images/exemplo-diagrama-sequencia.png, id=621, 662.475pt x 515.67656pt>
+File: images/exemplo-diagrama-sequencia.png Graphic file (type png)
+
+<use images/exemplo-diagrama-sequencia.png>
+Overfull \hbox (41.61093pt too wide) in paragraph at lines 529--530
+ [][] 
+ []
+
+[22 <./images/exemplo-uml.png (PNG copy)>] [23 <./images/exemplo-diagrama-seque
+ncia.png>] [24] [25]
+<images/exemplo-mase-role-model.png, id=651, 475.7775pt x 130.4875pt>
 File: images/exemplo-mase-role-model.png Graphic file (type png)
 
 <use images/exemplo-mase-role-model.png>
-<images/examplo-diagrama-tarefas-concorrentes.png, id=673, 431.6125pt x 247.926
+<images/examplo-diagrama-tarefas-concorrentes.png, id=653, 431.6125pt x 247.926
 25pt>
 File: images/examplo-diagrama-tarefas-concorrentes.png Graphic file (type png)
  <use images/examplo-diagrama-tarefas-concorrentes.png> [26 <./images/exemplo-m
-ase-role-model.png (PNG copy)> <./images/examplo-diagrama-tarefas-concorrentes.
-png (PNG copy)>]
-<images/exemplo-agent-class-diagram.png, id=681, 397.485pt x 233.87375pt>
+ase-role-model.png (PNG copy)>]
+<images/exemplo-agent-class-diagram.png, id=663, 397.485pt x 233.87375pt>
 File: images/exemplo-agent-class-diagram.png Graphic file (type png)
 
-<use images/exemplo-agent-class-diagram.png> [27]
-<images/exemplo-conversation.png, id=693, 431.6125pt x 247.92625pt>
+<use images/exemplo-agent-class-diagram.png> [27 <./images/examplo-diagrama-tar
+efas-concorrentes.png (PNG copy)>]
+<images/exemplo-conversation.png, id=673, 431.6125pt x 247.92625pt>
 File: images/exemplo-conversation.png Graphic file (type png)
 
 <use images/exemplo-conversation.png> [28 <./images/exemplo-agent-class-diagram
-.png (PNG copy)> <./images/exemplo-conversation.png (PNG copy)>]
-<images/exemplo-diagrama-arquitetura-agentes.png, id=702, 565.11125pt x 223.836
+.png (PNG copy)>]
+<images/exemplo-diagrama-arquitetura-agentes.png, id=683, 565.11125pt x 223.836
 24pt>
 File: images/exemplo-diagrama-arquitetura-agentes.png Graphic file (type png)
- <use images/exemplo-diagrama-arquitetura-agentes.png>
-<images/exemplo-diagrama-deploy.png, id=704, 587.19376pt x 356.33125pt>
+ <use images/exemplo-diagrama-arquitetura-agentes.png> [29 <./images/exemplo-co
+nversation.png (PNG copy)> <./images/exemplo-diagrama-arquitetura-agentes.png (
+PNG copy)>]
+<images/exemplo-diagrama-deploy.png, id=690, 587.19376pt x 356.33125pt>
 File: images/exemplo-diagrama-deploy.png Graphic file (type png)
 
-<use images/exemplo-diagrama-deploy.png> [29 <./images/exemplo-diagrama-arquite
-tura-agentes.png (PNG copy)>] [30 <./images/exemplo-diagrama-deploy.png (PNG co
-py)>] <images/arquitetura-jade.png, id=717, 559.08875pt x 318.18875pt>
+<use images/exemplo-diagrama-deploy.png> [30 <./images/exemplo-diagrama-deploy.
+png (PNG copy)>]
+<images/arquitetura-jade.png, id=698, 559.08875pt x 318.18875pt>
 File: images/arquitetura-jade.png Graphic file (type png)
 
 <use images/arquitetura-jade.png> [31 <./images/arquitetura-jade.png (PNG copy)
 >] (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ) [32]
-<images/tela-jade.png, id=737, 596.2275pt x 366.36874pt>
+<images/tela-jade.png, id=718, 596.2275pt x 366.36874pt>
 File: images/tela-jade.png Graphic file (type png)
 
-<use images/tela-jade.png> [33 <./images/tela-jade.png (PNG copy)>]
-<images/servidor-app-seam.png, id=744, 280.04625pt x 389.455pt>
+<use images/tela-jade.png> [33]
+<images/servidor-app-seam.png, id=725, 280.04625pt x 389.455pt>
 File: images/servidor-app-seam.png Graphic file (type png)
 
-<use images/servidor-app-seam.png> [34 <./images/servidor-app-seam.png>])
-(./capitulos/capitulo3.tex [35]
+<use images/servidor-app-seam.png> [34 <./images/tela-jade.png (PNG copy)>])
+(./capitulos/capitulo3.tex [35 <./images/servidor-app-seam.png>]
 Cap\'{\i }tulo 3.
 [36
 
-] [37] <images/metas-frank.png, id=793, 952.55875pt x 421.575pt>
+] [37] <images/metas-frank.png, id=774, 952.55875pt x 421.575pt>
 File: images/metas-frank.png Graphic file (type png)
 
 <use images/metas-frank.png>
@@ -1217,7 +1218,7 @@ Underfull \vbox (badness 10000) detected at line 27
  []
 
 [46]) [47]
-<images/dss-uc1-fluxo-principal.png, id=890, 1075.01625pt x 520.94624pt>
+<images/dss-uc1-fluxo-principal.png, id=871, 1075.01625pt x 520.94624pt>
 File: images/dss-uc1-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc1-fluxo-principal.png>
@@ -1225,7 +1226,7 @@ Overfull \hbox (60.75784pt too wide) in paragraph at lines 100--101
  [][] 
  []
 
-<images/dss-uc1-fluxo-alternativo.png, id=892, 1136.74687pt x 536.75531pt>
+<images/dss-uc1-fluxo-alternativo.png, id=873, 1136.74687pt x 536.75531pt>
 File: images/dss-uc1-fluxo-alternativo.png Graphic file (type png)
 
 <use images/dss-uc1-fluxo-alternativo.png>
@@ -1233,52 +1234,52 @@ Overfull \hbox (90.3882pt too wide) in paragraph at lines 109--110
  [][] 
  []
 
-<images/dss-uc3-fluxo-principal.png, id=894, 859.71187pt x 536.75531pt>
+<images/dss-uc3-fluxo-principal.png, id=875, 859.71187pt x 536.75531pt>
 File: images/dss-uc3-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc3-fluxo-principal.png>
-<images/dss-uc4-fluxo-principal.png, id=896, 907.13907pt x 536.75531pt>
+<images/dss-uc4-fluxo-principal.png, id=877, 907.13907pt x 536.75531pt>
 File: images/dss-uc4-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc4-fluxo-principal.png> [48 <./images/dss-uc1-fluxo-principal.
 png>] [49 <./images/dss-uc1-fluxo-alternativo.png> <./images/dss-uc3-fluxo-prin
 cipal.png>]
-<images/dss-uc5-fluxo-principal.png, id=910, 519.44063pt x 536.75531pt>
+<images/dss-uc5-fluxo-principal.png, id=891, 519.44063pt x 536.75531pt>
 File: images/dss-uc5-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc5-fluxo-principal.png> [50 <./images/dss-uc4-fluxo-principal.
-png>] <images/mase-role-model.png, id=918, 930.47626pt x 524.96124pt>
+png>] <images/mase-role-model.png, id=899, 930.47626pt x 524.96124pt>
 File: images/mase-role-model.png Graphic file (type png)
 
 <use images/mase-role-model.png>
-<images/td-validar-dados.png, id=920, 841.1425pt x 280.04625pt>
+<images/td-validar-dados.png, id=901, 841.1425pt x 280.04625pt>
 File: images/td-validar-dados.png Graphic file (type png)
 
 <use images/td-validar-dados.png>
-<images/td-enviar-quest.png, id=922, 750.805pt x 176.66pt>
+<images/td-enviar-quest.png, id=903, 750.805pt x 176.66pt>
 File: images/td-enviar-quest.png Graphic file (type png)
 
 <use images/td-enviar-quest.png> [51 <./images/dss-uc5-fluxo-principal.png>]
 [52 <./images/mase-role-model.png (PNG copy)> <./images/td-validar-dados.png (P
 NG copy)> <./images/td-enviar-quest.png (PNG copy)>]
-<images/td-autenticar-aluno.png, id=933, 692.5875pt x 214.8025pt>
+<images/td-autenticar-aluno.png, id=914, 692.5875pt x 214.8025pt>
 File: images/td-autenticar-aluno.png Graphic file (type png)
 
 <use images/td-autenticar-aluno.png>
-<images/td-determinar-wg.png, id=935, 547.04375pt x 186.6975pt>
+<images/td-determinar-wg.png, id=916, 547.04375pt x 186.6975pt>
 File: images/td-determinar-wg.png Graphic file (type png)
 
 <use images/td-determinar-wg.png>
-<images/td-criar-wg.png, id=937, 615.29875pt x 238.8925pt>
+<images/td-criar-wg.png, id=918, 615.29875pt x 238.8925pt>
 File: images/td-criar-wg.png Graphic file (type png)
 
 <use images/td-criar-wg.png> [53 <./images/td-autenticar-aluno.png (PNG copy)> 
 <./images/td-determinar-wg.png (PNG copy)> <./images/td-criar-wg.png (PNG copy)
->] <images/td-processar-dados.png, id=943, 748.7975pt x 326.21875pt>
+>] <images/td-processar-dados.png, id=924, 748.7975pt x 326.21875pt>
 File: images/td-processar-dados.png Graphic file (type png)
 
 <use images/td-processar-dados.png>
-<images/td-atualizar-modelos.png, id=945, 1268.74pt x 444.66125pt>
+<images/td-atualizar-modelos.png, id=926, 1268.74pt x 444.66125pt>
 File: images/td-atualizar-modelos.png Graphic file (type png)
 
 <use images/td-atualizar-modelos.png>
@@ -1286,71 +1287,71 @@ Overfull \hbox (52.2429pt too wide) in paragraph at lines 242--243
  [][] 
  []
 
-<images/td-inferir-afetivo.png, id=948, 512.91624pt x 193.72375pt>
+<images/td-inferir-afetivo.png, id=929, 512.91624pt x 193.72375pt>
 File: images/td-inferir-afetivo.png Graphic file (type png)
 
 <use images/td-inferir-afetivo.png>
-<images/td-inferir-metacognitivo.png, id=949, 487.8225pt x 183.68625pt>
+<images/td-inferir-metacognitivo.png, id=930, 487.8225pt x 183.68625pt>
 File: images/td-inferir-metacognitivo.png Graphic file (type png)
 
 <use images/td-inferir-metacognitivo.png> [54 <./images/td-processar-dados.png>
  <./images/td-atualizar-modelos.png (PNG copy)>]
-<images/td-analise-aprendizagem.png, id=956, 914.41624pt x 256.96pt>
+<images/td-analise-aprendizagem.png, id=937, 914.41624pt x 256.96pt>
 File: images/td-analise-aprendizagem.png Graphic file (type png)
 
 <use images/td-analise-aprendizagem.png> [55 <./images/td-inferir-afetivo.png (
 PNG copy)> <./images/td-inferir-metacognitivo.png (PNG copy)> <./images/td-anal
 ise-aprendizagem.png (PNG copy)>]
-<images/agent-class-diagram.png, id=963, 617.30624pt x 351.3125pt>
+<images/agent-class-diagram.png, id=944, 617.30624pt x 351.3125pt>
 File: images/agent-class-diagram.png Graphic file (type png)
 
 <use images/agent-class-diagram.png>
-<images/conv1-iniciador.png, id=965, 656.4525pt x 146.5475pt>
+<images/conv1-iniciador.png, id=946, 656.4525pt x 146.5475pt>
 File: images/conv1-iniciador.png Graphic file (type png)
 
 <use images/conv1-iniciador.png> [56 <./images/agent-class-diagram.png (PNG cop
-y)>] <images/conv1-recebedor.png, id=971, 715.67375pt x 142.5325pt>
+y)>] <images/conv1-recebedor.png, id=952, 715.67375pt x 142.5325pt>
 File: images/conv1-recebedor.png Graphic file (type png)
 
 <use images/conv1-recebedor.png>
-<images/conv4-iniciador.png, id=973, 590.205pt x 146.5475pt>
+<images/conv4-iniciador.png, id=954, 590.205pt x 146.5475pt>
 File: images/conv4-iniciador.png Graphic file (type png)
 
 <use images/conv4-iniciador.png>
-<images/conv4-recebedor.png, id=975, 633.36626pt x 181.67876pt>
+<images/conv4-recebedor.png, id=956, 633.36626pt x 181.67876pt>
 File: images/conv4-recebedor.png Graphic file (type png)
 
 <use images/conv4-recebedor.png>
-<images/conv7-iniciador.png, id=977, 683.55376pt x 130.4875pt>
+<images/conv7-iniciador.png, id=958, 683.55376pt x 130.4875pt>
 File: images/conv7-iniciador.png Graphic file (type png)
 
 <use images/conv7-iniciador.png> [57 <./images/conv1-iniciador.png (PNG copy)> 
 <./images/conv1-recebedor.png (PNG copy)> <./images/conv4-iniciador.png (PNG co
-py)>] <images/conv7-recebedor.png, id=983, 793.96625pt x 222.8325pt>
+py)>] <images/conv7-recebedor.png, id=964, 793.96625pt x 222.8325pt>
 File: images/conv7-recebedor.png Graphic file (type png)
 
 <use images/conv7-recebedor.png> [58 <./images/conv4-recebedor.png (PNG copy)> 
 <./images/conv7-iniciador.png (PNG copy)> <./images/conv7-recebedor.png (PNG co
 py)>] [59]) (./capitulos/capitulo4.tex [60]
 Cap\'{\i }tulo 4.
-<images/frank-tela-aluno-inicial.png, id=1005, 565.11125pt x 495.8525pt>
+<images/frank-tela-aluno-inicial.png, id=982, 565.11125pt x 495.8525pt>
 File: images/frank-tela-aluno-inicial.png Graphic file (type png)
 
 <use images/frank-tela-aluno-inicial.png>
-<images/frank-tela-aluno-login.png, id=1006, 569.12625pt x 516.93124pt>
+<images/frank-tela-aluno-login.png, id=983, 569.12625pt x 516.93124pt>
 File: images/frank-tela-aluno-login.png Graphic file (type png)
 
 <use images/frank-tela-aluno-login.png>
-<images/frank-tela-login-invalido.png, id=1007, 523.9575pt x 522.95375pt>
+<images/frank-tela-login-invalido.png, id=984, 523.9575pt x 522.95375pt>
 File: images/frank-tela-login-invalido.png Graphic file (type png)
 
 <use images/frank-tela-login-invalido.png>
-<images/frank-tela-aluno-prim-acesso.png, id=1009, 615.29875pt x 605.26125pt>
+<images/frank-tela-aluno-prim-acesso.png, id=986, 615.29875pt x 605.26125pt>
 File: images/frank-tela-aluno-prim-acesso.png Graphic file (type png)
 
 <use images/frank-tela-aluno-prim-acesso.png>
-<images/frank-tela-aluno-preencher-questionario.png, id=1011, 1200.485pt x 490.
-83376pt>
+<images/frank-tela-aluno-preencher-questionario.png, id=988, 1200.485pt x 490.8
+3376pt>
 File: images/frank-tela-aluno-preencher-questionario.png Graphic file (type png
 )
  <use images/frank-tela-aluno-preencher-questionario.png>
@@ -1359,27 +1360,26 @@ Overfull \hbox (120.98215pt too wide) in paragraph at lines 43--44
  []
 
 
-<images/frank-tela-aluno-inferencia-estilo.png, id=1013, 501.875pt x 496.85625p
-t>
+<images/frank-tela-aluno-inferencia-estilo.png, id=990, 501.875pt x 496.85625pt
+>
 File: images/frank-tela-aluno-inferencia-estilo.png Graphic file (type png)
  <use images/frank-tela-aluno-inferencia-estilo.png>
-<images/frank-tela-professor-acesso.png, id=1015, 533.995pt x 490.83376pt>
+<images/frank-tela-professor-acesso.png, id=992, 533.995pt x 490.83376pt>
 File: images/frank-tela-professor-acesso.png Graphic file (type png)
 
 <use images/frank-tela-professor-acesso.png>
-<images/frank-tela-professor-visualizar-turma.png, id=1016, 603.25375pt x 555.0
-7375pt>
+<images/frank-tela-professor-visualizar-turma.png, id=993, 603.25375pt x 555.07
+375pt>
 File: images/frank-tela-professor-visualizar-turma.png Graphic file (type png)
  <use images/frank-tela-professor-visualizar-turma.png> [61
 
 ] [62 <./images/frank-tela-aluno-inicial.png (PNG copy)> <./images/frank-tela-a
 luno-login.png (PNG copy)>] [63 <./images/frank-tela-login-invalido.png (PNG co
-py)>]
-[64 <./images/frank-tela-aluno-prim-acesso.png (PNG copy)> <./images/frank-tela
--aluno-preencher-questionario.png (PNG copy)>] [65 <./images/frank-tela-aluno-i
-nferencia-estilo.png (PNG copy)> <./images/frank-tela-professor-acesso.png (PNG
- copy)>]) (./capitulos/capitulo5.tex [66 <./images/frank-tela-professor-visuali
-zar-turma.png (PNG copy)>]
+py)>] [64 <./images/frank-tela-aluno-prim-acesso.png (PNG copy)> <./images/fran
+k-tela-aluno-preencher-questionario.png (PNG copy)>] [65 <./images/frank-tela-a
+luno-inferencia-estilo.png (PNG copy)> <./images/frank-tela-professor-acesso.pn
+g (PNG copy)>]) (./capitulos/capitulo5.tex [66 <./images/frank-tela-professor-v
+isualizar-turma.png (PNG copy)>]
 Cap\'{\i }tulo 5.
 [67
 
@@ -1420,46 +1420,34 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 11232 strings out of 495041
- 155937 string characters out of 1181897
- 264123 words of memory out of 3000000
- 13739 multiletter control sequences out of 15000+50000
+ 11224 strings out of 495041
+ 155764 string characters out of 1181897
+ 261071 words of memory out of 3000000
+ 13734 multiletter control sequences out of 15000+50000
  19163 words of font info for 48 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,10n,74p,902b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): 
-name{subsection.3.2.3} has been referenced but does not exist, replaced by a fi
-xed one
-
-pdfTeX warning (dest): name{subsection.3.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
- </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1200.600pk> </ho
-me/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/jo
-aofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/joaofre
-itas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/joaofreitas/
-.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/joaofreitas/.texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/joaofreitas/.texmf-var
-/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/joaofreitas/.texmf-var/font
-s/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/
-ljfour/jknappen/ec/ecrm1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfou
-r/jknappen/ec/ecrm1440.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecbx1728.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecrm1000.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/e
-crm2074.600pk></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (83 pages, 1208309 bytes).
+ 45i,10n,74p,902b,1937s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/joaofreitas/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/tcti1200.600pk> </home/joaofreitas/.texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/joaofreitas/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/joaofreitas/.texmf-var/fonts/p
+k/ljfour/jknappen/ec/ecbx1440.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljf
+our/jknappen/ec/tcrm1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecti1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecbx2488.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecbx1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
+1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.
+600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
+> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </h
+ome/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on monografia.pdf (83 pages, 1202589 bytes).
 PDF statistics:
- 1739 PDF objects out of 2073 (max. 8388607)
- 354 named destinations out of 1000 (max. 500000)
- 604 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1708 PDF objects out of 1728 (max. 8388607)
+ 351 named destinations out of 1000 (max. 500000)
+ 564 words of extra memory for PDF output out of 10000 (max. 10000000)
 

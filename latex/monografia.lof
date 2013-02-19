@@ -3,20 +3,20 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagramas categorizados por Estrutura e Comportamento. Fonte~\cite {fowler04}.}}{6}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Sugest\IeC {\~o}es de nota\IeC {\c c}\IeC {\~a}o de caso de uso proposto por ~\cite {larman08}}}{8}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Nota\IeC {\c c}\IeC {\~a}o de diagrama de sequ\IeC {\^e}ncia, exibindo a comunica\IeC {\c c}\IeC {\~a}o de um ator e uma entidade (sistema)}}{9}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Esquematiza\IeC {\c c}\IeC {\~a}o do funcionamento b\IeC {\'a}sico de um agente em um ambiente.}}{12}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Ontologias superiores do mundo, cada uma indicando um conceito ou especializa\IeC {\c c}\IeC {\~a}o do seu superior.}}{23}{figure.2.5}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Esquematiza\IeC {\c c}\IeC {\~a}o do funcionamento b\IeC {\'a}sico de um agente em um ambiente.}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ontologias superiores do mundo, cada uma indicando um conceito ou especializa\IeC {\c c}\IeC {\~a}o do seu superior.}}{17}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagramas categorizados por Estrutura e Comportamento. Fonte~\cite {fowler04}.}}{20}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Sugest\IeC {\~o}es de nota\IeC {\c c}\IeC {\~a}o de caso de uso proposto por ~\cite {larman08}}}{22}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Nota\IeC {\c c}\IeC {\~a}o de diagrama de sequ\IeC {\^e}ncia, exibindo a comunica\IeC {\c c}\IeC {\~a}o de um ator e uma entidade (sistema)}}{23}{figure.2.5}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o utilizada no MASE Role Model.}}{26}{figure.2.6}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o utilizada no~\emph {Concurrent Task Diagram}.}}{26}{figure.2.7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o utilizada no~\emph {Concurrent Task Diagram}.}}{27}{figure.2.7}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o utilizada no~\emph {Agent Class Diagram}.}}{28}{figure.2.8}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Exemplo de conversa\IeC {\c c}\IeC {\~a}o utilizada no Diagrama de Comunica\IeC {\c c}\IeC {\~a}o do lado do iniciador da conversa\IeC {\c c}\IeC {\~a}o.}}{28}{figure.2.9}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Exemplo de conversa\IeC {\c c}\IeC {\~a}o utilizada no Diagrama de Comunica\IeC {\c c}\IeC {\~a}o do lado do iniciador da conversa\IeC {\c c}\IeC {\~a}o.}}{29}{figure.2.9}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Nota\IeC {\c c}\IeC {\~a}o utilizada na arquitetura de agentes.}}{29}{figure.2.10}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Nota\IeC {\c c}\IeC {\~a}o utilizada no diagrama de deploy.}}{30}{figure.2.11}
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o da arquitetura principal do JADE.Fonte ~\cite {bellifemine07}.}}{31}{figure.2.12}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Apresenta\IeC {\c c}\IeC {\~a}o da Interface}}{33}{figure.2.13}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o da pilha de aplica\IeC {\c c}\IeC {\~o}es do Seam.~\cite {allen09}}}{34}{figure.2.14}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Apresenta\IeC {\c c}\IeC {\~a}o da Interface}}{34}{figure.2.13}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o da pilha de aplica\IeC {\c c}\IeC {\~o}es do Seam.~\cite {allen09}}}{35}{figure.2.14}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 1.}}{48}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo de exce\IeC {\c c}\IeC {\~a}o, caso de uso 1.}}{49}{figure.3.2}
