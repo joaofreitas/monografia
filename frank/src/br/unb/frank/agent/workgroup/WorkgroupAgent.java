@@ -59,8 +59,8 @@ public class WorkgroupAgent extends Agent {
 	getContentManager().registerOntology(jadeOntology);
 	getContentManager().registerOntology(modelInferOntology);
 
-	registerAsWorkgroup();
 	setAlunoId(getArgument(0));
+	registerAsWorkgroup();
 
 	AgentContainer c = getContainerController();
 	createAuxiliarAgents(c);
@@ -87,9 +87,9 @@ public class WorkgroupAgent extends Agent {
 
 	dfd.setName(getAID());
 	ServiceDescription sd = new ServiceDescription();
-	sd.setType("workgroup");
 	sd.setName(getLocalName());
-	sd.setOwnership("workgroup");
+	sd.setType("workgroup");
+	sd.setOwnership("Frank-SMA");
 	dfd.addServices(sd);
 	try {
 	    DFService.register(this, dfd);
