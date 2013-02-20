@@ -20,7 +20,7 @@ Da necessidade em organizar as informações geradas pelos AVA, surgiram os Sist
 
 A interação entre as ferramentas tornou-se cada vez maior e tornou-se  cada vez mais necessário o ensino personalizado à cada estudante. A personalização está relacionada com a forma específica que cada estudante tem ao lidar com informações, a melhor forma de aprender, as suas habilidades. Entre outras palavras, os Sistemas começaram a interagir mais com os alunos a fim de determinar a forma como os alunos percebem e processam as informações.
 
-De acordo com~\cite{felder1988learning}, um modelo de estilo de aprendizado classifica um estudante de acordo com um número, ou posição, em uma escala que, classifica as formas as quais são possíveis receber e processar as informações. Estilos de aprendizagem não são classificatórios, portanto não existe um mau ou bom estilo de aprendizagem. Apenas um diferente do outro.
+Em~\cite{felder1988learning}, um modelo de estilo de aprendizado classifica um estudante de acordo com um número, ou posição, em uma escala que, classifica as formas as quais são possíveis receber e processar as informações. Estilos de aprendizagem não são classificatórios, portanto não existe um mau ou bom estilo de aprendizagem. Apenas um diferente do outro.
 
 O estilo de aprendizagem pode orientar melhor um docente a estimular um aluno durante o processo de desenvolvimento de suas habilidades, alterando o ambiente para o aluno de acordo com o estilo de forma a individualizar o processo didádico do ensino. Existem diversos modelos de estilos de aprendizagem propostos na literatura.
 
@@ -62,7 +62,7 @@ Atualmente várias aplicações podem exigir demais de~\emph{hardwares} mais mod
 
 \subsection{Agente}
 
-De acordo com~\cite{novig95}, agentes são entidades (reais ou virtuais) que funcionam de forma autônoma em um ambiente, ou seja, não necessitam de intervenção humana para realizar processamento. Esse ambiente de funcionamento do agente geralmente contém vários outros agentes e é possível a comunicação entre eles através do ambiente por meio de troca de mensagens.
+Os agentes são entidades (reais ou virtuais) que funcionam de forma autônoma em um ambiente~\cite{novig95}, ou seja, não necessitam de intervenção humana para realizar processamento. Esse ambiente de funcionamento do agente geralmente contém vários outros agentes e é possível a comunicação entre eles através do ambiente por meio de troca de mensagens.
 
 Na representação do funcionamento de agentes~\ref{fig:agente-basico}, os agentes funcionam de forma a perceber o ambiente em que estão por meio de sensores, fazem análises com base na interação inicial e por fim podem agir sobre o ambiente de forma a modifica-lo por meio de efetuadores.
 
@@ -75,7 +75,7 @@ Na representação do funcionamento de agentes~\ref{fig:agente-basico}, os agent
 
 Alguns agentes seguem o princípio de racionalidade básico: sempre objetivam suas ações pela escolha da melhor ação possível segundo seus conhecimentos. Logo é possível inferir que a ação de um agente nem sempre alcança o máximo desempenho, sendo desempenho o parâmetro definido para medir o grau de sucesso da ação de um agente com base nos seus objetivos. São estes os chamados Agentes Racionais.
 
-Como dito anteriormente, agentes estão presentes em um ambiente. O agente não tem controle total do ambiente, ele pode no máximo influenciá-lo com a sua atuação ou criar outros agentes. Podemos separar ambientes em classes: Software, Físico e Relidade virtual (simulação de ambientes reais em software). De acordo com~\cite{wooldridge04} temos, em geral, ambientes com propriedades inerentes à seu funcionamento:
+Como dito anteriormente, agentes estão presentes em um ambiente. O agente não tem controle total do ambiente, ele pode no máximo influenciá-lo com a sua atuação ou criar outros agentes. Podemos separar ambientes em classes: Software, Físico e Relidade virtual (simulação de ambientes reais em software). Em~\cite{wooldridge04} temos, em geral, ambientes com propriedades inerentes à seu funcionamento:
 
 \begin{itemize}
 	\item Observável: Neste tipo de ambiente, os sensores dos agentes conseguem ter percepção completa do ambiente. Por exemplo, um sensor de movimento consegue ter visão total em um ambiente aberto.
@@ -87,7 +87,7 @@ Como dito anteriormente, agentes estão presentes em um ambiente. O agente não 
 	\item Contínuo: As percepções e ações de um agente modificam-se em um espectro contínuo de valores. Por exemplo, temperatura de um sensor muda de forma contínua.
 \end{itemize}
 
-Na tabela~\ref{lista_agentes} mostramos alguns exemplos de agentes, apresentando as suas características já discutidas nesse trabalho.
+Em~\ref{lista_agentes} é mostrado alguns exemplos de agentes, apresentando as suas características já discutidas nesse trabalho.
 
 \begin{table}
 	\caption{Listagem de sistemas multiagentes com propriedades de medida de performance, ambiente, atuadores e sensores}
@@ -111,9 +111,9 @@ A segunda linha da tabela é apresentado o exemplo de agente atuando em um jogo 
 
 Por fim, a última linha da tabela~\ref{lista_agentes} expõe um exemplo de um agente médico atuando em um ambiente estático: Um paciente. Esse ambiente é classificado como estático por não ser alterado pelo agente nesse exemplo, porém é possível ser diferente em outras situações. O objetivo principal é monitorar a saúde do paciente, logo a medida de performance será a aproximação ou não do diagnóstico médico. Seu atuador não será diretamente no ambiente (corpo humano), será na forma de relatórios médicos e seus sensores podem variar de acordo com a doença a ser monitorada.
 
-Conforme podemos encontrar em~\cite{wooldridge04}, podemos definir algumas noções gerais de agentes. A primeira, chamada de noção fraca, contém a maior parte dos agentes. Ela compreende os aspectos de \emph{reatividade}, \emph{proatividade} e \emph{habilidade social}. O conceito de reatividade  está ligado com o agente perceber o ambiente e reagir. Proatividade é a característica do agente tomar a iniciativa e agir sem a necessidade de nenhum estímulo. Habilidade social é a capacidade de interação com outros agentes.
+Os agentes possuem características inerentes à abordagem~\cite{wooldridge04}. Os agentes possuem os aspectos de~\emph{reatividade},~\emph{proatividade} e~\emph{habilidade social}. O conceito de reatividade  está ligado com o agente perceber o ambiente e reagir. Proatividade é a característica do agente tomar a iniciativa e agir sem a necessidade de nenhum estímulo. Habilidade social é a capacidade de interação com outros agentes.
 
-Já a noção forte de agente envolve os seguintes aspectos: Mobilidade, veracidade, benevolência, racionalidade e cooperação. As definições são:
+Os agentes possuem também os seguintes aspectos: Mobilidade, veracidade, benevolência, racionalidade e cooperação. As definições são:
 \begin{itemize}
 	\item Mobilidade: O Agente deve pode mover-se no ambiente, por exemplo, em uma rede.
 	\item Veracidade: Agente não comunica informações falsas.
@@ -134,32 +134,32 @@ if anomalia-organismo then diagnóstico-médico
 
 Esse tipo de agente é bastante simples, o que é uma vantagem comparado à arquitetura de tabela. Porém, essa abordagem requer um ambiente totalmente observável, visto que esse tipo de agente possui uma inteligência bastante limitada. No exemplo do agente médico existem diversas maneiras de se detectar uma anomalia no organismo do paciente, seria necessário conhecer todas as formas para usarmos uma abordagem reativa simples.
 
-A arquitetura reflexiva baseada em modelos funciona de maneira similar a anterior. Nessa abordagem, é levado em conta a parte do ambiente que não é visível neste momento. E para saber o ``momento atual'' de um agente, é necessário guardar a informação de estado consigo. Para atualizar o estado do agente, é necessário conhecer como o mundo desenvolve-se independente do agente (no caso do exemplo, como o organismo funciona) e é necessário saber as ações dos agentes no ambiente. Esses dois conhecimentos do ambiente são chamados de \textbf{modelo do mundo}. O agente que usa esse tipo de abordagem é chamado de agente baseado em modelo.
+A arquitetura baseada em modelos funciona de maneira similar a anterior. Nessa abordagem, é levado em conta a parte do ambiente que não é visível neste momento. E para saber o ``momento atual'' de um agente, é necessário guardar a informação de estado consigo. Para atualizar o estado do agente, é necessário conhecer como o mundo desenvolve-se independente do agente (no caso do exemplo, como o organismo funciona) e é necessário saber as ações dos agentes no ambiente. O agente que usa esse tipo de abordagem é chamado de agente baseado em modelo.
 
-Na arquitetura reflexiva baseada em objetivo, as ações do agente são tomadas apenas se o aproximam de alcançar um objetivo. Para isso, será necessário algo além do estado atual do ambiente: Será necessário informações do objetivo a ser atingido. Assim o agente pode combinar as informações do estado e o objetivo para determinar se deve ou não agir sobre o ambiente. Essa arquitetura porém é obviamente mais complexa e de certa forma ineficiente. Porém ela permite uma maior flexibilização das ações em determinados ambientes, visto que suas decisões são representadas de forma explícita e podem ser modificadas. É interessante notar que esse tipo de arquitetura não trata ações com objetivos conflitantes.
+Na arquitetura baseada em objetivo, as ações do agente são tomadas apenas se o aproximam de alcançar um objetivo. Para isso, será necessário algo além do estado atual do ambiente: Será necessário informações do objetivo a ser atingido. Assim o agente pode combinar as informações do estado e o objetivo para determinar se deve ou não agir sobre o ambiente. Essa arquitetura porém é obviamente mais complexa e de certa forma ineficiente. Porém ela permite uma maior flexibilização das ações em determinados ambientes, visto que suas decisões são representadas de forma explícita e podem ser modificadas. É interessante notar que esse tipo de arquitetura não trata ações com objetivos conflitantes.
 
-E por fim, a arquitetura reflexiva baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, resilientes e rápidas do que as outras. A capacidade de avaliação do agente é chamada de função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
+E por fim, a arquitetura baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, resilientes e rápidas do que as outras. A capacidade de avaliação do agente é chamada de função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
 
 \subsection{Sistemas Multiagentes}
 
 Sistemas multiagentes são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. Um agente possui um objeto que, normalmente, é distinto dos objetivos de outros agentes e pode ou não cooperar com outros agentes para a realização de uma tarefa.
 
-De acordo com~\cite{sarmento11}, podemos encontrar as seguintes características principais de ambientes em SMAs:
+Em~\cite{sarmento11}, podemos encontrar as seguintes características principais em ambientes multiagente:
 \begin{itemize}
-	\item Ambientes SMAs fornecem protocolos específicos para comunicação e interação. Cada ambiente tem as suas particularidades: Alguns são em uma única máquina, outros são compartilhados com o mundo real e outros são distribuídos. Cabe a cada ambiente definir um protocolo onde todos agentes devem obedecer para comunicar-se.
-	\item SMAs são tipicamente abertos.
-	\item SMAs contém agentes que são autônomos e individualistas.
+	\item Fornecem protocolos específicos para comunicação e interação. Cada ambiente tem as suas particularidades: Alguns são em uma única máquina, outros são compartilhados com o mundo real e outros são distribuídos. Cabe a cada ambiente definir um protocolo onde todos agentes devem obedecer para comunicar-se.
+	\item São tipicamente abertos.
+	\item Contém agentes que são autônomos e individualistas.
 \end{itemize}
 
-É trivial imaginar que um sistema multiagente é designado para a solução de problemas de forma distribuída, onde o problema é distribuído entre os agentes que, juntos, trabalham cooperativamente e concorrentemente para a resolução deste problema.
+É trivial imaginar que um sistema multiagente é designado para a solução de problemas de forma distribuída, onde o problema é distribuído entre os agentes que, juntos, trabalham concorrentemente para a resolução deste problema, podendo ou não trabalhar de forma cooperativa.
 
-O termo~\emph{cooperação} é normalmente associado ao mundo de sistemas concorrentes. É importate notar a distinção desses conceitos na literatura de sistemas multiagentes. De acordo com~\cite{wooldridge04}, existem duas principais diferênças dos conceitos entre as duas situações.
+É importate notar a distinção de conceitos como~\emph{cooperação} na literatura de sistemas multiagentes. Em~\cite{wooldridge04}, existem duas principais diferenças do conceito entre as duas abordagens.
 
-A primeira delas é que agentes são designados de forma diferente, com objetivos diferentes. Em um ambiente com vários agentes, eles devem trabalhar estratégicamente para alcançar seus objetos. Conforme dito anteriormente, a possibilidade de agentes não cooperarem é perfeitamente plausível.
+A primeira delas é que agentes são designados de forma diferente, com objetivos diferentes. Em um ambiente com vários agentes, eles devem trabalhar estratégicamente para alcançar seus objetos. A possibilidade de agentes não cooperarem é perfeitamente plausível.
 
-A segunda diferença está no ponto onde um agente age de forma autônoma, ou seja, ele toma suas próprias decisões sem interferências de outros agentes, tomando-as em tempo de execução. Logo um ecossistema de agentes deve ser capaz de coordenar dinâmicamente (em tempo de execução) suas ações, cooperando com outros agentes para atingir os objetivos. Em aplicações distribuídas, esses comportamentos já são desenhados durante o planejamento do software.
+A segunda diferença está no fato do agente agir de forma autônoma, ou seja, tomar suas próprias decisões em tempo de execução sem interferências humanas ou de outros agentes. Logo, um ecossistema de agentes deve ser capaz de coordenar dinâmicamente suas ações, cooperando com outros agentes para atingir os objetivos. Em aplicações distribuídas, esses comportamentos já são desenhados durante o planejamento do software.
 
-A forma de agentes resolverem problemas foi baseada na técnica distribuição cooperativa de resolução de problemas -~\emph{cooperative distributed problem solving} (CDPS). De acordo com~\cite{durfee89}, a técnica CDPS consiste de uma rede de baixo acoplamento provida de sofisticados nós resolvedores de problemas que precisam cooperar entre si, pois nenhum deles possui recursos, informações e~\emph{expertise} suficientes para resolver algum problema sozinho. Cada nó possui uma~\emph{expertise} diferente que pode resolver parte do problema.
+A forma de agentes resolverem problemas foi baseada na técnica distribuição cooperativa de resolução de problemas -~\emph{cooperative distributed problem solving} (CDPS). Em~\cite{durfee89}, a técnica CDPS consiste de uma rede de baixo acoplamento provida de sofisticados nós resolvedores de problemas que precisam cooperar entre si, pois nenhum deles possui recursos, informações e~\emph{expertise} suficientes para resolver algum problema sozinho. Cada nó possui uma~\emph{expertise} diferente que pode resolver parte do problema.
 
 Inicialmente essa técnica assumiu que os problemas fossem de ordem benevolente. Isso significa que, implicitamente, os agentes compartilham o mesmo objetivo de resolver o problema proposto. Isso implica que todos os agentes ajudarão sempre que possível, mesmo tendo prejuízos na execução da ação, pois o objetivo geral de todos será a resolução do problema maior. Esse cenário é plausível desde que uma organização ou entidade tenha o controle de (ou modele) todos os agentes.
 
@@ -167,22 +167,16 @@ Em um cenário mais realista (e de maior enfoque dos estudos de SMA), agentes po
 
 O processo CDPS pode ser divido em três etapas:
 \begin{itemize}
-	\item A decomposição do problema.
-	\item Solução do subproblema
-	\item Integração da solução
+	\item decomposição do problema.
+	\item solução do subproblema.
+	\item integração da solução.
 \end{itemize}
-
-Na primeira etapa, o problema é quebrado em instâncias menores e dividido entre os agentes. Esses subproblemas podem ser quebrados em diversas subpartes, permitindo uma maior decomposição e consequentemente um maior número de agentes trabalhando na resolução.
-
-Em seguida, os subproblemas são resolvidos pelos agentes. Isso pode significar troca de informações entre os agentes, com os que resolveram as suas instâncias compartilhando informações com outros agentes.
-
-Por fim as soluções dos subproblemas são integradas em uma resolução completa do problema original.
 
 Com uma solução compartilhada de resolução de problemas, a arquitetura de sistemas multiagentes mostra-se bastante robusta neste quesito. É necessário porém saber dos detalhes da comunicação entre os agentes, a forma de envio das mensagens, as suas linguagens, bem como outras particularidades.
 
 \subsection{Comunicação}
 
-A comunicação é um dos aspectos mais importantes no desenvolvimento de SMAs. Problemas de sincronização entre as partes que se comunicam devem ser devidamente estudados. A situação mais simples possível da comunicação, onde o agente A envia uma mensagem ao agente B que está prontamente disponível para receber a mensagem nem sempre é a o cenário mais recorrente. Para tanto, é necessário entender os pormenores da comunicação em um Sistema Multiagente.
+A comunicação é um dos aspectos mais importantes no desenvolvimento de SMAs. Problemas de sincronização entre as partes que se comunicam devem ser devidamente estudados. A situação mais simples possível da comunicação, onde o agente A envia uma mensagem ao agente B que está prontamente disponível para receber a mensagem nem sempre é a o cenário mais recorrente. Para tanto, é necessário entender os pormenores da comunicação nesta abordagem.
 
 Em uma aplicação normal (Desktop ou Web), a comunicação entre objetos pode ser mais simplificada. Por exemplo, supondo uma aplicação em que existe dois objetos,~\emph{a} e~\emph{b} e que o objeto~\emph{a} tenha um método público chamado~\emph{m1}. O objeto~\emph{b} pode ser comunicar com o objeto~\emph{a} por meio do método~\emph{m1}, provavelmente da seguinte forma~\emph{a.m1(args)}, onde~\emph{args} são os argumentos enviados ao objeto~\emph{a} e a sintaxe pode ser diferente da apresentada, dependendo da linguagem de programação. É importante notar que o controle da execução do método~\emph{m1} não está no objeto~\emph{a}, mas sim no objeto~\emph{b}, que decide o momento o qual o método será invocado.
 
@@ -190,7 +184,7 @@ Esse cenário de comunicação é diferente em um ambiente SMA. Supondo dois age
 
 A comunicação dos agentes é baseada na teoria dos atos de fala (do inglês~\emph{Speech act theory}) e trata a comunicação como uma ação. A teoria dos atos de fala, publicada em 1962~\cite{austin62} por John Austin, onde ele percebe que certas expressões de linguagem natural, ou atos de fala, possuem a característica de realizar ação em um interlocutor, causando assim uma mudança de de estado da mesma forma que uma ação física. Logo, as expressões descrevem as ações por meio de desejos, habilidades e crenças.
 
-De acordo com~\cite{verschueren09}, a teoria dos atos de fala possuem duas características:
+Em~\cite{verschueren09}, a teoria dos atos de fala possuem duas características:
 \begin{itemize}
 	\item A distinção entre um o significado expressado por uma expressão e a forma como essa expressão é utilizada.
 	\item Expressões de todos os tipos podem ser considerados como atos, pois mudam o mundo de alguma forma.
@@ -198,8 +192,8 @@ De acordo com~\cite{verschueren09}, a teoria dos atos de fala possuem duas carac
 
 Posteriormente o trabalho de John Searle~\cite{searle69}, relacionado ao de Austin, separa uma ação de um ato entre orador(~\emph{speaker}) e ouvinte(~\emph{hearer}) identifinca propriedades e conduções que um discurso deve conter para realizar ações sucedidas. Além disso, ele classifica alguns atos de discursos em 5 classes:
 \begin{itemize}
-	\item Representativas - Representa o ato de um orador representar uma verdade para o ouvinte. Pode ser entendido como uma ação de informar(~\emph{inform}).
-	\item Diretivas - Tentativa do orador de fazer algum ouvinte realizar alguma ação por meio do seu ato.. Pode ser entendido como uma ação de requisição(~\emph{request}).
+	\item Representativas - Representa o ato de um orador representar uma verdade para o ouvinte. Pode ser entendido como uma ação de informar(\emph{inform}).
+	\item Diretivas - Tentativa do orador de fazer algum ouvinte realizar alguma ação por meio do seu ato.. Pode ser entendido como uma ação de requisição(\emph{request}).
 	\item Comissivas - O orador toma alguma atitude em relação à uma ação em andamento.
 	\item Expressivas - Expressa algum estado psicológico.
 	\item Declarações - Causa algum efeito relacionado a determinado assunto.
@@ -278,7 +272,7 @@ A primeira mensagem do diálogo possui o enunciado performativo é~\emph{evaluat
 
 Na segunda mensagem, o seu enunciado performativo é~\emph{reply}, significando uma mensagem do tipo resposta. O parâmetro~\emph{in-reply-to q1} especifica essa mensagem como resposta à q1, ou seja, à consulta da mensagem anterior. Dessa forma a linguagem consegue distinguir respostas de um mesmo remetente. Os outros parâmetros são o emissor B, destinatário A, linguagem PROLOG e o conteúdo da mensagem, o valor da consulta q1.
 
-De acordo com~\cite{wooldridge04}, a adoção desta linguagem pela comunidade de SMA foi significante, mas sofreu diversas críticas:
+Em~\cite{wooldridge04}, a adoção desta linguagem pela comunidade de SMA foi significante, mas sofreu diversas críticas:
 \begin{itemize}
 	\item A fluídez e a não restrição do KQML fez com que diversas implementações extendidas surgissem, impossibilitando a interoperabilidade entre sistemas.
 	\item Mecanismos de transporte do KQML nunca foram bem definidos, causando problemas de diversas implementações destes mecanismos e prejudicando novamente a interoperabilidade.
@@ -289,7 +283,7 @@ De acordo com~\cite{wooldridge04}, a adoção desta linguagem pela comunidade de
 Dessa forma, novos desenvolvimentos de linguagens fizeram-se necessários.
 
 \subsubsection{KIF}
-A linguagem foi desenvolvida para expressar conhecimento a cerca de um determinado domínio, sendo possível assim a troca de conhecimentos entre agentes. De acordo com~\cite{kifmanual}, a linguagem possui as seguintes características:
+A linguagem foi desenvolvida para expressar conhecimento a cerca de um determinado domínio, sendo possível assim a troca de conhecimentos entre agentes. Em~\cite{kifmanual}, a linguagem possui as seguintes características:
 \begin{itemize}
 	\item Tem uma semântica declarativa, sendo possível entender o seu significado sem a necessidade de um interpretador para manipulação das expressões.
 	\item É logicamente compreensível.
@@ -371,7 +365,7 @@ As performativas~\emph{request} e~\emph{inform} consideradas principais pela esp
 
 \subsection{Ontologias}
 
-Ontologia é um ramo da Filosofia que dedica-se a estudar e representar a natureza do ser, existência ou realidade. É um conceito formalização dos conceitos e relacionamentos que podem existir em um determinado universo. Para a Inteligência Artificial, é tudo aquilo que pode ser representado. De acordo com o autor~\cite{novig95}, a representação de conceitos e objetos pode ser entendida como Engenharia Ontológica:
+Ontologia é um ramo da Filosofia que dedica-se a estudar e representar a natureza do ser, existência ou realidade. É uma formalização dos conceitos e relacionamentos que podem existir em um determinado universo. Para a Inteligência Artificial, é tudo aquilo que pode ser representado. Em o autor~\cite{novig95}, a representação de conceitos e objetos pode ser entendida como Engenharia Ontológica:
 
 \begin{quote}
 \emph{...concentrating on general concepts-such as Actions, Time, Physical Objects, and Beliefs - that occur in many different domains. Representing these abstract concepts is sometimes called ontological engineering.}
@@ -386,13 +380,13 @@ A possibilidade de representação de conhecimento por meio de ontologias é bas
 	\label{fig:arvore-ontologia}
 \end{figure}
 
-A imagem~\ref{fig:arvore-ontologia} mostra a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
+Em~\ref{fig:arvore-ontologia}, é possível observar a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
 
 Em um ambiente de Sistemas Multiagentes, além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, dentre outros exemplos. Em outras palavras, dois agentes podem comunicar-se usando a mesma ontologia.
 
 Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A mais comum delas é a~\emph{eXtensible Markup Language} (XML), uma linguagem de marcação que organiza os dados de forma hierarquizada.
 
-O código~\ref{code:exemplo-xml} possui um exemplo de ontologia escrito na linguagem XML que representa o domínio de países. Nele podemos ver a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no trecho~\ref{code:exemplo-xml}, porém sem alteração de semântica.
+O exemplo~\ref{code:exemplo-xml} está descrito escrito na linguagem XML que representa o domínio de países. Nele podemos ver a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no trecho~\ref{code:exemplo-xml}, porém sem alteração de semântica.
 
 
 \begin{lstlisting}[language=xml,label=code:exemplo-xml,caption=Exemplo de código XML representando uma ontologia simples de cidades.]
@@ -421,7 +415,7 @@ O código~\ref{code:exemplo-xml} possui um exemplo de ontologia escrito na lingu
 	<Pais>
 \end{lstlisting}
 
-\section{Multiagent Systems Engineering - MASE}\label{section:mase}
+\section{Multiagent Systems Engineering}\label{section:mase}
 
 Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos. O advento de sistemas multiagentes trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, visto a diferença de abordagem no software.
 
@@ -429,7 +423,7 @@ Pela característica autônoma dos agentes, não é possível compará-los à si
 
 O desenvolvimento de uma metodologia para projetar sistemas multiagentes surgiu, chamada~\emph{Multiagent Systems Engineering} (MASE), onde os requisitos e metas do SMA são levantados e a partir de então as tarefas e agentes são projetadas para lhes atender. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura.
 
-De acordo com~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Design.
+Em~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Design.
 
 A primeira fase, chamada de análise, consiste no levantamento e entendimento dos requisitos com o objetivo de um conjunto de regras, as quais são associadas à tarefas que devem ser realizadas para o sistema atingir seus objetivos. No fim dessa fase, alguns artefatos são gerados que nortearão a próxima etapa da metodologia. A fase de análise pode ser dividida nos seguintes três passos:
 
@@ -450,7 +444,7 @@ A fase de design consiste na modelagem do SMA de acordo com as regras levantadas
 
 \subsection{Análise}
 
-De acordo com~\cite{scott01}, a fase de análise objetiva o desenvolvimento de um conjunto de regras, que descrevem uma funcionalidade para uma entidade, as quais as atividades descrevem o que deve ser feito para o sistema atingir o seus objetivos.
+Em~\cite{scott01}, a fase de análise objetiva o desenvolvimento de um conjunto de regras, que descrevem uma funcionalidade para uma entidade, as quais as atividades descrevem o que deve ser feito para o sistema atingir o seus objetivos.
 
 \subsubsection{Captura de Metas}
 
@@ -472,13 +466,13 @@ O diagrama de sequência define os eventos que cada interação pode criar, most
 
 \subsubsection{Refinar Regras}
 
-O último passo da fase de análise, o refinamento de regas consiste na associação metas e seus diagramas de sequências às regras e suas respectivas tarefas. De acordo com~\cite{scott01}, a associação de tarefas à regras é a melhor forma de modelagem de Sistemas Multiagentes. 
+O último passo da fase de análise, o refinamento de regas consiste na associação metas e seus diagramas de sequências às regras e suas respectivas tarefas. A associação de tarefas à regras é a melhor forma de modelagem de Sistemas Multiagentes~\cite{scott01}. 
 
 Em geral, a associação de metas às regras é de um para um, não sendo uma regra necessáriamente. Durante esta etapa, algumas considerações relativas ao desenho do sistema devem ser levadas em consideração. Caso exista alguma alteração (adição de uma nova meta, alteração de caso de uso, dentre outras), a metodologia permite que o analista retorne aos passos anteriores e remodele a solução. Algumas metas podem ser combinadas em apenas uma regra, simplificando o desenho do sistema.
 
 A interface com sistemas externos geralmente é tratada como uma regra diferente, visto que sua complexidade pode variar. O MASE não modela explicitamente um ator humano, pois o considera como um ator externo ao sistema.
 
-Após a associação das regras, elas são estruturas em uma modelagem chamada~\emph{MASE Role Model}, conténdo informações de interações entre as tarefas. A imagem~\ref{fig:exemplo-mase-role-model} representa a notação do~\emph{MASE Role Model} utilizada por~\cite{scott01}. Os retângulos são as regras, as elipses são as tarefas e as setas entre as tarefas representam as suas comunicações. Essas comunicações podem ser por meio de mensagens, caso as regras estejam separadas em agentes diferentes.
+Após a associação das regras, elas são estruturas em uma modelagem chamada~\emph{MASE Role Model}, conténdo informações de interações entre as tarefas. A representação a notação do~\emph{MASE Role Model}~\ref{fig:exemplo-mase-role-model} utilizada por~\cite{scott01} utiliza-se de retângulos para expressar as regras, elipses para identificar as tarefas e as setas entre as tarefas representam as suas comunicações. Essas comunicações podem ser por meio de mensagens, caso as regras estejam separadas em agentes diferentes.
 
 \begin{figure}
 	\centering
@@ -491,7 +485,7 @@ Caso as regras compartilhem tarefas será necessário remodelar a composição d
 
 De forma geral, cada regra possui uma série de tarefas que podem (ou não) executar paralelamente. Cada tarefa possui um comportamento que pode depender de outras regras para o cumprimento de seu objetivo. Preocupando-se com as conversações entre tarefas, o MASE determina neste passo a criação do~\emph{Concurrent Task Diagram}.
 
-O diagrama é representado por meio de autômatos de estados finitos, devido a facilidade de construção e entendimento. A imagem~\ref{fig:examplo-diagrama-tarefas-concorrentes} é uma representação deste diagrama, representando transições de estados. A transição consiste de uma mudança de estado do agente, podendo envolver um processamento ou uma comunicação externa.
+O diagrama é representado por meio de autômatos de estados finitos~\ref{fig:examplo-diagrama-tarefas-concorrentes}, devido a facilidade de construção e entendimento. A transição consiste de uma mudança de estado do agente, podendo envolver um processamento ou uma comunicação externa.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.65]{images/examplo-diagrama-tarefas-concorrentes.png}
@@ -499,7 +493,7 @@ O diagrama é representado por meio de autômatos de estados finitos, devido a f
 	\label{fig:examplo-diagrama-tarefas-concorrentes}
 \end{figure}
 
-A mudança de estado do automato é equivalente à mudança de estado do agente. O trecho~\ref{code:sintaxe-concurrent-task} representa a sintaxe da transição de estado no diagrama.
+A mudança de estado do automato é equivalente à mudança de estado do agente. A sintaxe da transição de pode ser expressa por meio de uma notação~\ref{code:sintaxe-concurrent-task} que define o gatilho a ser disparado, condições para a execução e as mensagens transmitidas.
 
 \begin{lstlisting}[label=code:sintaxe-concurrent-task,caption=Sintaxe da mudança de estado.]
 	trigger [guard] ^ transmission(s)
@@ -523,7 +517,7 @@ A fase de design é divida em quatro passos: Criar Classes dos Agentes, Construi
 
 Neste passo, os agentes são criados com base nas regras definidas na fase anterior. Para cada agente criado deve existir pelo menos uma regra associada, caso contrário o levantamento de regras mostra-se incompleto. Dessa forma, o MASE garante que todas os objetivos  do sistema são atingidos, já que as regras do sistema estão relacionados com as metas que foram levantadas na etapa anterior.
 
-Ao fim deste passo é necessário a criação de um novo diagrama, o~\emph{Agent Class Diagram}. Nele, as classes dos agentes são associadas com as regras levantadas e as comunicações entre as classes. A imagem~\ref{fig:exemplo-agent-class-diagram} possui a notação do diagrama utilizada por~\cite{scott01}.
+Ao fim deste passo é necessário a criação de um novo diagrama, o~\emph{Agent Class Diagram}~\ref{fig:exemplo-agent-class-diagram}. Nele, as classes dos agentes são associadas com as regras levantadas e as comunicações entre as classes.
 
 \begin{figure}
 	\centering
@@ -534,20 +528,19 @@ Ao fim deste passo é necessário a criação de um novo diagrama, o~\emph{Agent
 
 \subsubsection{Construir Conversações}
 
-A próxima etapa da segunda fase diz respeito às conversações que existirão no SMA. Aqui, cada detalhe da conversação entre dois agentes deverá ser planejado para que haja o cumprimento da meta do sistema.
+A próxima etapa da segunda fase diz respeito às conversações que existirão no SMA. Aqui, cada detalhe da conversação entre dois agentes deverá ser planejado para que haja a correta comunicação entre os agentes e a quantidade de erros seja minimizada.
 
-De acordo com~\cite{scott01}, quando um agente recebe uma mensagem, ele compara com as suas conversações ativas. Caso ele encontre alguma, o agente muda o seu estado e realiza as ações relativas para atingir esse estado. Caso contrário, é assumido que o agente emissor deseja iniciar uma nova conversação e o receptor compara com as suas possibidades de tipos de conversação disponíveis para participar.
+Quando o agente recebe uma mensagem, ele automaticamente compara com as suas conversações ativas~\cite{scott01}. Caso exista alguma conversação semelhante, o agente muda o seu estado e realiza as ações relativas para atingir esse estado. Caso contrário, é assumido que o agente emissor deseja iniciar uma nova conversação e o receptor compara com as suas possibidades de tipos de conversação disponíveis para participar.
 
 Neste passo, é criado o Diagrama de Comunicação. Nele, as conversações são montadas por meio do mesmo autômato de estados finitos, utilizado na fase análise, passo~\emph{refinar regras}. Os estados do aumtômato são as ações que devem ser realizadas pelo agente. As transições de estado são as conversações que são feitas pelo agente.
 
-O trecho~\ref{code:sintaxe-conversation} mostra a sintaxe usada na conversação de agentes. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
+A sintaxe usada na conversação de agentes~\ref{code:sintaxe-conversation} é uma expressão que é definida por meio das mensagens recebidas, condições, ações e mensagens transmitidas. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
 
 \begin{lstlisting}[label=code:sintaxe-conversation,caption=Sintaxe da conversação entre dois agentes.]
 	rec-mess(args1) [cond] / action ^ trans-mess(args2)
 \end{lstlisting}
 
-
-A imagem~\ref{fig:exemplo-conversation} representa um exemplo da sintaxe do Diagrama de Comunicação considerando o lado iniciador da conversação.
+O Diagrama de Comunicação~\ref{fig:exemplo-conversation} é definido para os dois lados da conversação: Iniciador e Receptor. considerando o lado iniciador da conversação.
 
 \begin{figure}
 	\centering
@@ -562,7 +555,7 @@ Neste passo, o estado interno dos agentes é criado. É necessário nesta etapa 
 
 Os componentes internos dos agentes podem ser atributos dos agentes, ou métodos auxiliares. Um agente pode ter vários componentes internos e estes componentes obviamente se comunicarão. No mínimo, cada agente criado no Diagrama de Agentes deve ser definir uma arquitetura interna.
 
-No Diagrama de Arquitetura de Agentes, a linha tracejada significa interação com sistemas externos, enquanto a outra significa interação com outros agentes do sistema. A imagem~\ref{fig:exemplo-diagrama-arquitetura-agentes} possui a notação utilizada no Diagrama de Arquitetura de Agentes.
+No Diagrama de Arquitetura de Agentes~\ref{fig:exemplo-diagrama-arquitetura-agentes}, a linha tracejada significa interação com sistemas externos, enquanto a outra significa interação com outros agentes do sistema.
 
 \begin{figure}
 	\centering
@@ -577,7 +570,7 @@ As setas tracejadas indicam dependência com atributos externos ao agente, enqua
 
 A fase final da metodologia MASE consiste na criação de um diagrama de~\emph{deploy} dos agentes. Este diagrama consiste na representação do número de agentes que serão criados por cada máquina da aplicação, bem como suas localizações no sistema.
 
-A imagem~\ref{fig:exemplo-diagrama-deploy} contém um exemplo de diagrama de deploy. As caixas de três dimensões representam os agentes e as linhas representam as interações. Os retângulos com linhas tracejadas representam os ambientes que podem existir no SMA.
+A representação do diagrama de~\emph{deploy}~\ref{fig:exemplo-diagrama-deploy} expressa os ambientes criados, bem como os agentes internos. O retângulo com linhas pontilhadas representam os ambientes que podem existir na aplicação. Os outros retângulos caixas representam os agentes e as linhas que os ligam representam as suas interações.
 
 \begin{figure}
 	\centering
@@ -596,7 +589,7 @@ Por fim, este capítulo disserta a respeito da ferramenta JBoss Seam, responsáv
 
 \subsection{Unified Modeling Language}
 
-A Linguagem Unificada de Modelagem,~\emph{Unified Modeling Language} (UML) é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens, objetivando o entendimento dos artefatos de forma rápida e clara e resultando em uma semântica para o projeto em questão. De acordo com~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
+A Linguagem Unificada de Modelagem,~\emph{Unified Modeling Language} (UML) é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens, objetivando o entendimento dos artefatos de forma rápida e clara e resultando em uma semântica para o projeto em questão. Em~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
 
 O UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
 A linguagem ajuda o entendimento de como o software foi projetado, como ocorre a comunicação entre seus objetos, como suas classes são organizadas, quais são os atores que são envolvidos na utilização do software, dentre outras possibilidades de representação.
@@ -611,16 +604,16 @@ No uso como linguagem de programação, o UML é utilizado para geração de có
 
 \subsubsection{Diagramas UML}
 
-O UML 2.0 descreve 13 tipos de diagramas~\ref{fig:categorias-diagramas} que podem ser categorizados por estruturais e comportamentais.
+O UML 2.0 descreve 13 tipos de diagramas~\ref{fig:categorias-diagramas} que podem ser categorizados como estruturais e comportamentais
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.75]{images/categorias-diagramas.png}
-	\caption{Diagramas categorizados por Estrutura e Comportamento. Fonte~\cite{fowler04}.}
+	\caption{Categorização dos Diagramas UML 2.0. Adaptado de~\cite{fowler04}.}
 	\label{fig:categorias-diagramas}
 \end{figure}
 
-Apesar da grande quantidade diagramas envolvidos no UML, nem todos os processos de desenvolvimentos de software utilizam todos eles. A maioria das pessoas utiliza-se de um conjunto de poucos diagramas para modelagem do sistema. Nas próximas subseções, serão detalhados apenas os seguintes diagramas, que são necessários para o entendimento deste trabalho:
+Apesar da grande quantidade diagramas envolvidos no UML, nem todos os processos de desenvolvimentos de software utilizam todos eles. Em~\cite{larman08}, a grande extensão de diagramas UML não é usada pela maioria das metodologias. A metodologia de desenvolvimento de sistema multiagente utiliza-se apenas dos seguintes diagramas:
 
 \begin{itemize}
 	\item Diagrama de Caso de uso
@@ -628,9 +621,9 @@ Apesar da grande quantidade diagramas envolvidos no UML, nem todos os processos 
 \end{itemize}
 
 \paragraph{Diagrama de Caso de Uso}
-Casos de uso são relatos textuais que são utilizados para descobrir e descrever os requisitos do sistema. Consiste da descrição de como um ator utiliza uma funcionalidade do sistema para atingir algum objetivo relacionado. De acordo com~\cite{larman08}, os casos de uso devem ser prioritariamente desenvolvidos de forma textual e o seu respectivo diagrama deve ser desenvolvido de forma secundária, somente para ilustrar o relato textual.
+Casos de uso são relatos textuais que são utilizados para descobrir e descrever os requisitos do sistema. Consiste da descrição de como um ator utiliza uma funcionalidade do sistema para atingir algum objetivo relacionado. Em~\cite{larman08}, os casos de uso devem ser prioritariamente desenvolvidos de forma textual e o seu respectivo diagrama deve ser desenvolvido de forma secundária, somente para ilustrar o relato textual.
 
-Um dos objetivos do caso de uso é a facilidade do levantamento dos requisitos, tanto para os analistas de um sistema, quanto para os clientes envolvidos. A definição de uma modelagem em comum facilidade entre as partes faz do caso de uso uma boa maneira de simplificar o entendimento do comportamento do sistema~\cite{larman08}, bem como envolver todos as partes interessadas do sistema(~\emph{stakeholders}) na construção do mesmo. De acordo com~\cite{cockburn01}, o caso de uso é um contrato de como será o comportamento do sistema. Este contrato será feito por meio dos atores que existirão, da sua interação com o sistema, bem como os cenários existentes.
+Um dos objetivos do caso de uso é a facilidade do levantamento dos requisitos, tanto para os analistas de um sistema, quanto para os clientes envolvidos. A definição de uma modelagem em comum facilidade entre as partes faz do caso de uso uma boa maneira de simplificar o entendimento do comportamento do sistema~\cite{larman08}, bem como envolver todos as partes interessadas do sistema(~\emph{stakeholders}) na construção do mesmo. Em~\cite{cockburn01}, o caso de uso é um contrato de como será o comportamento do sistema. Este contrato será feito por meio dos atores que existirão, da sua interação com o sistema, bem como os cenários existentes.
 
 Duas definições fazem-se necessárias para o entendimento do caso de uso. A primeira delas é o "Ator" do caso de uso. Ele é um objeto com um comportamento definido no sistema. É possível definir o ator como uma pessoa, organização ou mesmo o próprio sistema (quando utiliza serviços do próprio sistema), desde que tenham sempre um papel relacionado. Existem três tipos de atores relacionados ao sistema:
 \begin{itemize}
@@ -641,7 +634,7 @@ Duas definições fazem-se necessárias para o entendimento do caso de uso. A pr
 
 A segunda definição envolvida é a de cenário. Um cenário é uma sequência de interações entre os atores e o sistema. Os cenários são separados por ações de interesses de atores. Logo o caso de uso pode ser considerado como um conjunto de cenários de interações de atores com o sistema.
 
-Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema, bem como o seu comportamento. Existem três formas de se escrever um caso de uso, diferindo em seu nível de formalidade e formatos: Resumido, informal e completo. Este trabalho usará o nível de caso de uso completo, devido ao fato de ser estruturado e mostrar mais detalhes. Os casos de uso são estruturados de diversas formas de acordo com a literatura, sendo a mais famosa~\cite{larman08} a estrutura utilizada por Alistar Cockburn~\cite{cockburn01} e detalhada neste trabalho.~\ref{tabela:topicos_uc}
+Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema, bem como o seu comportamento. Existem três formas de se escrever um caso de uso, diferindo em seu nível de formalidade e formatos: Resumido, informal e completo. Este trabalho usará o nível de caso de uso completo, devido ao fato de ser estruturado e mostrar mais detalhes. Os casos de uso são estruturados de diversas formas Em a literatura, sendo a mais famosa~\cite{larman08} a estrutura utilizada por Alistar Cockburn~\cite{cockburn01} e detalhada neste trabalho.~\ref{tabela:topicos_uc}
 
 \begin{table}
 	\caption{Estruturação Detalhada de Caso de Uso}
@@ -712,17 +705,17 @@ A importância do desenho de um diagrama de sequência está no fato de detalhar
 O diagrama de sequência geralmente está relacionado com o caso de uso, primeiramente pelo fato de descrever um cenário de caso de uso, mas também pelo fato de o caso de uso conter todos os detalhes do cenário. Ele apenas deixará claro a interação entre os atores e os eventos derivados dessa interação.
 
 
-\subsection{Java Agent Development Framework - JADE}
+\subsection{Java Agent Development Framework}
 
 JADE é um~\emph{middleware} desenvolvido em 1988 pela Telecom Italia, posteriormente (2000) tornando-se em um projeto open source. Seu desenvolvimento de baixo acoplamento permite que seja possível integrar várias bibliotecas auxiliares (~\emph{addons}) para facilitar o desenvolvimento de aplicações.
 
-De acordo com~\cite{bellifemine07}, ele foi desenvolvido seguindo todas as especificações da FIPA, o que garante uma intercomunicação com outras plataformas. O JADE foi desenvolvido na linguagem JAVA, possibilitando o uso de diversas bibliotecas e frameworks desenvolvidos na linguagem.
+Em~\cite{bellifemine07}, ele foi desenvolvido seguindo todas as especificações da FIPA, o que garante uma intercomunicação com outras plataformas. O JADE foi desenvolvido na linguagem JAVA, possibilitando o uso de diversas bibliotecas e frameworks desenvolvidos na linguagem.
 
 O middleware provê várias funcionalidades básicas que abstraem e simplificam o desenvolvimento de aplicações, com o objetivo do desenvolvedor estar mais preocupado com o comportamento do agente do que com a infra estrutura da plataforma.
 
 O sistema de mensagem no JADE funciona de forma assíncrona. Um agente não precisa estar necessariamente disponível para receber as mensagens, visto que elas são enfileiradas e processadas em ordem. Além disso, não é necessário que um agente tenha uma referência para outro agente a fim de comunicar-se.
 
-A arquitetura de um SMA desenvolvido em JADE funciona de forma semelhante à rede P2P (~\emph{Peer-to-Peer}), onde cada agente possui um nome único na plataforma - Agent ID (AID) - e é livre para entrar e sair a qualquer momento durante a execução. Uma plafatorma JADE possui normalmente os seguintes elementos:
+A arquitetura de um SMA desenvolvido em JADE funciona de forma semelhante à rede P2P (\emph{Peer-to-Peer}), onde cada agente possui um nome único na plataforma - Agent ID (AID) - e é livre para entrar e sair a qualquer momento durante a execução. Uma plafatorma JADE possui normalmente os seguintes elementos:
 
 \begin{itemize}
 	\item Agent Management System (AMS) é o agente responsável por supervisionar toda a plataforma e criar um elo entre os agentes. Esse tipo de serviço é chamado de~\emph{white pages} e indexa todos os agentes da plataforma.
@@ -731,22 +724,22 @@ A arquitetura de um SMA desenvolvido em JADE funciona de forma semelhante à red
 
 Os agentes executam em threads separadas garantindo o não compartilhamento de recursos para evitar condições de corrida. A plataforma é responsável também por manter o ciclo de vida dos agentes. Durante a criação dos agentes, eles são automaticamente registrados no serviço de~\emph{white pages}
 
-A mobilidade de agentes entre máquinas também é feita de forma transparente pelo JADE. De acordo com~\cite{bellifemine07}, a mobilidade do agente pode transportar o estado do agente (sob certas condições) entre processos e máquinas.
+A mobilidade de agentes entre máquinas também é feita de forma transparente pelo JADE. Em~\cite{bellifemine07}, a mobilidade do agente pode transportar o estado do agente (sob certas condições) entre processos e máquinas.
 
 Uma das características mais importantes do~\emph{middleware} é o suporte nativo à ontologias e linguagens de comunicação FIPA. As ontologias podem ser modeladas (expressando ações, conceitos e predicados) de forma simples e clara, além de ser possível restringir as ontologias à determinados agentes que devem a conhecer.
 
 \subsubsection{Arquitetura}
 
-A imagem~\ref{fig:arquitetura-jade} representa a arquitetura principal do funcionamento do JADE. Nela, é possível observar os principais elementos da arquitetura JADE distribuídos em três máquinas (dois servidores e um~\emph{desktop}). Cada máquina possui um container onde vários agentes residem.
+A representação~\ref{fig:arquitetura-jade} do ambiente de execução JADE ilustra os principais elementos da arquitetura distribuídos em três máquinas (dois servidores e um~\emph{desktop}). Cada máquina possui um container e vários agentes.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.65]{images/arquitetura-jade.png}
-	\caption{Representação da arquitetura principal do JADE.Fonte ~\cite{bellifemine07}.}
+	\caption{Representação da arquitetura principal do JADE.Adaptado de~\cite{bellifemine07}.}
 	\label{fig:arquitetura-jade}
 \end{figure}
 
-O container principal(~\emph{main container}), presente na máquina do centro, possui algumas diferenças entre os outros, chamados de~\emph{Container-1} e~\emph{Container-2}, abringando agentes primordiais na plataforma que atendem às especificações da FIPA (número 23 e 61~\cite{bellifemineGuide02}). O container principal possui o componente~\emph{container table} (CT), que possui as referências para os objetos e os endereços de comunicação dos nós que compõe a plataforma.
+O container principal(\emph{main container}), presente na máquina do centro, possui algumas diferenças entre os outros, chamados de~\emph{Container-1} e~\emph{Container-2}, abringando agentes primordiais na plataforma que atendem às especificações da FIPA (número 23 e 61~\cite{bellifemineGuide02}). O container principal possui o componente~\emph{container table} (CT), que possui as referências para os objetos e os endereços de comunicação dos nós que compõe a plataforma.
 
 Além disso, o container principal possui uma tabela global para descrição de agentes (GADT) que registra todos os agentes da plataforma e o seu endereço. Os outros containeres possuem uma cópia em cache da tabela para, caso a tabela principal seja corrompida, possa ser substituída.
 
@@ -769,7 +762,7 @@ Conforme dito anteriormente, o método~\emph{setup()} deverá ser implementado e
 Os comportamentos são separados em primitivos e compostos. A diferença entre ambos é a possibilidade dos comportamentos compostos poderem agregar vários outros comportamentos simples ou compostos, sendo eles:~\emph{ParallelBehaviour, SequentialBehaviour}. De maneira distinta, os comportamentos primitivos tem relação direta com o tempo, acontecendo durante um período de espera ou após o envio de uma mensagem. São eles:~\emph{SimpleBehaviour, CyclicBehaviour, TickerBehaviour, OneShotBehaviour, WakerBehaviour} e~\emph{ReceiverBehaviour}.
 
 \subsubsection{Ciclo de Vida dos Agentes}
-O JADE implementa o ciclo de vida especificado pela FIPA, podendo variar entre vários agentes de forma simples. Os seguintes estados são possíveis na plataforma:
+O JADE implementa o ciclo de vida especificado pela FIPA. Os possíveis estados da plataforma são:
 
 \begin{itemize}
 	\item INITIATED - Após a criação do objeto, antes do registro do objeto no AMS, o agente assume o estado de iniciado. Este estado significa que o agente ainda não está disponível para a execução de ações na  plataforma.
@@ -786,23 +779,23 @@ Para cada uma das transições de estados existem métodos que são invocados em
 O JADE permite o desenvolvimento de agentes com suporte à interface gráfica. Dessa forma, é possível desenvolver uma interação simples do agente com o ser humano.
 
 
-Por padrão, o JADE utiliza diversos agentes que utilizam-se de interfaces gráficas para a comunicação dos humanos que, dentre outras funcionalidades, permitem o envio de dados, controle do agente e testes da plataforma. Ferramentas como gerência dos~\emph{containers}, visualização do DF, criação de mensagens a partir de agentes falsos (~\emph{sniffers}), dentre outros são disponibilizados nativamente para o desenvolvedor.
+Por padrão, o JADE utiliza diversos agentes que utilizam-se de interfaces gráficas para a comunicação dos humanos que, dentre outras funcionalidades, permitem o envio de dados, controle do agente e testes da plataforma. Ferramentas como gerência dos~\emph{containers}, visualização do DF, criação de mensagens a partir de agentes falsos (\emph{sniffers}), dentre outros são disponibilizados nativamente para o desenvolvedor.
 
-A imagem~\ref{fig:tela-jade} apresenta o exemplo básico do agente RMA, onde é apresentado sua interface gráfica com a arquitetura em tempo real.
+Na representação básica do exemplo do agente RMA~\ref{fig:tela-jade}, é apresentada sua interface gráfica com o ambiente de execução em tempo real. É possível identificar apenas o~\emph{container} principal da aplicação. Nele, existem os três agentes principais registrados descritos anteriormente: AMS, DF e o próprio RMA.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.65]{images/tela-jade.png}
-	\caption{Apresentação da Interface}
+	\caption{Apresentação da Interface do agente RMA}
 	\label{fig:tela-jade}
 \end{figure}
 
 \subsection{JBoss Seam}
 
-No mundo corporativo do JAVA, muitos frameworks são responsáveis por partes específicas de uma aplicação. Seguindo as especificações propostas para a plataforma (JSR), as aplicações implementam integrações com o banco de dados (Hibernate, JPA), integração com a camada de visualização (Struts 1 e 2, JSF), injeção de dependência (Weld e Spring). Porém a integração destes frameworks nem sempre é trivial, demandando muito tempo dos desenvolvedores a correta configuração.
+No mundo corporativo do JAVA, muitos frameworks são responsáveis por partes específicas de uma aplicação. Seguindo as especificações propostas para a plataforma (JSR), as aplicações implementam integrações com o banco de dados (Hibernate, JPA), integração com a camada de visualização (Struts 1~\cite{struts1} e 2~\cite{struts2}, JSF~\cite{jsf2012}), contextos Java e injeção de dependência~\cite{di2012}. Porém a integração destes frameworks nem sempre é trivial, demandando muito tempo dos desenvolvedores para a correta configuração.
 
 Neste aspecto surge o JBoss Seam. Ele é um~\emph{framework} que reune as principais tecnologias de desenvolvimento web na linguagem Java. Ele integra as tecnologias~\emph{Asynchronous JavaScript and XML} (AJAX),~\emph{JavaServer Faces} (JSF),~\emph{Java Persistence} (JPA),~\emph{Enterprise Java Beans} (EJB 3.0) e~\emph{Business Process Management} (BPM) em uma única ferramenta que objetiva o desenvolvimento ágil de aplicações e o foco do programador na lógica de negócio~\cite{seamSite}.
 
-A imagem~\ref{fig:servidor-app-seam} representa a pilha de aplicações do Seam, que são todos os~\emph{frameworks} utilizados pelo JBoss Seam.
+A pilha de aplicações do Seam~\ref{fig:servidor-app-seam} são todos as tecnologias que são utilizados pelo JBoss Seam. Caso o desenvolvedor deseje utilizar outras tecnologias, o Seam provê configurações para que outras ferramentas possam ser integradas facilmente à aplicação.
 
 \begin{figure}
 	\centering
@@ -811,22 +804,20 @@ A imagem~\ref{fig:servidor-app-seam} representa a pilha de aplicações do Seam,
 	\label{fig:servidor-app-seam}
 \end{figure}
 
-Caso o desenvolvedor deseje utilizar outras tecnologias, o Seam provê configurações para que outras ferramentas possam ser integradas facilmente à aplicação.
-
-De acordo com~\cite{allen09}, uma das principais ferramentas do Seam é o~\emph{seam-generator}. Com ele, é possível gerar uma estrutura básica de projeto, com arquivos de construção, bibliotecas compatíveis e as configurações necessárias para o início do desenvolvimento e o~\emph{deploy} em um servidor de aplicação.
+Em~\cite{allen09}, uma das principais ferramentas do Seam é o~\emph{seam-generator}. Com ele, é possível gerar uma estrutura básica de projeto, com arquivos de construção, bibliotecas compatíveis e as configurações necessárias para o início do desenvolvimento e o~\emph{deploy} em um servidor de aplicação.
 
 Além disso, uma das grandes vantagens do~\emph{seam-generator} é a geração automática de código, criando a partir de uma tabela no banco de dados todas as operações necessárias para a visualização, inserção, exclusão e atualização de dados (CRUD), diminuindo assim o tempo de desenvolvimento de aplicações.
 
 \section{Trabalhos Correlatos}
-É possível fazer comparações deste trabalho com algumas diversas áreas de conhecimentos correlatos: Inteligência Artificial, Estilos de Aprendizagem, Sistemas Multiagentes e Ambientes Virtuais de Aprendizagem.
+É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste trabalho, seja em Inteligência Artificial, Estilos de Aprendizagem, Sistemas Multiagentes ou Ambientes Virtuais de Aprendizagem.
 
-Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado à um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de Inteligência Artificial. Este trabaho prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta.
+Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado à um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de Inteligência Artificial. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros Ambientes Virtuais de Aprendizagem.
 
-Na área de identificação de conhecimentos, o trabalho~\cite{allen09} visa a determinação de estilos de aprendizagem dos alunos por meio do ambiente chamado "Ferramenta de Identificação de Perfis de Aprendizes – FIPA", uma aplicação multicamadas que faz a identificação do perfil é feita por meio de questionários de estilos de aprendizagem.
+Existem trabalhos na área de identificação de conhecimentos~\cite{bativa2011}, que visam a determinação de estilos de aprendizagem dos alunos por meio da plataforma chamada "Ferramenta de Identificação de Perfis de Aprendizes – FIPA", uma aplicação multicamadas que faz a identificação do perfil é feita por meio de questionários de estilos de aprendizagem. Apesar da inferência do estilo de aprendizagem, esta plataforma utiliza uma abordagem distinta deste trabalho, sendo uma arquitetura cliente-servidor.
  
-O trabalho~\cite{geyer2001semeai} utiliza-se de Sistemas Multiagentes para a adaptação do ensino na internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de esino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil.
+O trabalho~\cite{geyer2001semeai} utiliza-se de Sistemas Multiagentes para a adaptação do ensino na internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de ensino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil. Este ambiente assemelha-se bastante com o presente trabalho, porém o seu foco não é na modelagem multidimensional do aluno.
 
-O Ambiente Virtual de Aprendizagem EDULIVRE~\cite{rabelo2010identificacao} constitui-se de um Ambiente Virtual de Aprendizagem que possibilita a inferência implícita de modelos e perfis individuais de estudantes da educação infantil. Com o perfil de cada aluno e de todos os alunos em geral, o educando poderá desenvolver nortear seu trabalho da melhor forma possível.
+Por fim, o Ambiente Virtual de Aprendizagem EDULIVRE~\cite{rabelo2010identificacao} constitui-se de um Ambiente Virtual de Aprendizagem que possibilita a inferência implícita de modelos e perfis individuais de estudantes da educação infantil. Com o perfil de cada aluno e de todos os alunos em geral, o educando poderá desenvolver nortear seu trabalho da melhor forma possível. A abordagem deste trabalho não é com uso de agentes, diferindo assim do foco deste trabalho. Além disso, o EDULIVRE apresenta a estratégia de ser o Ambiente Virtual de Aprendizagem e não permite integração com outros ambientes.
 
 
 
