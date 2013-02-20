@@ -9,7 +9,6 @@ import jade.content.onto.basic.Action;
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.domain.FIPANames;
-import jade.domain.JADEAgentManagement.JADEManagementOntology;
 import jade.domain.JADEAgentManagement.KillAgent;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
@@ -80,25 +79,34 @@ public class ManageWorkgroupBehaviour extends CyclicBehaviour {
 
     private void destroyWorkgroup(String alunoId) {
 
-	KillAgent killAgentAction = new KillAgent();
-	killAgentAction.setAgent(new AID(AgentPrefixEnum.WORKGROUP + alunoId,
-		AID.ISLOCALNAME));
-	Action action = new Action(myAgent.getAMS(), killAgentAction);
+	// TODO Deveria procurar interface no ambiente
+	AID workgroupAID = new AID(AgentPrefixEnum.WORKGROUP + alunoId,
+		AID.ISLOCALNAME);
 
-	ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
-	msg.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
-	msg.setOntology(JADEManagementOntology.NAME);
-	msg.addReceiver(myAgent.getAMS());
+	System.out.println("Terminando " + AgentPrefixEnum.WORKGROUP + alunoId);
 
+	KillAgent ka = new KillAgent();
+	ka.setAgent(workgroupAID);
+	Action kaction = new Action();
+	kaction.setActor(myAgent.getAMS());
+	kaction.setAction(ka);
+
+	ACLMessage AMSRequest = new ACLMessage(ACLMessage.REQUEST);
+	AMSRequest.setSender(myAgent.getAID());
+	AMSRequest.clearAllReceiver();
+	AMSRequest.addReceiver(myAgent.getAMS());
+	AMSRequest.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
+	AMSRequest.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+
+	AMSRequest
+		.setOntology(jade.domain.JADEAgentManagement.JADEManagementOntology.NAME);
 	try {
-	    myAgent.getContentManager().fillContent(msg, action);
+	    contentManager.fillContent(AMSRequest, kaction);
 	} catch (CodecException e) {
-	    e.printStackTrace();
 	} catch (OntologyException e) {
-	    e.printStackTrace();
 	}
 
-	myAgent.send(msg);
+	myAgent.send(AMSRequest);
     }
 
 }

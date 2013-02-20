@@ -1,7 +1,10 @@
 package br.unb.frank.agent.workgroup;
 
+import jade.content.lang.Codec.CodecException;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
+import jade.content.onto.OntologyException;
+import jade.content.onto.basic.Action;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.domain.DFService;
@@ -10,6 +13,7 @@ import jade.domain.FIPANames;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.JADEAgentManagement.JADEManagementOntology;
+import jade.domain.JADEAgentManagement.KillAgent;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import jade.wrapper.AgentContainer;
@@ -64,7 +68,8 @@ public class WorkgroupAgent extends Agent {
 	pattern = MessageTemplate.and(
 		MessageTemplate.MatchPerformative(ACLMessage.REQUEST),
 		MessageTemplate.MatchOntology(modelInferOntology.getName()));
-	addBehaviour(new RequestModelBehaviour(pattern, own, getContentManager()));
+	addBehaviour(new RequestModelBehaviour(pattern, own,
+		getContentManager()));
 
 	pattern = MessageTemplate.and(
 		MessageTemplate.MatchPerformative(ACLMessage.INFORM),
@@ -154,14 +159,22 @@ public class WorkgroupAgent extends Agent {
     }
 
     @Override
-    public void doDelete() {
+    protected void takeDown() {
 	try {
 	    DFService.deregister(this);
-	} catch (Exception e) {
+	    destroyAgent(getCognitiveAID());
+	    destroyAgent(getMetacognitiveAID());
+	    destroyAgent(getAffectiveAID());
+
+	} catch (FIPAException e) {
+	    e.printStackTrace();
+	} catch (CodecException e) {
+	    e.printStackTrace();
+	} catch (OntologyException e) {
 	    e.printStackTrace();
 	}
 
-	super.doDelete();
+	super.takeDown();
     }
 
     /**
@@ -198,6 +211,29 @@ public class WorkgroupAgent extends Agent {
 
     public void setMetacognitiveAID(AID metacognitiveAID) {
 	this.metacognitiveAID = metacognitiveAID;
+    }
+
+    public void destroyAgent(AID killedAID) throws CodecException,
+	    OntologyException {
+
+	KillAgent ka = new KillAgent();
+	ka.setAgent(killedAID);
+	Action kaction = new Action();
+	kaction.setActor(getAMS());
+	kaction.setAction(ka);
+
+	ACLMessage AMSRequest = new ACLMessage(ACLMessage.REQUEST);
+	AMSRequest.setSender(getAID());
+	AMSRequest.clearAllReceiver();
+	AMSRequest.addReceiver(getAMS());
+	AMSRequest.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
+	AMSRequest.setLanguage(FIPANames.ContentLanguage.FIPA_SL0);
+
+	AMSRequest
+		.setOntology(jade.domain.JADEAgentManagement.JADEManagementOntology.NAME);
+	getContentManager().fillContent(AMSRequest, kaction);
+
+	send(AMSRequest);
     }
 
 }

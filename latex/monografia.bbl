@@ -1,9 +1,31 @@
 \begin{thebibliography}{10}
 
+\bibitem{struts1}
+About apache struts 1.
+\newblock \url{http://struts.apache.org/development/1.x/}.
+\newblock Acessado em 18/02/2013.
+
+\bibitem{struts2}
+About apache struts 2.
+\newblock \url{http://struts.apache.org/development/2.x/}.
+\newblock Acessado em 18/02/2013.
+
 \bibitem{fipa-cal-spec}
 Fipa communicative act library specification.
 \newblock \url{http://www.fipa.org/specs/fipa00037/index.html}.
 \newblock Acessado em 01/02/2013.
+
+\bibitem{jsf2012}
+Javaserver faces technology.
+\newblock
+  \url{http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.ht%
+ml}.
+\newblock Acessado em 18/02/2013.
+
+\bibitem{di2012}
+Jsr 299: Contexts and dependency injection for the java ee platform.
+\newblock \url{http://jcp.org/en/jsr/detail?id=299}.
+\newblock Acessado em 18/02/2013.
 
 \bibitem{kse}
 The knowledge sharing effort.
@@ -31,6 +53,10 @@ John~L. Austin.
 \newblock {\em How to do things with words}.
 \newblock Harvard U.P., Cambridge, Mass., 1962.
 
+\bibitem{bativa2011}
+Gilberto~Bravos Bativa and Itana Stiubiener.
+\newblock Ferramenta de identifica{\c{c}}{\~a}o de perfis de aprendizes-fipa.
+
 \bibitem{bellifemineGuide02}
 F.~Bellifemine, G.~Caire, T.~Trucco, and G.~Rimassa.
 \newblock Jade programmer’s guide.
@@ -40,12 +66,12 @@ F.~Bellifemine, G.~Caire, T.~Trucco, and G.~Rimassa.
 Fabio~L. Bellifemine, Giovanni Caire, and Dominic Greenwood.
 \newblock {\em {Developing Multi-Agent Systems with JADE (Wiley Series in Agent
   Technology)}}.
-\newblock Wiley, April 2007.
+\newblock Wiley, Abril 2007.
 
 \bibitem{geyer2001semeai}
 Alessandra Rodrigues Débora Nice Ferrari José Emiliano Alex
   Francisco~Oliveira Cláudio~Geyer, Adriana Soares~Pereira.
-\newblock Semeai-sistema multiagente de ensino e aprendizagem na internet.
+\newblock Semeai - sistema multiagente de ensino e aprendizagem na internet.
 \newblock In {\em Anais do Simp{\'o}sio Brasileiro de Inform{\'a}tica na
   Educa{\c{c}}{\~a}o}, volume~1, pages 293--299, 2001.
 
@@ -58,7 +84,7 @@ A.~Cockburn.
 Germana~Menezes da~Nóbrega.
 \newblock Frank: Re-utilização de abordagens e ferramentas da ie em um
   sistema multi-agente para identificação de estilos de aprendizagem.
-\newblock October 2011.
+\newblock Outubro 2011.
 
 \bibitem{de2009}
 Gelson Luiz~Daldegan de~P{\'a}dua.
@@ -147,6 +173,8 @@ Carlos Vinícius~Sarmento Silva.
 \bibitem{soaresagente}
 Volmer~Campos Soares and Vandor Roberto~Vilardi Rissoli.
 \newblock Agente inteligente no apoio ao ensino-aprendizagem.
+\newblock In {\em Anais do Simp{\'o}sio Brasileiro de Inform{\'a}tica na
+  Educa{\c{c}}{\~a}o}, volume~1, 2011.
 
 \bibitem{verschueren09}
 J.~Verschueren and J.O. {\"O}stman.

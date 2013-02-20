@@ -2,9 +2,18 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: monografia.aux
 The style file: plain.bst
 Database file #1: bibliografia.bib
+I was expecting a `,' or a `}'---line 945 of file bibliografia.bib
+ :   
+ :   booktitle={Anais do Simp{\'o}sio Brasileiro de Inform{\'a}tica na Educa{\c{c}}{\~a}o},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in kse
 Warning--to sort, need author or key in fipa-cal-spec
 Warning--to sort, need author or key in omg20
+Warning--to sort, need author or key in struts1
+Warning--to sort, need author or key in struts2
+Warning--to sort, need author or key in jsf2012
+Warning--to sort, need author or key in di2012
 Warning--to sort, need author or key in seamSite
 Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
 while executing---line 1049 of file plain.bst
@@ -12,6 +21,8 @@ Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
 while executing---line 1049 of file plain.bst
+Warning--empty journal in bativa2011
+Warning--empty year in bativa2011
 Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Cláudio Geyer, Adriana Soares Pereira, Alessandra Rodrigues, Débora Nice Ferrari, José Emiliano, Alex Francisco Oliveira" for entry geyer2001semeai
@@ -23,48 +34,47 @@ Warning--empty note in editalFrank
 Warning--there's a number but no volume in de2009
 Warning--can't use both volume and number fields in rabelo2010identificacao
 Warning--there's a number but no series in novig95
-Warning--empty journal in soaresagente
-Warning--empty year in soaresagente
+Warning--can't use both volume and number fields in soaresagente
 Warning--there's a number but no series in wooldridge04
-You've used 28 entries,
+You've used 33 entries,
             2118 wiz_defined-function locations,
-            649 strings with 8239 characters,
-and the built_in function-call counts, 7588 in all, are:
-= -- 726
-> -- 338
-< -- 6
-+ -- 142
-- -- 110
-* -- 459
-:= -- 1275
-add.period$ -- 87
-call.type$ -- 28
-change.case$ -- 130
+            666 strings with 8768 characters,
+and the built_in function-call counts, 8548 in all, are:
+= -- 818
+> -- 355
+< -- 7
++ -- 151
+- -- 114
+* -- 498
+:= -- 1397
+add.period$ -- 102
+call.type$ -- 33
+change.case$ -- 147
 chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 310
-empty$ -- 636
-format.name$ -- 110
-if$ -- 1595
+cite$ -- 50
+duplicate$ -- 352
+empty$ -- 756
+format.name$ -- 114
+if$ -- 1824
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 32
-newline$ -- 141
-num.names$ -- 48
-pop$ -- 195
+int.to.str$ -- 33
+missing$ -- 33
+newline$ -- 166
+num.names$ -- 50
+pop$ -- 242
 preamble$ -- 1
-purify$ -- 111
+purify$ -- 123
 quote$ -- 0
-skip$ -- 199
+skip$ -- 228
 stack$ -- 0
-substring$ -- 299
-swap$ -- 51
-text.length$ -- 6
+substring$ -- 324
+swap$ -- 59
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 90
-warning$ -- 12
-while$ -- 62
-width$ -- 30
-write$ -- 291
-(There were 6 error messages)
+type$ -- 110
+warning$ -- 17
+while$ -- 64
+width$ -- 35
+write$ -- 338
+(There were 7 error messages)

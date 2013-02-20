@@ -108,14 +108,15 @@ public class Authenticator {
     }
 
     public void logout() {
-	// sendDestroyAgentMessage();
+	sendDestroyAgentMessage();
 	identity.logout();
     }
 
     private void sendDestroyAgentMessage() {
 	try {
 	    DestroyAgentCommand command = new DestroyAgentCommand();
-	    // command.setAlunoId(usuario.getId());
+	    Integer id = aluno.getId();
+	    command.setAlunoId(id.longValue());
 	    jadeGateway.execute(command);
 	} catch (StaleProxyException e) {
 	    log.error(e);

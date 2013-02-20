@@ -1,5 +1,6 @@
 package br.unb.frank.agent.workgroup;
 
+import br.unb.frank.ontology.modelinfer.ModelInferOntology;
 import jade.content.lang.Codec;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
@@ -12,12 +13,14 @@ public class AffectiveAgent extends Agent {
 
     private Codec codec = new SLCodec();
     private Ontology jadeOntology = JADEManagementOntology.getInstance();
+    private Ontology modelInferOntology = ModelInferOntology.getInstance();
 
     @Override
     protected void setup() {
 
 	getContentManager().registerLanguage(codec);
 	getContentManager().registerOntology(jadeOntology);
+	getContentManager().registerOntology(modelInferOntology);
 	super.setup();
     }
 

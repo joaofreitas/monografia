@@ -13,11 +13,11 @@ Basicamente, a solução é composta por sete diferentes tipos de agentes:
 	\item \emph{AfectiveAgent} - Responsável pelo modelo afetivo.
 \end{enumerate}
 
-A solução é baseada em grupos de trabalho por aluno. Após a autenticação do aluno em uma plataforma web, o sistema multiagente realiza a criação dos agentes de grupo de trabalho para o aluno:~\emph{WorkgroupAgent},~\emph{CognitiveAgent},~\emph{MetacognitiveAgent},~\emph{AfectiveAgent}. Esses agentes são responsáveis pela manutenção do modelo multidimensional do aluno na plataforma e são atualizados conforme os dados forem enviados pelos agentes interfaces com o ambiente externo.
+A solução é baseada em grupos de trabalho por aluno. Após a autenticação do aluno em uma plataforma ~\emph{web}, o sistema multiagente realiza a criação dos agentes de grupo de trabalho para o aluno:~\emph{WorkgroupAgent},~\emph{CognitiveAgent},~\emph{MetacognitiveAgent},~\emph{AfectiveAgent}. Esses agentes são responsáveis pela manutenção do modelo multidimensional do aluno na plataforma e são atualizados conforme os dados forem enviados pelos agentes interfaces com o ambiente externo.
 
 O primeiro agente interface,~\emph{GatewayAgent}, é responsável pela interação direta com a plataforma web. Essa plataforma irá interagir com os alunos (por meio de questionários de estilo de aprendizagem) e docentes (notificando o estilo de aprendizagem dos seus alunos) e encaminhará os dados para o agente em questão, que repassará ao ambiente.
 
-O agente interface~\emph{WebServiceAgent}, é responsável pela comunicação com os web services do SMA Frank, que é a forma escolhida para futuras interações com os Ambientes Virtuais de Aprendizagem. Por fim, o agente~\emph{ManagerAgent} é responsável pela criação dos agentes.
+O agente interface~\emph{~\emph{web}ServiceAgent}, é responsável pela comunicação com os web services do SMA Frank, que é a forma escolhida para futuras interações com os Ambientes Virtuais de Aprendizagem. Por fim, o agente~\emph{ManagerAgent} é responsável pela criação dos agentes.
 
 As seções seguintes detalham a metodologia, justificam a arquitetura da solução por meio da modelagem definida na metodologia MASE.
 
@@ -28,7 +28,7 @@ Em seguida foi aplicada, foi realizado estudos aprofundados na metodologia MASE 
 
 A arquitetura básica do sistema já havia sido previamente decidida~\cite{editalFrank}, sendo necessário detalhar seus requisitos por meio da metodologia MASE. Além disso, os Ambientes Virtuais de Aprendizagem deveriam ser capazes de comunicar-se com a solução proposta, ou seja, a comunicação deve ser feita de forma independente da linguagem de programação. Por fim, foi definido~\cite{editalFrank} o nome da aplicação solução à ser desenvolvida:~\emph{Frank}.
 
-Posteriormente o trabalho seguiu-se com a implementação do SMA na linguagem JAVA, utilizando-se das ferramentas JADE e JBoss Seam. As subseções seguintes deverão detalhar a implementação do Sistema Multiagente e da camada web, bem como a sua integração.
+Posteriormente o trabalho seguiu-se com a implementação do SMA na linguagem JAVA, utilizando-se das ferramentas JADE e JBoss Seam. As subseções seguintes deverão detalhar a implementação do Sistema Multiagente e da camada ~\emph{web}, bem como a sua integração.
 
 Por fim, a solução foi testada por meio de cenários que simulavam o uso por meio dos atores Aluno e Docente. A demonstração está detalhada no capítulo 4.
 
@@ -36,11 +36,11 @@ Por fim, a solução foi testada por meio de cenários que simulavam o uso por m
 
 A modelagem foi desenvolvida utilizando-se a ferramenta~\emph{agentTool}. A ferramenta possui meios para diagramar todas as fases e passos do MASE, auxiliando o analista em todos os diagramas necessários, além de gerar código automático para alguns frameworks de SMA.
 
-Conforme dito a respeito do MASE, a metodologia é dividida em duas fases: Análise e Design. A primeira fase, responsável pelo levantamento de requisitos e entendimento das regras e tarefas, é apresentada na subseção~\ref{subsection:analise}. A segunda fase está apresentada em~\ref{subsection:design}.
+A metodologia é dividida em duas fases: Análise e Design. A primeira fase~\ref{subsection:analise}, responsável pelo levantamento de requisitos e entendimento das regras e tarefas, e a segunda fase~\ref{subsection:design} responsável pela criação dos agentes, conversações e componentes internos.
 
 \subsection{Análise}\label{subsection:analise}
 
-A metodologia inicia-se com o passo de captura das metas. Para tanto, foi necessário primeiramente um levantamento inicial dos requisitos do SMA. Os requisitos foram levantados e compreendidos por meio de~\cite{editalFrank}, onde é possível listar:
+A metodologia inicia-se com o passo de captura das metas. Para tanto, foi necessário primeiramente um levantamento inicial dos requisitos do SMA. Os requisitos foram levantados e compreendidos por meio da sua documentação inicial~\cite{editalFrank}, onde é possível listar:
 
 \begin{enumerate}
 	\item O sistema deve manter um modelo do estudante, onde será determinado o seu estilo de aprendizagem e será notíficado ao docente.
@@ -56,9 +56,9 @@ A metodologia inicia-se com o passo de captura das metas. Para tanto, foi necess
 	\item O sistema deve construir o modelo do estudante a partir de uma modelagem implícita, ou seja, a partir do desempenho obtido nas ferramentas de aprendizado.
 \end{enumerate}
 
-A partir dos requisitos de~\cite{editalFrank}, foi possível estabelecer metas que o sistema deveria atingir para satisfazê-los:
+A partir destes requisitos, foi possível estabelecer metas que o sistema deveria atingir para satisfazê-los:
 
-\begin{itemize}
+\begin{enumerate}
 	\item Manter um modelo do estudante.
 	\item Auxiliar o aluno por meio de um grupo de trabalho (Workgroup).
 	\item Notificar ao docente.
@@ -75,11 +75,11 @@ A partir dos requisitos de~\cite{editalFrank}, foi possível estabelecer metas q
 	\item Construir modelagem explícita.
 	\item Construir modelagem implícita.
 	\item Construir modelo de estilo de aprendizagem do aluno.
-\end{itemize}
+\end{enumerate}
 
-A partir do levantamento, foi possível observar que a meta "Manter um modelo do estudante" abrange o escopo geral de toda a aplicação, sendo possível estabelecer como meta do sistema. A meta "Auxiliar o aluno por meio de um grupo de trabalho" indica que o SMA deverá criar um grupo de trabalho para cada aluno que estiver usando o sistema. O grupo de trabalho deve ser composto pelos agentes cognitivo, afetivo e metacognitivo, onde cada um possui suas respectivas metas. No levantamento, foram previstas três interfaces: Interface Web com o Aluno, notificação do docente (via Web) e interface com ambientes de virtuais de aprendizagem.
+A partir do levantamento, foi possível observar que a meta 1 abrange o escopo geral de toda a aplicação, sendo possível estabelecer como meta do sistema. A meta 2 indica que o SMA deverá criar um grupo de trabalho para cada aluno que estiver usando o sistema. O grupo de trabalho deve ser composto pelos agentes cognitivo, afetivo e metacognitivo, onde cada um possui suas respectivas metas. No levantamento, foram previstas três interfaces: Interface ~\emph{web} com o Aluno, notificação do docente (via ~\emph{web}) e interface com ambientes de virtuais de aprendizagem.
 
-A hierarquizar de metas do SMA Frank~\ref{fig:metas-frank} foi desenvolvida para encontrar quais metas poderiam ser estabelecidas com o cumprimento de outras. Os retângulos em cinza representam metas particionadas.
+A hierarquia de metas do SMA Frank~\ref{fig:metas-frank} foi desenvolvida para encontrar quais metas poderiam ser estabelecidas com o cumprimento de outras. Os retângulos em cinza representam metas particionadas.
 
 \begin{sidewaystable}
 	\centering
@@ -88,31 +88,21 @@ A hierarquizar de metas do SMA Frank~\ref{fig:metas-frank} foi desenvolvida para
 	\label{fig:metas-frank}
 \end{sidewaystable}
 
-Foram levantados 5 principais casos de uso, alguns com fluxos alternativos que representam fluxos alternativos no caso de uso, mas não necessariamente implicam em uma execução no SMA, apenas na parte Web, como por exemplo: Erro de Login. Para fins de detalhamento, este trabalho utiliza-se da notação completa de desenvolvimento de casos de uso.
+Foram levantados 5 principais casos de uso, alguns com fluxos alternativos que representam fluxos alternativos no caso de uso, mas não necessariamente implicam em uma execução no SMA, apenas na parte ~\emph{web}, como por exemplo: Erro de Login. Para fins de detalhamento, este trabalho utiliza-se da notação completa de desenvolvimento de casos de uso.
 
 O primeiro caso de uso diz respeito à modelagem cognitiva do aluno. Existem dois cenários possíveis: Modelagem implícita (principal cenário de sucesso) e modelagem explícita (cenário alternativo). Basicamente o SMA deverá processar o questionário de estilos de aprendizagem, respondido pelo aluno, para inferir explicitamente o seu modelo cognitivo e deverá analisar as respostas enviadas por ele para inferir explicitamente o seu modelo cognitivo.
 
-\input{capitulos/casos-uso/uc1}
-
 O segundo caso de uso descreve o cenário de notificação do docente. Nele, o docente é autenticado no sistema e o sistema exibe uma lista de alunos disponíveis nas mais diversas turmas. O docente seleciona um aluno e então o sistema exibe os dados relativos ao modelo do aluno. O trecho possui a descrição do caso de uso.
 
-\input{capitulos/casos-uso/uc2}
-
 Os terceiro e quarto casos de uso dizem respeito à inferência do modelo afetivo e metacognitivo do aluno, respectivamente.
-
-\input{capitulos/casos-uso/uc3}
-
-\input{capitulos/casos-uso/uc4}
 
 Por fim, o último caso de uso foi levantado para prever a interação do AVA com o SMA Frank. Devido a possibilidade dos Ambientes Virtuais de Aprendizagem serem desenvolvidos em qualquer linguagem, é necessário utilizar-se de uma forma de comunicação comum entre aplicações.
 
 Logo o SMA Frank irá utilizar-se de WebServices para a comunicação externa, garantindo que diversas aplicações poderão interagir com o SMA. Para novos AVAs, tudo o que precisará ser feito é a implementação da assinatura do serviço no WebService. Dessa forma a solução garante uma intervenção mínima no código do AVA, exigindo menos tempo na codificação da comunicação e garantindo o foco na inferência à ser feita pelo SMA. Segue a descrição do caso de uso.
 
-\input{capitulos/casos-uso/uc5}
-
 Após o desenvolvimento dos casos de uso, foi necessário refinar os diagramas de sequência. Todos os diagramas foram desenvolvidos na ferramenta~\emph{agentTool}, visto que ele acompanha todas as fases do MASE. Para o primeiro caso de uso, foram desenvolvidos dois diagramas de sequência distintos: Um para o fluxo principal e outro para o fluxo alternativo.
 
-A imagem~\ref{fig:dss-uc1-fluxo-principal} refere-se ao fluxo principal do caso de uso 1. Neste diagrama de sequência, existem 6 regras. O fluxo do Sistema inicia-se com a regra~\emph{StudentInterface}, onde ele envia os dados de questionário para o~\emph{Manager}. Este então gera um evento de localização do aluno. Em seguida, gera o evento enviar para a regra~\emph{StudentWorkGroup}, com o parâmetro~\emph{questionário}. A regra~\emph{StudentWorkGroup} gera o evento de enviar para as regras~\emph{CognitiveAction},~\emph{AffectiveAction} e~\emph{MetacognitiveAction}. Eles retornam respectivamente os modelos~\emph{Cognitivo},~\emph{Afetivo} e~\emph{Metacognitivo}. A regra~\emph{cognitiveAction} ainda gera mais um evento de envio para a regra~\emph{LearningMethodAnalyzer}, que retorna o estilo de aprendizagem.
+No diagrama de sequência~\ref{fig:dss-uc1-fluxo-principal} do caso de uso 1 existem 6 regras. O fluxo do Sistema inicia-se com a regra~\emph{StudentInterface}, onde ele envia os dados de questionário para o~\emph{Manager}. Este então gera um evento de localização do aluno. Em seguida, gera o evento enviar para a regra~\emph{StudentWorkGroup}, com o parâmetro~\emph{questionário}. A regra~\emph{StudentWorkGroup} gera o evento de enviar para as regras~\emph{CognitiveAction},~\emph{AffectiveAction} e~\emph{MetacognitiveAction}. Eles retornam respectivamente os modelos~\emph{Cognitivo},~\emph{Afetivo} e~\emph{Metacognitivo}. A regra~\emph{cognitiveAction} ainda gera mais um evento de envio para a regra~\emph{LearningMethodAnalyzer}, que retorna o estilo de aprendizagem.
 
 \begin{figure}
 	\centering
@@ -121,7 +111,7 @@ A imagem~\ref{fig:dss-uc1-fluxo-principal} refere-se ao fluxo principal do caso 
 	\label{fig:dss-uc1-fluxo-principal}
 \end{figure}
 
-A imagem~\ref{fig:dss-uc1-fluxo-alternativo} representa o fluxo de exceção do primeiro caso de uso. A regra~\emph{WebServiceInterface} recebe os dados do AVA e envia para a regra Manager por meio do evento~\emph{enviar}. Após esse evento, a regra~\emph{StudentWorkgroup} recebe o evento e reenvia para~\emph{CognitiveAction}. Em seguida ele envia para as regras~\emph{LearningMethodAnalyzer} e~\emph{PerformanceAnalyzer} que vão inferir o estilo de aprendizagem e a performance. Por fim, com estes dados, o modelo cognitivo é retornado para a regra~\emph{StudentWorkgroup}.
+A representação do fluxo de exceção~\ref{fig:dss-uc1-fluxo-alternativo} do primeiro caso de uso ilustra a regra~\emph{WebServiceInterface}, que recebe os dados do AVA e envia para a regra Manager por meio do evento~\emph{enviar}. Após esse evento, a regra~\emph{StudentWorkgroup} recebe o evento e reenvia para~\emph{CognitiveAction}. Em seguida ele envia para as regras~\emph{LearningMethodAnalyzer} e~\emph{PerformanceAnalyzer} que vão inferir o estilo de aprendizagem e a performance. Por fim, com estes dados, o modelo cognitivo é retornado para a regra~\emph{StudentWorkgroup}.
 
 \begin{figure}
 	\centering
@@ -130,7 +120,7 @@ A imagem~\ref{fig:dss-uc1-fluxo-alternativo} representa o fluxo de exceção do 
 	\label{fig:dss-uc1-fluxo-alternativo}
 \end{figure}
 
-A imagem~\ref{fig:dss-uc3-fluxo-principal} representa o fluxo principal do caso de uso 3, inferência afetiva. O processo de comunicação das regras~\emph{WebServiceInterface} e~\emph{StudentWorkgroup} funciona de forma semelhante ao diagrama anterior. A regra~\emph{AffectiveAction} gera um evento de inferência de modelagem afetiva.
+A representação do fluxo principal~\ref{fig:dss-uc3-fluxo-principal} do caso de uso 3 ilustra a inferência afetiva. O processo de comunicação das regras~\emph{WebServiceInterface} e~\emph{StudentWorkgroup} funciona de forma semelhante ao diagrama anterior. A regra~\emph{AffectiveAction} gera um evento de inferência de modelagem afetiva.
 
 \begin{figure}
 	\centering
@@ -139,7 +129,7 @@ A imagem~\ref{fig:dss-uc3-fluxo-principal} representa o fluxo principal do caso 
 	\label{fig:dss-uc3-fluxo-principal}
 \end{figure}
 
-O diagrama de sequência 4~\ref{fig:dss-uc4-fluxo-principal} funciona similar ao caso de uso anterior, com a diferença de que a regra~\emph{MetacognitiveAction} realiza a inferência da modelagem metacognitiva.
+O diagrama de sequência~\ref{fig:dss-uc4-fluxo-principal} do caso de uso 4 funciona de forma similar ao caso de uso anterior, com a diferença de que a regra~\emph{MetacognitiveAction} realiza a inferência da modelagem metacognitiva.
 
 \begin{figure}
 	\centering
@@ -148,7 +138,7 @@ O diagrama de sequência 4~\ref{fig:dss-uc4-fluxo-principal} funciona similar ao
 	\label{fig:dss-uc4-fluxo-principal}
 \end{figure}
 
-Por fim o último diagrama de sequência~\ref{fig:dss-uc5-fluxo-principal} representa a counicação da regra~\emph{WebServiceInterface} com a regra~\emph{Manager}. A primeira realiza a validação de dados e em seguida o envio de dados. Após receber os dados, a regra~\emph{Manager} localiza o aluno e continua o fluxo de execução.
+Por fim o último diagrama~\ref{fig:dss-uc5-fluxo-principal} representa a counicação da regra~\emph{WebServiceInterface} com a regra~\emph{Manager}. A primeira realiza a validação de dados e em seguida o envio de dados. Após receber os dados, a regra~\emph{Manager} localiza o aluno e continua o fluxo de execução.
 
 \begin{figure}
 	\centering
@@ -157,7 +147,7 @@ Por fim o último diagrama de sequência~\ref{fig:dss-uc5-fluxo-principal} repre
 	\label{fig:dss-uc5-fluxo-principal}
 \end{figure}
 
-Por fim, após o levantamento de todas as regras foi necessário criar tarefas que satisfaçam o cumprimento das regras. Em outras palavras, é necessária a criação do~\emph{MASE Role Model}. A tabela~\ref{tabela:mase-role-model} representa as metas criadas para o SMA, bem como as suas respectivas tarefas. É importante ressaltar que, devido aos objetivos deste trabalho, houve um refinamento muito maior do agente cognitivo. Os agentes afetivos e metacognitivos foram apenas projetados na arquitetura.
+Por fim, após o levantamento de todas as regras foi necessário criar tarefas que satisfaçam o cumprimento das regras. Em outras palavras, é necessária a criação do~\emph{MASE Role Model}. A organização das metas e tarefas foi feita inicialmente de forma tabular~\ref{tabela:mase-role-model} , onde são organizadas as regras linha a linha, seguidas das respectivas tarefas. É importante ressaltar que, devido aos objetivos deste trabalho, houve um refinamento muito maior do agente cognitivo. Os agentes afetivos e metacognitivos foram apenas projetados na arquitetura.
 
 \begin{table}
 	\caption{Estruturação das Tarefas por Regra}
@@ -187,7 +177,7 @@ Por fim, após o levantamento de todas as regras foi necessário criar tarefas q
 	\label{tabela:mase-role-model}
 \end{table}
 
-A imagem~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model} e a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudenInterface} (Interface Web da Aplicação) ou~\emph{WebServiceInterface} (Ambientes Virtuais de Aprendizagem). Além disso, a regra~\emph{StudenInterface} possui uma tarefa para autenticação do aluno, onde ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno.
+O~\emph{MASE Role Model}~\ref{fig:frank-role-model} apresenta toda a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudenInterface} (Interface Web da Aplicação) ou~\emph{WebServiceInterface} (Ambientes Virtuais de Aprendizagem). Além disso, a regra~\emph{StudenInterface} possui uma tarefa para autenticação do aluno, onde ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno.
 
 A regra~\emph{StudentWorkgroup} será a regra responsável pela gerência do grupo de trabalho do aluno. Ela recebe os dados da regra~\emph{Manager} e reencaminha para as regras~\emph{Cognitive},~\emph{Affective} e~\emph{Metacognitive}. As linhas tracejadas de cor azul representam comunicações internas entre as regras.
 
@@ -209,7 +199,7 @@ Na regra~\emph{WebServiceInterface}, o diagrama da tarefa "Validar Dados"~\ref{f
 	\label{fig:validar-dados}
 \end{figure}
 
-O diagrama da tarefa "Enviar Questionário"~\ref{fig:td-enviar-quest}, da regra~\emph{StudentInterface} inicia-se com uma mensagem da plataforma web contendo os dados do questionário. Esses dados são convertidos para uma linguagem comum no SMA. Em seguida, esse questionário é enviado para o manager.
+O diagrama da tarefa "Enviar Questionário"~\ref{fig:td-enviar-quest}, da regra~\emph{StudentInterface} inicia-se com uma mensagem da plataforma ~\emph{web} contendo os dados do questionário. Esses dados são convertidos para uma linguagem comum no SMA. Em seguida, esse questionário é enviado para o manager.
 
 \begin{figure}
 	\centering
@@ -218,7 +208,7 @@ O diagrama da tarefa "Enviar Questionário"~\ref{fig:td-enviar-quest}, da regra~
 	\label{fig:td-enviar-quest}
 \end{figure}
 
-Ainda na regra~\emph{StudentInterface}, o diagrama da tarefa "Autenticar Aluno"~\ref{fig:td-autenticar-aluno} inicia com uma mensagem da plataforma web contendo o aluno a ser criado. A tarefa verifica a existência do aluno e em caso negativo, envia a mensagem de criação à tarefa~\emph{Manager}. Caso contrário, envia uma mensagem de erro à plataforma Web.
+Ainda na regra~\emph{StudentInterface}, o diagrama da tarefa "Autenticar Aluno"~\ref{fig:td-autenticar-aluno} inicia com uma mensagem da plataforma ~\emph{web} contendo o aluno a ser criado. A tarefa verifica a existência do aluno e em caso negativo, envia a mensagem de criação à tarefa~\emph{Manager}. Caso contrário, envia uma mensagem de erro à plataforma ~\emph{web}.
 
 \begin{figure}
 	\centering
@@ -302,7 +292,7 @@ Após a conclusão da primeira etapa do MASE, é necessário definir as classes 
 \end{figure}
 
 \begin{itemize}
-	\item GatewayAgent - Possui a regra StudentInterface, responsável pela interface com a plataforma web, ou seja, com o estudante e o docente.
+	\item GatewayAgent - Possui a regra StudentInterface, responsável pela interface com a plataforma ~\emph{web}, ou seja, com o estudante e o docente.
 	\item WebServiceAgent - Possui a regra~\emph{WebServiceInterface}, é responśavel pela interface com os ambientes virtuais de aprendizagem.
 	\item Manager - Possui a regra~\emph{Manager}, é responsavel pela gerência da plataforma: Criação dos agentes, encaminhamento de mensagens.
 	\item WorkgroupAgent - Possui a regra~\emph{StudentWorkgroup}, responsável pela gerência do grupo de trabalho de um determinado aluno.
@@ -319,7 +309,7 @@ As conversações são definidas da seguinte forma:
 	\item Conv4, Conv5 e Conv6 - Conversação do~\emph{WorkGroupAgent} com os agentes~\emph{CognitiveAgent}, ~\emph{MetacognitiveAgent} e ~\emph{AffectiveAgent}, respectivamente.
 \end{itemize}
 
-A primeira conversação (conv1) ocorre de forma simples. No lado do iniciador da conversação~\ref{fig:conv1-iniciador}, ele solicita ao respondedor a verificação da existência do aluno na plataforma e entra no estado de espera. Caso a resposta seja~\emph{usuarioValido}, o iniciador irá enviar a mensagem~\emph{enviarDados} e encerrar a execução normalmente. Caso contrário, entrará no estado de falha, onde informará erro de execução.
+A primeira conversação (conv1) ocorre de forma simples. No lado do iniciador~\ref{fig:conv1-iniciador}, ele solicita ao respondedor a verificação da existência do aluno na plataforma e entra no estado de espera. Caso a resposta seja~\emph{usuarioValido}, o iniciador irá enviar a mensagem~\emph{enviarDados} e encerrar a execução normalmente. Caso contrário, entrará no estado de falha, onde informará erro de execução.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/conv1-iniciador.png}
@@ -339,7 +329,7 @@ A segunda conversação (conv2) possui a mesma dinâmica da conversação 1, por
 
 A conversação 3 (conv3) é bastante simples. Não há nenhum estado de transição durante a conversação, pois é apenas um encaminhamento de dados para o grupo de trabalho do aluno.
 
-As conversações 4, 5 e 6 (conv4, conv5 e conv6) possuem dinâmica bastante semelhante. Do lado do iniciador, basicamente ele envia um request com o modelo a ser inferido, os dados a serem analisados e entra em estado de espera. Em seguida, quando receber a resposta, ele atualiza o modelo cognitivo. A imagem~\ref{fig:conv4-iniciador} detalha a conversação 4, que pode ser generalizado para a 5 e 6.
+As conversações 4, 5 e 6 (conv4~\ref{fig:conv4-iniciador}, conv5 e conv6) possuem dinâmica bastante semelhante, sendo representado aqui somente a conversação 4. Do lado do iniciador, basicamente ele envia um request com o modelo a ser inferido, os dados a serem analisados e entra em estado de espera. Em seguida, quando receber a resposta, ele atualiza o modelo cognitivo.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/conv4-iniciador.png}
@@ -347,7 +337,7 @@ As conversações 4, 5 e 6 (conv4, conv5 e conv6) possuem dinâmica bastante sem
 	\label{fig:conv4-iniciador}
 \end{figure}
 
-O lado do recebedor recebe o request e infere o modelo do aluno. Por fim, apenas reenvia novamente ao iniciador da conversação.  A imagem~\ref{fig:conv4-recebedor} detalha a conversação 4, que pode ser generalizado para a 5 e 6.
+O lado do recebedor~\ref{fig:conv4-recebedor} recebe o request e infere o modelo do aluno. Por fim, apenas reenvia novamente ao iniciador da conversação.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/conv4-recebedor.png}
@@ -375,28 +365,28 @@ A arquitetura de deploy do trabaho deve ser dinâmica, visto que os agentes de t
 
 \section{Arquitetura}
 
-A arquitetura do sistema foi separada em duas aplicações: A parte Web chamada de~\emph{Frank Web} e a parte Sistema Multiagente chamada de~\emph{SMA Frank}. Esta seção pretende relatar a arquitetura interna de cada parte, bem como as dificuldades encontradas na integração entre ambas.
+A arquitetura do sistema foi separada em duas aplicações: A parte ~\emph{web} chamada de~\emph{Frank Web} e a parte multiagente chamada de~\emph{SMA Frank}. Esta seção pretende relatar a arquitetura interna de cada parte, bem como as dificuldades encontradas na integração entre ambas.
 
 A solução foi separada devido aos seguintes aspectos:
 \begin{itemize}
-	\item Maior Distribuição - É possível replicar a parte web em vários nós de uma rede, possibilitando assim um maior ganho de performance da aplicação.
+	\item Maior Distribuição - É possível replicar a parte ~\emph{web} em vários nós de uma rede, possibilitando assim um maior ganho de performance da aplicação.
 	\item Menor Complexidade - Os objetivos das aplicações estão separados, modularizando assim as responsabilidades de cada parte.
-	\item Menor Dificuldade - A parte Web é responśavel pela interação com o usuário e com o banco de dados. Estes pontos seriam muito mais difíceis de implementar no framework JADE.
+	\item Menor Dificuldade - A parte ~\emph{web} é responśavel pela interação com o usuário e com o banco de dados. Estes pontos seriam muito mais difíceis de implementar no framework JADE.
 \end{itemize}
 
 \subsection{Frank Web}
-A parte Web utiliza-se do framework JBoss Seam, confome dito anteriormente, um framework que acelera o tempo de desenvolvimento de aplicações dinâmicas para a Web. Para facilitar a manutenção do código e a reescrita de alguma parte dele, foi adotado o padrão de projetos
+A parte ~\emph{web} utiliza-se do framework JBoss Seam, confome dito anteriormente, um framework que acelera o tempo de desenvolvimento de aplicações dinâmicas para a ~\emph{web}. Para facilitar a manutenção do código e a reescrita de alguma parte dele, foi adotado o padrão de projetos
 Model View Controller (MVC). Esse padrão divide a arquitetura do sistema em três partes:
 
 \begin{itemize}
-	\item Apresentação - Responsável pela apresentação dos dados para o usuário em uma página web.
+	\item Apresentação - Responsável pela apresentação dos dados para o usuário em uma página ~\emph{web}.
 	\item Controladora - Determina o componente a ser executado.
 	\item Modelo - Representação das entidades, auxiliam na interação com o banco dados.
 \end{itemize}
 
 As ferramentas disponibilizadas pelo framework geraram todo o código para visualização, inserção, atualização e exclusão de dados. Além disso, geraram todas as páginas para que o usuário possa interagir com o sistema. 
 
-Após a geração do código inicial, foi necessário uma implementar algumas funcionalidades específicas da aplicação Frank-Web. A primeira delas foi implementar a ação de autenticação conjunta com o SMA. Quando o aluno fizer login no sistema, a aplicação web envia uma mensagem ao sistema multiagente para a criação do grupo de trabalho.
+Após a geração do código inicial, foi necessário uma implementar algumas funcionalidades específicas da aplicação Frank-Web. A primeira delas foi implementar a ação de autenticação conjunta com o SMA. Quando o aluno fizer login no sistema, a aplicação ~\emph{web} envia uma mensagem ao sistema multiagente para a criação do grupo de trabalho.
 
 Em seguida, foi necessário a implementação a tela de respostas do questionário feita pelo usuário.
 
@@ -414,13 +404,13 @@ Foram implementadas duas ontologias. A primeira, chamada de~\emph{FrankManagemen
 
 A ontologia~\emph{ModelInferOntology} possui a função de modelar todos os conceitos relacionados à inferência do modelo do aluno. Portanto, conceitos como estilo de aprendizagem, modelo cognitivo, afetivo e metacognitivo devem estar nesta ontologia. É importante ressaltar que os modelos não estão completos, sendo necessário que em trabalhos futuros sejam modeladas as ontologias.
 
-\subsection{Integração Entre as Aplicações}
+\subsection{Aspectos da Integração}
 
 A integração entre o~\emph{Frank Web} e o~\emph{SMA Frank} pareceu bastante complexa em uma análise inicial. Por não compartilhar a mesma Máquina Virtual Java (JVM), a dificuldade de integração pareceu alta.
 
 O Jade porém possui uma forma nativa em que aplicações externas podem se conectar com o ambiente em execução. A classe~\emph{DynamicJadeGateway} registra um agente na plataforma, que atuará como uma ponte entre a aplicação e o ambiente de execução.
 
-Esse agente funcionará de forma distinta dos outros agentes da plataforma. O agente não receberá mensagens da aplicação Web, ao invés disso receberá objetos JAVA que representarão comandos. Para os diferentes comandos, o agente pode lançar diferentes mensagens na plataforma SMA. A aplicação~\emph{Frank SMA} implementa 6 comandos:
+Esse agente funcionará de forma distinta dos outros agentes da plataforma. O agente não receberá mensagens da aplicação ~\emph{web}, ao invés disso receberá objetos JAVA que representarão comandos. Para os diferentes comandos, o agente pode lançar diferentes mensagens na plataforma SMA. A aplicação~\emph{Frank SMA} implementa 6 comandos:
 
 \begin{itemize}
 	\item AnswerCommand
@@ -431,8 +421,7 @@ Esse agente funcionará de forma distinta dos outros agentes da plataforma. O ag
 	\item RequestCognitiveModelCommand
 \end{itemize}
 
-
-
+Neste capítulo, foi apresentado todos os aspectos da modelagem para a solução. Além disso, foi definido a arquitetura proposta, dividindo o sistema em duas aplicações distintas e dissertando a respeito da integração entre as duas aplicações. O próximo capítulo contém as experimentações acerca da solução proposta, bem como os resultados obtidos.
 
 
 
