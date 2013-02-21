@@ -46,14 +46,14 @@
 \contentsline {section}{\numberline {3.2}A Modelagem}{37}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}An\IeC {\'a}lise}{37}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Design}{49}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Arquitetura}{52}{section.3.3}
+\contentsline {section}{\numberline {3.3}Arquitetura}{51}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Frank Web}{52}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}SMA Frank}{53}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Integra\IeC {\c c}\IeC {\~a}o Entre as Aplica\IeC {\c c}\IeC {\~o}es}{53}{subsection.3.3.3}
-\contentsline {chapter}{\numberline {4}Experimenta\IeC {\c c}\IeC {\~o}es}{55}{chapter.4}
-\contentsline {section}{\numberline {4.1}Metodologia de Testes}{55}{section.4.1}
-\contentsline {section}{\numberline {4.2}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Aluno}{55}{section.4.2}
-\contentsline {section}{\numberline {4.3}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Docente}{59}{section.4.3}
-\contentsline {section}{\numberline {4.4}Resultados}{59}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalhos Futuros}{62}{chapter.5}
+\contentsline {subsection}{\numberline {3.3.3}Aspectos da Integra\IeC {\c c}\IeC {\~a}o}{53}{subsection.3.3.3}
+\contentsline {chapter}{\numberline {4}Experimenta\IeC {\c c}\IeC {\~o}es}{54}{chapter.4}
+\contentsline {section}{\numberline {4.1}Metodologia de Testes}{54}{section.4.1}
+\contentsline {section}{\numberline {4.2}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Aluno}{54}{section.4.2}
+\contentsline {section}{\numberline {4.3}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Docente}{56}{section.4.3}
+\contentsline {section}{\numberline {4.4}Resultados}{60}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalhos Futuros}{61}{chapter.5}
 \contentsline {chapter}{Refer\^encias}{63}{section*.24}

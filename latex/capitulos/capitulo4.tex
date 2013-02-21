@@ -1,7 +1,7 @@
 \chapter{Experimentações}
 
 Esta seção apresenta o protótipo desenvolvido para a parte web da solução. Serão mostradas as telas de interação com o aluno e professor. Para tanto, foi definida uma metodologia~\ref{section:metodologia-testes} das experimentações que explicará como foi dividido os cenários de testes.
-A seção~\ref{section:interface-aluno} mostra o fluxo de execução desde o primeiro acesso do aluno à visualização do seu estilo de aprendizagem. A seção~\ref{section:interface-docente} mostra o fluxo de execução do docente que deseja verificar o estilo de aprendizagem de seus alunos.
+O primeiro cenário~\ref{section:interface-aluno} mostra o fluxo de execução desde o primeiro acesso do aluno à visualização do seu estilo de aprendizagem. O segundo cenário~\ref{section:interface-docente} mostra o fluxo de execução do docente que deseja verificar o estilo de aprendizagem de seus alunos.
 
 Por fim, o capítulo de resultados~\ref{section:resultados} destaca todos os resultados esperados do cenários do aluno e dos objetivos do projeto.
 
@@ -13,7 +13,16 @@ O segundo cenário aborda o acesso do docente ao sistema, desejando saber o esti
 As duas próximas seções mostram os fluxos explicados.
 
 \section{Demonstração da Interface com Aluno}\label{section:interface-aluno}
-O fluxo inicia-se quando o aluno acessa a interface principal do Sistema~\ref{fig:frank-tela-aluno-inicial}, mostrando uma tela de boas vindas. O usuário seleciona vai para a tela de autenticação e o Sistema exige o login e a senha de acesso~\ref{fig:frank-tela-aluno-login}. Caso o usuário informe o login inválido o Sistema apresenta a tela de erro~\ref{fig:frank-tela-login-invalido}, solicitando novamente os dados para autenticação.
+O fluxo definido para o aluno~\ref{fig:fluxo-aluno} consiste do seu primeiro acesso na plataforma, sua autenticação, responder seu questionário e visualizar o seu estilo de aprendizagem. Caso o seu login esteja incorreto, ele deve tentar novamente.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{images/fluxo-aluno.png}
+	\caption{Fluxo de Execução para Experimentação do Perfil Aluno.}
+	\label{fig:fluxo-aluno}
+\end{figure}
+
+O primeiro passo do fluxo é o acesso à tela inicial~\ref{fig:frank-tela-aluno-inicial} do Sistema, onde é mostrado uma mensagem de boas vindas. 
 
 \begin{figure}
 	\centering
@@ -22,6 +31,7 @@ O fluxo inicia-se quando o aluno acessa a interface principal do Sistema~\ref{fi
 	\label{fig:frank-tela-aluno-inicial}
 \end{figure}
 
+O usuário então segue para a tela de autenticação e o Sistema exige o login e a senha de acesso~\ref{fig:frank-tela-aluno-login}. 
 
 \begin{figure}
 	\centering
@@ -30,6 +40,8 @@ O fluxo inicia-se quando o aluno acessa a interface principal do Sistema~\ref{fi
 	\label{fig:frank-tela-aluno-login}
 \end{figure}
 
+Caso o usuário informe o login inválido, o Sistema apresenta a tela de erro~\ref{fig:frank-tela-login-invalido}, solicitando novamente os dados para autenticação.
+
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{images/frank-tela-login-invalido.png}
@@ -37,7 +49,7 @@ O fluxo inicia-se quando o aluno acessa a interface principal do Sistema~\ref{fi
 	\label{fig:frank-tela-login-invalido}
 \end{figure}
 
-Após a autenticação, o usuário com perfil de aluno realiza o primeiro acesso ao Sistema. Ele detecta que o usuário não fez o questionário de estilos de aprendizagem e apresenta a tela de convite ao preenchimento do mesmo~\ref{fig:frank-tela-aluno-prim-acesso}.
+Após a autenticação, o usuário (agora autenticado com o perfil de aluno) realiza o primeiro acesso ao Sistema. Este detecta que o aluno não fez o questionário de estilos de aprendizagem e apresenta a tela de convite ao preenchimento do mesmo~\ref{fig:frank-tela-aluno-prim-acesso}.
 
 \begin{figure}
 	\centering
@@ -50,7 +62,7 @@ O usuário então entra na tela de preenchimento do questionário~\ref{fig:frank
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.48]{images/frank-tela-aluno-preencher-questionario.png}
+	\includegraphics[scale=0.4]{images/frank-tela-aluno-preencher-questionario.png}
 	\caption{Tela de prenchimento do questionário.}
 	\label{fig:frank-tela-aluno-preencher-questionario}
 \end{figure}
@@ -59,17 +71,26 @@ Por fim, o Sistema exibe o resultado final do processamento do SMA na tela de bo
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.48]{images/frank-tela-aluno-inferencia-estilo.png}
+	\includegraphics[scale=0.6]{images/frank-tela-aluno-inferencia-estilo.png}
 	\caption{Tela de visualização do estilo de aprendizagem inferido.}
 	\label{fig:frank-tela-aluno-inferencia-estilo}
 \end{figure}
 
 \section{Demonstração da Interface com Docente}\label{section:interface-docente}
-O fluxo do docente é semelhante ao fluxo do aluno até a autenticação passo de autenticação~\ref{fig:frank-tela-aluno-login}. O Sistema distingue os usuários neste momento e, no caso do Docente, renderiza uma tela diferente devido ao seu perfil. Ele renderiza a tela de visualização de turmas às quais pertencem ao docente em questão.
+O fluxo definido para o docente~\ref{fig:fluxo-aluno} consiste do acesso na plataforma, sua autenticação, visualização das turmas e visualizar o estilo de aprendizagem dos alunos. Caso o seu login esteja incorreto, ele deve tentar novamente.
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.48]{images/frank-tela-professor-acesso.png}
+	\includegraphics[scale=0.6]{images/fluxo-docente.png}
+	\caption{Fluxo de Execução para Experimentação do Perfil Docente.}
+	\label{fig:fluxo-aluno}
+\end{figure}
+
+É possível notar que o fluxo do docente é semelhante ao fluxo do aluno até a verificação de validade do login. O Sistema distingue os usuários neste momento e, no caso do Docente, renderiza uma tela diferente devido ao seu perfil. Ele mostra a tela de visualização de turmas às quais pertencem ao docente em questão.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{images/frank-tela-professor-acesso.png}
 	\caption{Tela inicial do usuário com o perfil de docente.}
 	\label{fig:frank-tela-professor-acesso}
 \end{figure}
@@ -78,7 +99,7 @@ O Docente seleciona a turma desejada e o Sistema aprensenta a tela de visualiza�
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.48]{images/frank-tela-professor-visualizar-turma.png}
+	\includegraphics[scale=0.6]{images/frank-tela-professor-visualizar-turma.png}
 	\caption{Tela de visualização do estilo de aprendizagem por turma.}
 	\label{fig:frank-tela-professor-visualizar-turma}
 \end{figure}
