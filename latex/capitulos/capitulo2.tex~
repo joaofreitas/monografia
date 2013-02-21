@@ -24,13 +24,15 @@ Em~\cite{felder1988learning}, um modelo de estilo de aprendizado classifica um e
 
 O estilo de aprendizagem pode orientar melhor um docente a estimular um aluno durante o processo de desenvolvimento de suas habilidades, alterando o ambiente para o aluno de acordo com o estilo de forma a individualizar o processo didádico do ensino. Existem diversos modelos de estilos de aprendizagem propostos na literatura.
 
-O modelo mais famoso pela literatura da IE, o modelo de Felder trata dos os seguintes estilos de aprendizagem:
+Famoso pela literatura da IE, o modelo de Felder divide os seguintes estilos de aprendizagem:
 \begin{itemize}
-	\item Sensing/Intuiting
-	\item Visual/Verbal
-	\item Active/Reflective
-	\item Sequential/Globa
+	\item Sensorial/Intuitivo: Diz respeito ao tipo de informação que o estudante preferencialmente percebe.
+	\item Visual/Verbal: Modalidade do conhecimento que é mais facilmente percebida.
+	\item Activo/Reflexivo: Forma de processar a informação.
+	\item Sequêncial/Global: Como o estudante processa a informação em direção ao entendimento.
 \end{itemize}
+
+O estilo
 
 \subsection{Modelo de Honey e Munford}
  O modelo de Butler possui cinco dimensões de estilos de aprendizagem:
@@ -444,7 +446,7 @@ A fase de design consiste na modelagem do SMA de acordo com as regras levantadas
 
 Existem outras metodologias para desenvolvimento de Sistemas Multiagente. A metodologia~\emph{Gaia}~\cite{wooldridge2000} consiste em uma abordagem não iterativa que define análise e~\emph{design} de sistemas baseados em agentes. Esta metodologia é considerada genérica e compreensível pois pode ser aplicada a um nível muito amplo de sistemas multiagente e ela lida tanto com escopos mais gerais (sociedade), quanto com escopos mais específicos (agentes). Ela define as regras e tarefas em termos de uma organização, que é sinônimo de sociedade de agentes ou sistemas multiagentes.
 
-A metodologia~\emph{PASSI} (\emph{Process for Agent Societies Specification and Implementation}) é designada para o acompanhamento do desenvolvimento do sistema desde o levantamento dos requisitos até a codificação~\cite{burrafato02}. Seus modelos de projetos são baseados nas especificações da FIPA, garantindo assim a compatibilidade com o SMA a ser desenvolvido. O~\emoh{PASSI} define uma metodologia cinco modelos de trabalho: Requisito do Sistema, sociedade de Agentes, implementação dos agentes, modelo de código e modelo de implantação.
+A metodologia~\emph{PASSI} (\emph{Process for Agent Societies Specification and Implementation}) é designada para o acompanhamento do desenvolvimento do sistema desde o levantamento dos requisitos até a codificação~\cite{burrafato02}. Seus modelos de projetos são baseados nas especificações da FIPA, garantindo assim a compatibilidade com o SMA a ser desenvolvido. O~\emph{PASSI} define uma metodologia cinco modelos de trabalho: Requisito do Sistema, sociedade de Agentes, implementação dos agentes, modelo de código e modelo de implantação.
 
 \subsection{Análise}
 
