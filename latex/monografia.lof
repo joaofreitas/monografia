@@ -6,50 +6,50 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Esquematiza\IeC {\c c}\IeC {\~a}o do funcionamento b\IeC {\'a}sico de um agente em um ambiente.}}{6}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Ontologias superiores do mundo, cada uma indicando um conceito ou especializa\IeC {\c c}\IeC {\~a}o do seu superior.}}{17}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o utilizada no MASE Role Model.}}{20}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o utilizada no~\emph {Concurrent Task Diagram}.}}{20}{figure.2.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o utilizada no~\emph {Concurrent Task Diagram}.}}{21}{figure.2.4}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o utilizada no~\emph {Agent Class Diagram}.}}{22}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Exemplo de conversa\IeC {\c c}\IeC {\~a}o utilizada no Diagrama de Comunica\IeC {\c c}\IeC {\~a}o do lado do iniciador da conversa\IeC {\c c}\IeC {\~a}o.}}{22}{figure.2.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Exemplo de conversa\IeC {\c c}\IeC {\~a}o utilizada no Diagrama de Comunica\IeC {\c c}\IeC {\~a}o do lado do iniciador da conversa\IeC {\c c}\IeC {\~a}o.}}{23}{figure.2.6}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Nota\IeC {\c c}\IeC {\~a}o utilizada na arquitetura de agentes.}}{23}{figure.2.7}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Nota\IeC {\c c}\IeC {\~a}o utilizada no diagrama de deploy.}}{24}{figure.2.8}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Categoriza\IeC {\c c}\IeC {\~a}o dos Diagramas UML 2.0. Adaptado de~\cite {fowler04}.}}{26}{figure.2.9}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Sugest\IeC {\~o}es de nota\IeC {\c c}\IeC {\~a}o de caso de uso proposto por ~\cite {larman08}}}{28}{figure.2.10}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Nota\IeC {\c c}\IeC {\~a}o de diagrama de sequ\IeC {\^e}ncia, exibindo a comunica\IeC {\c c}\IeC {\~a}o de um ator e uma entidade (sistema)}}{29}{figure.2.11}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o da arquitetura principal do JADE.Adaptado de~\cite {bellifemine07}.}}{31}{figure.2.12}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Sugest\IeC {\~o}es de nota\IeC {\c c}\IeC {\~a}o de caso de uso proposto por ~\cite {larman08}}}{29}{figure.2.10}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Nota\IeC {\c c}\IeC {\~a}o de diagrama de sequ\IeC {\^e}ncia, exibindo a comunica\IeC {\c c}\IeC {\~a}o de um ator e uma entidade (sistema)}}{30}{figure.2.11}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o da arquitetura principal do JADE.Adaptado de~\cite {bellifemine07}.}}{32}{figure.2.12}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Apresenta\IeC {\c c}\IeC {\~a}o da Interface do agente RMA}}{34}{figure.2.13}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o da pilha de aplica\IeC {\c c}\IeC {\~o}es do Seam.~\cite {allen09}}}{35}{figure.2.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 1.}}{41}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo de exce\IeC {\c c}\IeC {\~a}o, caso de uso 1.}}{42}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 3.}}{42}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 4.}}{43}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 5.}}{44}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama ~\emph {MASE Role Model} gerado para o SMA Frank.}}{45}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Detalhamento da tarefa "Validar Dados" que pertence \IeC {\`a} regra~\emph {WebServiceInterface}.}}{45}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Detalhamento da tarefa "Enviar Question\IeC {\'a}rio" que pertence \IeC {\`a} regra~\emph {StudentInterface}.}}{46}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Detalhamento da tarefa "Autenticar Aluno" que pertence \IeC {\`a} regra~\emph {StudentInterface}.}}{46}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Detalhamento da tarefa "Determinar WG do Aluno" que pertence \IeC {\`a} regra~\emph {Manager}.}}{46}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Detalhamento da tarefa "Criar Workgroup" que pertence \IeC {\`a} regra~\emph {Manager}.}}{47}{figure.3.11}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Detalhamento da tarefa "Processar Dados" que pertence \IeC {\`a} regra~\emph {StudentWorkgroup}.}}{47}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Detalhamento da tarefa "Atualizar Modelos" que pertence \IeC {\`a} regra~\emph {StudentWorkgroup}.}}{48}{figure.3.13}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Detalhamento da tarefa "Inferir Modelo Afetivo" que pertence \IeC {\`a} regra~\emph {AffectiveAction}.}}{48}{figure.3.14}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Detalhamento da tarefa "Inferir Modelo Metacognitivo" que pertence \IeC {\`a} regra~\emph {MetacognitiveAction}.}}{48}{figure.3.15}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Detalhamento da tarefa "Analisar Estilo de Aprendizagem" que pertence \IeC {\`a} regra~\emph {LearningMethodAnalyzer}.}}{49}{figure.3.16}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Diagrama de Classes do SMA Frank.}}{49}{figure.3.17}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 1 no lado do Iniciador.}}{50}{figure.3.18}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 1 no lado do Respondedor.}}{50}{figure.3.19}
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 4 no lado iniciador.}}{51}{figure.3.20}
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 4 no lado iniciador.}}{51}{figure.3.21}
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 7 no lado iniciador.}}{51}{figure.3.22}
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 7 no lado recebedor.}}{52}{figure.3.23}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 1.}}{42}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo de exce\IeC {\c c}\IeC {\~a}o, caso de uso 1.}}{43}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 3.}}{44}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 4.}}{44}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do fluxo principal, caso de uso 5.}}{45}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama ~\emph {MASE Role Model} gerado para o SMA Frank.}}{46}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Detalhamento da tarefa "Validar Dados" que pertence \IeC {\`a} regra~\emph {WebServiceInterface}.}}{47}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Detalhamento da tarefa "Enviar Question\IeC {\'a}rio" que pertence \IeC {\`a} regra~\emph {StudentInterface}.}}{47}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Detalhamento da tarefa "Autenticar Aluno" que pertence \IeC {\`a} regra~\emph {StudentInterface}.}}{47}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Detalhamento da tarefa "Determinar WG do Aluno" que pertence \IeC {\`a} regra~\emph {Manager}.}}{48}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Detalhamento da tarefa "Criar Workgroup" que pertence \IeC {\`a} regra~\emph {Manager}.}}{48}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Detalhamento da tarefa "Processar Dados" que pertence \IeC {\`a} regra~\emph {StudentWorkgroup}.}}{49}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Detalhamento da tarefa "Atualizar Modelos" que pertence \IeC {\`a} regra~\emph {StudentWorkgroup}.}}{49}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Detalhamento da tarefa "Inferir Modelo Afetivo" que pertence \IeC {\`a} regra~\emph {AffectiveAction}.}}{50}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Detalhamento da tarefa "Inferir Modelo Metacognitivo" que pertence \IeC {\`a} regra~\emph {MetacognitiveAction}.}}{50}{figure.3.15}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Detalhamento da tarefa "Analisar Estilo de Aprendizagem" que pertence \IeC {\`a} regra~\emph {LearningMethodAnalyzer}.}}{50}{figure.3.16}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Diagrama de Classes do SMA Frank.}}{51}{figure.3.17}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 1 no lado do Iniciador.}}{52}{figure.3.18}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 1 no lado do Respondedor.}}{52}{figure.3.19}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 4 no lado iniciador.}}{52}{figure.3.20}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 4 no lado iniciador.}}{53}{figure.3.21}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 7 no lado iniciador.}}{53}{figure.3.22}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Detalhamento da Conversa\IeC {\c c}\IeC {\~a}o 7 no lado recebedor.}}{53}{figure.3.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Fluxo de Execu\IeC {\c c}\IeC {\~a}o para Experimenta\IeC {\c c}\IeC {\~a}o do Perfil Aluno.}}{55}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Tela Inicial do Sistema.}}{55}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Tela de Autentica\IeC {\c c}\IeC {\~a}o do Sistema.}}{56}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Tela de Erro de Autentica\IeC {\c c}\IeC {\~a}o do Sistema.}}{57}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Tela de convite ao preenchimento do question\IeC {\'a}rio de estilos de aprendizagem.}}{57}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Tela de prenchimento do question\IeC {\'a}rio.}}{58}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Tela de visualiza\IeC {\c c}\IeC {\~a}o do estilo de aprendizagem inferido.}}{58}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Fluxo de Execu\IeC {\c c}\IeC {\~a}o para Experimenta\IeC {\c c}\IeC {\~a}o do Perfil Docente.}}{59}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Tela inicial do usu\IeC {\'a}rio com o perfil de docente.}}{59}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Tela de visualiza\IeC {\c c}\IeC {\~a}o do estilo de aprendizagem por turma.}}{60}{figure.4.10}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Fluxo de Execu\IeC {\c c}\IeC {\~a}o para Experimenta\IeC {\c c}\IeC {\~a}o do Perfil Aluno.}}{57}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Tela Inicial do Sistema.}}{57}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Tela de Autentica\IeC {\c c}\IeC {\~a}o do Sistema.}}{58}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Tela de Erro de Autentica\IeC {\c c}\IeC {\~a}o do Sistema.}}{59}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Tela de convite ao preenchimento do question\IeC {\'a}rio de estilos de aprendizagem.}}{59}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Tela de prenchimento do question\IeC {\'a}rio.}}{60}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Tela de visualiza\IeC {\c c}\IeC {\~a}o do estilo de aprendizagem inferido.}}{60}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Fluxo de Execu\IeC {\c c}\IeC {\~a}o para Experimenta\IeC {\c c}\IeC {\~a}o do Perfil Docente.}}{61}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Tela inicial do usu\IeC {\'a}rio com o perfil de docente.}}{61}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Tela de visualiza\IeC {\c c}\IeC {\~a}o do estilo de aprendizagem por turma.}}{62}{figure.4.10}
 \addvspace {10\p@ }

@@ -56,6 +56,7 @@ John~L. Austin.
 \bibitem{bativa2011}
 Gilberto~Bravos Bativa and Itana Stiubiener.
 \newblock Ferramenta de identifica{\c{c}}{\~a}o de perfis de aprendizes-fipa.
+\newblock 1(1), 2011.
 
 \bibitem{bellifemineGuide02}
 F.~Bellifemine, G.~Caire, T.~Trucco, and G.~Rimassa.
@@ -68,12 +69,12 @@ Fabio~L. Bellifemine, Giovanni Caire, and Dominic Greenwood.
   Technology)}}.
 \newblock Wiley, Abril 2007.
 
-\bibitem{geyer2001semeai}
-Alessandra Rodrigues Débora Nice Ferrari José Emiliano Alex
-  Francisco~Oliveira Cláudio~Geyer, Adriana Soares~Pereira.
-\newblock Semeai - sistema multiagente de ensino e aprendizagem na internet.
-\newblock In {\em Anais do Simp{\'o}sio Brasileiro de Inform{\'a}tica na
-  Educa{\c{c}}{\~a}o}, volume~1, pages 293--299, 2001.
+\bibitem{burrafato02}
+Piermarco Burrafato and Massimo Cossentino.
+\newblock Designing a multi-agent solution for a bookstore with the passi
+  methodology.
+\newblock In {\em In Fourth International Bi-Conference Workshop on
+  Agent-Oriented Information Systems (AOIS-2002}, 2002.
 
 \bibitem{cockburn01}
 A.~Cockburn.
@@ -116,6 +117,13 @@ Michael Genesereth, Richard~E. Fikes, Ronald Brachman, Thomas Gruber, Patrick
   Peter Norvig, and Ramesh Patil.
 \newblock Knowledge interchange format version 3.0 reference manual, 1992.
 
+\bibitem{geyer2001semeai}
+Cláudio Geyer, Adriana~Soares Pereira, Alessandra Rodrigues, Débora~Nice
+  Ferrari, José Emiliano, and Alex~Francisco Oliveira.
+\newblock Semeai - sistema multiagente de ensino e aprendizagem na internet.
+\newblock In {\em Anais do Simpósio Brasileiro de Informática na Educação},
+  volume~1, pages 293--299, 2001.
+
 \bibitem{larman08}
 C.~LARMAN.
 \newblock {\em Utilizando UML e Padr{\~o}es}.
@@ -143,8 +151,8 @@ Humberto Rabelo, Wolgrand~Cardoso Braga~Jr, Le{\^o}nidas~Le{\~a}o Borges,
   Tavares, and Guido~Lemos de~Souza~Filho.
 \newblock Identifica{\c{c}}{\~a}o do perfil individual intelectual do educando
   no ambiente virtual de aprendizagem edulivre.
-\newblock In {\em Anais do Simp{\'o}sio Brasileiro de Inform{\'a}tica na
-  Educa{\c{c}}{\~a}o}, volume~1, 2010.
+\newblock In {\em Anais do Simpósio Brasileiro de Informática na Educação},
+  volume~1, 2010.
 
 \bibitem{novig95}
 Stuart Russel and Peter Novig.
@@ -173,8 +181,8 @@ Carlos Vinícius~Sarmento Silva.
 \bibitem{soaresagente}
 Volmer~Campos Soares and Vandor Roberto~Vilardi Rissoli.
 \newblock Agente inteligente no apoio ao ensino-aprendizagem.
-\newblock In {\em Anais do Simp{\'o}sio Brasileiro de Inform{\'a}tica na
-  Educa{\c{c}}{\~a}o}, volume~1, 2011.
+\newblock In {\em Anais do Simpósio Brasileiro de Informática na Educação},
+  volume~1, 2011.
 
 \bibitem{verschueren09}
 J.~Verschueren and J.O. {\"O}stman.
@@ -187,5 +195,11 @@ Michael Wooldridge.
 \newblock {\em An Introduction to MultiAgent Systems}.
 \newblock Number~1. John Wiley and Sons Ltd, Krst Sussex POI0 IlJD, England,
   2004.
+
+\bibitem{wooldridge2000}
+Michael Wooldridge, Nicholas~R. Jennings, and David Kinny.
+\newblock The gaia methodology for agent-oriented analysis and design.
+\newblock {\em Journal of Autonomous Agents and Multi-Agent Systems},
+  3:285--312, 2000.
 
 \end{thebibliography}
