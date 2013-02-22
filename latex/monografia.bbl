@@ -124,10 +124,28 @@ Cláudio Geyer, Adriana~Soares Pereira, Alessandra Rodrigues, Débora~Nice
 \newblock In {\em Anais do Simpósio Brasileiro de Informática na Educação},
   volume~1, pages 293--299, 2001.
 
+\bibitem{honey2000}
+Peter Honey and Alan Mumford.
+\newblock {\em The learning styles helper's guide}.
+\newblock Peter Honey Learning, 2000.
+
+\bibitem{kolb84}
+D.A. Kolb.
+\newblock {\em Experiential learning: experience as the source of learning and
+  development}.
+\newblock Prentice Hall, Englewood Cliffs, NJ, 1984.
+
 \bibitem{larman08}
 C.~LARMAN.
 \newblock {\em Utilizando UML e Padr{\~o}es}.
 \newblock Bookman, 3 edition, 2008.
+
+\bibitem{muhlbeier12}
+Andreia~Rosangela M{\"u}hlbeier and Patricia~Mariotto Mozzaquatro.
+\newblock Estilos e estrat{\'e}gias de aprendizagem personalizadas a alunos das
+  modalidades presenciais ea dist{\^a}ncia.
+\newblock {\em Revista Brasileira de Inform{\'a}tica na Educa{\c{c}}{\~a}o},
+  20(1):132, 2012.
 
 \bibitem{penterich2005ambientes}
 Eduardo PENTERICH.

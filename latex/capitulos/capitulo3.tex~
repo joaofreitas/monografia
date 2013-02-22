@@ -87,7 +87,7 @@ A hierarquia de metas do SMA Frank~\ref{fig:metas-frank} foi desenvolvida para e
 
 \begin{sidewaystable}
 	\centering
-	\includegraphics[scale=0.6]{images/metas-frank.png}
+	\includegraphics[scale=0.7]{images/metas-frank.png}
 	\caption{Hierarquia de Metas do SMA Frank.}
 	\label{fig:metas-frank}
 \end{sidewaystable}
