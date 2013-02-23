@@ -4,6 +4,7 @@ The style file: plain.bst
 Database file #1: bibliografia.bib
 Warning--to sort, need author or key in kse
 Warning--to sort, need author or key in fipa-cal-spec
+Warning--to sort, need author or key in agentTool2012
 Warning--to sort, need author or key in omg20
 Warning--to sort, need author or key in struts1
 Warning--to sort, need author or key in struts2
@@ -18,45 +19,45 @@ Warning--can't use both volume and number fields in rabelo2010identificacao
 Warning--there's a number but no series in novig95
 Warning--can't use both volume and number fields in soaresagente
 Warning--there's a number but no series in wooldridge04
-You've used 38 entries,
+You've used 39 entries,
             2118 wiz_defined-function locations,
-            693 strings with 9664 characters,
-and the built_in function-call counts, 10110 in all, are:
-= -- 961
-> -- 445
+            700 strings with 9975 characters,
+and the built_in function-call counts, 10278 in all, are:
+= -- 978
+> -- 446
 < -- 7
-+ -- 188
++ -- 189
 - -- 144
-* -- 603
-:= -- 1669
-add.period$ -- 118
-call.type$ -- 38
-change.case$ -- 175
+* -- 608
+:= -- 1688
+add.period$ -- 121
+call.type$ -- 39
+change.case$ -- 178
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 412
-empty$ -- 878
+cite$ -- 56
+duplicate$ -- 419
+empty$ -- 901
 format.name$ -- 144
-if$ -- 2144
+if$ -- 2186
 int.to.chr$ -- 0
-int.to.str$ -- 38
+int.to.str$ -- 39
 missing$ -- 40
-newline$ -- 192
+newline$ -- 197
 num.names$ -- 60
-pop$ -- 275
+pop$ -- 285
 preamble$ -- 1
-purify$ -- 148
+purify$ -- 150
 quote$ -- 0
-skip$ -- 266
+skip$ -- 271
 stack$ -- 0
-substring$ -- 385
-swap$ -- 65
+substring$ -- 390
+swap$ -- 66
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 126
-warning$ -- 16
+type$ -- 130
+warning$ -- 17
 while$ -- 77
-width$ -- 40
-write$ -- 394
-(There were 16 warnings)
+width$ -- 41
+write$ -- 403
+(There were 17 warnings)

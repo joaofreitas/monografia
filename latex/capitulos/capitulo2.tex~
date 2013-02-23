@@ -95,6 +95,7 @@ As questões das dimensões de aprendizagem foram distribuídas entre as pergunt
 
 \begin{table}
 	\caption{Distribuição de Perguntas no Questionário de Estilo de Aprendizagem. Adaptado de~\cite{muhlbeier12}}
+	\centering
 	\begin{tabular}{|p{4cm} | p{8cm} |}
 		\hline
 		\textbf{Questões}	& \textbf{Dimensão do Estilo de Aprendizagem}	\\
@@ -677,6 +678,12 @@ A representação do diagrama de~\emph{deploy}~\ref{fig:exemplo-diagrama-deploy}
 	\caption{Notação utilizada no diagrama de deploy.}
 	\label{fig:exemplo-diagrama-deploy}
 \end{figure}
+
+\subsubsection{Ferramenta~\emph{AgentTool}}
+
+O~\emph{AgentTool} é uma ferramenta que dá suporte à metodologia MASE para desenvolvimento de Sistema Multiagente. A versão 1.8.1 dá suporte à todas fases e passos do MASE, provendo suporte para a criação de diagramas, detalhamento de conversações e casos de uso simplificados.
+
+
 
 \section{Ferramentas Utilizadas}
 

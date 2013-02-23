@@ -2,45 +2,50 @@
 
 \bibitem{struts1}
 About apache struts 1.
-\newblock \url{http://struts.apache.org/development/1.x/}.
-\newblock Acessado em 18/02/2013.
+\newblock Disponível em: \url{http://struts.apache.org/development/1.x/}.
+\newblock Acessado em: 18/02/2013.
 
 \bibitem{struts2}
 About apache struts 2.
-\newblock \url{http://struts.apache.org/development/2.x/}.
+\newblock Disponível em: \url{http://struts.apache.org/development/2.x/}.
+\newblock Acessado em: 18/02/2013.
+
+\bibitem{agentTool2012}
+agenttool iii homepage.
+\newblock Disponível em: \url{http://agenttool.cis.ksu.edu/}.
 \newblock Acessado em 18/02/2013.
 
 \bibitem{fipa-cal-spec}
 Fipa communicative act library specification.
-\newblock \url{http://www.fipa.org/specs/fipa00037/index.html}.
-\newblock Acessado em 01/02/2013.
+\newblock Disponível em: \url{http://www.fipa.org/specs/fipa00037/index.html}.
+\newblock Acessado em: 01/02/2013.
 
 \bibitem{jsf2012}
 Javaserver faces technology.
-\newblock
+\newblock Disponível em:
   \url{http://www.oracle.com/technetwork/java/javaee/javaserverfaces-139869.ht%
 ml}.
-\newblock Acessado em 18/02/2013.
+\newblock Acessado em: 18/02/2013.
 
 \bibitem{di2012}
 Jsr 299: Contexts and dependency injection for the java ee platform.
-\newblock \url{http://jcp.org/en/jsr/detail?id=299}.
-\newblock Acessado em 18/02/2013.
+\newblock Disponível em: \url{http://jcp.org/en/jsr/detail?id=299}.
+\newblock Acessado em: 18/02/2013.
 
 \bibitem{kse}
 The knowledge sharing effort.
-\newblock
+\newblock Disponível em:
   \url{http://www-ksl.stanford.edu/knowledge-sharing/papers/kse-overview.html}.
 \newblock Acessado em 01/02/2013.
 
 \bibitem{omg20}
 Object management group.
-\newblock \url{http://www.omg.org/}.
-\newblock Acessado em 05/01/2013.
+\newblock Disponível em: \url{http://www.omg.org/}.
+\newblock Acessado em: 05/01/2013.
 
 \bibitem{seamSite}
 The seam framework - next generation enterprise java development.
-\newblock \url{http://www.seamframework.org/}.
+\newblock Disponível em: \url{http://www.seamframework.org/}.
 \newblock Acessado em 10/02/2013.
 
 \bibitem{allen09}
@@ -193,8 +198,9 @@ J.R. Searle.
 Carlos Vinícius~Sarmento Silva.
 \newblock Agentes de mineração e sua aplicação no domínio de auditoria
   governamental.
-\newblock Acessado em 18/11/2011. Disponível em
-  http://monografias.cic.unb.br/dspace/handle/123456789/318, Abril 2011.
+\newblock Disponível em:
+  http://monografias.cic.unb.br/dspace/handle/123456789/318, Acessado em:
+  18/11/2012., Abril 2011.
 
 \bibitem{soaresagente}
 Volmer~Campos Soares and Vandor Roberto~Vilardi Rissoli.
