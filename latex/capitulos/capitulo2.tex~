@@ -1,6 +1,6 @@
 \chapter{Fundamentos básicos}
 
-Este capitulo apresenta os principais conceitos e definições necessários para o entendimento deste trabalho. Dividido em 4 seções, a primeira delas apresenta a teoria a respeito de Informática na Educação. A seção 2.2 aborda os conceitos de SMA necessários ao entendimento deste trabalho. A seção 2.3 apresenta a teoria acerca da metodologia MASE e suas fases de desenvolvimento. A seção 2.4 reúne um estudo de ferramentas e tecnologias relacionadas a este trabalho. Por fim, a seção 2.5 aborda alguns trabalhos correlatos.
+Este capítulo apresenta os principais conceitos e definições necessários para o entendimento deste trabalho. Dividido em 4 seções, a primeira delas apresenta a teoria a respeito de Informática na Educação. A seção 2.2 aborda os conceitos de SMA necessários ao entendimento deste trabalho. A seção 2.3 apresenta a teoria acerca da metodologia MASE e suas fases de desenvolvimento. A seção 2.4 reúne um estudo de ferramentas e tecnologias relacionadas a este trabalho. Por fim, a seção 2.5 aborda alguns trabalhos correlatos.
 
 \section{Informática na Educação}
 A Informática na Educação (IE) constitui-se um importante ramo de estudo. O uso do computador como meio de educação tornou-se essencial atualmente. Popularizando meios inacessíveis em um passado recente, a aquisição de conhecimento foi simplificada e reduziu-se a um computador com conexão com a internet para o acesso a diversos tipos de conhecimento.
@@ -133,9 +133,9 @@ Esta seção expôs os principais modelos de estudante presentes na literatura d
 
 \section{Sistemas Multiagente}
 
-Esta seção visa introduzir o conceito de SMA. Para tanto é necessário mostrar conceitos que são base para o entendimento de SMA, iniciando pela apresentanção alguns conceitos a cerca de Inteligencia Artificial (IA). Em seguida o trabalho disserta sobre a teoria relacionada à Agente, bem como suas arquiteturas. Só então são apresentados os conceitos de Sistemas Multiagente (SMA), comunicação em um ambiente SMA e por fim a teoria sobre ontologias.
+Esta seção visa introduzir o conceito de SMA. Primeiramente serão apresentados os conceitos e definições iniciais a respeito da Inteligência Artificial (IA) e a teoria relacionada a agentes. Em seguida o trabalho disserta a respeito de arquiteturas relacionadas aos agentes. Só então são apresentados os conceitos de SMA, os aspectos da comunicação neste ambiente e por fim a teoria sobre ontologias.
 
-\subsection{Inteligência artificial}
+\subsection{Conceitos}
 
 A definição de IA pode variar em duas dimensões principais~\cite{poole98}. Usando a definição de sistemas computacionais que agem racionalmente temos:
 
@@ -147,9 +147,7 @@ Nessa definição, é importante ressaltar que o agente é uma entidade que atua
 
 Com o crescimento dos estudos relacionados a este campo a inteligência artificial ganhou várias áreas de atuação, permitindo assim a resolução de diversos desafios relacionados à aplicações modernas. Uma das áreas de atuação é o auxílio na execução de aplicações que resolvem problemas de alta complexidade. 
 
-Atualmente várias aplicações podem exigir demais de~\emph{hardwares} mais modestos tornando inviável o tempo de execução daquela aplicação, sendo necessário um investimento maior e consequentemente encarecendo o seu valor. Dessa forma outras abordagems fazem-se necessárias, como a distribução da aplicação em vários computadores que dividem a sua execução. Este é o campo de estudo da Inteligência Artificial Distribuída: Sistemas que são compostos por vários agentes coletivos, ou seja, distribuem o trabalho uns com os outros. Cada agente pode possuir uma capacidade diferente, sendo possível realizar a tarefa de modo paralelo. 
-
-\subsection{Agente}
+Atualmente várias aplicações podem exigir muito de~\emph{hardwares} mais modestos tornando e inviabilizando o seu o tempo de execução, necessitando-se um maior investimento e consequentemente encarecendo o seu valor. Dessa forma outras abordagems fazem-se necessárias, como a distribução da aplicação em vários computadores que dividem a sua execução. Este é o campo de estudo da Inteligência Artificial Distribuída: Sistemas que são compostos por vários agentes coletivos, ou seja, distribuem o trabalho uns com os outros. Cada agente pode possuir uma capacidade diferente, sendo possível realizar a tarefa de modo paralelo. 
 
 Os agentes são entidades (reais ou virtuais) que funcionam de forma autônoma em um ambiente~\cite{novig95}, ou seja, não necessitam de intervenção humana para realizar processamento. Esse ambiente de funcionamento do agente geralmente contém vários outros agentes e é possível a comunicação entre eles através do ambiente por meio de troca de mensagens.
 
@@ -179,7 +177,7 @@ Como dito anteriormente, agentes estão presentes em um ambiente. O agente não 
 Em~\ref{lista_agentes} é mostrado alguns exemplos de agentes, apresentando as suas características já discutidas nesse trabalho.
 
 \begin{table}
-	\caption{Listagem de sistemas Multiagente com propriedades de medida de performance, ambiente, atuadores e sensores}
+	\caption{Listagem de SMA com propriedades de medida de performance, ambiente, atuadores e sensores}
 	\begin{tabular}{|p{3cm} | p{3cm} | p{2cm}| p{3cm} | p{3cm} |}
 		\hline
 		\textbf{Tipo de agente}	& \textbf{Medida de performance} & \textbf{Ambiente} & \textbf{Atuadores}  & \textbf{Sensores}	\\
@@ -229,9 +227,9 @@ Na arquitetura baseada em objetivo, as ações do agente são tomadas apenas se 
 
 E por fim, a arquitetura baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, resilientes e rápidas do que as outras. A capacidade de avaliação do agente é chamada de função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
 
-\subsection{Sistemas Multiagente}
+\subsection{Definição de Sistemas Multiagente}
 
-Sistemas Multiagente são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. Um agente possui um objeto que, normalmente, é distinto dos objetivos de outros agentes e pode ou não cooperar com outros agentes para a realização de uma tarefa.
+SMAs são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. Um agente possui um objeto que, normalmente, é distinto dos objetivos de outros agentes e pode ou não cooperar com outros agentes para a realização de uma tarefa.
 
 Em~\cite{sarmento11}, podemos encontrar as seguintes características principais em ambientes multiagente:
 \begin{itemize}
@@ -242,7 +240,7 @@ Em~\cite{sarmento11}, podemos encontrar as seguintes características principais
 
 É trivial imaginar que um SMA é designado para a solução de problemas de forma distribuída, onde o problema é distribuído entre os agentes que, juntos, trabalham concorrentemente para a resolução deste problema, podendo ou não trabalhar de forma cooperativa.
 
-É importate notar a distinção de conceitos como~\emph{cooperação} na literatura de sistemas Multiagente. Em~\cite{wooldridge04}, existem duas principais diferenças do conceito entre as duas abordagens.
+É importate notar a distinção de conceitos como~\emph{cooperação} na literatura de SMA. Em~\cite{wooldridge04}, existem duas principais diferenças do conceito entre as duas abordagens.
 
 A primeira delas é que agentes são designados de forma diferente, com objetivos diferentes. Em um ambiente com vários agentes, eles devem trabalhar estratégicamente para alcançar seus objetos. A possibilidade de agentes não cooperarem é perfeitamente plausível.
 
@@ -261,7 +259,7 @@ O processo CDPS pode ser divido em três etapas:
 	\item integração da solução.
 \end{itemize}
 
-Com uma solução compartilhada de resolução de problemas, a arquitetura de sistemas Multiagente mostra-se bastante robusta neste quesito. É necessário porém saber dos detalhes da comunicação entre os agentes, a forma de envio das mensagens, as suas linguagens, bem como outras particularidades.
+Com uma solução compartilhada de resolução de problemas, a arquitetura SMA mostra-se bastante robusta neste quesito. É necessário porém saber dos detalhes da comunicação entre os agentes, a forma de envio das mensagens, as suas linguagens, bem como outras particularidades.
 
 \subsection{Comunicação}
 
@@ -471,7 +469,7 @@ A possibilidade de representação de conhecimento por meio de ontologias é bas
 
 Em~\ref{fig:arvore-ontologia}, é possível observar a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
 
-Em um ambiente de Sistemas Multiagente, além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, dentre outros exemplos. Em outras palavras, dois agentes podem comunicar-se usando a mesma ontologia.
+Em um ambiente SMA além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, dentre outros exemplos. Em outras palavras, dois agentes podem comunicar-se usando a mesma ontologia.
 
 Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A mais comum delas é a~\emph{eXtensible Markup Language} (XML), uma linguagem de marcação que organiza os dados de forma hierarquizada.
 
@@ -506,11 +504,11 @@ O exemplo~\ref{code:exemplo-xml} está descrito escrito na linguagem XML que rep
 
 \section{Multiagent Systems Engineering}\label{section:mase}
 
-Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos. O advento de sistemas Multiagente trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, devido à diferença de abordagem do software.
+Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos. O advento da abordagem SMA trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, devido à diferença de abordagem do software.
 
 Pela característica autônoma dos agentes, não é possível compará-los à simples objetos que serão invocados por outros objetos. Não existe interação direta, apenas coordenação de ações via conversação para cada agente atingir suas próprias métas.
 
-O desenvolvimento de uma metodologia para projetar sistemas Multiagente surgiu, chamada~\emph{Multiagent Systems Engineering} (MASE), onde os requisitos e metas do SMA são levantados e a partir de então as tarefas e agentes são projetadas para lhes atender. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura.
+O desenvolvimento de uma metodologia para modelagem de SMA surgiu, chamada~\emph{Multiagent Systems Engineering} (MASE), onde os requisitos e metas do SMA são levantados e a partir de então as tarefas e agentes são projetadas para lhes atender. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura.
 
 Em~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Design.
 
@@ -531,7 +529,7 @@ A fase de design consiste na modelagem do SMA de acordo com as regras levantadas
 	\item Design do Sistema
 \end{itemize}
 
-Existem outras metodologias para desenvolvimento de Sistemas Multiagente. A metodologia~\emph{Gaia}~\cite{wooldridge2000} consiste em uma abordagem não iterativa que define análise e~\emph{design} de sistemas baseados em agentes. Esta metodologia é considerada genérica e compreensível pois pode ser aplicada a um nível muito amplo de sistemas multiagente e ela lida tanto com escopos mais gerais (sociedade), quanto com escopos mais específicos (agentes). Ela define as regras e tarefas em termos de uma organização, que é sinônimo de sociedade de agentes ou sistemas Multiagente.
+Existem outras metodologias para desenvolvimento de SMAs. A metodologia~\emph{Gaia}~\cite{wooldridge2000} consiste em uma abordagem não iterativa que define análise e~\emph{design} de sistemas baseados em agentes. Esta metodologia é considerada genérica e compreensível pois pode ser aplicada a um nível muito amplo de SMA e ela lida tanto com escopos mais gerais (sociedade), quanto com escopos mais específicos (agentes). Ela define as regras e tarefas em termos de uma organização, que é sinônimo de sociedade de agentes ou um SMA.
 
 A metodologia~\emph{PASSI} (\emph{Process for Agent Societies Specification and Implementation}) é designada para o acompanhamento do desenvolvimento do sistema desde o levantamento dos requisitos até a codificação~\cite{burrafato02}. Seus modelos de projetos são baseados nas especificações da FIPA, garantindo assim a compatibilidade com o SMA a ser desenvolvido. O~\emph{PASSI} define uma metodologia cinco modelos de trabalho: Requisito do Sistema, sociedade de Agentes, implementação dos agentes, modelo de código e modelo de implantação.
 
@@ -559,7 +557,7 @@ O diagrama de sequência define os eventos que cada interação pode criar, most
 
 \subsubsection{Refinar Regras}
 
-O último passo da fase de análise, o refinamento de regas consiste na associação metas e seus diagramas de sequências às regras e suas respectivas tarefas. A associação de tarefas à regras é a melhor forma de modelagem de Sistemas Multiagente~\cite{scott01}. 
+O último passo da fase de análise, o refinamento de regas consiste na associação metas e seus diagramas de sequências às regras e suas respectivas tarefas. A associação de tarefas à regras é a melhor forma de modelagem de SMA~\cite{scott01}. 
 
 Em geral, a associação de metas às regras é de um para um, não sendo uma regra necessáriamente. Durante esta etapa, algumas considerações relativas ao desenho do sistema devem ser levadas em consideração. Caso exista alguma alteração (adição de uma nova meta, alteração de caso de uso, dentre outras), a metodologia permite que o analista retorne aos passos anteriores e remodele a solução. Algumas metas podem ser combinadas em apenas uma regra, simplificando o desenho do sistema.
 
@@ -693,7 +691,7 @@ Nesta seção estão reunidos as tecnologias que auxiliares ao desenvolvimento d
  
 Em seguida é explicado os conceitos relacionados ao~\emph{middleware} JADE, bem como a sua arquitetura, o funcionamento dos agentes e os agentes que possuem interface gráfica.
 
-Por fim, este capítulo disserta a respeito da ferramenta JBoss Seam, responsável por interligar os principais~\emph{frameworks} JAVA e facilitar o desenvolvimento de aplicações Web dinâmicas.
+Por fim, esta seção disserta a respeito da ferramenta JBoss Seam, responsável por interligar os principais~\emph{frameworks} JAVA e facilitar o desenvolvimento de aplicações Web dinâmicas.
 
 \subsection{Unified Modeling Language}
 
@@ -917,7 +915,7 @@ Em~\cite{allen09}, uma das principais ferramentas do Seam é o~\emph{seam-genera
 Além disso, uma das grandes vantagens do~\emph{seam-generator} é a geração automática de código, criando a partir de uma tabela no banco de dados todas as operações necessárias para a visualização, inserção, exclusão e atualização de dados (CRUD), diminuindo assim o tempo de desenvolvimento de aplicações.
 
 \section{Trabalhos Correlatos}
-É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste trabalho, seja em Inteligência Artificial, Estilos de Aprendizagem, Sistemas Multiagente ou Ambientes Virtuais de Aprendizagem.
+É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste trabalho, seja em Inteligência Artificial, Estilos de Aprendizagem, SMA ou AVA.
 
 Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado à um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de Inteligência Artificial. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros Ambientes Virtuais de Aprendizagem.
 
@@ -925,13 +923,13 @@ O trabalho~\cite{bativa2011}, na área de identificação de conhecimentos, visa
 
 Esta arquitetura não possui alguns benefícios da abordagem SMA que estão descritas em~\cite{helbing11}: A possibilidade de representação de entidades individuais como, no domínio  deste trabalho, a modelagem do conhecimento de cada aluno por meio de agentes. Outra característica é  a representação das suas interações por meio de equações, regras ou operações lógicas que podem flexibilizar a modelagem. Por fim, modelos baseados em agentes são recomendáveis para simulações devido as suposições realisticas inerentes a seu domínio.
 
-O trabalho~\cite{geyer2001semeai} utiliza-se de Sistemas Multiagente para a adaptação do ensino na internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de ensino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil. Este ambiente assemelha-se bastante com o presente trabalho, porém o seu foco não é na modelagem multidimensional do aluno.
+O trabalho~\cite{geyer2001semeai} utiliza-se da abodagem SMA para a adaptação do ensino na internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de ensino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil. Este ambiente assemelha-se bastante com o presente trabalho, porém o seu foco não é na modelagem multidimensional do aluno.
 
 A modelagem multidimensional tem por objetivo a separação clara das dimensões do aluno para restringir o domínio de atuação de cada agente. Dessa forma, cada a gente expressará uma quantidade menor de propriedades de cada dimensão, sendo possível obter uma informação mais precisa e expressiva de cada dimensão, conforme pode ser visto nas simulações em~\cite{helbing11}.
 
 Por fim, o Ambiente Virtual de Aprendizagem EDULIVRE~\cite{rabelo2010identificacao} constitui-se de um Ambiente Virtual de Aprendizagem que possibilita a inferência implícita de modelos e perfis individuais de estudantes da educação infantil. Com o perfil de cada aluno e de todos os alunos em geral, o educando poderá desenvolver nortear seu trabalho da melhor forma possível. A abordagem deste trabalho não é com uso de agentes, diferindo assim do foco deste trabalho. Além disso, o EDULIVRE apresenta a estratégia de ser o Ambiente Virtual de Aprendizagem e não permite integração com outros ambientes.
 
-Conforme exposto alguns trabalhos na área de IE utilizam de diversas tecnologias ou abordagens para a construção de ambientes de ensino-aprendizagem. Todavia, o capitulo seguinte apresentará uma proposta que tende melhorar o modelagem do perfil de aprendizagem por meio da definição de uma arquitetura específica baseada em SMA. Essa arquitetura apresenta aspectos que tangem o modelo multidimensional do aluno propondo uma divisão de agentes para inferência do perfil e aspectos da infraestrutura do ambiente de ensino-aprendizagem.
+Conforme exposto alguns trabalhos na área de IE utilizam de diversas tecnologias ou abordagens para a construção de ambientes de ensino-aprendizagem. Todavia, o capítulo seguinte apresentará uma proposta que tende melhorar o modelagem do perfil de aprendizagem por meio da definição de uma arquitetura específica baseada em SMA. Essa arquitetura apresenta aspectos que tangem o modelo multidimensional do aluno propondo uma divisão de agentes para inferência do perfil e aspectos da infraestrutura do ambiente de ensino-aprendizagem.
 
 
 
