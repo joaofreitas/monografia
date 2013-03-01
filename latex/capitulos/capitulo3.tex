@@ -13,7 +13,7 @@ Basicamente, a solução é composta por sete diferentes tipos de agentes:
 	\item \emph{AfectiveAgent} - Responsável pelo modelo afetivo.
 \end{enumerate}
 
-A solução é baseada em grupos de trabalho por aluno. Após a autenticação do aluno em uma plataforma ~\emph{web}, o sistema multiagente realiza a criação dos agentes de grupo de trabalho para o aluno:~\emph{WorkgroupAgent},~\emph{CognitiveAgent},~\emph{MetacognitiveAgent},~\emph{AfectiveAgent}. Esses agentes são responsáveis pela manutenção do modelo multidimensional do aluno na plataforma e são atualizados conforme os dados forem enviados pelos agentes interfaces com o ambiente externo.
+A solução é baseada em grupos de trabalho por aluno. Após a autenticação do aluno em uma plataforma ~\emph{web}, o SMA realiza a criação dos agentes de grupo de trabalho para o aluno:~\emph{WorkgroupAgent},~\emph{CognitiveAgent},~\emph{MetacognitiveAgent},~\emph{AfectiveAgent}. Esses agentes são responsáveis pela manutenção do modelo multidimensional do aluno na plataforma e são atualizados conforme os dados forem enviados pelos agentes interfaces com o ambiente externo.
 
 O primeiro agente interface,~\emph{GatewayAgent}, é responsável pela interação direta com a plataforma web. Essa plataforma irá interagir com os alunos (por meio de questionários de estilo de aprendizagem) e docentes (notificando o estilo de aprendizagem dos seus alunos) e encaminhará os dados para o agente em questão, que repassará ao ambiente.
 
@@ -32,7 +32,7 @@ Após a escolha da metodologia de desenvolvimento, foram realizados estudos apro
 
 A arquitetura básica do sistema já havia sido previamente decidida~\cite{editalFrank}, sendo necessário detalhar seus requisitos por meio da metodologia MASE. Além disso, os Ambientes Virtuais de Aprendizagem deveriam ser capazes de comunicar-se com a solução proposta, ou seja, a comunicação deve ser feita de forma independente da linguagem de programação. Por fim, foi definido~\cite{editalFrank} o nome da aplicação solução à ser desenvolvida:~\emph{Frank}.
 
-Posteriormente o trabalho seguiu-se com a implementação do SMA na linguagem JAVA, utilizando-se das ferramentas JADE e JBoss Seam. As subseções seguintes deverão detalhar a implementação do Sistema Multiagente e da camada ~\emph{web}, bem como a sua integração.
+Posteriormente o trabalho seguiu-se com a implementação do SMA na linguagem JAVA, utilizando-se das ferramentas JADE e JBoss Seam. As subseções seguintes deverão detalhar a implementação do SMA e da camada ~\emph{web}, bem como a sua integração.
 
 Por fim, a solução foi testada por meio de cenários que simulavam o uso por meio dos atores Aluno e Docente. A demonstração está detalhada no capítulo 4.
 
@@ -390,7 +390,7 @@ Model View Controller (MVC). Esse padrão divide a arquitetura do sistema em tr�
 
 As ferramentas disponibilizadas pelo framework geraram todo o código para visualização, inserção, atualização e exclusão de dados. Além disso, geraram todas as páginas para que o usuário possa interagir com o sistema. 
 
-Após a geração do código inicial, foi necessário uma implementar algumas funcionalidades específicas da aplicação Frank-Web. A primeira delas foi implementar a ação de autenticação conjunta com o SMA. Quando o aluno fizer login no sistema, a aplicação ~\emph{web} envia uma mensagem ao sistema multiagente para a criação do grupo de trabalho.
+Após a geração do código inicial, foi necessário uma implementar algumas funcionalidades específicas da aplicação Frank-Web. A primeira delas foi implementar a ação de autenticação conjunta com o SMA. Quando o aluno fizer login no sistema, a aplicação ~\emph{web} envia uma mensagem ao SMA para a criação do grupo de trabalho.
 
 Em seguida, foi necessário a implementação a tela de respostas do questionário feita pelo usuário.
 

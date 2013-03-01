@@ -1,35 +1,26 @@
 \chapter{Fundamentos básicos}
 
-Este capitulo apresenta os principais conceitos e definições necessários para o entendimento deste trabalho. A seção 2.1 apresenta alguns conceitos básicos em~\emph{Unified Modeling Language} (UML), que são necessários para o entendimento da modelagem deste trabalho.
-A seção 2.2 disserta sobre conceitos a respeito da informática na educação.
-A seção 2.3 aborda a teoria sobre Sistemas Multiagentes necessária para este trabalho.
-A seção 2.4 contém a metodologia~\emph{Multiagent System Engineering}, desenvolvida para a criação de Sistemas Multiagentes
-A seção 2.5 e 2.6 abordam o funcionamento dos frameworks JADE e Jboss Seam, respectivamente.
-Por fim, a seção 2.7 detalha alguns trabalhos correlatos.
+Este capitulo apresenta os principais conceitos e definições necessários para o entendimento deste trabalho. Dividido em 4 seções, a primeira delas apresenta a teoria a respeito de Informática na Educação. A seção 2.2 aborda os conceitos de SMA necessários ao entendimento deste trabalho. A seção 2.3 apresenta a teoria acerca da metodologia MASE e suas fases de desenvolvimento. A seção 2.4 reúne um estudo de ferramentas e tecnologias relacionadas a este trabalho. Por fim, a seção 2.5 aborda alguns trabalhos correlatos.
 
 \section{Informática na Educação}
-O uso do computador como meio de educação tornou-se essêncial atualmente. Popularizando meios que, antigamente, eram muito caros ou raros, a aquisição de conhecimento tornou-se muito simples bastando um computador com acesso a internet para o acesso à diversos tipos de conhecimento.
-
-O computador passa então a ser uma forma de ensino, ocasionando na descentralização da figura do professor neste processo e, segundo~\cite{de2009}, promove o desenvolvimento cognitivo por meio de uma interação maior entre o aluno e o objeto de conhecimento.
-
-Dessa forma a Informática na Educação (IE) constitui-se um importante ramo de estudo.
-
-Com o crescimento da internet, surgem ambientes específicos para aplicações interativas que auxiliam o estudante. Estes ambientes, chamados de Ambientes Virtuais de Aprendizagem (AVA), surgiram na década de 90 com os cursos a distância e mais tarde com ferramentas interativas e em tempo real~\cite{penterich2005ambientes}.
-
-Da necessidade em organizar as informações geradas pelos AVA, surgiram os Sistemas Gerenciadores de Conteúdo e Aprendizagem (LCMS –~\emph{Learning and Content Managment System}).
-
-A interação entre as ferramentas tornou-se cada vez maior e tornou-se  cada vez mais necessário o ensino personalizado à cada estudante. A personalização está relacionada com a forma específica que cada estudante tem ao lidar com informações, a melhor forma de aprender, as suas habilidades. Entre outras palavras, os Sistemas começaram a interagir mais com os alunos a fim de determinar a forma como os alunos percebem e processam as informações.
+A Informática na Educação (IE) constitui-se um importante ramo de estudo. O uso do computador como meio de educação tornou-se essencial atualmente. Popularizando meios inacessíveis em um passado recente, a aquisição de conhecimento foi simplificada e reduziu-se a um computador com conexão com a internet para o acesso a diversos tipos de conhecimento.
+ 
+O computador passa então a ser uma forma de ensino, ocasionando na descentralização da figura do professor neste processo e, segundo [18], promove o desenvolvimento cognitivo por meio de uma interação maior entre o aluno e o objeto de conhecimento.
+ 
+Com o crescimento da internet, surgem ambientes específicos para aplicações interativas que auxiliam o estudante. Estes ambientes, chamados de Ambientes Virtuais de Aprendizagem (AVA), surgiram na década de 90 com os cursos à distância e mais tarde com ferramentas interativas e em tempo real [28]. Da necessidade em organizar as informações geradas pelos AVA, surgiram os Sistemas Gerenciadores de Conteúdo e Aprendizagem (LCMS - Learning and Content Managment System).
+ 
+A interação entre as ferramentas tornou-se cada vez maior e tornou-se cada vez mais necessário o ensino personalizado ao estudante. A personalização está relacionada com a forma específica que cada estudante tem ao lidar com informações, a melhor forma de aprender e as suas habilidades. Entre outras palavras, os Sistemas começaram a interagir mais com os alunos a fim de determinar a forma como os alunos percebem e processam as informações.
 
 \subsection{Estilo de Aprendizagem}
 O estilo de aprendizagem é a forma mais eficiente em que o estudante absorve conhecimento ao receber e processar uma informação. Um modelo de estilo de aprendizagem visa classificar um estudante de acordo com uma escala que, organiza as formas as quais são possíveis receber e processar o conhecimento~\cite{felder1988learning}. Estilos de aprendizagem não classificam em uma escala melhor ou pior do que outro estilo de aprendizagem, apenas categoriza o aluno de acordo com a forma de aprender.
 
-O estilo de aprendizagem pode orientar melhor um docente a estimular um aluno durante o processo de desenvolvimento de suas habilidades, alterando o ambiente para o aluno de acordo com o estilo de forma a individualizar o processo didádico do ensino. Existem diversos modelos de estilos de aprendizagem propostos na literatura.
+O estilo de aprendizagem pode orientar melhor um docente a estimular um aluno durante o processo de desenvolvimento de suas habilidades, alterando o ambiente para o aluno de acordo com o estilo de forma a individualizar o processo didádico do ensino. Existem diversos modelos de estilos de aprendizagem propostos na literatura, no entando será apresentado neste trabalho as teorias mais importantes dos modelos de estudantes.
 
 \subsubsection{Modelo de~\emph{Kolb}}
 
-A teoria de~\emph{Kolb} propõe uma perspectiva chamada de teoria experimental do aprendizado, pois enfatiza o fato da experiência no processo de aprendizagem. Kolb inicialmente baseia-se em um ciclo de aprendizado de quatro estágios: Experiência Concreta, observação reflexiva, conceituação abstrata e experimentação ativa. Basicamente o ciclo funciona de forma à iniciar nas experiências concretas prover fundamentos para o ciclo da observação reflexiva. A partir de observações e reflexões, novos conceitos abstratos são formados. Esses conceitos podem implicar em ações que podem ser colocadas em prática, criando assim novas experiências.
+A teoria de~\emph{Kolb}~\cite{kolb84} propõe uma perspectiva chamada de teoria experimental do aprendizado, pois enfatiza o fato da experiência no processo de aprendizagem. Kolb inicialmente baseia-se em um ciclo de aprendizado de quatro estágios: Experiência Concreta, observação reflexiva, conceituação abstrata e experimentação ativa. Basicamente o ciclo funciona de forma à iniciar nas experiências concretas prover fundamentos para o ciclo da observação reflexiva. A partir de observações e reflexões, novos conceitos abstratos são formados. Esses conceitos podem implicar em ações que podem ser colocadas em prática, criando assim novas experiências.
 
-Os estilos de aprendizagem são combinados com o ciclo de aprendizado e são separados~\ref{lista_estilos_aprendizagem} em quatro categorias~\cite{kolb84}:
+A Tabela~\ref{lista_estilos_aprendizagem} exibe os estilos de aprendizagem propostos por~\emph{Kolb} combinados com o ciclo de aprendizado e a separação em quatro categorias.
 
 \begin{table}
 	\caption{Estilos de Aprendizagem definidos por Kolb}
@@ -50,15 +41,15 @@ Os estilos de aprendizagem são combinados com o ciclo de aprendizado e são sep
 \end{table}
 
 \subsubsection{Modelo de~\emph{Felder}}
-Famoso pela literatura da IE, o modelo de Felder divide os seguintes estilos de aprendizagem:
+O modelo de Felder~\cite{felder1988learning} divide os seguintes estilos de aprendizagem:
 \begin{itemize}
-	\item Sensorial/Intuitivo: Relaciona-se ao tipo de informação que o estudante preferencialmente percebe.
-	\item Visual/Verbal: Modalidade do conhecimento que é mais facilmente percebida.
-	\item Activo/Reflexivo: Forma de processar a informação.
-	\item Sequêncial/Global: Como o estudante processa a informação em direção ao entendimento.
+	\item Sensorial/Intuitivo.
+	\item Visual/Verbal.
+	\item Activo/Reflexivo.
+	\item Sequêncial/Global.
 \end{itemize}
 
-O estilo sensorial categoriza alunos que favorecem o aprendizado por meio dos seus sentidos. Com tendências a serem práticos no processo da aprendizagem, costumam lidar melhor com fatos e observações. Dessa forma, algumas disciplinas que focam em conceitos abstratos, teorias, fórmulas (como física e química) tendem a ser mais complicadas para estes alunos~\cite{felder1988learning}.
+O estilo sensorial categoriza alunos que favorecem o aprendizado por meio dos seus sentidos. Com tendências a serem práticos no processo da aprendizagem, costumam lidar melhor com fatos e observações. Dessa forma, algumas disciplinas que focam em conceitos abstratos, teorias, fórmulas (como física e química) tendem a ser mais complicadas para estes alunos.
 
 Alunos do estilo intuitivo favorecem informações que florecem em seu raciocínio interno, como a memória, situações imaginárias e por meio de reflexões. Eles normalmente gostam variar o tipo de trabalho, não se importando com a complexidade do trabalho.
 
@@ -138,9 +129,11 @@ As questões das dimensões de aprendizagem foram distribuídas entre as pergunt
 	\label{questionario_ie}
 \end{table}
 
-\section{Sistemas Multiagentes}
+Esta seção expôs os principais modelos de estudante presentes na literatura da IE, assim como o questionário de estilo de aprendizagem como uma ferramenta capaz de determinação do estilo de aprendizagem do estudante deste trabalho. É necessário agora o entendimento de técnicas computacionais para a implementação deste questionário. A seção seguinte apresentará a teoria a respeito de SMA, que permeará o desenvolvimento deste trabalho de forma a orientar a abordagem da modelagem do Aluno neste trabalho, bem como definir alguns aspectos da infraestrutura do ambiente de ensino-aprendizagem.
 
-Este capítulo visa introduzir o conceito de sistemas multiagentes (SMA). Para tanto é necessário mostrar conceitos que são base para o entendimento de SMA, iniciando pela apresentanção alguns conceitos a cerca de Inteligencia Artificial (IA). Em seguida o trabalho disserta sobre a teoria relacionada à Agente, bem como suas arquiteturas. Só então são apresentados os conceitos de Sistemas Multiagentes (SMA), comunicação em um ambiente SMA e por fim a teoria sobre ontologias.
+\section{Sistemas Multiagente}
+
+Esta seção visa introduzir o conceito de SMA. Para tanto é necessário mostrar conceitos que são base para o entendimento de SMA, iniciando pela apresentanção alguns conceitos a cerca de Inteligencia Artificial (IA). Em seguida o trabalho disserta sobre a teoria relacionada à Agente, bem como suas arquiteturas. Só então são apresentados os conceitos de Sistemas Multiagente (SMA), comunicação em um ambiente SMA e por fim a teoria sobre ontologias.
 
 \subsection{Inteligência artificial}
 
@@ -186,7 +179,7 @@ Como dito anteriormente, agentes estão presentes em um ambiente. O agente não 
 Em~\ref{lista_agentes} é mostrado alguns exemplos de agentes, apresentando as suas características já discutidas nesse trabalho.
 
 \begin{table}
-	\caption{Listagem de sistemas multiagentes com propriedades de medida de performance, ambiente, atuadores e sensores}
+	\caption{Listagem de sistemas Multiagente com propriedades de medida de performance, ambiente, atuadores e sensores}
 	\begin{tabular}{|p{3cm} | p{3cm} | p{2cm}| p{3cm} | p{3cm} |}
 		\hline
 		\textbf{Tipo de agente}	& \textbf{Medida de performance} & \textbf{Ambiente} & \textbf{Atuadores}  & \textbf{Sensores}	\\
@@ -236,9 +229,9 @@ Na arquitetura baseada em objetivo, as ações do agente são tomadas apenas se 
 
 E por fim, a arquitetura baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, resilientes e rápidas do que as outras. A capacidade de avaliação do agente é chamada de função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
 
-\subsection{Sistemas Multiagentes}
+\subsection{Sistemas Multiagente}
 
-Sistemas multiagentes são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. Um agente possui um objeto que, normalmente, é distinto dos objetivos de outros agentes e pode ou não cooperar com outros agentes para a realização de uma tarefa.
+Sistemas Multiagente são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. Um agente possui um objeto que, normalmente, é distinto dos objetivos de outros agentes e pode ou não cooperar com outros agentes para a realização de uma tarefa.
 
 Em~\cite{sarmento11}, podemos encontrar as seguintes características principais em ambientes multiagente:
 \begin{itemize}
@@ -247,9 +240,9 @@ Em~\cite{sarmento11}, podemos encontrar as seguintes características principais
 	\item Contém agentes que são autônomos e individualistas.
 \end{itemize}
 
-É trivial imaginar que um sistema multiagente é designado para a solução de problemas de forma distribuída, onde o problema é distribuído entre os agentes que, juntos, trabalham concorrentemente para a resolução deste problema, podendo ou não trabalhar de forma cooperativa.
+É trivial imaginar que um SMA é designado para a solução de problemas de forma distribuída, onde o problema é distribuído entre os agentes que, juntos, trabalham concorrentemente para a resolução deste problema, podendo ou não trabalhar de forma cooperativa.
 
-É importate notar a distinção de conceitos como~\emph{cooperação} na literatura de sistemas multiagentes. Em~\cite{wooldridge04}, existem duas principais diferenças do conceito entre as duas abordagens.
+É importate notar a distinção de conceitos como~\emph{cooperação} na literatura de sistemas Multiagente. Em~\cite{wooldridge04}, existem duas principais diferenças do conceito entre as duas abordagens.
 
 A primeira delas é que agentes são designados de forma diferente, com objetivos diferentes. Em um ambiente com vários agentes, eles devem trabalhar estratégicamente para alcançar seus objetos. A possibilidade de agentes não cooperarem é perfeitamente plausível.
 
@@ -268,7 +261,7 @@ O processo CDPS pode ser divido em três etapas:
 	\item integração da solução.
 \end{itemize}
 
-Com uma solução compartilhada de resolução de problemas, a arquitetura de sistemas multiagentes mostra-se bastante robusta neste quesito. É necessário porém saber dos detalhes da comunicação entre os agentes, a forma de envio das mensagens, as suas linguagens, bem como outras particularidades.
+Com uma solução compartilhada de resolução de problemas, a arquitetura de sistemas Multiagente mostra-se bastante robusta neste quesito. É necessário porém saber dos detalhes da comunicação entre os agentes, a forma de envio das mensagens, as suas linguagens, bem como outras particularidades.
 
 \subsection{Comunicação}
 
@@ -478,7 +471,7 @@ A possibilidade de representação de conhecimento por meio de ontologias é bas
 
 Em~\ref{fig:arvore-ontologia}, é possível observar a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
 
-Em um ambiente de Sistemas Multiagentes, além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, dentre outros exemplos. Em outras palavras, dois agentes podem comunicar-se usando a mesma ontologia.
+Em um ambiente de Sistemas Multiagente, além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, dentre outros exemplos. Em outras palavras, dois agentes podem comunicar-se usando a mesma ontologia.
 
 Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A mais comum delas é a~\emph{eXtensible Markup Language} (XML), uma linguagem de marcação que organiza os dados de forma hierarquizada.
 
@@ -513,11 +506,11 @@ O exemplo~\ref{code:exemplo-xml} está descrito escrito na linguagem XML que rep
 
 \section{Multiagent Systems Engineering}\label{section:mase}
 
-Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos. O advento de sistemas multiagentes trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, devido à diferença de abordagem do software.
+Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos. O advento de sistemas Multiagente trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, devido à diferença de abordagem do software.
 
 Pela característica autônoma dos agentes, não é possível compará-los à simples objetos que serão invocados por outros objetos. Não existe interação direta, apenas coordenação de ações via conversação para cada agente atingir suas próprias métas.
 
-O desenvolvimento de uma metodologia para projetar sistemas multiagentes surgiu, chamada~\emph{Multiagent Systems Engineering} (MASE), onde os requisitos e metas do SMA são levantados e a partir de então as tarefas e agentes são projetadas para lhes atender. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura.
+O desenvolvimento de uma metodologia para projetar sistemas Multiagente surgiu, chamada~\emph{Multiagent Systems Engineering} (MASE), onde os requisitos e metas do SMA são levantados e a partir de então as tarefas e agentes são projetadas para lhes atender. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura.
 
 Em~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Design.
 
@@ -538,7 +531,7 @@ A fase de design consiste na modelagem do SMA de acordo com as regras levantadas
 	\item Design do Sistema
 \end{itemize}
 
-Existem outras metodologias para desenvolvimento de Sistemas Multiagente. A metodologia~\emph{Gaia}~\cite{wooldridge2000} consiste em uma abordagem não iterativa que define análise e~\emph{design} de sistemas baseados em agentes. Esta metodologia é considerada genérica e compreensível pois pode ser aplicada a um nível muito amplo de sistemas multiagente e ela lida tanto com escopos mais gerais (sociedade), quanto com escopos mais específicos (agentes). Ela define as regras e tarefas em termos de uma organização, que é sinônimo de sociedade de agentes ou sistemas multiagentes.
+Existem outras metodologias para desenvolvimento de Sistemas Multiagente. A metodologia~\emph{Gaia}~\cite{wooldridge2000} consiste em uma abordagem não iterativa que define análise e~\emph{design} de sistemas baseados em agentes. Esta metodologia é considerada genérica e compreensível pois pode ser aplicada a um nível muito amplo de sistemas multiagente e ela lida tanto com escopos mais gerais (sociedade), quanto com escopos mais específicos (agentes). Ela define as regras e tarefas em termos de uma organização, que é sinônimo de sociedade de agentes ou sistemas Multiagente.
 
 A metodologia~\emph{PASSI} (\emph{Process for Agent Societies Specification and Implementation}) é designada para o acompanhamento do desenvolvimento do sistema desde o levantamento dos requisitos até a codificação~\cite{burrafato02}. Seus modelos de projetos são baseados nas especificações da FIPA, garantindo assim a compatibilidade com o SMA a ser desenvolvido. O~\emph{PASSI} define uma metodologia cinco modelos de trabalho: Requisito do Sistema, sociedade de Agentes, implementação dos agentes, modelo de código e modelo de implantação.
 
@@ -566,7 +559,7 @@ O diagrama de sequência define os eventos que cada interação pode criar, most
 
 \subsubsection{Refinar Regras}
 
-O último passo da fase de análise, o refinamento de regas consiste na associação metas e seus diagramas de sequências às regras e suas respectivas tarefas. A associação de tarefas à regras é a melhor forma de modelagem de Sistemas Multiagentes~\cite{scott01}. 
+O último passo da fase de análise, o refinamento de regas consiste na associação metas e seus diagramas de sequências às regras e suas respectivas tarefas. A associação de tarefas à regras é a melhor forma de modelagem de Sistemas Multiagente~\cite{scott01}. 
 
 Em geral, a associação de metas às regras é de um para um, não sendo uma regra necessáriamente. Durante esta etapa, algumas considerações relativas ao desenho do sistema devem ser levadas em consideração. Caso exista alguma alteração (adição de uma nova meta, alteração de caso de uso, dentre outras), a metodologia permite que o analista retorne aos passos anteriores e remodele a solução. Algumas metas podem ser combinadas em apenas uma regra, simplificando o desenho do sistema.
 
@@ -681,11 +674,20 @@ A representação do diagrama de~\emph{deploy}~\ref{fig:exemplo-diagrama-deploy}
 
 \subsubsection{Ferramenta~\emph{AgentTool}}
 
-O~\emph{AgentTool} é uma ferramenta que dá suporte à metodologia MASE para desenvolvimento de Sistema Multiagente. A versão 1.8.1 dá suporte à todas fases e passos do MASE~\cite{agentTool2012}, provendo suporte para a criação de diagramas, detalhamento de conversações e casos de uso simplificados.
+O~\emph{AgentTool} é uma ferramenta que dá suporte à metodologia MASE para a modelagem de um SMA. A versão 1.8.1 dá suporte à todas fases e passos do MASE~\cite{agentTool2012}, provendo suporte para a criação de diagramas, detalhamento de conversações e casos de uso simplificados.
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.65]{images/interface-agent-tool.png}
+	\caption{Interface da ferramenta~\emph{AgentTool}.}
+	\label{fig:interface-agent-tool}
+\end{figure}
 
+Sua tela principal~\ref{fig:interface-agent-tool} mostra inicialmente as principais abas disponíveis. Ela mostra a tela para desenvolvimento do diagrama de metas hierarquizado. O avanço ou regresso do desenvolvimento é percebido durante o preenchimento das abas, que é feito de forma sequêncial da esquerda para a direita, acompanhando todos os passos da metodologia.
 
-\section{Ferramentas Utilizadas}
+A medida do progresso da metodologia MASE, algumas abas serão habilitadas conforme a seleção dos objetos nos diagramas. Por exemplo, cada comunicação de tarefas no diagrama de regras deve possuir um detalhamento. Dessa forma, a aba~\emph{Task Panel} torna-se automaticamente visível ao usuário quando há esse tipo de interação.
+
+\section{Estudos de Ferramentas e Tecnologias Relacionadas}
 
 Nesta seção estão reunidos as tecnologias que auxiliares ao desenvolvimento do SMA. A primeira seção explica alguns diagramas que são definidos na~\emph{Unified Modeling Language}, necessários para entender os passos da~\emph{Multiagent System Engineering}.
  
@@ -719,7 +721,7 @@ O UML 2.0 descreve 13 tipos de diagramas~\ref{fig:categorias-diagramas} que pode
 	\label{fig:categorias-diagramas}
 \end{figure}
 
-Apesar da grande quantidade diagramas envolvidos no UML, nem todos os processos de desenvolvimentos de software utilizam todos eles. Em~\cite{larman08}, a grande extensão de diagramas UML não é usada pela maioria das metodologias. A metodologia de desenvolvimento de sistema multiagente utiliza-se apenas dos seguintes diagramas:
+Apesar da grande quantidade diagramas envolvidos no UML, nem todos os processos de desenvolvimentos de software utilizam todos eles. Em~\cite{larman08}, a grande extensão de diagramas UML não é usada pela maioria das metodologias. A metodologia de desenvolvimento de SMA utiliza-se apenas dos seguintes diagramas:
 
 \begin{itemize}
 	\item Diagrama de Caso de uso
@@ -871,12 +873,12 @@ Os comportamentos são separados em primitivos e compostos. A diferença entre a
 O JADE implementa o ciclo de vida especificado pela FIPA. Os possíveis estados da plataforma são:
 
 \begin{itemize}
-	\item INITIATED - Após a criação do objeto, antes do registro do objeto no AMS, o agente assume o estado de iniciado. Este estado significa que o agente ainda não está disponível para a execução de ações na  plataforma.
-	\item ACTIVE - Neste estado o agente é registrado no AMS, possuindo assim o AID e o endereço. Ele está pronto para a execução do trabalho na plataforma.
-	\item SUSPENDED - O agente está com as atividades suspensas e está em modo ocioso.
-	\item WAITING - O agente está bloqueado esperando algum evento acontecer para executar alguma ação. Tipicamente, este estado é usado para fazer o agente esperar por alguma mensagem.
-	\item DELETED - O agente está destruído e sua thread de execução é terminada. O seu registro será removido do AMS e a sua referência removida da JVM.
-	\item TRANSIT - O agente está movendo-se de uma plataforma para uma nova localização. Mesmo em transito, é possível enviar mensagens para este agente, visto que serão empilhadas na sua fila de mensagens e posteriormente processadas quando ele assumir o estado ACTIVE.
+	\item \emph{INITIATED} - Após a criação do objeto, antes do registro do objeto no AMS, o agente assume o estado de iniciado. Este estado significa que o agente ainda não está disponível para a execução de ações na  plataforma.
+	\item \emph{ACTIVE} - Neste estado o agente é registrado no AMS, possuindo assim o AID e o endereço. Ele está pronto para a execução do trabalho na plataforma.
+	\item \emph{SUSPENDED} - O agente está com as atividades suspensas e está em modo ocioso.
+	\item \emph{WAITING} - O agente está bloqueado esperando algum evento acontecer para executar alguma ação. Tipicamente, este estado é usado para fazer o agente esperar por alguma mensagem.
+	\item \emph{DELETED} - O agente está destruído e sua thread de execução é terminada. O seu registro será removido do AMS e a sua referência removida da JVM.
+	\item \emph{TRANSIT} - O agente está movendo-se de uma plataforma para uma nova localização. Mesmo em transito, é possível enviar mensagens para este agente, visto que serão empilhadas na sua fila de mensagens e posteriormente processadas quando ele assumir o estado ACTIVE.
 \end{itemize}
 
 Para cada uma das transições de estados existem métodos que são invocados em um momento anterior. Eles são úteis para a execução de ações que antecedem a mudança de estado. Por exemplo: Durante a mudança do estado ACTIVE para DELETE, o método~\emph{doDelete()} é encarregado de implementar ações que antecedam o fim do agente, como que o agente desfaça o registro dos seus serviços no DF.
@@ -915,17 +917,21 @@ Em~\cite{allen09}, uma das principais ferramentas do Seam é o~\emph{seam-genera
 Além disso, uma das grandes vantagens do~\emph{seam-generator} é a geração automática de código, criando a partir de uma tabela no banco de dados todas as operações necessárias para a visualização, inserção, exclusão e atualização de dados (CRUD), diminuindo assim o tempo de desenvolvimento de aplicações.
 
 \section{Trabalhos Correlatos}
-É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste trabalho, seja em Inteligência Artificial, Estilos de Aprendizagem, Sistemas Multiagentes ou Ambientes Virtuais de Aprendizagem.
+É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste trabalho, seja em Inteligência Artificial, Estilos de Aprendizagem, Sistemas Multiagente ou Ambientes Virtuais de Aprendizagem.
 
 Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado à um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de Inteligência Artificial. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros Ambientes Virtuais de Aprendizagem.
 
-Existem trabalhos na área de identificação de conhecimentos~\cite{bativa2011}, que visam a determinação de estilos de aprendizagem dos alunos por meio da plataforma chamada "Ferramenta de Identificação de Perfis de Aprendizes – FIPA", uma aplicação multicamadas que faz a identificação do perfil é feita por meio de questionários de estilos de aprendizagem. Apesar da inferência do estilo de aprendizagem, esta plataforma utiliza uma abordagem distinta deste trabalho, sendo uma arquitetura cliente-servidor.
- 
-O trabalho~\cite{geyer2001semeai} utiliza-se de Sistemas Multiagentes para a adaptação do ensino na internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de ensino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil. Este ambiente assemelha-se bastante com o presente trabalho, porém o seu foco não é na modelagem multidimensional do aluno.
+O trabalho~\cite{bativa2011}, na área de identificação de conhecimentos, visa a determinação de estilos de aprendizagem dos alunos por meio da plataforma chamada "Ferramenta de Identificação de Perfis de Aprendizes – FIPA", uma aplicação multicamadas que faz a identificação do perfil é feita por meio de questionários de estilos de aprendizagem. Apesar da inferência do estilo de aprendizagem, esta plataforma utiliza uma abordagem distinta deste trabalho, sendo uma arquitetura cliente-servidor. 
+
+Esta arquitetura não possui alguns benefícios da abordagem SMA que estão descritas em~\cite{helbing11}: A possibilidade de representação de entidades individuais como, no domínio  deste trabalho, a modelagem do conhecimento de cada aluno por meio de agentes. Outra característica é  a representação das suas interações por meio de equações, regras ou operações lógicas que podem flexibilizar a modelagem. Por fim, modelos baseados em agentes são recomendáveis para simulações devido as suposições realisticas inerentes a seu domínio.
+
+O trabalho~\cite{geyer2001semeai} utiliza-se de Sistemas Multiagente para a adaptação do ensino na internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de ensino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil. Este ambiente assemelha-se bastante com o presente trabalho, porém o seu foco não é na modelagem multidimensional do aluno.
+
+A modelagem multidimensional tem por objetivo a separação clara das dimensões do aluno para restringir o domínio de atuação de cada agente. Dessa forma, cada a gente expressará uma quantidade menor de propriedades de cada dimensão, sendo possível obter uma informação mais precisa e expressiva de cada dimensão, conforme pode ser visto nas simulações em~\cite{helbing11}.
 
 Por fim, o Ambiente Virtual de Aprendizagem EDULIVRE~\cite{rabelo2010identificacao} constitui-se de um Ambiente Virtual de Aprendizagem que possibilita a inferência implícita de modelos e perfis individuais de estudantes da educação infantil. Com o perfil de cada aluno e de todos os alunos em geral, o educando poderá desenvolver nortear seu trabalho da melhor forma possível. A abordagem deste trabalho não é com uso de agentes, diferindo assim do foco deste trabalho. Além disso, o EDULIVRE apresenta a estratégia de ser o Ambiente Virtual de Aprendizagem e não permite integração com outros ambientes.
 
-
+Conforme exposto alguns trabalhos na área de IE utilizam de diversas tecnologias ou abordagens para a construção de ambientes de ensino-aprendizagem. Todavia, o capitulo seguinte apresentará uma proposta que tende melhorar o modelagem do perfil de aprendizagem por meio da definição de uma arquitetura específica baseada em SMA. Essa arquitetura apresenta aspectos que tangem o modelo multidimensional do aluno propondo uma divisão de agentes para inferência do perfil e aspectos da infraestrutura do ambiente de ensino-aprendizagem.
 
 
 
