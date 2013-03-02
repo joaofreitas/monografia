@@ -895,7 +895,7 @@ Por padrão, o JADE utiliza diversos agentes que utilizam-se de interfaces gráf
 
 No mundo corporativo do JAVA, muitos frameworks são responsáveis por partes específicas de uma aplicação. Seguindo as especificações propostas para a plataforma (JSR), as aplicações implementam integrações com o banco de dados (Hibernate, JPA), integração com a camada de visualização (Struts 1~\cite{struts1} e 2~\cite{struts2}, JSF~\cite{jsf2012}), contextos Java e injeção de dependência~\cite{di2012}. Porém a integração destes frameworks nem sempre é trivial, demandando muito tempo dos desenvolvedores para a correta configuração.
 
-Neste aspecto surge o JBoss Seam. Ele é um~\emph{framework} que reune as principais tecnologias de desenvolvimento web na linguagem Java. Ele integra as tecnologias~\emph{Asynchronous JavaScript and XML} (AJAX),~\emph{JavaServer Faces} (JSF),~\emph{Java Persistence} (JPA),~\emph{Enterprise Java Beans} (EJB 3.0) e~\emph{Business Process Management} (BPM) em uma única ferramenta que objetiva o desenvolvimento ágil de aplicações e o foco do programador na lógica de negócio~\cite{seamSite}.
+Neste aspecto surge o~\emph{JBoss Seam}. Ele é um~\emph{framework} que reune as principais tecnologias de desenvolvimento web na linguagem Java. Ele integra as tecnologias~\emph{Asynchronous JavaScript and XML} (AJAX),~\emph{JavaServer Faces} (JSF),~\emph{Java Persistence} (JPA),~\emph{Enterprise Java Beans} (EJB 3.0) e~\emph{Business Process Management} (BPM) em uma única ferramenta que objetiva o desenvolvimento ágil de aplicações e o foco do programador na lógica de negócio~\cite{seamSite}.
 
 A pilha de aplicações do Seam, representada na Figura~\ref{fig:servidor-app-seam}, contém todos as tecnologias que são utilizados pelo~\emph{framework}. Caso o desenvolvedor deseje utilizar outras tecnologias, o Seam provê configurações para que outras ferramentas possam ser integradas facilmente à aplicação.
 
@@ -909,6 +909,8 @@ A pilha de aplicações do Seam, representada na Figura~\ref{fig:servidor-app-se
 Em~\cite{allen09}, uma das principais ferramentas do Seam é o~\emph{seam-generator}. Com ele, é possível gerar uma estrutura básica de projeto, com arquivos de construção, bibliotecas compatíveis e as configurações necessárias para o início do desenvolvimento e o~\emph{deploy} em um servidor de aplicação.
 
 Além disso, uma das grandes vantagens do~\emph{seam-generator} é a geração automática de código, criando a partir de uma tabela no banco de dados todas as operações necessárias para a visualização, inserção, exclusão e atualização de dados (CRUD), diminuindo assim o tempo de desenvolvimento de aplicações.
+
+Portanto este trabalho optou por utilizar o~\emph{JBoss Seam}, pois engloba outras importantes ferramentas em uma única solução, facilitando assim o desenvolvimento da aplicação~\emph{web}. A facilidade pode ser constatada a partir dos aspectos já mencionados, como integração nativa entre as ferramentas da sua pilha de aplicações e geração automática de código.
 
 \section{Trabalhos Correlatos}
 É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste trabalho, seja em Inteligência Artificial, Estilos de Aprendizagem, SMA ou AVA.
