@@ -1,19 +1,18 @@
 \chapter{Experimentações}
 
-Esta seção apresenta o protótipo desenvolvido para a parte web da solução. Serão mostradas as telas de interação com o aluno e professor. Para tanto, foi definida uma metodologia~\ref{section:metodologia-testes} das experimentações que explicará como foi dividido os cenários de testes.
-O primeiro cenário~\ref{section:interface-aluno} mostra o fluxo de execução desde o primeiro acesso do aluno à visualização do seu estilo de aprendizagem. O segundo cenário~\ref{section:interface-docente} mostra o fluxo de execução do docente que deseja verificar o estilo de aprendizagem de seus alunos.
+Esta seção apresenta o protótipo desenvolvido para a parte web da solução. Serão mostradas as telas de interação com o aluno e professor. Para tanto, foi definida uma metodologia apresentada na Figura~\ref{section:metodologia-testes} das experimentações que explicará como foi dividido os cenários de testes.
+A Figura~\ref{section:interface-aluno} apresenta o primeiro cenário o qual mostra o fluxo de execução desde o primeiro acesso do aluno à visualização do seu estilo de aprendizagem. O segundo cenário, apresentado na Figura~\ref{section:interface-docente}, mostra o fluxo de execução do docente que deseja verificar o estilo de aprendizagem de seus alunos.
 
-Por fim, o capítulo de resultados~\ref{section:resultados} destaca todos os resultados esperados do cenários do aluno e dos objetivos do projeto.
+Por fim, a Seção~\ref{section:resultados} destaca todos os resultados obtidos dos cenários, bem como a sua relação para os objetivos do projeto.
 
 \section{Metodologia de Testes}\label{section:metodologia-testes}
 
 A metodologia de testes foi dividida em dois cenários. O primeiro deles é o cenário onde o aluno faz o primeiro acesso ao sistema e deseja conhecer o seu estilo de aprendizagem. É seguido então um fluxo de execução para que este aluno possa realizar o questionário de estilos de aprendizagem. No fim do fluxo, espera-se que o aluno saiba o seu estilo de aprendizagem.
 
-O segundo cenário aborda o acesso do docente ao sistema, desejando saber o estilo de aprendizagem dos alunos de sua turma. É demonstrado um fluxo de execução para que ele autentique-se no sistema e acesse os dados de sua turma. Ao final deste fluxo, é esperado que o docente saiba o estilo de aprendizagem de todos os alunos que realizaram o questionário.
-As duas próximas seções mostram os fluxos explicados.
+O segundo cenário aborda o acesso do docente ao sistema, desejando saber o estilo de aprendizagem dos alunos de sua turma. É demonstrado um fluxo de execução para que ele autentique-se no sistema e acesse os dados de sua turma. Ao final deste fluxo, é esperado que o docente saiba o estilo de aprendizagem de todos os alunos que realizaram o questionário. Nas seções que se seguem serão detalhados os dois cenários através do uso das respectivas interfaces do aluno e do docente.
 
 \section{Demonstração da Interface com Aluno}\label{section:interface-aluno}
-O fluxo definido para o aluno~\ref{fig:fluxo-aluno} consiste do seu primeiro acesso na plataforma, sua autenticação, responder seu questionário e visualizar o seu estilo de aprendizagem. Caso o seu login esteja incorreto, ele deve tentar novamente.
+O fluxo definido para o aluno, apresentado na Figura~\ref{fig:fluxo-aluno}, consiste do seu primeiro acesso na plataforma, sua autenticação, responder seu questionário e visualizar o seu estilo de aprendizagem. Caso o seu login esteja incorreto, ele deve tentar novamente.
 
 \begin{figure}
 	\centering
@@ -22,7 +21,7 @@ O fluxo definido para o aluno~\ref{fig:fluxo-aluno} consiste do seu primeiro ace
 	\label{fig:fluxo-aluno}
 \end{figure}
 
-O primeiro passo do fluxo é o acesso à tela inicial~\ref{fig:frank-tela-aluno-inicial} do Sistema, onde é mostrado uma mensagem de boas vindas. 
+A Figura~\ref{fig:frank-tela-aluno-inicial} apresenta o primeiro passo do fluxo do aluno, o acesso à tela inicial do Sistema, onde é mostrado uma mensagem de boas vindas. 
 
 \begin{figure}
 	\centering
@@ -31,7 +30,7 @@ O primeiro passo do fluxo é o acesso à tela inicial~\ref{fig:frank-tela-aluno-
 	\label{fig:frank-tela-aluno-inicial}
 \end{figure}
 
-O usuário então segue para a tela de autenticação e o Sistema exige o login e a senha de acesso~\ref{fig:frank-tela-aluno-login}. 
+O usuário então segue para a tela de autenticação e o Sistema exige o login e a senha de acesso, apresentado na Figura~\ref{fig:frank-tela-aluno-login}. 
 
 \begin{figure}
 	\centering
@@ -40,7 +39,7 @@ O usuário então segue para a tela de autenticação e o Sistema exige o login 
 	\label{fig:frank-tela-aluno-login}
 \end{figure}
 
-Caso o usuário informe o login inválido, o Sistema apresenta a tela de erro~\ref{fig:frank-tela-login-invalido}, solicitando novamente os dados para autenticação.
+Caso o usuário informe o login inválido, o Sistema apresenta a tela de erro, solicitando novamente os dados para autenticação. A Figura~\ref{fig:frank-tela-login-invalido} apresenta a tela de erro exibida para o usuário.
 
 \begin{figure}
 	\centering
@@ -49,7 +48,7 @@ Caso o usuário informe o login inválido, o Sistema apresenta a tela de erro~\r
 	\label{fig:frank-tela-login-invalido}
 \end{figure}
 
-Após a autenticação, o usuário (agora autenticado com o perfil de aluno) realiza o primeiro acesso ao Sistema. Este detecta que o aluno não fez o questionário de estilos de aprendizagem e apresenta a tela de convite ao preenchimento do mesmo~\ref{fig:frank-tela-aluno-prim-acesso}.
+Após a autenticação, o usuário (agora autenticado com o perfil de aluno) realiza o primeiro acesso ao Sistema. Este detecta que o aluno não fez o questionário de estilos de aprendizagem e apresenta a tela de convite ao preenchimento do mesmo, conforme ilustra a Figura~\ref{fig:frank-tela-aluno-prim-acesso}.
 
 \begin{figure}
 	\centering
@@ -58,7 +57,7 @@ Após a autenticação, o usuário (agora autenticado com o perfil de aluno) rea
 	\label{fig:frank-tela-aluno-prim-acesso}
 \end{figure}
 
-O usuário então entra na tela de preenchimento do questionário~\ref{fig:frank-tela-aluno-preencher-questionario}, preenche todas as respostas de acordo com suas características e em seguida seleciona o botão "Confirmar". O Sistema envia os dados para o SMA e o seu estilo de aprendizagem é inferido.
+O usuário então entra na tela de preenchimento do questionário, apresentada na Figura~\ref{fig:frank-tela-aluno-preencher-questionario}, preenche todas as respostas de acordo com suas características e em seguida seleciona o botão "Confirmar". O Sistema envia os dados para o SMA e o seu estilo de aprendizagem é inferido.
 
 \begin{figure}
 	\centering
@@ -67,7 +66,7 @@ O usuário então entra na tela de preenchimento do questionário~\ref{fig:frank
 	\label{fig:frank-tela-aluno-preencher-questionario}
 \end{figure}
 
-Por fim, o Sistema exibe o resultado final do processamento do SMA na tela de boas vindas~\ref{fig:frank-tela-aluno-inferencia-estilo}. Dessa forma, o usuário verá sempre o seu estilo de aprendizagem atualizado ao acessar o Sistema.
+Por fim, o Sistema exibe o resultado final do processamento do SMA na tela de principal do aluno, exibido na Figura~\ref{fig:frank-tela-aluno-inferencia-estilo}. Dessa forma, o usuário verá sempre o seu estilo de aprendizagem atualizado ao acessar o Sistema.
 
 \begin{figure}
 	\centering
@@ -77,7 +76,7 @@ Por fim, o Sistema exibe o resultado final do processamento do SMA na tela de bo
 \end{figure}
 
 \section{Demonstração da Interface com Docente}\label{section:interface-docente}
-O fluxo definido para o docente~\ref{fig:fluxo-aluno} consiste do acesso na plataforma, sua autenticação, visualização das turmas e visualizar o estilo de aprendizagem dos alunos. Caso o seu login esteja incorreto, ele deve tentar novamente.
+O fluxo apresentado na Figura~\ref{fig:fluxo-aluno} define a execução da experimentação do docente. Ele consiste do acesso à plataforma, sua autenticação, visualização das turmas e visualizar o estilo de aprendizagem dos alunos. Caso o seu login esteja incorreto, ele deve tentar novamente.
 
 \begin{figure}
 	\centering
