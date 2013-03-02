@@ -19,9 +19,11 @@ Portanto, determinar o estilo de aprendizagem mostra-se uma estratégia fundamen
 Os ambientes educacionais de aprendizagem não possuem uma arquitetura apropriada para a inferência de modelos multidimensionais, pois a abordagem baseada em cliente-servidor não é razoável para representação de perfis de alunos no ambiente.
 
 \section{Objetivos}
-Tendo em vista o cenário atual apresentado, o presente trabalho tem como objetivo definir uma arquitetura distribuída na Web para auxiliar o processo de ensino-aprendizagem por meio da abordagem de Sistema multiagente (SMA).
+Tendo em vista o cenário atual apresentado, o presente trabalho tem como objetivo definir uma arquitetura distribuída na Web para auxiliar o processo de ensino-aprendizagem por meio da abordagem de Sistema multiagente (SMA), criando insumos para auxiliar o docente na adoção da melhor estratégia didática de ensino.
 
-Esta abordagem permitirá a construção e manutenção de um modelo multidimensional do estudante, a partir do qual os estilos de aprendizagem desse estudante poderão ser identificados e informados ao docente. A abordagem de sistemas multiagentes permite a decomposição do problema na modelagem multidimensional em vários subproblemas menores, diminuindo a complexidade da resolucão. Além disso, a habilidade social dos agentes pode permitir a interação com outros modelos de alunos visando comparações e validações do modelo.
+Esta abordagem permitirá a construção e manutenção de um modelo multidimensional do estudante, a partir do qual os estilos de aprendizagem desse estudante poderão ser identificados. A abordagem de sistemas multiagentes permite a decomposição do problema na modelagem multidimensional em vários subproblemas menores, sendo capaz de diminuir a complexidade da resolucão. Além disso características inerentes aos agentes, como a habilidade social dos agentes, podem permitir a interação com outros modelos de alunos visando comparações e validações do modelo.
+
+Em corroboração ao objetivo do trabalho, a informação do estilo de aprendizagem ao docente pode permitir a correta orientação da sua didática em sala de aula, melhorando qualitativamente o ensino aos seus alunos.
 
 Especificamente, os objetivos específicos deste trabalho são:
 \begin{itemize}
@@ -48,5 +50,5 @@ A divisão de capítulos foi feita da seguinte forma:
 	\item Capítulo 2: Apresenta uma breve visão sobre as áreas de estudo envolvidas neste trabalho: Informática na Educação, Sistema Multiagente. Além disso, apresenta algumas ferramentas e tecnologias utilizadas, bem como os trabalhos correlatos e um comparativo.
 	\item Capítulo 3: Contém a proposta de solução composta pela metodologia, modelagem da arquitetura e implementação.
 	\item Capítulo 4: Exibe os testes realizados em laboratório por meio dos perfis dos usuários: Aluno e Docente.
-	\item Capítulo 5: Apresenta as conclusões e abre perspectivas para trabalhos futuros.
+	\item Capítulo 5: Apresenta algumas conclusões e abre perspectivas para trabalhos futuros.
 \end{itemize}
