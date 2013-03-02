@@ -448,7 +448,7 @@ As performativas~\emph{request} e~\emph{inform} consideradas principais pela esp
 
 \subsection{Ontologias}
 
-Ontologia é um ramo da Filosofia que dedica-se a estudar e representar a natureza do ser, existência ou realidade. É uma formalização dos conceitos e relacionamentos que podem existir em um determinado universo. Segundo~\cite{novig95}, a representação de conceitos e objetos pode ser entendida como Engenharia Ontológica:
+Ontologia é um um ramo da Filosofia que dedica-se a estudar e representar a natureza do ser, existência ou realidade. De acordo com~\cite{kim2006towards} é um modelo que consiste na representação de um vocabulário com definições precisas dos termos, axiomas formais que restringem uma interpretação e expressões bem formadas de uso dos termos. Segundo~\cite{novig95}, a representação de conceitos e objetos pode ser entendida como Engenharia Ontológica:
 
 \begin{quote}
 \emph{...concentrating on general concepts-such as Actions, Time, Physical Objects, and Beliefs - that occur in many different domains. Representing these abstract concepts is sometimes called ontological engineering.}
@@ -472,7 +472,7 @@ Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A m
 O Exemplo de Código~\ref{code:exemplo-xml} está descrito escrito na linguagem XML e representa o domínio de países. Nele podemos ver a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no trecho~\ref{code:exemplo-xml}, porém sem alteração de semântica.
 
 
-\begin{lstlisting}[language=xml,label=code:exemplo-xml,caption=Exemplo de código XML representando uma ontologia simples de cidades.]
+\begin{lstlisting}[language=xml,label=code:exemplo-xml,caption=Representação uma ontologia simples de cidades.]
 	<Pais nome="Brasil">
 		<Estado nome="Goias" sigla="GO">
 			<Cidade>
@@ -498,36 +498,38 @@ O Exemplo de Código~\ref{code:exemplo-xml} está descrito escrito na linguagem 
 	<Pais>
 \end{lstlisting}
 
-\section{Multiagent Systems Engineering}\label{section:mase}
+\section{Metodologias de Sistemas Multiagente}\label{section:mase}
 
-Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos. O advento da abordagem SMA trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, devido à diferença de abordagem do software.
+Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos.
 
-Pela característica autônoma dos agentes, não é possível compará-los à simples objetos que serão invocados por outros objetos. Não existe interação direta, apenas coordenação de ações via conversação para cada agente atingir suas próprias métas.
+Pela característica autônoma dos agentes, não é possível compará-los à simples objetos que serão invocados por outros objetos. Não existe interação direta, apenas coordenação de ações via conversação para cada agente atingir suas próprias métas. Portanto, o advento da abordagem SMA trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, devido à diferença de abordagem do software.
 
-O desenvolvimento de uma metodologia para modelagem de SMA surgiu, chamada~\emph{Multiagent Systems Engineering} (MASE), onde os requisitos e metas do SMA são levantados e a partir de então as tarefas e agentes são projetadas para lhes atender. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura.
+Foram definidas algumas metodologias para modelagem e desenvolvimento de SMA. A metodologia~\emph{Gaia}~\cite{wooldridge2000} consiste em uma abordagem não iterativa que define análise e~\emph{design} de sistemas baseados em agentes. Esta metodologia é considerada genérica e compreensível pois pode ser aplicada a um nível muito amplo de SMA e ela lida tanto com escopos mais gerais (sociedade), quanto com escopos mais específicos (agentes). Ela define as regras e tarefas em termos de uma organização, que é sinônimo de sociedade de agentes ou um SMA.
 
-Em~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Design.
+A metodologia~\emph{PASSI} (\emph{Process for Agent Societies Specification and Implementation}) é designada para o acompanhamento do desenvolvimento do sistema desde o levantamento dos requisitos até a codificação~\cite{burrafato02}. Seus modelos de projetos são baseados nas especificações da FIPA, garantindo assim a compatibilidade com o SMA a ser desenvolvido. O~\emph{PASSI} define uma metodologia cinco modelos de trabalho: Requisito do Sistema, sociedade de Agentes, implementação dos agentes, modelo de código e modelo de implantação.
 
-A primeira fase, chamada de análise, consiste no levantamento e entendimento dos requisitos com o objetivo de um conjunto de regras, as quais são associadas à tarefas que devem ser realizadas para o sistema atingir seus objetivos. No fim dessa fase, alguns artefatos são gerados que nortearão a próxima etapa da metodologia. A fase de análise pode ser dividida nos seguintes três passos:
+A metodologia~\emph{Multiagent Systems Engineering} (MASE) é definida por meio dos requisitos e metas iniciais do SMA. Estes são levantados de forma iterativa e a partir de então são modeladas em diversas etapas as tarefas para cumprir os objetivos. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura. Em~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Design.
+
+Neste trabalho, foi escolhido a metodologia de desenvolvimento MASE. Em contraste com as outras abordagens, a metodologia~\emph{GAIA} não permite a adição de novos requisitos no momento de~\emph{design}. Supondo uma situação de estuda-se detalhadamente o~\emph{design} do sistema, ocasionalmente podem surgir alguns requisitos ou tarefas adicionais derivados desta análise. Por não permitir a adição destes requisitos, o~\emph{GAIA} mostra-se uma abordagem mais rígida e pode ser desvantajosa se comparado com outras, portanto, foi descartada.
+
+A necessidade do acompanhamento até o código do desenvolvimento dos agentes feito pela metodologia~\emph{PASSI} poderia exigir um conhecimento mais aprofundado do framework de desenvolvimento do SMA, necessitando assim da escolha e estudo prévio deste~\emph{framework}. Este trabalho optou então pelo não acoplamento entre o projeto de modelagem e o código e, portanto, determinou o~\emph{MASE} para o desenvolvimento deste trabalho.
+
+Justificada a escolha da metodologia, a primeira fase do MASE, chamada de análise, consiste no levantamento e entendimento dos requisitos com o objetivo de um conjunto de regras, as quais são associadas à tarefas que devem ser realizadas para o sistema atingir seus objetivos. No fim dessa fase, alguns artefatos são gerados que nortearão a próxima etapa da metodologia. A fase de análise pode ser dividida nos seguintes três passos:
 
 \begin{itemize}
-	\item Capturar Metas
-	\item Desenvolver Casos de Uso
-	\item Refinar Regras
+	\item Capturar Metas;
+	\item Desenvolver Casos de Uso;
+	\item Refinar Regras.
 \end{itemize}
 
 A fase de design consiste na modelagem do SMA de acordo com as regras levantadas na fase anterior. O objetivo é a definição das conversações que existirão entre os agentes, bem como a arquitetura geral do sistema. Essa fase pode ser divida em quatro passos:
 
 \begin{itemize}
-	\item Criar as Classes dos Agentes
-	\item Construir Conversações
-	\item Montagem dos Agentes
-	\item Design do Sistema
+	\item Criar as Classes dos Agentes;
+	\item Construir Conversações;
+	\item Montagem dos Agentes;
+	\item Design do Sistema.
 \end{itemize}
-
-Existem outras metodologias para desenvolvimento de SMAs. A metodologia~\emph{Gaia}~\cite{wooldridge2000} consiste em uma abordagem não iterativa que define análise e~\emph{design} de sistemas baseados em agentes. Esta metodologia é considerada genérica e compreensível pois pode ser aplicada a um nível muito amplo de SMA e ela lida tanto com escopos mais gerais (sociedade), quanto com escopos mais específicos (agentes). Ela define as regras e tarefas em termos de uma organização, que é sinônimo de sociedade de agentes ou um SMA.
-
-A metodologia~\emph{PASSI} (\emph{Process for Agent Societies Specification and Implementation}) é designada para o acompanhamento do desenvolvimento do sistema desde o levantamento dos requisitos até a codificação~\cite{burrafato02}. Seus modelos de projetos são baseados nas especificações da FIPA, garantindo assim a compatibilidade com o SMA a ser desenvolvido. O~\emph{PASSI} define uma metodologia cinco modelos de trabalho: Requisito do Sistema, sociedade de Agentes, implementação dos agentes, modelo de código e modelo de implantação.
 
 \subsection{Análise}
 
@@ -621,13 +623,13 @@ Quando o agente recebe uma mensagem, ele automaticamente compara com as suas con
 
 Neste passo, é criado o Diagrama de Comunicação. Nele, as conversações são montadas por meio do mesmo autômato de estados finitos, utilizado na fase análise, passo~\emph{refinar regras}. Os estados do aumtômato são as ações que devem ser realizadas pelo agente. As transições de estado são as conversações que são feitas pelo agente.
 
-A sintaxe usada na conversação de agentes~\ref{code:sintaxe-conversation} é uma expressão que é definida por meio das mensagens recebidas, condições, ações e mensagens transmitidas. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
+O Exemplo de Código~\ref{code:sintaxe-conversation} representa a sintaxe usada na conversação de agentes é uma expressão que é definida por meio das mensagens recebidas, condições, ações e mensagens transmitidas. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
 
 \begin{lstlisting}[label=code:sintaxe-conversation,caption=Sintaxe da conversação entre dois agentes.]
 	rec-mess(args1) [cond] / action ^ trans-mess(args2)
 \end{lstlisting}
 
-O Diagrama de Comunicação~\ref{fig:exemplo-conversation} é definido para os dois lados da conversação: Iniciador e Receptor. considerando o lado iniciador da conversação.
+O diagrama de comunicação apresentado na Figura~\ref{fig:exemplo-conversation} é definido para os dois lados da conversação: Iniciador e Receptor. considerando o lado iniciador da conversação.
 
 \begin{figure}
 	\centering
@@ -642,7 +644,7 @@ Neste passo, o estado interno dos agentes é criado. É necessário nesta etapa 
 
 Os componentes internos dos agentes podem ser atributos dos agentes, ou métodos auxiliares. Um agente pode ter vários componentes internos e estes componentes obviamente se comunicarão. No mínimo, cada agente criado no Diagrama de Agentes deve ser definir uma arquitetura interna.
 
-No Diagrama de Arquitetura de Agentes~\ref{fig:exemplo-diagrama-arquitetura-agentes}, a linha tracejada significa interação com sistemas externos, enquanto a outra significa interação com outros agentes do sistema.
+No diagrama de arquitetura de agentes apresentado na Figura~\ref{fig:exemplo-diagrama-arquitetura-agentes}, a linha tracejada significa interação com sistemas externos, enquanto a outra significa interação com outros agentes do sistema.
 
 \begin{figure}
 	\centering
@@ -657,7 +659,7 @@ As setas tracejadas indicam dependência com atributos externos ao agente, enqua
 
 A fase final da metodologia MASE consiste na criação de um diagrama de~\emph{deploy} dos agentes. Este diagrama consiste na representação do número de agentes que serão criados por cada máquina da aplicação, bem como suas localizações no sistema.
 
-A representação do diagrama de~\emph{deploy}~\ref{fig:exemplo-diagrama-deploy} expressa os ambientes criados, bem como os agentes internos. O retângulo com linhas pontilhadas representam os ambientes que podem existir na aplicação. Os outros retângulos caixas representam os agentes e as linhas que os ligam representam as suas interações.
+A Figura~\ref{fig:exemplo-diagrama-deploy} apresenta o diagrama de~\emph{deploy}, expressando os ambientes criados e seus agentes internos. O retângulo com linhas pontilhadas representam os ambientes que podem existir na aplicação. Os outros retângulos caixas representam os agentes e as linhas que os ligam representam as suas interações.
 
 \begin{figure}
 	\centering
@@ -677,7 +679,7 @@ O~\emph{AgentTool} é uma ferramenta que dá suporte à metodologia MASE para a 
 	\label{fig:interface-agent-tool}
 \end{figure}
 
-Sua tela principal~\ref{fig:interface-agent-tool} mostra inicialmente as principais abas disponíveis. Ela mostra a tela para desenvolvimento do diagrama de metas hierarquizado. O avanço ou regresso do desenvolvimento é percebido durante o preenchimento das abas, que é feito de forma sequêncial da esquerda para a direita, acompanhando todos os passos da metodologia.
+A Figura~\ref{fig:interface-agent-tool} apresenta a tela principal onde é possível visualizar as principais abas disponíveis. Ela mostra a tela para desenvolvimento do diagrama de metas hierarquizado. O avanço ou regresso do desenvolvimento é percebido durante o preenchimento das abas, que é feito de forma sequêncial da esquerda para a direita, acompanhando todos os passos da metodologia.
 
 A medida do progresso da metodologia MASE, algumas abas serão habilitadas conforme a seleção dos objetos nos diagramas. Por exemplo, cada comunicação de tarefas no diagrama de regras deve possuir um detalhamento. Dessa forma, a aba~\emph{Task Panel} torna-se automaticamente visível ao usuário quando há esse tipo de interação.
 
