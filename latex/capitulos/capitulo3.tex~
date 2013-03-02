@@ -1,6 +1,6 @@
 \chapter{Proposta de Solução}
 
-O presente capítulo detalha a modelagem da solução e a arquitetura proposta. A primeira seção~\ref{section:modelagem} apresenta os diagramas que foram construídos a partir as duas fases da metodologia MASE. A segunda seção~\ref{section:arquitetura} mostra a arquitetura da solução em um escopo mais geral, considerando além do SMA a plataforma~\emph{web} e a sua comunicação.
+O presente capítulo detalha a modelagem da solução e a arquitetura proposta. A primeira Seção~\ref{section:modelagem} apresenta os diagramas que foram construídos a partir as duas fases da metodologia MASE. A segunda Seção~\ref{section:arquitetura} mostra a arquitetura da solução em um escopo mais geral, considerando além do SMA a plataforma~\emph{web} e a sua comunicação.
 
 A arquitetura básica do sistema já havia sido previamente decidida de acordo com~\cite{editalFrank}, bem como o nome da solução:~\emph{Frank}. Basicamente, a aplicação funciona da seguinte forma: O aluno deverá autenticar-se em uma plataforma~\emph{web} para a determinação do seu estilo de aprendizagem. Em seguida, o professor autentica-se na plataforma e verifica o estilo de aprendizagem do seu aluno. A verificação do estilo de aprendizagem e manutenção do modelo multidimensional é feita por agentes. Logo, a solução proposta foi desenvolvida em duas aplicações:~\emph{Web} e SMA.
 
@@ -31,7 +31,7 @@ As seções seguintes detalham a metodologia, justificam a arquitetura da soluç
 
 A modelagem foi desenvolvida utilizando-se a ferramenta~\emph{agentTool}. A ferramenta possui meios para diagramar todas as fases e passos do MASE, auxiliando o analista em todos os diagramas necessários, além de gerar código automático para alguns frameworks de SMA.
 
-A metodologia é dividida em duas fases: Análise e Design. A primeira fase~\ref{subsection:analise}, responsável pelo levantamento de requisitos e entendimento das regras e tarefas, e a segunda fase~\ref{subsection:design} responsável pela criação dos agentes, conversações e componentes internos.
+A metodologia é dividida em duas fases: Análise e Design. Na primeira Seção~\ref{subsection:analise} é desenvolvida a fase de análise responsável pelo levantamento de requisitos e entendimento das regras e tarefas. A segunda fase, na Seção~\ref{subsection:design}, é responsável pela criação dos agentes, conversações e componentes internos.
 
 \subsection{Análise}\label{subsection:analise}
 
@@ -74,7 +74,7 @@ A partir destes requisitos, foi possível estabelecer metas que o sistema deveri
 
 A partir do levantamento, foi possível observar que a meta 1 abrange o escopo geral de toda a aplicação, sendo possível estabelecer como meta do sistema. A meta 2 indica que o SMA deverá criar um grupo de trabalho para cada aluno que estiver usando o sistema. O grupo de trabalho deve ser composto pelos agentes cognitivo, afetivo e metacognitivo, onde cada um possui suas respectivas metas. No levantamento, foram previstas três interfaces: Interface~\emph{web} com o Aluno, notificação do docente (via~\emph{web}) e interface com ambientes de virtuais de aprendizagem.
 
-A hierarquia de metas do SMA Frank~\ref{fig:metas-frank} foi desenvolvida para encontrar quais metas poderiam ser estabelecidas com o cumprimento de outras. Os retângulos em cinza representam metas particionadas.
+A hierarquia de metas do SMA Frank, apresentada na Figura~\ref{fig:metas-frank}, foi desenvolvida para graduar as metas que podem ser atingidas com o cumprimento de outras. Os retângulos em cinza representam metas particionadas.
 
 \begin{sidewaystable}
 	\centering
@@ -348,7 +348,7 @@ A Figura~\ref{fig:conv7-iniciador} apresenta a última conversação, conv7, con
 	\label{fig:conv7-iniciador}
 \end{figure}
 
-Do lado do recebedor~\ref{fig:conv7-recebedor}, ele recebe o request e faz a verificação da existência do aluno. Caso já exista, a conversação é encerrada. Caso contrário, ele entra no estado de espera e em seguida faz a criação do workgroup.
+O lado recebedor, representado na Figura~\ref{fig:conv7-recebedor}, é iniciado com o~\emph{request} e faz a verificação da existência do aluno. Caso já exista, a conversação é encerrada. Caso contrário, ele entra no estado de espera e em seguida faz a criação do workgroup.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/conv7-recebedor.png}
@@ -369,7 +369,7 @@ A solução foi separada devido aos seguintes aspectos:
 	\item Menor Dificuldade - A parte~\emph{web} é responśavel pela interação com o usuário e com o banco de dados. Estes pontos seriam muito mais difíceis de implementar no framework JADE.
 \end{itemize}
 
-A Figura~\ref{fig:arquitetura-frank} apresenta a arquitetura geral da solução, onde é possível identificar as duas aplicações distintas: Frank Web e Frank SMA. A aplicação~\emph{web} faz a interface com o estudante e o docente. A plataforma~\emph{web} comunica-se com o SMA através do agente~\emph{GatewayAgent}, que reencaminha as informações para o agente~\emph{Manager}, responsável pela gerência da plataforma. Este agente consegue comunicar-se com todos os grupos de trabalho registrados na plataforma que podem, ou não, estar na mesmo~\emph{container} que ele. São permitidos inúmeros~\emph{containers} que não necessariamente estarão na mesma máquina do~\emph{container} principal.
+A Figura~\ref{fig:arquitetura-frank} apresenta a arquitetura geral da solução, onde é possível identificar as duas aplicações distintas: Frank Web e Frank SMA. A aplicação~\emph{web} faz a interface com o estudante e o docente. A plataforma~\emph{web} comunica-se com o SMA através do agente~\emph{GatewayAgent}, que reencaminha as informações para o agente~\emph{Manager}, responsável pela gerência da plataforma. Este agente consegue comunicar-se com todos os grupos de trabalho registrados que podem, ou não, estar na mesmo~\emph{container} que ele. São permitidos inúmeros~\emph{containers} que não necessariamente estarão na mesma máquina do~\emph{container} principal.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{images/arquitetura-frank.png}
