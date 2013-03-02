@@ -133,30 +133,31 @@ Esta seção expôs os principais modelos de estudante presentes na literatura d
 
 \section{Sistemas Multiagente}
 
-Esta seção visa introduzir o conceito de SMA. Primeiramente serão apresentados os conceitos e definições iniciais a respeito da Inteligência Artificial (IA) e a teoria relacionada a agentes. Em seguida o trabalho disserta a respeito de arquiteturas relacionadas aos agentes. Só então são apresentados os conceitos de SMA, os aspectos da comunicação neste ambiente e por fim a teoria sobre ontologias.
+Esta seção visa expor os fundamentos acerca de SMA. Primeiramente serão apresentados os conceitos e definições iniciais a respeito da Inteligência Artificial (IA) e a teoria relacionada a agentes. Em seguida o trabalho disserta a respeito das arquiteturas relacionadas aos agentes. Só então são apresentados os conceitos de SMA, os aspectos da comunicação neste ambiente e por fim a teoria sobre ontologias.
 
 \subsection{Conceitos}
 
-A definição de IA pode variar em duas dimensões principais~\cite{poole98}. Usando a definição de sistemas computacionais que agem racionalmente temos:
+Em~\cite{novig95} é possível identificar que a definição de IA foi classificada em quatro grupos. A separação foi feita com base na classificação das definições conforme o seu entendimento de raciocínio, comportamento, performance humana e racionalidade. A racionalidade é entendida como um conceito ideal de inteligência inerente à um sistema. Os quatro grupos que definem IA são:
 
-\begin{quote}
-\emph{Computational Intelligence is the study of the design of intelligent agents.}
-\end{quote}
+\begin{itemize}
+	\item Sistemas que pensam como humanos: Define IA em termos de raciocínio baseado no modelo cognitivo humano. A evidência de programas que podem operar como humanos é feita por meio comparação da entrada, saída e o tempo de execução com padrões humanos.
+	\item Sistemas que pensam racionalmente: Esta definição está relacionada à lógica e procurava desenvolver programas que poderiam resolver qualquer problema descrito em uma linguagem formal com notações lógicas.
+	\item Sistemas que agem como humanos: Os sistemas desta definição são classificados por meio do teste de~\emph{Turing}. O teste basicamente consiste de um entrevistador humano que, após algumas perguntas escritas ao programa, deve identificar se as respostas são ou não de um humano.
+	\item Sistemas que agem racionalmente: Baseada na noção de agente racional, um agente é uma entidade que age e possui controle autônomo, percebe o ambiente, adapta a mudanças e é capaz de comprir outras metas.
+\end{itemize}
 
-Nessa definição, é importante ressaltar que o agente é uma entidade que atua racionalmente, esperando-se que essa racionalidade e outras características o diferencie de simples programas.
+O crescimento dos estudos relacionados a IA permitiu a ramificação em diversas áreas de atuação, possibilitando a resolução de diversos desafios relacionados à aplicações modernas. Uma das áreas de atuação é o auxílio na execução de aplicações que resolvem problemas de alta complexidade. 
 
-Com o crescimento dos estudos relacionados a este campo a inteligência artificial ganhou várias áreas de atuação, permitindo assim a resolução de diversos desafios relacionados à aplicações modernas. Uma das áreas de atuação é o auxílio na execução de aplicações que resolvem problemas de alta complexidade. 
-
-Atualmente várias aplicações podem exigir muito de~\emph{hardwares} mais modestos tornando e inviabilizando o seu o tempo de execução, necessitando-se um maior investimento e consequentemente encarecendo o seu valor. Dessa forma outras abordagems fazem-se necessárias, como a distribução da aplicação em vários computadores que dividem a sua execução. Este é o campo de estudo da Inteligência Artificial Distribuída: Sistemas que são compostos por vários agentes coletivos, ou seja, distribuem o trabalho uns com os outros. Cada agente pode possuir uma capacidade diferente, sendo possível realizar a tarefa de modo paralelo. 
+A complexidade de várias aplicações exige muito de~\emph{hardwares} mais modestos e o seu tempo de execução é inviável, necessitando-se um maior investimento e consequentemente encarecendo o seu valor. Dessa forma outras abordagems fazem-se necessárias, como a distribução da aplicação em vários computadores que dividem a sua execução. Este é o campo de estudo da Inteligência Artificial Moderna segundo a abordagem de Russel e Norvig~\cite{novig95}: Sistemas que são compostos por vários agentes coletivos, ou seja, distribuem o trabalho uns com os outros. Cada agente pode possuir uma capacidade diferente, sendo possível realizar a tarefa de modo paralelo. 
 
 Os agentes são entidades (reais ou virtuais) que funcionam de forma autônoma em um ambiente~\cite{novig95}, ou seja, não necessitam de intervenção humana para realizar processamento. Esse ambiente de funcionamento do agente geralmente contém vários outros agentes e é possível a comunicação entre eles através do ambiente por meio de troca de mensagens.
 
-Na representação do funcionamento de agentes~\ref{fig:agente-basico}, os agentes funcionam de forma a perceber o ambiente em que estão por meio de sensores, fazem análises com base na interação inicial e por fim podem agir sobre o ambiente de forma a modifica-lo por meio de efetuadores.
+A Figura~\ref{fig:agente-basico} representa o funcionamento básico de agentes, existindo em um ambiente e atuando de forma a percebê-lo por meio de sensores, analisando os dados da interação inicial e agindo novamente sobre o ambiente de forma a modificá-lo pelos seus efetuadores.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.75]{images/agente-basico.png}
-	\caption{Esquematização do funcionamento básico de um agente em um ambiente.}
+	\caption{Representação do funcionamento básico do agente em um ambiente.}
 	\label{fig:agente-basico}
 \end{figure}
 
@@ -174,8 +175,6 @@ Como dito anteriormente, agentes estão presentes em um ambiente. O agente não 
 	\item Contínuo: As percepções e ações de um agente modificam-se em um espectro contínuo de valores. Por exemplo, temperatura de um sensor muda de forma contínua.
 \end{itemize}
 
-Em~\ref{lista_agentes} é mostrado alguns exemplos de agentes, apresentando as suas características já discutidas nesse trabalho.
-
 \begin{table}
 	\caption{Listagem de SMA com propriedades de medida de performance, ambiente, atuadores e sensores}
 	\begin{tabular}{|p{3cm} | p{3cm} | p{2cm}| p{3cm} | p{3cm} |}
@@ -192,28 +191,27 @@ Em~\ref{lista_agentes} é mostrado alguns exemplos de agentes, apresentando as s
 	\label{lista_agentes}
 \end{table}
  
-A primeira linha da tabela~\ref{lista_agentes} apresenta um exemplo de agente atuando em um veículo como um sensor de estacionamento. Responsável por auxiliar o motorista no ato de estacionar o carro, o seu ambiente é da classe físico (considerando o carro e o ambiente onde está o carro). Seu sensor de proximidade é a percepção do ambiente e, caso detecte que está próximo de um obstáculo, pode atuar nos freios dos carros diminuindo a velocidade e evitando colisões. Avarias no carro podem indicar um mal funcionamento do sensor.
+A Tabela~\ref{lista_agentes} mostra alguns exemplos de agentes, apresentando as suas características em termos de possibilidade de medida de performance, possíveis ambientes, atuadores e sensores. A primeira linha da Tabela~\ref{lista_agentes} apresenta um exemplo de agente atuando em um veículo como um sensor de estacionamento. Responsável por auxiliar o motorista no ato de estacionar o carro, o seu ambiente é da classe físico (considerando o carro e o ambiente onde está o carro). Seu sensor de proximidade é a percepção do ambiente e, caso detecte que está próximo de um obstáculo, pode atuar nos freios dos carros diminuindo a velocidade e evitando colisões. Avarias no carro podem indicar um mal funcionamento do sensor.
 
-A segunda linha da tabela é apresentado o exemplo de agente atuando em um jogo avulso. Esse ambiente é dito dinâmico, pois a cada jogada de um oponente (real ou não), o agente deve analisar a jogada feita pelo seu oponente, irá calcular sua próxima jogada e a realizará. O objetivo principal do agente é a vitória. O ambiente que o agente atua é um software e o seu atuador é um algum mecanismo que permite que ele realize a jogada. O sensor é o mecanismo no qual o agente irá perceber a jogada realizada pelo oponente.
+A segunda linha da Tabela~\ref{lista_agentes} é apresentado o exemplo de agente atuando em um jogo avulso. Esse ambiente é dito dinâmico, pois a cada jogada de um oponente (real ou não), o agente deve analisar a jogada feita pelo seu oponente, irá calcular sua próxima jogada e a realizará. O objetivo principal do agente é a vitória. O ambiente que o agente atua é um software e o seu atuador é um algum mecanismo que permite que ele realize a jogada. O sensor é o mecanismo no qual o agente irá perceber a jogada realizada pelo oponente.
 
-Por fim, a última linha da tabela~\ref{lista_agentes} expõe um exemplo de um agente médico atuando em um ambiente estático: Um paciente. Esse ambiente é classificado como estático por não ser alterado pelo agente nesse exemplo, porém é possível ser diferente em outras situações. O objetivo principal é monitorar a saúde do paciente, logo a medida de performance será a aproximação ou não do diagnóstico médico. Seu atuador não será diretamente no ambiente (corpo humano), será na forma de relatórios médicos e seus sensores podem variar de acordo com a doença a ser monitorada.
+Por fim, a última linha da Tabela~\ref{lista_agentes} expõe um exemplo de um agente médico atuando em um ambiente estático: Um paciente. Esse ambiente é classificado como estático por não ser alterado pelo agente nesse exemplo, porém é possível ser diferente em outras situações. O objetivo principal é monitorar a saúde do paciente, logo a medida de performance será a aproximação ou não do diagnóstico médico. Seu atuador não será diretamente no ambiente (corpo humano), será na forma de relatórios médicos e seus sensores podem variar de acordo com a doença a ser monitorada.
 
-Os agentes possuem características inerentes à abordagem~\cite{wooldridge04}. Os agentes possuem os aspectos de~\emph{reatividade},~\emph{proatividade} e~\emph{habilidade social}. O conceito de reatividade  está ligado com o agente perceber o ambiente e reagir. Proatividade é a característica do agente tomar a iniciativa e agir sem a necessidade de nenhum estímulo. Habilidade social é a capacidade de interação com outros agentes.
+Segundo~\cite{wooldridge04} é possível separar as principais noções dos agentes em dois grupos. O primeiro, chamado de noção fraca, compreende as características de reatividade, proatividade e habilidade social. O conceito de reatividade está ligado com a percepção do ambiente e a reação no mesmo. Proatividade é a característica do agente tomar a iniciativa e agir sem a necessidade de nenhum estímulo. Habilidade social é a capacidade de interação com outros agentes. Já a noção forte de agente envolve os seguintes aspectos:
 
-Os agentes possuem também os seguintes aspectos: Mobilidade, veracidade, benevolência, racionalidade e cooperação. As definições são:
 \begin{itemize}
-	\item Mobilidade: O Agente deve pode mover-se no ambiente, por exemplo, em uma rede.
-	\item Veracidade: Agente não comunica informações falsas.
-	\item Benevolência: Agente ajudará os outros.
-	\item Racionalidade: O agente não irá agir de forma a impedir a realização de seus objetivos.
-	\item Cooperação: O agente coopera com o usuário.
+	\item Mobilidade: Possibilidade de movimentação pelo ambiente, por exemplo, transferência em uma rede.
+	\item Veracidade: O agente não transmite informações falsas.
+	\item Benevolência: Capacidade de ajudar os outros agentes.
+	\item Racionalidade: A ação do agente não impedirá a realização dos seus objetivos.
+	\item Cooperação: Cooperação com o usuário.
 \end{itemize}
 
-\subsection{Arquitetura de agentes}
+\subsection{Arquiteturas de agentes}
 
 A arquitetura de agentes varia de acordo com a complexidade da sua autonomia, ou seja, com a capacidade de reagir aos estímulos do ambiente. Conforme verificado em~\cite{novig95}, os tipos de arquitetura são: orientadas à tabela, reflexiva simples, reflexiva baseado em modelo, baseada em objetivo, baseada em utilidade.
 
-A primeira arquitetura a ser explorada é o agente orientado à tabelas. Todas as ações dos agentes dessa arquitetura são conhecidas e estão gravadas em uma tabela. Assim, quando o agente receber o estímulo ele já terá a ação a ser tomada previamente gravada em sua memória. Logo para construir esse tipo de agente, fica claro que além de saber todas percepções possívels, será necessário definir ações apropriadas para todas. Isso levará a tabelas muito complexas e o tamanho pode facilmente passar a ordem de milhões dependendo do número de entradas.
+A primeira arquitetura a ser explorada é o agente orientado à tabelas. Todas as ações dos agentes são conhecidas e estão gravadas em uma tabela. Assim, quando o agente receber o estímulo ele já terá a ação a ser tomada previamente gravada em sua memória. Logo para construir esse tipo de agente, fica claro que além de saber todas percepções possívels, será necessário definir ações apropriadas para todas. Isso levará a tabelas muito complexas e o tamanho pode facilmente passar a ordem de milhões dependendo do número de entradas.
 
 A arquitetura reflexiva simples é um dos tipos mais simples de agente. Nele, o agente seleciona a ação com base unicamente na percepção atual, desconsiderando assim uma grande tabela de decisões. A decisão é tomada com base de regras condição-ação: Se uma condição ocorrer, uma ação será tomada. Por exemplo, vamos supor um agente médico que determina o diagnóstico de uma doença no paciente caso exista alguma anomalia no organismo (Por exemplo, paciente com febre). Uma condição-ação poderia ser:
 
@@ -221,15 +219,15 @@ if anomalia-organismo then diagnóstico-médico
 
 Esse tipo de agente é bastante simples, o que é uma vantagem comparado à arquitetura de tabela. Porém, essa abordagem requer um ambiente totalmente observável, visto que esse tipo de agente possui uma inteligência bastante limitada. No exemplo do agente médico existem diversas maneiras de se detectar uma anomalia no organismo do paciente, seria necessário conhecer todas as formas para usarmos uma abordagem reativa simples.
 
-A arquitetura baseada em modelos funciona de maneira similar a anterior. Nessa abordagem, é levado em conta a parte do ambiente que não é visível neste momento. E para saber o ``momento atual'' de um agente, é necessário guardar a informação de estado consigo. Para atualizar o estado do agente, é necessário conhecer como o mundo desenvolve-se independente do agente (no caso do exemplo, como o organismo funciona) e é necessário saber as ações dos agentes no ambiente. O agente que usa esse tipo de abordagem é chamado de agente baseado em modelo.
+A arquitetura baseada em modelos funciona de maneira similar a anterior. Nessa abordagem, é levado em conta a parte do ambiente que não é visível neste momento. E para saber o ``momento atual'' de um agente, é necessário guardar a informação de estado consigo. Para atualizar o estado do agente, é necessário conhecer como o mundo desenvolve-se independente do agente (no caso do exemplo, como o organismo funciona) e é necessário saber as ações dos agentes no ambiente. Esses conhecimentos acerca do ambiente são definidos como modelo de mundo. Do ponto de vista do agente, essa abordagem é considerada como baseada em modelo.
 
-Na arquitetura baseada em objetivo, as ações do agente são tomadas apenas se o aproximam de alcançar um objetivo. Para isso, será necessário algo além do estado atual do ambiente: Será necessário informações do objetivo a ser atingido. Assim o agente pode combinar as informações do estado e o objetivo para determinar se deve ou não agir sobre o ambiente. Essa arquitetura porém é obviamente mais complexa e de certa forma ineficiente. Porém ela permite uma maior flexibilização das ações em determinados ambientes, visto que suas decisões são representadas de forma explícita e podem ser modificadas. É interessante notar que esse tipo de arquitetura não trata ações com objetivos conflitantes.
+Na arquitetura baseada em objetivo, as ações do agente são executadas apenas se o aproximam de alcançar um objetivo. Para isso, será necessário algo além do estado atual do ambiente: Será necessário informações do objetivo a ser atingido. Assim o agente pode combinar as informações do estado e o objetivo para determinar se deve ou não agir sobre o ambiente. Este modelo permite uma maior flexibilização das ações em determinados ambientes, visto que suas decisões são representadas de forma explícita e podem ser modificadas, com a consequência de aumento da complexidade desta abordagem. É interessante notar que esse tipo de arquitetura não trata ações com objetivos conflitantes.
 
-E por fim, a arquitetura baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, resilientes e rápidas do que as outras. A capacidade de avaliação do agente é chamada de função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
+Por fim, a arquitetura baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, resilientes e rápidas do que as outras. A capacidade de avaliação do agente é chamada de função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
 
 \subsection{Definição de Sistemas Multiagente}
 
-SMAs são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. Um agente possui um objeto que, normalmente, é distinto dos objetivos de outros agentes e pode ou não cooperar com outros agentes para a realização de uma tarefa.
+Os SMA são sistemas compostos por vários agentes capazes de se comunicar, possuindo uma linguagem de alto nível para isso. Um agente possui um objeto que, normalmente, é distinto dos objetivos de outros agentes e pode ou não cooperar com outros agentes para a realização de uma tarefa.
 
 Em~\cite{sarmento11}, podemos encontrar as seguintes características principais em ambientes multiagente:
 \begin{itemize}
@@ -240,11 +238,9 @@ Em~\cite{sarmento11}, podemos encontrar as seguintes características principais
 
 É trivial imaginar que um SMA é designado para a solução de problemas de forma distribuída, onde o problema é distribuído entre os agentes que, juntos, trabalham concorrentemente para a resolução deste problema, podendo ou não trabalhar de forma cooperativa.
 
-É importate notar a distinção de conceitos como~\emph{cooperação} na literatura de SMA. Em~\cite{wooldridge04}, existem duas principais diferenças do conceito entre as duas abordagens.
+É importate notar a distinção de conceitos como cooperação na literatura de SMA. Em~\cite{wooldridge04}, existem duas principais diferenças do conceito entre as duas abordagens.
 
-A primeira delas é que agentes são designados de forma diferente, com objetivos diferentes. Em um ambiente com vários agentes, eles devem trabalhar estratégicamente para alcançar seus objetos. A possibilidade de agentes não cooperarem é perfeitamente plausível.
-
-A segunda diferença está no fato do agente agir de forma autônoma, ou seja, tomar suas próprias decisões em tempo de execução sem interferências humanas ou de outros agentes. Logo, um ecossistema de agentes deve ser capaz de coordenar dinâmicamente suas ações, cooperando com outros agentes para atingir os objetivos. Em aplicações distribuídas, esses comportamentos já são desenhados durante o planejamento do software.
+A primeira diferença é a designação distinta dos objetivos dos agentes. Em um ambiente com vários agentes, eles devem trabalhar estratégicamente para alcançar seus objetos. A possibilidade de agentes não cooperarem é perfeitamente plausível. A segunda diferença está na ação de forma autônoma, ou seja, tomar suas próprias decisões em tempo de execução sem interferências humanas ou de outros agentes. Logo, um ecossistema de agentes deve ser capaz de coordenar dinâmicamente suas ações, cooperando com outros agentes para atingir os objetivos. Em aplicações distribuídas, esses comportamentos já são desenhados durante o planejamento do software.
 
 A forma de agentes resolverem problemas foi baseada na técnica distribuição cooperativa de resolução de problemas -~\emph{cooperative distributed problem solving} (CDPS). Em~\cite{durfee89}, a técnica CDPS consiste de uma rede de baixo acoplamento provida de sofisticados nós resolvedores de problemas que precisam cooperar entre si, pois nenhum deles possui recursos, informações e~\emph{expertise} suficientes para resolver algum problema sozinho. Cada nó possui uma~\emph{expertise} diferente que pode resolver parte do problema.
 
@@ -254,9 +250,9 @@ Em um cenário mais realista (e de maior enfoque dos estudos de SMA), agentes po
 
 O processo CDPS pode ser divido em três etapas:
 \begin{itemize}
-	\item decomposição do problema.
-	\item solução do subproblema.
-	\item integração da solução.
+	\item decomposição do problema - o problema é quebrado em instâncias menores e dividido entre os agentes. Esses subproblemas podem ser quebrados em diversas subpartes, permitindo uma maior decomposição e consequentemente um maior número de agentes trabalhando na resolução.
+	\item solução do subproblema - os subproblemas são resolvidos pelos agentes. Isso pode significar troca de informações entre os agentes, por exemplo, dos que resolveram as suas instâncias compartilhando informações com outros agentes.
+	\item integração da solução - as soluções dos subproblemas são integradas em uma resolução completa do problema original.
 \end{itemize}
 
 Com uma solução compartilhada de resolução de problemas, a arquitetura SMA mostra-se bastante robusta neste quesito. É necessário porém saber dos detalhes da comunicação entre os agentes, a forma de envio das mensagens, as suas linguagens, bem como outras particularidades.
@@ -269,7 +265,7 @@ Em uma aplicação normal (Desktop ou Web), a comunicação entre objetos pode s
 
 Esse cenário de comunicação é diferente em um ambiente SMA. Supondo dois agentes~\emph{a} e~\emph{b}, onde o agente~\emph{a} tem a capacidade de executar a ação $\alpha$. O agente~\emph{b} não poderá invocar diretamente o método que corresponde à ação $\alpha$, visto que os agentes são autônomos e independentes: Cada um tem somente tem total controle sobre suas ações e seus estados. O agente precisará enviar a solicitação da execução da ação $\alpha$ por meio de mensagem. Isso porém não garante que o agente~\emph{a} executará esta ação, pois pode não ser do seu interesse. Os agentes podem também influênciar o comportamento de outros agentes, alterando seu estado interno para a execução de ações e cooperando para o cumprimento do objetivo de outros agentes.
 
-A comunicação dos agentes é baseada na teoria dos atos de fala (do inglês~\emph{Speech act theory}) e trata a comunicação como uma ação. A teoria dos atos de fala, publicada em 1962~\cite{austin62} por John Austin, onde ele percebe que certas expressões de linguagem natural, ou atos de fala, possuem a característica de realizar ação em um interlocutor, causando assim uma mudança de de estado da mesma forma que uma ação física. Logo, as expressões descrevem as ações por meio de desejos, habilidades e crenças.
+A comunicação dos agentes é baseada na teoria dos atos de fala (\emph{Speech act theory}) e trata a comunicação como uma ação. A teoria dos atos de fala, publicada em 1962~\cite{austin62} por John Austin, onde ele percebe que certas expressões de linguagem natural, ou atos de fala, possuem a característica de realizar ação em um interlocutor, causando assim uma mudança de de estado da mesma forma que uma ação física. Logo, as expressões descrevem as ações por meio de desejos, habilidades e crenças.
 
 Em~\cite{verschueren09}, a teoria dos atos de fala possuem duas características:
 \begin{itemize}
@@ -277,7 +273,7 @@ Em~\cite{verschueren09}, a teoria dos atos de fala possuem duas características
 	\item Expressões de todos os tipos podem ser considerados como atos, pois mudam o mundo de alguma forma.
 \end{itemize}
 
-Posteriormente o trabalho de John Searle~\cite{searle69}, relacionado ao de Austin, separa uma ação de um ato entre orador(~\emph{speaker}) e ouvinte(~\emph{hearer}) identifinca propriedades e conduções que um discurso deve conter para realizar ações sucedidas. Além disso, ele classifica alguns atos de discursos em 5 classes:
+Posteriormente o trabalho de John Searle~\cite{searle69}, relacionado ao de Austin, separa uma ação de um ato entre orador(\emph{speaker}) e ouvinte(\emph{hearer}) identifinca propriedades e conduções que um discurso deve conter para realizar ações sucedidas. Além disso, ele classifica alguns atos de discursos em 5 classes:
 \begin{itemize}
 	\item Representativas - Representa o ato de um orador representar uma verdade para o ouvinte. Pode ser entendido como uma ação de informar(\emph{inform}).
 	\item Diretivas - Tentativa do orador de fazer algum ouvinte realizar alguma ação por meio do seu ato.. Pode ser entendido como uma ação de requisição(\emph{request}).
@@ -298,7 +294,7 @@ Da mesma forma que a teoria dos atos de fala influênciou na arquitetura da comu
 
 A linguagem KQML define um protocolo para comunicação de agentes, onde cada mensagem tem um enunciado performativo (~\emph{performative}), que varia com o seu objetivo, e em seguida os parâmetros da mensagem. O KQML define vários enunciados performativos que distinguem-se pelo objetivo da mensagem, sendo dividas em três categorias: Discursivas, intervenção/mecânica e facilitação e~\emph{networking}. Por exemplo, uma mensagem com o tipo performativo~\emph{ask-one} indica que o agente remetente A deseja saber uma resposta do agente B sobre o conteúdo da mensagem. Em~\cite{preece1997}, é possível verificar que a última versão da linguagem define mais de trinta enunciados performativos.
 
-Os maioria dos parâmetros são opcionais, sendo os mais importantes: \emph{content} e ~\emph{receiver}. A tabela~\ref{parametros_kqml} lista os principais parâmetros em uma mensagem nesta linguagem, bem como seu significado.
+Os maioria dos parâmetros são opcionais, sendo os mais importantes: \emph{content} e ~\emph{receiver}. A Tabela~\ref{parametros_kqml} lista os principais parâmetros em uma mensagem nesta linguagem, bem como seu significado.
 
 \begin{table}
 	\caption{Listagem de atributos de uma mensagem em KQML}
@@ -452,7 +448,7 @@ As performativas~\emph{request} e~\emph{inform} consideradas principais pela esp
 
 \subsection{Ontologias}
 
-Ontologia é um ramo da Filosofia que dedica-se a estudar e representar a natureza do ser, existência ou realidade. É uma formalização dos conceitos e relacionamentos que podem existir em um determinado universo. Para a Inteligência Artificial, é tudo aquilo que pode ser representado. Em o autor~\cite{novig95}, a representação de conceitos e objetos pode ser entendida como Engenharia Ontológica:
+Ontologia é um ramo da Filosofia que dedica-se a estudar e representar a natureza do ser, existência ou realidade. É uma formalização dos conceitos e relacionamentos que podem existir em um determinado universo. Segundo~\cite{novig95}, a representação de conceitos e objetos pode ser entendida como Engenharia Ontológica:
 
 \begin{quote}
 \emph{...concentrating on general concepts-such as Actions, Time, Physical Objects, and Beliefs - that occur in many different domains. Representing these abstract concepts is sometimes called ontological engineering.}
@@ -467,13 +463,13 @@ A possibilidade de representação de conhecimento por meio de ontologias é bas
 	\label{fig:arvore-ontologia}
 \end{figure}
 
-Em~\ref{fig:arvore-ontologia}, é possível observar a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
+A Figura~\ref{fig:arvore-ontologia} representa a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
 
 Em um ambiente SMA além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, dentre outros exemplos. Em outras palavras, dois agentes podem comunicar-se usando a mesma ontologia.
 
 Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A mais comum delas é a~\emph{eXtensible Markup Language} (XML), uma linguagem de marcação que organiza os dados de forma hierarquizada.
 
-O exemplo~\ref{code:exemplo-xml} está descrito escrito na linguagem XML que representa o domínio de países. Nele podemos ver a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no trecho~\ref{code:exemplo-xml}, porém sem alteração de semântica.
+O Exemplo de Código~\ref{code:exemplo-xml} está descrito escrito na linguagem XML e representa o domínio de países. Nele podemos ver a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no trecho~\ref{code:exemplo-xml}, porém sem alteração de semântica.
 
 
 \begin{lstlisting}[language=xml,label=code:exemplo-xml,caption=Exemplo de código XML representando uma ontologia simples de cidades.]

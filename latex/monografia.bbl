@@ -92,12 +92,6 @@ Germana~Menezes da~Nóbrega.
   sistema multi-agente para identificação de estilos de aprendizagem.
 \newblock Outubro 2011.
 
-\bibitem{de2009}
-Gelson Luiz~Daldegan de~P{\'a}dua.
-\newblock A epistemologia gen{\'e}tica de jean piaget.
-\newblock {\em Revista FACEVV| 1{\textordmasculine} Semestre de}, (2):22--35,
-  2009.
-
 \bibitem{durfee89}
 E.H. Durfee, V.R. Lesser, and D.D. Corkill.
 \newblock Trends in cooperative distributed problem solving.
@@ -129,6 +123,13 @@ Cláudio Geyer, Adriana~Soares Pereira, Alessandra Rodrigues, Débora~Nice
 \newblock In {\em Anais do Simpósio Brasileiro de Informática na Educação},
   volume~1, pages 293--299, 2001.
 
+\bibitem{helbing11}
+Dirk Helbing and Stefano Balietti.
+\newblock How to do agent-based simulations in the future: From modeling social
+  mechanisms to emergent phenomena and interactive systems design.
+\newblock Technical report, Tech. Rep. 11-06-024, Santa Fe Institute, NM, USA
+  (June 2011), santa Fe Working Paper, 2011.
+
 \bibitem{honey2000}
 Peter Honey and Alan Mumford.
 \newblock {\em The learning styles helper's guide}.
@@ -151,17 +152,6 @@ Andreia~Rosangela M{\"u}hlbeier and Patricia~Mariotto Mozzaquatro.
   modalidades presenciais ea dist{\^a}ncia.
 \newblock {\em Revista Brasileira de Inform{\'a}tica na Educa{\c{c}}{\~a}o},
   20(1):132, 2012.
-
-\bibitem{penterich2005ambientes}
-Eduardo PENTERICH.
-\newblock Ambientes virtuais de aprendizagem.
-\newblock {\em Sala de Aula e Tecnologias. S{\~a}o Paulo: Editora da
-  Universidade Metodista de S{\~a}o Paulo}, 2005.
-
-\bibitem{poole98}
-David Poole, Alan Mackworth, and Randy Goebel.
-\newblock {\em Computational Intelligence: A Logical Approach}.
-\newblock Oxford University Press, 1998.
 
 \bibitem{preece1997}
 A.~Preece.

@@ -13,51 +13,50 @@ Warning--to sort, need author or key in di2012
 Warning--to sort, need author or key in seamSite
 Warning--empty journal in bativa2011
 Warning--empty note in editalFrank
-Warning--there's a number but no volume in de2009
 Warning--can't use both volume and number fields in geyer2001semeai
 Warning--can't use both volume and number fields in rabelo2010identificacao
 Warning--there's a number but no series in novig95
 Warning--can't use both volume and number fields in soaresagente
 Warning--there's a number but no series in wooldridge04
-You've used 39 entries,
+You've used 37 entries,
             2118 wiz_defined-function locations,
-            700 strings with 9975 characters,
-and the built_in function-call counts, 10278 in all, are:
-= -- 978
-> -- 446
+            689 strings with 9800 characters,
+and the built_in function-call counts, 9741 in all, are:
+= -- 928
+> -- 427
 < -- 7
-+ -- 189
-- -- 144
-* -- 608
-:= -- 1688
-add.period$ -- 121
-call.type$ -- 39
-change.case$ -- 178
++ -- 180
+- -- 138
+* -- 573
+:= -- 1598
+add.period$ -- 115
+call.type$ -- 37
+change.case$ -- 171
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 419
-empty$ -- 901
-format.name$ -- 144
-if$ -- 2186
+cite$ -- 53
+duplicate$ -- 394
+empty$ -- 852
+format.name$ -- 138
+if$ -- 2076
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 40
-newline$ -- 197
-num.names$ -- 60
-pop$ -- 285
+int.to.str$ -- 37
+missing$ -- 36
+newline$ -- 187
+num.names$ -- 56
+pop$ -- 272
 preamble$ -- 1
-purify$ -- 150
+purify$ -- 143
 quote$ -- 0
-skip$ -- 271
+skip$ -- 259
 stack$ -- 0
-substring$ -- 390
-swap$ -- 66
+substring$ -- 360
+swap$ -- 63
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 130
-warning$ -- 17
-while$ -- 77
-width$ -- 41
-write$ -- 403
-(There were 17 warnings)
+type$ -- 124
+warning$ -- 16
+while$ -- 71
+width$ -- 39
+write$ -- 383
+(There were 16 warnings)
