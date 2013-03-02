@@ -469,7 +469,7 @@ Em um ambiente SMA além de especificar uma linguagem para comunicação, dois a
 
 Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A mais comum delas é a~\emph{eXtensible Markup Language} (XML), uma linguagem de marcação que organiza os dados de forma hierarquizada.
 
-O Exemplo de Código~\ref{code:exemplo-xml} está descrito escrito na linguagem XML e representa o domínio de países. Nele podemos ver a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no trecho~\ref{code:exemplo-xml}, porém sem alteração de semântica.
+A Listagem~\ref{code:exemplo-xml} descreve uma ontologia de domínio de países escrita na linguagem XML. Nela observa-se a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no trecho~\ref{code:exemplo-xml}, porém sem alteração de semântica.
 
 
 \begin{lstlisting}[language=xml,label=code:exemplo-xml,caption=Representação uma ontologia simples de cidades.]
@@ -623,7 +623,7 @@ Quando o agente recebe uma mensagem, ele automaticamente compara com as suas con
 
 Neste passo, é criado o Diagrama de Comunicação. Nele, as conversações são montadas por meio do mesmo autômato de estados finitos, utilizado na fase análise, passo~\emph{refinar regras}. Os estados do aumtômato são as ações que devem ser realizadas pelo agente. As transições de estado são as conversações que são feitas pelo agente.
 
-O Exemplo de Código~\ref{code:sintaxe-conversation} representa a sintaxe usada na conversação de agentes é uma expressão que é definida por meio das mensagens recebidas, condições, ações e mensagens transmitidas. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
+A Listagem~\ref{code:sintaxe-conversation} representa a sintaxe usada na conversação de agentes é uma expressão que é definida por meio das mensagens recebidas, condições, ações e mensagens transmitidas. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
 
 \begin{lstlisting}[label=code:sintaxe-conversation,caption=Sintaxe da conversação entre dois agentes.]
 	rec-mess(args1) [cond] / action ^ trans-mess(args2)
@@ -674,7 +674,7 @@ O~\emph{AgentTool} é uma ferramenta que dá suporte à metodologia MASE para a 
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.65]{images/interface-agent-tool.png}
+	\includegraphics[scale=0.4]{images/interface-agent-tool.png}
 	\caption{Interface da ferramenta~\emph{AgentTool}.}
 	\label{fig:interface-agent-tool}
 \end{figure}
@@ -685,20 +685,20 @@ A medida do progresso da metodologia MASE, algumas abas serão habilitadas confo
 
 \section{Estudos de Ferramentas e Tecnologias Relacionadas}
 
-Nesta seção estão reunidos as tecnologias que auxiliares ao desenvolvimento do SMA. A primeira seção explica alguns diagramas que são definidos na~\emph{Unified Modeling Language}, necessários para entender os passos da~\emph{Multiagent System Engineering}.
+Nesta seção estão reunidos as tecnologias que auxiliares ao desenvolvimento do SMA. A primeira seção explica alguns diagramas que são definidos na~\emph{Unified Modeling Language} (UML), necessários para entender os passos do MASE.
  
 Em seguida é explicado os conceitos relacionados ao~\emph{middleware} JADE, bem como a sua arquitetura, o funcionamento dos agentes e os agentes que possuem interface gráfica.
 
 Por fim, esta seção disserta a respeito da ferramenta JBoss Seam, responsável por interligar os principais~\emph{frameworks} JAVA e facilitar o desenvolvimento de aplicações Web dinâmicas.
 
-\subsection{Unified Modeling Language}
+\subsection{UML}
 
 A Linguagem Unificada de Modelagem,~\emph{Unified Modeling Language} (UML) é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens, objetivando o entendimento dos artefatos de forma rápida e clara e resultando em uma semântica para o projeto em questão. Em~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
 
 O UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
 A linguagem ajuda o entendimento de como o software foi projetado, como ocorre a comunicação entre seus objetos, como suas classes são organizadas, quais são os atores que são envolvidos na utilização do software, dentre outras possibilidades de representação.
 
-É possível separar o uso do UML de três formas distintas~\cite{fowler04}, diferindo entre as modelagens utilizadas e o objetivo de uso. As três formas são: Rascunho, planta de software e como linguagem de programação. 
+Segundo~\cite{fowler04} é possível separar o uso do UML de três formas distintas de modelagem conforme o objetivo de uso: Rascunho, planta de software e como linguagem de programação. 
 
 A utilização como rascunho é utilizada para facilitar a comunicação entre as pessoas envolvidas no projeto, sejam desenvolvedores discutindo funcionalidades do software ou gestores explicando funcionalidades em alto nível. O objetivo neste uso é a comunicação de alguns aspectos do sistema de forma rápida, sem a necessidade de formalizar artefatos para o projeto.
 
@@ -708,23 +708,22 @@ No uso como linguagem de programação, o UML é utilizado para geração de có
 
 \subsubsection{Diagramas UML}
 
-O UML 2.0 descreve 13 tipos de diagramas~\ref{fig:categorias-diagramas} que podem ser categorizados como estruturais e comportamentais
+O UML descreve 13 tipos de diagramas, conforme a Figura~\ref{fig:categorias-diagramas}, os quais podem ser categorizados como estruturais e comportamentais. Apesar da grande quantidade diagramas envolvidos no UML, de acordo com~\cite{larman08}, a maioria dos processos de desenvolvimento de software utilizam-se de poucos modelos devido à maior significância de alguns. A metodologia de desenvolvimento de SMA utiliza-se apenas dos seguintes diagramas:
+
+\begin{itemize}
+	\item Diagrama de Caso de uso;
+	\item Diagrama de Sequência.
+\end{itemize}
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.75]{images/categorias-diagramas.png}
-	\caption{Categorização dos Diagramas UML 2.0. Adaptado de~\cite{fowler04}.}
+	\caption{Categorização dos Diagramas UML 2.0~\cite{fowler04}.}
 	\label{fig:categorias-diagramas}
 \end{figure}
 
-Apesar da grande quantidade diagramas envolvidos no UML, nem todos os processos de desenvolvimentos de software utilizam todos eles. Em~\cite{larman08}, a grande extensão de diagramas UML não é usada pela maioria das metodologias. A metodologia de desenvolvimento de SMA utiliza-se apenas dos seguintes diagramas:
-
-\begin{itemize}
-	\item Diagrama de Caso de uso
-	\item Diagrama de Sequência
-\end{itemize}
-
 \paragraph{Diagrama de Caso de Uso}
+
 Casos de uso são relatos textuais que são utilizados para descobrir e descrever os requisitos do sistema. Consiste da descrição de como um ator utiliza uma funcionalidade do sistema para atingir algum objetivo relacionado. Em~\cite{larman08}, os casos de uso devem ser prioritariamente desenvolvidos de forma textual e o seu respectivo diagrama deve ser desenvolvido de forma secundária, somente para ilustrar o relato textual.
 
 Um dos objetivos do caso de uso é a facilidade do levantamento dos requisitos, tanto para os analistas de um sistema, quanto para os clientes envolvidos. A definição de uma modelagem em comum facilidade entre as partes faz do caso de uso uma boa maneira de simplificar o entendimento do comportamento do sistema~\cite{larman08}, bem como envolver todos as partes interessadas do sistema(~\emph{stakeholders}) na construção do mesmo. Em~\cite{cockburn01}, o caso de uso é um contrato de como será o comportamento do sistema. Este contrato será feito por meio dos atores que existirão, da sua interação com o sistema, bem como os cenários existentes.
@@ -738,7 +737,7 @@ Duas definições fazem-se necessárias para o entendimento do caso de uso. A pr
 
 A segunda definição envolvida é a de cenário. Um cenário é uma sequência de interações entre os atores e o sistema. Os cenários são separados por ações de interesses de atores. Logo o caso de uso pode ser considerado como um conjunto de cenários de interações de atores com o sistema.
 
-Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema, bem como o seu comportamento. Existem três formas de se escrever um caso de uso, diferindo em seu nível de formalidade e formatos: Resumido, informal e completo. Este trabalho usará o nível de caso de uso completo, devido ao fato de ser estruturado e mostrar mais detalhes. Os casos de uso são estruturados de diversas formas Em a literatura, sendo a mais famosa~\cite{larman08} a estrutura utilizada por Alistar Cockburn~\cite{cockburn01} e detalhada neste trabalho.~\ref{tabela:topicos_uc}
+Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema, bem como o seu comportamento. Existem três formas de se escrever um caso de uso, diferindo em seu nível de formalidade e formatos: Resumido, informal e completo. Este trabalho usará o nível de caso de uso completo, devido ao nível de detalhe de sua estruturação. Os casos de uso são estruturados de diversas formas. De acordo com~\cite{larman08}, o padrão de estruturação mais adotado foi desenvolvido por Alistar Cockburn~\cite{cockburn01}, descrito na Tabela~\ref{tabela:topicos_uc}.
 
 \begin{table}
 	\caption{Estruturação Detalhada de Caso de Uso}
@@ -774,16 +773,17 @@ Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema
 	\label{tabela:topicos_uc}
 \end{table}
 
-A diagramação do caso de uso por UML é uma forma de representação do sistema, mostrando fronteiras do sistema, comunicação e comportamento entre os atores. Em~\ref{fig:diagrama-uml} é mostrado a sugestão de diagramação do caso de uso, propondo forma de representação de atores, casos de uso e atores auxiliares.
+A diagramação do caso de uso por UML é uma forma de representação do sistema, mostrando fronteiras do sistema, comunicação e comportamento entre os atores. A Figura~\ref{fig:diagrama-uml} representa a sugestão de diagramação visual do caso de uso, propondo forma de representação de atores, casos de uso e atores auxiliares.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.75]{images/exemplo-uml.png}
-	\caption{Sugestões de notação de caso de uso proposto por ~\cite{larman08}}
+	\caption{Sugestões de notação de caso de uso proposto por~\cite{larman08}}
 	\label{fig:diagrama-uml}
 \end{figure}
 
 \paragraph{Diagrama de Sequência}
+
 O Diagrama de Sequência é um documento criado para ilustrar os eventos descritos em um caso de uso de forma sequencial e temporal, mostrando a interação de atores externos ao sistema e os eventos que eles geram durante essa interação. A UML possui uma notação específica para este diagrama, onde todos os elementos são representados.
 
 Neste diagrama, são representados para cada cenário do caso de uso os eventos que os atores geram, bem como a ordem da sua interação. No diagrama os atores são representados na parte superior (com a mesma notação do diagrama de caso de uso). Abaixo dos atores é apresentada a linha de tempo, crescendo de cima para baixo. 
@@ -792,7 +792,7 @@ Durante a interação do ator com o sistema, eventos de sistema são gerados e i
 
 A nomenclatura dos eventos deve sempre iniciar com um verbo, podendo ser seguida de um substantivo. Além disso, deve-se sempre expressar a nomenclatura em níveis genéricos verbais, nunca detalhando a funcionalidade do sistema.
 
-Na ilustração da notação de diagramas de sequência~\ref{fig:exemplo-diagrama-sequencia} é possível identificar a interação entre um ator e uma entidade do sistema. É fácil identificar que os eventos estão ocorrendo de forma ordenada de cima para baixo.
+A Figura~\ref{fig:exemplo-diagrama-sequencia} ilustra a notação de diagramas de sequência, onde é possível identificar a interação entre um ator e uma entidade do sistema. É fácil notar que os eventos estão ocorrendo de forma ordenada de cima para baixo.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.75]{images/exemplo-diagrama-sequencia.png}
@@ -809,11 +809,11 @@ A importância do desenho de um diagrama de sequência está no fato de detalhar
 O diagrama de sequência geralmente está relacionado com o caso de uso, primeiramente pelo fato de descrever um cenário de caso de uso, mas também pelo fato de o caso de uso conter todos os detalhes do cenário. Ele apenas deixará claro a interação entre os atores e os eventos derivados dessa interação.
 
 
-\subsection{Java Agent Development Framework}
+\subsection{Ferramentas de SMA}
 
-JADE é um~\emph{middleware} desenvolvido em 1988 pela Telecom Italia, posteriormente (2000) tornando-se em um projeto open source. Seu desenvolvimento de baixo acoplamento permite que seja possível integrar várias bibliotecas auxiliares (~\emph{addons}) para facilitar o desenvolvimento de aplicações.
+O~\emph{Java Agent Development Framework} (JADE) é um~\emph{middleware} criado para facilitar o desenvolvimento de SMA. Desenvolvido inicialmente pela Telecom Italia e desde 2000 é um projeto open source. Seu desenvolvimento de baixo acoplamento permite que seja possível integrar várias bibliotecas auxiliares (~\emph{addons}) para facilitar o desenvolvimento de aplicações.
 
-Em~\cite{bellifemine07}, ele foi desenvolvido seguindo todas as especificações da FIPA, o que garante uma intercomunicação com outras plataformas. O JADE foi desenvolvido na linguagem JAVA, possibilitando o uso de diversas bibliotecas e frameworks desenvolvidos na linguagem.
+Segundo~\cite{bellifemine07}, ele foi desenvolvido seguindo todas as especificações da FIPA, o que garante uma intercomunicação com outras plataformas. O JADE foi desenvolvido na linguagem JAVA, possibilitando o uso de diversas bibliotecas e frameworks desenvolvidos na linguagem.
 
 O middleware provê várias funcionalidades básicas que abstraem e simplificam o desenvolvimento de aplicações, com o objetivo do desenvolvedor estar mais preocupado com o comportamento do agente do que com a infra estrutura da plataforma.
 
@@ -834,7 +834,7 @@ Uma das características mais importantes do~\emph{middleware} é o suporte nati
 
 \subsubsection{Arquitetura}
 
-A representação~\ref{fig:arquitetura-jade} do ambiente de execução JADE ilustra os principais elementos da arquitetura distribuídos em três máquinas (dois servidores e um~\emph{desktop}). Cada máquina possui um container e vários agentes.
+A Figura~\ref{fig:arquitetura-jade} representa o ambiente de execução JADE, ilustrando os principais elementos da arquitetura distribuídos em três máquinas (dois servidores e um~\emph{desktop}). Cada máquina possui um container e vários agentes.
 
 \begin{figure}
 	\centering
@@ -854,7 +854,7 @@ O JADE define a classe abstrata~\emph{Agent}, que é a base para todos os agente
 
 Cada agente possui um identificador único (Agent ID - AID) que identifica o agente em toda plataforma. Por padrão, o formato do AID possui primeiramente o nome do agente seguido do caracter '@', por fim o endereço da plataforma onde o agente está. Este AID é atribuído durante o registro do agente no AMS. Neste registro, é possível também registrar os serviços do agente no DF.
 
-Conforme dito anteriormente, o método~\emph{setup()} deverá ser implementado e, no mínimo, deverá ser estabelecido um comportamento para o agente. Este comportamento diz respeito à ação que será realizada pelo agente durante a ocorrência de um evento. O registro/cancelamento dos comportamentos é feito pelos métodos exibidos no trecho~\ref{code:exemplo-register}.
+A implementação do método~\emph{setup()} é invocado durante o registro do agente e deve estabelecer um comportamento para ele. Este comportamento diz respeito à ação que será realizada pelo agente durante a ocorrência de um evento. O registro/cancelamento dos comportamentos é feito pelos métodos exibidos na Listagem~\ref{code:exemplo-register}.
 
 \begin{lstlisting}[language=java,label=code:exemplo-register,caption=Exemplo de registro de comportamento nos agentes.]
 	void addBehaviour( Comportamento )
@@ -882,14 +882,12 @@ Para cada uma das transições de estados existem métodos que são invocados em
 \subsubsection{Interface Gráfica}
 O JADE permite o desenvolvimento de agentes com suporte à interface gráfica. Dessa forma, é possível desenvolver uma interação simples do agente com o ser humano.
 
+Por padrão, o JADE utiliza diversos agentes que utilizam-se de interfaces gráficas para a comunicação dos humanos que, dentre outras funcionalidades, permitem o envio de dados, controle do agente e testes da plataforma. Ferramentas como gerência dos~\emph{containers}, visualização do DF, criação de mensagens a partir de agentes falsos (\emph{sniffers}), dentre outros são disponibilizados nativamente para o desenvolvedor. Na Figura~\ref{fig:tela-jade} é apresentada a interface básica do agente RMA, ilustrando o ambiente de execução. É possível identificar apenas o~\emph{container} principal da aplicação. Nele, existem os três agentes principais registrados descritos anteriormente: AMS, DF e o próprio RMA.
 
-Por padrão, o JADE utiliza diversos agentes que utilizam-se de interfaces gráficas para a comunicação dos humanos que, dentre outras funcionalidades, permitem o envio de dados, controle do agente e testes da plataforma. Ferramentas como gerência dos~\emph{containers}, visualização do DF, criação de mensagens a partir de agentes falsos (\emph{sniffers}), dentre outros são disponibilizados nativamente para o desenvolvedor.
-
-Na representação básica do exemplo do agente RMA~\ref{fig:tela-jade}, é apresentada sua interface gráfica com o ambiente de execução em tempo real. É possível identificar apenas o~\emph{container} principal da aplicação. Nele, existem os três agentes principais registrados descritos anteriormente: AMS, DF e o próprio RMA.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.65]{images/tela-jade.png}
-	\caption{Apresentação da Interface do agente RMA}
+	\caption{Apresentação da Interface do agente RMA.}
 	\label{fig:tela-jade}
 \end{figure}
 
@@ -899,12 +897,12 @@ No mundo corporativo do JAVA, muitos frameworks são responsáveis por partes es
 
 Neste aspecto surge o JBoss Seam. Ele é um~\emph{framework} que reune as principais tecnologias de desenvolvimento web na linguagem Java. Ele integra as tecnologias~\emph{Asynchronous JavaScript and XML} (AJAX),~\emph{JavaServer Faces} (JSF),~\emph{Java Persistence} (JPA),~\emph{Enterprise Java Beans} (EJB 3.0) e~\emph{Business Process Management} (BPM) em uma única ferramenta que objetiva o desenvolvimento ágil de aplicações e o foco do programador na lógica de negócio~\cite{seamSite}.
 
-A pilha de aplicações do Seam~\ref{fig:servidor-app-seam} são todos as tecnologias que são utilizados pelo JBoss Seam. Caso o desenvolvedor deseje utilizar outras tecnologias, o Seam provê configurações para que outras ferramentas possam ser integradas facilmente à aplicação.
+A pilha de aplicações do Seam, representada na Figura~\ref{fig:servidor-app-seam}, contém todos as tecnologias que são utilizados pelo~\emph{framework}. Caso o desenvolvedor deseje utilizar outras tecnologias, o Seam provê configurações para que outras ferramentas possam ser integradas facilmente à aplicação.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.65]{images/servidor-app-seam.png}
-	\caption{Representação da pilha de aplicações do Seam.~\cite{allen09}}
+	\caption{Representação da pilha de aplicações do Seam~\cite{allen09}.}
 	\label{fig:servidor-app-seam}
 \end{figure}
 
