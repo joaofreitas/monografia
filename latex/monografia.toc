@@ -34,30 +34,29 @@
 \contentsline {subsubsection}{Design do Sistema}{27}{section*.19}
 \contentsline {subsubsection}{Ferramenta~\emph {AgentTool}}{28}{section*.20}
 \contentsline {section}{\numberline {2.4}Estudos de Ferramentas e Tecnologias Relacionadas}{28}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Unified Modeling Language}{29}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}UML}{29}{subsection.2.4.1}
 \contentsline {subsubsection}{Diagramas UML}{30}{section*.21}
 \contentsline {paragraph}{Diagrama de Caso de Uso}{30}{section*.22}
 \contentsline {paragraph}{Diagrama de Sequ\IeC {\^e}ncia}{33}{section*.23}
-\contentsline {subsection}{\numberline {2.4.2}Java Agent Development Framework}{35}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2}Ferramentas de SMA}{35}{subsection.2.4.2}
 \contentsline {subsubsection}{Arquitetura}{36}{section*.24}
-\contentsline {subsubsection}{Implementa\IeC {\c c}\IeC {\~a}o dos Agentes}{36}{section*.25}
+\contentsline {subsubsection}{Implementa\IeC {\c c}\IeC {\~a}o dos Agentes}{37}{section*.25}
 \contentsline {subsubsection}{Ciclo de Vida dos Agentes}{37}{section*.26}
 \contentsline {subsubsection}{Interface Gr\IeC {\'a}fica}{38}{section*.27}
 \contentsline {subsection}{\numberline {2.4.3}JBoss Seam}{38}{subsection.2.4.3}
 \contentsline {section}{\numberline {2.5}Trabalhos Correlatos}{39}{section.2.5}
-\contentsline {chapter}{\numberline {3}Proposta de Solu\IeC {\c c}\IeC {\~a}o}{41}{chapter.3}
-\contentsline {section}{\numberline {3.1}Metodologia}{42}{section.3.1}
-\contentsline {section}{\numberline {3.2}A Modelagem}{42}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}An\IeC {\'a}lise}{42}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Design}{54}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Arquitetura}{57}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Frank Web}{57}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}SMA Frank}{58}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Aspectos da Integra\IeC {\c c}\IeC {\~a}o}{58}{subsection.3.3.3}
-\contentsline {chapter}{\numberline {4}Experimenta\IeC {\c c}\IeC {\~o}es}{60}{chapter.4}
-\contentsline {section}{\numberline {4.1}Metodologia de Testes}{60}{section.4.1}
-\contentsline {section}{\numberline {4.2}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Aluno}{60}{section.4.2}
-\contentsline {section}{\numberline {4.3}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Docente}{62}{section.4.3}
-\contentsline {section}{\numberline {4.4}Resultados}{66}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalhos Futuros}{67}{chapter.5}
-\contentsline {chapter}{Refer\^encias}{69}{section*.28}
+\contentsline {chapter}{\numberline {3}Proposta de Solu\IeC {\c c}\IeC {\~a}o}{42}{chapter.3}
+\contentsline {section}{\numberline {3.1}A Modelagem}{43}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}An\IeC {\'a}lise}{43}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Design}{55}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Arquitetura}{58}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Frank Web}{58}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}SMA Frank}{60}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Aspectos da Integra\IeC {\c c}\IeC {\~a}o}{60}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Experimenta\IeC {\c c}\IeC {\~o}es}{62}{chapter.4}
+\contentsline {section}{\numberline {4.1}Metodologia de Testes}{62}{section.4.1}
+\contentsline {section}{\numberline {4.2}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Aluno}{62}{section.4.2}
+\contentsline {section}{\numberline {4.3}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Docente}{64}{section.4.3}
+\contentsline {section}{\numberline {4.4}Resultados}{68}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalhos Futuros}{69}{chapter.5}
+\contentsline {chapter}{Refer\^encias}{71}{section*.28}

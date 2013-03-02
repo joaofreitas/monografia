@@ -82,7 +82,7 @@ As respostas possuem quatro alternativas: Discordo Totalmente, Discordo, Concord
 
 O estilo de aprendizagem é determinado por meio do somatório das respostas de cada dimensão de aprendizagem. A dimensão com maior pontuação é a predominante, apresentando-se então como o estilo de aprendizagem do aluno. 
 
-As questões das dimensões de aprendizagem foram distribuídas entre as perguntas no questionário~\ref{questionario_ie}. Foram inseridas três questões correspondentes à cada dimensão integrante dos modelos propostos por~\cite{muhlbeier12}.
+As questões das dimensões de aprendizagem foram distribuídas entre as perguntas no questionário, apresentadas na Tabela~\ref{questionario_ie}. Foram inseridas três questões correspondentes à cada dimensão integrante dos modelos propostos por~\cite{muhlbeier12}.
 
 \begin{table}
 	\caption{Distribuição de Perguntas no Questionário de Estilo de Aprendizagem. Adaptado de~\cite{muhlbeier12}}
@@ -319,7 +319,7 @@ Os maioria dos parâmetros são opcionais, sendo os mais importantes: \emph{cont
 	\end{tabular}
 	\label{parametros_kqml}
 \end{table}
-O formato da mensagem é completamente compreensível aos humanos. Na mensagem~\ref{code:exemplo-kqml} podemos verificar na primeira linha o enunciado performativo~\emph{ask-one}, onde será uma mensagem de consulta. Nas linhas abaixo, visualizamos todos os parâmetros da mensagem antecedidos por (:). O primeiro parâmetro da mensagem é~\emph{receiver} como controle-estoque, ou seja, esse será o destinatário da mensagem. O segundo parâmetro~\emph{language} tem o valor PROLOG indicando que a sintaxe do conteúdo está escrita em PROLOG. O próximo parâmetro,~\emph{ontology} informa a ontologia que espressa o conteúdo. Por fim, o parâmetro~\emph{content} que indica o conteúdo da mensagem, no caso, uma consulta escrita em PROLOG perguntando pelo preço de um computador.
+O formato da mensagem é completamente compreensível aos humanos. Na mensagem apresentada na Listagem~\ref{code:exemplo-kqml} é possível identificar na primeira linha o enunciado performativo~\emph{ask-one}, onde será uma mensagem de consulta. Nas linhas abaixo, visualizamos todos os parâmetros da mensagem antecedidos por (:). O primeiro parâmetro da mensagem é~\emph{receiver} como controle-estoque, ou seja, esse será o destinatário da mensagem. O segundo parâmetro~\emph{language} tem o valor PROLOG indicando que a sintaxe do conteúdo está escrita em PROLOG. O próximo parâmetro,~\emph{ontology} informa a ontologia que espressa o conteúdo. Por fim, o parâmetro~\emph{content} que indica o conteúdo da mensagem, no caso, uma consulta escrita em PROLOG perguntando pelo preço de um computador.
 
 \begin{lstlisting}[label=code:exemplo-kqml,caption=Exemplo de mensagem em KQML]
 (ask-one
@@ -330,7 +330,7 @@ O formato da mensagem é completamente compreensível aos humanos. Na mensagem~\
 )
 \end{lstlisting}
 
-Um exemplo de diálogo escrito em KQML pode ser visto na sequência de mensagens~\ref{code:dialogo-kqml}
+Um exemplo de diálogo escrito em KQML pode ser visto na sequência de mensagens da Listagem~\ref{code:dialogo-kqml}
 
 \begin{lstlisting}[label=code:dialogo-kqml,caption=Exemplo de diálogo em KQML]
 (evaluate
@@ -375,7 +375,7 @@ A linguagem foi desenvolvida para expressar conhecimento a cerca de um determina
 
 A linguagem é baseada na lógica de primeira ordem onde são definidos operadores como existe($\exists$) e para todo($\forall$),possibilitando aos agentes a expressão de diversas propriedades, domínios, dentre outros. Além disso, ela define um vocabulário básico para a expressão de tipos básicos (números, caracteres, strings) e algumas funções padrões para lidar com esses tipos de dados (menor que, maior que, soma, dentre outros). 
 
-O trecho de código~\ref{code:exemplo-kif} ilustra um exemplo de expressão na linguagem KIF, validando que a temperatura de m1 é 83 graus Célsius.
+O exemplo de código da Listagem~\ref{code:exemplo-kif} ilustra um exemplo de expressão na linguagem KIF, validando que a temperatura de m1 é 83 graus Célsius.
 
 \begin{lstlisting}[label=code:exemplo-kif,caption=Exemplo de expressão de conteúdo com a linguagem KIF. Fonte:~\cite{wooldridge04}]
 (= (temperature ml ) ( scalar 83 Celsius))
@@ -387,7 +387,7 @@ Após as críticas à linguagem KQML, o consórcio~\emph{Foundation for Intellig
 
 Baseado na linguagem KQML, a estrutura das mensagens é a mesma e os seus atributos são semelhantes. A maior diferença entre as duas linguagens são os enunciados performativos. Foram definidos 20 tipos de mensagens performativas, muito semelhante ao KQML, porém definindo formalmente as interpretações dessas mensagens e não definindo nenhuma linguagem para o conteúdo da mensagem.
 
-Devido ao fato da linguagem KQML não ter performativos adequados, a ACL da FIPA recebeu total preocupação na definição formal da semântica da linguagem. A tabela~\ref{table:fipa-cal-spec} contém um breve resumo dos enunciados performativos disponíveis em~\cite{fipa-cal-spec}. É importante notar que a especificação~\cite{fipa-cal-spec} possui toda a descrição formal de cada enunciado performativo aqui descrito.
+Devido ao fato da linguagem KQML não ter performativos adequados, a ACL da FIPA recebeu total preocupação na definição formal da semântica da linguagem. A Tabela~\ref{table:fipa-cal-spec} contém um breve resumo dos enunciados performativos disponíveis em~\cite{fipa-cal-spec}. É importante notar que a especificação~\cite{fipa-cal-spec} possui toda a descrição formal de cada enunciado performativo aqui descrito.
 
 \begin{table}
 	\caption{Listagem de Enunciados Performativos}
@@ -469,7 +469,7 @@ Em um ambiente SMA além de especificar uma linguagem para comunicação, dois a
 
 Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A mais comum delas é a~\emph{eXtensible Markup Language} (XML), uma linguagem de marcação que organiza os dados de forma hierarquizada.
 
-A Listagem~\ref{code:exemplo-xml} descreve uma ontologia de domínio de países escrita na linguagem XML. Nela observa-se a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no trecho~\ref{code:exemplo-xml}, porém sem alteração de semântica.
+A Listagem~\ref{code:exemplo-xml} descreve uma ontologia de domínio de países escrita na linguagem XML. Nela observa-se a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no exemplo da Listagem~\ref{code:exemplo-xml}, porém sem alteração de semântica.
 
 
 \begin{lstlisting}[language=xml,label=code:exemplo-xml,caption=Representação uma ontologia simples de cidades.]
@@ -561,7 +561,7 @@ Em geral, a associação de metas às regras é de um para um, não sendo uma re
 
 A interface com sistemas externos geralmente é tratada como uma regra diferente, visto que sua complexidade pode variar. O MASE não modela explicitamente um ator humano, pois o considera como um ator externo ao sistema.
 
-Após a associação das regras, elas são estruturas em uma modelagem chamada~\emph{MASE Role Model}, conténdo informações de interações entre as tarefas. A representação a notação do~\emph{MASE Role Model}~\ref{fig:exemplo-mase-role-model} utilizada por~\cite{scott01} utiliza-se de retângulos para expressar as regras, elipses para identificar as tarefas e as setas entre as tarefas representam as suas comunicações. Essas comunicações podem ser por meio de mensagens, caso as regras estejam separadas em agentes diferentes.
+Após a associação das regras, elas são estruturas em uma modelagem chamada~\emph{MASE Role Model}, conténdo informações de interações entre as tarefas. A Figura~\ref{fig:exemplo-mase-role-model} representa a notação do~\emph{MASE Role Model} utilizada por~\cite{scott01} utiliza-se de retângulos para expressar as regras, elipses para identificar as tarefas e as setas entre as tarefas representam as suas comunicações. Essas comunicações podem ser por meio de mensagens, caso as regras estejam separadas em agentes diferentes.
 
 \begin{figure}
 	\centering
@@ -572,9 +572,8 @@ Após a associação das regras, elas são estruturas em uma modelagem chamada~\
 
 Caso as regras compartilhem tarefas será necessário remodelar a composição da regra, visto que o MASE não permite a duplicação de tarefas. 
 
-De forma geral, cada regra possui uma série de tarefas que podem (ou não) executar paralelamente. Cada tarefa possui um comportamento que pode depender de outras regras para o cumprimento de seu objetivo. Preocupando-se com as conversações entre tarefas, o MASE determina neste passo a criação do~\emph{Concurrent Task Diagram}.
+De forma geral, cada regra possui uma série de tarefas que podem (ou não) executar paralelamente. Cada tarefa possui um comportamento que pode depender de outras regras para o cumprimento de seu objetivo. Preocupando-se com as conversações entre tarefas, o MASE determina neste passo a criação do~\emph{Concurrent Task Diagram}. Ilustrado na Figura~\ref{fig:examplo-diagrama-tarefas-concorrentes}, é representado por meio de autômatos de estados finitos devido a facilidade de construção e entendimento. A transição consiste de uma mudança de estado do agente, podendo envolver um processamento ou uma comunicação externa.
 
-O diagrama é representado por meio de autômatos de estados finitos~\ref{fig:examplo-diagrama-tarefas-concorrentes}, devido a facilidade de construção e entendimento. A transição consiste de uma mudança de estado do agente, podendo envolver um processamento ou uma comunicação externa.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.65]{images/examplo-diagrama-tarefas-concorrentes.png}
@@ -582,7 +581,7 @@ O diagrama é representado por meio de autômatos de estados finitos~\ref{fig:ex
 	\label{fig:examplo-diagrama-tarefas-concorrentes}
 \end{figure}
 
-A mudança de estado do automato é equivalente à mudança de estado do agente. A sintaxe da transição de pode ser expressa por meio de uma notação~\ref{code:sintaxe-concurrent-task} que define o gatilho a ser disparado, condições para a execução e as mensagens transmitidas.
+A mudança de estado do automato é equivalente à mudança de estado do agente. A sintaxe da transição de pode ser expressa por meio de uma notação conforme ao exemplo da Listagem~\ref{code:sintaxe-concurrent-task} que define o gatilho a ser disparado, condições para a execução e as mensagens transmitidas.
 
 \begin{lstlisting}[label=code:sintaxe-concurrent-task,caption=Sintaxe da mudança de estado.]
 	trigger [guard] ^ transmission(s)
@@ -606,7 +605,7 @@ A fase de design é divida em quatro passos: Criar Classes dos Agentes, Construi
 
 Neste passo, os agentes são criados com base nas regras definidas na fase anterior. Para cada agente criado deve existir pelo menos uma regra associada, caso contrário o levantamento de regras mostra-se incompleto. Dessa forma, o MASE garante que todas os objetivos  do sistema são atingidos, já que as regras do sistema estão relacionados com as metas que foram levantadas na etapa anterior.
 
-Ao fim deste passo é necessário a criação de um novo diagrama, o~\emph{Agent Class Diagram}~\ref{fig:exemplo-agent-class-diagram}. Nele, as classes dos agentes são associadas com as regras levantadas e as comunicações entre as classes.
+Ao fim deste passo é necessário a criação de um novo diagrama, o~\emph{Agent Class Diagram} representado na Figura~\ref{fig:exemplo-agent-class-diagram}. Nele, as classes dos agentes são associadas com as regras levantadas e as comunicações entre as classes.
 
 \begin{figure}
 	\centering
