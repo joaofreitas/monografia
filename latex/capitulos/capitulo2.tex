@@ -1,9 +1,9 @@
 \chapter{Fundamentos básicos}
 
-Este capítulo apresenta os principais conceitos e definições necessários para o entendimento deste trabalho. Dividido em 4 seções, a primeira delas apresenta a teoria a respeito de Informática na Educação. A seção 2.2 aborda os conceitos de SMA necessários ao entendimento deste trabalho. A seção 2.3 apresenta a teoria acerca da metodologia MASE e suas fases de desenvolvimento. A seção 2.4 reúne um estudo de ferramentas e tecnologias relacionadas a este trabalho. Por fim, a seção 2.5 aborda alguns trabalhos correlatos.
+Este capítulo apresenta os principais conceitos e definições necessários para o entendimento deste trabalho. Dividido em 4 seções, a primeira delas apresenta a teoria a respeito de IE. A seção 2.2 aborda os conceitos de SMA necessários ao entendimento deste trabalho. A seção 2.3 apresenta a teoria acerca da metodologia MASE e suas fases de desenvolvimento. A seção 2.4 reúne um estudo de ferramentas e tecnologias relacionadas a este trabalho. Por fim, a seção 2.5 aborda alguns trabalhos correlatos.
 
 \section{Informática na Educação}
-A Informática na Educação (IE) constitui-se um importante ramo de estudo. O uso do computador como meio de educação tornou-se essencial atualmente. Popularizando meios inacessíveis em um passado recente, a aquisição de conhecimento foi simplificada e reduziu-se a um computador com conexão com a internet para o acesso a diversos tipos de conhecimento.
+A IE constitui-se um importante ramo de estudo. O uso do computador como meio de educação tornou-se essencial atualmente. Popularizando meios inacessíveis em um passado recente, a aquisição de conhecimento foi simplificada e reduziu-se a um computador com conexão com a internet para o acesso a diversos tipos de conhecimento.
  
 O computador passa então a ser uma forma de ensino, ocasionando na descentralização da figura do professor neste processo e, segundo [18], promove o desenvolvimento cognitivo por meio de uma interação maior entre o aluno e o objeto de conhecimento.
  
@@ -213,7 +213,7 @@ A arquitetura de agentes varia de acordo com a complexidade da sua autonomia, ou
 
 A primeira arquitetura a ser explorada é o agente orientado à tabelas. Todas as ações dos agentes são conhecidas e estão gravadas em uma tabela. Assim, quando o agente receber o estímulo ele já terá a ação a ser tomada previamente gravada em sua memória. Logo para construir esse tipo de agente, fica claro que além de saber todas percepções possívels, será necessário definir ações apropriadas para todas. Isso levará a tabelas muito complexas e o tamanho pode facilmente passar a ordem de milhões dependendo do número de entradas.
 
-A arquitetura reflexiva simples é um dos tipos mais simples de agente. Nele, o agente seleciona a ação com base unicamente na percepção atual, desconsiderando assim uma grande tabela de decisões. A decisão é tomada com base de regras condição-ação: Se uma condição ocorrer, uma ação será tomada. Por exemplo, vamos supor um agente médico que determina o diagnóstico de uma doença no paciente caso exista alguma anomalia no organismo (Por exemplo, paciente com febre). Uma condição-ação poderia ser:
+A arquitetura reflexiva simples é um dos tipos mais simples de agente. Nele, o agente seleciona a ação com base unicamente na percepção atual, desconsiderando assim uma grande tabela de decisões. A decisão é tomada com base de regras condição-ação: Se uma condição ocorrer, uma ação será tomada. Por exemplo, vamos supor um agente médico que determina o diagnóstico de uma doença no paciente caso exista alguma anomalia no organismo (Por exemplo, um paciente com febre). Uma condição-ação poderia ser:
 
 if anomalia-organismo then diagnóstico-médico
 
@@ -244,7 +244,7 @@ A primeira diferença é a designação distinta dos objetivos dos agentes. Em u
 
 A forma de agentes resolverem problemas foi baseada na técnica distribuição cooperativa de resolução de problemas -~\emph{cooperative distributed problem solving} (CDPS). Em~\cite{durfee89}, a técnica CDPS consiste de uma rede de baixo acoplamento provida de sofisticados nós resolvedores de problemas que precisam cooperar entre si, pois nenhum deles possui recursos, informações e~\emph{expertise} suficientes para resolver algum problema sozinho. Cada nó possui uma~\emph{expertise} diferente que pode resolver parte do problema.
 
-Inicialmente essa técnica assumiu que os problemas fossem de ordem benevolente. Isso significa que, implicitamente, os agentes compartilham o mesmo objetivo de resolver o problema proposto. Isso implica que todos os agentes ajudarão sempre que possível, mesmo tendo prejuízos na execução da ação, pois o objetivo geral de todos será a resolução do problema maior. Esse cenário é plausível desde que uma organização ou entidade tenha o controle de (ou modele) todos os agentes.
+Inicialmente essa técnica assumiu que os problemas fossem de ordem benevolente. Isso significa que, implicitamente, os agentes compartilham o mesmo objetivo de resolver o problema proposto. Isso implica que todos os agentes ajudarão sempre que possível, mesmo tendo prejuízos na execução da ação, pois o objetivo geral de todos será a resolução do problema maior. Esse cenário é plausível desde que uma organização ou entidade tenha o controle de (ou possa modelar) todos os agentes.
 
 Em um cenário mais realista (e de maior enfoque dos estudos de SMA), agentes podem pertencer à sociedades com interesses próprios, diferentes de outras sociedades. Logo, é possível ocorrer o conflito de interesses neste ambiente, situação que força os agentes a cooperarem com os outros para alcançarem seus objetivos.
 
@@ -259,7 +259,7 @@ Com uma solução compartilhada de resolução de problemas, a arquitetura SMA m
 
 \subsection{Comunicação}
 
-A comunicação é um dos aspectos mais importantes no desenvolvimento de SMAs. Problemas de sincronização entre as partes que se comunicam devem ser devidamente estudados. A situação mais simples possível da comunicação, onde o agente A envia uma mensagem ao agente B que está prontamente disponível para receber a mensagem nem sempre é a o cenário mais recorrente. Para tanto, é necessário entender os pormenores da comunicação nesta abordagem.
+A comunicação é um dos aspectos mais importantes no desenvolvimento de SMA. Problemas de sincronização entre as partes que se comunicam devem ser devidamente estudados. A situação mais simples possível da comunicação, onde o agente A envia uma mensagem ao agente B que está prontamente disponível para receber a mensagem nem sempre é a o cenário mais recorrente. Para tanto, é necessário entender os pormenores da comunicação nesta abordagem.
 
 Em uma aplicação normal (Desktop ou Web), a comunicação entre objetos pode ser mais simplificada. Por exemplo, supondo uma aplicação em que existe dois objetos,~\emph{a} e~\emph{b} e que o objeto~\emph{a} tenha um método público chamado~\emph{m1}. O objeto~\emph{b} pode ser comunicar com o objeto~\emph{a} por meio do método~\emph{m1}, provavelmente da seguinte forma~\emph{a.m1(args)}, onde~\emph{args} são os argumentos enviados ao objeto~\emph{a} e a sintaxe pode ser diferente da apresentada, dependendo da linguagem de programação. É importante notar que o controle da execução do método~\emph{m1} não está no objeto~\emph{a}, mas sim no objeto~\emph{b}, que decide o momento o qual o método será invocado.
 
@@ -383,7 +383,7 @@ O exemplo de código da Listagem~\ref{code:exemplo-kif} ilustra um exemplo de ex
 
 \subsection{Linguagem de Comunicação de Agentes FIPA}
 
-Após as críticas à linguagem KQML, o consórcio~\emph{Foundation for Intelligent Physical Agents} (FIPA) começou a trabalhar em 1995 no desenvolvimento da padronização de SMAs. O núcleo dessa padronização foi o desenvolvimento de uma linguagem de comunicação de agentes (ACL) padronizada para todas as plataformas.
+Após as críticas à linguagem KQML, o consórcio~\emph{Foundation for Intelligent Physical Agents} (FIPA) começou a trabalhar em 1995 no desenvolvimento da padronização de SMA. O núcleo dessa padronização foi o desenvolvimento de uma linguagem de comunicação de agentes (ACL) padronizada para todas as plataformas.
 
 Baseado na linguagem KQML, a estrutura das mensagens é a mesma e os seus atributos são semelhantes. A maior diferença entre as duas linguagens são os enunciados performativos. Foram definidos 20 tipos de mensagens performativas, muito semelhante ao KQML, porém definindo formalmente as interpretações dessas mensagens e não definindo nenhuma linguagem para o conteúdo da mensagem.
 
@@ -692,7 +692,7 @@ Por fim, esta seção disserta a respeito da ferramenta JBoss Seam, responsável
 
 \subsection{UML}
 
-A Linguagem Unificada de Modelagem,~\emph{Unified Modeling Language} (UML) é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens, objetivando o entendimento dos artefatos de forma rápida e clara e resultando em uma semântica para o projeto em questão. Em~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
+A Linguagem Unificada de Modelagem, UML é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens, objetivando o entendimento dos artefatos de forma rápida e clara e resultando em uma semântica para o projeto em questão. Em~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
 
 O UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
 A linguagem ajuda o entendimento de como o software foi projetado, como ocorre a comunicação entre seus objetos, como suas classes são organizadas, quais são os atores que são envolvidos na utilização do software, dentre outras possibilidades de representação.
@@ -914,11 +914,11 @@ Portanto este trabalho optou por utilizar o~\emph{JBoss Seam}, pois engloba outr
 \section{Trabalhos Correlatos}
 É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste trabalho, seja em Inteligência Artificial, Estilos de Aprendizagem, SMA ou AVA.
 
-Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado à um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de Inteligência Artificial. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros Ambientes Virtuais de Aprendizagem.
+Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado à um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de Inteligência Artificial. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros AVA.
 
 O trabalho~\cite{bativa2011}, na área de identificação de conhecimentos, visa a determinação de estilos de aprendizagem dos alunos por meio da plataforma chamada "Ferramenta de Identificação de Perfis de Aprendizes – FIPA", uma aplicação multicamadas que faz a identificação do perfil é feita por meio de questionários de estilos de aprendizagem. Apesar da inferência do estilo de aprendizagem, esta plataforma utiliza uma abordagem distinta deste trabalho, sendo uma arquitetura cliente-servidor. 
 
-Esta arquitetura não possui alguns benefícios da abordagem SMA que estão descritas em~\cite{helbing11}: A possibilidade de representação de entidades individuais como, no domínio  deste trabalho, a modelagem do conhecimento de cada aluno por meio de agentes. Outra característica é  a representação das suas interações por meio de equações, regras ou operações lógicas que podem flexibilizar a modelagem. Por fim, modelos baseados em agentes são recomendáveis para simulações devido as suposições realisticas inerentes a seu domínio.
+Esta arquitetura não possui alguns benefícios da abordagem SMA, conforme~\cite{helbing11}: A possibilidade de representação de entidades individuais como, no domínio  deste trabalho, a modelagem do conhecimento de cada aluno por meio de agentes. Outra característica é  a representação das suas interações por meio de equações, regras ou operações lógicas que podem flexibilizar a modelagem. Por fim, modelos baseados em agentes são recomendáveis para simulações devido as suposições realisticas inerentes a seu domínio.
 
 O trabalho~\cite{geyer2001semeai} utiliza-se da abodagem SMA para a adaptação do ensino na internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de ensino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil. Este ambiente assemelha-se bastante com o presente trabalho, porém o seu foco não é na modelagem multidimensional do aluno.
 

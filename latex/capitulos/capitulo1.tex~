@@ -14,9 +14,8 @@ Somado à isso, técnicas de computação distribuída são projetadas para roda
 
 Portanto, determinar o estilo de aprendizagem mostra-se uma estratégia fundamental para que a transmissão de informações e vivências entre alunos e professores torne-se mais eficaz e perceptível, promovendo a criação de informações cada vez mais relevantes para o planejamento, acompanhamento e avaliação dos aprendizes.
 
-
 \section{Problema}
-Os ambientes educacionais de aprendizagem não possuem uma arquitetura apropriada para a inferência de modelos multidimensionais, pois a abordagem baseada em cliente-servidor não é razoável para representação de perfis de alunos no ambiente.
+Os ambientes educacionais de aprendizagem não possuem uma arquitetura apropriada para a inferência de modelos multidimensionais. A arquitetura cliente-servidor permite uma abordagem simples do problema, não usufruindo da possibilidade de representação do conhecimento individualizado em tempo real para a interação entre modelos de estudantes. Além disso a abordagem cliente-servidor pode não ser eficiente na inferência e representação do modelo multidimensional, devido à alta complexidade que pode representar.
 
 \section{Objetivos}
 Tendo em vista o cenário atual apresentado, o presente trabalho tem como objetivo definir uma arquitetura distribuída na Web para auxiliar o processo de ensino-aprendizagem por meio da abordagem de Sistema multiagente (SMA), criando insumos para auxiliar o docente na adoção da melhor estratégia didática de ensino.
@@ -25,29 +24,29 @@ Esta abordagem permitirá a construção e manutenção de um modelo multidimens
 
 Em corroboração ao objetivo do trabalho, a informação do estilo de aprendizagem ao docente pode permitir a correta orientação da sua didática em sala de aula, melhorando qualitativamente o ensino aos seus alunos.
 
-Especificamente, os objetivos específicos deste trabalho são:
+Especificamente, os objetivos deste trabalho são:
 \begin{itemize}
- 	\item Projeto da arquitetura geral de um sistema multiagente, utilizando-se de uma metodologia apropriada;
+ 	\item Projeto da arquitetura geral de um SMA, utilizando-se de uma metodologia apropriada;
 	\item Definir e implementar a arquitetura geral da solução, incluindo os agentes assistentes de cognição, metacognição e afetivo;
 	\item Propor uma interface do agente assistente de cognição com os atores externos do sistema: Docente e Estudante;
 \end{itemize}
 
 \section{Metodologia}
 
-A metodologia de realização deste trabalho é constituída da revisão bibliográfica, modelagem da arquitetura, implementação e testes em laboratório da solução. A primeira etapa consistiu do estudo dos conceitos de Informática na Educação, Sistemas Multiagentes e levantamentos de uso de SMA em contextos pegagógicos. Este estudo foi importante para a orientação do desenvolvimento embasado na teoria e a comparação das ferramentas existentes com a solução proposta.
+A metodologia de realização deste trabalho é constituída da revisão bibliográfica, modelagem da arquitetura, implementação e testes em laboratório da solução. A primeira etapa consistiu do estudo dos conceitos de Informática na Educação (IE), Sistemas Multiagentes e levantamentos de uso de SMA em contextos pegagógicos. Este estudo foi importante para a orientação do desenvolvimento embasado na teoria e a comparação das ferramentas existentes com a solução proposta.
 
 Em seguida, foi realizado o levantamento e estudo de metodologias aproriadas para modelagem de SMA existentes para a modelagem e construção da solução. Essas metodologias foram comparadas e uma delas escolhida para o desenvolvimento da aplicação. Após a escolha da metodologia de desenvolvimento, foi feita a modelagem do SMA com a metodologia em questão.
 
-O desenvolvimento da aplicação multiagente foi feito com o~\emph{framework}~\emph{JADE}. Que é completamente desenvolvido na linguagem~\emph{JAVA} e simplifica a implementação de Sistemas Multiagentes (SMA) que cumprem as especificações FIPA. 
+O desenvolvimento da aplicação multiagente foi feito com o~\emph{framework}~\emph{JADE}. Que é completamente desenvolvido na linguagem~\emph{JAVA} e simplifica a implementação de SMA que cumprem as especificações FIPA. 
 
-Em seguida, foi necessário a escolha de uma ferramenta para desenvolvimento da interface web e a sua integração com o sistema multiagente. Baseado nos estudos feitos, o~\emph{framework JBoss Seam} mostrou-se mais viável visto que facilita a construção de aplicações dinâmicas para a internet de forma simples e ágil.
+Em seguida, foi necessário a escolha de uma ferramenta para desenvolvimento da interface web e a sua integração com o SMA. Baseado nos estudos feitos, o~\emph{framework JBoss Seam} mostrou-se mais viável visto que facilita a construção de aplicações dinâmicas para a internet de forma simples e ágil.
 
 Por fim, foram realizados testes em laboratório da solução proposta. Foram definidos cenários que simulavam o uso da aplicação por meio dos perfis de Aluno e Docente.
 
 \section{Estrutura do Trabalho}
 A divisão de capítulos foi feita da seguinte forma:
 \begin{itemize}
-	\item Capítulo 2: Apresenta uma breve visão sobre as áreas de estudo envolvidas neste trabalho: Informática na Educação, Sistema Multiagente. Além disso, apresenta algumas ferramentas e tecnologias utilizadas, bem como os trabalhos correlatos e um comparativo.
+	\item Capítulo 2: Apresenta uma breve visão sobre as áreas de estudo envolvidas neste trabalho, tais como IE e SMA. Além disso, apresenta algumas ferramentas e tecnologias utilizadas, bem como os trabalhos correlatos e um comparativo.
 	\item Capítulo 3: Contém a proposta de solução composta pela metodologia, modelagem da arquitetura e implementação.
 	\item Capítulo 4: Exibe os testes realizados em laboratório por meio dos perfis dos usuários: Aluno e Docente.
 	\item Capítulo 5: Apresenta algumas conclusões e abre perspectivas para trabalhos futuros.

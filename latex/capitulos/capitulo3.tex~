@@ -19,7 +19,7 @@ Após a escolha da metodologia MASE, justificada no capítulo 2, foram levantado
 
 O primeiro agente,~\emph{GatewayAgent}, é responsável pela interação direta com a plataforma web. Essa plataforma irá interagir com os alunos (por meio de questionários de estilo de aprendizagem) e docentes (notificando o estilo de aprendizagem dos seus alunos) e encaminhará os dados para o agente em questão, que repassará ao ambiente.
 
-O agente interface~\emph{~\emph{web}ServiceAgent}, é responsável pela comunicação com os web services do SMA Frank, que é a forma escolhida para futuras interações com os Ambientes Virtuais de Aprendizagem. Por fim, o agente~\emph{ManagerAgent} é responsável pela criação dos agentes.
+O agente interface~\emph{WebServiceAgent}, é responsável pela comunicação com os web services do SMA Frank, que é a forma escolhida para futuras interações com AVA. Por fim, o agente~\emph{ManagerAgent} é responsável pela criação dos agentes.
 
 A partir dos agentes e regras gerados, foi implementado o SMA na linguagem JAVA utilizando o~\emph{framework} JADE. Em seguida, foi desenvolvido a plataforma~\emph{web} utilizando~\emph{JBoss Seam}, responsável pela interface do grupo de trabalho de agentes com o aluno. Após a conclusão da plataforma, foi necessário integrar as duas aplicações por meio do módulo~\emph{JadeGateway} disponibilizada nativamente pelo JADE.
 
@@ -85,15 +85,15 @@ A hierarquia de metas do SMA Frank, apresentada na Figura~\ref{fig:metas-frank},
 
 Foram levantados 5 principais casos de uso, alguns com fluxos alternativos que representam fluxos alternativos no caso de uso, mas não necessariamente implicam em uma execução no SMA, apenas na parte~\emph{web}, como por exemplo: Erro de Login. Para fins de detalhamento, este trabalho utiliza-se da notação completa de desenvolvimento de casos de uso.
 
-O primeiro caso de uso diz respeito à modelagem cognitiva do aluno. Existem dois cenários possíveis: Modelagem implícita (principal cenário de sucesso) e modelagem explícita (cenário alternativo). O SMA deverá processar o questionário de estilos de aprendizagem, respondido pelo aluno, para inferir explicitamente o seu modelo cognitivo e deverá analisar as respostas enviadas por ele para inferir explicitamente o seu modelo cognitivo.
+O primeiro caso de uso, descrito no Apêndice~\ref{chapter:uc1}, diz respeito à modelagem cognitiva do aluno. Existem dois cenários possíveis: Modelagem implícita (principal cenário de sucesso) e modelagem explícita (cenário alternativo). O SMA deverá processar o questionário de estilos de aprendizagem, respondido pelo aluno, para inferir explicitamente o seu modelo cognitivo e deverá analisar as respostas enviadas por ele para inferir explicitamente o seu modelo cognitivo.
 
-O segundo caso de uso descreve o cenário de notificação do docente. Nele, o docente é autenticado no sistema e o sistema exibe uma lista de alunos disponíveis nas mais diversas turmas. O docente seleciona um aluno e então o sistema exibe os dados relativos ao modelo do aluno. O trecho possui a descrição do caso de uso.
+O segundo caso de uso, descrito no Apêndice~\ref{chapter:uc2}, descreve o cenário de notificação do docente. Nele, o docente é autenticado no sistema e o sistema exibe uma lista de alunos disponíveis nas mais diversas turmas. O docente seleciona um aluno e então o sistema exibe os dados relativos ao modelo do aluno.
 
-Os terceiro e quarto casos de uso dizem respeito à inferência do modelo afetivo e metacognitivo do aluno, respectivamente.
+O terceiro caso de uso, descrito respectivamente no Apêndice~\ref{chapter:uc3}, dizem respeito à inferência do modelo afetivo. De forma análoga, o caso de suo descrito em~\ref{chapter:uc4} ilustra a inferência do modelo metacognitivo do aluno.
 
-Por fim, o último caso de uso foi levantado para prever a interação do AVA com o SMA Frank. Devido a possibilidade dos Ambientes Virtuais de Aprendizagem serem desenvolvidos em qualquer linguagem, é necessário utilizar-se de uma forma de comunicação comum entre aplicações.
+O Apêndice~\ref{chapter:uc5} descreve o último caso de uso que foi levantado para promover a interação entre os diferentes AVA e o SMA Frank. Devido a possibilidade dos AVA serem desenvolvidos em qualquer linguagem, é necessário utilizar-se de uma forma de comunicação comum entre aplicações.
 
-Logo o SMA Frank irá utilizar-se de WebServices para a comunicação externa, garantindo que diversas aplicações poderão interagir com o SMA. Para novos AVAs, tudo o que precisará ser feito é a implementação da assinatura do serviço no WebService. Dessa forma a solução garante uma intervenção mínima no código do AVA, exigindo menos tempo na codificação da comunicação e garantindo o foco na inferência à ser feita pelo SMA. Segue a descrição do caso de uso.
+Logo o SMA Frank irá utilizar de WebServices para a comunicação externa, garantindo que diversas aplicações poderão interagir com o SMA. Para novos AVAs, tudo o que precisará ser feito é a implementação da assinatura do serviço no WebService. Dessa forma a solução garante uma intervenção mínima no código do AVA, exigindo menos tempo na codificação da comunicação e garantindo o foco na inferência à ser feita pelo SMA. Segue a descrição do caso de uso.
 
 Após o desenvolvimento dos casos de uso, foi necessário refinar os diagramas de sequência. Todos os diagramas foram desenvolvidos na ferramenta~\emph{agentTool}, visto que ele acompanha todas as fases do MASE. Para o primeiro caso de uso, foram desenvolvidos dois diagramas de sequência distintos: Um para o fluxo principal e outro para o fluxo alternativo.
 
@@ -172,7 +172,7 @@ Por fim, após o levantamento de todas as regras foi necessário criar tarefas q
 	\label{tabela:mase-role-model}
 \end{table}
 
-A Figura~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model}, onde é possível visualizar toda a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudenInterface} (Interface Web da Aplicação) ou~\emph{WebServiceInterface} (Ambientes Virtuais de Aprendizagem). Além disso, a regra~\emph{StudenInterface} possui uma tarefa para autenticação do aluno, onde ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno.
+A Figura~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model}, onde é possível visualizar toda a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudenInterface} (Interface Web da Aplicação) ou~\emph{WebServiceInterface} (Interface com AVA). Além disso, a regra~\emph{StudenInterface} possui uma tarefa para autenticação do aluno, onde ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno.
 
 A regra~\emph{StudentWorkgroup} será a regra responsável pela gerência do grupo de trabalho do aluno. Ela recebe os dados da regra~\emph{Manager} e reencaminha para as regras~\emph{Cognitive},~\emph{Affective} e~\emph{Metacognitive}. As linhas tracejadas de cor azul representam comunicações internas entre as regras.
 
@@ -288,7 +288,7 @@ Após a conclusão da primeira etapa do MASE, é necessário definir as classes 
 
 \begin{itemize}
 	\item GatewayAgent - Possui a regra StudentInterface, responsável pela interface com a plataforma~\emph{web}, ou seja, com o estudante e o docente.
-	\item WebServiceAgent - Possui a regra~\emph{WebServiceInterface}, é responsável pela interface com os ambientes virtuais de aprendizagem.
+	\item WebServiceAgent - Possui a regra~\emph{WebServiceInterface}, é responsável pela interface com os AVA.
 	\item ManagerAgent - Possui a regra~\emph{Manager}, é responsavel pela gerência da plataforma: Criação dos agentes, encaminhamento de mensagens.
 	\item WorkgroupAgent - Possui a regra~\emph{StudentWorkgroup}, responsável pela gerência do grupo de trabalho de um determinado aluno.
 	\item CognitiveAgent - Possui as regras~\emph{CognitiveAction},~\emph{LearningStyleAction}. Responsável pela inferência do modelo cognitivo do aluno.
