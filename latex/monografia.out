@@ -14,7 +14,7 @@
 \BOOKMARK [1][-]{section.2.2}{Sistemas Multiagente}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{Conceitos}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.2}{Arquiteturas de agentes}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.3}{Defini\347\343o de Sistemas Multiagente}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{Intera\347\343o entre Agentes}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.4}{Comunica\347\343o}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.5}{Linguagem de Comunica\347\343o de Agentes FIPA}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.6}{Ontologias}{section.2.2}
@@ -40,9 +40,10 @@
 \BOOKMARK [1][-]{section.4.3}{Demonstra\347\343o da Interface com Docente}{chapter.4}
 \BOOKMARK [1][-]{section.4.4}{Resultados}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{Conclus\365es e Trabalhos Futuros}{}
-\BOOKMARK [0][-]{appendix.A}{Caso de Uso 1}{}
-\BOOKMARK [0][-]{appendix.B}{Caso de Uso 2}{}
-\BOOKMARK [0][-]{appendix.C}{Caso de Uso 3}{}
-\BOOKMARK [0][-]{appendix.D}{Caso de Uso 4}{}
-\BOOKMARK [0][-]{appendix.E}{Caso de Uso 5}{}
+\BOOKMARK [0][-]{appendix.A}{Casos de Uso}{}
+\BOOKMARK [1][-]{section.A.1}{Determinar Modelagem Cognitiva}{appendix.A}
+\BOOKMARK [1][-]{section.A.2}{Notificar Docente}{appendix.A}
+\BOOKMARK [1][-]{section.A.3}{Determinar Modelagem Afetiva do Aluno}{appendix.A}
+\BOOKMARK [1][-]{section.A.4}{Determinar Modelagem Metacognitiva do Aluno}{appendix.A}
+\BOOKMARK [1][-]{section.A.5}{Intera\347\343o AVA e SMA Frank}{appendix.A}
 \BOOKMARK [0][-]{section*.28}{Refer\352ncias}{}

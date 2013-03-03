@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {1.4}Estrutura do Trabalho}{3}{section.1.4}
 \contentsline {chapter}{\numberline {2}Fundamentos b\IeC {\'a}sicos}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Inform\IeC {\'a}tica na Educa\IeC {\c c}\IeC {\~a}o}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Estilo de Aprendizagem}{4}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Estilo de Aprendizagem}{5}{subsection.2.1.1}
 \contentsline {subsubsection}{Modelo de~\emph {Kolb}}{5}{section*.8}
 \contentsline {subsubsection}{Modelo de~\emph {Felder}}{5}{section*.9}
 \contentsline {subsubsection}{Modelo de~\emph {Honey} e~\emph {Mumford}}{7}{section*.10}
@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {2.2}Sistemas Multiagente}{8}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Conceitos}{9}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Arquiteturas de agentes}{12}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Defini\IeC {\c c}\IeC {\~a}o de Sistemas Multiagente}{13}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Intera\IeC {\c c}\IeC {\~a}o entre Agentes}{13}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Comunica\IeC {\c c}\IeC {\~a}o}{14}{subsection.2.2.4}
 \contentsline {subsubsection}{KQML}{16}{section*.11}
 \contentsline {subsubsection}{KIF}{18}{section*.12}
@@ -59,9 +59,10 @@
 \contentsline {section}{\numberline {4.3}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Docente}{64}{section.4.3}
 \contentsline {section}{\numberline {4.4}Resultados}{68}{section.4.4}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalhos Futuros}{69}{chapter.5}
-\contentsline {chapter}{\numberline {A}Caso de Uso 1}{71}{appendix.A}
-\contentsline {chapter}{\numberline {B}Caso de Uso 2}{75}{appendix.B}
-\contentsline {chapter}{\numberline {C}Caso de Uso 3}{77}{appendix.C}
-\contentsline {chapter}{\numberline {D}Caso de Uso 4}{79}{appendix.D}
-\contentsline {chapter}{\numberline {E}Caso de Uso 5}{81}{appendix.E}
-\contentsline {chapter}{Refer\^encias}{83}{section*.28}
+\contentsline {chapter}{\numberline {A}Casos de Uso}{71}{appendix.A}
+\contentsline {section}{\numberline {A.1}Determinar Modelagem Cognitiva}{71}{section.A.1}
+\contentsline {section}{\numberline {A.2}Notificar Docente}{74}{section.A.2}
+\contentsline {section}{\numberline {A.3}Determinar Modelagem Afetiva do Aluno}{75}{section.A.3}
+\contentsline {section}{\numberline {A.4}Determinar Modelagem Metacognitiva do Aluno}{76}{section.A.4}
+\contentsline {section}{\numberline {A.5}Intera\IeC {\c c}\IeC {\~a}o AVA e SMA Frank}{78}{section.A.5}
+\contentsline {chapter}{Refer\^encias}{80}{section*.28}

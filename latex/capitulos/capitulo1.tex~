@@ -2,25 +2,25 @@
 
 Cada pessoa possui uma forma preferencial de absorção do conhecimento. Seja por imagens, textos, teoria ou prática, durante uma situação de aprendizagem todos tendem a receber e processar melhor as informações que são recebidas de certa maneira, em detrimento a outras. Essa forma de recepção do conhecimento é nomeada estilo de aprendizagem.
  
-O acesso à recursos tecnológicos que, outrora caros e difíceis, tornaram-se presentes no cotidiano de muitas pessoas devido a facilidade de aquisição. Dessa forma, a viabilidade do aprendizado por meio do computador aumentou e começa a modificar o paradigma do professor detentor do conhecimento e o único responśavel pela sua transmissão.
+O acesso à recursos tecnológicos, outrora caros e difíceis, tornaram-se presentes no cotidiano de muitas pessoas devido a facilidade de aquisição. Dessa forma, a viabilidade do aprendizado por meio do computador aumentou e começa a modificar o paradigma do professor detentor do conhecimento e o único responśavel pela sua transmissão.
 
-Em um ambiente escolar a forma didática escolhida por um docente pode afetar o desempenho dos seus alunos, visto que a forma de transmissão do conhecimento escolhida pode desprivilegiar alguns estudantes. A situação ideal requer a existência de uma personalização do ensino para cada estudante, considerando as características inerentes à sua cognição. Inspirado por esse ideal, algumas ferramentas no âmbito da computação pretendem planejam o ensino personalizado para cada estudante de acordo com o seu perfil de utilização, primeiramente pelo grande acesso da sociedade à computadores e também devido à diversos estudos relacionados na área de educação.
+Em um ambiente escolar a forma didática escolhida por um docente pode afetar o desempenho dos seus alunos, visto que a forma de transmissão do conhecimento escolhida pode prejudicar alguns estudantes. A situação ideal requer a existência de uma personalização do ensino para cada estudante, considerando as características inerentes à sua cognição. Inspirado por esse ideal, algumas ferramentas no âmbito da computação pretendem o ensino personalizado aos estudantes de acordo com o seu perfil de utilização.
 
-Conhecer os fatores relacionados ao processo de aprendizagem exige que as ferramentas computacionais aplicadas ao ensino consigam determinar eficientemente os estilos de aprendizagem. Assim, a complexidade das aplicações aumenta devido às abordagens que serão empregadas, bem como a exigência de processamento que podem exigir.
+Assim, conhecer os fatores relacionados ao processo de aprendizagem exige que as ferramentas computacionais aplicadas ao ensino consigam determinar eficientemente os estilos de aprendizagem. Porém, a complexidade das aplicações aumenta devido às abordagens que serão empregadas, bem como o aumento da exigência de processamento.
 
-Algumas abordagens visam diminuir essa complexidade, permitindo a representação aproximada das características dos alunos em ambientes computacionais, de forma que possam coexistir em um mesmo ambiente vários modelos de estudantes. Por exemplo, o modelo do estudante elaborado na forma multidimensional a partir dos universos cognitivo, metacognitivo e afetivo.
+Algumas abordagens visam diminuir essa complexidade, permitindo a representação aproximada das características dos alunos em ambientes computacionais, de forma que seja possível representar diversos domínios de modelo para um único estudante. Por exemplo, o modelo do estudante elaborado na forma multidimensional a partir dos universos cognitivo, metacognitivo e afetivo.
 
-Somado à isso, técnicas de computação distribuída são projetadas para rodar de forma descentralizada, com componentes e serviços rodando em diversos lugares distintos e comunicando-se uma com as outras através de mensagens. A arquitetura dessas aplicações é projetada objetivando o alto paralelismo, exibilidade, interoperabilidade, dentre outros aspectos.
+Somado à isso, técnicas de computação distribuída são projetadas para rodar de forma descentralizada, com componentes e serviços rodando em diversos lugares distintos e comunicando-se uma com as outras através de mensagens. A arquitetura dessas aplicações é projetada objetivando o alto paralelismo, exibilidade, interoperabilidade, dentre outros aspectos, permitindo a coexistência de diversos modelos de estudantes em uma única aplicação.
 
 Portanto, determinar o estilo de aprendizagem mostra-se uma estratégia fundamental para que a transmissão de informações e vivências entre alunos e professores torne-se mais eficaz e perceptível, promovendo a criação de informações cada vez mais relevantes para o planejamento, acompanhamento e avaliação dos aprendizes.
 
 \section{Problema}
-Os ambientes educacionais de aprendizagem não possuem uma arquitetura apropriada para a inferência de modelos multidimensionais. A arquitetura cliente-servidor permite uma abordagem simples do problema, não usufruindo da possibilidade de representação do conhecimento individualizado em tempo real para a interação entre modelos de estudantes. Além disso a abordagem cliente-servidor pode não ser eficiente na inferência e representação do modelo multidimensional, devido à alta complexidade que pode representar.
+Os ambientes educacionais de aprendizagem não possuem uma arquitetura apropriada para a inferência de modelos multidimensionais. A análise do modelo multidimensional do aluno identificam suas características particulares, compreendendo os modelos cognitivo, metacognitivo e afetivo, tornando-se informações fundamentais para o docente na busca pela didática mais recomendável para seus alunos. Porém a arquitetura cliente-servidor permite uma abordagem simples do problema, não usufruindo da possibilidade de representação do conhecimento individualizado em tempo real para a interação entre modelos de estudantes.
 
 \section{Objetivos}
-Tendo em vista o cenário atual apresentado, o presente trabalho tem como objetivo definir uma arquitetura distribuída na Web para auxiliar o processo de ensino-aprendizagem por meio da abordagem de Sistema multiagente (SMA), criando insumos para auxiliar o docente na adoção da melhor estratégia didática de ensino.
+Tendo em vista o cenário atual apresentado, o presente trabalho tem como objetivo definir uma arquitetura distribuída na~\emph{web} para auxiliar o processo de ensino-aprendizagem por meio da abordagem de Sistema multiagente (SMA), criando insumos para auxiliar o docente na adoção da melhor estratégia didática de ensino.
 
-Esta abordagem permitirá a construção e manutenção de um modelo multidimensional do estudante, a partir do qual os estilos de aprendizagem desse estudante poderão ser identificados. A abordagem de sistemas multiagentes permite a decomposição do problema na modelagem multidimensional em vários subproblemas menores, sendo capaz de diminuir a complexidade da resolucão. Além disso características inerentes aos agentes, como a habilidade social dos agentes, podem permitir a interação com outros modelos de alunos visando comparações e validações do modelo.
+Esta abordagem permitirá a construção e manutenção de um modelo multidimensional do estudante, a partir do qual os estilos de aprendizagem desse estudante poderão ser identificados. A abordagem de sistemas multiagentes permite a decomposição do problema na modelagem multidimensional em vários subproblemas menores, sendo capaz de diminuir a complexidade da resolucão. Além disso as características inerentes aos agentes, por exemplo a habilidade social, podem permitir a interação com outros modelos de alunos visando comparações e validações do modelo.
 
 Em corroboração ao objetivo do trabalho, a informação do estilo de aprendizagem ao docente pode permitir a correta orientação da sua didática em sala de aula, melhorando qualitativamente o ensino aos seus alunos.
 
@@ -35,9 +35,9 @@ Especificamente, os objetivos deste trabalho são:
 
 A metodologia de realização deste trabalho é constituída da revisão bibliográfica, modelagem da arquitetura, implementação e testes em laboratório da solução. A primeira etapa consistiu do estudo dos conceitos de Informática na Educação (IE), Sistemas Multiagentes e levantamentos de uso de SMA em contextos pegagógicos. Este estudo foi importante para a orientação do desenvolvimento embasado na teoria e a comparação das ferramentas existentes com a solução proposta.
 
-Em seguida, foi realizado o levantamento e estudo de metodologias aproriadas para modelagem de SMA existentes para a modelagem e construção da solução. Essas metodologias foram comparadas e uma delas escolhida para o desenvolvimento da aplicação. Após a escolha da metodologia de desenvolvimento, foi feita a modelagem do SMA com a metodologia em questão.
+Em seguida, foi realizado o levantamento e estudo de metodologias aproriadas para modelagem de SMA existentes para a modelagem e construção da solução. Essas metodologias foram comparadas e uma delas escolhida para a modelagem do SMA.
 
-O desenvolvimento da aplicação multiagente foi feito com o~\emph{framework}~\emph{JADE}. Que é completamente desenvolvido na linguagem~\emph{JAVA} e simplifica a implementação de SMA que cumprem as especificações FIPA. 
+O desenvolvimento da aplicação multiagente foi feito com o~\emph{framework}~\emph{JADE} o qual é completamente desenvolvido na linguagem~\emph{JAVA} e simplifica a implementação de SMA que cumprem as especificações FIPA. 
 
 Em seguida, foi necessário a escolha de uma ferramenta para desenvolvimento da interface web e a sua integração com o SMA. Baseado nos estudos feitos, o~\emph{framework JBoss Seam} mostrou-se mais viável visto que facilita a construção de aplicações dinâmicas para a internet de forma simples e ágil.
 
@@ -50,4 +50,5 @@ A divisão de capítulos foi feita da seguinte forma:
 	\item Capítulo 3: Contém a proposta de solução composta pela metodologia, modelagem da arquitetura e implementação.
 	\item Capítulo 4: Exibe os testes realizados em laboratório por meio dos perfis dos usuários: Aluno e Docente.
 	\item Capítulo 5: Apresenta algumas conclusões e abre perspectivas para trabalhos futuros.
+	\item Capítulo 6: Apresenta o apêndice com todos os casos de uso escritos na modelagem do SMA.
 \end{itemize}

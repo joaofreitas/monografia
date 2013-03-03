@@ -85,7 +85,7 @@ A hierarquia de metas do SMA Frank, apresentada na Figura~\ref{fig:metas-frank},
 
 Foram levantados 5 principais casos de uso, alguns com fluxos alternativos que representam fluxos alternativos no caso de uso, mas não necessariamente implicam em uma execução no SMA, apenas na parte~\emph{web}, como por exemplo: Erro de Login. Para fins de detalhamento, este trabalho utiliza-se da notação completa de desenvolvimento de casos de uso.
 
-O primeiro caso de uso, descrito no Apêndice~\ref{chapter:uc1}, diz respeito à modelagem cognitiva do aluno. Existem dois cenários possíveis: Modelagem implícita (principal cenário de sucesso) e modelagem explícita (cenário alternativo). O SMA deverá processar o questionário de estilos de aprendizagem, respondido pelo aluno, para inferir explicitamente o seu modelo cognitivo e deverá analisar as respostas enviadas por ele para inferir explicitamente o seu modelo cognitivo.
+O primeiro caso de uso, descrito na Apêndice~\ref{chapter:uc1}, diz respeito à modelagem cognitiva do aluno. Existem dois cenários possíveis: Modelagem implícita (principal cenário de sucesso) e modelagem explícita (cenário alternativo). O SMA deverá processar o questionário de estilos de aprendizagem, respondido pelo aluno, para inferir explicitamente o seu modelo cognitivo e deverá analisar as respostas enviadas por ele para inferir explicitamente o seu modelo cognitivo.
 
 O segundo caso de uso, descrito no Apêndice~\ref{chapter:uc2}, descreve o cenário de notificação do docente. Nele, o docente é autenticado no sistema e o sistema exibe uma lista de alunos disponíveis nas mais diversas turmas. O docente seleciona um aluno e então o sistema exibe os dados relativos ao modelo do aluno.
 
@@ -93,7 +93,7 @@ O terceiro caso de uso, descrito respectivamente no Apêndice~\ref{chapter:uc3},
 
 O Apêndice~\ref{chapter:uc5} descreve o último caso de uso que foi levantado para promover a interação entre os diferentes AVA e o SMA Frank. Devido a possibilidade dos AVA serem desenvolvidos em qualquer linguagem, é necessário utilizar-se de uma forma de comunicação comum entre aplicações.
 
-Logo o SMA Frank irá utilizar de WebServices para a comunicação externa, garantindo que diversas aplicações poderão interagir com o SMA. Para novos AVAs, tudo o que precisará ser feito é a implementação da assinatura do serviço no WebService. Dessa forma a solução garante uma intervenção mínima no código do AVA, exigindo menos tempo na codificação da comunicação e garantindo o foco na inferência à ser feita pelo SMA.
+Logo o SMA Frank irá utilizar de~\emph{WebServices} para a comunicação externa, garantindo que diversas aplicações poderão interagir com o SMA. Para novos AVAs, tudo o que precisará ser feito é a implementação da assinatura do serviço no~\emph{WebService}. Dessa forma a solução garante uma intervenção mínima no código do AVA, exigindo menos tempo na codificação da comunicação e garantindo o foco na inferência à ser feita pelo SMA.
 
 Após o desenvolvimento dos casos de uso, foi necessário refinar os diagramas de sequência. Todos os diagramas foram desenvolvidos na ferramenta~\emph{agentTool}, visto que ele acompanha todas as fases do MASE. Para o primeiro caso de uso, foram desenvolvidos dois diagramas de sequência distintos: Um para o fluxo principal e outro para o fluxo alternativo.
 
@@ -172,18 +172,18 @@ Por fim, após o levantamento de todas as regras foi necessário criar tarefas q
 	\label{tabela:mase-role-model}
 \end{table}
 
-A Figura~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model}, onde é possível visualizar toda a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudenInterface} (Interface Web da Aplicação) ou~\emph{WebServiceInterface} (Interface com AVA). Além disso, a regra~\emph{StudenInterface} possui uma tarefa para autenticação do aluno, onde ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno.
+A Figura~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model}, onde é possível visualizar toda a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudenInterface} (interface~\emph{web} da aplicação) ou~\emph{WebServiceInterface} (Interface com AVA). Além disso, a regra~\emph{StudenInterface} possui uma tarefa para autenticação do aluno, onde ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno.
 
 A regra~\emph{StudentWorkgroup} será a regra responsável pela gerência do grupo de trabalho do aluno. Ela recebe os dados da regra~\emph{Manager} e reencaminha para as regras~\emph{Cognitive},~\emph{Affective} e~\emph{Metacognitive}. As linhas tracejadas de cor azul representam comunicações internas entre as regras.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/mase-role-model.png}
-	\caption{Diagrama ~\emph{MASE Role Model} gerado para o SMA Frank.}
+	\caption{Diagrama~\emph{MASE Role Model} gerado para o SMA Frank.}
 	\label{fig:frank-role-model}
 \end{figure}
 
-A ferramenta~\emph{agentTool} automaticamente indicou a criação dos~\emph{Concurrent Tasks Diagrams} para cada tarefa. O fluxo de execução pode iniciar-se nas regras~\emph{StudentInterface} ou ~\emph{WebServiceInterface}. Elas representam respectivamente as interações com o Aluno e com o Ambiente Virtual de Aprendizagem.
+A ferramenta~\emph{agentTool} automaticamente indicou a criação dos~\emph{Concurrent Tasks Diagrams} para cada tarefa. O fluxo de execução pode iniciar-se nas regras~\emph{StudentInterface} ou~\emph{WebServiceInterface}. Elas representam respectivamente as interações com o Aluno e com o Ambiente Virtual de Aprendizagem.
 
 A regra~\emph{WebServiceInterface} possui o diagrama da tarefa "Validar Dados", apresentado na Figura~\ref{fig:validar-dados}, inicia com o recebimento de uma mensagem de um agente "a" e os dados "DadosWebService". A tarefa passa ao estado "ValidarDados", onde ele recupera as variáveis "idUsuario" e "status" (verificação se o usuário é válido no ambiente). Em seguida a variável "status" é testada: Caso seja inválida o agente "a" recebe um código de erro. Caso contrário, a tarefa muda para o estado "enviarDados", onde ele procura o agente responśavel pela tarefa "manager" e encaminha os dados "DadosWebService"
  
@@ -301,7 +301,7 @@ As conversações são definidas da seguinte forma:
 	\item Conv1 - Conversação do~\emph{WebServiceAgent} com o~\emph{ManagerAgent}
 	\item Conv2 e Conv7 - Conversação do~\emph{GatewayAgent} com o~\emph{ManagerAgent}
 	\item Conv3 - Conversação do~\emph{ManagerAgent} com o~\emph{WorkgroupAgent}
-	\item Conv4, Conv5 e Conv6 - Conversação do~\emph{WorkGroupAgent} com os agentes~\emph{CognitiveAgent}, ~\emph{MetacognitiveAgent} e ~\emph{AffectiveAgent}, respectivamente.
+	\item Conv4, Conv5 e Conv6 - Conversação do~\emph{WorkGroupAgent} com os agentes~\emph{CognitiveAgent},~\emph{MetacognitiveAgent} e~\emph{AffectiveAgent}, respectivamente.
 \end{itemize}
 
 A primeira conversação (conv1) ocorre de forma simples. A Figura~\ref{fig:conv1-iniciador} representa a conversação do lado iniciador da conversação. Ele solicita ao respondedor a verificação da existência do aluno na plataforma e entra no estado de espera. Caso a resposta seja~\emph{usuarioValido}, o iniciador irá enviar a mensagem~\emph{enviarDados} e encerrar a execução normalmente. Caso contrário, entrará no estado de falha, onde informará erro de execução.
