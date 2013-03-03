@@ -93,7 +93,7 @@ O terceiro caso de uso, descrito respectivamente no Apêndice~\ref{chapter:uc3},
 
 O Apêndice~\ref{chapter:uc5} descreve o último caso de uso que foi levantado para promover a interação entre os diferentes AVA e o SMA Frank. Devido a possibilidade dos AVA serem desenvolvidos em qualquer linguagem, é necessário utilizar-se de uma forma de comunicação comum entre aplicações.
 
-Logo o SMA Frank irá utilizar de WebServices para a comunicação externa, garantindo que diversas aplicações poderão interagir com o SMA. Para novos AVAs, tudo o que precisará ser feito é a implementação da assinatura do serviço no WebService. Dessa forma a solução garante uma intervenção mínima no código do AVA, exigindo menos tempo na codificação da comunicação e garantindo o foco na inferência à ser feita pelo SMA. Segue a descrição do caso de uso.
+Logo o SMA Frank irá utilizar de WebServices para a comunicação externa, garantindo que diversas aplicações poderão interagir com o SMA. Para novos AVAs, tudo o que precisará ser feito é a implementação da assinatura do serviço no WebService. Dessa forma a solução garante uma intervenção mínima no código do AVA, exigindo menos tempo na codificação da comunicação e garantindo o foco na inferência à ser feita pelo SMA.
 
 Após o desenvolvimento dos casos de uso, foi necessário refinar os diagramas de sequência. Todos os diagramas foram desenvolvidos na ferramenta~\emph{agentTool}, visto que ele acompanha todas as fases do MASE. Para o primeiro caso de uso, foram desenvolvidos dois diagramas de sequência distintos: Um para o fluxo principal e outro para o fluxo alternativo.
 
@@ -369,7 +369,7 @@ A solução foi separada devido aos seguintes aspectos:
 	\item Menor Dificuldade - A parte~\emph{web} é responśavel pela interação com o usuário e com o banco de dados. Estes pontos seriam muito mais difíceis de implementar no framework JADE.
 \end{itemize}
 
-A Figura~\ref{fig:arquitetura-frank} apresenta a arquitetura geral da solução, onde é possível identificar as duas aplicações distintas: Frank Web e Frank SMA. A aplicação~\emph{web} faz a interface com o estudante e o docente. A plataforma~\emph{web} comunica-se com o SMA através do agente~\emph{GatewayAgent}, que reencaminha as informações para o agente~\emph{Manager}, responsável pela gerência da plataforma. Este agente consegue comunicar-se com todos os grupos de trabalho registrados que podem, ou não, estar na mesmo~\emph{container} que ele. São permitidos inúmeros~\emph{containers} que não necessariamente estarão na mesma máquina do~\emph{container} principal.
+A Figura~\ref{fig:arquitetura-frank} apresenta a arquitetura geral da solução, onde é possível identificar as duas aplicações distintas: Frank Web e Frank SMA. A aplicação~\emph{web} faz a interface com o estudante e o docente. A plataforma~\emph{web} comunica-se com o SMA através do agente~\emph{GatewayAgent}, que reencaminha as informações para o agente~\emph{Manager}, responsável pela gerência da plataforma. Este agente consegue comunicar-se com todos os grupos de trabalho registrados que podem, ou não, estar na mesmo~\emph{container} que ele. São permitidos inúmeros~\emph{containers} que não necessariamente estarão na mesma máquina do~\emph{container} principal. Os grupos de trabalho são compostos pelos agentes ``AA'' (Agente Afetivo), ``AC'' (Agente Cognitivo), ``AM'' (Agente Metacognitivo) e o próprio ``GT'' (Grupo de trabalho).
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{images/arquitetura-frank.png}

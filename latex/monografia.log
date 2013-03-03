@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  3 MAR 2013 01:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  3 MAR 2013 07:48
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1512,11 +1512,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  11407 strings out of 495041
  158413 string characters out of 1181897
- 265453 words of memory out of 3000000
+ 264453 words of memory out of 3000000
  13848 multiletter control sequences out of 15000+50000
  19485 words of font info for 48 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,10n,74p,885b,1832s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,10n,74p,974b,1832s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/joaofreitas/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/joaofreitas/.texmf-v
 ar/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/joaofreitas/.texmf-var/fo
@@ -1532,7 +1532,7 @@ en/ec/ecbx2488.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 ome/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (97 pages, 1353105 bytes).
+Output written on monografia.pdf (97 pages, 1353902 bytes).
 PDF statistics:
  1966 PDF objects out of 2073 (max. 8388607)
  416 named destinations out of 1000 (max. 500000)
