@@ -1,6 +1,6 @@
 \chapter{Fundamentos básicos}
 
-Este capítulo apresenta os principais conceitos e definições necessários para o entendimento deste trabalho. Dividido em 4 seções, a primeira delas apresenta a teoria a respeito de IE. A seção 2.2 aborda os conceitos de SMA necessários ao entendimento deste trabalho. A seção 2.3 apresenta a teoria acerca das metodologia MASE, a decisão pela sua escolha e as fases de desenvolvimento. A seção 2.4 reúne um estudo de ferramentas e tecnologias relacionadas a este trabalho. Por fim, a seção 2.5 aborda alguns trabalhos correlatos.
+Este capítulo apresenta os principais definições e conceitos necessários para o entendimento deste trabalho. Dividido em 4 seções, a primeira delas apresenta a teoria a respeito de IE. A Seção~\ref{section:sma} aborda os conceitos de SMA necessários ao entendimento deste trabalho. A Seção~\ref{section:mase} apresenta a teoria acerca da metodologia MASE, a decisão pela sua escolha e as fases de desenvolvimento. A Seção~\ref{section:ferramentas} reúne um estudo de ferramentas e tecnologias relacionadas a este trabalho. Por fim, a Seção~\ref{section:trabcorrelatos} aborda alguns trabalhos correlatos.
 
 \section{Informática na Educação}
 A IE constitui-se um importante ramo de estudo. O uso do computador como meio de educação tornou-se essencial atualmente. Popularizando meios inacessíveis em um passado recente, a aquisição de conhecimento foi simplificada e reduziu-se a um computador com conexão com a internet para o acesso a diversos tipos de conhecimento.
@@ -14,11 +14,11 @@ A interação entre as ferramentas tornou-se cada vez maior e tornou-se cada vez
 \subsection{Estilo de Aprendizagem}
 O estilo de aprendizagem é a forma mais eficiente em que o estudante absorve conhecimento ao receber e processar uma informação. Um modelo de estilo de aprendizagem visa classificar um estudante de acordo com uma escala que, organiza as formas as quais são possíveis receber e processar o conhecimento~\cite{felder1988learning}. Estilos de aprendizagem não classificam em uma escala melhor ou pior do que outro estilo de aprendizagem, apenas categoriza o aluno de acordo com a forma de aprender.
 
-O estilo de aprendizagem pode orientar melhor um docente a estimular um aluno durante o processo de desenvolvimento de suas habilidades, alterando o ambiente para o aluno de acordo com o estilo de forma a individualizar o processo didádico do ensino. Existem diversos modelos de estilos de aprendizagem propostos na literatura, no entando será apresentado neste trabalho as teorias mais importantes dos modelos de estudantes.
+O estilo de aprendizagem pode orientar melhor um docente a estimular um aluno durante o processo de desenvolvimento de suas habilidades, alterando o ambiente para o aluno de acordo com o estilo de forma a individualizar o processo didático do ensino. Existem diversos modelos de estilos de aprendizagem propostos na literatura, no entando será apresentado neste trabalho as teorias mais importantes dos modelos de estudantes.
 
 \subsubsection{Modelo de~\emph{Kolb}}
 
-Segundo~\emph{Kolb}~\cite{kolb84} é proposto uma perspectiva chamada de teoria experimental do aprendizado, pois enfatiza o fato da experiência no processo de aprendizagem. Kolb inicialmente baseia-se em um ciclo de aprendizado de quatro estágios: Experiência Concreta, observação reflexiva, conceituação abstrata e experimentação ativa. Basicamente o ciclo funciona de forma à iniciar nas experiências concretas prover fundamentos para o ciclo da observação reflexiva. A partir de observações e reflexões, novos conceitos abstratos são formados. Esses conceitos podem implicar em ações que podem ser colocadas em prática, criando assim novas experiências.
+A perspectiva da teoria experimental do aprendizado proposta em~~\emph{Kolb}~\cite{kolb84} enfatiza o fato da experiência no processo de aprendizagem. Kolb inicialmente baseia-se em um ciclo de aprendizado de quatro estágios: Experiência concreta, observação reflexiva, conceituação abstrata e experimentação ativa. Basicamente o ciclo funciona de forma à iniciar nas experiências concretas para prover fundamentos para o ciclo da observação reflexiva. A partir de observações e reflexões, novos conceitos abstratos são formados. Esses conceitos podem implicar em ações que podem ser colocadas em prática, criando assim novas experiências.
 
 \emph{Kolb} propôs quatro estilos de aprendizagem: Divergente, assimilador, convergente e acomodador. Estes estilos estão permeados nos ciclos de aprendizagem definidos. A Tabela~\ref{lista_estilos_aprendizagem} exibe os estilos de aprendizagem propostos por~\emph{Kolb} combinados com o ciclo de aprendizado e a separação em quatro categorias.
 
@@ -28,7 +28,7 @@ Segundo~\emph{Kolb}~\cite{kolb84} é proposto uma perspectiva chamada de teoria 
 		\hline
 		\textbf{Estilo de Aprendizagem}	& \textbf{Ciclos} & \textbf{Descrição}	\\
 		\hline
-		Divergente	& Experiência Concreta, Observação Reflexiva & Pessoas que utilizam a imaginação com mais facilidade para resolver problemas. São capazes de olhar um problema por diferentes perspectivas. Possuem maior interesse cultural e prazer pelo ganho da informação. 	\\
+		Divergente	& Experiência Concreta, Observação Reflexiva & Pessoas que utilizam a imaginação com mais facilidade para resolver problemas. São capazes de olhar um problema por diferentes perspectivas. Possuem maior interesse cultural e prazer ao adquirir informações. 	\\
 		\hline
 		Assimilador	& Conceituação Abstrata, Observação Reflexiva & Possuem uma aproximação maior de raciocínio lógico, onde há ênfase em idéias e conceitos. São menos focadas em pessoas e mais focadas em conceitos abstratos. Valorizam mais as explicações detalhadas do que uma oportunidade prática. 	\\
 		\hline
@@ -49,13 +49,13 @@ O modelo de Felder~\cite{felder1988learning} divide os seguintes estilos de apre
 	\item Sequêncial/Global.
 \end{itemize}
 
-O estilo sensorial categoriza alunos que favorecem o aprendizado por meio dos seus sentidos. Com tendências a serem práticos no processo da aprendizagem, costumam lidar melhor com fatos e observações. Dessa forma, algumas disciplinas que focam em conceitos abstratos, teorias, fórmulas (como física e química) tendem a ser mais complicadas para estes alunos.
+O estilo sensorial categoriza alunos que favorecem o aprendizado por meio dos seus sentidos. Com tendências à abordagem prática no processo da aprendizagem, costumam lidar melhor com fatos e observações. Dessa forma, algumas disciplinas que focam em conceitos abstratos, teorias, fórmulas (como física e química) tendem a ser mais complicadas para estes alunos.
 
-Alunos do estilo intuitivo favorecem informações que florecem em seu raciocínio interno, como a memória, situações imaginárias e por meio de reflexões. Eles normalmente gostam variar o tipo de trabalho, não se importando com a complexidade do trabalho.
+Alunos do estilo intuitivo favorecem informações que florecem em seu raciocínio interno, como a memória, situações imaginárias e por meio de reflexões. Eles normalmente gostam variar o tipo de trabalho, não se importando com a sua complexidade.
 
 A categoria Visual agrupa alunos com mais eficiência em aprender com imagens, diferentemente dos alunos da Verbal categoria que são eficientes em materiais verbais, palavras escritas e discursos.
 
-Estudantes do estilo Ativo tendem a aprender de forma a realizar tentativas, expressar suas idéias, realizar experimentações. Geralmente, conseguem trabalhar muito bem em grupos devido ao favorecimento de praticar exemplos. Em oposição, os estudantes reflexivos preferem um raciocínio mais internalizado e pensam bastante a respeit antes de tentar algo. Geralmente, preferem trabalhar sozinhos ou em pares.
+Estudantes do estilo Ativo tendem a aprender de forma a realizar tentativas, expressar suas idéias, realizar experimentações. Geralmente, conseguem trabalhar muito bem em grupos devido ao favorecimento de praticar exemplos. Em oposição, os estudantes reflexivos preferem um raciocínio mais internalizado e pensam bastante a respeito antes de tentar algo. Geralmente, preferem trabalhar sozinhos ou em pares.
 
 O estilo Sequêncial reúne estudantes que entendem informações por meio de "fragmentos de conhecimento" conexos que, juntos, comporiam uma imagem completa do conhecimento. Podem ser capazes de resolver problemas com um entendimento incompleto acerca de algum domínio. Eles porém, por não possuir o domínio do conhecimento completo, carecem de conseguir correlacionar as informações com outras áreas.
 
@@ -131,7 +131,7 @@ As questões das dimensões de aprendizagem foram distribuídas entre as pergunt
 
 Esta seção expôs os principais modelos de estudante presentes na literatura da IE, assim como o questionário de estilo de aprendizagem como uma ferramenta capaz de determinação do estilo de aprendizagem do estudante deste trabalho. É necessário agora o entendimento de técnicas computacionais para a implementação deste questionário. A seção seguinte apresentará a teoria a respeito de SMA, que permeará o desenvolvimento deste trabalho de forma a orientar a abordagem da modelagem do Aluno neste trabalho, bem como definir alguns aspectos da infraestrutura do ambiente de ensino-aprendizagem.
 
-\section{Sistemas Multiagente}
+\section{Sistemas Multiagente}\label{section:sma}
 
 Esta seção visa expor os fundamentos acerca de SMA. Primeiramente serão apresentados os conceitos e definições iniciais a respeito da Inteligência Artificial (IA) e a teoria relacionada a agentes. Em seguida o trabalho disserta a respeito das arquiteturas relacionadas aos agentes. Só então são apresentados os conceitos de SMA, os aspectos da comunicação neste ambiente e por fim a teoria sobre ontologias.
 
@@ -294,7 +294,7 @@ Da mesma forma que a teoria dos atos de fala influênciou na arquitetura da comu
 
 A linguagem KQML define um protocolo para comunicação de agentes, onde cada mensagem tem um enunciado performativo (~\emph{performative}), que varia com o seu objetivo, e em seguida os parâmetros da mensagem. O KQML define vários enunciados performativos que distinguem-se pelo objetivo da mensagem, sendo dividas em três categorias: Discursivas, intervenção/mecânica e facilitação e~\emph{networking}. Por exemplo, uma mensagem com o tipo performativo~\emph{ask-one} indica que o agente remetente A deseja saber uma resposta do agente B sobre o conteúdo da mensagem. Em~\cite{preece1997}, é possível verificar que a última versão da linguagem define mais de trinta enunciados performativos.
 
-Os maioria dos parâmetros são opcionais, sendo os mais importantes: \emph{content} e~\emph{receiver}. A Tabela~\ref{parametros_kqml} lista os principais parâmetros em uma mensagem nesta linguagem, bem como seu significado.
+Os maioria dos parâmetros são opcionais, sendo os mais importantes:~\emph{content} e~\emph{receiver}. A Tabela~\ref{parametros_kqml} lista os principais parâmetros em uma mensagem nesta linguagem, bem como seu significado.
 
 \begin{table}
 	\caption{Listagem de atributos de uma mensagem em KQML}
@@ -682,7 +682,7 @@ A Figura~\ref{fig:interface-agent-tool} apresenta a tela principal onde é poss�
 
 A medida do progresso da metodologia MASE, algumas abas serão habilitadas conforme a seleção dos objetos nos diagramas. Por exemplo, cada comunicação de tarefas no diagrama de regras deve possuir um detalhamento. Dessa forma, a aba~\emph{Task Panel} torna-se automaticamente visível ao usuário quando há esse tipo de interação.
 
-\section{Estudos de Ferramentas e Tecnologias Relacionadas}
+\section{Estudos de Ferramentas e Tecnologias Relacionadas}\label{section:ferramentas}
 
 Nesta seção estão reunidos as tecnologias que auxiliares ao desenvolvimento do SMA. A primeira seção explica alguns diagramas que são definidos na~\emph{Unified Modeling Language} (UML), necessários para entender os passos do MASE.
  
@@ -911,7 +911,7 @@ Além disso, uma das grandes vantagens do~\emph{seam-generator} é a geração a
 
 Portanto este trabalho optou por utilizar o~\emph{JBoss Seam}, pois engloba outras importantes ferramentas em uma única solução, facilitando assim o desenvolvimento da aplicação~\emph{web}. A facilidade pode ser constatada a partir dos aspectos já mencionados, como integração nativa entre as ferramentas da sua pilha de aplicações e geração automática de código.
 
-\section{Trabalhos Correlatos}
+\section{Trabalhos Correlatos}\label{section:trabcorrelatos}
 É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste trabalho, seja em Inteligência Artificial, Estilos de Aprendizagem, SMA ou AVA.
 
 Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado à um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de Inteligência Artificial. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros AVA.
