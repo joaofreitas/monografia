@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-org.jboss.ide.eclipse.as.core.singledeployable.deployableList=resources/test-seam-ds.xml\nresources/postgresql.jar\nresources/postgresql.jar\nresources/frank-web-ds.xml\n
+org.jboss.ide.eclipse.as.core.singledeployable.deployableList=resources/postgresql.jar\nresources/frank-web-ds.xml\n

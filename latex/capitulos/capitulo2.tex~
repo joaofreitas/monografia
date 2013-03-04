@@ -439,7 +439,7 @@ Devido ao fato da linguagem KQML não possuir enunciados performativos adequados
 	\label{table:fipa-cal-spec}
 \end{table}
 
-As performativas~\emph{request} e~\emph{inform} são consideradas principais pela especificação da FIPA, pois orientam toda a linguagem de comunicação. Além disso, é possível derivar as outras performativas por meio delas.
+As performativas~\emph{request} e~\emph{inform} são consideradas principais pela especificação da FIPA, pois orientam toda a linguagem de comunicação. Além disso, é possível derivar as outras performativas por meio destas.
 
 \subsection{Ontologias}
 
@@ -449,7 +449,7 @@ Ontologia é um um ramo da Filosofia que dedica-se a estudar e representar a nat
 \emph{...concentrating on general concepts-such as Actions, Time, Physical Objects, and Beliefs - that occur in many different domains. Representing these abstract concepts is sometimes called ontological engineering.}
 \end{quote}
 
-A possibilidade de representação de conhecimento por meio de ontologias é bastante vasta. A sua forma de especificação pode ser entendida como uma hierarquia, onde os conhecimentos são organizados na forma de árvore, possibilitando a inserção de novos conhecimento a qualquer momento.
+A possibilidade de representação de conhecimento por meio de ontologias é vasta. A sua forma de especificação pode ser entendida como uma hierarquia, onde os conhecimentos são organizados na forma de árvore, possibilitando a inserção de novos nós de conhecimento a qualquer momento na estrutura.
 
 \begin{figure}
 	\centering
@@ -460,7 +460,7 @@ A possibilidade de representação de conhecimento por meio de ontologias é bas
 
 A Figura~\ref{fig:arvore-ontologia} representa a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
 
-Em um ambiente SMA além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, dentre outros exemplos. Em outras palavras, dois agentes podem comunicar-se usando a mesma ontologia.
+Em um ambiente SMA além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, enfim, dois agentes podem comunicar-se usando a mesma ontologia.
 
 Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A mais comum delas é a~\emph{eXtensible Markup Language} (XML), uma linguagem de marcação que organiza os dados de forma hierarquizada.
 
@@ -495,21 +495,21 @@ A Listagem~\ref{code:exemplo-xml} descreve uma ontologia de domínio de países 
 
 \section{Metodologias de Sistemas Multiagente}\label{section:mase}
 
-Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso em sua maioria nas áreas de Análise de Projetos Orientados à Objetos.
+Atualmente muitas abordagens de projeto de desenvolvimento de software conseguem com sucesso definir uma metodologia para construção, implantação e manutenção do software. A definição dessas engenharias de software possuem diversos casos de sucesso, em sua maioria nas áreas de Análise de Projetos Orientados à Objetos.
 
-Pela característica autônoma dos agentes, não é possível compará-los à simples objetos que serão invocados por outros objetos. Não existe interação direta, apenas coordenação de ações via conversação para cada agente atingir suas próprias métas. Portanto, o advento da abordagem SMA trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, devido à diferença de abordagem do software.
+Pela característica autônoma dos agentes, não é possível compará-los à simples objetos que serão invocados por outros objetos. Não existe interação direta, apenas coordenação de ações via conversação para cada agente atingir suas próprias metas. Portanto, o advento da abordagem SMA trouxe à tona a necessidade de outras metodologias de desenvolvimento diferente daquelas, devido à diferença de abordagem do software.
 
-Foram definidas algumas metodologias para modelagem e desenvolvimento de SMA. A metodologia~\emph{Gaia}~\cite{wooldridge2000} consiste em uma abordagem não iterativa que define análise e~\emph{design} de sistemas baseados em agentes. Esta metodologia é considerada genérica e compreensível pois pode ser aplicada a um nível muito amplo de SMA e ela lida tanto com escopos mais gerais (sociedade), quanto com escopos mais específicos (agentes). Ela define as regras e tarefas em termos de uma organização, que é sinônimo de sociedade de agentes ou um SMA.
+Foram definidas algumas metodologias para modelagem e desenvolvimento de SMA. A metodologia~\emph{Gaia}~\cite{wooldridge2000} consiste em uma abordagem não iterativa que define análise e~\emph{design} de sistemas baseados em agentes. Esta metodologia é considerada genérica e compreensível pois pode ser aplicada a um nível muito amplo de SMA, lidando tanto com escopos mais gerais (sociedade), quanto com escopos mais específicos (agentes). Ela define as regras e tarefas em termos de uma organização, que é sinônimo de sociedade de agentes ou um SMA.
 
 A metodologia~\emph{PASSI} (\emph{Process for Agent Societies Specification and Implementation}) é designada para o acompanhamento do desenvolvimento do sistema desde o levantamento dos requisitos até a codificação~\cite{burrafato02}. Seus modelos de projetos são baseados nas especificações da FIPA, garantindo assim a compatibilidade com o SMA a ser desenvolvido. O~\emph{PASSI} define uma metodologia cinco modelos de trabalho: Requisito do Sistema, sociedade de Agentes, implementação dos agentes, modelo de código e modelo de implantação.
 
 A metodologia~\emph{Multiagent Systems Engineering} (MASE) é definida por meio dos requisitos e metas iniciais do SMA. Estes são levantados de forma iterativa e a partir de então são modeladas em diversas etapas as tarefas para cumprir os objetivos. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura. Em~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Design.
 
-Neste trabalho, foi escolhido a metodologia de desenvolvimento MASE. Em contraste com as outras abordagens, a metodologia~\emph{GAIA} não permite a adição de novos requisitos no momento de~\emph{design}. Supondo uma situação de estuda-se detalhadamente o~\emph{design} do sistema, ocasionalmente podem surgir alguns requisitos ou tarefas adicionais derivados desta análise. Por não permitir a adição destes requisitos, o~\emph{GAIA} mostra-se uma abordagem mais rígida e pode ser desvantajosa se comparado com outras, portanto, foi descartada.
+Neste trabalho, foi escolhido a metodologia de desenvolvimento MASE. Em contraste com as outras abordagens, a metodologia~\emph{GAIA} não permite a adição de novos requisitos no momento de~\emph{design}. Supondo uma situação onde estuda-se detalhadamente o~\emph{design} do sistema, ocasionalmente podem surgir alguns requisitos ou tarefas adicionais derivados desta análise. Por não permitir a adição destes requisitos, o~\emph{GAIA} mostra-se uma abordagem mais rígida e pode ser desvantajosa se comparado com outras e, portanto, foi descartada.
 
-A necessidade do acompanhamento até o código do desenvolvimento dos agentes feito pela metodologia~\emph{PASSI} poderia exigir um conhecimento mais aprofundado do framework de desenvolvimento do SMA, necessitando assim da escolha e estudo prévio deste~\emph{framework}. Este trabalho optou então pelo não acoplamento entre o projeto de modelagem e o código e, portanto, determinou o~\emph{MASE} para o desenvolvimento deste trabalho.
+A necessidade do acompanhamento até o código do desenvolvimento dos agentes feito pela metodologia~\emph{PASSI} poderia exigir um conhecimento mais aprofundado do framework de desenvolvimento do SMA, necessitando assim da escolha e estudo prévio deste~\emph{framework}. Este trabalho optou então pelo não acoplamento entre o projeto de modelagem e o código e, portanto, determinou o~\emph{MASE} para o seu desenvolvimento.
 
-Justificada a escolha da metodologia, a primeira fase do MASE, chamada de análise, consiste no levantamento e entendimento dos requisitos com o objetivo de um conjunto de regras, as quais são associadas à tarefas que devem ser realizadas para o sistema atingir seus objetivos. No fim dessa fase, alguns artefatos são gerados que nortearão a próxima etapa da metodologia. A fase de análise pode ser dividida nos seguintes três passos:
+Justificada a escolha da metodologia, a primeira fase do MASE, chamada de análise, consiste no levantamento e entendimento dos requisitos com o objetivo de levantar um conjunto de regras, as quais são associadas à tarefas que devem ser realizadas para o sistema atingir seus objetivos. Ao fim dessa fase, são gerados alguns artefatos que embasarão a próxima etapa da metodologia. A fase de análise pode ser dividida nos seguintes passos:
 
 \begin{itemize}
 	\item Capturar Metas;
@@ -528,35 +528,35 @@ A fase de design consiste na modelagem do SMA de acordo com as regras levantadas
 
 \subsection{Análise}
 
-Em~\cite{scott01}, a fase de análise objetiva o desenvolvimento de um conjunto de regras, que descrevem uma funcionalidade para uma entidade, as quais as atividades descrevem o que deve ser feito para o sistema atingir o seus objetivos.
+De acordo com~\cite{scott01}, a fase de análise objetiva o desenvolvimento de um conjunto de regras, que descrevem uma funcionalidade para uma entidade em termos de tarefas necessárias para o sistema atingir seus objetivos.
 
 \subsubsection{Captura de Metas}
 
 O primeiro passo dessa fase, Captura de Metas, consiste na transformação da especificação inicial do sistema em um conjunto estruturado de metas. Entende-se que as~\emph{metas} que o sistema leva em consideração são relacionadas ao sistema (e não ao usuário), visto que são mais estáveis e as metas do sistema devem satisfazer, de forma geral, os objetivos do usuário~\cite{scott01}.
 
-Dividida em dois subpassos, o primeiro deles é a identificação de todas as metas. A partir da documentação inicial do sistema, conténdo os requisito  funcionais, são extraídos os objetivos de cada cenários do sistema. É importante ressaltar que as metas devem descrer de forma geral e sucinta o comportamento do sistema, descrevendo o que ele deve fazer e não como deve ser feito.
+Dividida em dois subpassos, o primeiro deles é a identificação de todas as metas. A partir da documentação inicial do sistema, com os requisitos  funcionais, são extraídos os objetivos de cada cenários. É importante ressaltar que as metas devem descrever de forma geral e suscinta o comportamento do sistema, descrevendo o que o comportamento deve fazer, que é distinto de ``como deve ser feito''.
 
-As metas podem ser divididas em 4 tipos, podendo ser classificadas em mais de um: Sumário, particionada, combinada e não funcional. A meta sumário é derivada de outras metas semelhantes para que se generalize em uma meta pai. Meta particionada é a meta que, quando todas suas submetas são atingidas,  a meta passa a ser atingida. Metas combinadas são metas que são agrupadas devido à semelhaça de seus objetivos. As metas não funcionais são relativas à cumprir objetivos que são requisitos não funcionais do sistema.
+As metas são divididas em quatro tipos e podem ser classificadas em mais de um: Sumário, particionada, combinada e não funcional. A meta sumário é derivada de outras metas semelhantes para que se generalize em uma meta pai. Meta particionada é a meta que, quando todas suas submetas são atingidas,  a meta passa a ser atingida. Metas combinadas são metas que são agrupadas devido à semelhaça de seus objetivos. As metas não funcionais estão relacionadas ao cumprimento objetivos que são requisitos não funcionais do sistema.
 
 O segundo subpasso consiste na estruturação de metas em forma hierarquizada. É necessário separar quais metas são mais abstratas e de que forma elas podem ser agrupadas em forma de hierarquia. Com isso, eliminam-se algumas metas que são repetidas e identificam-se quais metas são atingidas por meio de outras submetas.
 
 \subsubsection{Desenvolver Casos de Uso}
 
-Neste passo o objetivo é entender o comportamento e o fluxo de execução do sistema por meio dos casos de uso, além de haver um entendimento maior sobre como o sistema irá se comunicar. Para tanto, este passo visa o levantamento e criação dos casos de uso do sistema, bem como o diagrama de sequência para detalhar a ordem dos eventos de cada cenário.
+Neste passo o objetivo é entender o comportamento e o fluxo de execução do sistema por meio dos casos de uso, além de haver um entendimento maior sobre como o sistema comunicar-se-á. Para tanto, este passo visa o levantamento e criação dos casos de uso do sistema, bem como o diagrama de sequência para detalhar a ordem dos eventos de cada cenário.
 
 Os casos de uso geralmente são levantados a partir dos requisitos iniciais do sistema. Nele, são identificados os participantes (atores) e a sua interação com o sistema, esclarecendo a comunicação de alguns módulos do sistema.
 
-O diagrama de sequência define os eventos que cada interação pode criar, mostrando a ordem de execução destes eventos e a sua comunicação. Esses diagramas são criados para cada caso de uso, podendo haver mais de um para cada caso de uso. O objetivo principal é o levantamento dos eventos e das regras.
+O diagrama de sequência define os eventos que cada interação pode criar, mostrando a ordem de execução destes eventos e a sua comunicação. Para cada caso de uso é criado no mínimo um diagrama de sequência. O objetivo principal é o levantamento dos eventos e das regras.
 
 \subsubsection{Refinar Regras}
 
 O último passo da fase de análise, o refinamento de regas consiste na associação metas e seus diagramas de sequências às regras e suas respectivas tarefas. A associação de tarefas à regras é a melhor forma de modelagem de SMA~\cite{scott01}. 
 
-Em geral, a associação de metas às regras é de um para um, não sendo uma regra necessáriamente. Durante esta etapa, algumas considerações relativas ao desenho do sistema devem ser levadas em consideração. Caso exista alguma alteração (adição de uma nova meta, alteração de caso de uso, dentre outras), a metodologia permite que o analista retorne aos passos anteriores e remodele a solução. Algumas metas podem ser combinadas em apenas uma regra, simplificando o desenho do sistema.
+Em geral, a associação de metas às regras é de um para um. Durante esta etapa, algumas considerações relativas ao desenho do sistema devem ser levadas em consideração. Caso exista alguma alteração (adição de uma nova meta, alteração de caso de uso, dentre outras), a metodologia permite que o analista retorne aos passos anteriores e remodele a solução. Algumas metas podem ser combinadas em apenas uma regra, simplificando o desenho do sistema.
 
 A interface com sistemas externos geralmente é tratada como uma regra diferente, visto que sua complexidade pode variar. O MASE não modela explicitamente um ator humano, pois o considera como um ator externo ao sistema.
 
-Após a associação das regras, elas são estruturas em uma modelagem chamada~\emph{MASE Role Model}, conténdo informações de interações entre as tarefas. A Figura~\ref{fig:exemplo-mase-role-model} representa a notação do~\emph{MASE Role Model} utilizada por~\cite{scott01} utiliza-se de retângulos para expressar as regras, elipses para identificar as tarefas e as setas entre as tarefas representam as suas comunicações. Essas comunicações podem ser por meio de mensagens, caso as regras estejam separadas em agentes diferentes.
+Após a associação das regras, elas são estruturadas em uma modelagem chamada~\emph{MASE Role Model}, que possui informações de interações entre as tarefas. A Figura~\ref{fig:exemplo-mase-role-model} representa a notação do~\emph{MASE Role Model} utilizada por~\cite{scott01}, onde os são utilizados retângulos para expressar as regras, elipses para identificar as tarefas e as setas entre as tarefas representam as suas comunicações. Essas comunicações podem ser por meio de mensagens, caso as regras estejam separadas em agentes diferentes.
 
 \begin{figure}
 	\centering
@@ -567,7 +567,7 @@ Após a associação das regras, elas são estruturas em uma modelagem chamada~\
 
 Caso as regras compartilhem tarefas será necessário remodelar a composição da regra, visto que o MASE não permite a duplicação de tarefas. 
 
-De forma geral, cada regra possui uma série de tarefas que podem (ou não) executar paralelamente. Cada tarefa possui um comportamento que pode depender de outras regras para o cumprimento de seu objetivo. Preocupando-se com as conversações entre tarefas, o MASE determina neste passo a criação do~\emph{Concurrent Task Diagram}. Ilustrado na Figura~\ref{fig:examplo-diagrama-tarefas-concorrentes}, é representado por meio de autômatos de estados finitos devido a facilidade de construção e entendimento. A transição consiste de uma mudança de estado do agente, podendo envolver um processamento ou uma comunicação externa.
+De forma geral, cada regra possui uma série de tarefas que podem (ou não) executar paralelamente. Cada tarefa possui um comportamento que pode depender de outras regras para o cumprimento de seu objetivo. Preocupando-se com as conversações entre tarefas, o MASE define neste passo a criação do~\emph{Concurrent Task Diagram}. Ilustrado na Figura~\ref{fig:examplo-diagrama-tarefas-concorrentes}, é representado por meio de autômatos de estados finitos devido a facilidade de construção e entendimento. A transição consiste de uma mudança de estado do agente, podendo envolver um processamento ou uma comunicação externa.
 
 \begin{figure}
 	\centering
@@ -576,21 +576,19 @@ De forma geral, cada regra possui uma série de tarefas que podem (ou não) exec
 	\label{fig:examplo-diagrama-tarefas-concorrentes}
 \end{figure}
 
-A mudança de estado do automato é equivalente à mudança de estado do agente. A sintaxe da transição de pode ser expressa por meio de uma notação conforme ao exemplo da Listagem~\ref{code:sintaxe-concurrent-task} que define o gatilho a ser disparado, condições para a execução e as mensagens transmitidas.
+A mudança de estado do automato é equivalente à mudança de estado do agente. A sintaxe da transição pode ser expressa por meio da notação da Listagem~\ref{code:sintaxe-concurrent-task} que define o gatilho a ser disparado, condições para a execução e as mensagens transmitidas.
 
 \begin{lstlisting}[label=code:sintaxe-concurrent-task,caption=Sintaxe da mudança de estado.]
 	trigger [guard] ^ transmission(s)
 \end{lstlisting}
 
-O~\emph{token} trigger representa um evento que inicia a mudança de estado, geralmente vindo de outra tarefa da mesma regra. O~\emph{token [guard]} é a verificação da validade do código~\emph{guard}, ocorrendo a mudança de estado somente quando a condição for verdadeira. Por fim ocorrem as transmissões, que podem conter o parâmetro~\emph{s}.
+O~\emph{token} trigger representa um evento que inicia a mudança de estado, geralmente vindo de outra tarefa da mesma regra. O~\emph{token [guard]} é a verificação da validade desta condição e a mudança de estado só é efetivada após a validade desta condição. Por fim ocorrem as transmissões~\emph{transmission}, que podem conter o parâmetro~\emph{s}.
 
 Para comunicações externas, dois eventos especiais foram definidos: O evento~\emph{send} indicando o envio de mensagem e o evento~\emph{receive}, indicando o recebimento de mensagem.
 
 A mensagem sempre possui um cabeçalho performativo (definida pela FIPA, representa o objetivo da mensagem) com a seguinte sintaxe:\emph{performative(p1...pn)}, onde~\emph{p1...pn} indicam os parâmetros da mensagem.
 
-Após a definição dos~\emph{Concurrent Tasks Diagrams}, o analista pode combinar tarefas, a fim de diminuir a complexidade do sistema. 
-
-Com isso, o sistema já possui a complexidade das regras determinadas, bem como as tarefas necessárias para atingir seus objetivos.
+Após a definição dos~\emph{Concurrent Tasks Diagrams}, o analista pode combinar tarefas, a fim de diminuir a complexidade do sistema. Com isso, o sistema já possui a complexidade das regras determinadas, bem como as tarefas necessárias para atingir seus objetivos.
 
 \subsection{Design}
 
@@ -600,7 +598,7 @@ A fase de design é divida em quatro passos: Criar Classes dos Agentes, Construi
 
 Neste passo, os agentes são criados com base nas regras definidas na fase anterior. Para cada agente criado deve existir pelo menos uma regra associada, caso contrário o levantamento de regras mostra-se incompleto. Dessa forma, o MASE garante que todas os objetivos  do sistema são atingidos, já que as regras do sistema estão relacionados com as metas que foram levantadas na etapa anterior.
 
-Ao fim deste passo é necessário a criação de um novo diagrama, o~\emph{Agent Class Diagram} representado na Figura~\ref{fig:exemplo-agent-class-diagram}. Nele, as classes dos agentes são associadas com as regras levantadas e as comunicações entre as classes.
+Ao fim deste passo é necessária a criação de um novo diagrama, o~\emph{Agent Class Diagram} representado na Figura~\ref{fig:exemplo-agent-class-diagram}. Nele, as classes dos agentes são associadas com as regras levantadas e as comunicações entre as classes.
 
 \begin{figure}
 	\centering
@@ -611,13 +609,13 @@ Ao fim deste passo é necessário a criação de um novo diagrama, o~\emph{Agent
 
 \subsubsection{Construir Conversações}
 
-A próxima etapa da segunda fase diz respeito às conversações que existirão no SMA. Aqui, cada detalhe da conversação entre dois agentes deverá ser planejado para que haja a correta comunicação entre os agentes e a quantidade de erros seja minimizada.
+A próxima etapa da segunda fase diz respeito às conversações que existirão no SMA. Cada detalhe da conversação entre dois agentes deverá ser planejada para que haja a correta comunicação entre os agentes e a quantidade de erros seja minimizada.
 
-Quando o agente recebe uma mensagem, ele automaticamente compara com as suas conversações ativas~\cite{scott01}. Caso exista alguma conversação semelhante, o agente muda o seu estado e realiza as ações relativas para atingir esse estado. Caso contrário, é assumido que o agente emissor deseja iniciar uma nova conversação e o receptor compara com as suas possibidades de tipos de conversação disponíveis para participar.
+Quando o agente recebe uma mensagem, ele automaticamente compara com as suas conversações ativas~\cite{scott01}. Caso exista alguma conversação semelhante, o agente muda o seu estado e realiza as ações necessárias para atingir esse estado. Caso contrário, é assumido que o agente emissor deseja iniciar uma nova conversação e o receptor compara com as suas possibidades de tipos de conversação disponíveis para participar.
 
-Neste passo, é criado o Diagrama de Comunicação. Nele, as conversações são montadas por meio do mesmo autômato de estados finitos, utilizado na fase análise, passo~\emph{refinar regras}. Os estados do aumtômato são as ações que devem ser realizadas pelo agente. As transições de estado são as conversações que são feitas pelo agente.
+Neste passo, é criado o Diagrama de Comunicação. Nele, as conversações são montadas por meio do mesmo autômato de estados finitos, utilizado na fase análise, passo~\emph{refinar regras}. As transições de estado são as conversações que são feitas pelo agente.
 
-A Listagem~\ref{code:sintaxe-conversation} representa a sintaxe usada na conversação de agentes é uma expressão que é definida por meio das mensagens recebidas, condições, ações e mensagens transmitidas. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
+A Listagem~\ref{code:sintaxe-conversation} apresenta a sintaxe utilizada na conversação de agentes. A sintaxe indica que a expressão é definida por meio das mensagens recebidas, condições, ações e mensagens transmitidas. O~\emph{token rec-mess} indica que a mensagem com os parâmetros~\emph{args1} foi recebida caso a condição~\emph{cond} seja verdadeira. Então o método~\emph{action} é chamado e a mensagem~\emph{trans-mess} com os argumentos~\emph{args2}. Todos os elementos da mensagem são opcionais.
 
 \begin{lstlisting}[label=code:sintaxe-conversation,caption=Sintaxe da conversação entre dois agentes.]
 	rec-mess(args1) [cond] / action ^ trans-mess(args2)
@@ -634,9 +632,9 @@ O diagrama de comunicação apresentado na Figura~\ref{fig:exemplo-conversation}
 
 \subsubsection{Montagem dos Agentes}
 
-Neste passo, o estado interno dos agentes é criado. É necessário nesta etapa definir a arquitetura dos agentes e os componentes que irão compor esta arquitetura. Para isso, é necessário criar o Diagrama de Arquitetura de Agentes, onde são representados os componentes arquiteturais dos agentes.
+Neste passo, o estado interno dos agentes é criado. É necessário nesta etapa definir a arquitetura dos agentes e a sua composição. Para tanto, é necessário criar o Diagrama de Arquitetura de Agentes, onde são representados os componentes arquiteturais dos agentes.
 
-Os componentes internos dos agentes podem ser atributos dos agentes, ou métodos auxiliares. Um agente pode ter vários componentes internos e estes componentes obviamente se comunicarão. No mínimo, cada agente criado no Diagrama de Agentes deve ser definir uma arquitetura interna.
+Os componentes internos dos agentes podem ser atributos dos agentes, ou métodos auxiliares. Um agente pode ter vários componentes internos e estes componentes obviamente se comunicarão.
 
 No diagrama de arquitetura de agentes apresentado na Figura~\ref{fig:exemplo-diagrama-arquitetura-agentes}, a linha tracejada significa interação com sistemas externos, enquanto a outra significa interação com outros agentes do sistema.
 
@@ -647,13 +645,13 @@ No diagrama de arquitetura de agentes apresentado na Figura~\ref{fig:exemplo-dia
 	\label{fig:exemplo-diagrama-arquitetura-agentes}
 \end{figure}
 
-As setas tracejadas indicam dependência com atributos externos ao agente, enquanto as outras setas representam dependência entre componentes.
+As setas tracejadas indicam dependência com módulos externos ao agente, enquanto as outras representam dependência entre componentes.
 
 \subsubsection{Design do Sistema}
 
 A fase final da metodologia MASE consiste na criação de um diagrama de~\emph{deploy} dos agentes. Este diagrama consiste na representação do número de agentes que serão criados por cada máquina da aplicação, bem como suas localizações no sistema.
 
-A Figura~\ref{fig:exemplo-diagrama-deploy} apresenta o diagrama de~\emph{deploy}, expressando os ambientes criados e seus agentes internos. O retângulo com linhas pontilhadas representam os ambientes que podem existir na aplicação. Os outros retângulos caixas representam os agentes e as linhas que os ligam representam as suas interações.
+A Figura~\ref{fig:exemplo-diagrama-deploy} apresenta o diagrama de~\emph{deploy}, expressando os ambientes criados e seus agentes internos. O retângulo com linhas pontilhadas representam os ambientes que podem existir na aplicação. Os outros retângulos representam os agentes e as linhas que os ligam representam as suas interações.
 
 \begin{figure}
 	\centering
@@ -675,7 +673,7 @@ O~\emph{AgentTool} é uma ferramenta que dá suporte à metodologia MASE para a 
 
 A Figura~\ref{fig:interface-agent-tool} apresenta a tela principal onde é possível visualizar as principais abas disponíveis. Ela mostra a tela para desenvolvimento do diagrama de metas hierarquizado. O avanço ou regresso do desenvolvimento é percebido durante o preenchimento das abas, que é feito de forma sequêncial da esquerda para a direita, acompanhando todos os passos da metodologia.
 
-A medida do progresso da metodologia MASE, algumas abas serão habilitadas conforme a seleção dos objetos nos diagramas. Por exemplo, cada comunicação de tarefas no diagrama de regras deve possuir um detalhamento. Dessa forma, a aba~\emph{Task Panel} torna-se automaticamente visível ao usuário quando há esse tipo de interação.
+Conforme o avanço da modelagem do SMA, algumas abas serão habilitadas de acordo com a seleção dos objetos nos diagramas. Por exemplo, cada comunicação de tarefas no diagrama de regras deve possuir um detalhamento. Dessa forma, a aba~\emph{Task Panel} torna-se automaticamente visível ao usuário quando há esse tipo de interação.
 
 \section{Estudos de Ferramentas e Tecnologias Relacionadas}\label{section:ferramentas}
 
@@ -687,14 +685,14 @@ Por fim, esta seção disserta a respeito da ferramenta JBoss Seam, responsável
 
 \subsection{UML}
 
-A Linguagem Unificada de Modelagem, UML é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens, objetivando o entendimento dos artefatos de forma rápida e clara e resultando em uma semântica para o projeto em questão. Em~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
+A Linguagem Unificada de Modelagem, UML é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens objetivando o entendimento dos artefatos de forma rápida e clara, resultando em uma semântica para o projeto em questão. Segundo~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
 
 O UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
 A linguagem ajuda o entendimento de como o software foi projetado, como ocorre a comunicação entre seus objetos, como suas classes são organizadas, quais são os atores que são envolvidos na utilização do software, dentre outras possibilidades de representação.
 
 Segundo~\cite{fowler04} é possível separar o uso do UML de três formas distintas de modelagem conforme o objetivo de uso: Rascunho, planta de software e como linguagem de programação. 
 
-A utilização como rascunho é utilizada para facilitar a comunicação entre as pessoas envolvidas no projeto, sejam desenvolvedores discutindo funcionalidades do software ou gestores explicando funcionalidades em alto nível. O objetivo neste uso é a comunicação de alguns aspectos do sistema de forma rápida, sem a necessidade de formalizar artefatos para o projeto.
+A utilização como rascunho é facilita a comunicação entre as pessoas envolvidas no projeto, sejam desenvolvedores discutindo funcionalidades do software ou gestores explicando funcionalidades em alto nível. O objetivo neste uso é a comunicação de alguns aspectos do sistema de forma rápida, sem a necessidade de formalizar artefatos para o projeto.
 
 A utilização do UML como planta de software são documentos detalhados que são criados para documentação do software, sendo divida em duas sub-categorias: Engenharia reversa e engenharia normal. Na engenharia reversa, os diagramas são gerados a partir de uma ferramenta que faz a leitura do código fonte e gera os diagramas desejados, que são utilizados para auxiliar o leitor no entendimento do sistema. Na engenharia normal, a idéia é modelar o sistema detalhadamente antes de qualquer desenvolvimento, prevendo quais serão os módulos do sistema, bem como a sua a comunicação.
 
@@ -720,7 +718,7 @@ O UML descreve 13 tipos de diagramas, conforme a Figura~\ref{fig:categorias-diag
 
 Casos de uso são relatos textuais que são utilizados para descobrir e descrever os requisitos do sistema. Consiste da descrição de como um ator utiliza uma funcionalidade do sistema para atingir algum objetivo relacionado. Em~\cite{larman08}, os casos de uso devem ser prioritariamente desenvolvidos de forma textual e o seu respectivo diagrama deve ser desenvolvido de forma secundária, somente para ilustrar o relato textual.
 
-Um dos objetivos do caso de uso é a facilidade do levantamento dos requisitos, tanto para os analistas de um sistema, quanto para os clientes envolvidos. A definição de uma modelagem em comum facilidade entre as partes faz do caso de uso uma boa maneira de simplificar o entendimento do comportamento do sistema~\cite{larman08}, bem como envolver todos as partes interessadas do sistema(~\emph{stakeholders}) na construção do mesmo. Em~\cite{cockburn01}, o caso de uso é um contrato de como será o comportamento do sistema. Este contrato será feito por meio dos atores que existirão, da sua interação com o sistema, bem como os cenários existentes.
+Um dos objetivos do caso de uso é a facilidade do levantamento dos requisitos, tanto para os analistas de um sistema, quanto para os clientes envolvidos. A definição de uma modelagem em comum facilita o entendimento das partes interessadas, tornando o caso de uso uma boa maneira de simplificar o entendimento do comportamento do sistema~\cite{larman08}, bem como envolver todos as partes interessadas(~\emph{stakeholders}) na sua construção. Em~\cite{cockburn01}, o caso de uso é um contrato de como será o comportamento do sistema. Este contrato será feito por meio dos atores que existirão, da sua interação com o sistema, bem como os cenários existentes.
 
 Duas definições fazem-se necessárias para o entendimento do caso de uso. A primeira delas é o ``Ator'' do caso de uso. Ele é um objeto com um comportamento definido no sistema. É possível definir o ator como uma pessoa, organização ou mesmo o próprio sistema (quando utiliza serviços do próprio sistema), desde que tenham sempre um papel relacionado. Existem três tipos de atores relacionados ao sistema:
 \begin{itemize}
@@ -739,29 +737,29 @@ Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema
 		\hline
 		\textbf{Seção do Caso de Uso}	& \textbf{Significado} \\
 		\hline
-		Nome do Caso de Uso 	& Nome do caso de uso, iniciando-se com um verbo  \\
+		Nome do Caso de Uso 	& Nome do caso de uso, iniciando-se com um verbo.  \\
 		\hline
-		Escopo	& Escopo descrito pelo caso de uso \\
+		Escopo	& Escopo descrito pelo caso de uso. \\
 		\hline
-		Nível	& Podem ser níveis de objetivo de usuário (quando descrevem os cenários para atingir o objetivo do usuário) ou nível de subfunção (subpassos para dar suporte a um objetivo de usuário) \\
+		Nível	& Podem ser níveis de objetivo de usuário (quando descrevem os cenários para atingir o objetivo do usuário) ou nível de subfunção (subpassos para dar suporte a um objetivo de usuário). \\
 		\hline
-		Ator Principal	& O ator que procura os serviços para atingir seus objetivos  \\
+		Ator Principal	& O ator que procura os serviços para atingir seus objetivos.  \\
 		\hline
-		Interessados e Interesses	& Significado  \\
+		Interessados e Interesses	& Significado.  \\
 		\hline
-		Pré-Condições	& Condições que antecedem o caso de uso e são necessárias para atingir os objetivos \\
+		Pré-Condições	& Condições que antecedem o caso de uso e são necessárias para atingir os objetivos. \\
 		\hline
-		Garantia de Sucesso	& Objetos que podem ser analisados após a execução do caso de uso a fim de validar a correta execução do sistema  \\
+		Garantia de Sucesso	& Objetos que podem ser analisados após a execução do caso de uso a fim de validar a correta execução do sistema.  \\
 		\hline
-		Cenário de Sucesso Principal	& Chamado também de fluxo básico, este cenário descreve o fluxo principal do sistema que satisfaz os interesses dos interessados.  \\
+		Cenário de Sucesso Principal	& Chamado também de fluxo básico, este cenário descreve o fluxo principal do sistema que satisfaz os interesses dos~\emph{stakeholders}.  \\
 		\hline
-		Extensões	& Chamado também de fluxos alternativos, são fluxos auxiliares ou cenários de erros que são relacionados ao cenário de sucesso principal \\
+		Extensões	& Chamado também de fluxos alternativos, são fluxos auxiliares ou cenários de erros que são relacionados ao cenário de sucesso principal. \\
 		\hline
-		Requisitos Especiais	& Registram requisitos não funcionais do sistema e que estão relacionados com o caso de uso \\
+		Requisitos Especiais	& Registram requisitos não funcionais do sistema e que estão relacionados com o caso de uso. \\
 		\hline
-		Lista de Variantes Tecnologias de Dados	& Listagem de dificuldades técnicas, desafios técnicos que valem a pena registrar no caso de uso \\
+		Lista de Variantes Tecnologias de Dados	& Listagem de dificuldades técnicas, desafios técnicos que valem a pena registrar no caso de uso. \\
 		\hline
-		Frequência de ocorrência	& Frequência de ocorrência deste caso de uso \\
+		Frequência de ocorrência	& Frequência de ocorrência deste caso de uso. \\
 		\hline
 	\end{tabular}
 	\label{tabela:topicos_uc}
@@ -778,7 +776,7 @@ A diagramação do caso de uso por UML é uma forma de representação do sistem
 
 \paragraph{Diagrama de Sequência}
 
-O Diagrama de Sequência é um documento criado para ilustrar os eventos descritos em um caso de uso de forma sequencial e temporal, mostrando a interação de atores externos ao sistema e os eventos que eles geram durante essa interação. A UML possui uma notação específica para este diagrama, onde todos os elementos são representados.
+O Diagrama de Sequência é um documento criado para ilustrar os eventos descritos em um caso de uso de forma sequencial e temporal, mostrando a interação de atores externos ao sistema e os eventos que eles geram durante essa interação. O UML possui uma notação específica para este diagrama, onde todos os elementos são representados.
 
 Neste diagrama, são representados para cada cenário do caso de uso os eventos que os atores geram, bem como a ordem da sua interação. No diagrama os atores são representados na parte superior (com a mesma notação do diagrama de caso de uso). Abaixo dos atores é apresentada a linha de tempo, crescendo de cima para baixo. 
 
@@ -798,20 +796,26 @@ O primeiro evento é iniciado pelo ator, onde o método~\emph(listarProdutos()) 
 
 Dentro do retângulo, o ator chama o método~\emph(realizarOperacao), enviado o parâmetro~\emph{operação}. A entidade retorna um valor, que será testado na guarda para a continuidade da conversação. Por fim, o ator chama o método~\emph{finalizarAcao} da entidade. Por não haver outra interação em seguida, o cenário é considerado como encerrado. 
 
-A importância do desenho de um diagrama de sequência está no fato de detalhar os eventos do sistema que são gerados pela interação de atores externos, pois assim é possível ter uma análise comportamental do sistema com base nesses eventos. Neste nível de análise, é possível estudar e projetar o comportamento do sistema no nível de projetar o que ele faz, porém sem necessariamente explicar como o faz~\cite{larman08}.
+A importância do desenho de um diagrama de sequência está no fato de detalhar os eventos do sistema que são gerados pela interação de atores externos, pois assim é possível ter uma análise comportamental do sistema com base nesses eventos. Neste nível de análise, é possível estudar o comportamento do sistema no nível de projetar o que ele faz, porém sem necessariamente explicar como o faz~\cite{larman08}.
 
-O diagrama de sequência geralmente está relacionado com o caso de uso, primeiramente pelo fato de descrever um cenário de caso de uso, mas também pelo fato de o caso de uso conter todos os detalhes do cenário. Ele apenas deixará claro a interação entre os atores e os eventos derivados dessa interação.
-
+O diagrama de sequência geralmente está relacionado com o caso de uso, primeiramente pelo fato de descrever um cenário de caso de uso, mas também pelo fato de o caso de uso conter todos os detalhes do cenário. O diagrama de sequência apenas deixará claro a interação entre os atores e os eventos derivados dessa interação.
 
 \subsection{Ferramentas de SMA}
+
+Os~\emph{frameworks} projetados para o desenvolvimento de SMA visam simplificar o desenvolvimento de aplicações ao implementar uma infra-estrutura básica que provê recursos ao programador. O seu objetivo é garantir os recursos que são essenciais em um SMA, possibilitando o foco do programador no desenvolvimento da aplicação. Diversas ferramentas foram criados para a criação de SMA, cada um com características distintas.
+
+O~\emph{AgentMom}~\ref{agentMom} é um~\emph{framework} de comunicação que foi criado na linguagem JAVA para o desenvolvimento de agentes, conversações e a passagem de mensagens simples nestas conversações. Possui a capacidade de criação de grupos específicos para envio de mensagens (\emph{multicast}) e encriptação do conteúdo da mensagem.
+
+O~\emph{MaDKit}~\ref{madkit} é uma ferramenta para desenvolvimento SMA também desenvolvido em JAVA, onde é possível definir uma plataforma pelo modelo organizacional, agrupando agentes e determinando regras para este grupo.
 
 O~\emph{Java Agent Development Framework} (JADE) é um~\emph{middleware} criado para facilitar o desenvolvimento de SMA. Desenvolvido inicialmente pela Telecom Italia e desde 2000 é um projeto open source. Seu desenvolvimento de baixo acoplamento permite que seja possível integrar várias bibliotecas auxiliares (~\emph{addons}) para facilitar o desenvolvimento de aplicações.
 
 Segundo~\cite{bellifemine07}, ele foi desenvolvido seguindo todas as especificações da FIPA, o que garante uma intercomunicação com outras plataformas. O JADE foi desenvolvido na linguagem JAVA, possibilitando o uso de diversas bibliotecas e frameworks desenvolvidos na linguagem.
-
 O middleware provê várias funcionalidades básicas que abstraem e simplificam o desenvolvimento de aplicações, com o objetivo do desenvolvedor estar mais preocupado com o comportamento do agente do que com a infra estrutura da plataforma.
 
-O sistema de mensagem no JADE funciona de forma assíncrona. Um agente não precisa estar necessariamente disponível para receber as mensagens, visto que elas são enfileiradas e processadas em ordem. Além disso, não é necessário que um agente tenha uma referência para outro agente a fim de comunicar-se.
+Este trabalho optou pela escolha da ferramenta JADE, pois no contraste com as outras ferramentas, foi possível destacar alguns aspectos. O~\emph{framework MaDKit} não permite o desenvolvimento de agentes com comportamento e interação complexos. Tanto o~\emph{framework AgentMon} quanto o~\emph{MaDKit} não possuem a conformidade das suas mensagens com linguagem ACL, especificado pela FIPA. Dessa forma, as duas ferramentas foram descartadas.
+
+Dada a escolha da ferramenta, é necesário entender as particularidades do JADE. O sistema de mensagem no JADE funciona de forma assíncrona. Um agente não precisa estar necessariamente disponível para receber as mensagens, visto que elas são enfileiradas e processadas em ordem. Além disso, não é necessário que um agente tenha uma referência para outro agente a fim de comunicar-se.
 
 A arquitetura de um SMA desenvolvido em JADE funciona de forma semelhante à rede P2P (\emph{Peer-to-Peer}), onde cada agente possui um nome único na plataforma - Agent ID (AID) - e é livre para entrar e sair a qualquer momento durante a execução. Uma plafatorma JADE possui normalmente os seguintes elementos:
 
@@ -911,15 +915,15 @@ Portanto este trabalho optou por utilizar o~\emph{JBoss Seam}, pois engloba outr
 
 Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado à um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de IA. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros AVA.
 
-O trabalho~\cite{bativa2011}, na área de identificação de conhecimentos, visa a determinação de estilos de aprendizagem dos alunos por meio da plataforma chamada ``Ferramenta de Identificação de Perfis de Aprendizes – FIPA'', uma aplicação multicamadas que faz a identificação do perfil é feita por meio de questionários de estilos de aprendizagem. Apesar da inferência do estilo de aprendizagem, esta plataforma utiliza uma abordagem distinta deste trabalho, sendo uma arquitetura cliente-servidor. 
+O trabalho~\cite{bativa2011}, na área de identificação de conhecimentos, visa a determinação de estilos de aprendizagem dos alunos por meio da plataforma chamada ``Ferramenta de Identificação de Perfis de Aprendizes – FIPA'', uma aplicação multicamadas que faz a identificação do perfil por meio de questionários de estilos de aprendizagem. Apesar da inferência do estilo de aprendizagem, esta plataforma utiliza uma abordagem distinta deste trabalho, sendo uma arquitetura cliente-servidor. 
 
-Esta arquitetura não possui alguns benefícios da abordagem SMA, conforme~\cite{helbing11}: A possibilidade de representação de entidades individuais como, no domínio  deste trabalho, a modelagem do conhecimento de cada aluno por meio de agentes. Outra característica é  a representação das suas interações por meio de equações, regras ou operações lógicas que podem flexibilizar a modelagem. Por fim, modelos baseados em agentes são recomendáveis para simulações devido as suposições realisticas inerentes a seu domínio.
+Esta arquitetura não possui alguns benefícios da abordagem SMA, conforme~\cite{helbing11}: A possibilidade de representação de entidades individuais como, no domínio  deste trabalho, a modelagem do conhecimento de cada aluno por meio de agentes. Outra característica é a representação das suas interações por meio de equações, regras ou operações lógicas que podem flexibilizar a modelagem. Por fim, modelos baseados em agentes são recomendáveis para simulações devido as suposições realisticas inerentes a seu domínio.
 
 O trabalho~\cite{geyer2001semeai} utiliza-se da abodagem SMA para a adaptação do ensino na internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de ensino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil. Este ambiente assemelha-se bastante com o presente trabalho, porém o seu foco não é na modelagem multidimensional do aluno.
 
 A modelagem multidimensional tem por objetivo a separação clara das dimensões do aluno para restringir o domínio de atuação de cada agente. Dessa forma, cada a gente expressará uma quantidade menor de propriedades de cada dimensão, sendo possível obter uma informação mais precisa e expressiva de cada dimensão, conforme pode ser visto nas simulações em~\cite{helbing11}.
 
-Por fim, o Ambiente Virtual de Aprendizagem EDULIVRE~\cite{rabelo2010identificacao} constitui-se de um Ambiente Virtual de Aprendizagem que possibilita a inferência implícita de modelos e perfis individuais de estudantes da educação infantil. Com o perfil de cada aluno e de todos os alunos em geral, o educando poderá desenvolver nortear seu trabalho da melhor forma possível. A abordagem deste trabalho não é com uso de agentes, diferindo assim do foco deste trabalho. Além disso, o EDULIVRE apresenta a estratégia de ser o Ambiente Virtual de Aprendizagem e não permite integração com outros ambientes.
+Por fim, o AVA EDULIVRE~\cite{rabelo2010identificacao} possibilita a inferência implícita de modelos e perfis individuais de estudantes da educação infantil. Com o perfil de cada aluno e de todos os alunos em geral, o educando poderá desenvolver nortear seu trabalho da melhor forma possível. A abordagem deste trabalho não utiliza-se de agentes, diferindo assim do foco deste trabalho. Além disso, o EDULIVRE apresenta a estratégia de ser o AVA e não permite integração com outros ambientes.
 
 Conforme exposto alguns trabalhos na área de IE utilizam de diversas tecnologias ou abordagens para a construção de ambientes de ensino-aprendizagem. Todavia, o capítulo seguinte apresentará uma proposta que tende melhorar o modelagem do perfil de aprendizagem por meio da definição de uma arquitetura específica baseada em SMA. Essa arquitetura apresenta aspectos que tangem o modelo multidimensional do aluno propondo uma divisão de agentes para inferência do perfil e aspectos da infraestrutura do ambiente de ensino-aprendizagem.
 

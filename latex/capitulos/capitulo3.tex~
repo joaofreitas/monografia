@@ -185,66 +185,66 @@ A regra~\emph{StudentWorkgroup} será a regra responsável pela gerência do gru
 
 A ferramenta~\emph{agentTool} automaticamente indicou a criação dos~\emph{Concurrent Tasks Diagrams} para cada tarefa. O fluxo de execução pode iniciar-se nas regras~\emph{StudentInterface} ou~\emph{WebServiceInterface}. Elas representam respectivamente as interações com o Aluno e com o Ambiente Virtual de Aprendizagem.
 
-A regra~\emph{WebServiceInterface} possui o diagrama da tarefa "Validar Dados", apresentado na Figura~\ref{fig:validar-dados}, inicia com o recebimento de uma mensagem de um agente "a" e os dados "DadosWebService". A tarefa passa ao estado "ValidarDados", onde ele recupera as variáveis "idUsuario" e "status" (verificação se o usuário é válido no ambiente). Em seguida a variável "status" é testada: Caso seja inválida o agente "a" recebe um código de erro. Caso contrário, a tarefa muda para o estado "enviarDados", onde ele procura o agente responśavel pela tarefa "manager" e encaminha os dados "DadosWebService"
+A regra~\emph{WebServiceInterface} possui o diagrama da tarefa ``Validar Dados'', apresentado na Figura~\ref{fig:validar-dados}, inicia com o recebimento de uma mensagem de um agente ``a'' e os dados ``DadosWebService''. A tarefa passa ao estado ``ValidarDados'', onde ele recupera as variáveis ``idUsuario'' e ``status'' (verificação se o usuário é válido no ambiente). Em seguida a variável ``status'' é testada: Caso seja inválida o agente ``a'' recebe um código de erro. Caso contrário, a tarefa muda para o estado ``enviarDados'', onde ele procura o agente responśavel pela tarefa ``manager'' e encaminha os dados ``DadosWebService''
  
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-validar-dados.png}
-	\caption{Detalhamento da tarefa "Validar Dados" que pertence à regra~\emph{WebServiceInterface}.}
+	\caption{Detalhamento da tarefa ``Validar Dados'' que pertence à regra~\emph{WebServiceInterface}.}
 	\label{fig:validar-dados}
 \end{figure}
 
-A Figura~\ref{fig:td-enviar-quest} apresenta o diagrama da tarefa "Enviar Questionário", da regra~\emph{StudentInterface}. Ele inicia a partir de uma mensagem da plataforma~\emph{web} contendo os dados do questionário. Esses dados são convertidos para uma linguagem de ontologia do SMA. Em seguida, esse questionário é enviado para o manager.
+A Figura~\ref{fig:td-enviar-quest} apresenta o diagrama da tarefa ``Enviar Questionário'', da regra~\emph{StudentInterface}. Ele inicia a partir de uma mensagem da plataforma~\emph{web} contendo os dados do questionário. Esses dados são convertidos para uma linguagem de ontologia do SMA. Em seguida, esse questionário é enviado para o manager.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-enviar-quest.png}
-	\caption{Detalhamento da tarefa "Enviar Questionário" que pertence à regra~\emph{StudentInterface}.}
+	\caption{Detalhamento da tarefa ``Enviar Questionário'' que pertence à regra~\emph{StudentInterface}.}
 	\label{fig:td-enviar-quest}
 \end{figure}
 
-Ainda na regra~\emph{StudentInterface}, a Figura~\ref{fig:td-autenticar-aluno} apresenta o diagrama da tarefa "Autenticar Aluno", o qual inicia com uma mensagem da plataforma~\emph{web} contendo o aluno a ser criado. A tarefa verifica a existência do aluno e em caso negativo, envia a mensagem de criação à tarefa~\emph{Manager}. Caso contrário, envia uma mensagem de erro à plataforma~\emph{web}.
+Ainda na regra~\emph{StudentInterface}, a Figura~\ref{fig:td-autenticar-aluno} apresenta o diagrama da tarefa ``Autenticar Aluno'', o qual inicia com uma mensagem da plataforma~\emph{web} contendo o aluno a ser criado. A tarefa verifica a existência do aluno e em caso negativo, envia a mensagem de criação à tarefa~\emph{Manager}. Caso contrário, envia uma mensagem de erro à plataforma~\emph{web}.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-autenticar-aluno.png}
-	\caption{Detalhamento da tarefa "Autenticar Aluno" que pertence à regra~\emph{StudentInterface}.}
+	\caption{Detalhamento da tarefa ``Autenticar Aluno'' que pertence à regra~\emph{StudentInterface}.}
 	\label{fig:td-autenticar-aluno}
 \end{figure}
 
-Agora na regra~\emph{Manager}, a Figura~\ref{fig:td-determinar-wg} apresenta o diagrama da tarefa "Determinar WG do Aluno" (Determinar Workgroup do Aluno), iniciando com entrada de uma mensagem recebida de um agente~\emph{agent} e o estado "DeterminarWorkgroup", onde ele apenas procura o grupo de trabalho do aluno. Por fim, pelo teste de validade do grupo de trabalho (~\emph{wg = VALIDO}), os dados são enviados para o respectivo grupo de trabalho caso ele sejá válido. Caso contrário, é enviado uma mensagem de erro ao agente que iniciou a conversação.
+Agora na regra~\emph{Manager}, a Figura~\ref{fig:td-determinar-wg} apresenta o diagrama da tarefa ``Determinar WG do Aluno'' (Determinar Workgroup do Aluno), iniciando com entrada de uma mensagem recebida de um agente~\emph{agent} e o estado ``DeterminarWorkgroup'', onde ele apenas procura o grupo de trabalho do aluno. Por fim, pelo teste de validade do grupo de trabalho (~\emph{wg = VALIDO}), os dados são enviados para o respectivo grupo de trabalho caso ele sejá válido. Caso contrário, é enviado uma mensagem de erro ao agente que iniciou a conversação.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-determinar-wg.png}
-	\caption{Detalhamento da tarefa "Determinar WG do Aluno" que pertence à regra~\emph{Manager}.}
+	\caption{Detalhamento da tarefa ``Determinar WG do Aluno'' que pertence à regra~\emph{Manager}.}
 	\label{fig:td-determinar-wg}
 \end{figure}
 
-O diagrama da tarefa "Criar Workgroup" da regra~\emph{Manager} apresentado na Figura~\ref{fig:td-criar-wg} inicia com entrada de uma mensagem vinda da tarefa~\emph{studentInterface} e a mudança para o estado "criarWorkgroup". O estado cria os agentes cognitivo, metacognitivo, afetivo e o workgroup propriamente dito. Por fim, caso o workgroup seja válido, ou seja, não tenha ocorrido nenhum erro durante a criacão, é enviado um código de sucesso à tarefa~\emph{studentInterface}. Caso contrário, o workgroup deve ser criado novamente.
+O diagrama da tarefa ``Criar Workgroup'' da regra~\emph{Manager} apresentado na Figura~\ref{fig:td-criar-wg} inicia com entrada de uma mensagem vinda da tarefa~\emph{studentInterface} e a mudança para o estado ``criarWorkgroup''. O estado cria os agentes cognitivo, metacognitivo, afetivo e o workgroup propriamente dito. Por fim, caso o workgroup seja válido, ou seja, não tenha ocorrido nenhum erro durante a criacão, é enviado um código de sucesso à tarefa~\emph{studentInterface}. Caso contrário, o workgroup deve ser criado novamente.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-criar-wg.png}
-	\caption{Detalhamento da tarefa "Criar Workgroup" que pertence à regra~\emph{Manager}.}
+	\caption{Detalhamento da tarefa ``Criar Workgroup'' que pertence à regra~\emph{Manager}.}
 	\label{fig:td-criar-wg}
 \end{figure}
 
-Agora na regra~\emph{StudentWorgroup}, o diagrama da tarefa "Processar Dados" apresentado na Figura~\ref{fig:td-criar-wg} mostra que o modelos do aluno são separados e enviados junto com os dados do SMA para os respectivos agentes.
+Agora na regra~\emph{StudentWorgroup}, o diagrama da tarefa ``Processar Dados'' apresentado na Figura~\ref{fig:td-criar-wg} mostra que o modelos do aluno são separados e enviados junto com os dados do SMA para os respectivos agentes.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-processar-dados.png}
-	\caption{Detalhamento da tarefa "Processar Dados" que pertence à regra~\emph{StudentWorkgroup}.}
+	\caption{Detalhamento da tarefa ``Processar Dados'' que pertence à regra~\emph{StudentWorkgroup}.}
 	\label{fig:td-processar-dados}
 \end{figure}
 
-A Figura~\ref{fig:td-atualizar-modelos} apresenta o diagrama da tarefa "Atualizar Modelos", representando o recebimento das inferências cognitiva, metacognitiva e afetiva. A transição inicia-se com o recebimento de um desses modelos. A tarefa vai para o estado "Aguardar Modelo Completo", onde verifica se os três modelos já foram inferidos. Se a verificação for válida, a tarefa é terminada e o objetivo de inferência dos modelos é atingido. Caso contrário, a tarefa aguarda as outras inferências e muda seu estado quando elas chegarem, repetindo assim o fluxo inicial.
+A Figura~\ref{fig:td-atualizar-modelos} apresenta o diagrama da tarefa ``Atualizar Modelos'', representando o recebimento das inferências cognitiva, metacognitiva e afetiva. A transição inicia-se com o recebimento de um desses modelos. A tarefa vai para o estado ``Aguardar Modelo Completo'', onde verifica se os três modelos já foram inferidos. Se a verificação for válida, a tarefa é terminada e o objetivo de inferência dos modelos é atingido. Caso contrário, a tarefa aguarda as outras inferências e muda seu estado quando elas chegarem, repetindo assim o fluxo inicial.
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.4]{images/td-atualizar-modelos.png}
-	\caption{Detalhamento da tarefa "Atualizar Modelos" que pertence à regra~\emph{StudentWorkgroup}.}
+	\caption{Detalhamento da tarefa ``Atualizar Modelos'' que pertence à regra~\emph{StudentWorkgroup}.}
 	\label{fig:td-atualizar-modelos}
 \end{figure}
 
@@ -253,25 +253,25 @@ As regras~\emph{AffectiveAction} e~\emph{MetacognitiveAction} possuem tarefas se
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-inferir-afetivo.png}
-	\caption{Detalhamento da tarefa "Inferir Modelo Afetivo" que pertence à regra~\emph{AffectiveAction}.}
+	\caption{Detalhamento da tarefa ``Inferir Modelo Afetivo'' que pertence à regra~\emph{AffectiveAction}.}
 	\label{fig:td-inferir-afetivo}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-inferir-metacognitivo.png}
-	\caption{Detalhamento da tarefa "Inferir Modelo Metacognitivo" que pertence à regra~\emph{MetacognitiveAction}.}
+	\caption{Detalhamento da tarefa ``Inferir Modelo Metacognitivo'' que pertence à regra~\emph{MetacognitiveAction}.}
 	\label{fig:td-inferir-metacognitivo}
 \end{figure}
 
-A regra~\emph{CognitiveAction} possui um detalhamento maior, visto que será necessário a inferência explícita do estilo de aprendizagem do aluno. Para tanto, as regras possuem uma comunicação interna (representada pela linha tracejada azul) significando que provavelmente estarão no mesmo agente. De forma simples as tarefas da regra~\emph{CognitiveAction} "Separar Dados de Aprendizagem" e "Atualizar Modelo" fazem o semelhante que já foi mostrado em outras tarefas. Portanto, o diagrama destas tarefas foi suprimido.
+A regra~\emph{CognitiveAction} possui um detalhamento maior, visto que será necessário a inferência explícita do estilo de aprendizagem do aluno. Para tanto, as regras possuem uma comunicação interna (representada pela linha tracejada azul) significando que provavelmente estarão no mesmo agente. De forma simples as tarefas da regra~\emph{CognitiveAction} ``Separar Dados de Aprendizagem'' e ``Atualizar Modelo'' fazem o semelhante que já foi mostrado em outras tarefas. Portanto, o diagrama destas tarefas foi suprimido.
 %%%%Suprimi as tarefas
 
 O diagrama da regra~\emph{LearningMethodAnalyzer} apresentado na Figura~\ref{fig:td-analise-aprendizagem} mostra o processo de análise do estilo de aprendizagem. A inferência deve ser do tipo explícita caso os dados sejam o questionário. Caso contrário, a inferência deve ser implícita e pode variar de acordo com o AVA que enviou os dados.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/td-analise-aprendizagem.png}
-	\caption{Detalhamento da tarefa "Analisar Estilo de Aprendizagem" que pertence à regra~\emph{LearningMethodAnalyzer}.}
+	\caption{Detalhamento da tarefa ``Analisar Estilo de Aprendizagem'' que pertence à regra~\emph{LearningMethodAnalyzer}.}
 	\label{fig:td-analise-aprendizagem}
 \end{figure}
 

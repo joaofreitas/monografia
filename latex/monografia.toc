@@ -41,10 +41,10 @@
 \contentsline {subsection}{\numberline {2.4.2}Ferramentas de SMA}{35}{subsection.2.4.2}
 \contentsline {subsubsection}{Arquitetura}{36}{section*.24}
 \contentsline {subsubsection}{Implementa\IeC {\c c}\IeC {\~a}o dos Agentes}{37}{section*.25}
-\contentsline {subsubsection}{Ciclo de Vida dos Agentes}{37}{section*.26}
+\contentsline {subsubsection}{Ciclo de Vida dos Agentes}{38}{section*.26}
 \contentsline {subsubsection}{Interface Gr\IeC {\'a}fica}{38}{section*.27}
-\contentsline {subsection}{\numberline {2.4.3}JBoss Seam}{38}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}Trabalhos Correlatos}{39}{section.2.5}
+\contentsline {subsection}{\numberline {2.4.3}JBoss Seam}{39}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Trabalhos Correlatos}{40}{section.2.5}
 \contentsline {chapter}{\numberline {3}Proposta de Solu\IeC {\c c}\IeC {\~a}o}{42}{chapter.3}
 \contentsline {section}{\numberline {3.1}A Modelagem}{43}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}An\IeC {\'a}lise}{43}{subsection.3.1.1}
@@ -57,7 +57,7 @@
 \contentsline {section}{\numberline {4.1}Metodologia de Testes}{62}{section.4.1}
 \contentsline {section}{\numberline {4.2}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Aluno}{62}{section.4.2}
 \contentsline {section}{\numberline {4.3}Demonstra\IeC {\c c}\IeC {\~a}o da Interface com Docente}{64}{section.4.3}
-\contentsline {section}{\numberline {4.4}Resultados}{68}{section.4.4}
+\contentsline {section}{\numberline {4.4}Resultados}{67}{section.4.4}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalhos Futuros}{69}{chapter.5}
 \contentsline {chapter}{\numberline {A}Casos de Uso}{71}{appendix.A}
 \contentsline {section}{\numberline {A.1}Determinar Modelagem Cognitiva}{71}{section.A.1}
