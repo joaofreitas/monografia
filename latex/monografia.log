@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  3 MAR 2013 20:11
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  3 MAR 2013 22:33
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -967,9 +967,9 @@ File: positivo_cor.pdf Graphic file (type pdf)
 
  [9]
 (./monografia.lof
-Overfull \hbox (10.19379pt too wide) in paragraph at lines 33--33
- [][] [][][]\T1/cmr/m/n/12 Detalhamento da ta-refa "Pro-ces-sar Da-dos"que per-
-tence р re-gra \T1/cmr/m/it/12 Stu-dentWork- 
+Overfull \hbox (9.8675pt too wide) in paragraph at lines 33--33
+ [][] [][][]\T1/cmr/m/n/12 Detalhamento da ta-refa ``Pro-ces-sar Da-dos'' que p
+er-tence р re-gra \T1/cmr/m/it/12 Stu-dentWork- 
  []
 
 [10
@@ -1053,10 +1053,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--37
 \T1/cmr/m/n/12 pe-ri-men-ta-чуo
  []
 
-[5] [6] [7] [8] <images/agente-basico.png, id=514, 287.0725pt x 182.6825pt>
+[5] [6] [7] [8] [9]
+<images/agente-basico.png, id=519, 287.0725pt x 182.6825pt>
 File: images/agente-basico.png Graphic file (type png)
 
-<use images/agente-basico.png> [9]
+<use images/agente-basico.png> [10 <./images/agente-basico.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 182--182
 []\T1/cmr/bx/n/12 Tipo de
  []
@@ -1111,19 +1112,18 @@ Overfull \hbox (3.09444pt too wide) in paragraph at lines 180--192
 [][]
  []
 
-[10 <./images/agente-basico.png (PNG copy)>] [11] [12] [13] [14] [15]
+[11] [12] [13] [14] [15]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 324.
- [16]
-[17]
+ [16] [17]
 
-LaTeX Warning: Float too large for page by 68.91383pt on input line 444.
+LaTeX Warning: Float too large for page by 68.91383pt on input line 440.
 
 [18] [19] <images/arvore-ontologia.png, id=632, 701.62125pt x 265.99374pt>
 File: images/arvore-ontologia.png Graphic file (type png)
 
 <use images/arvore-ontologia.png>
-Overfull \hbox (0.80429pt too wide) in paragraph at lines 461--462
+Overfull \hbox (0.80429pt too wide) in paragraph at lines 456--457
  [][] 
  []
 
@@ -1133,7 +1133,7 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 ) [20 <./images/arvore-ontologia.png (PNG copy)>]
-Overfull \hbox (2.89798pt too wide) in paragraph at lines 487--488
+Overfull \hbox (2.89798pt too wide) in paragraph at lines 482--483
 [][][][][][][][][][][][][][][][] 
  []
 
@@ -1176,14 +1176,14 @@ File: images/categorias-diagramas.png Graphic file (type png)
 
 <use images/categorias-diagramas.png>
 
-LaTeX Warning: Float too large for page by 5.8974pt on input line 722.
+LaTeX Warning: Float too large for page by 5.8974pt on input line 717.
 
 [30] [31 <./images/categorias-diagramas.png (PNG copy)>]
 <images/exemplo-uml.png, id=774, 701.62125pt x 405.515pt>
 File: images/exemplo-uml.png Graphic file (type png)
 
 <use images/exemplo-uml.png>
-Overfull \hbox (70.97052pt too wide) in paragraph at lines 779--780
+Overfull \hbox (70.97052pt too wide) in paragraph at lines 774--775
  [][] 
  []
 
@@ -1191,7 +1191,7 @@ Overfull \hbox (70.97052pt too wide) in paragraph at lines 779--780
 File: images/exemplo-diagrama-sequencia.png Graphic file (type png)
 
 <use images/exemplo-diagrama-sequencia.png>
-Overfull \hbox (41.61093pt too wide) in paragraph at lines 797--798
+Overfull \hbox (41.61093pt too wide) in paragraph at lines 792--793
  [][] 
  []
 
@@ -1494,10 +1494,10 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 11412 strings out of 495041
- 158539 string characters out of 1181897
- 265734 words of memory out of 3000000
- 13852 multiletter control sequences out of 15000+50000
+ 11385 strings out of 495041
+ 158115 string characters out of 1181897
+ 265772 words of memory out of 3000000
+ 13825 multiletter control sequences out of 15000+50000
  19485 words of font info for 48 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  45i,10n,74p,974b,1832s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1516,9 +1516,9 @@ en/ec/ecbx2488.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
 ome/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (94 pages, 1355254 bytes).
+Output written on monografia.pdf (94 pages, 1355049 bytes).
 PDF statistics:
- 1968 PDF objects out of 2073 (max. 8388607)
+ 1966 PDF objects out of 2073 (max. 8388607)
  414 named destinations out of 1000 (max. 500000)
  648 words of extra memory for PDF output out of 10000 (max. 10000000)
 

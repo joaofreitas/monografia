@@ -301,7 +301,7 @@ As conversações são definidas da seguinte forma:
 	\item Conv1 - Conversação do~\emph{WebServiceAgent} com o~\emph{ManagerAgent}
 	\item Conv2 e Conv7 - Conversação do~\emph{GatewayAgent} com o~\emph{ManagerAgent}
 	\item Conv3 - Conversação do~\emph{ManagerAgent} com o~\emph{WorkgroupAgent}
-	\item Conv4, Conv5 e Conv6 - Conversação do~\emph{WorkGroupAgent} com os agentes~\emph{CognitiveAgent},~\emph{MetacognitiveAgent} e ~\emph{AffectiveAgent}, respectivamente.
+	\item Conv4, Conv5 e Conv6 - Conversação do~\emph{WorkGroupAgent} com os agentes~\emph{CognitiveAgent},~\emph{MetacognitiveAgent} e~\emph{AffectiveAgent}, respectivamente.
 \end{itemize}
 
 A primeira conversação (conv1) ocorre de forma simples. A Figura~\ref{fig:conv1-iniciador} representa a conversação do lado iniciador da conversação. Ele solicita ao respondedor a verificação da existência do aluno na plataforma e entra no estado de espera. Caso a resposta seja~\emph{usuarioValido}, o iniciador irá enviar a mensagem~\emph{enviarDados} e encerrar a execução normalmente. Caso contrário, entrará no estado de falha, onde informará erro de execução.
