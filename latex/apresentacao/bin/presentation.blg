@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: bin/presentation.aux
+The style file: plain.bst
+Database file #1: bibliografia.bib
+Warning--I didn't find a database entry for "fabriciobuzzeto"
+Warning--I didn't find a database entry for "weiser2"
+Warning--I didn't find a database entry for "saocarlos"
+Warning--I didn't find a database entry for "yang"
+Warning--I didn't find a database entry for "hewitt"
+Warning--I didn't find a database entry for "violajones"
+Warning--empty journal in bativa2011
+Warning--can't use both volume and number fields in geyer2001semeai
+Warning--can't use both volume and number fields in rabelo2010identificacao
+Warning--there's a number but no series in novig95
+Warning--can't use both volume and number fields in soaresagente
+Warning--there's a number but no series in wooldridge04
+You've used 6 entries,
+            2118 wiz_defined-function locations,
+            532 strings with 5201 characters,
+and the built_in function-call counts, 2110 in all, are:
+= -- 190
+> -- 117
+< -- 6
++ -- 47
+- -- 40
+* -- 154
+:= -- 352
+add.period$ -- 20
+call.type$ -- 6
+change.case$ -- 36
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 85
+empty$ -- 160
+format.name$ -- 40
+if$ -- 438
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 8
+newline$ -- 33
+num.names$ -- 12
+pop$ -- 45
+preamble$ -- 1
+purify$ -- 32
+quote$ -- 0
+skip$ -- 58
+stack$ -- 0
+substring$ -- 63
+swap$ -- 25
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 6
+while$ -- 15
+width$ -- 7
+write$ -- 70
+(There were 12 warnings)
