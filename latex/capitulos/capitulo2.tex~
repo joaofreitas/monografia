@@ -137,7 +137,7 @@ Esta seção visa expor os fundamentos acerca de SMA. Primeiramente serão apres
 
 \subsection{Conceitos}
 
-Em~\cite{novig95} é possível identificar que a definição de IA foi separada em quatro grupos. A distinção foi feita com base na classificação das definições conforme o seu entendimento de raciocínio, comportamento, performance humana e racionalidade. A racionalidade é entendida como um conceito ideal de inteligência inerente à um sistema. Os quatro grupos que definem IA são:
+Em~\cite{novig95} é possível identificar que a definição de IA foi separada em quatro grupos. A distinção foi feita com base nas definições conforme o seu entendimento de raciocínio, comportamento, desempenho humano e racionalidade. A racionalidade é entendida como um conceito ideal de inteligência inerente à um sistema. Os quatro grupos que definem IA são:
 
 \begin{itemize}
 	\item Sistemas que pensam como humanos: Define IA em termos de raciocínio baseado no modelo cognitivo humano. A evidência de programas que podem operar como humanos é feita por meio da comparação da entrada, saída e o tempo de execução do programa com padrões humanos.
@@ -161,7 +161,7 @@ A Figura~\ref{fig:agente-basico} representa o funcionamento básico de agentes, 
 	\label{fig:agente-basico}
 \end{figure}
 
-Alguns agentes seguem o princípio básico de racionalidade: Sempre objetivam suas ações pela escolha da melhor ação possível segundo seus conhecimentos. Logo é possível inferir que a ação de um agente nem sempre alcança o máximo desempenho, parâmetro definido para medir o grau de sucesso da ação de um agente com base nos seus objetivos. São estes os chamados Agentes Racionais.
+Alguns agentes seguem o princípio básico de racionalidade: Sempre objetivam suas ações pela escolha da melhor ação possível segundo seus conhecimentos. Logo é possível denotar que a ação de um agente nem sempre alcança o máximo desempenho, parâmetro definido para medir o grau de sucesso da ação de um agente com base nos seus objetivos. São estes os chamados Agentes Racionais.
 
 Como dito anteriormente, agentes estão presentes em um ambiente e não possuem controle total sobre o mesmo, sendo possível no máximo a influência com a sua atuação ou a criação de outros agentes. Podemos separar ambientes em classes: Software, Físico e Relidade virtual (simulação de ambientes reais em~\emph{software}). Em~\cite{wooldridge04} são definidos os ambientes com propriedades inerentes à seu funcionamento:
 
@@ -353,13 +353,15 @@ Na segunda mensagem, o seu enunciado performativo é~\emph{reply}, significando 
 )
 \end{lstlisting}
 
-De acordo com~\cite{wooldridge04}, a adoção desta linguagem pela comunidade de SMA foi significante, mas sofreu diversas críticas e ocasionando o desenvolvimento de novas linguagens:
+De acordo com~\cite{wooldridge04}, a adoção desta linguagem pela comunidade de SMA foi significante, mas possui diversos aspectos negativos:
 \begin{itemize}
 	\item A fluídez e a não restrição do KQML fez com que diversas implementações extendidas surgissem, impossibilitando a interoperabilidade entre sistemas;
 	\item Mecanismos de transporte do KQML nunca foram bem definidos, causando problemas de diversas implementações destes mecanismos e prejudicando novamente a interoperabilidade;
-	\item A semântica do KQML nunca foi formalmente definida, ocasionando em má interpretações dos enunciados performativos;
+	\item A semântica do KQML não foi formalmente definida, ocasionando em má interpretações dos enunciados performativos;
 	\item A linguagem não possui enunciados performativos adequados para algumas semânticas. Por exemplo, a inexistência do enunciado~\emph{comissives}.
 \end{itemize}
+
+Dessa forma, a linguagem
 
 \subsubsection{KIF}
 A linguagem foi desenvolvida para expressar conhecimento a cerca de um determinado domínio, sendo possível assim a troca de conhecimentos entre agentes. De acordo com~\cite{kifmanual} a linguagem possui as seguintes características:
@@ -379,11 +381,11 @@ O exemplo de código da Listagem~\ref{code:exemplo-kif} ilustra um exemplo de ex
 
 \subsection{Linguagem de Comunicação de Agentes FIPA}
 
-Após as críticas à linguagem KQML, o consórcio~\emph{Foundation for Intelligent Physical Agents} (FIPA) começou a trabalhar em 1995 no desenvolvimento da padronização de SMA. O núcleo dessa padronização foi o desenvolvimento de uma linguagem de comunicação de agentes (ACL) comum à todas as plataformas.
+Após as críticas à linguagem KQML, o consórcio~\emph{Foundation for Intelligent Physical Agents} (FIPA) começou a trabalhar em 1995 no desenvolvimento da padronização de SMA. O núcleo dessa padronização foi o desenvolvimento da Linguagem de Comunicação de Agentes (ACL) comum à todas as plataformas.
 
 Baseado na linguagem KQML, a estrutura das mensagens é a mesma e os seus atributos são semelhantes. A maior diferença entre as duas linguagens são os enunciados performativos. Foram definidos 20 tipos de mensagens performativas, muito semelhante ao KQML, porém com definições formais das interpretações dessas mensagens e não definindo nenhuma linguagem para o conteúdo da mensagem.
 
-Devido ao fato da linguagem KQML não possuir enunciados performativos adequados, a ACL da FIPA recebeu total atenção na definição formal da semântica da linguagem. A Tabela~\ref{table:fipa-cal-spec} contém um breve resumo dos enunciados performativos disponíveis em~\cite{fipa-cal-spec}. É importante ressaltar que a especificação disponível em~\cite{fipa-cal-spec} possui toda a descrição formal de cada enunciado performativo aqui descrito.
+Devido a falta de enunciados performativos adequados da linguagem KQML, a ACL da FIPA reescreveu e restringiu alguns enunciados, além de definir formalmente a semântica da linguagem. A Tabela~\ref{table:fipa-cal-spec} contém um breve resumo dos enunciados performativos disponíveis em~\cite{fipa-cal-spec}. É importante ressaltar que a especificação disponível em~\cite{fipa-cal-spec} possui toda a descrição formal de cada enunciado performativo aqui descrito.
 
 \begin{table}
 	\caption{Listagem de Enunciados Performativos}
@@ -449,8 +451,7 @@ Ontologia é um um ramo da Filosofia que dedica-se a estudar e representar a nat
 \emph{...concentrating on general concepts-such as Actions, Time, Physical Objects, and Beliefs - that occur in many different domains. Representing these abstract concepts is sometimes called ontological engineering.}
 \end{quote}
 
-A possibilidade de representação de conhecimento por meio de ontologias é vasta. A sua forma de especificação pode ser entendida como uma hierarquia, onde os conhecimentos são organizados na forma de árvore, possibilitando a inserção de novos nós de conhecimento a qualquer momento na estrutura.
-
+A Figura~\ref{fig:arvore-ontologia} representa a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.65]{images/arvore-ontologia.png}
@@ -458,13 +459,12 @@ A possibilidade de representação de conhecimento por meio de ontologias é vas
 	\label{fig:arvore-ontologia}
 \end{figure}
 
-A Figura~\ref{fig:arvore-ontologia} representa a organização geral de conceitos, chamado de ontologias superiores. As ontologias gerais estão representadas no topo da árvore, e as suas especialidades vão crescendo no sentido das folhas.
+Em um ambiente SMA além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação a um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, enfim, dois agentes podem comunicar-se usando a mesma ontologia.
 
-Em um ambiente SMA além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação à um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, enfim, dois agentes podem comunicar-se usando a mesma ontologia.
+A possibilidade de representação de conhecimento por meio de ontologias é vasta, visto que sua esta pode ser expressada por meio de lógica de primeira ordem. Considerando a parte de ontologias onde são definidos os conhecimentos, a modelagem de conceitos pode ser definida de forma hierárquica onde são organizados na forma de árvore, possibilitando a inserção de novos nós de conceitos a qualquer momento na estrutura.
+A expressão de conceitos é possível em qualquer linguagem capaz de representar hierarquias. A linguagem~\emph{eXtensible Markup Language} (XML), por exemplo, é uma linguagem de marcação que organiza os dados de forma hierarquizada.
 
-Existem muitas linguagens que foram desenvolvidas para expressar ontologias. A mais comum delas é a~\emph{eXtensible Markup Language} (XML), uma linguagem de marcação que organiza os dados de forma hierarquizada.
-
-A Listagem~\ref{code:exemplo-xml} descreve uma ontologia de domínio de países escrita na linguagem XML. Nela observa-se a ontologia superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no exemplo da Listagem~\ref{code:exemplo-xml}, porém sem alteração de semântica.
+A Listagem~\ref{code:exemplo-xml} apresenta uma representação de conceitos de domínio de países escrita na linguagem XML. Nela observa-se um conceito superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no exemplo da Listagem~\ref{code:exemplo-xml}, porém sem alteração de semântica.
 
 
 \begin{lstlisting}[language=xml,label=code:exemplo-xml,caption=Representação uma ontologia simples de cidades.]
@@ -503,13 +503,13 @@ Foram definidas algumas metodologias para modelagem e desenvolvimento de SMA. A 
 
 A metodologia~\emph{PASSI} (\emph{Process for Agent Societies Specification and Implementation}) é designada para o acompanhamento do desenvolvimento do sistema desde o levantamento dos requisitos até a codificação~\cite{burrafato02}. Seus modelos de projetos são baseados nas especificações da FIPA, garantindo assim a compatibilidade com o SMA a ser desenvolvido. O~\emph{PASSI} define uma metodologia cinco modelos de trabalho: Requisito do Sistema, sociedade de Agentes, implementação dos agentes, modelo de código e modelo de implantação.
 
-A metodologia~\emph{Multiagent Systems Engineering} (MASE) é definida por meio dos requisitos e metas iniciais do SMA. Estes são levantados de forma iterativa e a partir de então são modeladas em diversas etapas as tarefas para cumprir os objetivos. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura. Em~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Design.
+A metodologia~\emph{Multiagent Systems Engineering} (MASE) é definida por meio dos requisitos e metas iniciais do SMA. O processo funciona de forma iterativa e a partir dos requisitos e casos de uso iniciais do sistema são modeladas as regras e tarefas para cumprir os objetivos. O MASE utiliza-se de alguns modelos gráficos para a descrição dos agentes, seus objetivos, suas interações e a sua arquitetura. Em~\cite{scott01}, a metodologia do MASE é baseada nas mais tradicionais metodologias de desenvolvimento de software, dividida em duas fases principais: Análise e Arquitetura.
 
 Neste trabalho, foi escolhido a metodologia de desenvolvimento MASE. Em contraste com as outras abordagens, a metodologia~\emph{GAIA} não permite a adição de novos requisitos no momento de~\emph{design}. Supondo uma situação onde estuda-se detalhadamente o~\emph{design} do sistema, ocasionalmente podem surgir alguns requisitos ou tarefas adicionais derivados desta análise. Por não permitir a adição destes requisitos, o~\emph{GAIA} mostra-se uma abordagem mais rígida e pode ser desvantajosa se comparado com outras e, portanto, foi descartada.
 
 A necessidade do acompanhamento até o código do desenvolvimento dos agentes feito pela metodologia~\emph{PASSI} poderia exigir um conhecimento mais aprofundado do framework de desenvolvimento do SMA, necessitando assim da escolha e estudo prévio deste~\emph{framework}. Este trabalho optou então pelo não acoplamento entre o projeto de modelagem e o código e, portanto, determinou o~\emph{MASE} para o seu desenvolvimento.
 
-Justificada a escolha da metodologia, a primeira fase do MASE, chamada de análise, consiste no levantamento e entendimento dos requisitos com o objetivo de levantar um conjunto de regras, as quais são associadas à tarefas que devem ser realizadas para o sistema atingir seus objetivos. Ao fim dessa fase, são gerados alguns artefatos que embasarão a próxima etapa da metodologia. A fase de análise pode ser dividida nos seguintes passos:
+Justificada a escolha da metodologia, a primeira fase do MASE, chamada de análise, consiste no levantamento e entendimento dos requisitos com o objetivo de definir um conjunto de regras, as quais são associadas a tarefas que devem ser realizadas para o sistema atingir seus objetivos. Ao fim dessa fase, são gerados alguns artefatos que embasarão a próxima etapa da metodologia. A fase de análise pode ser dividida nos seguintes passos:
 
 \begin{itemize}
 	\item Capturar Metas;
@@ -517,13 +517,13 @@ Justificada a escolha da metodologia, a primeira fase do MASE, chamada de análi
 	\item Refinar Regras.
 \end{itemize}
 
-A fase de design consiste na modelagem do SMA de acordo com as regras levantadas na fase anterior. O objetivo é a definição das conversações que existirão entre os agentes, bem como a arquitetura geral do sistema. Essa fase pode ser divida em quatro passos:
+A fase de projeto consiste na modelagem do SMA de acordo com as regras levantadas na fase anterior. O objetivo é a definição das conversações que existirão entre os agentes, bem como a arquitetura geral do sistema. Essa fase pode ser divida em quatro passos:
 
 \begin{itemize}
 	\item Criar as Classes dos Agentes;
 	\item Construir Conversações;
 	\item Montagem dos Agentes;
-	\item Design do Sistema.
+	\item Projeto do Sistema.
 \end{itemize}
 
 \subsection{Análise}
@@ -590,9 +590,9 @@ A mensagem sempre possui um cabeçalho performativo (definida pela FIPA, represe
 
 Após a definição dos~\emph{Concurrent Tasks Diagrams}, o analista pode combinar tarefas, a fim de diminuir a complexidade do sistema. Com isso, o sistema já possui a complexidade das regras determinadas, bem como as tarefas necessárias para atingir seus objetivos.
 
-\subsection{Design}
+\subsection{Projeto}
 
-A fase de design é divida em quatro passos: Criar Classes dos Agentes, Construir Conversações, Montagem dos Agentes e Design do Sistema. O principal objetivo desta fase é projetar os agentes e suas interações de acordo com os insumos construídos na fase anterior.
+Esta fase é divida em quatro passos: Criar Classes dos Agentes, Construir Conversações, Montagem dos Agentes e Design do Sistema. O principal objetivo desta fase é projetar os agentes e suas interações de acordo com os insumos construídos na fase anterior.
 
 \subsubsection{Criando as Classes dos Agentes}
 
@@ -647,7 +647,7 @@ No diagrama de arquitetura de agentes apresentado na Figura~\ref{fig:exemplo-dia
 
 As setas tracejadas indicam dependência com módulos externos ao agente, enquanto as outras representam dependência entre componentes.
 
-\subsubsection{Design do Sistema}
+\subsubsection{Projeto do Sistema}
 
 A fase final da metodologia MASE consiste na criação de um diagrama de~\emph{deploy} dos agentes. Este diagrama consiste na representação do número de agentes que serão criados por cada máquina da aplicação, bem como suas localizações no sistema.
 
@@ -677,33 +677,33 @@ Conforme o avanço da modelagem do SMA, algumas abas serão habilitadas de acord
 
 \section{Estudos de Ferramentas e Tecnologias Relacionadas}\label{section:ferramentas}
 
-Nesta seção estão reunidos as tecnologias que auxiliares ao desenvolvimento do SMA. A primeira seção explica alguns diagramas que são definidos na~\emph{Unified Modeling Language} (UML), necessários para entender os passos do MASE.
+Nesta seção estão reunidas as tecnologias auxiliares ao desenvolvimento do SMA. A primeira seção explica alguns diagramas que são definidos na~\emph{Unified Modeling Language} (UML), necessários para entender os passos do MASE.
  
-Em seguida é explicado os conceitos relacionados ao~\emph{middleware} JADE, bem como a sua arquitetura, o funcionamento dos agentes e os agentes que possuem interface gráfica.
+Em seguida são explicados alguns conceitos relacionados ao~\emph{middleware} JADE, bem como a sua arquitetura, o funcionamento dos agentes e os agentes que possuem interface gráfica.
 
 Por fim, esta seção disserta a respeito da ferramenta JBoss Seam, responsável por interligar os principais~\emph{frameworks} JAVA e facilitar o desenvolvimento de aplicações~\emph{web} dinâmicas.
 
 \subsection{UML}
 
-A Linguagem Unificada de Modelagem, UML é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens objetivando o entendimento dos artefatos de forma rápida e clara, resultando em uma semântica para o projeto em questão. Segundo~\cite{fowler04} o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
+A Linguagem Unificada de Modelagem (UML) é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens objetivando o entendimento dos artefatos de forma rápida e clara, resultando em uma semântica para o projeto em questão. Segundo~\cite{fowler04}, o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
 
 O UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
 A linguagem ajuda o entendimento de como o software foi projetado, como ocorre a comunicação entre seus objetos, como suas classes são organizadas, quais são os atores que são envolvidos na utilização do software, dentre outras possibilidades de representação.
 
-Segundo~\cite{fowler04} é possível separar o uso do UML de três formas distintas de modelagem conforme o objetivo de uso: Rascunho, planta de software e como linguagem de programação. 
+Segundo~\cite{fowler04} é possível separar o uso da linguagem de três formas distintas de modelagem conforme o objetivo de uso: Rascunho, arquitetura de software e como linguagem de programação. 
 
-A utilização como rascunho é facilita a comunicação entre as pessoas envolvidas no projeto, sejam desenvolvedores discutindo funcionalidades do software ou gestores explicando funcionalidades em alto nível. O objetivo neste uso é a comunicação de alguns aspectos do sistema de forma rápida, sem a necessidade de formalizar artefatos para o projeto.
+A utilização como rascunho facilita a comunicação entre as pessoas envolvidas no projeto, sejam desenvolvedores discutindo funcionalidades do software ou gestores explicando funcionalidades em alto nível. O objetivo neste uso é a comunicação de alguns aspectos do sistema de forma rápida, sem a necessidade de formalizar artefatos para o projeto.
 
-A utilização do UML como planta de software são documentos detalhados que são criados para documentação do software, sendo divida em duas sub-categorias: Engenharia reversa e engenharia normal. Na engenharia reversa, os diagramas são gerados a partir de uma ferramenta que faz a leitura do código fonte e gera os diagramas desejados, que são utilizados para auxiliar o leitor no entendimento do sistema. Na engenharia normal, a idéia é modelar o sistema detalhadamente antes de qualquer desenvolvimento, prevendo quais serão os módulos do sistema, bem como a sua a comunicação.
+A utilização da UML como arquitetura de software são documentos detalhados que são criados para documentação do software, sendo divida em duas sub-categorias: Engenharia reversa e engenharia normal. Na engenharia reversa, os diagramas são gerados a partir de uma ferramenta que faz a leitura do código fonte e gera os diagramas desejados, que são utilizados para auxiliar o leitor no entendimento do sistema. Na engenharia normal, a idéia é modelar o sistema detalhadamente antes de qualquer desenvolvimento, prevendo quais serão os módulos do sistema, bem como a sua a comunicação.
 
-No uso como linguagem de programação, o UML é utilizado para geração de código executável por ferramentas avançadas de modelagem. Esse modo requer a modelagem de estado e comportamento do sistema, para fins de detalhar todo o comportamento e lógica do sistema em código.
+No uso como linguagem de programação, a UML é utilizado para geração de código executável por ferramentas avançadas de modelagem. Esse modo requer a modelagem de estado e comportamento do sistema, para fins de detalhar o comportamento e lógica do sistema em código.
 
 \subsubsection{Diagramas UML}
 
-O UML descreve 13 tipos de diagramas, conforme a Figura~\ref{fig:categorias-diagramas}, os quais podem ser categorizados como estruturais e comportamentais. Apesar da grande quantidade diagramas envolvidos no UML, de acordo com~\cite{larman08}, a maioria dos processos de desenvolvimento de software utilizam-se de poucos modelos devido à maior significância de alguns. A metodologia de desenvolvimento de SMA utiliza-se apenas dos seguintes diagramas:
+A UML descreve 13 tipos de diagramas, conforme a Figura~\ref{fig:categorias-diagramas}, os quais podem ser categorizados como estruturais e comportamentais. Apesar da grande quantidade diagramas envolvidos no UML, de acordo com~\cite{larman08}, a maioria dos processos de desenvolvimento de software utilizam-se de poucos modelos devido à maior significância de alguns. A metodologia de desenvolvimento de SMA utiliza apenas dos seguintes diagramas:
 
 \begin{itemize}
-	\item Diagrama de Caso de uso;
+	\item Diagrama de Casos de uso;
 	\item Diagrama de Sequência.
 \end{itemize}
 
@@ -714,7 +714,7 @@ O UML descreve 13 tipos de diagramas, conforme a Figura~\ref{fig:categorias-diag
 	\label{fig:categorias-diagramas}
 \end{figure}
 
-\paragraph{Diagrama de Caso de Uso}
+\paragraph{Diagrama de Casos de Uso}
 
 Casos de uso são relatos textuais que são utilizados para descobrir e descrever os requisitos do sistema. Consiste da descrição de como um ator utiliza uma funcionalidade do sistema para atingir algum objetivo relacionado. Em~\cite{larman08}, os casos de uso devem ser prioritariamente desenvolvidos de forma textual e o seu respectivo diagrama deve ser desenvolvido de forma secundária, somente para ilustrar o relato textual.
 
@@ -802,18 +802,18 @@ O diagrama de sequência geralmente está relacionado com o caso de uso, primeir
 
 \subsection{Ferramentas de SMA}
 
-Os~\emph{frameworks} projetados para o desenvolvimento de SMA visam simplificar o desenvolvimento de aplicações ao implementar uma infra-estrutura básica que provê recursos ao programador. O seu objetivo é garantir os recursos que são essenciais em um SMA, possibilitando o foco do programador no desenvolvimento da aplicação. Diversas ferramentas foram criados para a criação de SMA, cada um com características distintas.
+Os~\emph{frameworks} projetados para o desenvolvimento de SMA visam simplificar a criação de aplicações ao implementar uma infra-estrutura básica que provê recursos ao programador. O seu objetivo é garantir os recursos que são essenciais em um SMA, possibilitando o foco do programador no desenvolvimento da aplicação. Diversas ferramentas foram elaboradas para dar suporte ao desenvolvimento de SMA, cada uma com características distintas.
 
-O~\emph{AgentMom}~\ref{agentMom} é um~\emph{framework} de comunicação que foi criado na linguagem JAVA para o desenvolvimento de agentes, conversações e a passagem de mensagens simples nestas conversações. Possui a capacidade de criação de grupos específicos para envio de mensagens (\emph{multicast}) e encriptação do conteúdo da mensagem.
+O~\emph{AgentMom}~\cite{agentMom} é um~\emph{framework} de comunicação que foi criado na linguagem JAVA para o desenvolvimento de agentes, conversações e a passagem de mensagens simples nestas conversações. Possui a capacidade de criação de grupos específicos para envio de mensagens (\emph{multicast}) e encriptação do conteúdo da mensagem.
 
-O~\emph{MaDKit}~\ref{madkit} é uma ferramenta para desenvolvimento SMA também desenvolvido em JAVA, onde é possível definir uma plataforma pelo modelo organizacional, agrupando agentes e determinando regras para este grupo.
+O~\emph{MaDKit}~\cite{madkit} é uma ferramenta para desenvolvimento SMA também desenvolvido em JAVA, onde é possível definir uma plataforma pelo modelo organizacional, agrupando agentes e determinando regras para este grupo.
 
-O~\emph{Java Agent Development Framework} (JADE) é um~\emph{middleware} criado para facilitar o desenvolvimento de SMA. Desenvolvido inicialmente pela Telecom Italia e desde 2000 é um projeto open source. Seu desenvolvimento de baixo acoplamento permite que seja possível integrar várias bibliotecas auxiliares (~\emph{addons}) para facilitar o desenvolvimento de aplicações.
+O~\emph{Java Agent Development Framework} (JADE) é um~\emph{middleware} criado para facilitar o desenvolvimento de SMA. Desenvolvido inicialmente pela Telecom Italia, tornando-se posteriormente um projeto open source. Seu desenvolvimento de baixo acoplamento permite que seja possível integrar várias bibliotecas auxiliares (~\emph{addons}) para facilitar o desenvolvimento de aplicações.
 
 Segundo~\cite{bellifemine07}, ele foi desenvolvido seguindo todas as especificações da FIPA, o que garante uma intercomunicação com outras plataformas. O JADE foi desenvolvido na linguagem JAVA, possibilitando o uso de diversas bibliotecas e frameworks desenvolvidos na linguagem.
 O middleware provê várias funcionalidades básicas que abstraem e simplificam o desenvolvimento de aplicações, com o objetivo do desenvolvedor estar mais preocupado com o comportamento do agente do que com a infra estrutura da plataforma.
 
-Este trabalho optou pela escolha da ferramenta JADE, pois no contraste com as outras ferramentas, foi possível destacar alguns aspectos. O~\emph{framework MaDKit} não permite o desenvolvimento de agentes com comportamento e interação complexos. Tanto o~\emph{framework AgentMon} quanto o~\emph{MaDKit} não possuem a conformidade das suas mensagens com linguagem ACL, especificado pela FIPA. Dessa forma, as duas ferramentas foram descartadas.
+Este trabalho optou pela escolha da ferramenta JADE, pois no contraste com as outras ferramentas, foi possível destacar alguns aspectos. O~\emph{framework MaDKit} não permite o desenvolvimento de agentes com comportamento e interação complexos. Tanto o~\emph{framework AgentMon} quanto o~\emph{MaDKit} não possuem a conformidade das suas mensagens com a linguagem ACL, especificada pela FIPA. Dessa forma, as duas ferramentas foram descartadas.
 
 Dada a escolha da ferramenta, é necesário entender as particularidades do JADE. O sistema de mensagem no JADE funciona de forma assíncrona. Um agente não precisa estar necessariamente disponível para receber as mensagens, visto que elas são enfileiradas e processadas em ordem. Além disso, não é necessário que um agente tenha uma referência para outro agente a fim de comunicar-se.
 
@@ -824,11 +824,11 @@ A arquitetura de um SMA desenvolvido em JADE funciona de forma semelhante à red
 	\item Directory Facilitator (DF) é o agente responsável por registrar todos os serviços e prover a funcionalidade de busca para os agentes. Este tipo de serviço é chamado de~\emph{yellow pages}.
 \end{itemize}
 
-Os agentes executam em threads separadas garantindo o não compartilhamento de recursos para evitar condições de corrida. A plataforma é responsável também por manter o ciclo de vida dos agentes. Durante a criação dos agentes, eles são automaticamente registrados no serviço de~\emph{white pages}
+Os agentes executam em~\emph{threads} separadas garantindo o não compartilhamento de recursos para evitar condições de corrida. A plataforma é responsável também por manter o ciclo de vida dos agentes. Durante a criação dos agentes, eles são automaticamente registrados no serviço de~\emph{white pages}.
 
 A mobilidade de agentes entre máquinas também é feita de forma transparente pelo JADE. Em~\cite{bellifemine07}, a mobilidade do agente pode transportar o estado do agente (sob certas condições) entre processos e máquinas.
 
-Uma das características mais importantes do~\emph{middleware} é o suporte nativo à ontologias e linguagens de comunicação FIPA. As ontologias podem ser modeladas (expressando ações, conceitos e predicados) de forma simples e clara, além de ser possível restringir as ontologias à determinados agentes que devem a conhecer.
+Uma das características mais importantes do~\emph{middleware} é o suporte nativo à ontologias e linguagens de comunicação FIPA. As ontologias podem ser modeladas (expressando ações, conceitos e predicados) de forma simples e clara, além de ser possível restringir as ontologias a determinados agentes que devem a conhecer.
 
 \subsubsection{Arquitetura}
 
@@ -841,18 +841,18 @@ A Figura~\ref{fig:arquitetura-jade} representa o ambiente de execução JADE, il
 	\label{fig:arquitetura-jade}
 \end{figure}
 
-O container principal(\emph{main container}), presente na máquina do centro, possui algumas diferenças entre os outros, chamados de~\emph{Container-1} e~\emph{Container-2}, abringando agentes primordiais na plataforma que atendem às especificações da FIPA (número 23 e 61~\cite{bellifemineGuide02}). O container principal possui o componente~\emph{container table} (CT), que possui as referências para os objetos e os endereços de comunicação dos nós que compõe a plataforma.
+O~\emph{container} principal(\emph{main container}), presente na máquina do centro, possui algumas diferenças entre os outros, chamados de~\emph{Container-1} e~\emph{Container-2}, abringando agentes primordiais na plataforma que atendem às especificações da FIPA (número 23 e 61~\cite{bellifemineGuide02}). O container principal possui o componente~\emph{container table} (CT), que possui as referências para os objetos e os endereços de comunicação dos nós que compõe a plataforma.
 
-Além disso, o container principal possui uma tabela global para descrição de agentes (GADT) que registra todos os agentes da plataforma e o seu endereço. Os outros containeres possuem uma cópia em cache da tabela para, caso a tabela principal seja corrompida, possa ser substituída.
+Além disso, o container principal possui uma tabela global para descrição de agentes (GADT) que registra todos os agentes da plataforma e o seu endereço. Os outros containeres possuem uma cópia de segurança da tabela para, caso a tabela principal seja corrompida, possa ser substituída.
 
-O primeiro deles é o~\emph{Directory Facilitator} (DF), agente responsável por registrar todos os serviços disponíveis na plataforma. O segundo agente é o~\emph{Agent Management System} (AMS) é o agente responsável por supervisionar toda a plataforma, registrando os agentes que estão rodando, bem como o seu estado. 
+O primeiro deles é o~\emph{Directory Facilitator} (DF), agente responsável por registrar todos os serviços disponíveis na plataforma. O segundo agente,~\emph{Agent Management System} (AMS), é o agente responsável por supervisionar toda a plataforma, registrando os agentes que estão em execução, bem como o seu estado. 
 
 \subsubsection{Implementação dos Agentes}
-O JADE define a classe abstrata~\emph{Agent}, que é a base para todos os agentes definidos. O desenvolvedor tem apenas o trabalho de extender esta classe e implementar o comportamento no método~\emph{setup()}. O fato de extender a classe abstrata implica em herdar várias características já definidas pelo JADE (registro, configuração, etc.) e métodos que podem ser chamados para a implementação do comportamento do agente.
+O JADE define a classe abstrata~\emph{Agent}, que é a base para todos os agentes definidos. O desenvolvedor tem apenas o trabalho de estender esta classe e implementar o comportamento no método~\emph{setup()}. O fato de estender a classe abstrata implica em herdar várias características já definidas pelo JADE (registro, configuração, etc.) e métodos que podem ser chamados para a implementação do comportamento do agente.
 
-Cada agente possui um identificador único (Agent ID - AID) que identifica o agente em toda plataforma. Por padrão, o formato do AID possui primeiramente o nome do agente seguido do caracter '@', por fim o endereço da plataforma onde o agente está. Este AID é atribuído durante o registro do agente no AMS. Neste registro, é possível também registrar os serviços do agente no DF.
+Cada agente possui um identificador único (Agent ID - AID) que identifica o agente em toda plataforma. Por padrão, o formato do AID possui primeiramente o nome do agente seguido do caracter ``@'', por fim o endereço da plataforma onde o agente está. Este AID é atribuído durante o registro do agente no AMS. Neste registro, é possível também registrar os serviços do agente no DF.
 
-A implementação do método~\emph{setup()} é invocado durante o registro do agente e deve estabelecer um comportamento para ele. Este comportamento diz respeito à ação que será realizada pelo agente durante a ocorrência de um evento. O registro/cancelamento dos comportamentos é feito pelos métodos exibidos na Listagem~\ref{code:exemplo-register}.
+Em nível de código faz-se necessária a implementação do método~\emph{setup()} o qual é invocado durante o registro do agente e deve estabelecer um comportamento. Este comportamento diz respeito à ação que será realizada pelo agente durante a ocorrência de um evento. O registro/cancelamento dos comportamentos é feito pelos métodos exibidos na Listagem~\ref{code:exemplo-register}.
 
 \begin{lstlisting}[language=java,label=code:exemplo-register,caption=Exemplo de registro de comportamento nos agentes.]
 	void addBehaviour( Comportamento )
@@ -867,20 +867,20 @@ Os comportamentos são separados em primitivos e compostos. A diferença entre a
 O JADE implementa o ciclo de vida especificado pela FIPA. Os possíveis estados da plataforma são:
 
 \begin{itemize}
-	\item \emph{INITIATED} - Após a criação do objeto, antes do registro do objeto no AMS, o agente assume o estado de iniciado. Este estado significa que o agente ainda não está disponível para a execução de ações na  plataforma.
-	\item \emph{ACTIVE} - Neste estado o agente é registrado no AMS, possuindo assim o AID e o endereço. Ele está pronto para a execução do trabalho na plataforma.
+	\item \emph{INITIATED} - Após a criação do objeto, antes do registro no AMS, o agente assume o estado de iniciado. Este estado significa que o agente ainda não está disponível para a execução de ações na  plataforma.
+	\item \emph{ACTIVE} - O agente é registrado no AMS e consequentemente possui um AID e endereço. Está pronto para a execução do trabalho na plataforma.
 	\item \emph{SUSPENDED} - O agente está com as atividades suspensas e está em modo ocioso.
-	\item \emph{WAITING} - O agente está bloqueado esperando algum evento acontecer para executar alguma ação. Tipicamente, este estado é usado para fazer o agente esperar por alguma mensagem.
-	\item \emph{DELETED} - O agente está destruído e sua thread de execução é terminada. O seu registro será removido do AMS e a sua referência removida da JVM.
-	\item \emph{TRANSIT} - O agente está movendo-se de uma plataforma para uma nova localização. Mesmo em transito, é possível enviar mensagens para este agente, visto que serão empilhadas na sua fila de mensagens e posteriormente processadas quando ele assumir o estado ACTIVE.
+	\item \emph{WAITING} - O agente está bloqueado esperando a ocorrência de um evento para executar a ação. Tipicamente, este estado é usado para fazer o agente esperar por alguma mensagem.
+	\item \emph{DELETED} - O agente está destruído e sua~\emph{thread} de execução é terminada. O seu registro será removido do AMS e a sua referência removida da JVM.
+	\item \emph{TRANSIT} - O agente está movendo-se de uma plataforma para uma nova localização. Mesmo em trânsito, é possível enviar mensagens para este agente, visto que serão empilhadas na sua fila de mensagens e posteriormente processadas após assumir o estado ACTIVE.
 \end{itemize}
 
-Para cada uma das transições de estados existem métodos que são invocados em um momento anterior. Eles são úteis para a execução de ações que antecedem a mudança de estado. Por exemplo: Durante a mudança do estado ACTIVE para DELETE, o método~\emph{doDelete()} é encarregado de implementar ações que antecedam o fim do agente, como que o agente desfaça o registro dos seus serviços no DF.
+Antes das transições de estados, o JADE define métodos que são invocados para a realização de algum evento e são úteis para a execução de ações que antecedem a mudança de estado. Por exemplo: Durante a mudança do estado ACTIVE para DELETE, o método~\emph{doDelete()} é encarregado de implementar ações que antecedam o fim do agente, como por exemplo a ação do agente desregistrar seus serviços no DF.
 
 \subsubsection{Interface Gráfica}
 O JADE permite o desenvolvimento de agentes com suporte à interface gráfica. Dessa forma, é possível desenvolver uma interação simples do agente com o ser humano.
 
-Por padrão, o JADE utiliza diversos agentes que utilizam-se de interfaces gráficas para a comunicação dos humanos que, dentre outras funcionalidades, permitem o envio de dados, controle do agente e testes da plataforma. Ferramentas como gerência dos~\emph{containers}, visualização do DF, criação de mensagens a partir de agentes falsos (\emph{sniffers}), dentre outros são disponibilizados nativamente para o desenvolvedor. Na Figura~\ref{fig:tela-jade} é apresentada a interface básica do agente RMA, ilustrando o ambiente de execução. É possível identificar apenas o~\emph{container} principal da aplicação. Nele, existem os três agentes principais registrados descritos anteriormente: AMS, DF e o próprio RMA.
+Por padrão, o JADE utiliza alguns agentes com suporte à interface gráfica para a comunicação com os humanos que, dentre outras funcionalidades, permitem o envio de dados, controle dos agentes e testes na plataforma. Ferramentas como gerência dos~\emph{containers}, visualização do DF, criação de mensagens a partir de agentes falsos (\emph{sniffers}), dentre outros são disponibilizados nativamente para o desenvolvedor. Na Figura~\ref{fig:tela-jade} é apresentada a interface básica do agente RMA, ilustrando o ambiente de execução. É possível identificar apenas o~\emph{container} principal da aplicação. Nele, existem os três agentes principais registrados descritos anteriormente: AMS, DF e o próprio RMA.
 
 \begin{figure}
 	\centering
@@ -891,7 +891,7 @@ Por padrão, o JADE utiliza diversos agentes que utilizam-se de interfaces gráf
 
 \subsection{JBoss Seam}
 
-No mundo corporativo do JAVA, muitos frameworks são responsáveis por partes específicas de uma aplicação. Seguindo as especificações propostas para a plataforma (JSR), as aplicações implementam integrações com o banco de dados (Hibernate, JPA), integração com a camada de visualização (Struts 1~\cite{struts1} e 2~\cite{struts2}, JSF~\cite{jsf2012}), contextos Java e injeção de dependência~\cite{di2012}. Porém a integração destes frameworks nem sempre é trivial, demandando muito tempo dos desenvolvedores para a correta configuração.
+No mundo corporativo do JAVA, muitos~\emph{frameworks} são responsáveis por partes específicas de uma aplicação. Seguindo as especificações propostas para a plataforma (JSR), as aplicações implementam integrações com o banco de dados (Hibernate, JPA), integração com a camada de visualização (Struts 1~\cite{struts1} e 2~\cite{struts2}, JSF~\cite{jsf2012}), contextos Java e injeção de dependência~\cite{di2012}. Porém a integração destes frameworks nem sempre é trivial, demandando muito tempo dos desenvolvedores para a correta configuração.
 
 Neste aspecto surge o~\emph{JBoss Seam}. Ele é um~\emph{framework} que reune as principais tecnologias de desenvolvimento~\emph{web} na linguagem Java. Ele integra as tecnologias~\emph{Asynchronous JavaScript and XML} (AJAX),~\emph{JavaServer Faces} (JSF),~\emph{Java Persistence} (JPA),~\emph{Enterprise Java Beans} (EJB 3.0) e~\emph{Business Process Management} (BPM) em uma única ferramenta que objetiva o desenvolvimento ágil de aplicações e o foco do programador na lógica de negócio~\cite{seamSite}.
 
@@ -906,14 +906,14 @@ A pilha de aplicações do Seam, representada na Figura~\ref{fig:servidor-app-se
 
 Em~\cite{allen09}, uma das principais ferramentas do Seam é o~\emph{seam-generator}. Com ele, é possível gerar uma estrutura básica de projeto, com arquivos de construção, bibliotecas compatíveis e as configurações necessárias para o início do desenvolvimento e o~\emph{deploy} em um servidor de aplicação.
 
-Além disso, uma das grandes vantagens do~\emph{seam-generator} é a geração automática de código, criando a partir de uma tabela no banco de dados todas as operações necessárias para a visualização, inserção, exclusão e atualização de dados (CRUD), diminuindo assim o tempo de desenvolvimento de aplicações.
+Além disso, uma das grandes vantagens do~\emph{seam-generator} é a geração automática de código, criando, a partir de uma tabela no banco de dados, todas as operações necessárias para a visualização, inserção, exclusão e atualização de dados (CRUD), diminuindo assim o tempo de desenvolvimento de aplicações.
 
 Portanto este trabalho optou por utilizar o~\emph{JBoss Seam}, pois engloba outras importantes ferramentas em uma única solução, facilitando assim o desenvolvimento da aplicação~\emph{web}. A facilidade pode ser constatada a partir dos aspectos já mencionados, como integração nativa entre as ferramentas da sua pilha de aplicações e geração automática de código.
 
 \section{Trabalhos Correlatos}\label{section:trabcorrelatos}
-É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste trabalho, seja em IA, Estilos de Aprendizagem, SMA ou AVA.
+É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste projeto, seja em IA, Estilos de Aprendizagem, SMA ou AVA.
 
-Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado à um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de IA. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros AVA.
+Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado a um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de IA. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros AVA.
 
 O trabalho~\cite{bativa2011}, na área de identificação de conhecimentos, visa a determinação de estilos de aprendizagem dos alunos por meio da plataforma chamada ``Ferramenta de Identificação de Perfis de Aprendizes – FIPA'', uma aplicação multicamadas que faz a identificação do perfil por meio de questionários de estilos de aprendizagem. Apesar da inferência do estilo de aprendizagem, esta plataforma utiliza uma abordagem distinta deste trabalho, sendo uma arquitetura cliente-servidor. 
 
