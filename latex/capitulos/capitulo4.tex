@@ -1,18 +1,19 @@
-\chapter{Experimentações}
+\chapter{Testes do Protótipo}
 
-Esta seção apresenta o protótipo desenvolvido para a parte~\emph{web} da solução. Serão mostradas as telas de interação com o aluno e professor. Para tanto, foi definida uma metodologia apresentada na Figura~\ref{section:metodologia-testes} das experimentações que explicará como foi dividido os cenários de testes.
+Esta seção apresenta o protótipo desenvolvido para a parte~\emph{web} da solução. Serão mostradas as telas de interação com o aluno e professor. Para tanto, foi definida uma sistematização de apresentação do protótipo, ilustrada na Figura~\ref{section:metodologia-testes}, dividindo os cenários de testes.
 A Figura~\ref{section:interface-aluno} apresenta o primeiro cenário o qual mostra o fluxo de execução desde o primeiro acesso do aluno à visualização do seu estilo de aprendizagem. O segundo cenário, apresentado na Figura~\ref{section:interface-docente}, mostra o fluxo de execução do docente que deseja verificar o estilo de aprendizagem de seus alunos.
 
 Por fim, a Seção~\ref{section:resultados} destaca todos os resultados obtidos dos cenários, bem como a sua relação com os objetivos do projeto.
 
-\section{Metodologia de Testes}\label{section:metodologia-testes}
+\section{Sistematização de Testes}\label{section:metodologia-testes}
 
 A metodologia de testes foi dividida em dois cenários. O primeiro deles é o cenário onde o aluno faz o primeiro acesso ao sistema e deseja conhecer o seu estilo de aprendizagem. É definido então um fluxo de execução para que este aluno possa realizar o questionário de estilos de aprendizagem. No fim do fluxo, espera-se que o aluno saiba o seu estilo de aprendizagem.
 
-O segundo cenário aborda o acesso do docente ao sistema, que deseja saber o estilo de aprendizagem dos alunos de sua turma. É demonstrado um fluxo de execução para que ele autentique-se no sistema e acesse os dados de sua turma. Ao final deste fluxo, é esperado que o docente saiba o estilo de aprendizagem de todos os alunos que realizaram o questionário. Nas seções que se seguem serão detalhados os dois cenários através do uso das respectivas interfaces do aluno e do docente.
+O segundo cenário aborda o acesso do docente ao sistema, que deseja saber o estilo de aprendizagem dos alunos de sua turma. É apresentado um fluxo de execução para que ele autentique-se no sistema e acesse os dados de sua turma. Ao final deste fluxo, é esperado que o docente saiba o estilo de aprendizagem de todos os alunos que realizaram o questionário. Nas seções que se seguem serão detalhados os dois cenários através do uso das respectivas interfaces do aluno e do docente.
 
 \section{Apresentação da Interface com Aluno}\label{section:interface-aluno}
-O fluxo definido para o aluno, apresentado na Figura~\ref{fig:fluxo-aluno}, consiste do seu primeiro acesso na plataforma, sua autenticação, responder seu questionário e visualizar o seu estilo de aprendizagem. Caso o seu login esteja incorreto, ele deve tentar novamente.
+
+O fluxo definido para o aluno, apresentado na Figura~\ref{fig:fluxo-aluno}, consiste do seu primeiro acesso na plataforma. Em seguida o aluno realiza a autenticação no sistema, responde o questionário e visualiza o seu estilo de aprendizagem. Em caso de dados incorretos, uma nova tentativa deve ser realizada.
 
 \begin{figure}
 	\centering
@@ -84,6 +85,7 @@ Por fim, o Sistema exibe o resultado final do processamento do SMA na tela de pr
 \end{figure}
 
 \section{Apresentação da Interface com Docente}\label{section:interface-docente}
+
 O fluxo apresentado na Figura~\ref{fig:fluxo-aluno} define a execução da experimentação do docente. Ele consiste do acesso à plataforma, sua autenticação, visualização das turmas e visualizar o estilo de aprendizagem dos alunos. Caso o seu login esteja incorreto, ele deve tentar novamente.
 
 \begin{figure}
@@ -95,7 +97,7 @@ O fluxo apresentado na Figura~\ref{fig:fluxo-aluno} define a execução da exper
 
 É possível notar que o fluxo do docente é semelhante ao fluxo do aluno até a verificação de validade do login. O Sistema distingue os usuários neste momento e, no caso do Docente, renderiza uma tela diferente devido ao seu perfil. 
 
-Após a autenticação do Docente o Sistema exibe a tela de visualização de turmas às quais pertencem ao docente em questão, apresentado na Figura~\ref{fig:frank-tela-professor-acesso}.
+Após a autenticação do Docente o Sistema exibe a tela de visualização de turmas, apresentado na Figura~\ref{fig:frank-tela-professor-acesso}.
 
 \begin{figure}
 	\centering
@@ -120,4 +122,4 @@ Além disso, por meio de preenchimento de questionário e consequentemente a mod
 
 Por fim, através do cenário do docente, foi possível visualizar a notificação do estilo de aprendizagem dos seus alunos feito pela plataforma.
 
-Neste capítulo, foi apresentado os fluxos de utilização do sistema por meio de dois cenários: Aluno e Docente. Em seguida, foi exposto os resultados obtidos por meio dos cenários e a forma de como eles ajudam a atingir os objetivos. O próximo capítulo contém a conclusão e os trabalhos futuros.
+Neste capítulo, foram apresentados os fluxos de utilização do sistema por meio de dois cenários: Aluno e Docente. Em seguida, foram expostos os resultados obtidos por meio dos cenários e a forma de como eles ajudam a atingir os objetivos. O próximo capítulo contém a conclusão e os trabalhos futuros.

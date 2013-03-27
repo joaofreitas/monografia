@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  11 MAR 2013 23:10
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.27)  27 MAR 2013 01:03
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -908,7 +908,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 101.
 
-<positivo_cor.pdf, id=199, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=203, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 \len@lskipoffset=\skip60
@@ -1054,7 +1054,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--37
  []
 
 [5] [6] [7] [8] [9]
-<images/agente-basico.png, id=521, 287.0725pt x 182.6825pt>
+<images/agente-basico.png, id=529, 287.0725pt x 182.6825pt>
 File: images/agente-basico.png Graphic file (type png)
 
 <use images/agente-basico.png> [10 <./images/agente-basico.png (PNG copy)>]
@@ -1117,22 +1117,23 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 324.
  [16] [17]
 
-LaTeX Warning: Float too large for page by 68.91383pt on input line 440.
+LaTeX Warning: Float too large for page by 68.91383pt on input line 442.
 
-[18] [19] <images/arvore-ontologia.png, id=634, 701.62125pt x 265.99374pt>
+[18] [19] <images/arvore-ontologia.png, id=643, 701.62125pt x 265.99374pt>
 File: images/arvore-ontologia.png Graphic file (type png)
 
 <use images/arvore-ontologia.png>
-Overfull \hbox (0.80429pt too wide) in paragraph at lines 456--457
+Overfull \hbox (0.80429pt too wide) in paragraph at lines 457--458
  [][] 
  []
 
+[20 <./images/arvore-ontologia.png (PNG copy)>]
 (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-) [20 <./images/arvore-ontologia.png (PNG copy)>]
+)
 Overfull \hbox (2.89798pt too wide) in paragraph at lines 482--483
 [][][][][][][][][][][][][][][][] 
  []
@@ -1143,40 +1144,40 @@ Overfull \hbox (3.27716pt too wide) in paragraph at lines 559--560
 m uma mo-de-la-gem cha-mada \T1/cmr/m/it/12 MASE
  []
 
-<images/exemplo-mase-role-model.png, id=693, 475.7775pt x 130.4875pt>
+<images/exemplo-mase-role-model.png, id=701, 475.7775pt x 130.4875pt>
 File: images/exemplo-mase-role-model.png Graphic file (type png)
 
 <use images/exemplo-mase-role-model.png>
-<images/examplo-diagrama-tarefas-concorrentes.png, id=695, 431.6125pt x 247.926
+<images/examplo-diagrama-tarefas-concorrentes.png, id=703, 431.6125pt x 247.926
 25pt>
 File: images/examplo-diagrama-tarefas-concorrentes.png Graphic file (type png)
  <use images/examplo-diagrama-tarefas-concorrentes.png> [24 <./images/exemplo-m
 ase-role-model.png (PNG copy)>]
-<images/exemplo-agent-class-diagram.png, id=705, 397.485pt x 233.87375pt>
+<images/exemplo-agent-class-diagram.png, id=713, 397.485pt x 233.87375pt>
 File: images/exemplo-agent-class-diagram.png Graphic file (type png)
 
 <use images/exemplo-agent-class-diagram.png> [25 <./images/examplo-diagrama-tar
 efas-concorrentes.png (PNG copy)>]
-<images/exemplo-conversation.png, id=715, 431.6125pt x 247.92625pt>
+<images/exemplo-conversation.png, id=723, 431.6125pt x 247.92625pt>
 File: images/exemplo-conversation.png Graphic file (type png)
 
 <use images/exemplo-conversation.png> [26 <./images/exemplo-agent-class-diagram
 .png (PNG copy)>]
-<images/exemplo-diagrama-arquitetura-agentes.png, id=725, 565.11125pt x 223.836
+<images/exemplo-diagrama-arquitetura-agentes.png, id=733, 565.11125pt x 223.836
 24pt>
 File: images/exemplo-diagrama-arquitetura-agentes.png Graphic file (type png)
  <use images/exemplo-diagrama-arquitetura-agentes.png>
-<images/exemplo-diagrama-deploy.png, id=727, 587.19376pt x 356.33125pt>
+<images/exemplo-diagrama-deploy.png, id=735, 587.19376pt x 356.33125pt>
 File: images/exemplo-diagrama-deploy.png Graphic file (type png)
 
 <use images/exemplo-diagrama-deploy.png> [27 <./images/exemplo-conversation.png
  (PNG copy)> <./images/exemplo-diagrama-arquitetura-agentes.png (PNG copy)>]
-<images/interface-agent-tool.png, id=734, 1002.74625pt x 698.61pt>
+<images/interface-agent-tool.png, id=742, 1002.74625pt x 698.61pt>
 File: images/interface-agent-tool.png Graphic file (type png)
 
 <use images/interface-agent-tool.png> [28 <./images/exemplo-diagrama-deploy.png
  (PNG copy)>] [29 <./images/interface-agent-tool.png>]
-<images/categorias-diagramas.png, id=755, 571.13374pt x 868.24374pt>
+<images/categorias-diagramas.png, id=763, 571.13374pt x 868.24374pt>
 File: images/categorias-diagramas.png Graphic file (type png)
 
 <use images/categorias-diagramas.png>
@@ -1184,7 +1185,7 @@ File: images/categorias-diagramas.png Graphic file (type png)
 LaTeX Warning: Float too large for page by 5.8974pt on input line 715.
 
 [30] [31 <./images/categorias-diagramas.png (PNG copy)>]
-<images/exemplo-uml.png, id=776, 701.62125pt x 405.515pt>
+<images/exemplo-uml.png, id=784, 701.62125pt x 405.515pt>
 File: images/exemplo-uml.png Graphic file (type png)
 
 <use images/exemplo-uml.png>
@@ -1192,7 +1193,7 @@ Overfull \hbox (70.97052pt too wide) in paragraph at lines 772--773
  [][] 
  []
 
-[32] <images/exemplo-diagrama-sequencia.png, id=783, 662.475pt x 515.67656pt>
+[32] <images/exemplo-diagrama-sequencia.png, id=791, 662.475pt x 515.67656pt>
 File: images/exemplo-diagrama-sequencia.png Graphic file (type png)
 
 <use images/exemplo-diagrama-sequencia.png>
@@ -1202,18 +1203,18 @@ Overfull \hbox (41.61093pt too wide) in paragraph at lines 790--791
 
 [33 <./images/exemplo-uml.png (PNG copy)>] [34 <./images/exemplo-diagrama-seque
 ncia.png>] [35]
-<images/arquitetura-jade.png, id=806, 559.08875pt x 318.18875pt>
+<images/arquitetura-jade.png, id=814, 559.08875pt x 318.18875pt>
 File: images/arquitetura-jade.png Graphic file (type png)
 
 <use images/arquitetura-jade.png> [36]
 (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
-) [37 <./images/arquitetura-jade.png (PNG copy)>]
-<images/tela-jade.png, id=828, 596.2275pt x 366.36874pt>
+) [37 <./images/arquitetura-jade.png (PNG copy)>] [38]
+<images/tela-jade.png, id=842, 596.2275pt x 366.36874pt>
 File: images/tela-jade.png Graphic file (type png)
 
-<use images/tela-jade.png> [38]
-<images/servidor-app-seam.png, id=841, 280.04625pt x 389.455pt>
+<use images/tela-jade.png>
+<images/servidor-app-seam.png, id=849, 280.04625pt x 389.455pt>
 File: images/servidor-app-seam.png Graphic file (type png)
 
 <use images/servidor-app-seam.png> [39 <./images/tela-jade.png (PNG copy)>]
@@ -1221,339 +1222,326 @@ File: images/servidor-app-seam.png Graphic file (type png)
 Cap\'{\i }tulo 3.
 [42
 
-] [43] [44] <images/metas-frank.png, id=925, 952.55875pt x 421.575pt>
+] [43] [44] <images/metas-frank.png, id=932, 952.55875pt x 421.575pt>
 File: images/metas-frank.png Graphic file (type png)
 
 <use images/metas-frank.png> [45] [46 <./images/metas-frank.png (PNG copy)>]
-<images/dss-uc1-fluxo-principal.png, id=944, 1075.01625pt x 520.94624pt>
+<images/dss-uc1-fluxo-principal.png, id=951, 1075.01625pt x 520.94624pt>
 File: images/dss-uc1-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc1-fluxo-principal.png>
-<images/dss-uc1-fluxo-alternativo.png, id=946, 1136.74687pt x 536.75531pt>
+Overfull \hbox (103.76756pt too wide) in paragraph at lines 104--105
+ [][] 
+ []
+
+<images/dss-uc1-fluxo-alternativo.png, id=953, 1158.3275pt x 474.77374pt>
 File: images/dss-uc1-fluxo-alternativo.png Graphic file (type png)
 
 <use images/dss-uc1-fluxo-alternativo.png>
-<images/dss-uc3-fluxo-principal.png, id=948, 859.71187pt x 536.75531pt>
+Overfull \hbox (147.08966pt too wide) in paragraph at lines 112--113
+[][] 
+ []
+
+<images/dss-uc3-fluxo-principal.png, id=955, 859.71187pt x 536.75531pt>
 File: images/dss-uc3-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc3-fluxo-principal.png>
-<images/dss-uc4-fluxo-principal.png, id=950, 907.13907pt x 536.75531pt>
+<images/dss-uc4-fluxo-principal.png, id=957, 907.13907pt x 536.75531pt>
 File: images/dss-uc4-fluxo-principal.png Graphic file (type png)
 
 <use images/dss-uc4-fluxo-principal.png>
-<images/dss-uc5-fluxo-principal.png, id=952, 519.44063pt x 536.75531pt>
+Overfull \hbox (16.47092pt too wide) in paragraph at lines 130--131
+ [][] 
+ []
+
+[47 <./images/dss-uc1-fluxo-principal.png>] [48 <./images/dss-uc1-fluxo-alterna
+tivo.png (PNG copy)> <./images/dss-uc3-fluxo-principal.png>]
+<images/dss-uc5-fluxo-principal.png, id=969, 519.44063pt x 536.75531pt>
 File: images/dss-uc5-fluxo-principal.png Graphic file (type png)
 
-<use images/dss-uc5-fluxo-principal.png> [47 <./images/dss-uc1-fluxo-principal.
-png>] [48 <./images/dss-uc1-fluxo-alternativo.png> <./images/dss-uc3-fluxo-prin
-cipal.png>]
-! Interruption.
-<to be read again> \AtBegShi@Output 
-                                    \endgroup \set@typeset@protect 
-l.146 
-      
-? x
- 
+<use images/dss-uc5-fluxo-principal.png>
+<images/mase-role-model.png, id=972, 930.47626pt x 524.96124pt>
+File: images/mase-role-model.png Graphic file (type png)
+
+<use images/mase-role-model.png> [49 <./images/dss-uc4-fluxo-principal.png>]
+[50 <./images/dss-uc5-fluxo-principal.png>]
+<images/td-validar-dados.png, id=985, 841.1425pt x 280.04625pt>
+File: images/td-validar-dados.png Graphic file (type png)
+
+<use images/td-validar-dados.png>
+<images/td-enviar-quest.png, id=987, 750.805pt x 176.66pt>
+File: images/td-enviar-quest.png Graphic file (type png)
+
+<use images/td-enviar-quest.png> [51 <./images/mase-role-model.png (PNG copy)> 
+<./images/td-validar-dados.png (PNG copy)>]
+<images/td-autenticar-aluno.png, id=993, 692.5875pt x 214.8025pt>
+File: images/td-autenticar-aluno.png Graphic file (type png)
+
+<use images/td-autenticar-aluno.png>
+<images/td-determinar-wg.png, id=995, 547.04375pt x 186.6975pt>
+File: images/td-determinar-wg.png Graphic file (type png)
+
+<use images/td-determinar-wg.png> [52 <./images/td-enviar-quest.png (PNG copy)>
+ <./images/td-autenticar-aluno.png (PNG copy)> <./images/td-determinar-wg.png (
+PNG copy)>] <images/td-criar-wg.png, id=1001, 615.29875pt x 238.8925pt>
+File: images/td-criar-wg.png Graphic file (type png)
+
+<use images/td-criar-wg.png>
+<images/td-processar-dados.png, id=1003, 748.7975pt x 326.21875pt>
+File: images/td-processar-dados.png Graphic file (type png)
+
+<use images/td-processar-dados.png>
+<images/td-atualizar-modelos.png, id=1005, 1268.74pt x 444.66125pt>
+File: images/td-atualizar-modelos.png Graphic file (type png)
+
+<use images/td-atualizar-modelos.png>
+Overfull \hbox (52.2429pt too wide) in paragraph at lines 243--244
+ [][] 
+ []
+
+<images/td-inferir-afetivo.png, id=1008, 512.91624pt x 193.72375pt>
+File: images/td-inferir-afetivo.png Graphic file (type png)
+
+<use images/td-inferir-afetivo.png>
+<images/td-inferir-metacognitivo.png, id=1009, 487.8225pt x 183.68625pt>
+File: images/td-inferir-metacognitivo.png Graphic file (type png)
+
+<use images/td-inferir-metacognitivo.png> [53 <./images/td-criar-wg.png (PNG co
+py)> <./images/td-processar-dados.png>] [54 <./images/td-atualizar-modelos.png 
+(PNG copy)> <./images/td-inferir-afetivo.png (PNG copy)> <./images/td-inferir-m
+etacognitivo.png (PNG copy)>]
+<images/td-analise-aprendizagem.png, id=1020, 914.41624pt x 256.96pt>
+File: images/td-analise-aprendizagem.png Graphic file (type png)
+
+<use images/td-analise-aprendizagem.png>
+<images/agent-class-diagram.png, id=1022, 617.30624pt x 351.3125pt>
+File: images/agent-class-diagram.png Graphic file (type png)
+
+<use images/agent-class-diagram.png> [55 <./images/td-analise-aprendizagem.png 
+(PNG copy)> <./images/agent-class-diagram.png (PNG copy)>]
+<images/conv1-iniciador.png, id=1029, 656.4525pt x 146.5475pt>
+File: images/conv1-iniciador.png Graphic file (type png)
+
+<use images/conv1-iniciador.png>
+<images/conv1-recebedor.png, id=1031, 715.67375pt x 142.5325pt>
+File: images/conv1-recebedor.png Graphic file (type png)
+
+<use images/conv1-recebedor.png>
+<images/conv4-iniciador.png, id=1033, 590.205pt x 146.5475pt>
+File: images/conv4-iniciador.png Graphic file (type png)
+
+<use images/conv4-iniciador.png> [56 <./images/conv1-iniciador.png (PNG copy)>]
+<images/conv4-recebedor.png, id=1039, 633.36626pt x 181.67876pt>
+File: images/conv4-recebedor.png Graphic file (type png)
+
+<use images/conv4-recebedor.png>
+<images/conv7-iniciador.png, id=1041, 683.55376pt x 130.4875pt>
+File: images/conv7-iniciador.png Graphic file (type png)
+
+<use images/conv7-iniciador.png>
+<images/conv7-recebedor.png, id=1043, 793.96625pt x 222.8325pt>
+File: images/conv7-recebedor.png Graphic file (type png)
+
+<use images/conv7-recebedor.png> [57 <./images/conv1-recebedor.png (PNG copy)> 
+<./images/conv4-iniciador.png (PNG copy)> <./images/conv4-recebedor.png (PNG co
+py)>] <images/arquitetura-frank.png, id=1049, 583.17876pt x 692.5875pt>
+File: images/arquitetura-frank.png Graphic file (type png)
+
+<use images/arquitetura-frank.png> [58 <./images/conv7-iniciador.png (PNG copy)
+> <./images/conv7-recebedor.png (PNG copy)>] [59 <./images/arquitetura-frank.pn
+g (PNG copy)>] [60]) (./capitulos/capitulo4.tex [61]
+Cap\'{\i }tulo 4.
+<images/fluxo-aluno.png, id=1072, 274.77657pt x 454.69875pt>
+File: images/fluxo-aluno.png Graphic file (type png)
+
+<use images/fluxo-aluno.png>
+<images/frank-tela-aluno-inicial.png, id=1074, 562.1pt x 227.85126pt>
+File: images/frank-tela-aluno-inicial.png Graphic file (type png)
+
+<use images/frank-tela-aluno-inicial.png>
+<images/frank-tela-aluno-login.png, id=1076, 568.1225pt x 313.17pt>
+File: images/frank-tela-aluno-login.png Graphic file (type png)
+
+<use images/frank-tela-aluno-login.png> [62
+
+] [63 <./images/fluxo-aluno.png> <./images/frank-tela-aluno-inicial.png>]
+<images/frank-tela-login-invalido.png, id=1088, 522.95375pt x 363.3575pt>
+File: images/frank-tela-login-invalido.png Graphic file (type png)
+
+<use images/frank-tela-login-invalido.png>
+<images/agente-rma-login-usuario.png, id=1090, 598.235pt x 367.3725pt>
+File: images/agente-rma-login-usuario.png Graphic file (type png)
+
+<use images/agente-rma-login-usuario.png>
+<images/frank-tela-aluno-prim-acesso.png, id=1092, 613.29124pt x 322.20375pt>
+File: images/frank-tela-aluno-prim-acesso.png Graphic file (type png)
+
+<use images/frank-tela-aluno-prim-acesso.png>
+<images/frank-tela-aluno-preencher-questionario.png, id=1094, 1200.485pt x 428.
+60126pt>
+File: images/frank-tela-aluno-preencher-questionario.png Graphic file (type png
+)
+ <use images/frank-tela-aluno-preencher-questionario.png>
+Overfull \hbox (24.94139pt too wide) in paragraph at lines 73--74
+ [][] 
+ []
+
+
+<images/frank-tela-aluno-inferencia-estilo.png, id=1096, 501.875pt x 298.11375p
+t>
+File: images/frank-tela-aluno-inferencia-estilo.png Graphic file (type png)
+ <use images/frank-tela-aluno-inferencia-estilo.png>
+<images/fluxo-docente.png, id=1098, 274.77657pt x 401.24907pt>
+File: images/fluxo-docente.png Graphic file (type png)
+
+<use images/fluxo-docente.png>
+<images/frank-tela-professor-acesso.png, id=1100, 532.99126pt x 357.335pt>
+File: images/frank-tela-professor-acesso.png Graphic file (type png)
+
+<use images/frank-tela-professor-acesso.png> [64 <./images/frank-tela-aluno-log
+in.png>] [65 <./images/frank-tela-login-invalido.png> <./images/agente-rma-logi
+n-usuario.png (PNG copy)>] [66 <./images/frank-tela-aluno-prim-acesso.png> <./i
+mages/frank-tela-aluno-preencher-questionario.png> <./images/frank-tela-aluno-i
+nferencia-estilo.png>]
+<images/frank-tela-professor-visualizar-turma.png, id=1119, 603.25375pt x 427.5
+975pt>
+File: images/frank-tela-professor-visualizar-turma.png Graphic file (type png)
+ <use images/frank-tela-professor-visualizar-turma.png>)
+(./capitulos/capitulo5.tex [67 <./images/fluxo-docente.png>] [68 <./images/fran
+k-tela-professor-acesso.png> <./images/frank-tela-professor-visualizar-turma.pn
+g>]
+Cap\'{\i }tulo 5.
+[69
+
+]) (./capitulos/capitulo6.tex [70]
+Ap\^endice A.
+(./capitulos/casos-uso/uc1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+[]|\T1/cmr/bx/n/12 Determinar Mo-de-la-gem Cog-ni-tiva do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\T1/cmr/m/n/12 Sistema e Am-bi-ente(s) Vir-tu-ais(ns) de
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 52
+ []
+
+[71
+
+] [72] [73]) (./capitulos/casos-uso/uc2.tex
+Underfull \vbox (badness 10000) detected at line 32
+ []
+
+[74]) (./capitulos/casos-uso/uc3.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\T1/cmr/m/n/12 Sistema e Am-bi-ente(s) Vir-tu-ais(ns) de
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 35
+ []
+
+[75]) (./capitulos/casos-uso/uc4.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\T1/cmr/m/n/12 Sistema e Am-bi-ente(s) Vir-tu-ais(ns) de
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 35
+ []
+
+[76] [77]) (./capitulos/casos-uso/uc5.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\T1/cmr/m/n/12 Sistema e Am-bi-ente(s) Vir-tu-ais(ns) de
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 27
+ []
+
+[78])) [79] (./monografia.bbl (./monografia.brf)
+\tf@brf=\write7
+\openout7 = `monografia.brf'.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 7.
+
+(/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 7649) in paragraph at lines 29--29
+[]\T1/cmr/m/n/12 Javaserver fa-ces te-ch-no-logy.  Dis-po-ní-vel em: [][]$\T1/c
+mtt/m/n/12 http : / / www . oracle . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/cmtt/m/n/12 technetwork / java / javaee / javaserverfaces-[]139869 . html$[
+][]\T1/cmr/m/n/12 .  Aces-sado em:
+ []
+
+[80
+
+
+] [81]
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/cmr/m/n/12 Carlos Vi-ní-cius Sar-mento Silva.  Agen-tes de mi-ne-ra-ção e
+ sua apli-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/cmr/m/n/12 ca-ção no do-mí-nio de au-di-to-ria go-ver-na-men-tal.  Dis-po-n
+í-vel em:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/cmr/m/n/12 http://monografias.cic.unb.br/dspace/handle/123456789/318, Aces-
+sado em:
+ []
+
+) [82] (./monografia.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.74pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10838 strings out of 495041
- 147182 string characters out of 1181897
- 265417 words of memory out of 3000000
- 13429 multiletter control sequences out of 15000+50000
- 19172 words of font info for 47 fonts, out of 3000000 for 9000
+ 11412 strings out of 495041
+ 158593 string characters out of 1181897
+ 264795 words of memory out of 3000000
+ 13847 multiletter control sequences out of 15000+50000
+ 19485 words of font info for 48 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 45i,10n,74p,883b,1832s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{cite.editalFrank} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.rabelo2010identificacao} has been referenced b
-ut does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.geyer2001semeai} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.helbing11} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.bativa2011} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.soaresagente} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.seamSite} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.di2012} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.jsf2012} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.struts2} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.struts1} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.bellifemineGuide02} has been referenced but do
-es not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.madkit} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.agentMom} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.cockburn01} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.omg20} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.agentTool2012} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.scott01} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.burrafato02} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.wooldridge2000} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.kim2006towards} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.fipa-cal-spec} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.kifmanual} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.preece1997} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.kse} has been referenced but does not exist, r
-eplaced by a fixed one
-
-pdfTeX warning (dest): name{cite.searle69} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.verschueren09} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.austin62} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.durfee89} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.sarmento11} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.wooldridge04} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.novig95} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.honey2000} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.kolb84} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.felder1988learning} has been referenced but do
-es not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.3.2} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.muhlbeier12} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.11} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.10} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.9} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.8} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.7} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.6} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.5} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.4} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.3} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.2} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.1} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.24} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.23} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.22} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.21} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.20} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.19} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.18} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.17} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.16} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.15} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.14} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.13} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.12} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.11} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.10} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.9} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.8} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.7} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.6} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.5} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.4} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.allen09} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.bellifemine07} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.larman08} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.fowler04} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{page.82} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{section*.28} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.A.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.A.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.A.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.A.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.A.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{appendix.A} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
- </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </ho
-me/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </home/jo
-aofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/joaofre
-itas/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/joaofreitas/
-.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/joaofreitas/.texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/joaofreitas/.texmf-var
-/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/joaofreitas/.texmf-var/font
-s/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/
-ljfour/jknappen/ec/ecrm1440.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfou
-r/jknappen/ec/ecbx1728.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecrm1000.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecrm2074.600pk></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmm
-i12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on monografia.pdf (60 pages, 788346 bytes).
+ 45i,10n,74p,1061b,1927s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/joaofreitas/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/joaofreitas/.texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/joaofreitas/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </home/joaofreitas/.texmf-var/fonts/p
+k/ljfour/jknappen/ec/ecbx1440.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljf
+our/jknappen/ec/tcrm1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecti1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecbx2488.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecbx1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
+1200.600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.
+600pk> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
+> </home/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </h
+ome/joaofreitas/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on monografia.pdf (94 pages, 1372514 bytes).
 PDF statistics:
- 1533 PDF objects out of 1728 (max. 8388607)
- 329 named destinations out of 1000 (max. 500000)
- 503 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1991 PDF objects out of 2073 (max. 8388607)
+ 418 named destinations out of 1000 (max. 500000)
+ 661 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,12 +1,12 @@
 \chapter{Proposta de Solução}
 
-O presente capítulo detalha a modelagem da solução e a arquitetura proposta. A primeira Seção~\ref{section:modelagem} apresenta os diagramas que foram construídos a partir as duas fases da metodologia MASE. A segunda Seção~\ref{section:arquitetura} mostra a arquitetura da solução em um escopo mais geral, considerando além do SMA a plataforma~\emph{web} e a sua comunicação.
+O presente capítulo detalha a modelagem da solução e a arquitetura proposta. A primeira Seção~\ref{section:modelagem} apresenta os diagramas que foram construídos a partir das duas fases da metodologia MASE. A segunda Seção~\ref{section:arquitetura} mostra a arquitetura da solução em um escopo mais geral, considerando além do SMA a plataforma~\emph{web} e a sua comunicação.
 
-A arquitetura básica do sistema já havia sido previamente decidida de acordo com~\cite{editalFrank}, bem como o nome da solução:~\emph{Frank}. Basicamente, a aplicação funciona da seguinte forma: O aluno deverá autenticar-se em uma plataforma~\emph{web} para a determinação do seu estilo de aprendizagem. Em seguida, o professor autentica-se na plataforma e verifica o estilo de aprendizagem do seu aluno. A verificação do estilo de aprendizagem e manutenção do modelo multidimensional é feita por agentes. Logo, a solução proposta foi desenvolvida em duas aplicações:~\emph{Web} e SMA.
+A arquitetura básica do sistema já havia sido previamente decidida de acordo com~\cite{editalFrank}, bem como o nome da solução:~\emph{Frank}. Basicamente, a aplicação funciona da seguinte forma: O aluno deverá autenticar-se em uma plataforma~\emph{web} para a determinação do seu estilo de aprendizagem. Em seguida, o professor autentica-se na plataforma e verifica o estilo de aprendizagem dos seus alunos. A verificação do estilo de aprendizagem e manutenção do modelo multidimensional é feita por agentes. Logo, a solução proposta foi desenvolvida em duas aplicações:~\emph{Web} e SMA.
 
 A aplicação SMA é baseada em grupos de trabalho por aluno. Após a autenticação do aluno na plataforma~\emph{web}, o SMA realiza a criação dos agentes do grupo de trabalho designado para ele. Esses agentes são responsáveis pela manutenção do modelo multidimensional do aluno na plataforma e são atualizados conforme ocorre o envio de dados dos ambientes externos para os agentes do grupo de trabalho.
 
-Após a escolha da metodologia MASE, justificada no capítulo 2, foram levantados todos os requisitos e regras a partir de~\cite{editalFrank}, onde foi compreendido inicialmente o problema. Em seguida, uma série de artefatos foram gerados em consonância com a metodologia até o último passo, a geração dos agentes. Ao fim da metodologia, a solução foi composta por sete diferentes tipos de agentes:
+Após a escolha da metodologia MASE, justificada no capítulo 2, foram elicitados todos os requisitos e regras a partir de~\cite{editalFrank}, onde foi compreendido inicialmente o problema. Em seguida, uma série de artefatos foram gerados em consonância com a metodologia até o último passo, a geração dos agentes. Ao fim da metodologia, a solução foi composta por sete diferentes tipos de agentes:
 \begin{enumerate}
 	\item \emph{GatewayAgent} - Agente responsável pela interface com a plataforma web que irá interagir com os alunos e docentes.
 	\item \emph{WebServiceAgent} - Agente responsável pela interface com o Ambiente Virtual de Aprendizagem.
@@ -31,7 +31,7 @@ As seções seguintes detalham a metodologia, justificam a arquitetura da soluç
 
 A modelagem foi desenvolvida utilizando-se a ferramenta~\emph{agentTool}. A ferramenta possui meios para diagramar todas as fases e passos do MASE, auxiliando o analista em todos os diagramas necessários, além de gerar código automático para alguns frameworks de SMA.
 
-A metodologia é dividida em duas fases: Análise e Design. Na primeira Seção~\ref{subsection:analise} é desenvolvida a fase de análise responsável pelo levantamento de requisitos e entendimento das regras e tarefas. A segunda fase, na Seção~\ref{subsection:design}, é responsável pela criação dos agentes, conversações e componentes internos.
+A metodologia é dividida em duas fases: Análise e Projeto. Na primeira Seção~\ref{subsection:analise} é desenvolvida a fase de análise responsável pelo levantamento de requisitos e entendimento das regras e tarefas. A segunda fase, na Seção~\ref{subsection:design}, é responsável pela criação dos agentes, conversações e componentes internos.
 
 \subsection{Análise}\label{subsection:analise}
 
@@ -101,7 +101,7 @@ No diagrama de sequência do caso de uso 1, apresentado na Figura~\ref{fig:dss-u
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.42]{images/dss-uc1-fluxo-principal.png}
+	\includegraphics[scale=0.52]{images/dss-uc1-fluxo-principal.png}
 	\caption{Diagrama de sequência do fluxo principal, caso de uso 1.}
 	\label{fig:dss-uc1-fluxo-principal}
 \end{figure}
@@ -109,9 +109,8 @@ No diagrama de sequência do caso de uso 1, apresentado na Figura~\ref{fig:dss-u
 A Figura~\ref{fig:dss-uc1-fluxo-alternativo} apresentação o fluxo de exceção do primeiro caso de uso, onde ilustra a regra~\emph{WebServiceInterface} que recebe os dados do AVA e envia para a regra Manager por meio do evento~\emph{enviar}. Após esse evento, a regra~\emph{StudentWorkgroup} recebe o evento e reenvia para~\emph{CognitiveAction}. Em seguida ele envia para as regras~\emph{LearningMethodAnalyzer} e~\emph{PerformanceAnalyzer} que vão inferir o estilo de aprendizagem e a performance. Por fim, com estes dados, o modelo cognitivo é retornado para a regra~\emph{StudentWorkgroup}.
 
 \begin{figure}
-	\centering
-	\includegraphics[scale=0.4]{images/dss-uc1-fluxo-alternativo}
-	\caption{Diagrama de sequência do fluxo de exceção, caso de uso 1.}
+	\includegraphics[scale=0.52]{images/dss-uc1-fluxo-alternativo.png}
+	\caption{Diagrama de sequência do fluxo alternativo, caso de uso 1.}
 	\label{fig:dss-uc1-fluxo-alternativo}
 \end{figure}
 
@@ -119,7 +118,7 @@ A Figura~\ref{fig:dss-uc3-fluxo-principal} ilustra a inferência afetiva descrit
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.48]{images/dss-uc3-fluxo-principal.png}
+	\includegraphics[scale=0.52]{images/dss-uc3-fluxo-principal.png}
 	\caption{Diagrama de sequência do fluxo principal, caso de uso 3.}
 	\label{fig:dss-uc3-fluxo-principal}
 \end{figure}
@@ -128,7 +127,7 @@ O diagrama de sequência do fluxo principal caso de uso 4, apresentado na Figura
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.48]{images/dss-uc4-fluxo-principal.png}
+	\includegraphics[scale=0.52]{images/dss-uc4-fluxo-principal.png}
 	\caption{Diagrama de sequência do fluxo principal, caso de uso 4.}
 	\label{fig:dss-uc4-fluxo-principal}
 \end{figure}
@@ -137,7 +136,7 @@ Por fim a Figura~\ref{fig:dss-uc5-fluxo-principal} apresenta o diagrama de sequ�
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.48]{images/dss-uc5-fluxo-principal.png}
+	\includegraphics[scale=0.52]{images/dss-uc5-fluxo-principal.png}
 	\caption{Diagrama de sequência do fluxo principal, caso de uso 5.}
 	\label{fig:dss-uc5-fluxo-principal}
 \end{figure}
@@ -166,13 +165,11 @@ Por fim, após o levantamento de todas as regras foi necessário criar tarefas q
 		\hline
 		LearningMethodAnalyzer 	& Analisar Estilo de Aprendizagem  \\
 		\hline
-		PerformanceAnalyzer 	& Analisar Performance  \\
-		\hline
 	\end{tabular}
 	\label{tabela:mase-role-model}
 \end{table}
 
-A Figura~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model}, onde é possível visualizar toda a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudenInterface} (interface~\emph{web} da aplicação) ou~\emph{WebServiceInterface} (Interface com AVA). Além disso, a regra~\emph{StudenInterface} possui uma tarefa para autenticação do aluno, onde ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno.
+A Figura~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model}, onde é possível visualizar toda a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudentInterface} (interface~\emph{web} da aplicação) ou~\emph{WebServiceInterface} (Interface com AVA). Além disso, a regra~\emph{StudentInterface} possui uma tarefa para autenticação do aluno, a qual ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno. As linhas tracejadas representam comunicações internas, as linhas sólidas representam comunicações externas.
 
 A regra~\emph{StudentWorkgroup} será a regra responsável pela gerência do grupo de trabalho do aluno. Ela recebe os dados da regra~\emph{Manager} e reencaminha para as regras~\emph{Cognitive},~\emph{Affective} e~\emph{Metacognitive}. As linhas tracejadas de cor azul representam comunicações internas entre as regras.
 
@@ -275,7 +272,7 @@ O diagrama da regra~\emph{LearningMethodAnalyzer} apresentado na Figura~\ref{fig
 	\label{fig:td-analise-aprendizagem}
 \end{figure}
 
-\subsection{Design}\label{subsection:design}
+\subsection{Projeto}\label{subsection:design}
 
 Após a conclusão da primeira etapa do MASE, é necessário definir as classes dos agentes, bem como as suas conversações. A Figura~\ref{fig:agent-class-diagram} apresenta o diagrama de classes do SMA. Nele é possível identificar arquitetura a do SMA Frank, composta pelos seguintes agentes:
 
@@ -369,7 +366,7 @@ A solução foi separada devido aos seguintes aspectos:
 	\item Menor Dificuldade - A parte~\emph{web} é responśavel pela interação com o usuário e com o banco de dados. Estes pontos seriam muito mais difíceis de implementar no framework JADE.
 \end{itemize}
 
-A Figura~\ref{fig:arquitetura-frank} apresenta a arquitetura geral da solução, onde é possível identificar as duas aplicações distintas: Frank Web e Frank SMA. A aplicação~\emph{web} faz a interface com o estudante e o docente. A plataforma~\emph{web} comunica-se com o SMA através do agente~\emph{GatewayAgent}, que reencaminha as informações para o agente~\emph{Manager}, responsável pela gerência da plataforma. Este agente consegue comunicar-se com todos os grupos de trabalho registrados que podem, ou não, estar na mesmo~\emph{container} que ele. São permitidos inúmeros~\emph{containers} que não necessariamente estarão na mesma máquina do~\emph{container} principal. O grupos de trabalho é criado individualmente por aluno, sendo composto pelos agentes ``AA'' (Agente Afetivo), ``AC'' (Agente Cognitivo), ``AM'' (Agente Metacognitivo) e o próprio ``GT'' (Grupo de trabalho).
+A Figura~\ref{fig:arquitetura-frank} apresenta a arquitetura geral da solução, onde é possível identificar as duas aplicações distintas: Frank Web e Frank SMA. A aplicação~\emph{web} faz a interface com o estudante e o docente. A plataforma~\emph{web} comunica-se com o SMA através do agente~\emph{GatewayAgent}, que reencaminha as informações para o agente~\emph{Manager}, responsável pela gerência da plataforma. Em um mesmo ambiente do Frank, é possível existir inúmeros agentes~\emph{managers}. Este agente consegue comunicar-se com todos os grupos de trabalho registrados que podem, ou não, estar na mesmo~\emph{container} que ele. São permitidos inúmeros~\emph{containers} que não necessariamente estarão na mesma máquina do~\emph{container} principal. O grupos de trabalho é criado individualmente por aluno, sendo composto pelos agentes ``AA'' (Agente Afetivo), ``AC'' (Agente Cognitivo), ``AM'' (Agente Metacognitivo) e o próprio ``GT'' (Grupo de trabalho).
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.6]{images/arquitetura-frank.png}
@@ -389,7 +386,7 @@ Model View Controller (MVC). Esse padrão divide a arquitetura do sistema em tr�
 
 As ferramentas disponibilizadas pelo framework geraram todo o código para visualização, inserção, atualização e exclusão de dados. Além disso, geraram todas as páginas para que o usuário possa interagir com o sistema. 
 
-Após a geração do código inicial, foi necessário uma implementar algumas funcionalidades específicas da aplicação Frank-Web. A primeira delas foi implementar a ação de autenticação conjunta com o SMA. Quando o aluno fizer login no sistema, a aplicação~\emph{web} envia uma mensagem ao SMA para a criação do grupo de trabalho.
+Após a geração do código inicial, foi necessário implementar algumas funcionalidades específicas da aplicação Frank-Web. A primeira delas foi implementar a ação de autenticação conjunta com o SMA. Quando o aluno fizer login no sistema, a aplicação~\emph{web} envia uma mensagem ao SMA para a criação do grupo de trabalho.
 
 Em seguida, foi necessário a implementação a tela de respostas do questionário feita pelo usuário.
 
@@ -397,9 +394,9 @@ Por fim, a implementação da tela de notificação ao docente do estilo de apre
 
 \subsection{SMA Frank}
 
-O SMA Frank foi desenvolvida com o~\emph{middleware} JADE, devido à sua grande aceitação na comunidade de Sistemas Multiagentes e o extenso suporte da comunidade. A aplicação está divida entre os agentes criados e os seus comportamentos (justificados na seção anterior).
+O SMA Frank foi desenvolvido com o~\emph{middleware} JADE, devido à sua grande aceitação na comunidade de Sistemas Multiagentes e o extenso suporte da comunidade. A aplicação está divida entre os agentes criados e os seus comportamentos (justificados na seção anterior).
 
-A comunicação entre os agentes foi implementado utilizando-se de ontologias. O pacote de ontologia do JADE permite a criação de abstrações muito robustas, descartando neste primeiro momento a utilização de bibliotecas de terceiros.
+A comunicação entre os agentes foi implementada por meio de ontologias de comunicação da plataforma JADE. O pacote de ontologia do~\emph{framework} permite a criação de abstrações muito robustas, descartando neste primeiro momento a utilização de bibliotecas de terceiros.
 
 No JADE, os agentes devem adicionar comportamentos, que são disparados quando o agente recebe uma mensagem. Os comportamentos são separados conforme o objetivo do agente.
 
@@ -424,7 +421,7 @@ Esse agente funcionará de forma distinta dos outros agentes da plataforma. O ag
 	\item RequestCognitiveModelCommand
 \end{itemize}
 
-Neste capítulo, foi apresentado todos os aspectos da modelagem para a solução. Além disso, foi definido a arquitetura proposta, dividindo o sistema em duas aplicações distintas e dissertando a respeito da integração entre as duas aplicações. O próximo capítulo contém as experimentações acerca da solução proposta, bem como os resultados obtidos.
+Neste capítulo, foram apresentados todos os aspectos da modelagem da solução: As duas fases da metodologia com todos os diagramas inerentes. Além disso, a arquitetura solução foi definida de forma a dividir o sistema em duas aplicações distintas. O próximo capítulo contém as experimentações acerca da solução proposta, bem como os resultados obtidos.
 
 
 

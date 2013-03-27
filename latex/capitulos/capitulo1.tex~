@@ -44,7 +44,7 @@ A metodologia de realização deste trabalho é constituída da revisão bibliog
 
 Em seguida, foi realizado o levantamento e estudo de metodologias aproriadas para modelagem de SMA existentes para a modelagem e construção da solução. Essas metodologias foram comparadas e uma delas escolhida para a modelagem do SMA.
 
-Em sequência, houve o levantamento do~\emph{framework} necessário para implementação do SMA. Após levantamento e comparação das ferramentas disponíveis, o desenvolvimento da aplicação multiagente foi feito com o~\emph{framework}~\emph{JADE} o qual é completamente desenvolvido na linguagem~\emph{JAVA}, simplificando a implementação de sistemas que cumprem as especificações FIPA. 
+Em sequência, houve o levantamento do~\emph{framework} necessário para implementação do SMA. Após levantamento e comparação das ferramentas disponíveis, o desenvolvimento da aplicação multiagente foi feito com o~\emph{framework}~\emph{JADE} o qual é completamente desenvolvido na linguagem~\emph{JAVA}, simplificando a implementação de sistemas que respeitam as especificações FIPA. 
 
 Em seguida, foi necessário a escolha de uma ferramenta para desenvolvimento da interface~\emph{web} e a sua integração com o SMA. Baseado nos levantamentos e estudos, o~\emph{framework JBoss Seam} mostrou-se mais viável visto que facilita a construção de aplicações dinâmicas para a internet de forma simples e ágil.
 

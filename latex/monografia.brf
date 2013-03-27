@@ -3,6 +3,8 @@
 \backcite {bellifemine07}{{x}{(document)}{Doc-Start}}
 \backcite {allen09}{{x}{(document)}{Doc-Start}}
 \backcite {muhlbeier12}{{xii}{(document)}{Doc-Start}}
+\backcite {felder1988learning}{{1}{1}{chapter.1}}
+\backcite {editalFrank}{{2}{1.1}{section.1.1}}
 \backcite {felder1988learning}{{5}{2.1.1}{subsection.2.1.1}}
 \backcite {kolb84}{{5}{2.1.1}{section*.8}}
 \backcite {felder1988learning}{{5}{2.1.1}{section*.9}}
@@ -71,7 +73,7 @@
 \backcite {allen09}{{39}{2.4.3}{figure.2.15}}
 \backcite {allen09}{{40}{2.15}{figure.2.15}}
 \backcite {soaresagente}{{40}{2.5}{section.2.5}}
-\backcite {bativa2011}{{40}{2.5}{section.2.5}}
+\backcite {bativa2011}{{41}{2.5}{section.2.5}}
 \backcite {helbing11}{{41}{2.5}{section.2.5}}
 \backcite {geyer2001semeai}{{41}{2.5}{section.2.5}}
 \backcite {helbing11}{{41}{2.5}{section.2.5}}
