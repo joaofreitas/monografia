@@ -55,7 +55,7 @@ A divisão de capítulos foi feita da seguinte forma:
 \begin{itemize}
 	\item Capítulo 2: Apresenta uma breve visão sobre as áreas de estudo envolvidas neste trabalho, tais como IE e SMA. Além disso, apresenta algumas ferramentas e tecnologias utilizadas, bem como os trabalhos correlatos e o seu comparativo.
 	\item Capítulo 3: Contém a proposta de solução composta pela metodologia, modelagem da arquitetura e implementação.
-	\item Capítulo 4: Exibe os testes realizados em laboratório por meio dos perfis dos usuários: Aluno e Docente.
+	\item Capítulo 4: Exibe a ilustração da proposta, com testes realizados em um protótipo por meio dos perfis dos usuários: Aluno e Docente.
 	\item Capítulo 5: Apresenta algumas conclusões e abre perspectivas para trabalhos futuros.
 	\item Capítulo 6: Apresenta o apêndice com todos os casos de uso escritos na modelagem do SMA.
 \end{itemize}
