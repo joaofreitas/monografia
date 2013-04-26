@@ -1,20 +1,20 @@
 \chapter{Fundamentos básicos}
 
-Este capítulo apresenta os principais definições e conceitos necessários para o entendimento deste trabalho. Dividido em 4 seções, a primeira delas apresenta a teoria a respeito de IE. A Seção~\ref{section:sma} aborda os conceitos de SMA necessários ao entendimento deste trabalho. A Seção~\ref{section:mase} apresenta a teoria acerca da metodologia MASE, a decisão pela sua escolha e as fases de desenvolvimento. A Seção~\ref{section:ferramentas} reúne um estudo de ferramentas e tecnologias relacionadas a este trabalho. Por fim, a Seção~\ref{section:trabcorrelatos} aborda alguns trabalhos correlatos.
+Este capítulo apresenta definições e conceitos necessários para o entendimento deste trabalho. Dividido em 4 seções, a primeira delas apresenta a teoria a respeito de IE. A Seção~\ref{section:sma} aborda os conceitos de SMA necessários ao entendimento deste trabalho. A Seção~\ref{section:mase} apresenta a teoria acerca da metodologia MASE, a decisão pela sua escolha e as fases de desenvolvimento. A Seção~\ref{section:ferramentas} reúne um estudo de ferramentas e tecnologias relacionadas a este trabalho. Por fim, a Seção~\ref{section:trabcorrelatos} aborda alguns trabalhos correlatos.
 
 \section{Informática na Educação}
-A IE constitui-se um importante ramo de estudo. O uso do computador como meio de educação tornou-se essencial atualmente. Popularizando meios inacessíveis em um passado recente, a aquisição de conhecimento foi simplificada e reduziu-se a um computador com conexão com a internet para o acesso a diversos tipos de conhecimento.
+A IE constitui-se um importante ramo de estudo. O uso do computador como meio de educação tornou-se essencial atualmente. Popularizando meios inacessíveis em um passado recente, a aquisição de conhecimento é possível por meio de um computador com conexão com a Internet para o acesso a diversos tipos de conhecimento.
  
-O computador passa então a ser uma forma de ensino, ocasionando na descentralização da figura do professor neste processo e, segundo [18], promove o desenvolvimento cognitivo por meio de uma interação maior entre o aluno e o objeto de conhecimento.
+O computador passa então a promover o ensino, ocasionando na descentralização da figura do professor neste processo e, segundo [18], promove o desenvolvimento cognitivo por meio de uma interação maior entre o aluno e o objeto de conhecimento.
  
-Com o crescimento da internet, surgem ambientes específicos para aplicações interativas que auxiliam o estudante. Estes ambientes, chamados de Ambientes Virtuais de Aprendizagem (AVA), surgiram na década de 90 com os cursos à distância e mais tarde com ferramentas interativas e em tempo real [28]. Da necessidade em organizar as informações geradas pelos AVA, surgiram os Sistemas Gerenciadores de Conteúdo e Aprendizagem (LCMS - Learning and Content Managment System).
+Com o crescimento da Internet, surgem ambientes específicos para aplicações interativas que auxiliam o estudante. Estes ambientes, chamados de Ambientes Virtuais de Aprendizagem (AVA), surgiram na década de 90 com os cursos à distância e mais tarde com ferramentas interativas~\cite{kolb84}. Da necessidade em organizar as informações geradas pelos AVA, surgiram os Sistemas Gerenciadores de Conteúdo e Aprendizagem (LCMS - Learning and Content Managment System).
  
 A interação entre as ferramentas tornou-se cada vez maior e tornou-se cada vez mais necessário o ensino personalizado ao estudante. A personalização está relacionada com a forma específica que cada estudante tem ao lidar com informações, a melhor forma de aprender e as suas habilidades. Entre outras palavras, os Sistemas começaram a interagir mais com os alunos a fim de determinar a forma como os alunos percebem e processam as informações.
 
 \subsection{Estilo de Aprendizagem}
-O estilo de aprendizagem é a forma mais eficiente em que o estudante absorve conhecimento ao receber e processar uma informação. Um modelo de estilo de aprendizagem visa classificar um estudante de acordo com uma escala que, organiza as formas as quais são possíveis receber e processar o conhecimento~\cite{felder1988learning}. Estilos de aprendizagem não classificam em uma escala melhor ou pior do que outro estilo de aprendizagem, apenas categoriza o aluno de acordo com a forma de aprender.
+O estilo de aprendizagem é a forma a qual o estudante processa as informações. Um modelo de estilo de aprendizagem visa classificar um estudante de acordo com uma escala que organiza as formas as quais é possível receber e processar o conhecimento~\cite{felder1988learning}. Estilos de aprendizagem não classificam em uma escala melhor ou pior do que outro estilo de aprendizagem, apenas categoriza o aluno de acordo com a forma de aprender.
 
-O estilo de aprendizagem pode orientar melhor um docente a estimular um aluno durante o processo de desenvolvimento de suas habilidades, alterando o ambiente para o aluno de acordo com o estilo de forma a individualizar o processo didático do ensino. Existem diversos modelos de estilos de aprendizagem propostos na literatura, no entando será apresentado neste trabalho as teorias mais importantes dos modelos de estudantes.
+O estilo de aprendizagem pode orientar melhor um docente a estimular um aluno durante o processo de desenvolvimento de suas habilidades, alterando o ambiente para o aluno de acordo com o estilo de forma a individualizar o processo didático do ensino. Existem diversos modelos de estilos de aprendizagem propostos na literatura, no entando serão apresentadas neste trabalho as teorias dos modelos de estudantes.
 
 \subsubsection{Modelo de~\emph{Kolb}}
 
@@ -23,7 +23,7 @@ A perspectiva da teoria experimental do aprendizado proposta em~~\emph{Kolb}~\ci
 \emph{Kolb} propôs quatro estilos de aprendizagem: Divergente, assimilador, convergente e acomodador. Estes estilos estão permeados nos ciclos de aprendizagem definidos. A Tabela~\ref{lista_estilos_aprendizagem} exibe os estilos de aprendizagem propostos por~\emph{Kolb} combinados com o ciclo de aprendizado e a separação em quatro categorias.
 
 \begin{table}
-	\caption{Estilos de Aprendizagem definidos por Kolb}
+	\caption{Estilos de Aprendizagem definidos por Kolb~\cite{kolb84}}
 	\begin{tabular}{|p{4cm} | p{3cm} | p{7cm} |}
 		\hline
 		\textbf{Estilo de Aprendizagem}	& \textbf{Ciclos} & \textbf{Descrição}	\\
@@ -53,7 +53,7 @@ O estilo sensorial categoriza alunos que favorecem o aprendizado por meio dos se
 
 Alunos do estilo intuitivo favorecem informações que florecem em seu raciocínio interno, como a memória, situações imaginárias e por meio de reflexões. Eles normalmente gostam variar o tipo de trabalho, não se importando com a sua complexidade.
 
-A categoria Visual agrupa alunos com mais eficiência em aprender com imagens, diferentemente dos alunos da Verbal categoria que são eficientes em materiais verbais, palavras escritas e discursos.
+A categoria Visual agrupa alunos com mais eficiência em aprender com imagens, diferentemente dos alunos da categoria que são eficientes em materiais verbais, palavras escritas e discursos.
 
 Estudantes do estilo Ativo tendem a aprender de forma a realizar tentativas, expressar suas idéias, realizar experimentações. Geralmente, conseguem trabalhar muito bem em grupos devido ao favorecimento da prática de exemplos. Em oposição, os estudantes reflexivos preferem um raciocínio mais internalizado e pensam bastante a respeito antes de tentar algo. Geralmente, preferem trabalhar sozinhos ou em pares.
 
@@ -65,7 +65,7 @@ Por fim, o estilo Global possui alunos que detém domínio de grandes áreas de 
 O modelo de Honey e Mumford faz uma alteração no ciclo de aprendizagem de Kolb e também define novos estilos de aprendizagem~\cite{muhlbeier12}:
 \begin{itemize}
 	\item Ativo: Pessoas que garantem o seu aprendizado na prática.
-	\item Pragmático: Pessoas que precisam identificar como aplicar no mundo real a teoria estudada. Possuem inclinação à experimentações e abordagens práticas.
+	\item Pragmático: Pessoas que precisam identificar como aplicar no mundo real a teoria estudada. Possuem inclinação a experimentações e abordagens práticas.
 	\item Reflexivo: Aprendem durante a observação e refletindo sobre determinada ação, sem necessariamente praticá-la. Visualizam a ação de diversas perspectivas para fomentar o seu conhecimento.
 	\item Teórico: Primam o entendimento da teoria por trás das ações. O aprendizado de novas informações ocorre por modelos, conceitos e fatos.
 
@@ -74,15 +74,15 @@ O modelo de Honey e Mumford faz uma alteração no ciclo de aprendizagem de Kolb
 Honey e Mumford desenvolveram duas versões de questionários de aprendizagem~\cite{honey2000} para a determinação das preferências de aprendizagem do indivíduo.
 
 \subsection{Diagnóstico do Estilos de Aprendizagem}
-Existem diversas possibilidades de diagnosticar o estilo de aprendizagem. Por meio de questionários de estilo de aprendizagem é possível inferir explícitamente o estilo, exigindo que o indivíduo a ser analisado responda uma série de questões pertencentes à várias dimensões de aprendizagem.
+Existem diversas possibilidades de diagnosticar o estilo de aprendizagem. Por meio de questionários de estilo de aprendizagem é possível inferir explícitamente o estilo, exigindo que o indivíduo a ser analisado responda uma série de questões pertencentes a várias dimensões de aprendizagem.
 
-O questionário utilizado neste trabalho~\cite{muhlbeier12} foi escolhido por se basear em vários outros instrumentos de investigação propostos por Butler, Felder e Silvermann, Honey e Mumford e Kolb (1984). O questionário analisa o aluno através de dezessete dimensões: Acomodador, Analítico, Assimilador, Ativo, Convergente, Divergente, Global, Intuitivo, Pessoal, Pragmático, Realista, Reflexivo, Sensorial, Sequencial, Teórico, Verbal, Visual. Cada dimensão possui três perguntas, totalizando o número de cinquenta e uma questões objetivas.
+O questionário utilizado neste trabalho~\cite{muhlbeier12} foi escolhido por se basear em vários outros instrumentos de investigação propostos por Butler, Felder e Silvermann, Honey e Mumford e Kolb. O questionário analisa o aluno através de dezessete dimensões: Acomodador, Analítico, Assimilador, Ativo, Convergente, Divergente, Global, Intuitivo, Pessoal, Pragmático, Realista, Reflexivo, Sensorial, Sequencial, Teórico, Verbal, Visual. Cada dimensão possui três perguntas, totalizando o número de cinquenta e uma questões objetivas.
 
 As respostas possuem quatro alternativas: Discordo Totalmente, Discordo, Concordo e Concordo Totalmente, onde cada questão possui uma pontuação que corresponde respectivamente a 1, 2, 3 ou 4.
 
 O estilo de aprendizagem é determinado por meio do somatório das respostas de cada dimensão de aprendizagem. A dimensão com maior pontuação é a predominante, apresentando-se então como o estilo de aprendizagem do aluno. 
 
-As questões das dimensões de aprendizagem foram distribuídas entre as perguntas no questionário, apresentadas na Tabela~\ref{questionario_ie}. Foram inseridas três questões correspondentes à cada dimensão integrante dos modelos propostos em~\cite{muhlbeier12}.
+As questões das dimensões de aprendizagem foram distribuídas entre as perguntas no questionário, apresentadas na Tabela~\ref{questionario_ie}. Foram inseridas três questões correspondentes a cada dimensão integrante dos modelos propostos em~\cite{muhlbeier12}.
 
 \begin{table}
 	\caption{Distribuição de Perguntas no Questionário de Estilo de Aprendizagem. Adaptado de~\cite{muhlbeier12}}
@@ -129,11 +129,11 @@ As questões das dimensões de aprendizagem foram distribuídas entre as pergunt
 	\label{questionario_ie}
 \end{table}
 
-Esta seção expôs os principais modelos de estudante presentes na literatura da IE, assim como o questionário de estilo de aprendizagem como uma ferramenta capaz de determinação do estilo de aprendizagem do estudante deste trabalho. É necessário agora o entendimento de técnicas computacionais para a implementação deste questionário. A seção seguinte apresentará a teoria a respeito de SMA, que será a base para o desenvolvimento deste trabalho, definido os aspectos da infraestrutura do ambiente de ensino-aprendizagem proposto.
+Esta seção expôs os principais estilos de aprendizagem presentes na literatura da IE, assim como o questionário de estilo de aprendizagem como uma ferramenta capaz de determinação do estilo de aprendizagem do estudante deste trabalho. É necessário agora o entendimento de técnicas computacionais para a implementação deste questionário. A seção seguinte apresentará a teoria a respeito de SMA, que será a base para o desenvolvimento deste trabalho, definido os aspectos da infraestrutura do ambiente de ensino-aprendizagem proposto.
 
 \section{Sistemas Multiagente}\label{section:sma}
 
-Esta seção visa expor os fundamentos acerca de SMA. Primeiramente serão apresentados as definições iniciais a respeito da Inteligência Artificial (IA) e a teoria relacionada a agentes. Em seguida o trabalho disserta a respeito das arquiteturas relacionadas aos agentes. Só então são apresentados os conceitos de SMA: Interação dos agentes, os aspectos da comunicação neste ambiente e por fim a teoria sobre ontologias.
+Esta seção visa expor os fundamentos acerca de SMA. Primeiramente serão apresentados as definições iniciais a respeito da Inteligência Artificial (IA) e a teoria relacionada a agentes. Em seguida o trabalho disserta a respeito das arquiteturas relacionadas aos agentes. Só então são apresentados os conceitos de SMA: Interação dos agentes, os aspectos da comunicação neste ambiente e por fim um apanhado teórico sobre ontologias nesse contexto.
 
 \subsection{Conceitos}
 
@@ -146,7 +146,7 @@ Em~\cite{novig95} é possível identificar que a definição de IA foi separada 
 	\item Sistemas que agem racionalmente: Baseada na noção de agente racional, um agente é uma entidade que age e possui controle autônomo, percebe o ambiente, adapta a mudanças e é capaz de comprir outras metas.
 \end{itemize}
 
-O crescimento dos estudos relacionados a IA permitiu a ramificação em diversas áreas de atuação, possibilitando a resolução de diversos desafios relacionados à aplicações modernas. Uma das áreas de atuação é o auxílio na execução de aplicações que resolvem problemas de alta complexidade. 
+O crescimento dos estudos relacionados a IA permitiu a ramificação em diversas áreas de atuação, possibilitando a resolução de diversos desafios relacionados a aplicações modernas. Uma das áreas de atuação é o auxílio na execução de aplicações que resolvem problemas de alta complexidade. 
 
 A complexidade de várias aplicações exige muito de~\emph{hardwares} mais modestos e o seu tempo de execução é inviável, necessitando-se um maior investimento e consequentemente encarecendo o seu valor. Dessa forma outras abordagems fazem-se necessárias, como a distribução da aplicação em vários computadores que dividem a sua execução. Este é o campo de estudo da IA Moderna segundo a abordagem de Russel e Norvig~\cite{novig95} que, corroborando com a última definição de IA, propõe: Sistemas que são compostos por vários agentes coletivos atuando de forma a distribuir o seu trabalho outros. Cada agente pode possuir uma capacidade diferente, sendo possível realizar a tarefa de modo paralelo. 
 
@@ -163,23 +163,23 @@ A Figura~\ref{fig:agente-basico} representa o funcionamento básico de agentes, 
 
 Alguns agentes seguem o princípio básico de racionalidade: Sempre objetivam suas ações pela escolha da melhor ação possível segundo seus conhecimentos. Logo é possível denotar que a ação de um agente nem sempre alcança o máximo desempenho, parâmetro definido para medir o grau de sucesso da ação de um agente com base nos seus objetivos. São estes os chamados Agentes Racionais.
 
-Como dito anteriormente, agentes estão presentes em um ambiente e não possuem controle total sobre o mesmo, sendo possível no máximo a influência com a sua atuação ou a criação de outros agentes. Podemos separar ambientes em classes: Software, Físico e Relidade virtual (simulação de ambientes reais em~\emph{software}). Em~\cite{wooldridge04} são definidos os ambientes com propriedades inerentes à seu funcionamento:
+Como dito anteriormente, agentes estão presentes em um ambiente e não possuem controle total sobre o mesmo, sendo possível no máximo a influência com a sua atuação ou a criação de outros agentes. Podemos separar ambientes em classes: Software, Físico e Relidade virtual (simulação de ambientes reais em~\emph{software}). Em~\cite{wooldridge04} são definidos os ambientes com propriedades inerentes a seu funcionamento:
 
 \begin{itemize}
 	\item Observável: Neste tipo de ambiente, os sensores dos agentes conseguem ter percepção completa do ambiente. Por exemplo, um sensor de movimento consegue ter visão total em um ambiente aberto.
 	\item Determinística: O próximo estado do ambiente é sempre conhecido dados o estado atual do ambiente e as ações dos agentes. O oposto do ambiente determinístico é o estocástico, quando não há certeza do seu estado. Por exemplo, agentes dependentes de eventos climáticos.
 	\item Episódico: A experiência do agente é dividida em episódios, onde cada episódio é a percepção do agente e a sua ação.
-	\item Sequêncial: A ação tomada pelo agente pode afetar o estado do ambiente e ocasionar na mudança de estado
+	\item Sequencial: A ação tomada pelo agente pode afetar o estado do ambiente e ocasionar na mudança de estado
 	\item Estático: O ambiente não é alterado enquanto um agente escolhe uma ação.
 	\item Discreto: Existe um número definido de ações e percepções do agente para o ambiente em cada turno.
 	\item Contínuo: As percepções e ações de um agente modificam-se em um espectro contínuo de valores. Por exemplo, temperatura de um sensor muda de forma contínua.
 \end{itemize}
 
 \begin{table}
-	\caption{Listagem de SMA com propriedades de medida de performance, ambiente, atuadores e sensores}
+	\caption{Listagem de SMA com propriedades de medida de desempenho, ambiente, atuadores e sensores}
 	\begin{tabular}{|p{3cm} | p{3cm} | p{2cm}| p{3cm} | p{3cm} |}
 		\hline
-		\textbf{Tipo de agente}	& \textbf{Medida de performance} & \textbf{Ambiente} & \textbf{Atuadores}  & \textbf{Sensores}	\\
+		\textbf{Tipo de agente}	& \textbf{Medida de desempenho} & \textbf{Ambiente} & \textbf{Atuadores}  & \textbf{Sensores}	\\
 		\hline
 		Sensores de estacionamento	& Avarias no veículo & Carro e garagens & Freio do carro, controle de velocidade & Sensor de proximidade	\\
 		\hline
@@ -191,11 +191,11 @@ Como dito anteriormente, agentes estão presentes em um ambiente e não possuem 
 	\label{lista_agentes}
 \end{table}
  
-A Tabela~\ref{lista_agentes} mostra alguns exemplos de agentes, apresentando as suas características em termos de possibilidade de medida de performance, possíveis ambientes, atuadores e sensores. A primeira linha da Tabela~\ref{lista_agentes} apresenta um exemplo de agente atuando em um veículo como um sensor de estacionamento. Responsável por auxiliar o motorista no ato de estacionar o carro, o seu ambiente é da classe físico (considerando o carro e o ambiente onde está o carro). Seu sensor de proximidade é a percepção do ambiente e, caso detecte que está próximo de um obstáculo, pode atuar nos freios dos carros diminuindo a velocidade e evitando colisões. Avarias no carro podem indicar um mal funcionamento do sensor.
+A Tabela~\ref{lista_agentes} mostra alguns exemplos de agentes, apresentando as suas características em termos de possibilidade de medida de desempenho, possíveis ambientes, atuadores e sensores. A primeira linha da Tabela~\ref{lista_agentes} apresenta um exemplo de agente atuando em um veículo como um sensor de estacionamento. Responsável por auxiliar o motorista no ato de estacionar o carro, o seu ambiente é da classe físico (considerando o carro e o ambiente onde está o carro). Seu sensor de proximidade é a percepção do ambiente e, caso detecte que está próximo de um obstáculo, pode atuar nos freios dos carros diminuindo a velocidade e evitando colisões. Avarias no carro podem indicar um mal funcionamento do sensor.
 
-A segunda linha da Tabela~\ref{lista_agentes} apresenta um agente atuando em um jogo avulso. Esse ambiente é dito dinâmico, pois a cada jogada de um oponente (real ou não), o agente deve analisar a jogada feita, calcular sua próxima jogada e executá-la. O objetivo principal do agente é a vitória. O ambiente que o agente atua é um software e o seu atuador é um algum mecanismo que permite que ele realize a jogada. O sensor é o mecanismo no qual o agente irá perceber a jogada realizada pelo oponente.
+A segunda linha da Tabela~\ref{lista_agentes} apresenta um agente atuando em um jogo avulso. Esse ambiente é dito dinâmico, pois a cada jogada de um oponente (real ou não), o agente deve analisar a jogada feita, calcular sua próxima jogada e executá-la. O objetivo principal do agente é a vitória. O ambiente em que o agente atua é um software e o seu atuador é um algum mecanismo que permite que ele realize a jogada. O sensor é o mecanismo no qual o agente irá perceber a jogada realizada pelo oponente.
 
-Por fim, a última linha da Tabela~\ref{lista_agentes} expõe um exemplo de um agente médico atuando em um ambiente estático: Um paciente. Esse ambiente é classificado como estático por não ser alterado pelo agente nesse exemplo, porém é possível classificá-lo diferente em outras situações. O objetivo principal é monitorar a saúde do paciente, logo a medida de performance será a aproximação ou não do diagnóstico médico. Seu atuador não será diretamente no ambiente (corpo humano), será na forma de relatórios médicos e seus sensores podem variar de acordo com a doença a ser monitorada.
+Por fim, a última linha da Tabela~\ref{lista_agentes} expõe um exemplo de um agente médico atuando em um ambiente estático: Um paciente. Esse ambiente é classificado como estático por não ser alterado pelo agente nesse exemplo, porém é possível classificá-lo diferente em outras situações. O objetivo principal é monitorar a saúde do paciente, logo a medida de desempenho será a aproximação ou não do diagnóstico médico. Seu atuador não será diretamente no ambiente (corpo humano), será na forma de relatórios médicos e seus sensores podem variar de acordo com a doença a ser monitorada.
 
 Segundo~\cite{wooldridge04} é possível separar as principais noções dos agentes em dois grupos. O primeiro, chamado de noção fraca, compreende as características de reatividade, proatividade e habilidade social. O conceito de reatividade está ligado com a percepção do ambiente e a reação no mesmo. Proatividade é a característica do agente tomar iniciativa e agir sem a necessidade de nenhum estímulo. Habilidade social é a capacidade de interação com outros agentes. Já a noção forte de agente envolve os seguintes aspectos:
 
@@ -207,11 +207,11 @@ Segundo~\cite{wooldridge04} é possível separar as principais noções dos agen
 	\item Cooperação: Cooperação com o usuário.
 \end{itemize}
 
-\subsection{Arquiteturas de agentes}
+\subsection{Arquiteturas de Agentes}
 
-A arquitetura de agentes varia de acordo com a complexidade da sua autonomia, ou seja, com a capacidade de reagir aos estímulos do ambiente. Conforme verificado em~\cite{novig95}, os tipos de arquitetura são: orientadas à tabela, reflexiva simples, reflexiva baseado em modelo, baseada em objetivo, baseada em utilidade.
+A arquitetura de agentes varia de acordo com a complexidade da sua autonomia, ou seja, com a capacidade de reagir aos estímulos do ambiente. Conforme verificado em~\cite{novig95}, os tipos de arquitetura são: orientadas a tabela, reflexiva simples, reflexiva baseado em modelo, baseada em objetivo, baseada em utilidade.
 
-A primeira arquitetura a ser explorada é o agente orientado à tabelas. Todas as ações dos agentes são conhecidas e estão gravadas em uma tabela. Assim, quando o agente receber o estímulo ele já terá a ação a ser tomada previamente gravada em sua memória. Logo para construir esse tipo de agente, fica claro que além de saber todas percepções possíveis, será necessário definir ações apropriadas para todas. Isso ocasiona a criação de tabelas muito complexas e o tamanho pode facilmente passar a ordem de milhões de registros dependendo do número de entradas.
+A primeira arquitetura a ser explorada é o agente orientado a tabelas. Todas as ações dos agentes são conhecidas e estão gravadas em uma tabela. Assim, quando o agente receber o estímulo ele já terá a ação a ser tomada previamente gravada em sua memória. Logo para construir esse tipo de agente, fica claro que além de saber todas percepções possíveis, será necessário definir ações apropriadas para todas. Isso ocasiona a criação de tabelas muito complexas e o tamanho pode facilmente passar a ordem de milhões de registros dependendo do número de entradas.
 
 A arquitetura reflexiva simples é um dos tipos mais elementares de agente. Nele, o agente seleciona a ação com base unicamente na percepção atual, desconsiderando assim uma grande tabela de decisões. A decisão é tomada com base em regras de condição-ação: Se uma condição ocorrer, uma ação será tomada. Por exemplo, supondo um agente médico que determina o diagnóstico de uma doença no paciente caso exista alguma anomalia no organismo (Por exemplo, um paciente com febre). Uma condição-ação poderia ser:
 
@@ -221,7 +221,7 @@ Esse tipo de agente é bastante simples, o que é uma vantagem comparado à arqu
 
 A arquitetura baseada em modelos funciona de maneira similar a anterior. Nessa abordagem, é levado em conta a parte do ambiente que não é visível neste momento. E para saber o ``momento atual'' de um agente, é necessário guardar a informação de estado consigo. Para atualizar o estado do agente, é necessário conhecer como o mundo desenvolve-se independente do agente (no caso do exemplo, como o organismo funciona) e é necessário saber as ações dos agentes no ambiente. Esses conhecimentos acerca do ambiente são definidos como modelo de mundo. Do ponto de vista do agente, essa abordagem é considerada como baseada em modelo.
 
-Na arquitetura baseada em objetivo, as ações do agente são executadas apenas se o aproximam de alcançar um objetivo. Para isso, será necessário algo além do estado atual do ambiente: Será necessário informações do objetivo a ser atingido. Assim o agente pode combinar as informações de estado e objetivo para determinar se deve ou não agir sobre o ambiente. Este modelo permite uma maior flexibilização das ações em determinados ambientes, visto que suas decisões são representadas de forma explícita e podem ser modificadas, com a consequência de aumento da complexidade desta abordagem. É interessante notar que esse tipo de arquitetura não trata ações com objetivos conflitantes.
+Na arquitetura baseada em objetivo, as ações do agente são executadas apenas se o aproximam de alcançar um objetivo. Para isso, será necessário algo além do estado atual do ambiente: Serão necessárias informações do objetivo a ser atingido. Assim o agente pode combinar as informações de estado e objetivo para determinar se deve ou não agir sobre o ambiente. Este modelo permite uma maior flexibilização das ações em determinados ambientes, visto que suas decisões são representadas de forma explícita e podem ser modificadas, com a consequência de aumento da complexidade desta abordagem. É interessante notar que esse tipo de arquitetura não trata ações com objetivos conflitantes.
 
 Por fim, a arquitetura baseada em utilidade não utiliza apenas objetivos para realizar a próxima decisão, mas dá ao agente a capacidade de fazer comparações sobre o estado do ambiente e as ações a serem tomadas: Quais delas são mais baratas, confiáveis, resilientes e rápidas do que as outras. A capacidade de avaliação do agente é chamada de função de utilidade, que mapeia uma sequência de estados em um número real que determina o grau de utilidade. Esse mecanismo possibilita a decisão racional de escolha entre vários objetivos conflitantes. Por exemplo, escolher entre um objetivo mais barato ao invés de escolher entre o mais rápido.
 
@@ -233,20 +233,20 @@ Em~\cite{sarmento11}, podemos encontrar as seguintes características principais
 \begin{itemize}
 	\item Fornecem protocolos específicos para comunicação e interação. Cada ambiente tem as suas particularidades: Alguns são em uma única máquina, outros são compartilhados com o mundo real e outros são distribuídos. Cabe a cada ambiente definir um protocolo onde todos agentes devem obedecer para comunicar-se.
 	\item São tipicamente abertos.
-	\item Contém agentes que são autônomos e individualistas.
+	\item Contêm agentes que são autônomos e individualistas.
 \end{itemize}
 
 É trivial imaginar que um SMA é designado para a solução de problemas de forma distribuída, onde o problema é fragmentado entre os agentes que, juntos, trabalham concorrentemente para a resolução deste problema, podendo ou não agir de forma cooperativa.
 
 É importate notar a distinção de conceitos como cooperação na literatura de SMA. Em~\cite{wooldridge04}, existem duas principais diferenças do conceito entre as duas abordagens.
 
-A primeira diferença é a designação distinta dos objetivos dos agentes. Em um ambiente com vários agentes, eles devem trabalhar estratégicamente para alcançar seus objetos. A possibilidade de agentes não cooperarem é perfeitamente plausível. A segunda diferença está na ação de forma autônoma, ou seja, tomar suas próprias decisões em tempo de execução sem interferências humanas ou de outros agentes. Logo, um ecossistema de agentes deve ser capaz de coordenar dinâmicamente suas ações, cooperando com outros agentes para atingir os objetivos. Em aplicações distribuídas, esses comportamentos já são desenhados durante o planejamento do software.
+A primeira diferença é a designação distinta dos objetivos dos agentes. Em um ambiente com vários agentes, eles devem trabalhar estrategicamente para alcançar seus objetos. A possibilidade de agentes não cooperarem é perfeitamente plausível. A segunda diferença está na ação de forma autônoma, ou seja, tomar suas próprias decisões em tempo de execução sem interferências humanas ou de outros agentes. Logo, um ecossistema de agentes deve ser capaz de coordenar dinâmicamente suas ações, cooperando com outros agentes para atingir os objetivos. Em aplicações distribuídas, esses comportamentos já são desenhados durante o planejamento do software.
 
 A forma de agentes resolverem problemas foi baseada na técnica distribuição cooperativa de resolução de problemas -~\emph{cooperative distributed problem solving} (CDPS). Em~\cite{durfee89}, a técnica CDPS consiste de uma rede de baixo acoplamento provida de sofisticados nós resolvedores de problemas que precisam cooperar entre si, pois nenhum deles possui recursos, informações e~\emph{expertise} suficientes para resolver algum problema sozinho. Cada nó possui uma~\emph{expertise} diferente que pode resolver parte do problema.
 
 Inicialmente essa técnica assumiu que os problemas fossem de ordem benevolente. Isso significa que, implicitamente, os agentes compartilham o mesmo objetivo de resolver o problema proposto. Isso implica que todos eles ajudarão sempre que possível, mesmo tendo prejuízos na execução da ação, pois o objetivo geral de todos será a resolução do problema maior. Esse cenário é plausível desde que uma organização ou entidade tenha o controle de (ou possa modelar) todos os agentes.
 
-Em um cenário mais realista (e de maior enfoque dos estudos de SMA), agentes podem pertencer à sociedades com interesses próprios, diferentes de outras sociedades. Logo, é possível ocorrer conflito de interesses neste ambiente, situação que força os agentes a cooperarem com os outros para alcançarem seus objetivos.
+Em um cenário mais realista (e de maior enfoque dos estudos de SMA), agentes podem pertencer a sociedades com interesses próprios, diferentes de outras sociedades. Logo, é possível ocorrer conflito de interesses neste ambiente, situação que força os agentes a cooperarem com os outros para alcançarem seus objetivos.
 
 O processo CDPS pode ser divido em três etapas:
 \begin{itemize}
@@ -259,11 +259,11 @@ Com uma solução compartilhada de resolução de problemas, a arquitetura SMA m
 
 \subsection{Comunicação}
 
-A comunicação é um dos aspectos mais importantes no desenvolvimento de SMA. Problemas de sincronização entre as partes que se comunicam devem ser devidamente estudados. A situação mais simples possível da comunicação, onde o agente A envia uma mensagem ao agente B que está prontamente disponível para receber a mensagem nem sempre é a o cenário mais recorrente. Para tanto, é necessário entender os pormenores da comunicação desta abordagem.
+A comunicação é um dos aspectos mais importantes no desenvolvimento de SMA. Problemas de sincronização entre as partes que se comunicam devem ser devidamente estudados. A situação mais simples possível da comunicação, onde o agente A envia uma mensagem ao agente B que está prontamente disponível para receber a mensagem nem sempre é o cenário mais recorrente. Para tanto, é necessário entender os pormenores da comunicação desta abordagem.
 
-Em uma aplicação normal (\emph{desktop} ou~\emph{web}), a comunicação entre objetos pode ser mais simplificada. Por exemplo, supondo uma aplicação em que existe dois objetos,~\emph{a} e~\emph{b} e que o objeto~\emph{a} tenha um método público chamado~\emph{m1}. O objeto~\emph{b} pode ser comunicar com o objeto~\emph{a} por meio do método~\emph{m1}, provavelmente da seguinte forma~\emph{a.m1(args)}, onde~\emph{args} são os argumentos enviados ao objeto~\emph{a} e a sintaxe pode ser diferente da apresentada, dependendo da linguagem de programação. É importante notar que o controle da execução do método~\emph{m1} não está no objeto~\emph{a}, mas sim no objeto~\emph{b}, que decide o momento o qual o método será invocado.
+Em uma aplicação normal (\emph{desktop} ou~\emph{web}), a comunicação entre objetos pode ser mais simplificada. Por exemplo, supondo uma aplicação em que existem dois objetos,~\emph{a} e~\emph{b} e que o objeto~\emph{a} tenha um método público chamado~\emph{m1}. O objeto~\emph{b} pode ser comunicar com o objeto~\emph{a} por meio do método~\emph{m1}, provavelmente da seguinte forma~\emph{a.m1(args)}, onde~\emph{args} são os argumentos enviados ao objeto~\emph{a} e a sintaxe pode ser diferente da apresentada, dependendo da linguagem de programação. É importante notar que o controle da execução do método~\emph{m1} não está no objeto~\emph{a}, mas sim no objeto~\emph{b}, que decide o momento em que o método será invocado.
 
-Esse cenário de comunicação é diferente em um ambiente SMA. Supondo dois agentes~\emph{a} e~\emph{b}, onde o agente~\emph{a} tem a capacidade de executar a ação $\alpha$. O agente~\emph{b} não poderá invocar diretamente o método que corresponde à ação $\alpha$, visto que os agentes são autônomos e independentes: Cada um tem somente tem total controle sobre suas ações e seus estados. O agente precisará enviar a solicitação da execução da ação $\alpha$ por meio de mensagem. Isso porém não garante que o agente~\emph{a} executará esta ação, pois pode não ser do seu interesse. Os agentes podem também influênciar o comportamento de outros agentes, alterando seu estado interno para a execução de ações e cooperando para o cumprimento do objetivo de outros agentes.
+Esse cenário de comunicação é diferente em um ambiente SMA. Supondo dois agentes~\emph{a} e~\emph{b}, onde o agente~\emph{a} tem a capacidade de executar a ação $\alpha$. O agente~\emph{b} não poderá invocar diretamente o método que corresponde à ação $\alpha$, visto que os agentes são autônomos e independentes: Cada um tem somente total controle sobre suas ações e seus estados. O agente precisará enviar a solicitação da execução da ação $\alpha$ por meio de mensagem. Isso porém não garante que o agente~\emph{a} executará esta ação, pois pode não ser do seu interesse. Os agentes podem também influênciar o comportamento de outros agentes, alterando seu estado interno para a execução de ações e cooperando para o cumprimento do objetivo de outros agentes.
 
 A comunicação dos agentes é baseada na teoria dos atos de fala (\emph{Speech act theory}) e trata a comunicação como uma ação. A teoria dos atos de fala, publicada em 1962 por John Austin~\cite{austin62}, propõe que certas expressões de linguagem natural, ou atos de fala, possuem a característica implícita de suscintar uma ação em um interlocutor, causando assim uma mudança de estado da mesma forma que uma ação física. Essas expressões descrevem as ações por meio de desejos, habilidades e crenças.
 
@@ -353,15 +353,13 @@ Na segunda mensagem, o seu enunciado performativo é~\emph{reply}, significando 
 )
 \end{lstlisting}
 
-De acordo com~\cite{wooldridge04}, a adoção desta linguagem pela comunidade de SMA foi significante, mas possui diversos aspectos negativos:
+De acordo com~\cite{wooldridge04}, a adoção desta linguagem pela comunidade de SMA foi importante, porém possui os seguintes aspectos:
 \begin{itemize}
 	\item A fluídez e a não restrição do KQML fez com que diversas implementações extendidas surgissem, impossibilitando a interoperabilidade entre sistemas;
 	\item Mecanismos de transporte do KQML nunca foram bem definidos, causando problemas de diversas implementações destes mecanismos e prejudicando novamente a interoperabilidade;
 	\item A semântica do KQML não foi formalmente definida, ocasionando em má interpretações dos enunciados performativos;
 	\item A linguagem não possui enunciados performativos adequados para algumas semânticas. Por exemplo, a inexistência do enunciado~\emph{comissives}.
 \end{itemize}
-
-Dessa forma, a linguagem
 
 \subsubsection{KIF}
 A linguagem foi desenvolvida para expressar conhecimento a cerca de um determinado domínio, sendo possível assim a troca de conhecimentos entre agentes. De acordo com~\cite{kifmanual} a linguagem possui as seguintes características:
@@ -381,7 +379,7 @@ O exemplo de código da Listagem~\ref{code:exemplo-kif} ilustra um exemplo de ex
 
 \subsection{Linguagem de Comunicação de Agentes FIPA}
 
-Após as críticas à linguagem KQML, o consórcio~\emph{Foundation for Intelligent Physical Agents} (FIPA) começou a trabalhar em 1995 no desenvolvimento da padronização de SMA. O núcleo dessa padronização foi o desenvolvimento da Linguagem de Comunicação de Agentes (ACL) comum à todas as plataformas.
+Após as críticas à linguagem KQML, o consórcio~\emph{Foundation for Intelligent Physical Agents} (FIPA) começou a trabalhar em 1995 no desenvolvimento da padronização de SMA. O núcleo dessa padronização foi o desenvolvimento da Linguagem de Comunicação de Agentes ou~\emph{Agent Communication Language} (ACL) comum à todas as plataformas.
 
 Baseado na linguagem KQML, a estrutura das mensagens é a mesma e os seus atributos são semelhantes. A maior diferença entre as duas linguagens são os enunciados performativos. Foram definidos 20 tipos de mensagens performativas, muito semelhante ao KQML, porém com definições formais das interpretações dessas mensagens e não definindo nenhuma linguagem para o conteúdo da mensagem.
 
@@ -459,11 +457,11 @@ A Figura~\ref{fig:arvore-ontologia} representa a organização geral de conceito
 	\label{fig:arvore-ontologia}
 \end{figure}
 
-Em um ambiente SMA além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação a um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados de performance de veículos, enfim, dois agentes podem comunicar-se usando a mesma ontologia.
+Em um ambiente SMA além de especificar uma linguagem para comunicação, dois agentes podem comunicar-se com relação a um determinado domínio de aplicação: Podem negociar valores de carteiras em uma organização financeira, podem trocar mensagens sobre os dados analisados do desempenho de veículos, enfim, dois agentes podem comunicar-se usando a mesma ontologia.
 
-A possibilidade de representação de conhecimento por meio de ontologias é vasta, visto que sua esta pode ser expressada por meio de lógica de primeira ordem. Considerando a parte de ontologias onde são definidos os conhecimentos, a modelagem de conceitos pode ser definida de forma hierárquica onde são organizados na forma de árvore, possibilitando a inserção de novos nós de conceitos a qualquer momento na estrutura.
-A expressão de conceitos é possível em qualquer linguagem capaz de representar hierarquias. A linguagem~\emph{eXtensible Markup Language} (XML), por exemplo, é uma linguagem de marcação que organiza os dados de forma hierarquizada.
+A possibilidade de representação de conhecimento por meio de ontologias é vasta, visto que é possível ser expressada por meio de lógica de primeira ordem. Considerando que as ontologias podem representar domínios de conhecimento modelados através de conceitos e seus relacionamentos, definidos através de uma taxonomia hierárquica onde são organizados na forma de árvore, possibilitando a inserção de novos nós de conceitos na estrutura.
 
+A taxonomia hierárquica de conceitos pode ser representada em diversas linguagens capazes de representar hierarquias. A linguagem~\emph{eXtensible Markup Language} (XML), por exemplo, é uma linguagem de marcação que organiza os dados de forma hierarquizada.
 A Listagem~\ref{code:exemplo-xml} apresenta uma representação de conceitos de domínio de países escrita na linguagem XML. Nela observa-se um conceito superior, País. Cada país é composto por um conjunto de estados, conténdo as propriedades nome e sigla. Cada estado possui um conjunto de cidades. Cada cidade possui os atributos nome e população. Esses atributos poderiam ser escritos de forma diferente no exemplo da Listagem~\ref{code:exemplo-xml}, porém sem alteração de semântica.
 
 
@@ -592,7 +590,7 @@ Após a definição dos~\emph{Concurrent Tasks Diagrams}, o analista pode combin
 
 \subsection{Projeto}
 
-Esta fase é divida em quatro passos: Criar Classes dos Agentes, Construir Conversações, Montagem dos Agentes e Design do Sistema. O principal objetivo desta fase é projetar os agentes e suas interações de acordo com os insumos construídos na fase anterior.
+Esta fase é divida em quatro passos: Criar Classes dos Agentes, Construir Conversações, Montagem dos Agentes e Projeto do Sistema. O principal objetivo desta fase é projetar os agentes e suas interações de acordo com os insumos construídos na fase anterior.
 
 \subsubsection{Criando as Classes dos Agentes}
 
@@ -685,18 +683,18 @@ Por fim, esta seção disserta a respeito da ferramenta JBoss Seam, responsável
 
 \subsection{UML}
 
-A Linguagem Unificada de Modelagem (UML) é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens objetivando o entendimento dos artefatos de forma rápida e clara, resultando em uma semântica para o projeto em questão. Segundo~\cite{fowler04}, o UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
+A Linguagem Unificada de Modelagem (UML) é uma linguagem visual que foi desenvolvida para a representação do software por meio de imagens objetivando o entendimento dos artefatos de forma rápida e clara, resultando em uma semântica para o projeto em questão. Segundo~\cite{fowler04}, UML faz parte de uma família de notações gráficas que ajudam na descrição e concepção de sistemas de software, principalmente em sistemas concebidos utilizando o paradigma da orientação à objetos (OO).
 
-O UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
+A UML é um padrão não proprietário, controlado pelo consórcio~\emph{Object Management Group}~\cite{omg20}. Seu nascimento é datado em 1997~\cite{fowler04}, surgindo a partir da união de diversas linguagens e ferramentas de surgiram na década de 80 e 90.
 A linguagem ajuda o entendimento de como o software foi projetado, como ocorre a comunicação entre seus objetos, como suas classes são organizadas, quais são os atores que são envolvidos na utilização do software, dentre outras possibilidades de representação.
 
-Segundo~\cite{fowler04} é possível separar o uso da linguagem de três formas distintas de modelagem conforme o objetivo de uso: Rascunho, arquitetura de software e como linguagem de programação. 
+Segundo~\cite{fowler04} é possível separar o uso da linguagem em três formas distintas de modelagem conforme o objetivo de uso: rascunho, arquitetura de software e como linguagem de programação. 
 
 A utilização como rascunho facilita a comunicação entre as pessoas envolvidas no projeto, sejam desenvolvedores discutindo funcionalidades do software ou gestores explicando funcionalidades em alto nível. O objetivo neste uso é a comunicação de alguns aspectos do sistema de forma rápida, sem a necessidade de formalizar artefatos para o projeto.
 
 A utilização da UML como arquitetura de software são documentos detalhados que são criados para documentação do software, sendo divida em duas sub-categorias: Engenharia reversa e engenharia normal. Na engenharia reversa, os diagramas são gerados a partir de uma ferramenta que faz a leitura do código fonte e gera os diagramas desejados, que são utilizados para auxiliar o leitor no entendimento do sistema. Na engenharia normal, a idéia é modelar o sistema detalhadamente antes de qualquer desenvolvimento, prevendo quais serão os módulos do sistema, bem como a sua a comunicação.
 
-No uso como linguagem de programação, a UML é utilizado para geração de código executável por ferramentas avançadas de modelagem. Esse modo requer a modelagem de estado e comportamento do sistema, para fins de detalhar o comportamento e lógica do sistema em código.
+No uso como linguagem de programação, a UML é utilizada para geração de código executável por ferramentas avançadas de modelagem. Esse modo requer a modelagem de estado e comportamento do sistema, para fins de detalhar o comportamento e lógica do sistema em código.
 
 \subsubsection{Diagramas UML}
 
@@ -741,7 +739,7 @@ Dessa forma, o caso de uso deve deixar claro os requisitos funcionais do sistema
 		\hline
 		Escopo	& Escopo descrito pelo caso de uso. \\
 		\hline
-		Nível	& Podem ser níveis de objetivo de usuário (quando descrevem os cenários para atingir o objetivo do usuário) ou nível de subfunção (subpassos para dar suporte a um objetivo de usuário). \\
+		Nível	& Níveis de objetivo de usuário - quando descrevem os cenários para atingir o objetivo do usuário. Nível de subfunção - subpassos para dar suporte a um objetivo de usuário. \\
 		\hline
 		Ator Principal	& O ator que procura os serviços para atingir seus objetivos.  \\
 		\hline
@@ -828,7 +826,7 @@ Os agentes executam em~\emph{threads} separadas garantindo o não compartilhamen
 
 A mobilidade de agentes entre máquinas também é feita de forma transparente pelo JADE. Em~\cite{bellifemine07}, a mobilidade do agente pode transportar o estado do agente (sob certas condições) entre processos e máquinas.
 
-Uma das características mais importantes do~\emph{middleware} é o suporte nativo à ontologias e linguagens de comunicação FIPA. As ontologias podem ser modeladas (expressando ações, conceitos e predicados) de forma simples e clara, além de ser possível restringir as ontologias a determinados agentes que devem a conhecer.
+Uma das características mais importantes do~\emph{middleware} é o suporte nativo a ontologia e linguagens de comunicação FIPA. As ontologias podem ser modeladas (expressando ações, conceitos e predicados) de forma simples e clara, além de ser possível restringir as ontologias a determinados agentes que devem a conhecer.
 
 \subsubsection{Arquitetura}
 
@@ -861,7 +859,7 @@ Em nível de código faz-se necessária a implementação do método~\emph{setup
 	void removeSubBehaviour( Comportamento )
 \end{lstlisting}
 
-Os comportamentos são separados em primitivos e compostos. A diferença entre ambos é a possibilidade dos comportamentos compostos poderem agregar vários outros comportamentos simples ou compostos, sendo eles:~\emph{ParallelBehaviour, SequentialBehaviour}. De maneira distinta, os comportamentos primitivos tem relação direta com o tempo, acontecendo durante um período de espera ou após o envio de uma mensagem. São eles:~\emph{SimpleBehaviour, CyclicBehaviour, TickerBehaviour, OneShotBehaviour, WakerBehaviour} e~\emph{ReceiverBehaviour}.
+Os comportamentos são separados em primitivos e compostos. A diferença entre ambos é a possibilidade dos comportamentos compostos poderem agregar vários outros comportamentos simples ou compostos, sendo eles:~\emph{ParallelBehaviour, SequentialBehaviour}. De maneira distinta, os comportamentos primitivos têm relação direta com o tempo, acontecendo durante um período de espera ou após o envio de uma mensagem. São eles:~\emph{SimpleBehaviour, CyclicBehaviour, TickerBehaviour, OneShotBehaviour, WakerBehaviour} e~\emph{ReceiverBehaviour}.
 
 \subsubsection{Ciclo de Vida dos Agentes}
 O JADE implementa o ciclo de vida especificado pela FIPA. Os possíveis estados da plataforma são:
@@ -906,24 +904,24 @@ A pilha de aplicações do Seam, representada na Figura~\ref{fig:servidor-app-se
 
 Em~\cite{allen09}, uma das principais ferramentas do Seam é o~\emph{seam-generator}. Com ele, é possível gerar uma estrutura básica de projeto, com arquivos de construção, bibliotecas compatíveis e as configurações necessárias para o início do desenvolvimento e o~\emph{deploy} em um servidor de aplicação.
 
-Além disso, uma das grandes vantagens do~\emph{seam-generator} é a geração automática de código, criando, a partir de uma tabela no banco de dados, todas as operações necessárias para a visualização, inserção, exclusão e atualização de dados (CRUD), diminuindo assim o tempo de desenvolvimento de aplicações.
+Além disso, uma das grandes vantagens do~\emph{seam-generator} é a geração automática de código, criando, a partir de uma tabela no banco de dados, todas as operações necessárias para a visualização, inserção, exclusão e atualização de dados, diminuindo assim o tempo de desenvolvimento de aplicações.
 
 Portanto este trabalho optou por utilizar o~\emph{JBoss Seam}, pois engloba outras importantes ferramentas em uma única solução, facilitando assim o desenvolvimento da aplicação~\emph{web}. A facilidade pode ser constatada a partir dos aspectos já mencionados, como integração nativa entre as ferramentas da sua pilha de aplicações e geração automática de código.
 
 \section{Trabalhos Correlatos}\label{section:trabcorrelatos}
-É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste projeto, seja em IA, Estilos de Aprendizagem, SMA ou AVA.
+É possível fazer comparações deste trabalho com diversas áreas de conhecimentos correlatos. Os trabalhos presentes nesta seção foram selecionados a partir de um levantamento que buscou soluções para melhorias na educação com o apoio de tecnologia. Estes trabalhos estão relacionados com a área de atuação deste projeto, seja em IA, estilos de aprendizagem, SMA ou AVA os quais serão apresentados nesta ordem.
 
-Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado a um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de IA. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. Sua abordagem porém não é voltada para a abordagem multidimensional de inferência do aluno, bem como a solução não prevê a inferência de dados vindos de outros AVA.
+Na área de auxílio de alunos, alguns trabalhos assemelham-se com o propósito deste trabalho. A implementação de um agente artificial integrado a um tutor inteligente~\cite{soaresagente} que identifica dificuldades de aprendizagem por meio de técnicas de IA. Ele prima pela agradável interação com humanos com o intuito de facilitar a compreensão da ferramenta. A solução porém não possui foco na abordagem multidimensional do aluno, bem como a solução não prevê o processamento de dados vindos de outros AVA.
 
-O trabalho~\cite{bativa2011}, na área de identificação de conhecimentos, visa a determinação de estilos de aprendizagem dos alunos por meio da plataforma chamada ``Ferramenta de Identificação de Perfis de Aprendizes – FIPA'', uma aplicação multicamadas que faz a identificação do perfil por meio de questionários de estilos de aprendizagem. Apesar da inferência do estilo de aprendizagem, esta plataforma utiliza uma abordagem distinta deste trabalho, sendo uma arquitetura cliente-servidor. 
+O trabalho~\cite{bativa2011}, na área de identificação de conhecimentos, visa a determinação de estilos de aprendizagem dos alunos por meio da plataforma chamada ``Ferramenta de Identificação de Perfis de Aprendizes – FIPA'', uma aplicação multicamadas que faz a identificação do perfil por meio de questionários de estilos de aprendizagem. Apesar do mapeamento do estilo de aprendizagem, esta plataforma utiliza uma abordagem distinta deste trabalho, sendo uma arquitetura cliente-servidor. 
 
 Esta arquitetura não possui alguns benefícios da abordagem SMA, conforme~\cite{helbing11}: A possibilidade de representação de entidades individuais como, no domínio  deste trabalho, a modelagem do conhecimento de cada aluno por meio de agentes. Outra característica é a representação das suas interações por meio de equações, regras ou operações lógicas que podem flexibilizar a modelagem. Por fim, modelos baseados em agentes são recomendáveis para simulações devido as suposições realisticas inerentes a seu domínio.
 
-O trabalho~\cite{geyer2001semeai} utiliza-se da abodagem SMA para a adaptação do ensino na internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de ensino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil. Este ambiente assemelha-se bastante com o presente trabalho, porém o seu foco não é na modelagem multidimensional do aluno.
+O trabalho~\cite{geyer2001semeai} utiliza-se da abodagem SMA para a adaptação do ensino na Internet. A adaptação ocorre conforme as características individuais de cada aluno e pode modificar características como a estratégia de ensino, seleção de materiais que são mais adequados ao aluno de acordo com o seu perfil. Este ambiente assemelha-se bastante com o presente trabalho, porém o seu foco não é na modelagem multidimensional do aluno.
 
 A modelagem multidimensional tem por objetivo a separação clara das dimensões do aluno para restringir o domínio de atuação de cada agente. Dessa forma, cada a gente expressará uma quantidade menor de propriedades de cada dimensão, sendo possível obter uma informação mais precisa e expressiva de cada dimensão, conforme pode ser visto nas simulações em~\cite{helbing11}.
 
-Por fim, o AVA EDULIVRE~\cite{rabelo2010identificacao} possibilita a inferência implícita de modelos e perfis individuais de estudantes da educação infantil. Com o perfil de cada aluno e de todos os alunos em geral, o educando poderá desenvolver nortear seu trabalho da melhor forma possível. A abordagem deste trabalho não utiliza-se de agentes, diferindo assim do foco deste trabalho. Além disso, o EDULIVRE apresenta a estratégia de ser o AVA e não permite integração com outros ambientes.
+Por fim, o AVA EDULIVRE~\cite{rabelo2010identificacao} possibilita a dedução de modelos e perfis individuais de estudantes da educação infantil. Com o perfil de cada aluno e de todos os alunos em geral, o educando poderá desenvolver nortear seu trabalho da melhor forma possível. A abordagem deste trabalho não utiliza-se de agentes, diferindo assim do foco deste trabalho. Além disso, o EDULIVRE apresenta a estratégia de ser o AVA e não permite integração com outros ambientes.
 
 Conforme exposto alguns trabalhos na área de IE utilizam de diversas tecnologias ou abordagens para a construção de ambientes de ensino-aprendizagem. Todavia, o capítulo seguinte apresentará uma proposta que tende melhorar o modelagem do perfil de aprendizagem por meio da definição de uma arquitetura específica baseada em SMA. Essa arquitetura apresenta aspectos que tangem o modelo multidimensional do aluno propondo uma divisão de agentes para inferência do perfil e aspectos da infraestrutura do ambiente de ensino-aprendizagem.
 

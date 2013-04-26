@@ -23,7 +23,7 @@ O agente interface~\emph{WebServiceAgent}, é responsável pela comunicação co
 
 A partir dos agentes e regras gerados, foi implementado o SMA na linguagem JAVA utilizando o~\emph{framework} JADE. Em seguida, foi desenvolvido a plataforma~\emph{web} utilizando~\emph{JBoss Seam}, responsável pela interface do grupo de trabalho de agentes com o aluno. Após a conclusão da plataforma, foi necessário integrar as duas aplicações por meio do módulo~\emph{JadeGateway} disponibilizada nativamente pelo JADE.
 
-Por fim, a solução foi testada por meio de cenários que simulavam o uso por meio dos atores Aluno e Docente. A demonstração foi feita a partir de um aluno inferindo o seu estilo de aprendizagem e em seguida do docente visualizando o estilo de aprendizagem dos alunos de sua turma.
+Por fim, a solução foi testada por meio de cenários que simulavam o uso por meio dos atores Aluno e Docente. A demonstração foi feita a partir do mapeamento do estilo de aprendizagem de um aluno e em seguida do docente visualizando o estilo de aprendizagem dos alunos de sua turma.
 
 As seções seguintes detalham a metodologia, justificam a arquitetura da solução por meio da modelagem definida na metodologia MASE.
 
@@ -46,7 +46,7 @@ A metodologia inicia-se com o passo de captura das metas. Para tanto, foi necess
 	\item O sistema deve criar uma modelagem afetiva do estudante, especificamente a respeito da modelagem da personalidade e emoções do estudante.
 	\item O sistema deve fazer interface com Ambiente Virtual de Aprendizagem.
 	\item O sistema deve refutar ou confirmar o estilo de aprendizagem do aluno a partir do desempenho relacionado à interação com o sistema e/ou com Ambiente Virtual de Aprendizagem.
-	\item O sistema SMA deve atualizar o modelo do estudante com base em inferências a partir dos registros de trabalho do estudante.
+	\item O sistema SMA deve atualizar o modelo do estudante com base em mapeamentos a partir dos registros de trabalho do estudante.
 	\item O sistema deve construir o modelo do estudante a partir de uma modelagem explícita, ou seja, a partir do feedback explícito do estudante (questionário).
 	\item O sistema deve construir o modelo do estudante a partir de uma modelagem implícita, ou seja, a partir do desempenho obtido nas ferramentas de aprendizado.
 \end{enumerate}
@@ -85,7 +85,7 @@ A hierarquia de metas do SMA Frank, apresentada na Figura~\ref{fig:metas-frank},
 
 Foram levantados 5 principais casos de uso, alguns com fluxos alternativos que representam fluxos alternativos no caso de uso, mas não necessariamente implicam em uma execução no SMA, apenas na parte~\emph{web}, como por exemplo: Erro de Login. Para fins de detalhamento, este trabalho utiliza-se da notação completa de desenvolvimento de casos de uso.
 
-O primeiro caso de uso, descrito na Apêndice~\ref{chapter:uc1}, diz respeito à modelagem cognitiva do aluno. Existem dois cenários possíveis: Modelagem implícita (principal cenário de sucesso) e modelagem explícita (cenário alternativo). O SMA deverá processar o questionário de estilos de aprendizagem, respondido pelo aluno, para inferir explicitamente o seu modelo cognitivo e deverá analisar as respostas enviadas por ele para inferir explicitamente o seu modelo cognitivo.
+O primeiro caso de uso, descrito na Apêndice~\ref{chapter:uc1}, diz respeito à modelagem cognitiva do aluno. Existem dois cenários possíveis: Modelagem implícita (principal cenário de sucesso) e modelagem explícita (cenário alternativo). O SMA deverá processar o questionário de estilos de aprendizagem, respondido pelo aluno, para mapear explicitamente o seu modelo cognitivo a partir das suas respostas e então obter o seu modelo cognitivo.
 
 O segundo caso de uso, descrito no Apêndice~\ref{chapter:uc2}, descreve o cenário de notificação do docente. Nele, o docente é autenticado no sistema e o sistema exibe uma lista de alunos disponíveis nas mais diversas turmas. O docente seleciona um aluno e então o sistema exibe os dados relativos ao modelo do aluno.
 
@@ -106,7 +106,7 @@ No diagrama de sequência do caso de uso 1, apresentado na Figura~\ref{fig:dss-u
 	\label{fig:dss-uc1-fluxo-principal}
 \end{figure}
 
-A Figura~\ref{fig:dss-uc1-fluxo-alternativo} apresentação o fluxo de exceção do primeiro caso de uso, onde ilustra a regra~\emph{WebServiceInterface} que recebe os dados do AVA e envia para a regra Manager por meio do evento~\emph{enviar}. Após esse evento, a regra~\emph{StudentWorkgroup} recebe o evento e reenvia para~\emph{CognitiveAction}. Em seguida ele envia para as regras~\emph{LearningMethodAnalyzer} e~\emph{PerformanceAnalyzer} que vão inferir o estilo de aprendizagem e a performance. Por fim, com estes dados, o modelo cognitivo é retornado para a regra~\emph{StudentWorkgroup}.
+A Figura~\ref{fig:dss-uc1-fluxo-alternativo} apresentação o fluxo de exceção do primeiro caso de uso, onde ilustra a regra~\emph{WebServiceInterface} que recebe os dados do AVA e envia para a regra Manager por meio do evento~\emph{enviar}. Após esse evento, a regra~\emph{StudentWorkgroup} recebe o evento e reenvia para~\emph{CognitiveAction}. Em seguida ele envia para as regras~\emph{LearningMethodAnalyzer} e~\emph{PerformanceAnalyzer} que vão mapear o estilo de aprendizagem e a performance. Por fim, com estes dados, o modelo cognitivo é retornado para a regra~\emph{StudentWorkgroup}.
 
 \begin{figure}
 	\includegraphics[scale=0.52]{images/dss-uc1-fluxo-alternativo.png}
@@ -169,7 +169,7 @@ Por fim, após o levantamento de todas as regras foi necessário criar tarefas q
 	\label{tabela:mase-role-model}
 \end{table}
 
-A Figura~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model}, onde é possível visualizar toda a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudentInterface} (interface~\emph{web} da aplicação) ou~\emph{WebServiceInterface} (Interface com AVA). Além disso, a regra~\emph{StudentInterface} possui uma tarefa para autenticação do aluno, a qual ela encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno. As linhas tracejadas representam comunicações internas, as linhas sólidas representam comunicações externas.
+A Figura~\ref{fig:frank-role-model} apresenta o~\emph{MASE Role Model}, onde é possível visualizar toda a sua estruturação das regras e tarefas. De forma geral, a regra~\emph{Manager} é a responsável pela gerência de todo o SMA. Ela pode receber os dados da regra~\emph{StudentInterface} (interface~\emph{web} da aplicação) ou~\emph{WebServiceInterface} (Interface com AVA). Além disso, a regra~\emph{StudentInterface} possui uma tarefa para autenticação do aluno, a qual encaminha uma mensagem para a regra~\emph{Manager} que cria o workgroup do aluno. As linhas tracejadas representam comunicações internas enquanto as linhas sólidas representam comunicações externas.
 
 A regra~\emph{StudentWorkgroup} será a regra responsável pela gerência do grupo de trabalho do aluno. Ela recebe os dados da regra~\emph{Manager} e reencaminha para as regras~\emph{Cognitive},~\emph{Affective} e~\emph{Metacognitive}. As linhas tracejadas de cor azul representam comunicações internas entre as regras.
 
@@ -286,7 +286,7 @@ Após a conclusão da primeira etapa do MASE, é necessário definir as classes 
 \begin{itemize}
 	\item GatewayAgent - Possui a regra StudentInterface, responsável pela interface com a plataforma~\emph{web}, ou seja, com o estudante e o docente.
 	\item WebServiceAgent - Possui a regra~\emph{WebServiceInterface}, é responsável pela interface com os AVA.
-	\item ManagerAgent - Possui a regra~\emph{Manager}, é responsavel pela gerência da plataforma: Criação dos agentes, encaminhamento de mensagens.
+	\item ManagerAgent - Possui a regra~\emph{Manager}, é responsável pela gerência da plataforma: Criação dos agentes, encaminhamento de mensagens.
 	\item WorkgroupAgent - Possui a regra~\emph{StudentWorkgroup}, responsável pela gerência do grupo de trabalho de um determinado aluno.
 	\item CognitiveAgent - Possui as regras~\emph{CognitiveAction},~\emph{LearningStyleAction}. Responsável pela inferência do modelo cognitivo do aluno.
 	\item AffectiveAgent - Possui a regra~\emph{AffectiveAction}. Responsável pela inferência do modelo afetivo do aluno.
@@ -329,7 +329,7 @@ As conversações 4, 5 e 6 (conv4, conv5 e conv6) possuem dinâmica bastante sem
 	\label{fig:conv4-iniciador}
 \end{figure}
 
-O lado do recebedor, apresentado na Figura~\ref{fig:conv4-recebedor}, recebe o request e infere o modelo do aluno. Por fim, apenas reenvia novamente ao iniciador da conversação.
+O lado do recebedor, apresentado na Figura~\ref{fig:conv4-recebedor}, recebe o~\emph{request} e infere o modelo do aluno. Por fim, apenas reenvia novamente ao iniciador da conversação.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.48]{images/conv4-recebedor.png}
@@ -394,7 +394,7 @@ Por fim, a implementação da tela de notificação ao docente do estilo de apre
 
 \subsection{SMA Frank}
 
-O SMA Frank foi desenvolvido com o~\emph{middleware} JADE, devido à sua grande aceitação na comunidade de Sistemas Multiagentes e o extenso suporte da comunidade. A aplicação está divida entre os agentes criados e os seus comportamentos (justificados na seção anterior).
+O SMA Frank foi desenvolvido com o~\emph{middleware} JADE, devido a grande aceitação na comunidade de sistemas e o extenso suporte. A aplicação está divida entre os agentes criados e os seus comportamentos (justificados na seção anterior).
 
 A comunicação entre os agentes foi implementada por meio de ontologias de comunicação da plataforma JADE. O pacote de ontologia do~\emph{framework} permite a criação de abstrações muito robustas, descartando neste primeiro momento a utilização de bibliotecas de terceiros.
 
@@ -402,7 +402,7 @@ No JADE, os agentes devem adicionar comportamentos, que são disparados quando o
 
 Foram implementadas duas ontologias. A primeira, chamada de~\emph{FrankManagementOntology}, tem a função de gerenciamento da plataforma. Logo as ações de criação e destruição de agentes estarão presentes nela.
 
-A ontologia~\emph{ModelInferOntology} possui a função de modelar todos os conceitos relacionados à inferência do modelo do aluno. Portanto, conceitos como estilo de aprendizagem, modelo cognitivo, afetivo e metacognitivo devem estar nesta ontologia. É importante ressaltar que os modelos não estão completos, sendo necessário que em trabalhos futuros sejam modeladas as ontologias.
+A ontologia~\emph{ModelInferOntology} possui a função de modelar todos os conceitos relacionados à inferência do modelo do aluno. Portanto, conceitos como estilo de aprendizagem, modelo cognitivo, afetivo e metacognitivo devem estar nesta ontologia. É importante ressaltar que os modelos não estão completos, sendo necessário que em trabalhos futuros sejam definidas as ontologias.
 
 \subsection{Aspectos da Integração}
 
@@ -421,7 +421,7 @@ Esse agente funcionará de forma distinta dos outros agentes da plataforma. O ag
 	\item RequestCognitiveModelCommand
 \end{itemize}
 
-Neste capítulo, foram apresentados todos os aspectos da modelagem da solução: As duas fases da metodologia com todos os diagramas inerentes. Além disso, a arquitetura solução foi definida de forma a dividir o sistema em duas aplicações distintas. O próximo capítulo contém a apresentação do protótipo da solução proposta, bem como os resultados obtidos.
+Neste capítulo foram apresentados todos os aspectos da modelagem da solução: as duas fases da metodologia com todos os diagramas inerentes. Além disso, a arquitetura solução foi definida de forma a dividir o sistema em duas aplicações distintas. O próximo capítulo contém a apresentação do protótipo da solução proposta, bem como os resultados obtidos.
 
 
 

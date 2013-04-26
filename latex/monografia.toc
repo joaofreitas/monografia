@@ -7,63 +7,63 @@
 \contentsline {section}{\numberline {1.3}Objetivos}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Metodologia}{3}{section.1.4}
 \contentsline {section}{\numberline {1.5}Estrutura do Trabalho}{3}{section.1.5}
-\contentsline {chapter}{\numberline {2}Fundamentos b\IeC {\'a}sicos}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Inform\IeC {\'a}tica na Educa\IeC {\c c}\IeC {\~a}o}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Estilo de Aprendizagem}{5}{subsection.2.1.1}
-\contentsline {subsubsection}{Modelo de~\emph {Kolb}}{5}{section*.8}
-\contentsline {subsubsection}{Modelo de~\emph {Felder}}{5}{section*.9}
-\contentsline {subsubsection}{Modelo de~\emph {Honey} e~\emph {Mumford}}{7}{section*.10}
-\contentsline {subsection}{\numberline {2.1.2}Diagn\IeC {\'o}stico do Estilos de Aprendizagem}{7}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Sistemas Multiagente}{9}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Conceitos}{9}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Arquiteturas de agentes}{12}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Intera\IeC {\c c}\IeC {\~a}o entre Agentes}{13}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Comunica\IeC {\c c}\IeC {\~a}o}{14}{subsection.2.2.4}
-\contentsline {subsubsection}{KQML}{16}{section*.11}
-\contentsline {subsubsection}{KIF}{18}{section*.12}
-\contentsline {subsection}{\numberline {2.2.5}Linguagem de Comunica\IeC {\c c}\IeC {\~a}o de Agentes FIPA}{18}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Ontologias}{20}{subsection.2.2.6}
-\contentsline {section}{\numberline {2.3}Metodologias de Sistemas Multiagente}{21}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}An\IeC {\'a}lise}{23}{subsection.2.3.1}
-\contentsline {subsubsection}{Captura de Metas}{23}{section*.13}
-\contentsline {subsubsection}{Desenvolver Casos de Uso}{23}{section*.14}
-\contentsline {subsubsection}{Refinar Regras}{24}{section*.15}
-\contentsline {subsection}{\numberline {2.3.2}Projeto}{25}{subsection.2.3.2}
-\contentsline {subsubsection}{Criando as Classes dos Agentes}{25}{section*.16}
-\contentsline {subsubsection}{Construir Conversa\IeC {\c c}\IeC {\~o}es}{26}{section*.17}
-\contentsline {subsubsection}{Montagem dos Agentes}{26}{section*.18}
-\contentsline {subsubsection}{Projeto do Sistema}{27}{section*.19}
-\contentsline {subsubsection}{Ferramenta~\emph {AgentTool}}{28}{section*.20}
-\contentsline {section}{\numberline {2.4}Estudos de Ferramentas e Tecnologias Relacionadas}{28}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}UML}{29}{subsection.2.4.1}
-\contentsline {subsubsection}{Diagramas UML}{30}{section*.21}
-\contentsline {paragraph}{Diagrama de Casos de Uso}{30}{section*.22}
-\contentsline {paragraph}{Diagrama de Sequ\IeC {\^e}ncia}{33}{section*.23}
-\contentsline {subsection}{\numberline {2.4.2}Ferramentas de SMA}{35}{subsection.2.4.2}
-\contentsline {subsubsection}{Arquitetura}{36}{section*.24}
-\contentsline {subsubsection}{Implementa\IeC {\c c}\IeC {\~a}o dos Agentes}{37}{section*.25}
-\contentsline {subsubsection}{Ciclo de Vida dos Agentes}{38}{section*.26}
-\contentsline {subsubsection}{Interface Gr\IeC {\'a}fica}{38}{section*.27}
-\contentsline {subsection}{\numberline {2.4.3}JBoss Seam}{39}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}Trabalhos Correlatos}{40}{section.2.5}
-\contentsline {chapter}{\numberline {3}Proposta de Solu\IeC {\c c}\IeC {\~a}o}{42}{chapter.3}
-\contentsline {section}{\numberline {3.1}A Modelagem}{43}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}An\IeC {\'a}lise}{43}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Projeto}{55}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Arquitetura}{58}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Frank Web}{60}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}SMA Frank}{60}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Aspectos da Integra\IeC {\c c}\IeC {\~a}o}{61}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Testes do Prot\IeC {\'o}tipo}{62}{chapter.4}
-\contentsline {section}{\numberline {4.1}Sistematiza\IeC {\c c}\IeC {\~a}o de Testes}{62}{section.4.1}
-\contentsline {section}{\numberline {4.2}Apresenta\IeC {\c c}\IeC {\~a}o da Interface com Aluno}{62}{section.4.2}
-\contentsline {section}{\numberline {4.3}Apresenta\IeC {\c c}\IeC {\~a}o da Interface com Docente}{64}{section.4.3}
-\contentsline {section}{\numberline {4.4}Resultados}{67}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalhos Futuros}{69}{chapter.5}
-\contentsline {chapter}{\numberline {A}Casos de Uso}{71}{appendix.A}
-\contentsline {section}{\numberline {A.1}Determinar Modelagem Cognitiva}{71}{section.A.1}
-\contentsline {section}{\numberline {A.2}Notificar Docente}{74}{section.A.2}
-\contentsline {section}{\numberline {A.3}Determinar Modelagem Afetiva do Aluno}{75}{section.A.3}
-\contentsline {section}{\numberline {A.4}Determinar Modelagem Metacognitiva do Aluno}{76}{section.A.4}
-\contentsline {section}{\numberline {A.5}Intera\IeC {\c c}\IeC {\~a}o AVA e SMA Frank}{78}{section.A.5}
-\contentsline {chapter}{Refer\^encias}{80}{section*.28}
+\contentsline {chapter}{\numberline {2}Fundamentos b\IeC {\'a}sicos}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Inform\IeC {\'a}tica na Educa\IeC {\c c}\IeC {\~a}o}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Estilo de Aprendizagem}{6}{subsection.2.1.1}
+\contentsline {subsubsection}{Modelo de~\emph {Kolb}}{6}{section*.8}
+\contentsline {subsubsection}{Modelo de~\emph {Felder}}{6}{section*.9}
+\contentsline {subsubsection}{Modelo de~\emph {Honey} e~\emph {Mumford}}{8}{section*.10}
+\contentsline {subsection}{\numberline {2.1.2}Diagn\IeC {\'o}stico do Estilos de Aprendizagem}{8}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Sistemas Multiagente}{10}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Conceitos}{10}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Arquiteturas de agentes}{13}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Intera\IeC {\c c}\IeC {\~a}o entre Agentes}{14}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Comunica\IeC {\c c}\IeC {\~a}o}{15}{subsection.2.2.4}
+\contentsline {subsubsection}{KQML}{17}{section*.11}
+\contentsline {subsubsection}{KIF}{19}{section*.12}
+\contentsline {subsection}{\numberline {2.2.5}Linguagem de Comunica\IeC {\c c}\IeC {\~a}o de Agentes FIPA}{19}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Ontologias}{21}{subsection.2.2.6}
+\contentsline {section}{\numberline {2.3}Metodologias de Sistemas Multiagente}{22}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}An\IeC {\'a}lise}{24}{subsection.2.3.1}
+\contentsline {subsubsection}{Captura de Metas}{24}{section*.13}
+\contentsline {subsubsection}{Desenvolver Casos de Uso}{24}{section*.14}
+\contentsline {subsubsection}{Refinar Regras}{25}{section*.15}
+\contentsline {subsection}{\numberline {2.3.2}Projeto}{26}{subsection.2.3.2}
+\contentsline {subsubsection}{Criando as Classes dos Agentes}{26}{section*.16}
+\contentsline {subsubsection}{Construir Conversa\IeC {\c c}\IeC {\~o}es}{27}{section*.17}
+\contentsline {subsubsection}{Montagem dos Agentes}{27}{section*.18}
+\contentsline {subsubsection}{Projeto do Sistema}{28}{section*.19}
+\contentsline {subsubsection}{Ferramenta~\emph {AgentTool}}{29}{section*.20}
+\contentsline {section}{\numberline {2.4}Estudos de Ferramentas e Tecnologias Relacionadas}{29}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}UML}{30}{subsection.2.4.1}
+\contentsline {subsubsection}{Diagramas UML}{31}{section*.21}
+\contentsline {paragraph}{Diagrama de Casos de Uso}{31}{section*.22}
+\contentsline {paragraph}{Diagrama de Sequ\IeC {\^e}ncia}{34}{section*.23}
+\contentsline {subsection}{\numberline {2.4.2}Ferramentas de SMA}{36}{subsection.2.4.2}
+\contentsline {subsubsection}{Arquitetura}{37}{section*.24}
+\contentsline {subsubsection}{Implementa\IeC {\c c}\IeC {\~a}o dos Agentes}{38}{section*.25}
+\contentsline {subsubsection}{Ciclo de Vida dos Agentes}{39}{section*.26}
+\contentsline {subsubsection}{Interface Gr\IeC {\'a}fica}{39}{section*.27}
+\contentsline {subsection}{\numberline {2.4.3}JBoss Seam}{40}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Trabalhos Correlatos}{41}{section.2.5}
+\contentsline {chapter}{\numberline {3}Proposta de Solu\IeC {\c c}\IeC {\~a}o}{43}{chapter.3}
+\contentsline {section}{\numberline {3.1}A Modelagem}{44}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}An\IeC {\'a}lise}{44}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Projeto}{56}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Arquitetura}{59}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Frank Web}{61}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}SMA Frank}{61}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Aspectos da Integra\IeC {\c c}\IeC {\~a}o}{62}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Ilustra\IeC {\c c}\IeC {\~a}o da Proposta}{63}{chapter.4}
+\contentsline {section}{\numberline {4.1}Sistematiza\IeC {\c c}\IeC {\~a}o de Testes}{63}{section.4.1}
+\contentsline {section}{\numberline {4.2}Apresenta\IeC {\c c}\IeC {\~a}o da Interface com Aluno}{63}{section.4.2}
+\contentsline {section}{\numberline {4.3}Apresenta\IeC {\c c}\IeC {\~a}o da Interface com Docente}{65}{section.4.3}
+\contentsline {section}{\numberline {4.4}Resultados}{68}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es e Trabalhos Futuros}{70}{chapter.5}
+\contentsline {chapter}{\numberline {A}Casos de Uso}{72}{appendix.A}
+\contentsline {section}{\numberline {A.1}Determinar Modelagem Cognitiva}{72}{section.A.1}
+\contentsline {section}{\numberline {A.2}Notificar Docente}{75}{section.A.2}
+\contentsline {section}{\numberline {A.3}Determinar Modelagem Afetiva do Aluno}{76}{section.A.3}
+\contentsline {section}{\numberline {A.4}Determinar Modelagem Metacognitiva do Aluno}{77}{section.A.4}
+\contentsline {section}{\numberline {A.5}Intera\IeC {\c c}\IeC {\~a}o AVA e SMA Frank}{79}{section.A.5}
+\contentsline {chapter}{Refer\^encias}{81}{section*.28}

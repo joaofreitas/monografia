@@ -98,8 +98,9 @@ A.~Cockburn.
 
 \bibitem{editalFrank}
 Germana~Menezes da~Nóbrega.
-\newblock Frank: Re-utilização de abordagens e ferramentas da ie em um
-  sistema multi-agente para identificação de estilos de aprendizagem.
+\newblock Projeto respondendo ao edital deg 11/2011 - frank: Re-utilização de
+  abordagens e ferramentas da ie em um sistema multi-agente para
+  identificação de estilos de aprendizagem.
 \newblock Outubro 2011.
 
 \bibitem{durfee89}
@@ -159,7 +160,7 @@ D.A. Kolb.
 \newblock Prentice Hall, Englewood Cliffs, NJ, 1984.
 
 \bibitem{larman08}
-C.~LARMAN.
+C.~Larman.
 \newblock {\em Utilizando UML e Padr{\~o}es}.
 \newblock Bookman, 3 edition, 2008.
 
@@ -191,7 +192,7 @@ Stuart Russel and Peter Novig.
   1995.
 
 \bibitem{scott01}
-A.D. SCOTT, F.~Mark, and H.S. CLINT.
+A.D. Scott, F.~Mark, and H.S. Clint.
 \newblock Multiagent systems engineering.
 \newblock {\em International Journal of Software Engineering and Knowledge
   Engineering}, 11(03):231--258, 2001.
