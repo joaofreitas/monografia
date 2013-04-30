@@ -2,12 +2,16 @@
 \backcite {larman08}{{x}{(document)}{Doc-Start}}
 \backcite {bellifemine07}{{x}{(document)}{Doc-Start}}
 \backcite {allen09}{{x}{(document)}{Doc-Start}}
+\backcite {kolb84}{{xii}{(document)}{Doc-Start}}
 \backcite {muhlbeier12}{{xii}{(document)}{Doc-Start}}
 \backcite {felder1988learning}{{1}{1}{chapter.1}}
 \backcite {editalFrank}{{2}{1.1}{section.1.1}}
+\backcite {editalFrank}{{2}{1.1}{section.1.1}}
+\backcite {kolb84}{{5}{2.1}{section.2.1}}
 \backcite {felder1988learning}{{6}{2.1.1}{subsection.2.1.1}}
 \backcite {kolb84}{{6}{2.1.1}{section*.8}}
 \backcite {felder1988learning}{{6}{2.1.1}{section*.9}}
+\backcite {kolb84}{{7}{2.1}{table.2.1}}
 \backcite {muhlbeier12}{{8}{2.1.1}{section*.10}}
 \backcite {honey2000}{{8}{2.1.1}{section*.10}}
 \backcite {muhlbeier12}{{8}{2.1.2}{subsection.2.1.2}}
@@ -27,7 +31,7 @@
 \backcite {searle69}{{16}{2.2.4}{subsection.2.2.4}}
 \backcite {wooldridge04}{{16}{2.2.4}{subsection.2.2.4}}
 \backcite {kse}{{16}{2.2.4}{subsection.2.2.4}}
-\backcite {preece1997}{{17}{2.2.4}{subsection.2.2.4}}
+\backcite {preece1997}{{16}{2.2.4}{subsection.2.2.4}}
 \backcite {kifmanual}{{17}{2.2.4}{subsection.2.2.4}}
 \backcite {preece1997}{{17}{2.2.4}{section*.11}}
 \backcite {wooldridge04}{{18}{2.2.4}{lstnumber.2.2.16}}

@@ -22,7 +22,7 @@ Warning--can't use both volume and number fields in soaresagente
 Warning--there's a number but no series in wooldridge04
 You've used 40 entries,
             2118 wiz_defined-function locations,
-            702 strings with 10178 characters,
+            702 strings with 10180 characters,
 and the built_in function-call counts, 10542 in all, are:
 = -- 1014
 > -- 442

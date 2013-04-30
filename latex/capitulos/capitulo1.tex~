@@ -54,7 +54,7 @@ Em seguida, foi realizado o levantamento e o estudo de metodologias aproriadas p
 
 Em sequência, houve o levantamento do~\emph{framework} necessário para implementação do SMA. Após levantamento e comparação das ferramentas disponíveis, o desenvolvimento da aplicação multiagente foi feito com o~\emph{framework}~\emph{JADE} o qual é completamente desenvolvido na linguagem~\emph{JAVA}, simplificando a implementação de sistemas que respeitam as especificações FIPA. 
 
-Em seguida, foi necessária a escolha de uma ferramenta para desenvolvimento da interface~\emph{web} e a sua integração com o SMA. Baseado nos levantamentos e estudos, o~\emph{framework JBoss Seam} mostrou-se mais viável visto que facilita a construção de aplicações dinâmicas para a internet de forma simples e ágil.
+Em seguida, foi necessária a escolha de uma ferramenta para desenvolvimento da interface~\emph{web} e a sua integração com o SMA. Baseado nos levantamentos e estudos, o~\emph{framework JBoss Seam} mostrou-se mais viável visto que facilita a construção de aplicações dinâmicas para a Internet de forma simples e ágil.
 
 Por fim, foram realizados testes em laboratório da solução proposta. Foram definidos cenários que simulavam o uso da aplicação por meio dos perfis de Aluno e Docente.
 
